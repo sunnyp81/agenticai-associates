@@ -856,13 +856,13 @@
         {
           "industry": "Finance",
           "heading": "AI Process Improvement in Finance",
-          "body": "Financial services processes — account opening, loan processing, claims handling — are often burdened by legacy steps that no longer serve a purpose. AI process mining reveals exactly which steps add value and which create friction. We help banks, insurers, and fintechs redesign their core processes for speed and accuracy without compromising regulatory compliance.",
+          "body": "<p>Financial services processes — account opening, loan processing, claims handling — are often burdened by legacy steps that no longer serve a purpose. AI process mining reveals exactly which steps add value and which create friction. We help banks, insurers, and fintechs redesign their core processes for speed and accuracy without compromising regulatory compliance. Our <a href=\"/services/ai-strategy/\">AI strategy consultants</a> ensure process redesign aligns with broader digital transformation goals.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Government",
           "heading": "AI Process Improvement in Government",
-          "body": "UK public sector organisations face pressure to deliver better services with tighter budgets. AI process improvement identifies bureaucratic inefficiencies in planning applications, benefit processing, licensing, and citizen services. We help councils and departments redesign processes that reduce processing times, cut costs, and improve the citizen experience.",
+          "body": "<p>UK public sector organisations face pressure to deliver better services with tighter budgets. AI process improvement identifies bureaucratic inefficiencies in planning applications, benefit processing, licensing, and citizen services. We help councils and departments redesign processes that reduce processing times, cut costs, and improve the citizen experience. <a href=\"/solutions/report-generation/\">AI report generation</a> can then automate the performance reporting that tracks these improvements.</p>",
           "linkSlug": "/industries/government/"
         }
       ],
