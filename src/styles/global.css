@@ -67,7 +67,15 @@ h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
 
 /* Headings inherit parent text colour.
-   Dark sections → white. Light sections → body text (slate 900). */
+   Dark sections → white. Light sections → body text (slate 900).
+   Standalone H2s get top margin for breathing room. */
+h2 {
+  margin-top: 2rem;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
 
 @media (min-width: 768px) {
   h1 { font-size: 3.5rem; }
