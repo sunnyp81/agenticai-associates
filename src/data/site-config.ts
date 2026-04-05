@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   contact: {
     email: 'hello@agenticai.associates',
-    calendlyUrl: 'https://calendly.com/agenticai',
+    bookingUrl: 'https://trafft.com/',
     staticFormsKey: 'sf_9e906eb6c00416b9d3354749',
   },
   social: {

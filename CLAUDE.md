@@ -33,7 +33,7 @@ British English. Friendly yet authoritative. Short sentences. No jargon.
 
 ## Contact
 - StaticForms key: `sf_9e906eb6c00416b9d3354749`
-- Calendly embed on /contact/
+- Trafft booking on /contact/ (lifetime account)
 
 ## Deploy
 GitHub → Cloudflare Pages auto-deploy

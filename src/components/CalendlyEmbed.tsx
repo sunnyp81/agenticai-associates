@@ -1,35 +1,24 @@
-import { useEffect, useRef } from 'preact/hooks';
+import { siteConfig } from '@/data/site-config';
 
 interface Props {
-  url: string;
+  url?: string;
 }
 
-export default function CalendlyEmbed({ url }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+export default function BookingEmbed({ url }: Props) {
+  const bookingUrl = url || siteConfig.contact.bookingUrl;
 
   return (
     <div>
-      <div
-        ref={containerRef}
-        class="calendly-inline-widget"
-        data-url={url}
-        style={{ minWidth: '320px', height: '660px' }}
+      <iframe
+        src={bookingUrl}
+        style={{ width: '100%', minHeight: '660px', border: 'none', borderRadius: '12px' }}
+        title="Book a consultation"
+        loading="lazy"
       />
       <noscript>
         <p>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            Book a consultation via Calendly
+          <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
+            Book a consultation
           </a>
         </p>
       </noscript>
