@@ -71,10 +71,8 @@ const relatedServices = getRelatedServices(page.relatedServices);
     </div>
   )}
 
-  <div class="container">
-    <CTABanner
-      headline={`AI Consultancy for ${page.name.replace('AI Consultant for ', '').replace('AI Consultancy for ', '')}`}
-      text="Book a free consultation. We will assess your needs and recommend the right approach."
-    />
-  </div>
+  <CTABanner
+    headline={`AI Consultancy for ${page.name.replace('AI Consultant for ', '').replace('AI Consultancy for ', '')}`}
+    text="Book a free consultation. We will assess your needs and recommend the right approach."
+  />
 </BaseLayout>

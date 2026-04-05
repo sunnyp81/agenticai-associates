@@ -94,10 +94,8 @@ const schemas = [localSchema, ...(faqSchema ? [faqSchema] : [])];
   )}
 
   <!-- CTA -->
-  <div class="container">
-    <CTABanner
-      headline={`AI Consultancy in ${page.areaServed}`}
-      text={`Looking for an AI consultant in ${page.areaServed}? Book a free consultation with our team.`}
-    />
-  </div>
+  <CTABanner
+    headline={`AI Consultancy in ${page.areaServed}`}
+    text={`Looking for an AI consultant in ${page.areaServed}? Book a free consultation with our team.`}
+  />
 </BaseLayout>
