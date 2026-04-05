@@ -1,0 +1,35 @@
+---
+import HubLayout from '@/layouts/HubLayout.astro';
+import { getServicesHub } from '@/lib/page-factory';
+import { buildFAQSchema } from '@/lib/schema';
+
+const data = getServicesHub();
+
+const faqs = [
+  { question: 'What AI consultancy services do you offer?', answer: 'We offer AI strategy and roadmaps, implementation, agentic AI, generative AI, conversational AI, data and AI, applied AI, training, and ethical AI consultancy. Every service is tailored to your business needs.' },
+  { question: 'How do I know which AI service I need?', answer: 'Start with a free consultation. We will listen to your challenges and recommend the right approach. Often, the best starting point is an AI strategy session to map opportunities before jumping into implementation.' },
+  { question: 'Do you work with businesses outside the UK?', answer: 'Yes. While we are UK-based, we work with businesses globally. Most of our engagements can be delivered remotely, with in-person workshops available for UK clients.' },
+  { question: 'How long does a typical AI consultancy project take?', answer: 'It depends on scope. Advisory sessions are one-off. Strategy projects run 2-4 weeks. Implementation ranges from 4-12 weeks. We always provide clear timelines upfront.' },
+];
+
+const schema = buildFAQSchema(faqs);
+---
+
+<HubLayout
+  title={data.hub.title}
+  description={data.hub.description}
+  heroTitle="AI Consultancy Services"
+  heroSubtitle="From strategy to deployment. We cover the full AI lifecycle — so you get working systems, not just slide decks."
+  breadcrumbs={[{ label: 'Services', href: '/services/' }]}
+  pages={data.pages.map((p) => ({ slug: p.slug, name: p.name, description: p.description, icon: p.icon }))}
+  hubPath="/services/"
+  faqs={faqs}
+  schema={schema ? [schema] : []}
+>
+  <Fragment slot="intro">
+    <div class="prose max-w-3xl">
+      <p>Every business has different AI needs. Some need a clear strategy before investing. Others are ready to build. Some want to upskill their team first.</p>
+      <p>We offer nine specialist services that cover the full AI lifecycle. Pick one, combine several, or start with a free consultation and let us recommend the right approach.</p>
+    </div>
+  </Fragment>
+</HubLayout>

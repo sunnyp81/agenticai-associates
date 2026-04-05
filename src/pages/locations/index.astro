@@ -1,0 +1,34 @@
+---
+import HubLayout from '@/layouts/HubLayout.astro';
+import { getLocationsHub } from '@/lib/page-factory';
+import { buildFAQSchema } from '@/lib/schema';
+
+const data = getLocationsHub();
+
+const faqs = [
+  { question: 'Do you only work in the UK?', answer: 'We are UK-based and most of our clients are in the UK, but we work with businesses globally. Most engagements can be delivered remotely.' },
+  { question: 'Do you meet clients in person?', answer: 'Yes, for UK clients. We offer in-person workshops, strategy sessions, and project kick-offs. Remote delivery is also available for all services.' },
+  { question: 'Is there a difference in pricing by location?', answer: 'No. Our pricing is consistent regardless of your location. We do not charge London rates to clients in other cities.' },
+];
+
+const schema = buildFAQSchema(faqs);
+---
+
+<HubLayout
+  title={data.hub.title}
+  description={data.hub.description}
+  heroTitle="AI Consultancy Across the UK"
+  heroSubtitle="From London to Edinburgh. We provide AI consultancy services across the United Kingdom — in person or remote."
+  breadcrumbs={[{ label: 'Locations', href: '/locations/' }]}
+  pages={data.pages.map((p) => ({ slug: p.slug, name: p.name, description: p.description }))}
+  hubPath="/locations/"
+  faqs={faqs}
+  schema={schema ? [schema] : []}
+>
+  <Fragment slot="intro">
+    <div class="prose max-w-3xl">
+      <p>We are a UK-based AI consultancy. While we work remotely with clients worldwide, we have particular depth in the UK market.</p>
+      <p>Each location page below highlights the local AI landscape, key industries, and how we can help businesses in your area.</p>
+    </div>
+  </Fragment>
+</HubLayout>

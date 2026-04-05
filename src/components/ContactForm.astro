@@ -1,0 +1,78 @@
+---
+import { siteConfig } from '@/data/site-config';
+---
+
+<form action="https://api.staticforms.xyz/submit" method="post" class="space-y-5">
+  <input type="hidden" name="accessKey" value={siteConfig.contact.staticFormsKey} />
+  <input type="hidden" name="redirectTo" value={`${siteConfig.url}/contact/?sent=true`} />
+  <input type="text" name="honeypot" style="display:none" />
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="name" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
+        placeholder="Your name"
+      />
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
+        placeholder="you@company.com"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="company" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Company <span class="text-[var(--color-text-muted)]">(optional)</span></label>
+    <input
+      type="text"
+      id="company"
+      name="$company"
+      class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
+      placeholder="Your company"
+    />
+  </div>
+
+  <div>
+    <label for="subject" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">What can we help with?</label>
+    <select
+      id="subject"
+      name="subject"
+      required
+      class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
+    >
+      <option value="" disabled selected>Select a topic</option>
+      <option value="AI Strategy & Roadmap">AI Strategy & Roadmap</option>
+      <option value="AI Implementation">AI Implementation</option>
+      <option value="Agentic AI / GenAI">Agentic AI / GenAI</option>
+      <option value="AI Training & Workshops">AI Training & Workshops</option>
+      <option value="General Enquiry">General Enquiry</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Tell us about your project</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition resize-y"
+      placeholder="Briefly describe what you're looking to achieve with AI..."
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-full sm:w-auto">
+    Send Message
+  </button>
+</form>

@@ -1,0 +1,16 @@
+---
+interface Props {
+  stats: { value: string; label: string }[];
+}
+
+const { stats } = Astro.props;
+---
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8">
+  {stats.map((stat) => (
+    <div class="text-center">
+      <div class="text-3xl md:text-4xl font-bold text-gradient font-[family-name:var(--font-display)]">{stat.value}</div>
+      <div class="text-sm text-[var(--color-text-muted)] mt-1">{stat.label}</div>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,12 @@
+---
+import LocationLayout from '@/layouts/LocationLayout.astro';
+import { getLocationPaths } from '@/lib/page-factory';
+
+export function getStaticPaths() {
+  return getLocationPaths();
+}
+
+const { page } = Astro.props;
+---
+
+<LocationLayout page={page} />

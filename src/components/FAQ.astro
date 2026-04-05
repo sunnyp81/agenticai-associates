@@ -1,0 +1,37 @@
+---
+import { buildFAQSchema } from '@/lib/schema';
+
+interface Props {
+  faqs: { question: string; answer: string }[];
+  heading?: string;
+}
+
+const { faqs, heading = 'Frequently Asked Questions' } = Astro.props;
+
+const schema = buildFAQSchema(faqs);
+---
+
+{faqs.length > 0 && (
+  <section class="section-sm">
+    <h2 class="mb-8">{heading}</h2>
+    <dl class="space-y-4 max-w-3xl">
+      {faqs.map((faq) => (
+        <details class="group card !p-0 overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-5 font-medium text-[var(--color-primary-dark)] hover:text-[var(--color-accent)] transition-colors list-none">
+            <dt class="pr-4">{faq.question}</dt>
+            <svg class="w-5 h-5 flex-shrink-0 text-[var(--color-text-muted)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <dd class="px-5 pb-5 text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)] pt-4">
+            {faq.answer}
+          </dd>
+        </details>
+      ))}
+    </dl>
+
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </section>
+)}

@@ -1,0 +1,12 @@
+---
+import IndustryLayout from '@/layouts/IndustryLayout.astro';
+import { getIndustryPaths } from '@/lib/page-factory';
+
+export function getStaticPaths() {
+  return getIndustryPaths();
+}
+
+const { page } = Astro.props;
+---
+
+<IndustryLayout page={page} />

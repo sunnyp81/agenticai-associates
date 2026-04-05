@@ -1,0 +1,123 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import RelatedLinks from '@/components/RelatedLinks.astro';
+import { buildFAQSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
+import { getRelatedServices } from '@/lib/page-factory';
+
+interface Props {
+  page: {
+    slug: string;
+    name: string;
+    title: string;
+    description: string;
+    intro: string;
+    painPoints: { title: string; description: string }[];
+    solutionSections: { solution: string; heading: string; body: string; linkSlug: string }[];
+    faq: { question: string; answer: string }[];
+    relatedServices: string[];
+    relatedIndustries: string[];
+  };
+}
+
+const { page } = Astro.props;
+
+const faqSchema = buildFAQSchema(page.faq);
+const schemas = faqSchema ? [faqSchema] : [];
+
+const relatedServices = getRelatedServices(page.relatedServices);
+---
+
+<BaseLayout title={page.title} description={page.description} schema={schemas}>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[
+        { label: 'Industries', href: '/industries/' },
+        { label: page.name, href: `/industries/${page.slug}/` },
+      ]} />
+      <h1 class="text-white max-w-3xl">{page.name}</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">{page.intro}</p>
+      <a href="/contact/" class="btn btn-primary mt-6">Get Industry-Specific Advice</a>
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <!-- Main content -->
+      <div class="lg:col-span-2">
+        <!-- Pain points -->
+        {page.painPoints.length > 0 && (
+          <section class="mb-12">
+            <h2 class="mb-6">Challenges We Solve</h2>
+            <div class="space-y-4">
+              {page.painPoints.map((point) => (
+                <div class="card">
+                  <h3 class="text-lg font-semibold mb-2">{point.title}</h3>
+                  <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{point.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Solution sections (captures "ai consultant for [solution] in [industry]") -->
+        {page.solutionSections.length > 0 && (
+          <section class="prose">
+            <h2>How AI Transforms {page.name.replace('AI for ', '')}</h2>
+            {page.solutionSections.map((section) => (
+              <div>
+                <h3>{section.heading}</h3>
+                <p>{section.body}</p>
+                <p>
+                  <a href={section.linkSlug}>Learn more about our {section.heading.toLowerCase()} services</a>.
+                </p>
+              </div>
+            ))}
+          </section>
+        )}
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        {relatedServices.length > 0 && (
+          <RelatedLinks
+            title="Our Services"
+            links={relatedServices.map((svc) => ({
+              label: svc.name,
+              href: `/services/${svc.slug}/`,
+            }))}
+          />
+        )}
+
+        {page.relatedIndustries.length > 0 && (
+          <RelatedLinks
+            title="Related Industries"
+            links={page.relatedIndustries.map((slug) => ({
+              label: slug.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+              href: `/industries/${slug}/`,
+            }))}
+          />
+        )}
+      </aside>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  {page.faq.length > 0 && (
+    <div class="container">
+      <FAQ faqs={page.faq} />
+    </div>
+  )}
+
+  <!-- CTA -->
+  <div class="container">
+    <CTABanner
+      headline={`AI Solutions for ${page.name.replace('AI for ', '')}`}
+      text="We understand your industry. Let's discuss how AI can solve your specific challenges."
+    />
+  </div>
+</BaseLayout>

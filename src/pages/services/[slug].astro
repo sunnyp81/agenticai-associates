@@ -1,0 +1,12 @@
+---
+import ServiceLayout from '@/layouts/ServiceLayout.astro';
+import { getServicePaths } from '@/lib/page-factory';
+
+export function getStaticPaths() {
+  return getServicePaths();
+}
+
+const { page } = Astro.props;
+---
+
+<ServiceLayout page={page} />

@@ -1,0 +1,40 @@
+---
+import { buildBreadcrumbSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
+
+interface Props {
+  items: { label: string; href: string }[];
+}
+
+const { items } = Astro.props;
+
+const schemaItems = [
+  { name: 'Home', url: siteConfig.url + '/' },
+  ...items.map((item) => ({
+    name: item.label,
+    url: siteConfig.url + item.href,
+  })),
+];
+
+const schema = buildBreadcrumbSchema(schemaItems);
+---
+
+<nav aria-label="Breadcrumb" class="mb-6">
+  <ol class="flex flex-wrap items-center gap-1.5 text-sm text-[var(--color-text-muted)]">
+    <li>
+      <a href="/" class="hover:text-[var(--color-accent)] transition-colors">Home</a>
+    </li>
+    {items.map((item, i) => (
+      <li class="flex items-center gap-1.5">
+        <span aria-hidden="true" class="text-[var(--color-border)]">/</span>
+        {i === items.length - 1 ? (
+          <span class="text-[var(--color-text)] font-medium" aria-current="page">{item.label}</span>
+        ) : (
+          <a href={item.href} class="hover:text-[var(--color-accent)] transition-colors">{item.label}</a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

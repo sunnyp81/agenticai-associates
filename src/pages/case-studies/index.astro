@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import CTABanner from '@/components/CTABanner.astro';
+
+const caseStudies = [
+  {
+    title: 'Automated Document Processing for a Legal Firm',
+    industry: 'Legal',
+    result: '70% reduction in manual review time',
+    description: 'We built an AI-powered document analysis system that reads, categorises, and extracts key clauses from legal contracts. The firm now processes contracts in minutes, not hours.',
+    tags: ['Generative AI', 'Automation', 'Legal'],
+  },
+  {
+    title: 'Demand Forecasting for a UK Retailer',
+    industry: 'Retail',
+    result: '23% improvement in forecast accuracy',
+    description: 'We deployed a machine learning model that predicts weekly demand by product and location. The retailer reduced stockouts by 35% and cut overstock waste significantly.',
+    tags: ['Forecasting', 'Data & AI', 'Retail'],
+  },
+  {
+    title: 'AI Chatbot for a Healthcare Provider',
+    industry: 'Healthcare',
+    result: '40% fewer routine calls to reception',
+    description: 'We designed and deployed a conversational AI assistant that handles appointment bookings, FAQs, and prescription queries. Staff now focus on patient care, not phone calls.',
+    tags: ['Conversational AI', 'Healthcare', 'Implementation'],
+  },
+];
+---
+
+<BaseLayout
+  title="AI Case Studies — Real Results from AI Consultancy | Agentic AI Associates"
+  description="See how we've helped UK businesses implement AI solutions. Real case studies with measurable results across healthcare, legal, retail, and more."
+>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[{ label: 'Case Studies', href: '/case-studies/' }]} />
+      <h1 class="text-white max-w-3xl">Case Studies</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">Real projects. Real results. Here's what happens when AI strategy meets proper execution.</p>
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="space-y-8 max-w-4xl">
+      {caseStudies.map((study) => (
+        <article class="card">
+          <div class="flex flex-wrap gap-2 mb-3">
+            {study.tags.map((tag) => (
+              <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">{tag}</span>
+            ))}
+          </div>
+          <h2 class="text-xl font-semibold mb-2">{study.title}</h2>
+          <p class="text-[var(--color-text-muted)] mb-4">{study.description}</p>
+          <div class="flex items-center gap-2 text-sm">
+            <span class="font-semibold text-[var(--color-success)]">Result:</span>
+            <span class="font-medium">{study.result}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-12 max-w-4xl">
+      <div class="card bg-[var(--color-surface)]">
+        <h2 class="text-xl font-semibold mb-3">More Case Studies Coming Soon</h2>
+        <p class="text-[var(--color-text-muted)]">We're documenting more client projects. Want to discuss how we could help your business? <a href="/contact/" class="text-[var(--color-primary-light)] hover:text-[var(--color-accent)]">Get in touch</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <CTABanner
+      headline="Want Results Like These?"
+      text="Book a free consultation and let's discuss what AI can do for your business."
+    />
+  </div>
+</BaseLayout>

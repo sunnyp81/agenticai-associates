@@ -1,0 +1,25 @@
+---
+interface Props {
+  headings: { text: string; slug: string; depth: number }[];
+}
+
+const { headings } = Astro.props;
+---
+
+{headings.length > 2 && (
+  <nav class="bg-[var(--color-surface)] rounded-xl p-6 border border-[var(--color-border)] mb-8" aria-label="Table of contents">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)] mb-3">Contents</h2>
+    <ol class="space-y-2">
+      {headings.map((heading) => (
+        <li class:list={[heading.depth === 3 ? 'ml-4' : '']}>
+          <a
+            href={`#${heading.slug}`}
+            class="text-sm text-[var(--color-primary-light)] hover:text-[var(--color-accent)] transition-colors"
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}

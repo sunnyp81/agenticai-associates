@@ -1,0 +1,86 @@
+---
+import { siteConfig, mainNav } from '@/data/site-config';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--color-border)]">
+  <div class="container flex items-center justify-between h-16 md:h-18">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 text-lg font-bold font-[family-name:var(--font-display)]" style="color: var(--color-primary-dark);">
+      <span class="text-gradient">Agentic AI</span>
+      <span class="text-[var(--color-text-muted)] font-medium text-sm hidden sm:inline">.Associates</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+      {mainNav.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'text-sm font-medium transition-colors hover:text-[var(--color-accent)]',
+            currentPath.startsWith(item.href)
+              ? 'text-[var(--color-accent)]'
+              : 'text-[var(--color-text-muted)]',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/contact/" class="btn btn-primary text-sm !py-2 !px-5">
+        Get in Touch
+      </a>
+    </nav>
+
+    <!-- Mobile toggle -->
+    <button
+      id="mobile-toggle"
+      class="lg:hidden p-2 text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden lg:hidden border-t border-[var(--color-border)]" aria-label="Mobile navigation">
+    <div class="container py-4 flex flex-col gap-1">
+      {mainNav.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'py-2.5 px-3 rounded-lg text-sm font-medium transition-colors',
+            currentPath.startsWith(item.href)
+              ? 'bg-[var(--color-surface)] text-[var(--color-accent)]'
+              : 'text-[var(--color-text-muted)] hover:bg-[var(--color-surface)]',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/contact/" class="btn btn-primary mt-2 text-sm">
+        Get in Touch
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('menu-open');
+  const closeIcon = document.getElementById('menu-close');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    openIcon?.classList.toggle('hidden', isOpen);
+    closeIcon?.classList.toggle('hidden', !isOpen);
+  });
+</script>

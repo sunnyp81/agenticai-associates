@@ -1,0 +1,123 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import ProcessSteps from '@/components/ProcessSteps.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import RelatedLinks from '@/components/RelatedLinks.astro';
+import { buildServiceSchema, buildFAQSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
+import { getRelatedIndustries, getRelatedSolutions } from '@/lib/page-factory';
+
+interface Props {
+  page: {
+    slug: string;
+    name: string;
+    title: string;
+    description: string;
+    intro: string;
+    sections: { heading: string; body: string }[];
+    features: { title: string; description: string }[];
+    faq: { question: string; answer: string }[];
+    relatedServices: string[];
+    relatedIndustries: string[];
+    relatedSolutions: string[];
+  };
+}
+
+const { page } = Astro.props;
+
+const serviceSchema = buildServiceSchema({
+  name: page.name,
+  description: page.description,
+  url: `${siteConfig.url}/services/${page.slug}/`,
+});
+
+const faqSchema = buildFAQSchema(page.faq);
+const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+
+const relatedIndustries = getRelatedIndustries(page.relatedIndustries);
+const relatedSolutions = getRelatedSolutions(page.relatedSolutions);
+---
+
+<BaseLayout title={page.title} description={page.description} schema={schemas}>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[
+        { label: 'Services', href: '/services/' },
+        { label: page.name, href: `/services/${page.slug}/` },
+      ]} />
+      <h1 class="text-white max-w-3xl">{page.name}</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">{page.intro}</p>
+      <a href="/contact/" class="btn btn-primary mt-6">Discuss Your Project</a>
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <!-- Main content -->
+      <div class="lg:col-span-2">
+        <!-- Sections -->
+        <div class="prose">
+          {page.sections.map((section) => (
+            <div>
+              <h2>{section.heading}</h2>
+              <p>{section.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Features -->
+        {page.features.length > 0 && (
+          <div class="mt-12">
+            <h2 class="mb-6">What You Get</h2>
+            <FeatureGrid features={page.features} columns={2} />
+          </div>
+        )}
+
+        <!-- Process -->
+        <ProcessSteps />
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        {relatedIndustries.length > 0 && (
+          <RelatedLinks
+            title="Industries We Serve"
+            links={relatedIndustries.map((ind) => ({
+              label: ind.name,
+              href: `/industries/${ind.slug}/`,
+            }))}
+          />
+        )}
+
+        {relatedSolutions.length > 0 && (
+          <RelatedLinks
+            title="Related Solutions"
+            links={relatedSolutions.map((sol) => ({
+              label: sol.name,
+              href: `/solutions/${sol.slug}/`,
+            }))}
+          />
+        )}
+      </aside>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  {page.faq.length > 0 && (
+    <div class="container">
+      <FAQ faqs={page.faq} />
+    </div>
+  )}
+
+  <!-- CTA -->
+  <div class="container">
+    <CTABanner
+      headline={`Need Help with ${page.name}?`}
+      text="Let's talk about how we can help your business. Free consultation, no strings attached."
+    />
+  </div>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import SolutionLayout from '@/layouts/SolutionLayout.astro';
+import { getSolutionPaths } from '@/lib/page-factory';
+
+export function getStaticPaths() {
+  return getSolutionPaths();
+}
+
+const { page } = Astro.props;
+---
+
+<SolutionLayout page={page} />

@@ -1,0 +1,256 @@
+{
+  "pages": [
+    {
+      "slug": "small-business",
+      "name": "AI Consultant for Small Business",
+      "title": "AI Consultant for Small Business — Agentic AI Associates",
+      "description": "Affordable AI consultancy for small businesses. Get expert AI strategy and implementation scaled to your budget and goals.",
+      "primaryKeyword": "ai consultant for small business",
+      "intro": "You don't need a massive budget to benefit from AI. Small businesses across the UK are using artificial intelligence to save time, cut costs, and compete with larger rivals. We help you find the right AI tools and build a practical plan that fits your team and your budget.",
+      "sections": [
+        {
+          "heading": "Why Small Businesses Need AI Now",
+          "body": "<p>AI is no longer a luxury reserved for corporations with deep pockets. Off-the-shelf tools like ChatGPT, automated email platforms, and smart inventory systems have made powerful technology accessible to businesses of every size. The real challenge is knowing which tools actually matter for your situation.</p><p>Small businesses that adopt AI early gain a genuine competitive edge. You can automate repetitive admin, generate marketing content in minutes, and predict customer behaviour using data you already collect. Our consultants help you cut through the noise and focus on changes that deliver measurable returns within weeks, not months.</p><p>We work with sole traders, family-run shops, and teams of up to 50 people. Every recommendation we make is grounded in your actual revenue, your team's skill level, and your appetite for change. No jargon. No overselling. Just practical AI that pays for itself.</p>"
+        },
+        {
+          "heading": "Our Approach to Small Business AI",
+          "body": "<p>We start with a free discovery call to understand your operations, pain points, and goals. From there, we build a short-list of AI opportunities ranked by effort and impact. Most small businesses see the biggest wins in three areas: customer service automation, content generation, and financial forecasting.</p><p>Our engagements are designed around small business realities. That means fixed-price packages, no long-term lock-in, and clear milestones you can track yourself. We also train your team so you're never dependent on us to keep things running.</p><p>Whether you want to automate your booking system, build a chatbot for your website, or use AI to write product descriptions, we'll guide you from idea to implementation. We've helped bakeries, plumbers, accountants, and online retailers — and the approach works because it's tailored to you.</p>"
+        },
+        {
+          "heading": "What Results Can You Expect?",
+          "body": "<p>Our small business clients typically reclaim 10 to 15 hours per week through automation. That's time you can reinvest into sales, customer relationships, or simply having a life outside of work. The financial impact depends on your starting point, but most clients see a positive return within the first 60 days.</p><p>Common outcomes include faster response times to customer enquiries, higher-quality marketing output, and better cash flow forecasting. One client — a three-person estate agency — reduced their admin workload by 40% using a combination of AI email triage and automated property descriptions.</p><p>We measure everything. You'll receive a simple dashboard showing time saved, tasks automated, and estimated cost savings. If something isn't working, we adjust. Our goal is to make AI a permanent, profitable part of your business — not a one-off experiment.</p>"
+        }
+      ],
+      "features": [
+        {
+          "title": "Fixed-Price Packages",
+          "description": "No hourly billing surprises. Choose from clearly priced AI strategy, implementation, or training packages designed for small business budgets."
+        },
+        {
+          "title": "Quick Wins First",
+          "description": "We identify the fastest, highest-impact AI opportunities in your business and implement them within the first two weeks."
+        },
+        {
+          "title": "Team Training Included",
+          "description": "Every engagement includes hands-on training so your staff can use and maintain AI tools confidently without ongoing support costs."
+        },
+        {
+          "title": "No Lock-In Contracts",
+          "description": "Work with us for as long as it makes sense. Our clients stay because of results, not contractual obligations."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How much does AI consultancy cost for a small business?",
+          "answer": "Our small business packages start from £1,500 for a strategy session and roadmap. Implementation projects typically range from £3,000 to £8,000 depending on complexity. We always provide a fixed quote before work begins."
+        },
+        {
+          "question": "Do I need technical skills to use AI in my business?",
+          "answer": "Not at all. We select tools that match your team's existing skill level and provide full training. Most of the AI tools we recommend require no coding knowledge whatsoever."
+        },
+        {
+          "question": "How long before I see results from AI?",
+          "answer": "Most small business clients see measurable time savings within the first two weeks. Financial returns typically follow within 30 to 60 days, depending on the use case."
+        },
+        {
+          "question": "What types of small business benefit most from AI?",
+          "answer": "Any business with repetitive tasks, customer enquiries, or content needs benefits significantly. We've worked with retailers, tradespeople, professional services firms, hospitality businesses, and e-commerce shops."
+        },
+        {
+          "question": "Can AI really help a business with fewer than 10 employees?",
+          "answer": "Absolutely. In fact, smaller teams often see the biggest proportional gains because AI can handle tasks that would otherwise require hiring additional staff. A single AI chatbot can handle enquiries that previously took hours each day."
+        }
+      ],
+      "relatedServices": ["ai-strategy", "ai-training"]
+    },
+    {
+      "slug": "enterprise",
+      "name": "Enterprise AI Consultancy",
+      "title": "Enterprise AI Consultancy — Agentic AI Associates",
+      "description": "Enterprise-grade AI consultancy for large organisations. We deliver AI strategy, governance frameworks, and scalable implementation across departments.",
+      "primaryKeyword": "enterprise ai consultancy",
+      "intro": "Enterprise AI demands more than clever tools. It requires governance, cross-departmental alignment, and infrastructure that scales. We partner with large organisations to design and deliver AI programmes that create lasting competitive advantage while managing risk responsibly.",
+      "sections": [
+        {
+          "heading": "AI Strategy for Complex Organisations",
+          "body": "<p>Large organisations face unique challenges when adopting AI. Legacy systems, data silos, regulatory requirements, and competing departmental priorities all slow progress. Our enterprise consultants have delivered AI transformation programmes for FTSE 250 companies, government bodies, and multinational firms.</p><p>We begin with a comprehensive AI readiness assessment covering your data infrastructure, team capabilities, existing technology stack, and strategic objectives. This produces a prioritised roadmap with clear phases, dependencies, and expected returns for each initiative.</p><p>Our approach balances ambition with pragmatism. We help you identify lighthouse projects that demonstrate value quickly, while building the foundational capabilities — data governance, MLOps pipelines, and change management frameworks — needed for long-term success. Every recommendation aligns with your board-level strategy and regulatory obligations.</p>"
+        },
+        {
+          "heading": "Governance, Ethics, and Risk Management",
+          "body": "<p>Enterprise AI without governance is a liability. We help you build robust AI governance frameworks that satisfy regulators, protect customers, and give your leadership team confidence to invest at scale. Our frameworks cover model risk management, bias detection, explainability requirements, and data privacy compliance.</p><p>We work alongside your legal, compliance, and risk teams to develop AI policies that are practical, not just theoretical. This includes clear approval processes for new AI use cases, monitoring systems for deployed models, and incident response procedures.</p><p>With the EU AI Act and evolving UK regulations, getting governance right is no longer optional. Our consultants stay current with regulatory developments and help you build frameworks that adapt as requirements change. We've helped organisations across financial services, healthcare, and the public sector navigate these complexities successfully.</p>"
+        },
+        {
+          "heading": "Scalable Implementation and Change Management",
+          "body": "<p>The difference between a successful AI pilot and a failed enterprise rollout usually comes down to change management. We embed within your teams to ensure adoption happens at every level — from the C-suite sponsors to the frontline staff who use the tools daily.</p><p>Our implementation methodology covers technical delivery, training programmes, communication plans, and performance measurement. We don't just build the solution and hand it over. We ensure it works in practice, with real users, under real conditions.</p><p>We also help you build internal AI capabilities so you reduce dependence on external consultants over time. This includes establishing centres of excellence, upskilling existing data teams, and creating internal knowledge-sharing programmes. The goal is sustainable, self-directed AI maturity — not permanent consulting fees.</p>"
+        }
+      ],
+      "features": [
+        {
+          "title": "AI Readiness Assessment",
+          "description": "Comprehensive evaluation of your data infrastructure, team skills, technology stack, and strategic alignment to produce a prioritised AI roadmap."
+        },
+        {
+          "title": "Governance Framework Design",
+          "description": "Practical AI governance covering model risk, bias detection, explainability, and regulatory compliance tailored to your industry and jurisdiction."
+        },
+        {
+          "title": "Centre of Excellence Setup",
+          "description": "We help you build an internal AI team with the right structure, skills, and processes to sustain AI innovation without ongoing external support."
+        },
+        {
+          "title": "Executive AI Workshops",
+          "description": "Board-level sessions that align leadership on AI opportunities, risks, and investment priorities — cutting through vendor hype with honest assessment."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How long does an enterprise AI transformation programme take?",
+          "answer": "Most programmes span 6 to 18 months depending on scope. We deliver value in phases, with initial lighthouse projects producing results within the first 8 to 12 weeks while foundational work continues in parallel."
+        },
+        {
+          "question": "Do you work with our existing technology vendors?",
+          "answer": "Yes. We're technology-agnostic and work alongside your existing partners — whether that's Microsoft Azure, AWS, Google Cloud, or specialist AI vendors. Our role is to ensure you get the best outcome, not to sell you a particular platform."
+        },
+        {
+          "question": "How do you handle data security and confidentiality?",
+          "answer": "We follow enterprise-grade security protocols including NDAs, secure data handling procedures, and compliance with ISO 27001 standards. We never access production data without explicit authorisation and appropriate controls."
+        },
+        {
+          "question": "What industries do you have enterprise experience in?",
+          "answer": "Our enterprise clients span financial services, healthcare, manufacturing, retail, public sector, and professional services. We bring cross-industry best practices while respecting the specific regulatory and operational requirements of your sector."
+        },
+        {
+          "question": "Can you help with AI procurement and vendor selection?",
+          "answer": "Absolutely. We provide independent vendor assessments, help you write RFPs, evaluate proposals, and negotiate contracts. Because we don't resell technology, our advice is always in your interest."
+        }
+      ],
+      "relatedServices": ["ai-strategy", "ai-implementation"]
+    },
+    {
+      "slug": "startups",
+      "name": "AI Consultant for Startups",
+      "title": "AI Consultant for Startups — Agentic AI Associates",
+      "description": "AI consultancy built for startups. Move fast with expert guidance on AI product development, investor-ready strategy, and lean implementation.",
+      "primaryKeyword": "ai consultant for startups",
+      "intro": "Startups move fast. Your AI consultant should too. We help early-stage and growth-stage companies build AI into their products, operations, and pitch decks — without burning runway on the wrong approach. Practical, founder-friendly advice that respects your pace and your budget.",
+      "sections": [
+        {
+          "heading": "AI as a Startup Competitive Advantage",
+          "body": "<p>In a crowded market, AI can be the difference between a startup that scales and one that stalls. Whether you're building an AI-native product or using AI to operate more efficiently than your competitors, the strategic decisions you make early define your trajectory.</p><p>We work with pre-seed through Series B startups across the UK. Our consultants understand the startup environment — tight budgets, small teams, and the pressure to ship fast. We won't burden you with enterprise-grade frameworks you don't need yet. Instead, we focus on the minimum viable AI that gives you maximum competitive advantage.</p><p>Common engagements include AI product strategy, technical architecture reviews, build-vs-buy decisions, and preparing AI capabilities for investor due diligence. We help you make smart bets with limited resources and avoid the costly mistakes that come from moving fast without direction.</p>"
+        },
+        {
+          "heading": "From MVP to Scalable AI Product",
+          "body": "<p>Building AI features into your product is exciting but risky. Choose the wrong model, the wrong data pipeline, or the wrong architecture, and you'll spend months rebuilding instead of growing. We help you get the technical foundations right from day one.</p><p>Our startup engagements typically begin with a focused sprint — one to two weeks of intensive work covering your data strategy, model selection, and technical architecture. We produce a clear implementation plan your engineering team can execute, along with recommendations for tools, APIs, and infrastructure that match your current stage.</p><p>We also help you think ahead. The AI architecture that works for 100 users won't necessarily work for 100,000. We design systems that scale gracefully, so you're not facing a painful rebuild just when traction arrives. Our advice is practical, opinionated, and grounded in real startup experience.</p>"
+        },
+        {
+          "heading": "Investor-Ready AI Strategy",
+          "body": "<p>Investors increasingly scrutinise AI claims. They want to know whether your AI is genuinely differentiated or just a thin wrapper around an API. We help you articulate your AI moat clearly and credibly — in pitch decks, data rooms, and due diligence sessions.</p><p>Our consultants have supported startups through fundraising rounds by preparing technical documentation, reviewing AI architecture for scalability, and coaching founders on how to present AI capabilities to non-technical investors. We help you demonstrate genuine technical depth without overwhelming your audience.</p><p>We can also provide an independent AI assessment for investors conducting due diligence on your startup. This builds confidence in your technical claims and can accelerate the investment process. Whether you're raising your first round or preparing for Series A, having credible AI strategy documentation strengthens your position significantly.</p>"
+        }
+      ],
+      "features": [
+        {
+          "title": "Rapid AI Sprints",
+          "description": "Intensive one to two week engagements that deliver a complete AI strategy, architecture review, and implementation roadmap your team can execute immediately."
+        },
+        {
+          "title": "Build vs Buy Analysis",
+          "description": "Honest assessment of whether to build custom AI, use existing APIs, or combine both — based on your budget, timeline, and competitive requirements."
+        },
+        {
+          "title": "Investor Due Diligence Support",
+          "description": "Technical documentation, architecture reviews, and coaching that help you present AI capabilities credibly to investors and pass technical due diligence."
+        },
+        {
+          "title": "Founder-Friendly Pricing",
+          "description": "Flexible engagement models including equity-adjusted pricing for early-stage startups. We invest in relationships, not just invoices."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How much does AI consultancy cost for a startup?",
+          "answer": "Our startup sprints start from £2,000 for a focused strategy and architecture review. Ongoing advisory retainers are available from £500 per month. We also offer equity-adjusted pricing for pre-revenue startups with strong potential."
+        },
+        {
+          "question": "We're pre-revenue. Is it too early for AI consultancy?",
+          "answer": "Not if AI is core to your product or operations. Getting your AI strategy right before you build saves significant time and money. Many of our best engagements are with pre-seed and seed-stage founders."
+        },
+        {
+          "question": "Can you help us hire AI engineers?",
+          "answer": "Yes. We help startups write job descriptions, assess candidates, and structure AI teams. We can also provide interim technical leadership while you recruit permanent staff."
+        },
+        {
+          "question": "Do you sign NDAs?",
+          "answer": "Always. We understand the sensitivity of startup IP and competitive positioning. Every engagement begins with a mutual NDA, and we never share client information without explicit permission."
+        },
+        {
+          "question": "What stage startups do you work with?",
+          "answer": "We work with startups from pre-seed through Series B. The nature of our support evolves with your stage — from foundational strategy and MVP guidance at the earliest stages to scaling architecture and team building as you grow."
+        }
+      ],
+      "relatedServices": ["ai-strategy", "generative-ai"]
+    },
+    {
+      "slug": "smes",
+      "name": "AI Consultancy for SMEs",
+      "title": "AI Consultancy for SMEs — Agentic AI Associates",
+      "description": "AI consultancy tailored for UK SMEs. Practical AI strategy and implementation that drives efficiency and growth without enterprise complexity.",
+      "primaryKeyword": "ai consultancy for smes",
+      "intro": "UK SMEs are the backbone of the economy — and AI is becoming essential to staying competitive. We provide practical, no-nonsense AI consultancy designed for businesses with 10 to 250 employees. Big enough to benefit from serious AI, lean enough to need every pound working hard.",
+      "sections": [
+        {
+          "heading": "AI That Fits the SME Reality",
+          "body": "<p>SMEs occupy a unique space. You're too large for off-the-shelf small business tools, but you don't have the budget or bureaucracy tolerance for enterprise consulting firms. We've built our SME practice specifically for this middle ground.</p><p>Our consultants understand the SME operating environment — owner-managed decision making, lean teams wearing multiple hats, and the constant pressure to do more with less. We don't deliver 200-page strategy documents. We deliver clear, actionable plans with realistic timelines and honest cost estimates.</p><p>Common SME use cases include automating financial reporting, streamlining supply chain operations, improving customer service with AI-assisted tools, and using predictive analytics for demand forecasting. We help you prioritise based on your specific pain points and the resources you have available right now.</p>"
+        },
+        {
+          "heading": "Department-by-Department AI Opportunities",
+          "body": "<p>Most SMEs benefit from AI in multiple departments simultaneously. We take a structured approach, assessing each area of your business for automation and intelligence opportunities, then prioritising by impact and ease of implementation.</p><p><strong>Sales and marketing:</strong> AI-powered lead scoring, content generation, email personalisation, and customer segmentation. <strong>Operations:</strong> Process automation, inventory optimisation, and quality control. <strong>Finance:</strong> Automated bookkeeping, cash flow prediction, and fraud detection. <strong>HR:</strong> CV screening, onboarding automation, and employee sentiment analysis.</p><p>We typically find that SMEs have 8 to 12 viable AI opportunities across their business. Our job is to help you pick the right three to start with — the ones that deliver the fastest return and build momentum for further adoption across the organisation.</p>"
+        },
+        {
+          "heading": "Building Long-Term AI Capability",
+          "body": "<p>We don't want you dependent on consultants forever. Our SME engagements are designed to build your team's confidence and capability with AI so you can drive future initiatives independently.</p><p>Every project includes knowledge transfer sessions, documentation, and practical training. We also help you identify which team members are best positioned to become your internal AI champions — the people who'll spot new opportunities and drive adoption after our engagement ends.</p><p>For SMEs ready to invest more deeply, we offer ongoing advisory retainers. These provide a monthly allocation of consulting hours for ad-hoc advice, new project scoping, and technology reviews. It's like having a fractional Chief AI Officer without the full-time salary. Our retainer clients use us as a sounding board for decisions, a quality check on vendor proposals, and a source of fresh ideas for AI-driven growth.</p>"
+        }
+      ],
+      "features": [
+        {
+          "title": "Full Business AI Audit",
+          "description": "Department-by-department assessment of AI opportunities across your entire business, prioritised by impact, cost, and implementation complexity."
+        },
+        {
+          "title": "Fractional AI Leadership",
+          "description": "Monthly advisory retainer giving you access to senior AI consultancy without the cost of a full-time hire. Strategic guidance when you need it."
+        },
+        {
+          "title": "Vendor-Neutral Recommendations",
+          "description": "We don't resell software. Our recommendations are based entirely on what works best for your business, your budget, and your team's capabilities."
+        },
+        {
+          "title": "Phased Implementation Plans",
+          "description": "Realistic rollout schedules that respect your team's capacity. We plan in manageable phases so you see results without overwhelming your operations."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What size business counts as an SME?",
+          "answer": "We define SMEs as businesses with 10 to 250 employees, though we're flexible. If your business has unique complexity relative to its size, our SME approach may suit you regardless of headcount."
+        },
+        {
+          "question": "How much should an SME budget for AI consultancy?",
+          "answer": "A comprehensive AI audit and strategy starts from £3,000. Implementation projects typically range from £5,000 to £20,000 depending on scope. Monthly advisory retainers start from £750. We always recommend starting with a strategy phase to ensure your investment is well directed."
+        },
+        {
+          "question": "Will AI replace jobs in my business?",
+          "answer": "AI typically augments roles rather than replacing them. In most SMEs, AI handles repetitive tasks so your team can focus on higher-value work. We always consider the human impact and help you manage the transition thoughtfully."
+        },
+        {
+          "question": "How do you measure the ROI of AI for SMEs?",
+          "answer": "We establish clear baseline metrics before implementation — time spent on tasks, error rates, response times, or revenue per employee. After deployment, we track the same metrics to quantify the impact. Most SME clients see 3x to 5x return on their AI investment within 12 months."
+        },
+        {
+          "question": "Can you work with our existing IT provider?",
+          "answer": "Absolutely. We collaborate with your existing IT team or managed service provider to ensure smooth implementation. We handle the AI strategy and specialist work while your IT provider manages the infrastructure and day-to-day support."
+        }
+      ],
+      "relatedServices": ["ai-strategy", "ai-implementation"]
+    }
+  ]
+}

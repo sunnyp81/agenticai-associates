@@ -1,0 +1,12 @@
+---
+import LearnLayout from '@/layouts/LearnLayout.astro';
+import { getLearnPaths } from '@/lib/page-factory';
+
+export function getStaticPaths() {
+  return getLearnPaths();
+}
+
+const { page } = Astro.props;
+---
+
+<LearnLayout page={page} />

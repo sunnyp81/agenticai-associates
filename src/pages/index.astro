@@ -1,0 +1,142 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import StatsBar from '@/components/StatsBar.astro';
+import HubCard from '@/components/HubCard.astro';
+import ProcessSteps from '@/components/ProcessSteps.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import { buildWebSiteSchema, buildOrganizationSchema } from '@/lib/schema';
+
+const schemas = [buildWebSiteSchema(), buildOrganizationSchema()];
+
+const services = [
+  { title: 'AI Strategy & Roadmaps', description: 'Clear, actionable plans for AI adoption. We audit your readiness, identify opportunities, and build a roadmap with measurable ROI.', href: '/services/ai-strategy/', icon: 'strategy' },
+  { title: 'AI Implementation', description: 'We build and deploy AI systems that work. From chatbots to data pipelines, integrated with your existing tech stack.', href: '/services/ai-implementation/', icon: 'implementation' },
+  { title: 'Agentic AI', description: 'Autonomous AI agents that handle complex workflows. We design, build, and deploy agentic systems tailored to your business.', href: '/services/agentic-ai/', icon: 'agentic' },
+  { title: 'Generative AI', description: 'LLMs, RAG systems, and AI-powered content generation. We help you harness generative AI safely and effectively.', href: '/services/generative-ai/', icon: 'sparkles' },
+  { title: 'Data & AI', description: 'Turn your data into a competitive advantage. We build data pipelines, analytics, and AI models that deliver insight.', href: '/services/data-and-ai/', icon: 'data' },
+  { title: 'AI Training & Workshops', description: 'Upskill your team on AI tools, prompt engineering, and responsible AI adoption. Hands-on, practical sessions.', href: '/services/ai-training/', icon: 'training' },
+];
+
+const industries = [
+  { title: 'Healthcare', description: 'Clinical AI, patient data, compliance automation.', href: '/industries/healthcare/', icon: 'healthcare' },
+  { title: 'Legal', description: 'Contract analysis, case research, compliance monitoring.', href: '/industries/legal/', icon: 'legal' },
+  { title: 'Finance', description: 'Fraud detection, risk assessment, automated reporting.', href: '/industries/finance/', icon: 'finance' },
+  { title: 'Retail', description: 'Demand forecasting, personalisation, inventory optimisation.', href: '/industries/retail/', icon: 'retail' },
+  { title: 'Manufacturing', description: 'Predictive maintenance, quality control, supply chain AI.', href: '/industries/manufacturing/', icon: 'manufacturing' },
+  { title: 'Education', description: 'Adaptive learning, admin automation, student analytics.', href: '/industries/education/', icon: 'education' },
+];
+---
+
+<BaseLayout
+  title="AI Consultancy UK — Agentic AI Associates | Strategy, Implementation & Training"
+  description="UK AI consultancy specialising in agentic AI, generative AI, and data-driven solutions. We help businesses implement AI strategy, automation, and intelligent systems that deliver results."
+  schema={schemas}
+>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-[var(--color-accent)] rounded-full blur-[128px]"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-[var(--color-primary-light)] rounded-full blur-[128px]"></div>
+    </div>
+    <div class="container relative section" style="padding-top: 6rem; padding-bottom: 6rem;">
+      <p class="text-sm font-medium text-[var(--color-accent-light)] mb-4 tracking-wide uppercase">AI Consultancy UK</p>
+      <h1 class="text-white max-w-4xl leading-[1.1]">
+        AI strategy that <span class="text-gradient">delivers results</span>
+      </h1>
+      <p class="text-xl text-slate-300 mt-6 max-w-2xl leading-relaxed">
+        We help businesses adopt AI — from strategy to implementation. No hype, no jargon. Just intelligent systems that work for your business.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact/" class="btn btn-primary text-base">Book a Free Consultation</a>
+        <a href="/services/" class="btn btn-outline !border-slate-500 !text-slate-300 hover:!bg-slate-300 hover:!text-[var(--color-hero-bg)]">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="container -mt-8 relative z-10">
+    <div class="bg-white rounded-2xl shadow-lg border border-[var(--color-border)] p-6">
+      <StatsBar stats={[
+        { value: '50+', label: 'AI Projects Delivered' },
+        { value: '12', label: 'Industries Served' },
+        { value: '98%', label: 'Client Satisfaction' },
+        { value: 'UK', label: 'Based & Operated' },
+      ]} />
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <p class="text-sm font-medium text-[var(--color-accent)] mb-2 uppercase tracking-wide">What We Do</p>
+        <h2>AI Consultancy Services</h2>
+        <p class="text-[var(--color-text-muted)] mt-3 max-w-xl mx-auto">From strategy to deployment. We cover the full AI lifecycle so you get real results, not just a report.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((svc) => (
+          <HubCard title={svc.title} description={svc.description} href={svc.href} icon={svc.icon} />
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/services/" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="section bg-[var(--color-surface)]">
+    <div class="container">
+      <div class="text-center mb-12">
+        <p class="text-sm font-medium text-[var(--color-accent)] mb-2 uppercase tracking-wide">Industries</p>
+        <h2>AI Solutions for Your Sector</h2>
+        <p class="text-[var(--color-text-muted)] mt-3 max-w-xl mx-auto">Every industry has unique challenges. We bring deep domain knowledge to every project.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {industries.map((ind) => (
+          <HubCard title={ind.title} description={ind.description} href={ind.href} icon={ind.icon} />
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/industries/" class="btn btn-outline">View All Industries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container">
+      <ProcessSteps />
+    </div>
+  </section>
+
+  <!-- For different business sizes -->
+  <section class="section bg-[var(--color-surface)]">
+    <div class="container">
+      <div class="text-center mb-12">
+        <p class="text-sm font-medium text-[var(--color-accent)] mb-2 uppercase tracking-wide">For Every Business</p>
+        <h2>AI Consultancy Scaled to You</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <HubCard title="Small Business" description="Affordable AI that punches above its weight. Start small, scale fast." href="/for/small-business/" icon="default" />
+        <HubCard title="Startups" description="Move fast with AI baked in from day one. Lean, focused, no bloat." href="/for/startups/" icon="agentic" />
+        <HubCard title="SMEs" description="Bridge the gap between ambition and capability. AI that fits your budget." href="/for/smes/" icon="applied" />
+        <HubCard title="Enterprise" description="Complex systems, multiple stakeholders, high stakes. We've been there." href="/for/enterprise/" icon="implementation" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <CTABanner
+        headline="Let's Talk About Your AI Ambitions"
+        text="Book a free 30-minute consultation. We'll discuss your challenges, explore the possibilities, and give you an honest assessment of where AI can help."
+        buttonText="Book a Free Consultation"
+        buttonHref="/contact/"
+        secondaryText="Learn About AI Consulting"
+        secondaryHref="/learn/"
+      />
+    </div>
+  </section>
+</BaseLayout>

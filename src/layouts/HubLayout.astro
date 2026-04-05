@@ -1,0 +1,72 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import HubCard from '@/components/HubCard.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTABanner from '@/components/CTABanner.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  breadcrumbs: { label: string; href: string }[];
+  pages: { slug: string; name: string; description: string; icon?: string }[];
+  hubPath: string;
+  faqs?: { question: string; answer: string }[];
+  schema?: object | object[];
+}
+
+const { title, description, heroTitle, heroSubtitle, breadcrumbs, pages, hubPath, faqs = [], schema } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={breadcrumbs} />
+      <h1 class="text-white max-w-3xl">{heroTitle}</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">{heroSubtitle}</p>
+    </div>
+  </section>
+
+  <!-- Intro slot -->
+  <section class="section-sm">
+    <div class="container">
+      <slot name="intro" />
+    </div>
+  </section>
+
+  <!-- Spoke cards -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {pages.map((page) => (
+          <HubCard
+            title={page.name}
+            description={page.description}
+            href={`${hubPath}${page.slug}/`}
+            icon={page.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra content slot -->
+  <div class="container">
+    <slot />
+  </div>
+
+  <!-- FAQ -->
+  {faqs.length > 0 && (
+    <div class="container">
+      <FAQ faqs={faqs} />
+    </div>
+  )}
+
+  <!-- CTA -->
+  <div class="container">
+    <CTABanner />
+  </div>
+</BaseLayout>

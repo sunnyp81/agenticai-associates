@@ -1,0 +1,95 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import { buildOrganizationSchema, buildPersonSchema } from '@/lib/schema';
+
+const schemas = [buildOrganizationSchema(), buildPersonSchema()];
+---
+
+<BaseLayout
+  title="About Agentic AI Associates — UK AI Consultancy"
+  description="Meet the team behind Agentic AI Associates. We're a UK-based AI consultancy helping businesses adopt intelligent systems that deliver measurable results."
+  schema={schemas}
+>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[{ label: 'About', href: '/about/' }]} />
+      <h1 class="text-white max-w-3xl">About Us</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">We're AI consultants who actually build things. Not slide decks — systems.</p>
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 prose">
+        <h2>Who We Are</h2>
+        <p>Agentic AI Associates is a UK-based AI consultancy. We help businesses understand, adopt, and benefit from artificial intelligence. Not in five years. Now.</p>
+        <p>We work with organisations of all sizes — from startups finding product-market fit to enterprises managing complex digital transformations. Our approach is practical, hands-on, and focused on outcomes.</p>
+
+        <h2>What Makes Us Different</h2>
+        <p><strong>We build, not just advise.</strong> Most consultancies hand you a strategy document and walk away. We stick around for implementation. We write code. We deploy systems. We measure results.</p>
+        <p><strong>We speak plain English.</strong> AI is complex enough without adding consultant-speak. We explain things clearly. Short sentences. No jargon.</p>
+        <p><strong>We specialise in agentic AI.</strong> The next wave of AI isn't chatbots — it's autonomous agents that handle complex workflows end to end. We're building these systems today.</p>
+        <p><strong>We're UK-based.</strong> We understand UK business culture, regulations, and data protection requirements. GDPR compliance is baked into everything we do.</p>
+
+        <h2>Our Expertise</h2>
+        <ul>
+          <li><strong>AI Strategy</strong> — Roadmaps, readiness assessments, opportunity identification</li>
+          <li><strong>Agentic AI</strong> — Autonomous agents, multi-step workflows, tool-use systems</li>
+          <li><strong>Generative AI</strong> — LLMs, RAG architectures, prompt engineering</li>
+          <li><strong>Data & AI</strong> — Pipelines, analytics, machine learning models</li>
+          <li><strong>Implementation</strong> — Integration, deployment, monitoring, optimisation</li>
+          <li><strong>Training</strong> — Workshops, upskilling, responsible AI adoption</li>
+        </ul>
+
+        <h2>Our Founder</h2>
+        <p><strong>Sunny Patel</strong> is an AI consultant and technologist with deep experience in SEO, data engineering, and applied AI. He's built systems used by thousands of businesses and has a track record of turning AI strategy into real-world results.</p>
+        <p>Sunny founded Agentic AI Associates because he saw too many businesses being sold AI solutions they didn't need — or being told to wait when they should be acting. His approach is simple: understand the problem first, then apply the right technology.</p>
+
+        <h2>Our Values</h2>
+        <p><strong>Honesty first.</strong> If AI isn't right for your problem, we'll tell you. We'd rather lose a project than waste your money.</p>
+        <p><strong>Ship over plan.</strong> We believe in working software over PowerPoint slides. Every engagement produces something real.</p>
+        <p><strong>Measure everything.</strong> If we can't measure the impact, we haven't finished the job.</p>
+      </div>
+
+      <aside class="space-y-6">
+        <div class="card">
+          <h3 class="text-lg font-semibold mb-4">Quick Facts</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-[var(--color-text-muted)]">Founded</dt>
+              <dd class="font-medium">2026</dd>
+            </div>
+            <div>
+              <dt class="text-[var(--color-text-muted)]">Location</dt>
+              <dd class="font-medium">United Kingdom</dd>
+            </div>
+            <div>
+              <dt class="text-[var(--color-text-muted)]">Speciality</dt>
+              <dd class="font-medium">Agentic AI & Applied AI</dd>
+            </div>
+            <div>
+              <dt class="text-[var(--color-text-muted)]">Industries</dt>
+              <dd class="font-medium">12+ sectors served</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="card">
+          <h3 class="text-lg font-semibold mb-3">Ready to Talk?</h3>
+          <p class="text-sm text-[var(--color-text-muted)] mb-4">Book a free consultation to discuss your AI challenges.</p>
+          <a href="/contact/" class="btn btn-primary text-sm w-full">Get in Touch</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="container">
+    <CTABanner
+      headline="Let's Build Something Intelligent Together"
+      text="Whether you're exploring AI for the first time or scaling an existing programme, we're here to help."
+    />
+  </div>
+</BaseLayout>

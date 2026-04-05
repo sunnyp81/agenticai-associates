@@ -1,0 +1,34 @@
+---
+import HubLayout from '@/layouts/HubLayout.astro';
+import { getIndustriesHub } from '@/lib/page-factory';
+import { buildFAQSchema } from '@/lib/schema';
+
+const data = getIndustriesHub();
+
+const faqs = [
+  { question: 'Do you specialise in specific industries?', answer: 'Yes. We have deep experience across 12 sectors including healthcare, legal, finance, retail, and manufacturing. Each industry has unique data, regulations, and workflows — we understand the nuances.' },
+  { question: 'Can AI work for my industry even if it is not listed?', answer: 'Absolutely. The industries on this page are where we have the deepest experience, but AI principles apply broadly. Contact us and we will assess whether we can help.' },
+  { question: 'How do you handle industry-specific regulations?', answer: 'Compliance is built into our approach from day one. Whether it is GDPR, FCA rules, NHS data standards, or sector-specific requirements, we ensure every AI solution meets regulatory standards.' },
+];
+
+const schema = buildFAQSchema(faqs);
+---
+
+<HubLayout
+  title={data.hub.title}
+  description={data.hub.description}
+  heroTitle="AI Consultancy by Industry"
+  heroSubtitle="Every sector has unique challenges. We bring deep domain knowledge and proven AI solutions tailored to your industry."
+  breadcrumbs={[{ label: 'Industries', href: '/industries/' }]}
+  pages={data.pages.map((p) => ({ slug: p.slug, name: p.name, description: p.description, icon: p.icon }))}
+  hubPath="/industries/"
+  faqs={faqs}
+  schema={schema ? [schema] : []}
+>
+  <Fragment slot="intro">
+    <div class="prose max-w-3xl">
+      <p>AI is not one-size-fits-all. What works in retail forecasting is different from what works in healthcare compliance. That is why we specialise.</p>
+      <p>We have worked with organisations across 12 sectors. Each page below explains how AI applies to your specific industry — the challenges, the solutions, and the outcomes you can expect.</p>
+    </div>
+  </Fragment>
+</HubLayout>

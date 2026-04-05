@@ -1,0 +1,135 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import RelatedLinks from '@/components/RelatedLinks.astro';
+import { buildArticleSchema, buildFAQSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
+import { getRelatedLearnPages } from '@/lib/page-factory';
+
+interface Props {
+  page: {
+    slug: string;
+    name: string;
+    title: string;
+    description: string;
+    publishedAt: string;
+    updatedAt?: string;
+    sections: { heading: string; slug: string; body: string; depth?: number }[];
+    faq: { question: string; answer: string }[];
+    relatedLearnPages: string[];
+    commercialCTA?: { text: string; href: string };
+  };
+}
+
+const { page } = Astro.props;
+
+const articleSchema = buildArticleSchema({
+  title: page.title,
+  description: page.description,
+  url: `${siteConfig.url}/learn/${page.slug}/`,
+  publishedAt: page.publishedAt,
+  updatedAt: page.updatedAt,
+});
+
+const faqSchema = buildFAQSchema(page.faq);
+const schemas = [articleSchema, ...(faqSchema ? [faqSchema] : [])];
+
+const relatedPages = getRelatedLearnPages(page.relatedLearnPages);
+
+const headings = page.sections.map((s) => ({
+  text: s.heading,
+  slug: s.slug,
+  depth: s.depth || 2,
+}));
+---
+
+<BaseLayout title={page.title} description={page.description} schema={schemas} type="article">
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[
+        { label: 'Learn', href: '/learn/' },
+        { label: page.name, href: `/learn/${page.slug}/` },
+      ]} />
+      <h1 class="text-white max-w-3xl">{page.name}</h1>
+      <div class="flex items-center gap-4 mt-4 text-sm text-slate-400">
+        <span>By {siteConfig.founder.name}</span>
+        {page.updatedAt && <span>Updated: {new Date(page.updatedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>}
+      </div>
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <!-- Main content -->
+      <article class="lg:col-span-2">
+        <TableOfContents headings={headings} />
+
+        <div class="prose">
+          {page.sections.map((section) => (
+            <div>
+              {(section.depth || 2) === 2 ? (
+                <h2 id={section.slug}>{section.heading}</h2>
+              ) : (
+                <h3 id={section.slug}>{section.heading}</h3>
+              )}
+              <Fragment set:html={section.body} />
+            </div>
+          ))}
+        </div>
+
+        <!-- Commercial bridge CTA -->
+        {page.commercialCTA && (
+          <div class="mt-12 p-6 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)]">
+            <p class="font-medium text-[var(--color-primary-dark)]">{page.commercialCTA.text}</p>
+            <a href={page.commercialCTA.href} class="btn btn-primary mt-3 text-sm">
+              View Our Services
+            </a>
+          </div>
+        )}
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        {relatedPages.length > 0 && (
+          <RelatedLinks
+            title="Related Guides"
+            links={relatedPages.map((p) => ({
+              label: p.name,
+              href: `/learn/${p.slug}/`,
+            }))}
+          />
+        )}
+
+        <RelatedLinks
+          title="Our Services"
+          links={[
+            { label: 'AI Strategy & Roadmaps', href: '/services/ai-strategy/' },
+            { label: 'AI Implementation', href: '/services/ai-implementation/' },
+            { label: 'Agentic AI', href: '/services/agentic-ai/' },
+          ]}
+        />
+      </aside>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  {page.faq.length > 0 && (
+    <div class="container">
+      <FAQ faqs={page.faq} />
+    </div>
+  )}
+
+  <!-- CTA -->
+  <div class="container">
+    <CTABanner
+      headline="Need Expert AI Guidance?"
+      text="Whether you're hiring an AI consultant or building your own AI capability, we can help."
+      secondaryText="View Services"
+      secondaryHref="/services/"
+    />
+  </div>
+</BaseLayout>
