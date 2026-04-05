@@ -66,10 +66,8 @@ h2 { font-size: 1.875rem; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
 
-/* Default heading colour on light backgrounds */
-:where(h1, h2, h3, h4) {
-  color: var(--color-primary-dark);
-}
+/* Headings inherit parent text colour.
+   Dark sections → white. Light sections → body text (slate 900). */
 
 @media (min-width: 768px) {
   h1 { font-size: 3.5rem; }
