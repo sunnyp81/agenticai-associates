@@ -12,19 +12,19 @@
       "description": "Automate repetitive tasks with AI. We design and deploy intelligent automation for UK businesses — from document processing to end-to-end workflow orchestration.",
       "primaryKeyword": "ai automation consulting",
       "icon": "implementation",
-      "intro": "Most UK businesses lose thousands of hours each year on tasks that machines can handle faster and more accurately. AI automation replaces manual, repetitive work with intelligent systems that learn and adapt. We help you identify the right processes to automate — and build solutions that actually stick.",
+      "intro": "<p>Most UK businesses lose thousands of hours each year on tasks that machines can handle faster and more accurately. AI automation replaces manual, repetitive work with intelligent systems that learn and adapt. We help you identify the right processes to automate — and build solutions that actually stick.</p>",
       "sections": [
         {
           "heading": "What AI Automation Actually Looks Like",
-          "body": "AI automation goes far beyond simple macros or rule-based scripts. Modern intelligent automation uses machine learning to handle tasks that previously required human judgement. Think invoice processing that reads, categorises, and routes documents without anyone touching them. Or customer onboarding flows that pull data from multiple sources, verify identities, and set up accounts in minutes rather than days. We work with tools like UiPath, Microsoft Power Automate, and custom Python pipelines — choosing whatever fits your existing stack. The goal is not to replace your team but to free them from the work they should not be doing manually in the first place."
+          "body": "<p>AI automation goes far beyond simple macros or rule-based scripts. Modern intelligent automation uses machine learning to handle tasks that previously required human judgement. Think invoice processing that reads, categorises, and routes documents without anyone touching them. Or customer onboarding flows that pull data from multiple sources, verify identities, and set up accounts in minutes rather than days. We work with tools like UiPath, Microsoft Power Automate, and custom Python pipelines — choosing whatever fits your existing stack. The goal is not to replace your team but to free them from the work they should not be doing manually in the first place.</p><p>Looking to understand how automation fits into a broader transformation? Our <a href=\"/services/ai-implementation/\">AI implementation service</a> covers the full delivery lifecycle, and <a href=\"/services/agentic-ai/\">agentic AI solutions</a> take automation even further with autonomous decision-making agents.</p>"
         },
         {
           "heading": "How We Deliver Automation Projects",
-          "body": "Every engagement starts with a process audit. We map your current workflows, identify bottlenecks, and calculate the time and cost savings for each automation candidate. Then we prioritise ruthlessly — starting with the quick wins that deliver measurable ROI within weeks. Our delivery follows an agile approach: build, test, refine, deploy. We never throw a finished system over the wall and walk away. Your team gets hands-on training, clear documentation, and ongoing support. Most clients see a full return on their automation investment within three to six months, with some recouping costs in as little as four weeks."
+          "body": "<p>Every engagement starts with a process audit. We map your current workflows, identify bottlenecks, and calculate the time and cost savings for each automation candidate. Then we prioritise ruthlessly — starting with the quick wins that deliver measurable ROI within weeks. Our delivery follows an agile approach: build, test, refine, deploy. We never throw a finished system over the wall and walk away. Your team gets hands-on training, clear documentation, and ongoing support. Most clients see a full return on their automation investment within three to six months, with some recouping costs in as little as four weeks.</p><p>Not sure where to start? Our <a href=\"/services/ai-strategy/\">AI strategy consulting</a> helps you build a prioritised automation roadmap before committing to build.</p>"
         },
         {
           "heading": "Scaling Automation Across the Organisation",
-          "body": "One successful automation project is just the beginning. The real value comes when you build an automation-first culture across departments. We help you create a Centre of Excellence — a small internal team equipped with the skills and frameworks to identify and deploy new automations independently. This includes governance policies, change management support, and a reusable library of automation components. UK organisations that scale automation well typically see 30-50% reductions in operational costs within two years. We have helped teams in financial services, healthcare, and logistics achieve exactly that."
+          "body": "<p>One successful automation project is just the beginning. The real value comes when you build an automation-first culture across departments. We help you create a Centre of Excellence — a small internal team equipped with the skills and frameworks to identify and deploy new automations independently. This includes governance policies, change management support, and a reusable library of automation components.</p><p>UK organisations that scale automation well typically see 30-50% reductions in operational costs within two years. We have helped teams in <a href=\"/industries/finance/\">financial services</a>, <a href=\"/industries/healthcare/\">healthcare</a>, and logistics achieve exactly that. For organisations looking to continuously refine their operations, <a href=\"/solutions/process-improvement/\">AI process improvement</a> complements automation by identifying the next wave of opportunities.</p>"
         }
       ],
       "useCases": [
@@ -49,19 +49,19 @@
         {
           "industry": "Finance",
           "heading": "AI Automation in Finance",
-          "body": "UK financial services firms handle enormous volumes of transactions, reconciliations, and compliance checks daily. AI automation streamlines KYC verification, anti-money laundering screening, and trade settlement processes. Banks and fintechs using intelligent automation report 60-70% faster processing with significantly fewer errors. We have delivered automation projects for firms regulated by the FCA, ensuring full audit trails.",
+          "body": "<p>UK financial services firms handle enormous volumes of transactions, reconciliations, and compliance checks daily. AI automation streamlines KYC verification, anti-money laundering screening, and trade settlement processes. Banks and fintechs using intelligent automation report 60-70% faster processing with significantly fewer errors. We have delivered automation projects for firms regulated by the FCA, ensuring full audit trails. See how AI also supports <a href=\"/solutions/compliance-monitoring/\">compliance monitoring</a> in financial services.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Healthcare",
           "heading": "AI Automation in Healthcare",
-          "body": "NHS trusts and private healthcare providers benefit enormously from automating patient administration. Appointment scheduling, referral management, discharge summaries, and clinical coding can all be streamlined with AI. This frees clinical staff to focus on patient care rather than paperwork. Our healthcare automation solutions comply with NHS Digital standards and GDPR requirements throughout.",
+          "body": "<p>NHS trusts and private healthcare providers benefit enormously from automating patient administration. Appointment scheduling, referral management, discharge summaries, and clinical coding can all be streamlined with AI. This frees clinical staff to focus on patient care rather than paperwork. Our <a href=\"/services/ai-implementation/\">AI implementation</a> approach ensures healthcare automation solutions comply with NHS Digital standards and GDPR requirements throughout.</p>",
           "linkSlug": "/industries/healthcare/"
         },
         {
           "industry": "Manufacturing",
           "heading": "AI Automation in Manufacturing",
-          "body": "From quality inspection on production lines to automated purchase order generation, AI automation transforms manufacturing operations. UK manufacturers using AI-powered automation reduce defect rates and accelerate order-to-delivery cycles. We integrate with existing ERP and MES systems, ensuring automation works alongside your current infrastructure without disruption.",
+          "body": "<p>From quality inspection on production lines to automated purchase order generation, AI automation transforms manufacturing operations. UK manufacturers using AI-powered automation reduce defect rates and accelerate order-to-delivery cycles. We integrate with existing ERP and MES systems, ensuring automation works alongside your current infrastructure without disruption. Manufacturers also benefit from <a href=\"/solutions/inventory-management/\">AI inventory management</a> to optimise stock levels alongside production automation.</p>",
           "linkSlug": "/industries/manufacturing/"
         }
       ],
@@ -97,19 +97,19 @@
       "description": "Turn raw data into clear business decisions with AI. We build dashboards, models, and insight pipelines that help UK organisations act on their data.",
       "primaryKeyword": "ai data analysis consulting",
       "icon": "data",
-      "intro": "Your business generates more data than your team can realistically process. AI data analysis turns that raw information into clear, actionable insights — faster and more accurately than manual methods. We help UK organisations build analysis capabilities that drive real decisions, not just pretty charts.",
+      "intro": "<p>Your business generates more data than your team can realistically process. AI data analysis turns that raw information into clear, actionable insights — faster and more accurately than manual methods. We help UK organisations build analysis capabilities that drive real decisions, not just pretty charts.</p>",
       "sections": [
         {
           "heading": "From Raw Data to Real Decisions",
-          "body": "Most organisations sit on goldmines of untapped data. Customer behaviour patterns, operational inefficiencies, market trends — the signals are all there, buried in spreadsheets, databases, and disconnected systems. AI data analysis changes the game by processing massive datasets in seconds, spotting patterns that humans would miss, and presenting findings in a format your team can actually act on. We build analysis pipelines using tools like Python, BigQuery, and Power BI, tailored to your specific data sources. Whether you need real-time dashboards or deep-dive analytical models, we design solutions that fit how your business actually works — not how a textbook says it should."
+          "body": "<p>Most organisations sit on goldmines of untapped data. Customer behaviour patterns, operational inefficiencies, market trends — the signals are all there, buried in spreadsheets, databases, and disconnected systems. AI data analysis changes the game by processing massive datasets in seconds, spotting patterns that humans would miss, and presenting findings in a format your team can actually act on.</p><p>We build analysis pipelines using tools like Python, BigQuery, and Power BI, tailored to your specific data sources. Whether you need real-time dashboards or deep-dive analytical models, our <a href=\"/services/data-and-ai/\">data and AI service</a> designs solutions that fit how your business actually works — not how a textbook says it should. When your analysis reveals opportunities to predict future outcomes, <a href=\"/solutions/forecasting/\">AI forecasting</a> takes things further.</p>"
         },
         {
           "heading": "Our Approach to AI-Powered Analytics",
-          "body": "We start by understanding what decisions you need to make better. This sounds obvious, but too many analytics projects begin with the data rather than the question. Once we understand your decision points, we audit your data landscape — what you have, where it lives, and how clean it is. Then we build. Our typical engagement produces a working analytical model within four to six weeks, with iterative refinements based on your team's feedback. We use natural language processing to analyse text data like customer reviews, support tickets, and survey responses. Computer vision for image and document analysis. And classical statistical methods where they outperform fancier approaches. Pragmatism over hype, always."
+          "body": "<p>We start by understanding what decisions you need to make better. This sounds obvious, but too many analytics projects begin with the data rather than the question. Once we understand your decision points, we audit your data landscape — what you have, where it lives, and how clean it is. Then we build. Our typical engagement produces a working analytical model within four to six weeks, with iterative refinements based on your team's feedback.</p><p>We use natural language processing to analyse text data like customer reviews, support tickets, and survey responses. Computer vision for image and document analysis. And classical statistical methods where they outperform fancier approaches. Our <a href=\"/services/applied-ai/\">applied AI consultants</a> choose the right technique for each problem — pragmatism over hype, always.</p>"
         },
         {
           "heading": "Building a Data-Driven Culture",
-          "body": "The best analytics tools in the world are useless if nobody trusts or uses them. We invest heavily in making our analysis outputs accessible to non-technical stakeholders. That means intuitive dashboards, plain-English insight summaries, and training sessions that build genuine confidence. We also help you establish data governance frameworks — who owns what data, how quality is maintained, and how insights flow into decision-making processes. UK organisations with strong data cultures consistently outperform their peers. Our job is to get you there without the usual data transformation headaches."
+          "body": "<p>The best analytics tools in the world are useless if nobody trusts or uses them. We invest heavily in making our analysis outputs accessible to non-technical stakeholders. That means intuitive dashboards, plain-English insight summaries, and <a href=\"/services/ai-training/\">AI training sessions</a> that build genuine confidence.</p><p>We also help you establish data governance frameworks — who owns what data, how quality is maintained, and how insights flow into decision-making processes. UK organisations with strong data cultures consistently outperform their peers. Our job is to get you there without the usual data transformation headaches. Automated <a href=\"/solutions/report-generation/\">AI report generation</a> can then deliver those insights to stakeholders on a schedule.</p>"
         }
       ],
       "useCases": [
@@ -134,25 +134,25 @@
         {
           "industry": "Retail",
           "heading": "AI Data Analysis in Retail",
-          "body": "UK retailers use AI data analysis to understand buying patterns, optimise pricing strategies, and personalise the shopping experience. From high street chains to online sellers, the ability to analyse basket data, footfall patterns, and seasonal trends gives retailers a serious competitive edge. We build models that connect EPOS, web analytics, and CRM data into a single analytical view.",
+          "body": "<p>UK retailers use AI data analysis to understand buying patterns, optimise pricing strategies, and personalise the shopping experience. From high street chains to online sellers, the ability to analyse basket data, footfall patterns, and seasonal trends gives retailers a serious competitive edge. We build models that connect EPOS, web analytics, and CRM data into a single analytical view powered by our <a href=\"/services/data-and-ai/\">data and AI expertise</a>.</p>",
           "linkSlug": "/industries/retail/"
         },
         {
           "industry": "Finance",
           "heading": "AI Data Analysis in Finance",
-          "body": "Financial services firms generate vast amounts of transactional data daily. AI analysis helps detect fraudulent patterns, assess credit risk more accurately, and identify profitable market opportunities. We work with banks, insurers, and wealth managers across the UK to build analytical models that meet FCA expectations around model governance and explainability.",
+          "body": "<p>Financial services firms generate vast amounts of transactional data daily. AI analysis helps detect fraudulent patterns, assess credit risk more accurately, and identify profitable market opportunities. We work with banks, insurers, and wealth managers across the UK to build analytical models that meet FCA expectations around model governance and explainability. Financial firms often pair data analysis with <a href=\"/solutions/forecasting/\">AI forecasting</a> for forward-looking risk and revenue models.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Healthcare",
           "heading": "AI Data Analysis in Healthcare",
-          "body": "NHS trusts and private healthcare providers use AI to analyse patient outcomes, predict admission surges, and optimise resource allocation. By connecting data across clinical, administrative, and operational systems, AI reveals insights that improve both patient care and financial performance. Our healthcare analytics solutions are built with NHS data standards and GDPR compliance at their core.",
+          "body": "<p>NHS trusts and private healthcare providers use AI to analyse patient outcomes, predict admission surges, and optimise resource allocation. By connecting data across clinical, administrative, and operational systems, AI reveals insights that improve both patient care and financial performance. Our healthcare analytics solutions are built with NHS data standards and GDPR compliance at their core, following our <a href=\"/services/ethical-ai/\">ethical AI principles</a>.</p>",
           "linkSlug": "/industries/healthcare/"
         },
         {
           "industry": "Marketing",
           "heading": "AI Data Analysis in Marketing",
-          "body": "Marketing teams drown in metrics from dozens of channels. AI data analysis cuts through the noise — attributing conversions accurately, identifying high-value audience segments, and predicting campaign performance before you spend the budget. We help UK marketing teams build attribution models and reporting dashboards that connect spend to revenue clearly.",
+          "body": "<p>Marketing teams drown in metrics from dozens of channels. AI data analysis cuts through the noise — attributing conversions accurately, identifying high-value audience segments, and predicting campaign performance before you spend the budget. We help UK marketing teams build attribution models and reporting dashboards that connect spend to revenue clearly. For teams looking to act on those insights, <a href=\"/solutions/lead-generation/\">AI lead generation</a> turns analysis into pipeline.</p>",
           "linkSlug": "/industries/marketing/"
         }
       ],
@@ -188,19 +188,19 @@
       "description": "Scale content production with AI while maintaining quality and brand voice. We build AI content systems for UK businesses — from copywriting to video.",
       "primaryKeyword": "ai content creation consulting",
       "icon": "sparkles",
-      "intro": "Creating quality content at scale is one of the biggest challenges UK businesses face. AI content creation tools can help, but only when set up properly with the right guardrails. We help organisations build content production systems that use AI to draft, edit, and optimise — while keeping your brand voice authentic and your quality bar high.",
+      "intro": "<p>Creating quality content at scale is one of the biggest challenges UK businesses face. AI content creation tools can help, but only when set up properly with the right guardrails. We help organisations build content production systems that use AI to draft, edit, and optimise — while keeping your brand voice authentic and your quality bar high.</p>",
       "sections": [
         {
           "heading": "AI Content That Sounds Like You, Not a Robot",
-          "body": "The biggest mistake organisations make with AI content is using it out of the box. Generic AI output sounds generic — and your audience will notice. We build custom content systems trained on your brand voice, tone guidelines, and existing high-performing content. The result is AI-generated drafts that sound like your best writer on their best day. Our approach covers everything from blog posts and product descriptions to social media copy and email campaigns. We use large language models with fine-tuned prompting frameworks, combined with human editorial oversight. This is not about replacing your content team. It is about giving them superpowers — turning a writer who produces three articles a week into one who produces fifteen without sacrificing quality."
+          "body": "<p>The biggest mistake organisations make with AI content is using it out of the box. Generic AI output sounds generic — and your audience will notice. We build custom content systems trained on your brand voice, tone guidelines, and existing high-performing content. The result is AI-generated drafts that sound like your best writer on their best day.</p><p>Our approach covers everything from blog posts and product descriptions to social media copy and email campaigns. We use <a href=\"/services/generative-ai/\">generative AI</a> with fine-tuned prompting frameworks, combined with human editorial oversight. This is not about replacing your content team. It is about giving them superpowers — turning a writer who produces three articles a week into one who produces fifteen without sacrificing quality.</p>"
         },
         {
           "heading": "Building Your AI Content Pipeline",
-          "body": "A single AI-generated article is easy. A reliable, scalable content pipeline is hard. We build end-to-end systems that handle the full content lifecycle: research, briefing, drafting, editing, optimisation, and publishing. Our pipelines integrate with your CMS — whether that is WordPress, Contentful, Strapi, or something bespoke. We add quality gates at each stage, including automated fact-checking, plagiarism detection, brand voice scoring, and SEO optimisation. The system flags content that needs human review rather than publishing everything blindly. UK businesses using our content pipelines typically increase output by 5-10x while maintaining or improving quality scores."
+          "body": "<p>A single AI-generated article is easy. A reliable, scalable content pipeline is hard. We build end-to-end systems that handle the full content lifecycle: research, briefing, drafting, editing, optimisation, and publishing. Our pipelines integrate with your CMS — whether that is WordPress, Contentful, Strapi, or something bespoke.</p><p>We add quality gates at each stage, including automated fact-checking, plagiarism detection, brand voice scoring, and SEO optimisation. The system flags content that needs human review rather than publishing everything blindly. UK businesses using our content pipelines typically increase output by 5-10x while maintaining or improving quality scores. An <a href=\"/services/ai-strategy/\">AI strategy engagement</a> can help you decide which content types to automate first.</p>"
         },
         {
           "heading": "Beyond Text: AI for Visual and Video Content",
-          "body": "AI content creation extends well beyond written copy. We help organisations use AI for image generation, video script writing, voiceover production, and social media creative. Tools like Midjourney, DALL-E, and Runway are powerful, but they need skilled prompting and clear brand guidelines to produce usable assets. We set up creative workflows with templated prompts, style guides, and approval processes that let your marketing team produce visual content rapidly without design bottlenecks. For e-commerce clients, we build product image pipelines that generate lifestyle shots, size comparisons, and feature highlights at a fraction of traditional photography costs."
+          "body": "<p>AI content creation extends well beyond written copy. We help organisations use AI for image generation, video script writing, voiceover production, and social media creative. Tools like Midjourney, DALL-E, and Runway are powerful, but they need skilled prompting and clear brand guidelines to produce usable assets.</p><p>We set up creative workflows with templated prompts, style guides, and approval processes that let your <a href=\"/industries/marketing/\">marketing</a> team produce visual content rapidly without design bottlenecks. For <a href=\"/industries/ecommerce/\">e-commerce</a> clients, we build product image pipelines that generate lifestyle shots, size comparisons, and feature highlights at a fraction of traditional photography costs.</p>"
         }
       ],
       "useCases": [
@@ -225,19 +225,19 @@
         {
           "industry": "Ecommerce",
           "heading": "AI Content Creation in Ecommerce",
-          "body": "UK e-commerce businesses need unique content across hundreds or thousands of product pages. AI content creation generates compelling product descriptions, category pages, and buying guides at scale. We build systems that pull product data from your catalogue and produce SEO-optimised copy that converts. Clients typically see improved organic rankings and higher conversion rates within weeks.",
+          "body": "<p>UK e-commerce businesses need unique content across hundreds or thousands of product pages. AI content creation generates compelling product descriptions, category pages, and buying guides at scale. We build systems that pull product data from your catalogue and produce SEO-optimised copy that converts, powered by <a href=\"/services/generative-ai/\">generative AI models</a>. Clients typically see improved organic rankings and higher conversion rates within weeks.</p>",
           "linkSlug": "/industries/ecommerce/"
         },
         {
           "industry": "Marketing",
           "heading": "AI Content Creation in Marketing",
-          "body": "Marketing agencies and in-house teams use AI to multiply their content output without multiplying headcount. From campaign copy and social posts to whitepapers and case studies, AI handles the heavy lifting while your team focuses on strategy and creativity. We help marketing teams build content workflows that maintain quality at speed.",
+          "body": "<p>Marketing agencies and in-house teams use AI to multiply their content output without multiplying headcount. From campaign copy and social posts to whitepapers and case studies, AI handles the heavy lifting while your team focuses on strategy and creativity. We help marketing teams build content workflows that maintain quality at speed, with <a href=\"/services/ai-training/\">AI training</a> so your team can manage the tools independently.</p>",
           "linkSlug": "/industries/marketing/"
         },
         {
           "industry": "Education",
           "heading": "AI Content Creation in Education",
-          "body": "UK educational institutions use AI to create learning materials, course descriptions, student communications, and research summaries. AI helps academics produce accessible versions of complex content and generate supplementary materials at scale. We ensure all AI-generated educational content meets accessibility standards and institutional quality requirements.",
+          "body": "<p>UK educational institutions use AI to create learning materials, course descriptions, student communications, and research summaries. AI helps academics produce accessible versions of complex content and generate supplementary materials at scale. We ensure all AI-generated educational content meets accessibility standards and institutional quality requirements, guided by our <a href=\"/services/ethical-ai/\">ethical AI framework</a>.</p>",
           "linkSlug": "/industries/education/"
         }
       ],
@@ -273,19 +273,19 @@
       "description": "Deploy AI chatbots and support systems that resolve queries faster while keeping customers happy. Built for UK businesses by experienced AI consultants.",
       "primaryKeyword": "ai customer support consulting",
       "icon": "chat",
-      "intro": "Customer expectations keep rising, but support budgets do not. AI customer support bridges the gap — handling routine queries instantly, routing complex issues to the right agents, and providing 24/7 availability without the cost of round-the-clock staffing. We build support systems that your customers will actually prefer using.",
+      "intro": "<p>Customer expectations keep rising, but support budgets do not. AI customer support bridges the gap — handling routine queries instantly, routing complex issues to the right agents, and providing 24/7 availability without the cost of round-the-clock staffing. We build support systems that your customers will actually prefer using.</p>",
       "sections": [
         {
           "heading": "Intelligent Support That Customers Actually Like",
-          "body": "Nobody enjoys talking to a bad chatbot. That is why most AI customer support projects fail — they deploy generic bots that frustrate more than they help. Our approach is different. We build conversational AI systems trained on your actual support data: past tickets, knowledge base articles, product documentation, and FAQs. The result is a support agent that understands your products, speaks your brand's language, and handles the queries your team deals with most frequently. When the AI cannot help, it hands over seamlessly to a human agent — with full context so the customer never has to repeat themselves. UK businesses using our support systems typically see 40-60% of enquiries resolved without any human involvement."
+          "body": "<p>Nobody enjoys talking to a bad chatbot. That is why most AI customer support projects fail — they deploy generic bots that frustrate more than they help. Our approach is different. We build <a href=\"/services/conversational-ai/\">conversational AI</a> systems trained on your actual support data: past tickets, knowledge base articles, product documentation, and FAQs. The result is a support agent that understands your products, speaks your brand's language, and handles the queries your team deals with most frequently.</p><p>When the AI cannot help, it hands over seamlessly to a human agent — with full context so the customer never has to repeat themselves. UK businesses using our support systems typically see 40-60% of enquiries resolved without any human involvement. For fully autonomous agents that take actions on behalf of customers, explore our <a href=\"/services/agentic-ai/\">agentic AI capabilities</a>.</p>"
         },
         {
           "heading": "Multi-Channel Support at Scale",
-          "body": "Your customers contact you through your website, email, WhatsApp, social media, and phone. AI customer support works across all these channels with a consistent experience. We build omnichannel systems that maintain conversation context regardless of where the customer started. A query that begins on your website chat can continue via email without losing any information. We integrate with popular platforms including Zendesk, Freshdesk, Intercom, and HubSpot — or build custom solutions where needed. Our systems also handle multiple languages, which is increasingly important for UK businesses serving diverse communities or operating internationally."
+          "body": "<p>Your customers contact you through your website, email, WhatsApp, social media, and phone. AI customer support works across all these channels with a consistent experience. We build omnichannel systems that maintain conversation context regardless of where the customer started. A query that begins on your website chat can continue via email without losing any information.</p><p>We integrate with popular platforms including Zendesk, Freshdesk, Intercom, and HubSpot — or build custom solutions through our <a href=\"/services/ai-implementation/\">AI implementation service</a>. Our systems also handle multiple languages, which is increasingly important for UK businesses serving diverse communities or operating internationally.</p>"
         },
         {
           "heading": "Measuring and Improving Support Performance",
-          "body": "Every interaction generates data. We build analytics dashboards that track resolution rates, customer satisfaction scores, average handling time, and escalation patterns. More importantly, the AI learns continuously from these interactions. Topics that frequently escalate get flagged for knowledge base improvements. Common customer frustrations surface automatically. Seasonal patterns in support volume become predictable. This creates a virtuous cycle where your support quality improves month after month. We also provide regular reports showing the financial impact — cost per resolution, deflection rates, and customer satisfaction trends compared to human-only support."
+          "body": "<p>Every interaction generates data. We build analytics dashboards that track resolution rates, customer satisfaction scores, average handling time, and escalation patterns. More importantly, the AI learns continuously from these interactions. Topics that frequently escalate get flagged for knowledge base improvements. Common customer frustrations surface automatically. Seasonal patterns in support volume become predictable.</p><p>This creates a virtuous cycle where your support quality improves month after month. We also provide regular reports showing the financial impact — cost per resolution, deflection rates, and customer satisfaction trends compared to human-only support. Our <a href=\"/solutions/data-analysis/\">AI data analysis</a> capabilities help you extract deeper insights from these support interactions.</p>"
         }
       ],
       "useCases": [
@@ -310,25 +310,25 @@
         {
           "industry": "Retail",
           "heading": "AI Customer Support in Retail",
-          "body": "UK retailers face massive support volumes during peak seasons like Black Friday and Christmas. AI customer support scales instantly to handle demand spikes without hiring temporary staff. From order tracking and returns processing to product recommendations, AI handles the queries that account for 60-70% of retail support volume, keeping customers happy and costs manageable.",
+          "body": "<p>UK retailers face massive support volumes during peak seasons like Black Friday and Christmas. AI customer support scales instantly to handle demand spikes without hiring temporary staff. From order tracking and returns processing to product recommendations, AI handles the queries that account for 60-70% of retail support volume, keeping customers happy and costs manageable. Pair this with <a href=\"/solutions/automation/\">AI automation</a> to streamline returns and refund workflows end to end.</p>",
           "linkSlug": "/industries/retail/"
         },
         {
           "industry": "Finance",
           "heading": "AI Customer Support in Finance",
-          "body": "Financial services customers expect fast, accurate responses — especially when money is involved. AI support systems handle balance enquiries, transaction disputes, and product questions while maintaining strict compliance with FCA regulations. We build systems with appropriate identity verification and audit trails, ensuring AI support meets the same regulatory standards as human agents.",
+          "body": "<p>Financial services customers expect fast, accurate responses — especially when money is involved. AI support systems handle balance enquiries, transaction disputes, and product questions while maintaining strict compliance with FCA regulations. We build systems with appropriate identity verification and audit trails, ensuring AI support meets the same regulatory standards as human agents. For regulated firms, our <a href=\"/solutions/compliance-monitoring/\">AI compliance monitoring</a> adds an extra layer of protection.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Ecommerce",
           "heading": "AI Customer Support in Ecommerce",
-          "body": "Online shoppers expect instant answers. AI chatbots on e-commerce sites handle pre-sale questions, size guides, delivery tracking, and returns — the queries that make up the bulk of support volume. We integrate with Shopify, WooCommerce, and Magento to give the AI real-time access to order data, enabling it to provide specific, personalised responses rather than generic answers.",
+          "body": "<p>Online shoppers expect instant answers. AI chatbots on e-commerce sites handle pre-sale questions, size guides, delivery tracking, and returns — the queries that make up the bulk of support volume. We integrate with Shopify, WooCommerce, and Magento to give the AI real-time access to order data, enabling it to provide specific, personalised responses rather than generic answers. Our <a href=\"/services/conversational-ai/\">conversational AI service</a> ensures these chatbots deliver a natural shopping experience.</p>",
           "linkSlug": "/industries/ecommerce/"
         },
         {
           "industry": "Healthcare",
           "heading": "AI Customer Support in Healthcare",
-          "body": "Patient enquiries about appointments, prescriptions, and referrals can overwhelm NHS and private healthcare reception teams. AI support handles routine administrative queries, freeing staff for clinical work. Our healthcare support solutions comply with NHS standards and handle sensitive patient data appropriately, with clear escalation paths for clinical questions.",
+          "body": "<p>Patient enquiries about appointments, prescriptions, and referrals can overwhelm NHS and private healthcare reception teams. AI support handles routine administrative queries, freeing staff for clinical work. Our healthcare support solutions comply with NHS standards and handle sensitive patient data appropriately, with clear escalation paths for clinical questions guided by our <a href=\"/services/ethical-ai/\">ethical AI principles</a>.</p>",
           "linkSlug": "/industries/healthcare/"
         }
       ],
@@ -364,19 +364,19 @@
       "description": "Predict demand, revenue, risk, and trends with AI. We build forecasting models that help UK businesses plan with confidence and reduce uncertainty.",
       "primaryKeyword": "ai forecasting consulting",
       "icon": "applied",
-      "intro": "Business planning based on gut feel and spreadsheet extrapolation is not good enough anymore. AI forecasting analyses historical patterns, market signals, and external data to predict what comes next with far greater accuracy. We build forecasting models that help UK businesses make confident decisions about inventory, hiring, investment, and strategy.",
+      "intro": "<p>Business planning based on gut feel and spreadsheet extrapolation is not good enough anymore. AI forecasting analyses historical patterns, market signals, and external data to predict what comes next with far greater accuracy. We build forecasting models that help UK businesses make confident decisions about inventory, hiring, investment, and strategy.</p>",
       "sections": [
         {
           "heading": "Why AI Forecasting Outperforms Traditional Methods",
-          "body": "Traditional forecasting relies on historical averages and linear trends. AI forecasting is fundamentally different. Machine learning models detect non-linear patterns, seasonal variations, and complex interactions between variables that spreadsheet models simply cannot capture. They also incorporate external signals — weather data, economic indicators, social media sentiment, competitor activity — to produce forecasts that reflect reality rather than just history. For UK businesses, this matters enormously. Brexit-related supply chain shifts, post-pandemic demand volatility, and energy cost fluctuations have all made traditional forecasting unreliable. AI models adapt to changing conditions automatically, updating predictions as new data arrives."
+          "body": "<p>Traditional forecasting relies on historical averages and linear trends. AI forecasting is fundamentally different. Machine learning models detect non-linear patterns, seasonal variations, and complex interactions between variables that spreadsheet models simply cannot capture. They also incorporate external signals — weather data, economic indicators, social media sentiment, competitor activity — to produce forecasts that reflect reality rather than just history.</p><p>For UK businesses, this matters enormously. Brexit-related supply chain shifts, post-pandemic demand volatility, and energy cost fluctuations have all made traditional forecasting unreliable. AI models built through our <a href=\"/services/applied-ai/\">applied AI practice</a> adapt to changing conditions automatically, updating predictions as new data arrives. Accurate forecasts also feed directly into <a href=\"/solutions/inventory-management/\">AI inventory management</a> for smarter stock decisions.</p>"
         },
         {
           "heading": "Our Forecasting Methodology",
-          "body": "We do not just plug your data into a model and hope for the best. Our approach starts with understanding what you need to predict and why. Demand forecasting requires different techniques to revenue forecasting or risk prediction. We select from a range of approaches — time series models like Prophet, gradient boosting methods, neural networks, and ensemble techniques — based on what works best for your specific data and use case. Every model goes through rigorous backtesting against historical data before deployment. We measure accuracy using metrics your team can understand, not just technical scores. And we always compare AI forecasts against your current methods so the improvement is clear and quantifiable."
+          "body": "<p>We do not just plug your data into a model and hope for the best. Our approach starts with understanding what you need to predict and why. Demand forecasting requires different techniques to revenue forecasting or risk prediction. We select from a range of approaches — time series models like Prophet, gradient boosting methods, neural networks, and ensemble techniques — based on what works best for your specific data and use case.</p><p>Every model goes through rigorous backtesting against historical data before deployment. We measure accuracy using metrics your team can understand, not just technical scores. And we always compare AI forecasts against your current methods so the improvement is clear and quantifiable. Our <a href=\"/services/data-and-ai/\">data and AI consultants</a> ensure your data is clean and ready before any model is built.</p>"
         },
         {
           "heading": "From Forecasts to Better Decisions",
-          "body": "A forecast is only valuable if it changes how you act. We embed our forecasting models into your decision-making workflows — connecting predictions directly to the systems where decisions happen. Demand forecasts feed into your purchasing system. Revenue predictions update financial dashboards in real time. Risk scores trigger automated alerts. We also build scenario planning tools that let your leadership team explore what-if questions. What happens to demand if a competitor launches? How does a 10% price increase affect volume? These interactive forecasting tools give decision-makers genuine confidence rather than false precision. UK businesses using our forecasting systems report 20-40% improvements in forecast accuracy."
+          "body": "<p>A forecast is only valuable if it changes how you act. We embed our forecasting models into your decision-making workflows — connecting predictions directly to the systems where decisions happen. Demand forecasts feed into your purchasing system. Revenue predictions update financial dashboards in real time. Risk scores trigger automated alerts.</p><p>We also build scenario planning tools that let your leadership team explore what-if questions. What happens to demand if a competitor launches? How does a 10% price increase affect volume? These interactive forecasting tools give decision-makers genuine confidence rather than false precision. UK businesses using our forecasting systems report 20-40% improvements in forecast accuracy. <a href=\"/solutions/report-generation/\">AI report generation</a> can then present these forecasts to boards and stakeholders automatically.</p>"
         }
       ],
       "useCases": [
@@ -401,25 +401,25 @@
         {
           "industry": "Supply Chain",
           "heading": "AI Forecasting in Supply Chain",
-          "body": "UK supply chains have faced unprecedented disruption in recent years. AI forecasting helps logistics and procurement teams predict demand more accurately, identify potential supplier risks, and optimise stock levels across the network. Our models incorporate lead time variability, port congestion data, and supplier reliability metrics to produce forecasts that account for real-world complexity.",
+          "body": "<p>UK supply chains have faced unprecedented disruption in recent years. AI forecasting helps logistics and procurement teams predict demand more accurately, identify potential supplier risks, and optimise stock levels across the network. Our models incorporate lead time variability, port congestion data, and supplier reliability metrics to produce forecasts that account for real-world complexity. Many supply chain teams combine forecasting with <a href=\"/solutions/inventory-management/\">AI inventory management</a> for end-to-end optimisation.</p>",
           "linkSlug": "/industries/supply-chain/"
         },
         {
           "industry": "Finance",
           "heading": "AI Forecasting in Finance",
-          "body": "Financial institutions use AI forecasting for credit risk scoring, fraud detection, market movement prediction, and liquidity planning. Our models meet FCA requirements for model risk management, including full documentation of methodology, assumptions, and limitations. We help banks, asset managers, and insurers build forecasting capabilities that pass regulatory scrutiny.",
+          "body": "<p>Financial institutions use AI forecasting for credit risk scoring, fraud detection, market movement prediction, and liquidity planning. Our models meet FCA requirements for model risk management, including full documentation of methodology, assumptions, and limitations. We help banks, asset managers, and insurers build forecasting capabilities that pass regulatory scrutiny through our <a href=\"/services/applied-ai/\">applied AI practice</a>.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Retail",
           "heading": "AI Forecasting in Retail",
-          "body": "Retailers live and die by demand accuracy. Overstock ties up cash; understock loses sales. AI forecasting predicts demand at the product-store-day level, accounting for promotions, weather, local events, and competitor activity. UK retailers using AI demand forecasting typically reduce stockouts by 30-50% while lowering excess inventory costs.",
+          "body": "<p>Retailers live and die by demand accuracy. Overstock ties up cash; understock loses sales. AI forecasting predicts demand at the product-store-day level, accounting for promotions, weather, local events, and competitor activity. UK retailers using AI demand forecasting typically reduce stockouts by 30-50% while lowering excess inventory costs. See how our <a href=\"/solutions/data-analysis/\">AI data analysis</a> uncovers the buying patterns that feed these models.</p>",
           "linkSlug": "/industries/retail/"
         },
         {
           "industry": "Manufacturing",
           "heading": "AI Forecasting in Manufacturing",
-          "body": "Predictive maintenance uses AI to forecast equipment failures before they cause expensive downtime. Production planning models optimise scheduling based on predicted demand and resource availability. UK manufacturers implementing AI forecasting see reduced waste, fewer production stoppages, and better on-time delivery performance across their operations.",
+          "body": "<p>Predictive maintenance uses AI to forecast equipment failures before they cause expensive downtime. Production planning models optimise scheduling based on predicted demand and resource availability. UK manufacturers implementing AI forecasting see reduced waste, fewer production stoppages, and better on-time delivery performance across their operations. <a href=\"/solutions/process-improvement/\">AI process improvement</a> helps manufacturers identify further efficiency gains alongside predictive models.</p>",
           "linkSlug": "/industries/manufacturing/"
         }
       ],
@@ -455,19 +455,19 @@
       "description": "Stay compliant with AI-powered monitoring that catches regulatory risks before they become problems. Built for UK regulations including FCA, GDPR, and more.",
       "primaryKeyword": "ai compliance monitoring consulting",
       "icon": "shield",
-      "intro": "Regulatory compliance is getting harder, not easier. New rules from the FCA, ICO, and other UK regulators arrive constantly, and the cost of getting it wrong is severe. AI compliance monitoring watches your operations continuously, flagging risks in real time and ensuring nothing slips through the cracks. We help UK businesses stay ahead of regulators rather than reacting to problems.",
+      "intro": "<p>Regulatory compliance is getting harder, not easier. New rules from the FCA, ICO, and other UK regulators arrive constantly, and the cost of getting it wrong is severe. AI compliance monitoring watches your operations continuously, flagging risks in real time and ensuring nothing slips through the cracks. We help UK businesses stay ahead of regulators rather than reacting to problems.</p>",
       "sections": [
         {
           "heading": "Continuous Monitoring That Never Sleeps",
-          "body": "Traditional compliance relies on periodic audits and manual checks. This approach leaves dangerous gaps between reviews — gaps where violations can occur undetected. AI compliance monitoring operates continuously, scanning transactions, communications, documents, and processes in real time. It detects anomalies, policy violations, and regulatory risks as they happen, not weeks or months later. Our systems monitor for patterns that indicate potential issues: unusual transaction volumes, communications that breach conduct rules, data handling practices that violate GDPR, or procurement processes that do not follow approved procedures. For FCA-regulated firms, this means catching conduct risks before they become enforcement actions."
+          "body": "<p>Traditional compliance relies on periodic audits and manual checks. This approach leaves dangerous gaps between reviews — gaps where violations can occur undetected. AI compliance monitoring operates continuously, scanning transactions, communications, documents, and processes in real time. It detects anomalies, policy violations, and regulatory risks as they happen, not weeks or months later.</p><p>Our systems monitor for patterns that indicate potential issues: unusual transaction volumes, communications that breach conduct rules, data handling practices that violate GDPR, or procurement processes that do not follow approved procedures. For <a href=\"/industries/finance/\">FCA-regulated firms</a>, this means catching conduct risks before they become enforcement actions. Our <a href=\"/services/ethical-ai/\">ethical AI consulting</a> ensures the monitoring systems themselves meet responsible AI standards.</p>"
         },
         {
           "heading": "Adapting to Regulatory Change",
-          "body": "UK regulations change frequently. The FCA alone issues hundreds of policy updates each year. Keeping compliance frameworks current is a full-time job — one that AI can significantly streamline. Our systems automatically ingest regulatory updates from the FCA, PRA, ICO, HMRC, and other relevant bodies. They map new requirements against your existing policies and flag gaps that need attention. This regulatory change management capability means your compliance team focuses on interpretation and implementation rather than simply tracking what has changed. We also monitor industry enforcement actions and guidance notes, providing early warning when regulators signal new areas of focus that might affect your business."
+          "body": "<p>UK regulations change frequently. The FCA alone issues hundreds of policy updates each year. Keeping compliance frameworks current is a full-time job — one that AI can significantly streamline. Our systems automatically ingest regulatory updates from the FCA, PRA, ICO, HMRC, and other relevant bodies. They map new requirements against your existing policies and flag gaps that need attention.</p><p>This regulatory change management capability means your compliance team focuses on interpretation and implementation rather than simply tracking what has changed. We also monitor industry enforcement actions and guidance notes, providing early warning when regulators signal new areas of focus that might affect your business. <a href=\"/solutions/automation/\">AI automation</a> can handle the downstream updates to policies and procedures once gaps are identified.</p>"
         },
         {
           "heading": "From Detection to Resolution",
-          "body": "Spotting a compliance issue is only half the battle. Our systems include complete workflow management for investigation, remediation, and reporting. When the AI flags a potential violation, it creates a structured case file with all relevant evidence, assigns it to the appropriate team member, and tracks it through to resolution. Audit trails are comprehensive and regulator-ready. If the FCA, ICO, or any other body requests evidence of your compliance processes, you can produce detailed records immediately rather than scrambling to compile them. UK firms using our compliance monitoring systems report 50-70% reductions in the time spent on regulatory reporting, with significantly better coverage and fewer missed issues."
+          "body": "<p>Spotting a compliance issue is only half the battle. Our systems include complete workflow management for investigation, remediation, and reporting. When the AI flags a potential violation, it creates a structured case file with all relevant evidence, assigns it to the appropriate team member, and tracks it through to resolution.</p><p>Audit trails are comprehensive and regulator-ready. If the FCA, ICO, or any other body requests evidence of your compliance processes, you can produce detailed records immediately rather than scrambling to compile them. <a href=\"/solutions/report-generation/\">AI report generation</a> automates the production of regulatory submissions and board compliance packs. UK firms using our compliance monitoring systems report 50-70% reductions in the time spent on regulatory reporting, with significantly better coverage and fewer missed issues.</p>"
         }
       ],
       "useCases": [
@@ -492,19 +492,19 @@
         {
           "industry": "Finance",
           "heading": "AI Compliance Monitoring in Finance",
-          "body": "FCA-regulated firms face some of the strictest compliance requirements in the world. AI compliance monitoring handles transaction surveillance, conduct risk detection, client money monitoring, and regulatory reporting at a scale and accuracy that manual processes cannot match. We build systems aligned with SYSC, CASS, and MAR requirements, ensuring your firm meets regulatory expectations consistently.",
+          "body": "<p>FCA-regulated firms face some of the strictest compliance requirements in the world. AI compliance monitoring handles transaction surveillance, conduct risk detection, client money monitoring, and regulatory reporting at a scale and accuracy that manual processes cannot match. We build systems aligned with SYSC, CASS, and MAR requirements through our <a href=\"/services/ai-implementation/\">AI implementation methodology</a>, ensuring your firm meets regulatory expectations consistently.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Healthcare",
           "heading": "AI Compliance Monitoring in Healthcare",
-          "body": "Healthcare organisations must comply with CQC standards, NHS data security requirements, and GDPR — simultaneously. AI monitors clinical governance processes, data access patterns, and patient safety metrics continuously. Our systems flag compliance risks before they become CQC findings, helping NHS trusts and private providers maintain their regulatory standing.",
+          "body": "<p>Healthcare organisations must comply with CQC standards, NHS data security requirements, and GDPR — simultaneously. AI monitors clinical governance processes, data access patterns, and patient safety metrics continuously. Our systems flag compliance risks before they become CQC findings, helping NHS trusts and private providers maintain their regulatory standing. Explore how <a href=\"/solutions/data-analysis/\">AI data analysis</a> strengthens clinical governance further.</p>",
           "linkSlug": "/industries/healthcare/"
         },
         {
           "industry": "Legal",
           "heading": "AI Compliance Monitoring in Legal",
-          "body": "Law firms face SRA regulations around client money handling, conflicts of interest, and data protection. AI compliance monitoring ensures client account rules are followed, conflicts are detected early, and confidential information is properly safeguarded. We help legal practices build compliance systems that meet SRA expectations while reducing the administrative burden on fee earners.",
+          "body": "<p>Law firms face SRA regulations around client money handling, conflicts of interest, and data protection. AI compliance monitoring ensures client account rules are followed, conflicts are detected early, and confidential information is properly safeguarded. We help <a href=\"/industries/legal/\">legal practices</a> build compliance systems that meet SRA expectations while reducing the administrative burden on fee earners.</p>",
           "linkSlug": "/industries/legal/"
         }
       ],
@@ -540,19 +540,19 @@
       "description": "Generate and qualify leads with AI. We build intelligent prospecting systems that identify, score, and nurture your ideal customers across every channel.",
       "primaryKeyword": "ai lead generation consulting",
       "icon": "marketing",
-      "intro": "Finding and converting quality leads is expensive and time-consuming. AI lead generation changes the economics entirely — identifying your ideal prospects, scoring them by likelihood to convert, and nurturing them with personalised outreach at scale. We build lead generation systems that fill your pipeline with qualified opportunities, not just names.",
+      "intro": "<p>Finding and converting quality leads is expensive and time-consuming. AI lead generation changes the economics entirely — identifying your ideal prospects, scoring them by likelihood to convert, and nurturing them with personalised outreach at scale. We build lead generation systems that fill your pipeline with qualified opportunities, not just names.</p>",
       "sections": [
         {
           "heading": "Finding the Right Prospects Automatically",
-          "body": "Most businesses waste enormous effort chasing leads that were never going to convert. AI flips this by building a detailed profile of your ideal customer based on your historical win data, then systematically finding more people and companies that match. We use machine learning models trained on your CRM data to identify the characteristics that predict conversion — industry, company size, tech stack, buying signals, and dozens of other factors. The AI then scans data sources including LinkedIn, Companies House, industry directories, and intent data providers to find prospects that match your ideal customer profile. For B2B businesses in the UK, this typically means surfacing opportunities that your sales team would never have found through manual prospecting alone."
+          "body": "<p>Most businesses waste enormous effort chasing leads that were never going to convert. AI flips this by building a detailed profile of your ideal customer based on your historical win data, then systematically finding more people and companies that match. We use machine learning models trained on your CRM data to identify the characteristics that predict conversion — industry, company size, tech stack, buying signals, and dozens of other factors.</p><p>The AI then scans data sources including LinkedIn, Companies House, industry directories, and intent data providers to find prospects that match your ideal customer profile. For B2B businesses in the UK, this typically means surfacing opportunities that your sales team would never have found through manual prospecting alone. Our <a href=\"/services/ai-strategy/\">AI strategy service</a> helps you define ideal customer profiles before building the prospecting engine.</p>"
         },
         {
           "heading": "Intelligent Lead Scoring and Prioritisation",
-          "body": "Not all leads are created equal. AI lead scoring goes far beyond basic demographic criteria to assess genuine buying intent. Our models analyse behavioural signals — website visits, content downloads, email engagement, social media activity, and third-party intent data — to predict which leads are most likely to convert and when. This transforms how your sales team operates. Instead of working through a flat list of contacts, they focus their time on the prospects most likely to close. Lead scoring models update in real time, so the priority list shifts as new signals arrive. UK businesses using AI lead scoring report 30-50% improvements in sales team productivity because reps spend their time on conversations that matter."
+          "body": "<p>Not all leads are created equal. AI lead scoring goes far beyond basic demographic criteria to assess genuine buying intent. Our models analyse behavioural signals — website visits, content downloads, email engagement, social media activity, and third-party intent data — to predict which leads are most likely to convert and when.</p><p>This transforms how your sales team operates. Instead of working through a flat list of contacts, they focus their time on the prospects most likely to close. Lead scoring models update in real time, so the priority list shifts as new signals arrive. UK businesses using AI lead scoring report 30-50% improvements in sales team productivity because reps spend their time on conversations that matter. <a href=\"/solutions/data-analysis/\">AI data analysis</a> underpins these scoring models with the patterns that predict conversion.</p>"
         },
         {
           "heading": "Automated Nurture That Feels Personal",
-          "body": "Most leads are not ready to buy immediately. AI-powered nurture sequences keep your brand top of mind with personalised content, timed perfectly to each prospect's buying stage. Unlike basic email drip campaigns, AI nurture adapts dynamically — changing the message, channel, and timing based on how each prospect responds. Our systems integrate with your CRM, email platform, and advertising channels to create coordinated multi-touch journeys. A prospect who visits your pricing page gets a different follow-up than one who downloaded a whitepaper. Someone who opens emails but never clicks gets a call from your sales team. This orchestrated approach dramatically improves conversion rates while requiring minimal manual effort from your marketing team."
+          "body": "<p>Most leads are not ready to buy immediately. AI-powered nurture sequences keep your brand top of mind with personalised content, timed perfectly to each prospect's buying stage. Unlike basic email drip campaigns, AI nurture adapts dynamically — changing the message, channel, and timing based on how each prospect responds.</p><p>Our systems integrate with your CRM, email platform, and advertising channels to create coordinated multi-touch journeys. A prospect who visits your pricing page gets a different follow-up than one who downloaded a whitepaper. Someone who opens emails but never clicks gets a call from your sales team. Combine this with <a href=\"/solutions/content-creation/\">AI content creation</a> to generate the personalised nurture assets at scale. This orchestrated approach dramatically improves conversion rates while requiring minimal manual effort from your <a href=\"/industries/marketing/\">marketing</a> team.</p>"
         }
       ],
       "useCases": [
@@ -577,25 +577,25 @@
         {
           "industry": "Marketing",
           "heading": "AI Lead Generation in Marketing",
-          "body": "Marketing agencies use AI lead generation for themselves and their clients. AI identifies high-intent prospects across digital channels, scores them by readiness to buy, and triggers personalised outreach automatically. We help agencies build white-label lead generation systems they can offer as a service, creating a new revenue stream alongside existing marketing services.",
+          "body": "<p>Marketing agencies use AI lead generation for themselves and their clients. AI identifies high-intent prospects across digital channels, scores them by readiness to buy, and triggers personalised outreach automatically. We help agencies build white-label lead generation systems they can offer as a service, creating a new revenue stream alongside existing marketing services. Our <a href=\"/services/generative-ai/\">generative AI tools</a> power the personalised outreach copy at scale.</p>",
           "linkSlug": "/industries/marketing/"
         },
         {
           "industry": "Real Estate",
           "heading": "AI Lead Generation in Real Estate",
-          "body": "UK estate agents and property developers use AI to identify motivated sellers, qualified buyers, and investors based on property data, market signals, and online behaviour. Our systems integrate with Rightmove, Zoopla, and Land Registry data to surface opportunities early. AI lead scoring helps agents focus on the prospects most likely to transact.",
+          "body": "<p>UK estate agents and property developers use AI to identify motivated sellers, qualified buyers, and investors based on property data, market signals, and online behaviour. Our systems integrate with Rightmove, Zoopla, and Land Registry data to surface opportunities early. AI lead scoring helps agents focus on the prospects most likely to transact, with <a href=\"/solutions/forecasting/\">AI forecasting</a> predicting market movements that drive timing decisions.</p>",
           "linkSlug": "/industries/real-estate/"
         },
         {
           "industry": "Finance",
           "heading": "AI Lead Generation in Finance",
-          "body": "Financial advisers, mortgage brokers, and insurance providers use AI to identify prospects at key life moments — house purchases, retirement planning, business growth. Our lead generation systems combine demographic data with intent signals to find people actively seeking financial products, while ensuring all outreach complies with FCA financial promotion rules.",
+          "body": "<p>Financial advisers, mortgage brokers, and insurance providers use AI to identify prospects at key life moments — house purchases, retirement planning, business growth. Our lead generation systems combine demographic data with intent signals to find people actively seeking financial products, while ensuring all outreach complies with FCA financial promotion rules through built-in <a href=\"/solutions/compliance-monitoring/\">compliance monitoring</a>.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Ecommerce",
           "heading": "AI Lead Generation in Ecommerce",
-          "body": "E-commerce brands use AI lead generation to identify high-value potential customers, retarget abandoners, and personalise acquisition campaigns. Our systems analyse purchase patterns and browsing behaviour to build lookalike audiences that convert at much higher rates than generic targeting. We integrate with Shopify, Meta Ads, and Google Ads for seamless execution.",
+          "body": "<p>E-commerce brands use AI lead generation to identify high-value potential customers, retarget abandoners, and personalise acquisition campaigns. Our systems analyse purchase patterns and browsing behaviour to build lookalike audiences that convert at much higher rates than generic targeting. We integrate with Shopify, Meta Ads, and Google Ads for seamless execution through our <a href=\"/services/ai-implementation/\">AI implementation service</a>.</p>",
           "linkSlug": "/industries/ecommerce/"
         }
       ],
@@ -631,19 +631,19 @@
       "description": "Automate business reports with AI. From financial summaries to board packs, we build systems that generate accurate, well-written reports in minutes.",
       "primaryKeyword": "ai report generation consulting",
       "icon": "strategy",
-      "intro": "Your team spends hours every week compiling reports that AI could generate in minutes. AI report generation pulls data from your systems, analyses trends, writes clear narratives, and formats professional documents — automatically. We build reporting systems that free your people from the drudgery of manual report creation.",
+      "intro": "<p>Your team spends hours every week compiling reports that AI could generate in minutes. AI report generation pulls data from your systems, analyses trends, writes clear narratives, and formats professional documents — automatically. We build reporting systems that free your people from the drudgery of manual report creation.</p>",
       "sections": [
         {
           "heading": "Automated Reports That Read Like They Were Written by Experts",
-          "body": "The best reports do not just present data — they tell a story. Our AI report generation systems combine data extraction, statistical analysis, and natural language generation to produce reports that read naturally and highlight the insights that matter. We train the AI on your organisation's reporting style, terminology, and formatting preferences. The result is reports that look and feel like they were written by your best analyst. Financial summaries explain variances in plain English. Performance reports highlight trends and exceptions. Board packs present strategic information with appropriate context. Every report is accurate, consistent, and produced in a fraction of the time manual creation takes."
+          "body": "<p>The best reports do not just present data — they tell a story. Our AI report generation systems combine data extraction, statistical analysis, and natural language generation to produce reports that read naturally and highlight the insights that matter. We train the AI on your organisation's reporting style, terminology, and formatting preferences using <a href=\"/services/generative-ai/\">generative AI techniques</a>.</p><p>The result is reports that look and feel like they were written by your best analyst. Financial summaries explain variances in plain English. Performance reports highlight trends and exceptions. Board packs present strategic information with appropriate context. Every report is accurate, consistent, and produced in a fraction of the time manual creation takes. Pair this with <a href=\"/solutions/data-analysis/\">AI data analysis</a> to ensure the insights behind each report are as sharp as the writing.</p>"
         },
         {
           "heading": "Building Your Reporting Pipeline",
-          "body": "We connect your AI reporting system to the data sources that matter — accounting platforms like Xero and Sage, CRM systems, databases, Google Analytics, and internal tools. Data is pulled automatically on schedule, validated for accuracy, and processed into report-ready formats. Our pipelines include quality checks at every stage. Numbers are reconciled against source systems. Narrative summaries are checked for logical consistency. Charts and visualisations are generated dynamically from the latest data. We build in approval workflows where needed, so a human reviews the final report before distribution. Most clients run weekly, monthly, and quarterly reports entirely on autopilot."
+          "body": "<p>We connect your AI reporting system to the data sources that matter — accounting platforms like Xero and Sage, CRM systems, databases, Google Analytics, and internal tools. Data is pulled automatically on schedule, validated for accuracy, and processed into report-ready formats.</p><p>Our pipelines include quality checks at every stage. Numbers are reconciled against source systems. Narrative summaries are checked for logical consistency. Charts and visualisations are generated dynamically from the latest data. We build in approval workflows where needed, so a human reviews the final report before distribution. Our <a href=\"/services/ai-implementation/\">AI implementation team</a> handles the integrations, and most clients run weekly, monthly, and quarterly reports entirely on autopilot.</p>"
         },
         {
           "heading": "Beyond Standard Reports: On-Demand Insights",
-          "body": "Scheduled reports are just the starting point. We also build on-demand reporting capabilities where stakeholders can ask questions in natural language and receive instant, formatted answers. Think of it as a conversational interface for your business data. A finance director asks 'How did our Northern region perform versus target last quarter?' and gets a complete analysis within seconds. These interactive reporting tools are particularly powerful for board meetings and strategic planning sessions where questions arise spontaneously. No more waiting for an analyst to pull the numbers — the answer is immediate, accurate, and presented clearly."
+          "body": "<p>Scheduled reports are just the starting point. We also build on-demand reporting capabilities where stakeholders can ask questions in natural language and receive instant, formatted answers. Think of it as a <a href=\"/services/conversational-ai/\">conversational AI</a> interface for your business data.</p><p>A finance director asks 'How did our Northern region perform versus target last quarter?' and gets a complete analysis within seconds. These interactive reporting tools are particularly powerful for board meetings and strategic planning sessions where questions arise spontaneously. No more waiting for an analyst to pull the numbers — the answer is immediate, accurate, and presented clearly. <a href=\"/for/enterprise/\">Enterprise organisations</a> find this especially valuable across large, distributed teams.</p>"
         }
       ],
       "useCases": [
@@ -668,19 +668,19 @@
         {
           "industry": "Finance",
           "heading": "AI Report Generation in Finance",
-          "body": "Financial institutions produce vast quantities of reports — for regulators, investors, boards, and internal management. AI report generation automates everything from daily risk reports to quarterly regulatory submissions. We build systems that pull data from trading platforms, core banking systems, and risk engines to produce accurate, formatted reports on schedule.",
+          "body": "<p>Financial institutions produce vast quantities of reports — for regulators, investors, boards, and internal management. AI report generation automates everything from daily risk reports to quarterly regulatory submissions. We build systems that pull data from trading platforms, core banking systems, and risk engines to produce accurate, formatted reports on schedule. For regulated firms, this pairs naturally with <a href=\"/solutions/compliance-monitoring/\">AI compliance monitoring</a> to ensure reports meet regulatory standards.</p>",
           "linkSlug": "/industries/finance/"
         },
         {
           "industry": "Legal",
           "heading": "AI Report Generation in Legal",
-          "body": "Law firms generate reports for clients, courts, and internal management constantly. AI automates matter status reports, billing summaries, due diligence reports, and regulatory filings. Our systems integrate with practice management platforms like Clio, iManage, and PMS to produce accurate reports that save fee earners significant administrative time.",
+          "body": "<p>Law firms generate reports for clients, courts, and internal management constantly. AI automates matter status reports, billing summaries, due diligence reports, and regulatory filings. Our systems integrate with practice management platforms like Clio, iManage, and PMS to produce accurate reports that save fee earners significant administrative time. <a href=\"/solutions/automation/\">AI automation</a> can further streamline the data collection that feeds these reports.</p>",
           "linkSlug": "/industries/legal/"
         },
         {
           "industry": "Government",
           "heading": "AI Report Generation in Government",
-          "body": "UK government departments and local councils produce enormous volumes of public reporting, performance data, and FOI responses. AI report generation helps public sector organisations meet their reporting obligations efficiently. We build systems compliant with Government Digital Service standards, ensuring accessibility and transparency in all outputs.",
+          "body": "<p>UK government departments and local councils produce enormous volumes of public reporting, performance data, and FOI responses. AI report generation helps public sector organisations meet their reporting obligations efficiently. We build systems compliant with Government Digital Service standards, ensuring accessibility and transparency in all outputs. Our <a href=\"/services/data-and-ai/\">data and AI practice</a> helps councils connect disparate data sources into unified reporting pipelines.</p>",
           "linkSlug": "/industries/government/"
         }
       ],
@@ -716,19 +716,19 @@
       "description": "Optimise stock levels with AI. We build intelligent inventory systems that reduce waste, prevent stockouts, and improve cash flow for UK businesses.",
       "primaryKeyword": "ai inventory management consulting",
       "icon": "supply",
-      "intro": "Holding too much stock ties up cash. Holding too little loses sales. AI inventory management finds the optimal balance — predicting demand accurately, adjusting reorder points dynamically, and optimising stock across your entire supply chain. We help UK businesses turn inventory from a headache into a competitive advantage.",
+      "intro": "<p>Holding too much stock ties up cash. Holding too little loses sales. AI inventory management finds the optimal balance — predicting demand accurately, adjusting reorder points dynamically, and optimising stock across your entire supply chain. We help UK businesses turn inventory from a headache into a competitive advantage.</p>",
       "sections": [
         {
           "heading": "Smart Stock Levels That Adapt in Real Time",
-          "body": "Traditional inventory management uses static reorder points and safety stock calculations. These work reasonably well when demand is stable and supply is reliable — which is rarely the case in practice. AI inventory management continuously adjusts stock parameters based on real-time demand signals, supplier lead times, seasonal patterns, and external factors. Our systems analyse point-of-sale data, website traffic, weather forecasts, promotional calendars, and even social media trends to predict what you will need and when. Reorder points shift automatically as conditions change. Safety stock levels increase ahead of predicted demand spikes and decrease during quieter periods. The result is less capital tied up in stock, fewer stockouts, and significantly less waste from obsolete inventory."
+          "body": "<p>Traditional inventory management uses static reorder points and safety stock calculations. These work reasonably well when demand is stable and supply is reliable — which is rarely the case in practice. AI inventory management continuously adjusts stock parameters based on real-time demand signals, supplier lead times, seasonal patterns, and external factors.</p><p>Our systems analyse point-of-sale data, website traffic, weather forecasts, promotional calendars, and even social media trends to predict what you will need and when. <a href=\"/solutions/forecasting/\">AI forecasting models</a> drive these predictions, and reorder points shift automatically as conditions change. Safety stock levels increase ahead of predicted demand spikes and decrease during quieter periods. The result is less capital tied up in stock, fewer stockouts, and significantly less waste from obsolete inventory.</p>"
         },
         {
           "heading": "Multi-Location Inventory Optimisation",
-          "body": "If you operate across multiple warehouses, stores, or fulfilment centres, inventory allocation becomes exponentially more complex. AI optimises stock positioning across your entire network, ensuring the right products are in the right locations at the right time. Our algorithms consider local demand patterns, transfer costs, delivery times, and storage capacity to determine optimal allocation. For UK retailers with both physical stores and online fulfilment, this means treating inventory as a single pool rather than separate silos. Ship-from-store capabilities, automated transfers between locations, and dynamic allocation during peak periods all become possible. Businesses with complex distribution networks typically see 15-25% reductions in total inventory holding costs while improving availability."
+          "body": "<p>If you operate across multiple warehouses, stores, or fulfilment centres, inventory allocation becomes exponentially more complex. AI optimises stock positioning across your entire network, ensuring the right products are in the right locations at the right time. Our algorithms consider local demand patterns, transfer costs, delivery times, and storage capacity to determine optimal allocation.</p><p>For UK <a href=\"/industries/retail/\">retailers</a> with both physical stores and online fulfilment, this means treating inventory as a single pool rather than separate silos. Ship-from-store capabilities, automated transfers between locations, and dynamic allocation during peak periods all become possible. Businesses with complex distribution networks typically see 15-25% reductions in total inventory holding costs while improving availability. Our <a href=\"/services/applied-ai/\">applied AI team</a> builds the optimisation models that power these decisions.</p>"
         },
         {
           "heading": "Supplier Intelligence and Procurement Automation",
-          "body": "AI does not just manage what you already have — it makes you smarter about what you buy and from whom. Our systems track supplier performance metrics including lead time reliability, quality scores, and pricing trends. When lead times from a supplier start creeping up, the system automatically adjusts reorder timing. If quality issues appear, alerts go to your procurement team before defective goods reach customers. We also automate purchase order generation, comparing prices across approved suppliers and recommending the optimal order quantities and timing. For UK businesses managing complex supplier relationships — especially those importing from overseas — this intelligence is invaluable for maintaining stock availability despite supply chain volatility."
+          "body": "<p>AI does not just manage what you already have — it makes you smarter about what you buy and from whom. Our systems track supplier performance metrics including lead time reliability, quality scores, and pricing trends. When lead times from a supplier start creeping up, the system automatically adjusts reorder timing. If quality issues appear, alerts go to your procurement team before defective goods reach customers.</p><p>We also automate purchase order generation, comparing prices across approved suppliers and recommending the optimal order quantities and timing. <a href=\"/solutions/automation/\">AI automation</a> handles the repetitive procurement tasks while your team focuses on supplier relationships. For UK businesses managing complex <a href=\"/industries/supply-chain/\">supply chain</a> relationships — especially those importing from overseas — this intelligence is invaluable for maintaining stock availability despite supply chain volatility.</p>"
         }
       ],
       "useCases": [
@@ -753,25 +753,25 @@
         {
           "industry": "Retail",
           "heading": "AI Inventory Management in Retail",
-          "body": "UK retailers manage thousands of SKUs across multiple channels and locations. AI inventory management ensures shelves are stocked without overbuying, reduces markdowns on unsold stock, and optimises allocation between stores and online fulfilment. We integrate with EPOS systems, e-commerce platforms, and warehouse management software to provide a unified inventory view.",
+          "body": "<p>UK retailers manage thousands of SKUs across multiple channels and locations. AI inventory management ensures shelves are stocked without overbuying, reduces markdowns on unsold stock, and optimises allocation between stores and online fulfilment. We integrate with EPOS systems, e-commerce platforms, and warehouse management software to provide a unified inventory view powered by our <a href=\"/services/data-and-ai/\">data and AI expertise</a>.</p>",
           "linkSlug": "/industries/retail/"
         },
         {
           "industry": "Ecommerce",
           "heading": "AI Inventory Management in Ecommerce",
-          "body": "E-commerce businesses face unique inventory challenges — flash sales, viral products, and rapid demand shifts. AI predicts these fluctuations and adjusts stock levels proactively. We integrate with Shopify, WooCommerce, and Amazon Seller Central to automate replenishment and prevent the stockouts that kill conversion rates and search rankings.",
+          "body": "<p>E-commerce businesses face unique inventory challenges — flash sales, viral products, and rapid demand shifts. AI predicts these fluctuations and adjusts stock levels proactively. We integrate with Shopify, WooCommerce, and Amazon Seller Central to automate replenishment and prevent the stockouts that kill conversion rates and search rankings. <a href=\"/solutions/forecasting/\">AI forecasting</a> drives the demand predictions that keep your stock levels right.</p>",
           "linkSlug": "/industries/ecommerce/"
         },
         {
           "industry": "Supply Chain",
           "heading": "AI Inventory Management in Supply Chain",
-          "body": "Distributors and wholesalers manage inventory across complex supply networks. AI optimises stock positioning, automates reordering, and predicts supply disruptions before they impact availability. We build systems that connect your ERP, WMS, and supplier platforms into an intelligent inventory network that adapts to changing conditions automatically.",
+          "body": "<p>Distributors and wholesalers manage inventory across complex supply networks. AI optimises stock positioning, automates reordering, and predicts supply disruptions before they impact availability. We build systems that connect your ERP, WMS, and supplier platforms into an intelligent inventory network that adapts to changing conditions automatically. Our <a href=\"/services/ai-implementation/\">AI implementation approach</a> ensures seamless integration with your existing systems.</p>",
           "linkSlug": "/industries/supply-chain/"
         },
         {
           "industry": "Manufacturing",
           "heading": "AI Inventory Management in Manufacturing",
-          "body": "Raw material and component inventory directly impacts production efficiency. AI ensures the right materials are available for production schedules without excessive stockholding. Our systems integrate with MRP and ERP platforms to coordinate procurement with production planning, reducing both material shortages and excess inventory carrying costs.",
+          "body": "<p>Raw material and component inventory directly impacts production efficiency. AI ensures the right materials are available for production schedules without excessive stockholding. Our systems integrate with MRP and ERP platforms to coordinate procurement with production planning, reducing both material shortages and excess inventory carrying costs. <a href=\"/solutions/process-improvement/\">AI process improvement</a> can identify further efficiency gains across the production workflow.</p>",
           "linkSlug": "/industries/manufacturing/"
         }
       ],
@@ -807,19 +807,19 @@
       "description": "Improve business processes with AI-powered analysis. We identify bottlenecks, eliminate waste, and redesign workflows for UK organisations using intelligent process mining.",
       "primaryKeyword": "ai process improvement consulting",
       "icon": "agentic",
-      "intro": "Every business has processes that are slower, more expensive, or more error-prone than they need to be. AI process improvement identifies exactly where the problems are and what to do about them. We combine process mining, machine learning, and workflow redesign to make your operations genuinely better — not just digitised.",
+      "intro": "<p>Every business has processes that are slower, more expensive, or more error-prone than they need to be. AI process improvement identifies exactly where the problems are and what to do about them. We combine process mining, machine learning, and workflow redesign to make your operations genuinely better — not just digitised.</p>",
       "sections": [
         {
           "heading": "Process Mining: Seeing How Work Actually Gets Done",
-          "body": "There is almost always a gap between how a process is supposed to work and how it actually works. Process mining bridges that gap by analysing event logs from your IT systems to reconstruct exactly what happens in practice. Every deviation, delay, loop, and bottleneck becomes visible. AI takes this further by identifying the root causes of inefficiencies — not just where delays occur, but why. Perhaps approvals stall because certain managers are overloaded. Maybe data entry errors cause rework downstream. Or specific customer types trigger exception handling that doubles processing time. We use tools like Celonis, UiPath Process Mining, and custom Python analysis to map your processes with surgical precision, giving you a factual basis for improvement rather than guesswork."
+          "body": "<p>There is almost always a gap between how a process is supposed to work and how it actually works. Process mining bridges that gap by analysing event logs from your IT systems to reconstruct exactly what happens in practice. Every deviation, delay, loop, and bottleneck becomes visible.</p><p>AI takes this further by identifying the root causes of inefficiencies — not just where delays occur, but why. Perhaps approvals stall because certain managers are overloaded. Maybe data entry errors cause rework downstream. Or specific customer types trigger exception handling that doubles processing time. We use tools like Celonis, UiPath Process Mining, and custom Python analysis to map your processes with surgical precision, giving you a factual basis for improvement rather than guesswork. Our <a href=\"/services/data-and-ai/\">data and AI consultants</a> ensure the analysis is rigorous and the recommendations are actionable.</p>"
         },
         {
           "heading": "Designing Better Workflows",
-          "body": "Once we understand how your processes actually operate, we redesign them for efficiency. This is not about simply automating a broken process — that just makes you inefficient faster. We take a first-principles approach: what outcome does this process need to deliver, and what is the simplest, fastest, most reliable way to achieve it? AI helps simulate different process designs before implementation. We model proposed changes, predict their impact on throughput, cost, and error rates, and compare alternatives objectively. For UK businesses navigating post-Brexit regulatory changes, this capability is particularly valuable — regulations may have changed what is required, but processes often have not caught up. Our redesigned workflows build in appropriate compliance checks without adding unnecessary bureaucracy."
+          "body": "<p>Once we understand how your processes actually operate, we redesign them for efficiency. This is not about simply automating a broken process — that just makes you inefficient faster. We take a first-principles approach: what outcome does this process need to deliver, and what is the simplest, fastest, most reliable way to achieve it?</p><p>AI helps simulate different process designs before implementation. We model proposed changes, predict their impact on throughput, cost, and error rates, and compare alternatives objectively. For UK businesses navigating post-Brexit regulatory changes, this capability is particularly valuable — regulations may have changed what is required, but processes often have not caught up. Our redesigned workflows build in appropriate compliance checks without adding unnecessary bureaucracy. When the redesign identifies tasks ripe for <a href=\"/solutions/automation/\">AI automation</a>, we deliver that too.</p>"
         },
         {
           "heading": "Continuous Process Optimisation",
-          "body": "Process improvement is not a one-off project — it is an ongoing discipline. We set up continuous monitoring that tracks process performance against your KPIs in real time. When performance degrades, the system alerts you immediately with diagnostic information. AI also identifies optimisation opportunities proactively. Perhaps a new pattern emerges that suggests a process step is no longer necessary. Or a seasonal shift in volume creates a temporary bottleneck that can be resolved with a simple routing change. This continuous improvement capability means your processes get better over time rather than gradually degrading. UK organisations that adopt AI-driven continuous process optimisation typically achieve 3-5% efficiency gains each year, compounding into transformative improvements."
+          "body": "<p>Process improvement is not a one-off project — it is an ongoing discipline. We set up continuous monitoring that tracks process performance against your KPIs in real time. When performance degrades, the system alerts you immediately with diagnostic information.</p><p>AI also identifies optimisation opportunities proactively. Perhaps a new pattern emerges that suggests a process step is no longer necessary. Or a seasonal shift in volume creates a temporary bottleneck that can be resolved with a simple routing change. This continuous improvement capability means your processes get better over time rather than gradually degrading. UK organisations that adopt AI-driven continuous process optimisation typically achieve 3-5% efficiency gains each year, compounding into transformative improvements. An <a href=\"/services/ai-strategy/\">AI strategy engagement</a> can set the vision for continuous improvement across your entire organisation.</p>"
         }
       ],
       "useCases": [
@@ -844,13 +844,13 @@
         {
           "industry": "Manufacturing",
           "heading": "AI Process Improvement in Manufacturing",
-          "body": "Manufacturing processes involve complex interactions between production lines, quality control, logistics, and supply chain. AI process mining reveals hidden inefficiencies — machine idle time, unnecessary material movement, quality inspection bottlenecks — that traditional analysis misses. We help UK manufacturers achieve lean operations supported by data-driven continuous improvement.",
+          "body": "<p>Manufacturing processes involve complex interactions between production lines, quality control, logistics, and supply chain. AI process mining reveals hidden inefficiencies — machine idle time, unnecessary material movement, quality inspection bottlenecks — that traditional analysis misses. We help UK manufacturers achieve lean operations supported by data-driven continuous improvement, often alongside <a href=\"/solutions/automation/\">AI automation</a> for the repetitive tasks uncovered during analysis.</p>",
           "linkSlug": "/industries/manufacturing/"
         },
         {
           "industry": "Healthcare",
           "heading": "AI Process Improvement in Healthcare",
-          "body": "NHS trusts and private providers use AI process improvement to reduce patient waiting times, streamline referral pathways, and optimise theatre scheduling. By mapping actual patient journeys against intended pathways, AI reveals where delays occur and why. Our healthcare process improvement work has helped trusts achieve significant reductions in patient wait times.",
+          "body": "<p>NHS trusts and private providers use AI process improvement to reduce patient waiting times, streamline referral pathways, and optimise theatre scheduling. By mapping actual patient journeys against intended pathways, AI reveals where delays occur and why. Our healthcare process improvement work has helped trusts achieve significant reductions in patient wait times, with <a href=\"/solutions/data-analysis/\">AI data analysis</a> providing the evidence base for change.</p>",
           "linkSlug": "/industries/healthcare/"
         },
         {

@@ -56,7 +56,7 @@ const relatedIndustries = getRelatedIndustries(page.relatedIndustries);
           {page.sections.map((section) => (
             <div>
               <h2>{section.heading}</h2>
-              <p>{section.body}</p>
+              <Fragment set:html={section.body} />
             </div>
           ))}
         </div>
@@ -83,7 +83,7 @@ const relatedIndustries = getRelatedIndustries(page.relatedIndustries);
             {page.industrySections.map((section) => (
               <div>
                 <h3>{section.heading}</h3>
-                <p>{section.body}</p>
+                <Fragment set:html={section.body} />
                 <p>
                   <a href={section.linkSlug}>See our {section.industry} solutions</a>.
                 </p>

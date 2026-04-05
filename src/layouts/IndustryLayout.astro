@@ -71,7 +71,7 @@ const relatedServices = getRelatedServices(page.relatedServices);
             {page.solutionSections.map((section) => (
               <div>
                 <h3>{section.heading}</h3>
-                <p>{section.body}</p>
+                <Fragment set:html={section.body} />
                 <p>
                   <a href={section.linkSlug}>Learn more about our {section.heading.toLowerCase()} services</a>.
                 </p>
