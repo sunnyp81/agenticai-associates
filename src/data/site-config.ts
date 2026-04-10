@@ -18,7 +18,7 @@ export const siteConfig = {
     linkedin: '',
     twitter: '',
   },
-  ga4Id: '',
+  ga4Id: 'G-923Q4JQMH4',
 } as const;
 
 export const mainNav = [
@@ -55,5 +55,6 @@ export const footerNav = {
     { label: 'Contact', href: '/contact/' },
     { label: 'Privacy Policy', href: '/privacy/' },
     { label: 'Terms of Service', href: '/terms/' },
+    { label: 'SEO Services', href: 'https://www.seo.associates/' },
   ],
 } as const;
