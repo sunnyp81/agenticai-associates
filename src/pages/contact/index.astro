@@ -21,9 +21,9 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
   </section>
 
   <div class="container section">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      <!-- Contact form -->
-      <div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+      <!-- Contact form — takes 2 of 3 cols -->
+      <div class="lg:col-span-2">
         <h2 class="mb-6">Send Us a Message</h2>
 
         {sent && (
@@ -33,42 +33,18 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
         )}
 
         <ContactForm />
-      </div>
 
-      <!-- Right side -->
-      <div class="space-y-8">
-        <div>
-          <h2 class="mb-6">Book a Free Consultation</h2>
+        <div class="mt-8 pt-8 border-t border-[var(--color-border)]">
+          <h2 class="mb-4">Book a Free Consultation</h2>
           <p class="text-[var(--color-text-muted)] mb-4">Prefer to talk? Book a 30-minute discovery call. No sales pitch — just an honest conversation about your AI challenges.</p>
           <a href={siteConfig.contact.bookingUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             Book a Call
           </a>
         </div>
+      </div>
 
-        <div class="card">
-          <h3 class="text-lg font-semibold mb-4">What Happens Next?</h3>
-          <ol class="space-y-4 text-sm">
-            <li class="flex gap-3">
-              <span class="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--color-accent)] flex-shrink-0">1</span>
-              <div>
-                <strong>We listen.</strong> Tell us about your business and what you're trying to achieve.
-              </div>
-            </li>
-            <li class="flex gap-3">
-              <span class="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--color-accent)] flex-shrink-0">2</span>
-              <div>
-                <strong>We assess.</strong> We'll give you an honest view of where AI can (and can't) help.
-              </div>
-            </li>
-            <li class="flex gap-3">
-              <span class="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--color-accent)] flex-shrink-0">3</span>
-              <div>
-                <strong>We propose.</strong> If there's a fit, we'll send a clear proposal with scope, timeline, and pricing.
-              </div>
-            </li>
-          </ol>
-        </div>
-
+      <!-- Sidebar — 1 col -->
+      <div class="space-y-6">
         <div class="card">
           <h3 class="text-lg font-semibold mb-3">Contact Details</h3>
           <dl class="space-y-3 text-sm">
@@ -89,6 +65,24 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
               <dd class="font-medium">Within 24 hours</dd>
             </div>
           </dl>
+        </div>
+
+        <div class="card">
+          <h3 class="text-lg font-semibold mb-4">What Happens Next?</h3>
+          <ol class="space-y-4 text-sm">
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--color-accent)] flex-shrink-0">1</span>
+              <div><strong>We listen.</strong> Tell us about your business and what you're trying to achieve.</div>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--color-accent)] flex-shrink-0">2</span>
+              <div><strong>We assess.</strong> We'll give you an honest view of where AI can (and can't) help.</div>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--color-accent)] flex-shrink-0">3</span>
+              <div><strong>We propose.</strong> If there's a fit, we'll send a clear proposal with scope, timeline, and pricing.</div>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
