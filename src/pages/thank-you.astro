@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+---
+
+<BaseLayout
+  title="Thanks — Message Received | Agentic AI Associates"
+  description="Your message has been received. We'll reply within 1 working day."
+  noIndex={true}
+>
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[{ label: 'Thank You', href: '/thank-you/' }]} />
+      <h1 class="text-white max-w-3xl">Thanks — message received</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">
+        Your enquiry is in. Sunny will reply personally within 1 working day.
+      </p>
+    </div>
+  </section>
+
+  <div class="container section">
+    <div class="max-w-2xl">
+      <p class="text-[var(--color-text-muted)] mb-6">
+        In the meantime, feel free to browse our services or read more about how we help businesses implement practical AI.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="/services/" class="btn btn-secondary">View Services</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
