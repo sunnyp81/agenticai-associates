@@ -36,15 +36,15 @@ const iconMap: Record<string, string> = {
 const pathData = iconMap[icon || 'default'] || iconMap.default;
 ---
 
-<a href={href} class="card group flex flex-col h-full">
-  <div class="w-10 h-10 rounded-lg bg-[var(--color-accent)]/10 flex items-center justify-center mb-4 group-hover:bg-[var(--color-accent)]/20 transition-colors">
-    <svg class="w-5 h-5 text-[var(--color-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<a href={href} class="card-animated-border group flex flex-col h-full p-7" style="text-decoration: none;">
+  <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-colors" style="background: rgba(13,148,136,0.1);">
+    <svg class="w-5 h-5" style="color: #0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={pathData} />
     </svg>
   </div>
-  <h3 class="text-lg font-semibold mb-2 group-hover:text-[var(--color-accent)] transition-colors">{title}</h3>
+  <h3 class="text-lg font-semibold mb-2 group-hover:text-teal-600 transition-colors">{title}</h3>
   <p class="text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">{description}</p>
-  <span class="mt-4 text-sm font-medium text-[var(--color-accent)] flex items-center gap-1">
+  <span class="mt-4 text-sm font-medium flex items-center gap-1" style="color: #0d9488;">
     Learn more
     <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

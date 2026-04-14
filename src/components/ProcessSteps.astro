@@ -12,15 +12,16 @@ const { steps = [
 ---
 
 <section class="section-sm">
+  <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em] text-center">Our Process</p>
   <h2 class="text-center mb-12">How We Work</h2>
   <div class="relative max-w-5xl mx-auto">
-    <!-- Connector line on lg+ -->
-    <div class="hidden lg:block absolute top-7 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent" aria-hidden="true"></div>
+    <!-- Connector line on lg+ — blue to teal gradient -->
+    <div class="hidden lg:block absolute top-7 left-[12.5%] right-[12.5%] h-px" style="background: linear-gradient(to right, transparent, #2563eb, #0d9488, transparent);" aria-hidden="true"></div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
       {steps.map((step, i) => (
         <div class="relative text-center">
-          <div class="w-14 h-14 rounded-full bg-white border-2 border-[var(--color-accent)]/20 flex items-center justify-center mx-auto mb-4 relative z-10 shadow-sm">
-            <span class="text-xl font-bold text-[var(--color-accent)] font-[family-name:var(--font-display)]">{i + 1}</span>
+          <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto mb-4 relative z-10 shadow-sm" style="border: 2px solid rgba(13,148,136,0.3);">
+            <span class="text-xl font-bold font-[family-name:var(--font-display)]" style="color: #0d9488;">{i + 1}</span>
           </div>
           <h3 class="text-lg font-semibold mb-2">{step.title}</h3>
           <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{step.description}</p>
