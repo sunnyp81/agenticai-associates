@@ -7,23 +7,44 @@ export function buildOrganizationSchema() {
     '@id': `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/favicon.svg`,
     description: siteConfig.description,
+    email: siteConfig.contact.email,
+    foundingDate: '2026',
     founder: {
       '@type': 'Person',
       name: siteConfig.founder.name,
       jobTitle: siteConfig.founder.jobTitle,
       url: siteConfig.founder.personalUrl,
     },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'GB',
+      addressLocality: 'United Kingdom',
+    },
     areaServed: {
       '@type': 'Country',
       name: 'United Kingdom',
     },
-    serviceType: [
-      'AI Consultancy',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: siteConfig.contact.email,
+      url: `${siteConfig.url}/contact/`,
+      areaServed: 'GB',
+    },
+    serviceType: 'AI Consulting',
+    sameAs: [
+      'https://www.linkedin.com/company/agenticai-associates',
+      'https://agenticai.associates',
+    ],
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Agentic AI',
+      'Generative AI',
       'AI Strategy',
       'AI Implementation',
-      'Generative AI',
-      'Agentic AI',
     ],
   };
 }
@@ -35,11 +56,25 @@ export function buildPersonSchema() {
     name: siteConfig.founder.name,
     jobTitle: siteConfig.founder.jobTitle,
     url: siteConfig.founder.personalUrl,
+    sameAs: [
+      siteConfig.founder.personalUrl,
+      'https://www.linkedin.com/in/sunnypatel',
+    ],
     worksFor: {
       '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
       name: siteConfig.name,
       url: siteConfig.url,
     },
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Agentic AI',
+      'Generative AI',
+      'SEO',
+      'Data Engineering',
+      'AI Strategy',
+      'AI Implementation',
+    ],
   };
 }
 
@@ -53,6 +88,14 @@ export function buildWebSiteSchema() {
     publisher: {
       '@type': 'Organization',
       '@id': `${siteConfig.url}/#organization`,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteConfig.url}/?s={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
   };
 }
