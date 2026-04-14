@@ -48,7 +48,7 @@ const relatedServices = getRelatedServices(page.relatedServices);
   <div class="container section-sm">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       <!-- Main content -->
-      <div class="lg:col-span-2">
+      <div class="lg:col-span-2 order-1">
         <!-- Pain points -->
         {page.painPoints.length > 0 && (
           <section class="mb-12">
@@ -82,7 +82,7 @@ const relatedServices = getRelatedServices(page.relatedServices);
       </div>
 
       <!-- Sidebar -->
-      <aside class="space-y-6">
+      <aside class="space-y-6 order-2 lg:order-none">
         {relatedServices.length > 0 && (
           <RelatedLinks
             title="Our Services"

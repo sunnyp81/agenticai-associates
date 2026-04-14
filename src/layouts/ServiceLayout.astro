@@ -58,7 +58,7 @@ const relatedSolutions = getRelatedSolutions(page.relatedSolutions);
   <div class="container section-sm">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       <!-- Main content -->
-      <div class="lg:col-span-2">
+      <div class="lg:col-span-2 order-1">
         <!-- Sections -->
         <div class="prose">
           {page.sections.map((section) => (
@@ -82,7 +82,7 @@ const relatedSolutions = getRelatedSolutions(page.relatedSolutions);
       </div>
 
       <!-- Sidebar -->
-      <aside class="space-y-6">
+      <aside class="space-y-6 order-2 lg:order-none">
         {relatedIndustries.length > 0 && (
           <RelatedLinks
             title="Industries We Serve"

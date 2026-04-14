@@ -54,7 +54,7 @@ const schemas = [localSchema, ...(faqSchema ? [faqSchema] : [])];
   <div class="container section-sm">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       <!-- Main content -->
-      <div class="lg:col-span-2 prose">
+      <div class="lg:col-span-2 prose order-1">
         {page.sections.map((section) => (
           <div>
             <h2>{section.heading}</h2>
@@ -64,7 +64,7 @@ const schemas = [localSchema, ...(faqSchema ? [faqSchema] : [])];
       </div>
 
       <!-- Sidebar -->
-      <aside class="space-y-6">
+      <aside class="space-y-6 order-2 lg:order-none">
         <RelatedLinks
           title="Our Services"
           links={page.relatedServices.map((slug) => ({
@@ -77,7 +77,7 @@ const schemas = [localSchema, ...(faqSchema ? [faqSchema] : [])];
           <RelatedLinks
             title="Nearby Locations"
             links={page.relatedLocations.map((slug) => ({
-              label: `AI Consultancy ${slug.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}`,
+              label: slug.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
               href: `/locations/${slug}/`,
             }))}
           />

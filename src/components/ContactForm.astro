@@ -3,6 +3,8 @@ import { siteConfig } from '@/data/site-config';
 ---
 
 <form action="https://api.staticforms.xyz/submit" method="post" class="space-y-5">
+  <input type="hidden" name="subject" value="Enquiry from agenticai.associates" />
+  <input type="hidden" name="_site" value="agenticai.associates" />
   <input type="hidden" name="accessKey" value={siteConfig.contact.staticFormsKey} />
   <input type="hidden" name="redirectTo" value={`${siteConfig.url}/contact/?sent=true`} />
   <input type="text" name="honeypot" style="display:none" />

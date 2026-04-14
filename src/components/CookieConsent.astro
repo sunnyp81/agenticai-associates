@@ -1,50 +1,45 @@
 ---
 ---
 
+<script is:inline>
+  // Set early to prevent flash before banner shows/hides
+  if (localStorage.getItem('cookie-consent')) {
+    document.documentElement.setAttribute('data-cookie-decided', 'true');
+  }
+</script>
+
 <div
   id="cookie-consent"
-  class="fixed bottom-0 left-0 right-0 z-50 p-4 bg-[var(--color-hero-bg)] text-white hidden"
+  class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-md z-50 p-5 bg-[var(--color-hero-bg)] text-white rounded-xl shadow-2xl border border-slate-700 cookie-banner"
   role="dialog"
   aria-label="Cookie consent"
 >
-  <div class="container flex flex-col sm:flex-row items-center justify-between gap-4">
-    <p class="text-sm text-slate-300">
+  <div class="flex flex-col gap-3">
+    <p class="text-sm text-slate-300 leading-relaxed">
       We use cookies for analytics to improve your experience.
       <a href="/privacy/" class="underline hover:text-white">Privacy policy</a>.
     </p>
-    <div class="flex gap-3">
-      <button id="cookie-accept" class="btn btn-primary !py-1.5 !px-4 text-sm">Accept</button>
+    <div class="flex gap-3 items-center">
+      <button id="cookie-accept" class="btn btn-primary !py-1.5 !px-5 text-sm">Accept</button>
       <button id="cookie-decline" class="text-sm text-slate-400 hover:text-white transition-colors">Decline</button>
     </div>
   </div>
 </div>
+
+<style>
+  html[data-cookie-decided] .cookie-banner { display: none !important; }
+</style>
 
 <script>
   const banner = document.getElementById('cookie-consent');
   const acceptBtn = document.getElementById('cookie-accept');
   const declineBtn = document.getElementById('cookie-decline');
 
-  function showBanner() {
-    banner?.classList.remove('hidden');
-    document.body.style.paddingBottom = (banner?.offsetHeight ?? 80) + 'px';
+  function dismiss(value: string) {
+    localStorage.setItem('cookie-consent', value);
+    document.documentElement.setAttribute('data-cookie-decided', 'true');
   }
 
-  function hideBanner() {
-    banner?.classList.add('hidden');
-    document.body.style.paddingBottom = '';
-  }
-
-  if (!localStorage.getItem('cookie-consent')) {
-    showBanner();
-  }
-
-  acceptBtn?.addEventListener('click', () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    hideBanner();
-  });
-
-  declineBtn?.addEventListener('click', () => {
-    localStorage.setItem('cookie-consent', 'declined');
-    hideBanner();
-  });
+  acceptBtn?.addEventListener('click', () => dismiss('accepted'));
+  declineBtn?.addEventListener('click', () => dismiss('declined'));
 </script>
