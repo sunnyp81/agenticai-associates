@@ -1,13 +1,11 @@
 ---
 import { siteConfig } from '@/data/site-config';
-const redirectTo = 'https://agenticai.associates/thank-you/';
 ---
 
-<form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-5">
+<form id="contact-form" method="POST" class="space-y-5">
   <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
   <input type="hidden" name="subject" value="Enquiry from agenticai.associates" />
   <input type="hidden" name="_site" value="agenticai.associates" />
-  <input type="hidden" name="redirectTo" value={redirectTo} />
   <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -75,7 +73,60 @@ const redirectTo = 'https://agenticai.associates/thank-you/';
     ></textarea>
   </div>
 
-  <button type="submit" class="btn btn-primary w-full sm:w-auto">
+  <button type="submit" id="contact-submit" class="btn btn-primary w-full sm:w-auto">
     Send Message
   </button>
+
+  <p id="contact-error" hidden class="text-sm text-red-600 mt-2">
+    Something went wrong sending your message. Please email us directly at hello@agenticai.associates.
+  </p>
 </form>
+
+<div id="contact-success" hidden class="rounded-lg border border-[var(--color-border)] bg-white p-6">
+  <h3 class="text-xl font-semibold text-[var(--color-text)] mb-2">Thanks &mdash; message received</h3>
+  <p class="text-[var(--color-text-muted)]">We'll get back to you within 1 working day.</p>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const successEl = document.getElementById('contact-success');
+  const errorEl = document.getElementById('contact-error');
+  const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement | null;
+
+  if (form && successEl && submitBtn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (errorEl) errorEl.hidden = true;
+
+      const fd = new FormData(form);
+      const data = Object.fromEntries(fd.entries()) as Record<string, string>;
+
+      if (data.honeypot && data.honeypot.length > 0) {
+        form.hidden = true;
+        successEl.hidden = false;
+        return;
+      }
+
+      submitBtn.disabled = true;
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        await fetch('https://api.staticforms.xyz/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+        form.hidden = true;
+        successEl.hidden = false;
+      } catch (err) {
+        if (errorEl) errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  }
+</script>
