@@ -41,29 +41,37 @@ const caseStudies = [
     </div>
   </section>
 
-  <div class="container section-sm">
-    <div class="space-y-8 max-w-4xl">
+  <div class="container section">
+    <div class="space-y-8 max-w-4xl mx-auto">
       {caseStudies.map((study) => (
-        <article class="card">
-          <div class="flex flex-wrap gap-2 mb-3">
+        <article class="card-animated-border p-8 md:p-10">
+          <div class="flex flex-wrap gap-2 mb-5">
             {study.tags.map((tag) => (
-              <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">{tag}</span>
+              <span class="text-xs font-semibold px-3 py-1 rounded-full" style="background: rgba(13,148,136,0.1); color: #0d9488;">{tag}</span>
             ))}
           </div>
-          <h2 class="text-xl font-semibold mb-2">{study.title}</h2>
-          <p class="text-[var(--color-text-muted)] mb-4">{study.description}</p>
-          <div class="flex items-center gap-2 text-sm">
-            <span class="font-semibold text-[var(--color-success)]">Result:</span>
-            <span class="font-medium">{study.result}</span>
+          <h2 class="text-2xl font-bold mb-3">{study.title}</h2>
+          <p class="text-slate-500 leading-relaxed mb-6 text-base">{study.description}</p>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(5,150,105,0.1);">
+              <svg class="w-4 h-4" style="color: #059669;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <span class="font-semibold text-sm" style="color: #059669;">{study.result}</span>
           </div>
         </article>
       ))}
     </div>
 
-    <div class="mt-12 max-w-4xl">
-      <div class="card bg-[var(--color-surface)]">
-        <h2 class="text-xl font-semibold mb-3">More Case Studies Coming Soon</h2>
-        <p class="text-[var(--color-text-muted)]">We're documenting more client projects. Want to discuss how we could help your business? <a href="/contact/" class="text-[var(--color-primary-light)] hover:text-[var(--color-accent)]">Get in touch</a>.</p>
+    <div class="mt-16 max-w-4xl mx-auto">
+      <div class="relative overflow-hidden rounded-2xl p-10 text-center" style="background: #080f1e;">
+        <div class="aurora-blob w-64 h-64 top-[-30px] right-0" style="background: #0d9488;"></div>
+        <div class="dot-grid absolute inset-0 opacity-[0.06]"></div>
+        <div class="relative">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] mb-3" style="color: #5eead4;">Your Business Could Be Next</p>
+          <h2 class="text-white text-2xl font-bold mb-3">Want results like these?</h2>
+          <p class="text-slate-300 mb-6 max-w-lg mx-auto">Book a free 30-minute consultation. We'll tell you honestly whether AI can deliver measurable results for your specific challenges.</p>
+          <a href="/contact/" class="btn-glow">Book a Free Consultation</a>
+        </div>
       </div>
     </div>
   </div>
