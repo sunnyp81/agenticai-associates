@@ -24,17 +24,27 @@
   const acceptBtn = document.getElementById('cookie-accept');
   const declineBtn = document.getElementById('cookie-decline');
 
-  if (!localStorage.getItem('cookie-consent')) {
+  function showBanner() {
     banner?.classList.remove('hidden');
+    document.body.style.paddingBottom = (banner?.offsetHeight ?? 80) + 'px';
+  }
+
+  function hideBanner() {
+    banner?.classList.add('hidden');
+    document.body.style.paddingBottom = '';
+  }
+
+  if (!localStorage.getItem('cookie-consent')) {
+    showBanner();
   }
 
   acceptBtn?.addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'accepted');
-    banner?.classList.add('hidden');
+    hideBanner();
   });
 
   declineBtn?.addEventListener('click', () => {
     localStorage.setItem('cookie-consent', 'declined');
-    banner?.classList.add('hidden');
+    hideBanner();
   });
 </script>
