@@ -28,7 +28,7 @@ const schema = buildBreadcrumbSchema(schemaItems);
       <li class="flex items-center gap-1.5">
         <span aria-hidden="true" class="text-[var(--color-border)]">/</span>
         {i === items.length - 1 ? (
-          <span class="text-[var(--color-text)] font-medium" aria-current="page">{item.label}</span>
+          <span class="text-[var(--color-text)] font-medium truncate max-w-[160px] sm:max-w-none" aria-current="page">{item.label}</span>
         ) : (
           <a href={item.href} class="hover:text-[var(--color-accent)] transition-colors">{item.label}</a>
         )}

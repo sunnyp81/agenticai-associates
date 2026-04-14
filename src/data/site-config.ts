@@ -55,6 +55,5 @@ export const footerNav = {
     { label: 'Contact', href: '/contact/' },
     { label: 'Privacy Policy', href: '/privacy/' },
     { label: 'Terms of Service', href: '/terms/' },
-    { label: 'SEO Services', href: 'https://www.seo.associates/' },
   ],
 } as const;

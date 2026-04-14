@@ -50,7 +50,7 @@ const relatedSolutions = getRelatedSolutions(page.relatedSolutions);
         { label: page.name, href: `/services/${page.slug}/` },
       ]} />
       <h1 class="text-white max-w-3xl">{page.name}</h1>
-      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">{page.intro}</p>
+      <div class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed prose prose-invert prose-p:my-0"><Fragment set:html={page.intro} /></div>
       <a href="/contact/" class="btn btn-primary mt-6">Discuss Your Project</a>
     </div>
   </section>
