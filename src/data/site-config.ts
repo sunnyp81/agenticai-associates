@@ -2,11 +2,11 @@ export const siteConfig = {
   name: 'Agentic AI Associates',
   shortName: 'AgenticAI',
   url: 'https://agenticai.associates',
-  description: 'UK AI consultancy specialising in agentic AI, generative AI, and applied AI solutions. We help businesses implement AI strategy, automation, and intelligent systems that deliver measurable results.',
-  tagline: 'AI consultancy that delivers results.',
+  description: 'UK AI consultancy specialising in agentic AI systems, automation, and governance. We build AI that delivers measurable results from week one.',
+  tagline: 'AI systems that deliver results from week one.',
   founder: {
     name: 'Sunny Patel',
-    jobTitle: 'AI Consultant',
+    jobTitle: 'Founder & AI Consultant',
     personalUrl: 'https://sunnypatel.co.uk',
   },
   contact: {
@@ -22,23 +22,21 @@ export const siteConfig = {
 } as const;
 
 export const mainNav = [
-  { label: 'Services', href: '/services/' },
+  { label: 'What We Do', href: '/what-we-do/' },
   { label: 'Industries', href: '/industries/' },
-  { label: 'Solutions', href: '/solutions/' },
   { label: 'Learn', href: '/learn/' },
-  { label: 'Locations', href: '/locations/' },
   { label: 'About', href: '/about/' },
-  { label: 'Pricing', href: '/pricing/' },
+  { label: 'Get Started', href: '/get-started/' },
 ] as const;
 
 export const footerNav = {
-  services: [
-    { label: 'AI Strategy & Roadmaps', href: '/services/ai-strategy/' },
-    { label: 'AI Implementation', href: '/services/ai-implementation/' },
-    { label: 'Agentic AI', href: '/services/agentic-ai/' },
-    { label: 'Generative AI', href: '/services/generative-ai/' },
-    { label: 'Data & AI', href: '/services/data-and-ai/' },
-    { label: 'AI Training', href: '/services/ai-training/' },
+  whatWeDo: [
+    { label: 'AI Readiness Assessment', href: '/what-we-do/ai-readiness-assessment/' },
+    { label: 'AI Strategy & Roadmaps', href: '/what-we-do/ai-strategy/' },
+    { label: 'Agentic AI Systems', href: '/what-we-do/agentic-ai/' },
+    { label: 'Generative AI & LLMs', href: '/what-we-do/generative-ai/' },
+    { label: 'AI Automation', href: '/what-we-do/ai-automation/' },
+    { label: 'AI Governance', href: '/what-we-do/ai-governance/' },
   ],
   industries: [
     { label: 'Healthcare', href: '/industries/healthcare/' },
@@ -50,8 +48,8 @@ export const footerNav = {
   ],
   company: [
     { label: 'About', href: '/about/' },
-    { label: 'Case Studies', href: '/case-studies/' },
-    { label: 'Pricing', href: '/pricing/' },
+    { label: 'Results', href: '/about/results/' },
+    { label: 'Get Started', href: '/get-started/' },
     { label: 'Contact', href: '/contact/' },
     { label: 'Privacy Policy', href: '/privacy/' },
     { label: 'Terms of Service', href: '/terms/' },
