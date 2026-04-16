@@ -7,8 +7,8 @@ const year = new Date().getFullYear();
 <footer style="background: #080f1e;" class="text-slate-400">
   <!-- Tech partner mini strip -->
   <div class="border-b border-slate-800">
-    <div class="container py-8">
-      <p class="text-center text-xs font-semibold text-slate-600 uppercase tracking-widest mb-5">Our Technology Stack</p>
+    <div class="container py-12">
+      <p class="text-center text-xs font-semibold text-slate-600 uppercase tracking-widest mb-6">Our Technology Stack</p>
       <div class="flex flex-wrap items-center justify-center gap-10">
         {['OpenAI', 'Anthropic', 'Google Cloud', 'Microsoft Azure', 'AWS', 'Hugging Face'].map(name => (
           <span class="text-sm font-bold tracking-wide text-slate-500">{name}</span>
@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
     </div>
   </div>
 
-  <div class="container section-sm">
+  <div class="container" style="padding: 4rem 1.5rem 3rem;">
     <!-- Main grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
       <!-- Brand — full width on mobile/sm, spans all on md, 2 cols on lg -->
