@@ -1,10 +1,9 @@
 ---
 import HubLayout from '@/layouts/HubLayout.astro';
-import HubCard from '@/components/HubCard.astro';
 import { getWhatWeDoHub } from '@/lib/page-factory';
+import { buildFAQSchema } from '@/lib/schema';
 
-const hub = getWhatWeDoHub();
-const pages = hub.pages;
+const data = getWhatWeDoHub();
 
 const faqs = [
   { question: 'What AI services do you offer?', answer: 'We offer AI readiness assessments, strategy consulting, agentic AI development, generative AI systems, automation, data infrastructure, conversational AI, governance consulting, training, and ongoing support. Every engagement is tailored to your business needs.' },
@@ -12,23 +11,25 @@ const faqs = [
   { question: 'Do you work with businesses that have no AI experience?', answer: 'Yes. Many of our clients are starting from zero. The readiness assessment is specifically designed to take you from where you are to where you need to be.' },
   { question: 'How much does AI consulting cost?', answer: 'It depends on scope. Our AI Readiness Assessment is a fixed-fee engagement. Strategy projects start from £3,000. Implementation is scoped individually. We always provide clear pricing upfront.' },
 ];
+
+const schema = buildFAQSchema(faqs);
 ---
 
 <HubLayout
-  title={hub.hub.title}
-  description={hub.hub.description}
-  heading="What We Do"
-  intro="From readiness assessments to full implementation — we cover the complete AI lifecycle. Every engagement starts with understanding your business, not selling you technology."
+  title={data.hub.title}
+  description={data.hub.description}
+  heroTitle="What We Do"
+  heroSubtitle="From readiness assessments to full implementation — we cover the complete AI lifecycle. Every engagement starts with understanding your business, not selling you technology."
+  breadcrumbs={[{ label: 'What We Do', href: '/what-we-do/' }]}
+  pages={data.pages.map((p) => ({ slug: p.slug, name: p.name, description: p.description, icon: p.icon }))}
+  hubPath="/what-we-do/"
   faqs={faqs}
+  schema={schema ? [schema] : []}
 >
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {pages.map((page) => (
-      <HubCard
-        title={page.name}
-        description={page.description}
-        href={`/what-we-do/${page.slug}/`}
-        icon={page.icon}
-      />
-    ))}
-  </div>
+  <Fragment slot="intro">
+    <div class="prose max-w-3xl">
+      <p>AI is transforming how UK businesses operate. But knowing where to start — and what to prioritise — is the hard part. That is what we do.</p>
+      <p>Every engagement below is designed to deliver measurable results. Browse our services to find the right starting point for your business.</p>
+    </div>
+  </Fragment>
 </HubLayout>
