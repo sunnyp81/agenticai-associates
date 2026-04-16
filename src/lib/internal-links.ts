@@ -1,14 +1,17 @@
 const hubSpokes: Record<string, string[]> = {
-  services: [
+  'what-we-do': [
+    'ai-readiness-assessment',
     'ai-strategy',
-    'ai-implementation',
     'agentic-ai',
     'generative-ai',
+    'ai-automation',
+    'data-ai',
     'conversational-ai',
-    'data-and-ai',
-    'applied-ai',
+    'ai-governance',
     'ai-training',
-    'ethical-ai',
+    'ongoing-support',
+    'applied-ai',
+    'ai-content-marketing',
   ],
   industries: [
     'healthcare',
@@ -23,18 +26,6 @@ const hubSpokes: Record<string, string[]> = {
     'manufacturing',
     'marketing',
     'government',
-  ],
-  solutions: [
-    'automation',
-    'data-analysis',
-    'content-creation',
-    'customer-support',
-    'forecasting',
-    'compliance-monitoring',
-    'lead-generation',
-    'report-generation',
-    'inventory-management',
-    'process-improvement',
   ],
   'for': [
     'small-business',
@@ -77,12 +68,11 @@ const hubSpokes: Record<string, string[]> = {
 };
 
 const crossHubLinks: Record<string, string[]> = {
-  services: ['industries', 'solutions'],
-  industries: ['services', 'solutions'],
-  solutions: ['services', 'industries'],
-  'for': ['services', 'industries'],
-  learn: ['services'],
-  locations: ['services', 'industries'],
+  'what-we-do': ['industries'],
+  industries: ['what-we-do'],
+  'for': ['what-we-do', 'industries'],
+  learn: ['what-we-do'],
+  locations: ['what-we-do', 'industries'],
 };
 
 export function getHubSpokes(hub: string): string[] {
