@@ -45,13 +45,12 @@ const schemas = [buildOrganizationSchema(), buildPersonSchema()];
         </ul>
 
         <h2>Our Founder</h2>
-        <p><strong>Sunny Patel</strong> is an AI consultant and technologist with deep experience in SEO, data engineering, and applied AI. He's built systems used by thousands of businesses and has a track record of turning AI strategy into real-world results. <a href="https://www.linkedin.com/in/sunnypatel" rel="noopener noreferrer">Connect on LinkedIn</a>.</p>
+        <p><strong>Sunny Patel</strong> is the founder of Agentic AI Associates. He built this site — and it ranked on Google and generated an enterprise lead within a week of launch. That's the kind of speed and rigour he brings to client work. <a href="https://www.linkedin.com/in/sunnypatel" rel="noopener noreferrer">Connect on LinkedIn</a>.</p>
         <p>Sunny founded Agentic AI Associates because he saw too many businesses being sold AI solutions they didn't need — or being told to wait when they should be acting. His approach is simple: understand the problem first, then apply the right technology.</p>
 
         <h3>Credentials &amp; Expertise</h3>
         <ul>
-          <li><strong>5+ years</strong> building data-driven and AI-powered systems in production</li>
-          <li>Delivered AI projects across healthcare, legal, finance, retail, and professional services</li>
+          <li>Background in SEO, data engineering, and applied AI systems</li>
           <li>Technical stack: Python, LangChain, OpenAI, Anthropic Claude, Hugging Face, dbt, Astro, Next.js</li>
           <li>AI workflow automation with n8n, Make (Integromat), and custom agentic pipelines</li>
           <li>UK-based; fully GDPR compliant; ICO-registered data practices</li>
@@ -80,16 +79,22 @@ const schemas = [buildOrganizationSchema(), buildPersonSchema()];
               <dd class="font-medium">Agentic AI & Applied AI</dd>
             </div>
             <div>
-              <dt class="text-[var(--color-text-muted)]">Industries</dt>
-              <dd class="font-medium">12+ sectors served</dd>
+              <dt class="text-[var(--color-text-muted)]">Focus</dt>
+              <dd class="font-medium">Mid-market UK businesses</dd>
             </div>
           </dl>
         </div>
 
+        <div class="card">
+          <h3 class="text-lg font-semibold mb-2">See Our Results</h3>
+          <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">Real outcomes from real projects — proof, not promises.</p>
+          <a href="/about/results/" class="btn btn-outline text-sm w-full justify-center">View Results</a>
+        </div>
+
         <div class="card bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-primary-light)]/5 border-[var(--color-accent)]/20">
           <h3 class="text-lg font-semibold mb-2">Ready to Talk?</h3>
-          <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">Book a free 30-minute consultation. No commitment, no jargon.</p>
-          <a href="/contact/" class="btn btn-primary text-sm w-full justify-center">Get in Touch</a>
+          <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">Book a free 30-minute discovery call. No commitment, no jargon.</p>
+          <a href="/contact/" class="btn btn-primary text-sm w-full justify-center">Book a Discovery Call</a>
         </div>
       </aside>
     </div>
@@ -98,5 +103,7 @@ const schemas = [buildOrganizationSchema(), buildPersonSchema()];
   <CTABanner
     headline="Let's Build Something Intelligent Together"
     text="Whether you're exploring AI for the first time or scaling an existing programme, we're here to help."
+    buttonText="Book a Discovery Call"
+    buttonHref="/contact/"
   />
 </BaseLayout>
