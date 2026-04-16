@@ -1,0 +1,12 @@
+---
+import WhatWeDoLayout from '@/layouts/WhatWeDoLayout.astro';
+import { getWhatWeDoPaths } from '@/lib/page-factory';
+
+export function getStaticPaths() {
+  return getWhatWeDoPaths();
+}
+
+const { page } = Astro.props;
+---
+
+<WhatWeDoLayout page={page} />
