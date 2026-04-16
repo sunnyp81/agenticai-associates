@@ -1,0 +1,142 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import RelatedLinks from '@/components/RelatedLinks.astro';
+import { buildServiceSchema, buildFAQSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
+import { getRelatedIndustries, getRelatedWhatWeDo } from '@/lib/page-factory';
+
+interface Props {
+  page: {
+    slug: string;
+    name: string;
+    title: string;
+    description: string;
+    intro: string;
+    entryPoint?: boolean;
+    sections: { heading: string; body: string }[];
+    features: { title: string; description: string }[];
+    faq: { question: string; answer: string }[];
+    relatedServices: string[];
+    relatedIndustries: string[];
+  };
+}
+
+const { page } = Astro.props;
+
+const serviceSchema = buildServiceSchema({
+  name: page.name,
+  description: page.description,
+  url: `${siteConfig.url}/what-we-do/${page.slug}/`,
+});
+
+const faqSchema = buildFAQSchema(page.faq);
+const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+
+const relatedIndustries = getRelatedIndustries(page.relatedIndustries);
+const relatedServices = getRelatedWhatWeDo(page.relatedServices);
+---
+
+<BaseLayout title={page.title} description={page.description} schema={schemas}>
+  <!-- Hero -->
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[
+        { label: 'What We Do', href: '/what-we-do/' },
+        { label: page.name, href: `/what-we-do/${page.slug}/` },
+      ]} />
+      <h1 class="text-white max-w-3xl">{page.name}</h1>
+      <div class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed prose prose-invert prose-p:my-0"><Fragment set:html={page.intro} /></div>
+      {page.entryPoint ? (
+        <a href="/contact/" class="btn-glow mt-6">
+          Book a Discovery Call
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      ) : (
+        <a href="/contact/" class="btn btn-primary mt-6">Discuss Your Project</a>
+      )}
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <!-- Main content -->
+      <div class="lg:col-span-2 order-1">
+        <p class="text-sm text-slate-500 mb-8 pb-4 border-b border-slate-100">Written by <strong>Sunny Patel</strong>, Founder, Agentic AI Associates</p>
+
+        <div class="prose">
+          {page.sections.map((section) => (
+            <div>
+              <h2>{section.heading}</h2>
+              <Fragment set:html={section.body} />
+            </div>
+          ))}
+        </div>
+
+        {page.features.length > 0 && (
+          <div class="mt-12">
+            <h2 class="mb-6">What You Get</h2>
+            <FeatureGrid features={page.features} columns={2} />
+          </div>
+        )}
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6 order-2 lg:order-none">
+        {page.entryPoint && (
+          <div class="card bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-primary-light)]/5 border-[var(--color-accent)]/20">
+            <h3 class="text-lg font-semibold mb-2">Start Here</h3>
+            <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">Book a free 30-minute discovery call. We'll assess whether an AI Readiness Assessment is right for your business.</p>
+            <a href="/contact/" class="btn btn-primary text-sm w-full justify-center">Book a Discovery Call</a>
+          </div>
+        )}
+
+        {relatedServices.length > 0 && (
+          <RelatedLinks
+            title="Related Services"
+            links={relatedServices.map((svc) => ({
+              label: svc.name,
+              href: `/what-we-do/${svc.slug}/`,
+            }))}
+          />
+        )}
+
+        {relatedIndustries.length > 0 && (
+          <RelatedLinks
+            title="Industries We Serve"
+            links={relatedIndustries.map((ind) => ({
+              label: ind.name,
+              href: `/industries/${ind.slug}/`,
+            }))}
+          />
+        )}
+
+        {!page.entryPoint && (
+          <div class="card bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-primary-light)]/5 border-[var(--color-accent)]/20">
+            <h3 class="text-lg font-semibold mb-2">Not Sure Where to Start?</h3>
+            <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">Our AI Readiness Assessment gives you a clear picture of where AI can help your business.</p>
+            <a href="/what-we-do/ai-readiness-assessment/" class="btn btn-primary text-sm w-full justify-center">Learn About the Assessment</a>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+
+  {page.faq.length > 0 && (
+    <div class="container">
+      <FAQ faqs={page.faq} />
+    </div>
+  )}
+
+  <CTABanner
+    headline="Ready to Get Started?"
+    text="Book a free 30-minute discovery call. We'll discuss your challenges and give you an honest assessment of where AI can help."
+    buttonText="Book a Discovery Call"
+    buttonHref="/contact/"
+    secondaryText="View All Services"
+    secondaryHref="/what-we-do/"
+  />
+</BaseLayout>
