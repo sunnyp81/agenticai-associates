@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "slug": "wireless-logic",
+      "headline": "Enterprise AI enquiry within 7 days of launch",
+      "description": "A UK IoT connectivity provider with global operations contacted us about AI automation for their systems — within one week of the site going live.",
+      "metric": "7 days",
+      "metricLabel": "from launch to enterprise lead",
+      "anonymous": true
+    },
+    {
+      "slug": "site-proof",
+      "headline": "Built, ranked, and converting in under a week",
+      "description": "This website was built, deployed, and ranking on Google within days — using the same AI-powered speed and rigour we bring to client projects.",
+      "metric": "83 pages",
+      "metricLabel": "built and indexed",
+      "anonymous": false
+    }
+  ]
+}
