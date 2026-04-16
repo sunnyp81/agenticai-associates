@@ -6,7 +6,7 @@ import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
 import { buildFAQSchema } from '@/lib/schema';
-import { getBusinessSizePaths, getRelatedServices } from '@/lib/page-factory';
+import { getBusinessSizePaths, getRelatedWhatWeDo } from '@/lib/page-factory';
 
 export function getStaticPaths() {
   return getBusinessSizePaths();
@@ -16,7 +16,7 @@ const { page } = Astro.props;
 
 const faqSchema = buildFAQSchema(page.faq);
 const schemas = faqSchema ? [faqSchema] : [];
-const relatedServices = getRelatedServices(page.relatedServices);
+const relatedServices = getRelatedWhatWeDo(page.relatedServices);
 ---
 
 <BaseLayout title={page.title} description={page.description} schema={schemas}>
@@ -57,7 +57,7 @@ const relatedServices = getRelatedServices(page.relatedServices);
             title="Recommended Services"
             links={relatedServices.map((svc) => ({
               label: svc.name,
-              href: `/services/${svc.slug}/`,
+              href: `/what-we-do/${svc.slug}/`,
             }))}
           />
         )}
