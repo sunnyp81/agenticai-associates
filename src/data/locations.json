@@ -51,7 +51,7 @@
         }
       ],
       "relatedLocations": ["reading", "bristol"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "generative-ai"]
+      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
     },
     {
       "slug": "manchester",
@@ -95,7 +95,7 @@
         }
       ],
       "relatedLocations": ["leeds", "birmingham"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "ai-training"]
+      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
     },
     {
       "slug": "birmingham",
@@ -139,7 +139,7 @@
         }
       ],
       "relatedLocations": ["manchester", "leicester"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "ai-training"]
+      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
     },
     {
       "slug": "leeds",
@@ -183,7 +183,7 @@
         }
       ],
       "relatedLocations": ["manchester", "birmingham"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "generative-ai"]
+      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
     },
     {
       "slug": "bristol",
@@ -227,7 +227,7 @@
         }
       ],
       "relatedLocations": ["london", "reading"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "generative-ai"]
+      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
     },
     {
       "slug": "edinburgh",
@@ -275,7 +275,7 @@
         }
       ],
       "relatedLocations": ["glasgow", "scotland"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "generative-ai"]
+      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
     },
     {
       "slug": "glasgow",
@@ -319,7 +319,7 @@
         }
       ],
       "relatedLocations": ["edinburgh", "scotland"],
-      "relatedServices": ["ai-strategy", "ai-training", "ai-implementation"]
+      "relatedServices": ["ai-strategy", "ai-training", "ai-automation"]
     },
     {
       "slug": "reading",
@@ -367,7 +367,7 @@
         }
       ],
       "relatedLocations": ["london", "bristol"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "generative-ai"]
+      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
     },
     {
       "slug": "leicester",
@@ -411,7 +411,7 @@
         }
       ],
       "relatedLocations": ["birmingham", "leeds"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "ai-training"]
+      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
     },
     {
       "slug": "scotland",
@@ -459,7 +459,7 @@
         }
       ],
       "relatedLocations": ["edinburgh", "glasgow"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "ai-training"]
+      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
     },
     {
       "slug": "northern-ireland",
@@ -503,7 +503,7 @@
         }
       ],
       "relatedLocations": ["scotland", "leeds"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "ai-training"]
+      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
     },
     {
       "slug": "norfolk",
@@ -551,7 +551,7 @@
         }
       ],
       "relatedLocations": ["london", "leicester"],
-      "relatedServices": ["ai-strategy", "ai-implementation", "ai-training"]
+      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
     }
   ]
 }

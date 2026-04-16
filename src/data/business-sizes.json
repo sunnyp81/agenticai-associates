@@ -124,7 +124,7 @@
           "answer": "Absolutely. We provide independent vendor assessments, help you write RFPs, evaluate proposals, and negotiate contracts. Because we don't resell technology, our advice is always in your interest."
         }
       ],
-      "relatedServices": ["ai-strategy", "ai-implementation"]
+      "relatedServices": ["ai-strategy", "ai-automation"]
     },
     {
       "slug": "startups",
@@ -250,7 +250,7 @@
           "answer": "Absolutely. We collaborate with your existing IT team or managed service provider to ensure smooth implementation. We handle the AI strategy and specialist work while your IT provider manages the infrastructure and day-to-day support."
         }
       ],
-      "relatedServices": ["ai-strategy", "ai-implementation"]
+      "relatedServices": ["ai-strategy", "ai-automation"]
     }
   ]
 }
