@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import StatsBar from '@/components/StatsBar.astro';
 import HubCard from '@/components/HubCard.astro';
-import ProcessSteps from '@/components/ProcessSteps.astro';
 import CTABanner from '@/components/CTABanner.astro';
-import TestimonialCard from '@/components/TestimonialCard.astro';
 import { buildWebSiteSchema, buildOrganizationSchema } from '@/lib/schema';
+import { getResults } from '@/lib/page-factory';
+
+const results = getResults();
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -16,7 +16,7 @@ const faqSchema = {
       name: 'What does an AI consultant do?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and either builds the solution or oversees its development. At Agentic AI Associates, we cover the full lifecycle: from initial AI readiness audit through to deployment, team training, and ongoing optimisation.',
+        text: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and builds the solution. At Agentic AI Associates, we cover the full lifecycle: from AI readiness assessment through to deployment, team training, and ongoing optimisation.',
       },
     },
     {
@@ -24,7 +24,7 @@ const faqSchema = {
       name: 'How much does AI consultancy cost in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'AI consultancy in the UK typically ranges from £5,000 for a focused strategy engagement to £50,000+ for full implementation projects. Costs depend on scope, complexity, and the number of systems involved. We offer a free initial consultation to scope your project and provide a clear, fixed-price proposal.',
+        text: 'AI consultancy in the UK ranges from £150 per hour for advisory sessions to £3,000+ for strategy engagements and custom pricing for implementation projects. We offer a free discovery call to scope your project and provide clear pricing upfront.',
       },
     },
     {
@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'How long does an AI project take?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A focused AI strategy engagement takes 2-4 weeks. Implementation projects typically deliver first results within 6-8 weeks, with full deployment in 3-6 months. Agentic AI systems with complex workflow automation can take longer depending on integration requirements.',
+        text: 'An AI Readiness Assessment takes 2-4 weeks. Strategy engagements run 2-6 weeks. Implementation projects deliver first results within 6-8 weeks. Agentic AI systems with complex workflow automation may take longer depending on integration requirements.',
       },
     },
     {
@@ -40,7 +40,7 @@ const faqSchema = {
       name: 'Do I need technical expertise to work with you?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language throughout.',
+        text: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'What is agentic AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Agentic AI refers to AI systems that can take sequences of actions autonomously to complete complex, multi-step tasks — rather than simply responding to single prompts. These systems use tools, browse data sources, make decisions, and loop back to check their work, enabling automation of workflows that previously required human judgment.',
+        text: 'Agentic AI refers to AI systems that take sequences of actions autonomously to complete complex, multi-step tasks — rather than simply responding to single prompts. These systems use tools, browse data sources, make decisions, and check their work, enabling automation of workflows that previously required human judgment.',
       },
     },
   ],
@@ -57,51 +57,36 @@ const faqSchema = {
 const schemas = [buildWebSiteSchema(), buildOrganizationSchema(), faqSchema];
 
 const services = [
-  { title: 'AI Strategy & Roadmaps', description: 'Clear, actionable plans for AI adoption. We audit your readiness, identify opportunities, and build a roadmap with measurable ROI.', href: '/services/ai-strategy/', icon: 'strategy' },
-  { title: 'AI Implementation', description: 'We build and deploy AI systems that work. From chatbots to data pipelines, integrated with your existing tech stack.', href: '/services/ai-implementation/', icon: 'implementation' },
-  { title: 'Agentic AI', description: 'Autonomous AI agents that handle complex workflows. We design, build, and deploy agentic systems tailored to your business.', href: '/services/agentic-ai/', icon: 'agentic' },
-  { title: 'Generative AI', description: 'LLMs, RAG systems, and AI-powered content generation. We help you harness generative AI safely and effectively.', href: '/services/generative-ai/', icon: 'sparkles' },
-  { title: 'Data & AI', description: 'Turn your data into a competitive advantage. We build data pipelines, analytics, and AI models that deliver insight.', href: '/services/data-and-ai/', icon: 'data' },
-  { title: 'AI Training & Workshops', description: 'Upskill your team on AI tools, prompt engineering, and responsible AI adoption. Hands-on, practical sessions.', href: '/services/ai-training/', icon: 'training' },
+  { title: 'AI Readiness Assessment', description: 'Fixed-fee assessment of your data, processes, and team. Walk away with a prioritised AI roadmap.', href: '/what-we-do/ai-readiness-assessment/', icon: 'strategy' },
+  { title: 'Agentic AI Systems', description: 'Autonomous AI agents that handle complex workflows end to end. We design, build, and deploy them.', href: '/what-we-do/agentic-ai/', icon: 'agentic' },
+  { title: 'AI Automation', description: 'Intelligent automation for document processing, onboarding, data entry, and workflow orchestration.', href: '/what-we-do/ai-automation/', icon: 'implementation' },
+  { title: 'Generative AI & LLMs', description: 'RAG systems, content pipelines, and LLM integration. The right model for each use case.', href: '/what-we-do/generative-ai/', icon: 'sparkles' },
+  { title: 'AI Governance', description: 'Compliance frameworks, bias audits, and risk management for UK regulatory requirements.', href: '/what-we-do/ai-governance/', icon: 'governance' },
+  { title: 'AI Strategy & Roadmaps', description: 'From opportunity mapping to board-ready business cases. Strategy that leads to action.', href: '/what-we-do/ai-strategy/', icon: 'strategy' },
 ];
 
 const industries = [
-  { title: 'Healthcare', description: 'Clinical AI, patient data, compliance automation.', href: '/industries/healthcare/', icon: 'healthcare' },
-  { title: 'Legal', description: 'Contract analysis, case research, compliance monitoring.', href: '/industries/legal/', icon: 'legal' },
-  { title: 'Finance', description: 'Fraud detection, risk assessment, automated reporting.', href: '/industries/finance/', icon: 'finance' },
+  { title: 'Healthcare', description: 'Clinical AI, NHS compliance, patient data automation.', href: '/industries/healthcare/', icon: 'healthcare' },
+  { title: 'Legal', description: 'Document review, compliance monitoring, SRA-compliant systems.', href: '/industries/legal/', icon: 'legal' },
+  { title: 'Finance', description: 'FCA compliance, fraud detection, automated reporting.', href: '/industries/finance/', icon: 'finance' },
   { title: 'Retail', description: 'Demand forecasting, personalisation, inventory optimisation.', href: '/industries/retail/', icon: 'retail' },
   { title: 'Manufacturing', description: 'Predictive maintenance, quality control, supply chain AI.', href: '/industries/manufacturing/', icon: 'manufacturing' },
-  { title: 'Education', description: 'Adaptive learning, admin automation, student analytics.', href: '/industries/education/', icon: 'education' },
+  { title: 'Education', description: 'Adaptive learning, admin automation, Ofsted-compliant AI.', href: '/industries/education/', icon: 'education' },
 ];
 
-const testimonials = [
-  { quote: "Agentic AI Associates took our vague ideas about automation and turned them into a concrete roadmap with clear ROI projections. Six months in, we've already hit the targets they promised.", name: "Sarah Mitchell", role: "Operations Director", company: "Precision Parts UK" },
-  { quote: "The team understood our regulatory constraints immediately and never once suggested something that would have created compliance headaches. That domain knowledge is rare.", name: "James Okafor", role: "Head of Technology", company: "Meridian Legal Group" },
-  { quote: "We'd been burned by a previous AI project that delivered a demo and nothing else. This time we got a working system, trained staff, and measurable results within eight weeks.", name: "Rachel Thornton", role: "CEO", company: "Brightfield Retail" },
-];
-
-const techPartners = [
-  { name: 'Microsoft Azure' },
-  { name: 'Google Cloud' },
-  { name: 'Amazon Web Services' },
-  { name: 'OpenAI' },
-  { name: 'Anthropic' },
-  { name: 'HuggingFace' },
+const techStack = [
+  'OpenAI', 'Anthropic', 'Google Cloud', 'Microsoft Azure', 'AWS', 'Hugging Face',
 ];
 ---
 
 <BaseLayout
   title="AI Consultancy UK — Agentic AI Associates | Strategy, Implementation & Training"
-  description="UK AI consultancy specialising in agentic AI, generative AI, and data-driven solutions. We help businesses implement AI strategy, automation, and intelligent systems that deliver measurable results."
+  description="UK AI consultancy specialising in agentic AI systems, automation, and governance. We build AI that delivers measurable results from week one."
   schema={schemas}
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden noise-overlay" style="background: #080f1e;">
-    <!-- Aurora blobs -->
-    <div class="aurora-blob w-[600px] h-[600px] top-[-100px] left-[-100px]" style="background: #1e3a5f;"></div>
-    <div class="aurora-blob w-[500px] h-[500px] bottom-[-80px] right-[-80px]" style="background: #0d9488;"></div>
-    <!-- Dot grid overlay -->
-    <div class="absolute inset-0 dot-grid opacity-[0.06]"></div>
+  <section class="relative overflow-hidden" style="background: #080f1e;">
+    <div class="aurora-blob w-[min(600px,80vw)] h-[min(600px,80vw)] top-[-100px] left-[-100px]" style="background: #1e3a5f;"></div>
 
     <div class="container relative section" style="padding-top: 7rem; padding-bottom: 7rem;">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-semibold tracking-wide mb-6">
@@ -110,60 +95,62 @@ const techPartners = [
       </div>
 
       <h1 class="text-white max-w-4xl leading-[1.05] text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-display)] font-extrabold tracking-tight">
-        AI that actually<br>
-        <span style="background: linear-gradient(135deg, #38bdf8, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">delivers results</span>
+        AI systems that<br>
+        <span style="background: linear-gradient(135deg, #2563eb, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">deliver from week one</span>
       </h1>
 
       <p class="text-xl text-slate-300 mt-6 max-w-2xl leading-relaxed">
-        Strategy, implementation, and training from consultants who've built real systems for real businesses. No demos that don't ship. No strategies that gather dust.
+        We build and deploy AI that generates measurable results — not strategy decks that sit in a drawer. Founded by practitioners, not career consultants.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 mt-10">
         <a href="/contact/" class="btn-glow text-base">
-          Book a Free Consultation
+          Book a Discovery Call
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <a href="/services/" class="btn" style="background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15);">
-          Explore Services
+        <a href="/get-started/" class="btn" style="background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15);">
+          Start with an Assessment
         </a>
       </div>
-
-      <!-- Trust line -->
-      <p class="mt-10 text-xs text-slate-500 uppercase tracking-widest font-medium">Trusted by teams at</p>
-      <div class="flex flex-wrap items-center gap-8 mt-4">
-        {techPartners.map(p => (
-          <span class="text-slate-400 text-sm font-semibold tracking-wide opacity-60 hover:opacity-100 transition-opacity">{p.name}</span>
-        ))}
-      </div>
     </div>
   </section>
 
-  <!-- STATS STRIP -->
-  <section class="border-b border-slate-100">
+  <!-- BUYER JOURNEY -->
+  <section class="section" style="background: #f8fafc;">
     <div class="container">
-      <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100">
-        {[
-          { value: '50+', label: 'AI projects delivered' },
-          { value: '12', label: 'Industries served' },
-          { value: '98%', label: 'Client satisfaction' },
-          { value: '< 8wk', label: 'Avg. time to first result' },
-        ].map(stat => (
-          <div class="py-12 px-8 text-center">
-            <div class="text-3xl md:text-4xl font-extrabold font-[family-name:var(--font-display)]" style="background: linear-gradient(135deg, #2563eb, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">{stat.value}</div>
-            <div class="text-sm text-slate-500 mt-1">{stat.label}</div>
-          </div>
-        ))}
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">How We Work</p>
+        <h2 class="text-4xl font-extrabold">Three steps to working AI</h2>
+      </div>
+      <div class="relative max-w-4xl mx-auto">
+        <div class="hidden lg:block absolute top-7 left-[16%] right-[16%] h-px" style="background: linear-gradient(to right, transparent, #2563eb, #0d9488, transparent);" aria-hidden="true"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {[
+            { num: '1', title: 'Discovery Call', desc: 'Free 30-minute call. We listen, assess your situation, and tell you honestly whether AI can help.', tag: 'Free' },
+            { num: '2', title: 'AI Readiness Assessment', desc: 'Fixed-fee audit of your data, processes, and team. You get a prioritised roadmap with clear ROI.', tag: 'Fixed fee' },
+            { num: '3', title: 'Scoped Engagement', desc: 'Strategy, pilot, or full implementation — scoped based on your assessment findings. No surprises.', tag: 'Custom' },
+          ].map(step => (
+            <div class="relative text-center">
+              <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto mb-4 relative z-10 shadow-sm" style="border: 2px solid rgba(13,148,136,0.3);">
+                <span class="text-xl font-bold font-[family-name:var(--font-display)]" style="color: #0d9488;">{step.num}</span>
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 mb-1 block">{step.tag}</span>
+              <h3 class="text-lg font-semibold mb-2">{step.title}</h3>
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- WHAT WE DO -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-14">
         <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">What We Do</p>
-        <h2 class="text-4xl font-extrabold">AI Consultancy Services</h2>
-        <p class="text-slate-500 mt-4 max-w-xl mx-auto text-lg">From strategy to deployment — we cover the full AI lifecycle so you get real results, not just a report.</p>
+        <h2 class="text-4xl font-extrabold">AI services that ship</h2>
+        <p class="text-slate-500 mt-4 max-w-xl mx-auto text-lg">From readiness assessment to full deployment — every engagement delivers something you can measure.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((svc) => (
@@ -171,23 +158,23 @@ const techPartners = [
         ))}
       </div>
       <div class="text-center mt-10">
-        <a href="/services/" class="btn btn-outline">View All Services</a>
+        <a href="/what-we-do/" class="btn btn-outline">View All Services</a>
       </div>
     </div>
   </section>
 
-  <!-- WHY US — 3-column feature row -->
+  <!-- WHY US -->
   <section class="section" style="background: #f8fafc;">
     <div class="container">
       <div class="text-center mb-14">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Why Agentic AI Associates</p>
-        <h2 class="text-4xl font-extrabold">The consulting firm that actually builds</h2>
+        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Why Us</p>
+        <h2 class="text-4xl font-extrabold">Built by practitioners, not career consultants</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'No demo theatre', body: "We don't build impressive demos that fall apart in production. Every project ends with a working system your team can operate and maintain." },
-          { icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', title: 'ROI-first approach', body: 'Every recommendation starts with a business case. We tell you the expected return, the timeline to see it, and what it will take to get there.' },
-          { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', title: 'UK-based expertise', body: 'You work directly with senior consultants, not junior contractors. We understand UK regulation, data sovereignty, and the business landscape you operate in.' },
+          { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'We ship working systems', body: "This website ranked on Google and generated an enterprise lead within 7 days. We build with the same speed and rigour for our clients." },
+          { icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Transparent pricing', body: 'Fixed-fee assessments. Clear scoping. No hidden costs, no billable hour surprises. You know what you are paying before we start.' },
+          { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', title: 'UK expertise, founder-led', body: 'You work directly with the founder. We understand UK regulation, GDPR, and the business landscape. No junior consultants, no handoffs.' },
         ].map(f => (
           <div class="card-animated-border p-8">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(13,148,136,0.1);">
@@ -203,13 +190,33 @@ const techPartners = [
     </div>
   </section>
 
-  <!-- INDUSTRIES -->
+  <!-- RESULTS -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-14">
+        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Results</p>
+        <h2 class="text-4xl font-extrabold">Proof, not promises</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {results.map(result => (
+          <div class="card-animated-border p-8">
+            <div class="text-3xl font-extrabold font-[family-name:var(--font-display)] text-gradient mb-1">{result.metric}</div>
+            <p class="text-xs text-[var(--color-text-muted)] uppercase tracking-wider font-semibold mb-4">{result.metricLabel}</p>
+            <h3 class="text-lg font-bold mb-2">{result.headline}</h3>
+            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{result.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section" style="background: #f8fafc;">
+    <div class="container">
+      <div class="text-center mb-14">
         <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Industries</p>
-        <h2 class="text-4xl font-extrabold">AI solutions for your sector</h2>
-        <p class="text-slate-500 mt-4 max-w-xl mx-auto text-lg">Every industry has unique challenges. We bring deep domain knowledge and sector-specific experience to every project.</p>
+        <h2 class="text-4xl font-extrabold">AI for your sector</h2>
+        <p class="text-slate-500 mt-4 max-w-xl mx-auto text-lg">Every industry has unique challenges and regulations. We bring domain-specific knowledge to every project.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {industries.map((ind) => (
@@ -222,72 +229,19 @@ const techPartners = [
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="section" style="background: #f8fafc;">
+  <!-- TECH STACK -->
+  <section class="py-16 border-y border-slate-100">
     <div class="container">
-      <ProcessSteps />
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-14">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Client Results</p>
-        <h2 class="text-4xl font-extrabold">What our clients say</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {testimonials.map(t => (
-          <TestimonialCard quote={t.quote} name={t.name} role={t.role} company={t.company} />
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- FOR YOUR BUSINESS SIZE -->
-  <section class="section" style="background: #080f1e; position: relative; overflow: hidden;">
-    <div class="aurora-blob w-[400px] h-[400px] top-0 right-0" style="background: #0d9488;"></div>
-    <div class="dot-grid absolute inset-0 opacity-[0.05]"></div>
-    <div class="container relative">
-      <div class="text-center mb-14">
-        <p class="text-xs font-bold mb-3 uppercase tracking-[0.2em]" style="color: #5eead4;">For Every Business</p>
-        <h2 class="text-4xl font-extrabold text-white">AI consultancy scaled to you</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          { title: 'Small Business', body: 'Affordable AI that punches above its weight. Start small, scale fast.', href: '/for/small-business/' },
-          { title: 'Startups', body: 'Move fast with AI baked in from day one. Lean, focused, no bloat.', href: '/for/startups/' },
-          { title: 'SMEs', body: 'Bridge the gap between ambition and capability. AI that fits your budget.', href: '/for/smes/' },
-          { title: 'Enterprise', body: "Complex systems, multiple stakeholders, high stakes. We've been there.", href: '/for/enterprise/' },
-        ].map(b => (
-          <a href={b.href} class="glass-card p-6 group hover:border-teal-500/30 transition-all" style="text-decoration: none;">
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">{b.title}</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">{b.body}</p>
-            <span class="mt-4 text-xs font-semibold text-teal-400 flex items-center gap-1 group-hover:gap-2 transition-all">
-              Learn more
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- TECH PARTNERS -->
-  <section class="py-20 border-y border-slate-100">
-    <div class="container">
-      <p class="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-10">Technology Partners &amp; Platforms</p>
+      <p class="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-8">Our Technology Stack</p>
       <div class="flex flex-wrap justify-center items-center gap-10">
-        {[
-          'Microsoft Azure', 'Google Cloud', 'Amazon Web Services', 'OpenAI', 'Anthropic', 'HuggingFace', 'Snowflake', 'Databricks'
-        ].map(name => (
+        {techStack.map(name => (
           <span class="text-sm font-bold text-slate-400 tracking-wide trust-bar-logo">{name}</span>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- FAQ for AI Search -->
+  <!-- FAQ -->
   <section class="section bg-[var(--color-surface)]">
     <div class="container max-w-3xl mx-auto">
       <div class="text-center mb-12">
@@ -296,11 +250,11 @@ const techPartners = [
       </div>
       <div class="space-y-4">
         {[
-          { q: 'What does an AI consultant do?', a: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and either builds the solution or oversees its development. At Agentic AI Associates, we cover the full lifecycle: from initial AI readiness audit through to deployment, team training, and ongoing optimisation.' },
-          { q: 'How much does AI consultancy cost in the UK?', a: 'AI consultancy in the UK typically ranges from £5,000 for a focused strategy engagement to £50,000+ for full implementation projects. Costs depend on scope, complexity, and the number of systems involved. We offer a free initial consultation to scope your project and provide a clear, fixed-price proposal.' },
-          { q: 'How long does an AI project take?', a: 'A focused AI strategy engagement takes 2-4 weeks. Implementation projects typically deliver first results within 6-8 weeks, with full deployment in 3-6 months. Agentic AI systems with complex workflow automation can take longer depending on integration requirements.' },
-          { q: 'Do I need technical expertise to work with you?', a: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language throughout.' },
-          { q: 'What is agentic AI?', a: 'Agentic AI refers to AI systems that can take sequences of actions autonomously to complete complex, multi-step tasks — rather than simply responding to single prompts. These systems use tools, browse data sources, make decisions, and loop back to check their work, enabling automation of workflows that previously required human judgment.' },
+          { q: 'What does an AI consultant do?', a: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and builds the solution. At Agentic AI Associates, we cover the full lifecycle: from AI readiness assessment through to deployment, team training, and ongoing optimisation.' },
+          { q: 'How much does AI consultancy cost in the UK?', a: 'AI consultancy in the UK ranges from £150 per hour for advisory sessions to £3,000+ for strategy engagements and custom pricing for implementation projects. We offer a free discovery call to scope your project and provide clear pricing upfront.' },
+          { q: 'How long does an AI project take?', a: 'An AI Readiness Assessment takes 2-4 weeks. Strategy engagements run 2-6 weeks. Implementation projects deliver first results within 6-8 weeks.' },
+          { q: 'Do I need technical expertise to work with you?', a: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language.' },
+          { q: 'What is agentic AI?', a: 'Agentic AI refers to AI systems that take sequences of actions autonomously to complete complex, multi-step tasks. These systems use tools, browse data sources, make decisions, and check their work — enabling automation of workflows that previously required human judgment.' },
         ].map(({q, a}) => (
           <details class="card-animated-border p-6 group">
             <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
@@ -316,11 +270,11 @@ const techPartners = [
 
   <!-- CTA -->
   <CTABanner
-    headline="Ready to talk about your AI ambitions?"
-    text="Book a free 30-minute consultation. We'll discuss your challenges, explore the possibilities, and give you an honest assessment of where AI can help — no sales pitch."
-    buttonText="Book a Free Consultation"
+    headline="Ready to explore what AI can do for your business?"
+    text="Book a free 30-minute discovery call. We'll discuss your challenges and give you an honest assessment — no sales pitch."
+    buttonText="Book a Discovery Call"
     buttonHref="/contact/"
-    secondaryText="Explore Our Services"
-    secondaryHref="/services/"
+    secondaryText="Start with an Assessment"
+    secondaryHref="/get-started/"
   />
 </BaseLayout>
