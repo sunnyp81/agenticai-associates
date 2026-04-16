@@ -69,7 +69,7 @@ const schemas = [localSchema, ...(faqSchema ? [faqSchema] : [])];
           title="Our Services"
           links={page.relatedServices.map((slug) => ({
             label: slug.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-            href: `/services/${slug}/`,
+            href: `/what-we-do/${slug}/`,
           }))}
         />
 
