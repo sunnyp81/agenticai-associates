@@ -6,7 +6,7 @@ import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
 import { buildFAQSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
-import { getRelatedServices } from '@/lib/page-factory';
+import { getRelatedWhatWeDo } from '@/lib/page-factory';
 
 interface Props {
   page: {
@@ -28,7 +28,7 @@ const { page } = Astro.props;
 const faqSchema = buildFAQSchema(page.faq);
 const schemas = faqSchema ? [faqSchema] : [];
 
-const relatedServices = getRelatedServices(page.relatedServices);
+const relatedServices = getRelatedWhatWeDo(page.relatedServices);
 ---
 
 <BaseLayout title={page.title} description={page.description} schema={schemas}>
@@ -88,7 +88,7 @@ const relatedServices = getRelatedServices(page.relatedServices);
             title="Our Services"
             links={relatedServices.map((svc) => ({
               label: svc.name,
-              href: `/services/${svc.slug}/`,
+              href: `/what-we-do/${svc.slug}/`,
             }))}
           />
         )}
