@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import { getResults } from '@/lib/page-factory';
+
+const results = getResults();
+---
+
+<BaseLayout
+  title="Results — Agentic AI Associates"
+  description="Real results from real engagements. See how we deliver measurable AI impact for UK businesses."
+>
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
+    <div class="container">
+      <BreadcrumbNav items={[
+        { label: 'About', href: '/about/' },
+        { label: 'Results', href: '/about/results/' },
+      ]} />
+      <h1 class="text-white max-w-3xl">Results</h1>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">Proof, not promises. This page grows with every engagement.</p>
+    </div>
+  </section>
+
+  <div class="container section-sm">
+    <div class="max-w-3xl mx-auto space-y-8">
+      {results.map(result => (
+        <div class="card-animated-border p-8">
+          <div class="flex items-baseline gap-4 mb-4">
+            <span class="text-3xl font-extrabold font-[family-name:var(--font-display)] text-gradient">{result.metric}</span>
+            <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-wider font-semibold">{result.metricLabel}</span>
+          </div>
+          <h2 class="text-xl font-bold mb-3">{result.headline}</h2>
+          <p class="text-[var(--color-text-muted)] leading-relaxed">{result.description}</p>
+        </div>
+      ))}
+
+      <div class="text-center pt-8">
+        <p class="text-[var(--color-text-muted)] text-sm mb-6">This page will grow as we deliver more results. Every engagement produces something measurable.</p>
+        <a href="/contact/" class="btn btn-primary">Become the Next Result</a>
+      </div>
+    </div>
+  </div>
+
+  <CTABanner
+    headline="Ready to see results for your business?"
+    text="Book a free discovery call. We'll discuss your challenges and give you an honest assessment."
+    buttonText="Book a Discovery Call"
+    buttonHref="/contact/"
+  />
+</BaseLayout>
