@@ -12,46 +12,50 @@ interface Props {
 const {
   headline = 'Ready to Transform Your Business with AI?',
   text = 'Book a free 30-minute consultation. No commitment, no jargon — just honest advice on how AI can help your business.',
-  buttonText = 'Book a Free Consultation',
+  buttonText = 'Book a Discovery Call',
   buttonHref = '/contact/',
   secondaryText,
   secondaryHref,
   variant = 'dark',
 } = Astro.props;
-
-const isDark = variant === 'dark';
 ---
 
-{isDark ? (
-  <!-- Dark CTA — full-width, flows into footer -->
-  <section class="relative overflow-hidden py-20 px-6" style="background: #080f1e;">
-    <!-- Aurora blob -->
-    <div class="aurora-blob w-96 h-96 top-[-50px] left-1/4" style="background: #0d9488;"></div>
-    <!-- Dot grid -->
-    <div class="dot-grid absolute inset-0 opacity-[0.06]"></div>
-    <div class="max-w-2xl mx-auto text-center relative">
-      <h2 class="text-white mb-4">{headline}</h2>
-      <p class="text-lg mb-8 leading-relaxed text-slate-300">{text}</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href={buttonHref} class="btn-glow">{buttonText}</a>
-        {secondaryText && secondaryHref && (
-          <a href={secondaryHref} class="btn" style="background: rgba(255,255,255,0.1); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.2);">{secondaryText}</a>
-        )}
+<section style="background: radial-gradient(ellipse at 50% 0%, rgba(13,148,136,0.18) 0%, transparent 60%), #080f1e; padding: 7rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.07); position: relative; overflow: hidden;">
+  <!-- Ambient glow -->
+  <div style="position:absolute; top:-150px; left:50%; transform:translateX(-50%); width:600px; height:600px; background:radial-gradient(circle, rgba(13,148,136,0.12), transparent 60%); pointer-events:none;"></div>
+
+  <div style="max-width: 680px; margin: 0 auto; text-align: center; position: relative;">
+    <div style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.2em; color:#5eead4; margin-bottom:1.5rem; text-transform:uppercase;">[08] CONTACT</div>
+    <h2 style="font-family:var(--font-grotesk); font-size:clamp(2.25rem,6vw,4rem); font-weight:500; letter-spacing:-0.03em; line-height:1; margin:0 0 1.25rem; color:#f0f9ff;">
+      {headline.split('actually').length > 1 ? (
+        <>
+          {headline.split('actually')[0]}
+          <span style="color:#5eead4; text-shadow:0 0 40px rgba(94,234,212,0.6);">actually</span>
+          {headline.split('actually')[1]}
+        </>
+      ) : headline}
+    </h2>
+    <p style="font-size:1.0625rem; line-height:1.65; color:#94a3b8; margin:0 0 2.5rem; font-family:var(--font-sans);">{text}</p>
+    <div style="display:flex; flex-direction:column; gap:0.75rem; align-items:center; justify-content:center;" class="sm:flex-row">
+      <a href={buttonHref} class="btn-glow">{buttonText}</a>
+      {secondaryText && secondaryHref && (
+        <a href={secondaryHref} class="btn-outline">{secondaryText}</a>
+      )}
+    </div>
+    <!-- Contact details -->
+    <div style="margin-top:2.5rem; display:flex; flex-direction:column; gap:0.375rem; align-items:center;">
+      <div style="font-family:var(--font-mono); font-size:0.75rem; color:#475569; line-height:2;">
+        <span style="color:#5eead4; margin-right:0.5rem;">▸</span> hello@agenticai.associates
+      </div>
+      <div style="font-family:var(--font-mono); font-size:0.75rem; color:#475569;">
+        <span style="color:#5eead4; margin-right:0.5rem;">▸</span> London, UK · GDPR Registered
       </div>
     </div>
-  </section>
-) : (
-  <!-- Light CTA — card style -->
-  <section class="section rounded-2xl mx-4 my-8 lg:mx-0 bg-[var(--color-surface)] border border-[var(--color-border)]">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="mb-4">{headline}</h2>
-      <p class="text-lg mb-8 leading-relaxed text-[var(--color-text-muted)]">{text}</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href={buttonHref} class="btn-glow">{buttonText}</a>
-        {secondaryText && secondaryHref && (
-          <a href={secondaryHref} class="btn btn-outline">{secondaryText}</a>
-        )}
-      </div>
-    </div>
-  </section>
-)}
+  </div>
+</section>
+
+<style>
+  @media (min-width: 640px) {
+    .sm\:flex-row { flex-direction: row; }
+  }
+</style>

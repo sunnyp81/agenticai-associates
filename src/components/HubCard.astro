@@ -31,7 +31,6 @@ const iconMap: Record<string, string> = {
   government: 'M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z',
   governance: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
   support: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
-  applied: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
   agentic: 'M13 10V3L4 14h7v7l9-11h-7z',
   default: 'M13 10V3L4 14h7v7l9-11h-7z',
 };
@@ -39,18 +38,24 @@ const iconMap: Record<string, string> = {
 const pathData = iconMap[icon || 'default'] || iconMap.default;
 ---
 
-<a href={href} class="card-animated-border group flex flex-col h-full p-7" style="text-decoration: none;">
-  <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-colors" style="background: rgba(13,148,136,0.1);">
-    <svg class="w-5 h-5" style="color: #0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={pathData} />
-    </svg>
+<a href={href} class="signal-card group" style="text-decoration:none; display:flex; flex-direction:column; height:100%;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+    <div style="width:40px; height:40px; border-radius:8px; background:rgba(13,148,136,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.2s;" class="card-icon">
+      <svg class="w-5 h-5" style="color:#0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={pathData} />
+      </svg>
+    </div>
+    <span style="color:#475569; font-size:1.0625rem; transition:transform 0.2s, color 0.2s;" class="card-arrow">→</span>
   </div>
-  <h3 class="text-lg font-semibold mb-2 group-hover:text-teal-600 transition-colors">{title}</h3>
-  <p class="text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">{description}</p>
-  <span class="mt-4 text-sm font-medium flex items-center gap-1" style="color: #0d9488;">
-    Learn more
-    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-    </svg>
+  <h3 style="font-family:var(--font-grotesk); font-size:1.0625rem; font-weight:500; letter-spacing:-0.01em; margin:0 0 0.5rem; color:#f0f9ff; transition:color 0.2s; flex:1;" class="card-title">{title}</h3>
+  <p style="font-size:0.875rem; color:#64748b; line-height:1.65; margin:0 0 1rem;">{description}</p>
+  <span style="font-family:var(--font-mono); font-size:0.7rem; color:#0d9488; letter-spacing:0.06em; display:flex; align-items:center; gap:0.375rem;">
+    LEARN MORE →
   </span>
 </a>
+
+<style>
+  .group:hover .card-icon { background: rgba(13,148,136,0.2); }
+  .group:hover .card-arrow { color: #5eead4; transform: translateX(4px); }
+  .group:hover .card-title { color: #5eead4; }
+</style>

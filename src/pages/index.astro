@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import HubCard from '@/components/HubCard.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import { buildWebSiteSchema, buildOrganizationSchema } from '@/lib/schema';
 import { getResults } from '@/lib/page-factory';
@@ -57,25 +56,29 @@ const faqSchema = {
 const schemas = [buildWebSiteSchema(), buildOrganizationSchema(), faqSchema];
 
 const services = [
-  { title: 'AI Readiness Assessment', description: 'Fixed-fee assessment of your data, processes, and team. Walk away with a prioritised AI roadmap.', href: '/what-we-do/ai-readiness-assessment/', icon: 'strategy' },
-  { title: 'Agentic AI Systems', description: 'Autonomous AI agents that handle complex workflows end to end. We design, build, and deploy them.', href: '/what-we-do/agentic-ai/', icon: 'agentic' },
-  { title: 'AI Automation', description: 'Intelligent automation for document processing, onboarding, data entry, and workflow orchestration.', href: '/what-we-do/ai-automation/', icon: 'implementation' },
-  { title: 'Generative AI & LLMs', description: 'RAG systems, content pipelines, and LLM integration. The right model for each use case.', href: '/what-we-do/generative-ai/', icon: 'sparkles' },
-  { title: 'AI Governance', description: 'Compliance frameworks, bias audits, and risk management for UK regulatory requirements.', href: '/what-we-do/ai-governance/', icon: 'governance' },
-  { title: 'AI Strategy & Roadmaps', description: 'From opportunity mapping to board-ready business cases. Strategy that leads to action.', href: '/what-we-do/ai-strategy/', icon: 'strategy' },
+  { tag: 'ASSESS-01', title: 'AI Readiness Assessment', description: 'Fixed-fee audit of your data, processes, and team. Walk away with a prioritised AI roadmap and clear ROI ranges.', href: '/what-we-do/ai-readiness-assessment/', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+  { tag: 'BUILD-02', title: 'Agentic AI Systems', description: 'Autonomous AI agents that handle complex workflows end to end. We design, build, and deploy them.', href: '/what-we-do/agentic-ai/', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+  { tag: 'AUTO-03', title: 'AI Automation', description: 'Intelligent automation for document processing, onboarding, data entry, and workflow orchestration.', href: '/what-we-do/ai-automation/', icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z' },
+  { tag: 'GEN-04', title: 'Generative AI & LLMs', description: 'RAG systems, content pipelines, and LLM integration. The right model for each use case.', href: '/what-we-do/generative-ai/', icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' },
+  { tag: 'GOV-05', title: 'AI Governance', description: 'Compliance frameworks, bias audits, and risk management for UK regulatory requirements.', href: '/what-we-do/ai-governance/', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+  { tag: 'STRAT-06', title: 'AI Strategy & Roadmaps', description: 'From opportunity mapping to board-ready business cases. Strategy that leads to action.', href: '/what-we-do/ai-strategy/', icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z' },
 ];
 
 const industries = [
-  { title: 'Healthcare', description: 'Clinical AI, NHS compliance, patient data automation.', href: '/industries/healthcare/', icon: 'healthcare' },
-  { title: 'Legal', description: 'Document review, compliance monitoring, SRA-compliant systems.', href: '/industries/legal/', icon: 'legal' },
-  { title: 'Finance', description: 'FCA compliance, fraud detection, automated reporting.', href: '/industries/finance/', icon: 'finance' },
-  { title: 'Retail', description: 'Demand forecasting, personalisation, inventory optimisation.', href: '/industries/retail/', icon: 'retail' },
-  { title: 'Manufacturing', description: 'Predictive maintenance, quality control, supply chain AI.', href: '/industries/manufacturing/', icon: 'manufacturing' },
-  { title: 'Education', description: 'Adaptive learning, admin automation, Ofsted-compliant AI.', href: '/industries/education/', icon: 'education' },
+  { code: 'IND-01', title: 'Healthcare', blurb: 'Clinical AI, NHS compliance, and patient data automation. We understand CQC requirements and build within them.', tags: ['CQC', 'NHS', 'GDPR', 'HL7'] },
+  { code: 'IND-02', title: 'Legal', blurb: 'Document review, SRA-compliant AI, and matter automation. Trusted by UK law firms.', tags: ['SRA', 'AML', 'E-Discovery', 'PII'] },
+  { code: 'IND-03', title: 'Finance', blurb: 'FCA-compliant AI, fraud detection, and automated reporting for financial services.', tags: ['FCA', 'MiFID II', 'AML', 'RegTech'] },
+  { code: 'IND-04', title: 'Retail', blurb: 'Demand forecasting, personalisation engines, and inventory optimisation for UK retailers.', tags: ['Forecasting', 'Personalisation', 'Ecommerce'] },
+  { code: 'IND-05', title: 'Manufacturing', blurb: 'Predictive maintenance, quality control AI, and supply chain intelligence.', tags: ['IoT', 'PdM', 'Quality', 'Supply Chain'] },
+  { code: 'IND-06', title: 'Education', blurb: 'Adaptive learning systems, admin automation, and Ofsted-compliant AI for UK schools.', tags: ['Ofsted', 'GDPR', 'LMS', 'Safeguarding'] },
 ];
 
-const techStack = [
-  'OpenAI', 'Anthropic', 'Google Cloud', 'Microsoft Azure', 'AWS', 'Hugging Face',
+const faqs = [
+  { q: 'What does an AI consultant do?', a: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and builds the solution. At Agentic AI Associates, we cover the full lifecycle: from AI readiness assessment through to deployment, team training, and ongoing optimisation.' },
+  { q: 'How much does AI consultancy cost in the UK?', a: 'AI consultancy in the UK ranges from £150 per hour for advisory sessions to £3,000+ for strategy engagements and custom pricing for implementation projects. We offer a free discovery call to scope your project and provide clear pricing upfront.' },
+  { q: 'How long does an AI project take?', a: 'An AI Readiness Assessment takes 2–4 weeks. Strategy engagements run 2–6 weeks. Implementation projects deliver first results within 6–8 weeks.' },
+  { q: 'Do I need technical expertise to work with you?', a: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language.' },
+  { q: 'What is agentic AI?', a: 'Agentic AI refers to AI systems that take sequences of actions autonomously to complete complex, multi-step tasks. These systems use tools, browse data sources, make decisions, and check their work — enabling automation of workflows that previously required human judgment.' },
 ];
 ---
 
@@ -84,197 +87,453 @@ const techStack = [
   description="UK AI consultancy specialising in agentic AI systems, automation, and governance. We build AI that delivers measurable results from week one."
   schema={schemas}
 >
-  <!-- HERO -->
-  <section class="relative overflow-hidden" style="background: #080f1e;">
-    <div class="aurora-blob w-[min(600px,80vw)] h-[min(600px,80vw)] top-[-100px] left-[-100px]" style="background: #1e3a5f;"></div>
 
-    <div class="container relative section" style="padding-top: 7rem; padding-bottom: 7rem;">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 text-xs font-semibold tracking-wide mb-6">
-        <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
-        UK-Based AI Consultancy
+  <!-- ─── [00] HERO ─────────────────────────────────────────���── -->
+  <section style="background: #080f1e; padding: 5rem 1.5rem 6rem; position: relative; overflow: hidden;">
+    <!-- Ambient glow blobs -->
+    <div style="position:absolute; top:-200px; right:-200px; width:700px; height:700px; background:radial-gradient(circle, rgba(13,148,136,0.15), transparent 60%); pointer-events:none;"></div>
+    <div style="position:absolute; bottom:-100px; left:-100px; width:500px; height:500px; background:radial-gradient(circle, rgba(30,58,95,0.4), transparent 60%); pointer-events:none;"></div>
+    <!-- Scan lines -->
+    <div class="scan-overlay" aria-hidden="true"></div>
+
+    <div class="container" style="position:relative;">
+      <!-- Meta row -->
+      <div class="signal-kicker" style="margin-bottom:2rem; gap:1.5rem; flex-wrap:wrap;">
+        <span><span class="n">▸</span> UK_AI_CONSULTANCY</span>
+        <span>FOUNDED 2025</span>
+        <span>PRACTITIONER-LED</span>
+        <span style="margin-left:auto;" class="live-dot"><span class="live-dot-pulse"></span>LIVE</span>
       </div>
 
-      <h1 class="text-white max-w-4xl leading-[1.05] text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-display)] font-extrabold tracking-tight">
-        AI systems that<br>
-        <span style="background: linear-gradient(135deg, #2563eb, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">deliver from week one</span>
+      <!-- Headline with typewriter -->
+      <h1 id="hero-headline" style="font-family:var(--font-grotesk); font-size:clamp(3rem,9vw,6.5rem); font-weight:500; letter-spacing:-0.035em; line-height:0.9; margin-bottom:2.5rem; color:#f0f9ff; max-width:1100px;">
+        AI systems that deliver<br>
+        <span id="tw-target" style="color:#5eead4;" class="text-glow-bright">from week one.</span><span class="tw-cursor" id="tw-cursor"></span>
       </h1>
 
-      <p class="text-xl text-slate-300 mt-6 max-w-2xl leading-relaxed">
-        We build and deploy AI that generates measurable results — not strategy decks that sit in a drawer. Founded by practitioners, not career consultants.
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-4 mt-10">
-        <a href="/contact/" class="btn-glow text-base">
-          Book a Discovery Call
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-        <a href="/get-started/" class="btn" style="background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15);">
-          Start with an Assessment
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- BUYER JOURNEY -->
-  <section class="section" style="background: #f8fafc;">
-    <div class="container">
-      <div class="text-center mb-12">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">How We Work</p>
-        <h2 class="text-4xl font-extrabold">Three steps to working AI</h2>
-      </div>
-      <div class="relative max-w-4xl mx-auto">
-        <div class="hidden lg:block absolute top-7 left-[16%] right-[16%] h-px" style="background: linear-gradient(to right, transparent, #2563eb, #0d9488, transparent);" aria-hidden="true"></div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {[
-            { num: '1', title: 'Discovery Call', desc: 'Free 30-minute call. We listen, assess your situation, and tell you honestly whether AI can help.', tag: 'Free' },
-            { num: '2', title: 'AI Readiness Assessment', desc: 'Fixed-fee audit of your data, processes, and team. You get a prioritised roadmap with clear ROI.', tag: 'Fixed fee' },
-            { num: '3', title: 'Scoped Engagement', desc: 'Strategy, pilot, or full implementation — scoped based on your assessment findings. No surprises.', tag: 'Custom' },
-          ].map(step => (
-            <div class="relative text-center">
-              <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto mb-4 relative z-10 shadow-sm" style="border: 2px solid rgba(13,148,136,0.3);">
-                <span class="text-xl font-bold font-[family-name:var(--font-display)]" style="color: #0d9488;">{step.num}</span>
-              </div>
-              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-600 mb-1 block">{step.tag}</span>
-              <h3 class="text-lg font-semibold mb-2">{step.title}</h3>
-              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{step.desc}</p>
-            </div>
-          ))}
+      <!-- Sub + CTAs -->
+      <div style="display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:end; margin-bottom:3rem;" class="md:grid-cols-[1.2fr_auto]">
+        <p style="font-size:1.1875rem; line-height:1.6; color:#94a3b8; margin:0; max-width:640px; font-family:var(--font-sans);">
+          We build and deploy agentic AI that produces measurable results — not strategy decks that sit in a drawer. Founded by practitioners, not career consultants.
+        </p>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+          <a href="/contact/" class="btn-glow">
+            Book a Discovery Call →
+          </a>
+          <a href="/get-started/" class="btn-outline">
+            Start with an Assessment
+          </a>
         </div>
       </div>
+
+      <!-- Signal Live Graph -->
+      <div style="position:relative; border:1px solid rgba(255,255,255,0.07); border-radius:12px; overflow:hidden; background:rgba(0,0,0,0.2);" aria-hidden="true">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, #0d9488, #5eead4, transparent);"></div>
+        <div style="padding:0.75rem 1.25rem; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:0.75rem;">
+          <span class="live-dot"><span class="live-dot-pulse"></span>AGENT NETWORK · LIVE SESSION</span>
+          <span style="margin-left:auto; font-family:var(--font-mono); font-size:0.6rem; color:#475569; letter-spacing:0.1em;">~/engagements/active ▸ monitoring</span>
+        </div>
+        <svg id="signal-graph" viewBox="0 0 960 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; display:block; padding:1rem 0.5rem;">
+          <!-- Grid lines -->
+          <line x1="0" y1="90" x2="960" y2="90" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+          <line x1="0" y1="45" x2="960" y2="45" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+          <line x1="0" y1="135" x2="960" y2="135" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+          <!-- Edges -->
+          <line x1="80" y1="90" x2="220" y2="55" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
+          <line x1="220" y1="55" x2="400" y2="90" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
+          <line x1="400" y1="90" x2="560" y2="45" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
+          <line x1="560" y1="45" x2="720" y2="80" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
+          <line x1="720" y1="80" x2="880" y2="55" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
+          <line x1="220" y1="55" x2="310" y2="140" stroke="rgba(13,148,136,0.15)" stroke-width="1"/>
+          <line x1="400" y1="90" x2="490" y2="150" stroke="rgba(13,148,136,0.15)" stroke-width="1"/>
+          <line x1="560" y1="45" x2="640" y2="140" stroke="rgba(13,148,136,0.15)" stroke-width="1"/>
+
+          <!-- Pulsing nodes -->
+          <circle cx="80" cy="90" r="5" fill="rgba(13,148,136,0.4)" style="animation:node-a 3s ease-in-out infinite;"/>
+          <circle cx="80" cy="90" r="9" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1" style="animation:ring-a 3s ease-in-out infinite;"/>
+
+          <circle cx="220" cy="55" r="7" fill="#0d9488" style="animation:node-b 3s ease-in-out infinite 0.5s;"/>
+          <circle cx="220" cy="55" r="12" fill="none" stroke="rgba(13,148,136,0.25)" stroke-width="1" style="animation:ring-b 3s ease-in-out infinite 0.5s;"/>
+
+          <circle cx="400" cy="90" r="9" fill="#0d9488" style="filter:drop-shadow(0 0 8px #0d9488); animation:node-main 3s ease-in-out infinite 0.2s;"/>
+          <circle cx="400" cy="90" r="15" fill="none" stroke="rgba(13,148,136,0.3)" stroke-width="1.5" style="animation:ring-main 3s ease-in-out infinite 0.2s;"/>
+
+          <circle cx="560" cy="45" r="6" fill="rgba(94,234,212,0.6)" style="animation:node-c 3s ease-in-out infinite 0.8s;"/>
+          <circle cx="560" cy="45" r="11" fill="none" stroke="rgba(94,234,212,0.2)" stroke-width="1" style="animation:ring-c 3s ease-in-out infinite 0.8s;"/>
+
+          <circle cx="720" cy="80" r="7" fill="#0d9488" style="animation:node-d 3s ease-in-out infinite 1s;"/>
+          <circle cx="720" cy="80" r="12" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1" style="animation:ring-d 3s ease-in-out infinite 1s;"/>
+
+          <circle cx="880" cy="55" r="5" fill="rgba(13,148,136,0.5)" style="animation:node-e 3s ease-in-out infinite 1.3s;"/>
+
+          <circle cx="310" cy="140" r="4" fill="rgba(13,148,136,0.35)" style="animation:node-f 3s ease-in-out infinite 0.7s;"/>
+          <circle cx="490" cy="150" r="4" fill="rgba(94,234,212,0.3)" style="animation:node-f 3s ease-in-out infinite 1.1s;"/>
+          <circle cx="640" cy="140" r="4" fill="rgba(13,148,136,0.3)" style="animation:node-f 3s ease-in-out infinite 0.4s;"/>
+
+          <!-- Labels -->
+          <text x="400" y="83" fill="rgba(255,255,255,0.7)" font-family="JetBrains Mono,monospace" font-size="8" text-anchor="middle" letter-spacing="1">ORCHESTRATOR</text>
+          <text x="220" y="48" fill="rgba(94,234,212,0.7)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">INTAKE</text>
+          <text x="560" y="38" fill="rgba(94,234,212,0.7)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">ANALYSE</text>
+          <text x="720" y="73" fill="rgba(94,234,212,0.6)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">EXECUTE</text>
+          <text x="880" y="48" fill="rgba(94,234,212,0.5)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">OUTPUT</text>
+
+          <!-- Moving data packets -->
+          <circle r="3" fill="#5eead4" style="offset-path:path('M80,90 L400,90'); offset-distance:0%; animation:pkt1 4s linear infinite; opacity:0;"/>
+          <circle r="2.5" fill="#5eead4" style="offset-path:path('M220,55 L400,90'); offset-distance:0%; animation:pkt2 3.5s linear infinite 1s; opacity:0;"/>
+          <circle r="3" fill="#5eead4" style="offset-path:path('M400,90 L720,80'); offset-distance:0%; animation:pkt3 4.5s linear infinite 0.5s; opacity:0;"/>
+          <circle r="2" fill="rgba(94,234,212,0.8)" style="offset-path:path('M560,45 L880,55'); offset-distance:0%; animation:pkt4 3.8s linear infinite 2s; opacity:0;"/>
+        </svg>
+
+        <!-- Status bar -->
+        <div style="padding:0.625rem 1.25rem; border-top:1px solid rgba(255,255,255,0.06); display:flex; gap:2rem; flex-wrap:wrap;">
+          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em;"><span style="color:#5eead4;">●</span> 4 agents active</span>
+          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em;"><span style="color:#5eead4;">●</span> evals passing 96/100</span>
+          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em;"><span style="color:#5eead4;">●</span> guardrails active</span>
+          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em; margin-left:auto;">latency 94ms ↓</span>
+        </div>
+      </div>
+
+      <!-- Meta bar -->
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:0; border:1px solid rgba(255,255,255,0.07); border-radius:12px; overflow:hidden; margin-top:1.5rem;" class="sm:grid-cols-4">
+        {[
+          ['LOCATION', 'London, UK'],
+          ['STATUS', 'Q3 Engagements Open'],
+          ['FOUNDED', '2025'],
+          ['GDPR', 'Registered'],
+        ].map(([k, v], i) => (
+          <div style={`padding:1.25rem 1.5rem; ${i < 3 ? 'border-right:1px solid rgba(255,255,255,0.06);' : ''} border-top:1px solid rgba(255,255,255,0.06);`}>
+            <div style="font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:#5eead4; margin-bottom:0.375rem;">{k}</div>
+            <div style="font-family:var(--font-grotesk); font-size:0.9375rem; font-weight:500; color:#f0f9ff;">{v}</div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
-  <!-- WHAT WE DO -->
-  <section class="section">
+  <!-- ─── [01] PROCEDURE ────────────────────────────────────── -->
+  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div class="text-center mb-14">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">What We Do</p>
-        <h2 class="text-4xl font-extrabold">AI services that ship</h2>
-        <p class="text-slate-500 mt-4 max-w-xl mx-auto text-lg">From readiness assessment to full deployment — every engagement delivers something you can measure.</p>
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[01]</span> <span>Procedure</span></span>
+        <h2>Three steps to working AI.</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div style="display:grid; grid-template-columns:1fr; gap:1.25rem;" class="md:grid-cols-3">
+        {[
+          { n: '01', label: 'Free', title: 'Discovery Call', body: '30 minutes. We listen, assess your situation, and tell you honestly whether AI can help. If not, we say so.' },
+          { n: '02', label: 'Fixed fee', title: 'AI Readiness Assessment', body: 'A structured audit of your data, processes, and team. You leave with a prioritised roadmap and clear ROI ranges.' },
+          { n: '03', label: 'Scoped', title: 'Engagement', body: 'Strategy, pilot, or full implementation — scoped against your assessment findings. No surprises, no scope creep.' },
+        ].map((step, i) => (
+          <div class="signal-card" style={i === 0 ? 'background:linear-gradient(155deg, rgba(13,148,136,0.08), transparent 60%);' : ''}>
+            <div style="font-family:var(--font-mono); font-size:3.5rem; color:#5eead4; font-weight:400; letter-spacing:-0.04em; line-height:1; margin-bottom:1.25rem;" class="text-glow">{step.n}</div>
+            <span class="mono-tag" style="margin-bottom:0.875rem;">{step.label}</span>
+            <h3 style="font-family:var(--font-grotesk); font-size:1.375rem; font-weight:500; letter-spacing:-0.02em; margin:0 0 0.75rem; color:#f0f9ff;">{step.title}</h3>
+            <p style="font-size:0.9375rem; line-height:1.65; color:#64748b; margin:0;">{step.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── [02] CAPABILITIES ─────────────────────────────────── -->
+  <section style="background:#0d1625; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[02]</span> <span>Capabilities</span></span>
+        <h2>Services that ship.</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr; gap:1rem;" class="md:grid-cols-2 lg:grid-cols-3">
         {services.map((svc) => (
-          <HubCard title={svc.title} description={svc.description} href={svc.href} icon={svc.icon} />
-        ))}
-      </div>
-      <div class="text-center mt-10">
-        <a href="/what-we-do/" class="btn btn-outline">View All Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section class="section" style="background: #f8fafc;">
-    <div class="container">
-      <div class="text-center mb-14">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Why Us</p>
-        <h2 class="text-4xl font-extrabold">Built by practitioners, not career consultants</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'We ship working systems', body: "This website ranked on Google and generated an enterprise lead within 7 days. We build with the same speed and rigour for our clients." },
-          { icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Transparent pricing', body: 'Fixed-fee assessments. Clear scoping. No hidden costs, no billable hour surprises. You know what you are paying before we start.' },
-          { icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', title: 'UK expertise, founder-led', body: 'You work directly with the founder. We understand UK regulation, GDPR, and the business landscape. No junior consultants, no handoffs.' },
-        ].map(f => (
-          <div class="card-animated-border p-8">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(13,148,136,0.1);">
-              <svg class="w-6 h-6" style="color: #0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={f.icon} />
-              </svg>
+          <a href={svc.href} class="signal-card" style="text-decoration:none; display:flex; flex-direction:column;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.125rem;">
+              <div style="width:40px; height:40px; border-radius:8px; background:rgba(13,148,136,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="20" height="20" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d={svc.icon}/>
+                </svg>
+              </div>
+              <span style="color:#475569; font-size:1.125rem; transition:transform 0.2s, color 0.2s;" class="hover-arrow">→</span>
             </div>
-            <h3 class="text-xl font-bold mb-3">{f.title}</h3>
-            <p class="text-slate-500 leading-relaxed">{f.body}</p>
+            <span class="mono-tag-accent">{svc.tag}</span>
+            <h3 style="font-family:var(--font-grotesk); font-size:1.1875rem; font-weight:500; letter-spacing:-0.02em; margin:0 0 0.625rem; color:#f0f9ff; flex:1;">{svc.title}</h3>
+            <p style="font-size:0.875rem; line-height:1.65; color:#64748b; margin:0 0 1rem;">{svc.description}</p>
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:#0d9488; letter-spacing:0.06em;">VIEW SERVICE →</span>
+          </a>
+        ))}
+      </div>
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="/what-we-do/" class="btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── [03] EVIDENCE ────────────────────────────────────���─ -->
+  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06); position:relative; overflow:hidden;">
+    <!-- Waveform ambient top -->
+    <div style="position:absolute; top:0; left:0; right:0; height:80px; pointer-events:none; opacity:0.4;" aria-hidden="true">
+      <div class="waveform-row" id="wf-top" style="padding:0 1.5rem;"></div>
+    </div>
+    <!-- Waveform ambient bottom -->
+    <div style="position:absolute; bottom:0; left:0; right:0; height:60px; pointer-events:none; opacity:0.25; transform:scaleY(-1);" aria-hidden="true">
+      <div class="waveform-row" id="wf-bottom" style="padding:0 1.5rem;"></div>
+    </div>
+
+    <div class="container" style="position:relative;">
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[03]</span> <span>Evidence</span></span>
+        <h2>Proof, not promises.</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr; gap:1.25rem;" class="md:grid-cols-3">
+        {results.map((r, i) => (
+          <div class="signal-card" style="position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, #0d9488, rgba(94,234,212,0.3), transparent);"></div>
+            <div style="font-family:var(--font-grotesk); font-size:5rem; font-weight:500; color:#5eead4; letter-spacing:-0.05em; line-height:1; margin-bottom:0.75rem;" class="text-glow">{r.metric}</div>
+            <p style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.2em; color:#475569; margin:0 0 0.5rem; text-transform:uppercase;">{r.metricLabel}</p>
+            <h3 style="font-family:var(--font-grotesk); font-size:1.0625rem; font-weight:500; color:#f0f9ff; margin:0 0 0.5rem;">{r.headline}</h3>
+            <p style="font-size:0.875rem; color:#64748b; line-height:1.6; margin:0;">{r.description}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- RESULTS -->
-  <section class="section">
+  <!-- ─── [04] INDUSTRIES ───────────────────────────────────── -->
+  <section style="background:#0d1625; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div class="text-center mb-14">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Results</p>
-        <h2 class="text-4xl font-extrabold">Proof, not promises</h2>
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[04]</span> <span>Industries</span></span>
+        <h2>For your sector.</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        {results.map(result => (
-          <div class="card-animated-border p-8">
-            <div class="text-3xl font-extrabold font-[family-name:var(--font-display)] text-gradient mb-1">{result.metric}</div>
-            <p class="text-xs text-[var(--color-text-muted)] uppercase tracking-wider font-semibold mb-4">{result.metricLabel}</p>
-            <h3 class="text-lg font-bold mb-2">{result.headline}</h3>
-            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{result.description}</p>
+      <div style="display:grid; grid-template-columns:1fr; gap:1.5rem;" class="md:grid-cols-[240px_1fr]">
+        <!-- Tab list -->
+        <div style="display:flex; flex-direction:column; gap:2px; border-left:1px solid rgba(255,255,255,0.07);" role="tablist" aria-label="Industries">
+          {industries.map((ind, i) => (
+            <button
+              class:list={['industry-tab', i === 0 ? 'active' : '']}
+              data-ind={i}
+              role="tab"
+              aria-selected={i === 0 ? 'true' : 'false'}
+              aria-controls={`ind-panel-${i}`}
+            >
+              <span class="tab-code">{ind.code}</span>
+              <span class="tab-title">{ind.title}</span>
+            </button>
+          ))}
+        </div>
+        <!-- Panels -->
+        {industries.map((ind, i) => (
+          <div
+            id={`ind-panel-${i}`}
+            role="tabpanel"
+            class="signal-card"
+            style={`background:linear-gradient(160deg, rgba(13,148,136,0.06), transparent 60%); ${i !== 0 ? 'display:none;' : ''}`}
+          >
+            <div style="font-family:var(--font-mono); font-size:0.6875rem; letter-spacing:0.2em; color:#5eead4; margin-bottom:1rem;">{ind.code} · {ind.title.toUpperCase()}</div>
+            <h3 style="font-family:var(--font-grotesk); font-size:clamp(1.5rem,3vw,2.5rem); font-weight:500; letter-spacing:-0.025em; margin:0 0 1rem; color:#f0f9ff;">{ind.title}</h3>
+            <p style="font-size:1.0625rem; line-height:1.65; color:#94a3b8; margin:0 0 1.5rem; max-width:600px;">{ind.blurb}</p>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+              {ind.tags.map(tag => (
+                <span class="mono-tag">{tag}</span>
+              ))}
+            </div>
+            <a href={`/industries/${ind.title.toLowerCase()}/`} style="display:inline-flex; align-items:center; gap:0.5rem; margin-top:1.5rem; font-family:var(--font-mono); font-size:0.75rem; color:#0d9488; letter-spacing:0.06em; text-decoration:none;">
+              EXPLORE {ind.title.toUpperCase()} AI →
+            </a>
           </div>
         ))}
       </div>
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="/industries/" class="btn-outline">View All Industries</a>
+      </div>
     </div>
   </section>
 
-  <!-- INDUSTRIES -->
-  <section class="section" style="background: #f8fafc;">
+  <!-- ─── [05] DIFFERENTIATORS ─────────────────────────────── -->
+  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div class="text-center mb-14">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Industries</p>
-        <h2 class="text-4xl font-extrabold">AI for your sector</h2>
-        <p class="text-slate-500 mt-4 max-w-xl mx-auto text-lg">Every industry has unique challenges and regulations. We bring domain-specific knowledge to every project.</p>
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[05]</span> <span>About</span></span>
+        <h2>Built by practitioners.</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {industries.map((ind) => (
-          <HubCard title={ind.title} description={ind.description} href={ind.href} icon={ind.icon} />
-        ))}
-      </div>
-      <div class="text-center mt-10">
-        <a href="/industries/" class="btn btn-outline">View All Industries</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECH STACK -->
-  <section class="py-24 border-y border-slate-100">
-    <div class="container">
-      <p class="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-10">Our Technology Stack</p>
-      <div class="flex flex-wrap justify-center items-center gap-10">
-        {techStack.map(name => (
-          <span class="text-sm font-bold text-slate-400 tracking-wide trust-bar-logo">{name}</span>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section bg-[var(--color-surface)]">
-    <div class="container max-w-3xl mx-auto">
-      <div class="text-center mb-12">
-        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-[0.2em]">Common Questions</p>
-        <h2 class="text-4xl font-extrabold">Frequently Asked Questions</h2>
-      </div>
-      <div class="space-y-4">
+      <div style="display:grid; grid-template-columns:1fr; gap:1.25rem;" class="md:grid-cols-3">
         {[
-          { q: 'What does an AI consultant do?', a: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and builds the solution. At Agentic AI Associates, we cover the full lifecycle: from AI readiness assessment through to deployment, team training, and ongoing optimisation.' },
-          { q: 'How much does AI consultancy cost in the UK?', a: 'AI consultancy in the UK ranges from £150 per hour for advisory sessions to £3,000+ for strategy engagements and custom pricing for implementation projects. We offer a free discovery call to scope your project and provide clear pricing upfront.' },
-          { q: 'How long does an AI project take?', a: 'An AI Readiness Assessment takes 2-4 weeks. Strategy engagements run 2-6 weeks. Implementation projects deliver first results within 6-8 weeks.' },
-          { q: 'Do I need technical expertise to work with you?', a: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language.' },
-          { q: 'What is agentic AI?', a: 'Agentic AI refers to AI systems that take sequences of actions autonomously to complete complex, multi-step tasks. These systems use tools, browse data sources, make decisions, and check their work — enabling automation of workflows that previously required human judgment.' },
-        ].map(({q, a}) => (
-          <details class="card-animated-border p-6 group">
-            <summary class="font-semibold text-lg cursor-pointer list-none flex items-center justify-between">
-              {q}
-              <svg class="w-5 h-5 text-teal-500 flex-shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          { n: '01', title: 'We ship working systems', body: 'This website ranked on Google and generated an enterprise lead within 7 days. We build with the same speed and rigour for our clients.' },
+          { n: '02', title: 'Transparent pricing', body: 'Fixed-fee assessments. Clear scoping. No hidden costs, no billable hour surprises. You know what you are paying before we start.' },
+          { n: '03', title: 'UK expertise, founder-led', body: 'You work directly with the founder. We understand UK regulation, GDPR, and the business landscape. No junior consultants, no handoffs.' },
+        ].map(f => (
+          <div class="signal-card">
+            <div style="font-family:var(--font-mono); font-size:2.25rem; color:#5eead4; font-weight:400; letter-spacing:-0.03em; line-height:1; margin-bottom:1.25rem;" class="text-glow">{f.n}</div>
+            <h3 style="font-family:var(--font-grotesk); font-size:1.1875rem; font-weight:500; letter-spacing:-0.01em; margin:0 0 0.75rem; color:#f0f9ff;">{f.title}</h3>
+            <p style="font-size:0.9375rem; line-height:1.65; color:#64748b; margin:0;">{f.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── [06] TECHNOLOGY STACK ─────────────────────────────── -->
+  <section style="background:#0d1625; padding:3rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <p style="text-align:center; font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:#475569; text-transform:uppercase; margin-bottom:2rem;">// TECHNOLOGY STACK</p>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2.5rem;">
+        {['OpenAI', 'Anthropic', 'Google Cloud', 'Microsoft Azure', 'AWS', 'Hugging Face'].map(name => (
+          <span class="trust-bar-logo">{name}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── [07] FAQ ────────────────────────────────────────���─── -->
+  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
+    <div class="container" style="max-width:900px;">
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[07]</span> <span>FAQ</span></span>
+        <h2>Common questions.</h2>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.07);">
+        {faqs.map((f, i) => (
+          <details style="border-bottom:1px solid rgba(255,255,255,0.07);" class="signal-faq">
+            <summary style="display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0.25rem; cursor:pointer; list-style:none; gap:1rem;">
+              <span style="display:flex; gap:1.25rem; align-items:baseline; font-family:var(--font-sans);">
+                <span style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.16em; color:#5eead4; min-width:36px;">Q.0{i + 1}</span>
+                <span style="font-size:1.0625rem; font-weight:500; color:#f0f9ff;">{f.q}</span>
+              </span>
+              <span class="faq-icon" style="font-size:1.25rem; color:#475569; flex-shrink:0; transition:transform 0.2s;">+</span>
             </summary>
-            <p class="mt-4 text-slate-500 leading-relaxed">{a}</p>
+            <div style="padding:0 0.25rem 1.5rem 3.5rem; max-width:800px;">
+              <p style="margin:0; font-size:0.9375rem; line-height:1.75; color:#64748b;">{f.a}</p>
+            </div>
           </details>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ─── [08] CTA ──────────────────────────────────────────── -->
   <CTABanner
-    headline="Ready to explore what AI can do for your business?"
+    headline="Let's see if AI can actually help."
     text="Book a free 30-minute discovery call. We'll discuss your challenges and give you an honest assessment — no sales pitch."
-    buttonText="Book a Discovery Call"
+    buttonText="Book a Discovery Call →"
     buttonHref="/contact/"
     secondaryText="Start with an Assessment"
     secondaryHref="/get-started/"
   />
+
 </BaseLayout>
+
+<style>
+  /* FAQ rotate + icon */
+  details.signal-faq[open] .faq-icon {
+    transform: rotate(45deg);
+    color: #0d9488;
+  }
+  details.signal-faq summary::-webkit-details-marker { display: none; }
+
+  /* Responsive grid overrides */
+  @media (min-width: 768px) {
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .md\:grid-cols-\[240px_1fr\] { grid-template-columns: 240px 1fr; }
+    .md\:grid-cols-\[1\.2fr_auto\] { grid-template-columns: 1.2fr auto; }
+  }
+  @media (min-width: 640px) {
+    .sm\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* SVG graph node animations */
+  @keyframes node-a { 0%,100%{opacity:.4;} 50%{opacity:.9;} }
+  @keyframes node-b { 0%,100%{opacity:.6;} 50%{opacity:1;} }
+  @keyframes node-main { 0%,100%{opacity:.8;} 50%{opacity:1; filter:drop-shadow(0 0 12px #5eead4);} }
+  @keyframes node-c { 0%,100%{opacity:.5;} 50%{opacity:.9;} }
+  @keyframes node-d { 0%,100%{opacity:.6;} 50%{opacity:1;} }
+  @keyframes node-e { 0%,100%{opacity:.3;} 50%{opacity:.7;} }
+  @keyframes node-f { 0%,100%{opacity:.3;} 50%{opacity:.6;} }
+  @keyframes ring-a { 0%,100%{opacity:.2; r:9;} 50%{opacity:.5; r:13;} }
+  @keyframes ring-b { 0%,100%{opacity:.2; r:12;} 50%{opacity:.5; r:17;} }
+  @keyframes ring-main { 0%,100%{opacity:.25; r:15;} 50%{opacity:.6; r:22;} }
+  @keyframes ring-c { 0%,100%{opacity:.15; r:11;} 50%{opacity:.4; r:16;} }
+  @keyframes ring-d { 0%,100%{opacity:.15; r:12;} 50%{opacity:.4; r:17;} }
+
+  /* Data packets */
+  @keyframes pkt1 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
+  @keyframes pkt2 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
+  @keyframes pkt3 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
+  @keyframes pkt4 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
+</style>
+
+<script>
+  // Typewriter cycling phrases
+  const phrases = ['from week one.', 'that ship.', 'that stick.', 'that pay back.'];
+  const target = document.getElementById('tw-target');
+  let idx = 0;
+  let charIdx = 0;
+  let deleting = false;
+  let paused = false;
+
+  function tick() {
+    if (!target) return;
+    const phrase = phrases[idx];
+
+    if (paused) {
+      paused = false;
+      setTimeout(tick, 1200);
+      return;
+    }
+
+    if (!deleting) {
+      target.textContent = phrase.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx === phrase.length) {
+        deleting = true;
+        paused = true;
+      }
+    } else {
+      target.textContent = phrase.slice(0, charIdx - 1);
+      charIdx--;
+      if (charIdx === 0) {
+        deleting = false;
+        idx = (idx + 1) % phrases.length;
+      }
+    }
+
+    setTimeout(tick, deleting ? 45 : 85);
+  }
+
+  // Start after a short delay
+  setTimeout(tick, 1500);
+
+  // Waveform bars generator
+  function buildWaveform(id: string, bars: number) {
+    const container = document.getElementById(id);
+    if (!container) return;
+    for (let i = 0; i < bars; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'wb';
+      const delay = (Math.random() * 2).toFixed(2);
+      const duration = (0.6 + Math.random() * 1.4).toFixed(2);
+      bar.style.cssText = `animation:wave-bar ${duration}s ease-in-out infinite ${delay}s;`;
+      container.appendChild(bar);
+    }
+  }
+
+  buildWaveform('wf-top', 120);
+  buildWaveform('wf-bottom', 100);
+
+  // Industry tabs
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.industry-tab');
+  const panels = document.querySelectorAll<HTMLElement>('[id^="ind-panel-"]');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const i = tab.dataset.ind;
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach(p => { p.style.display = 'none'; });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panel = document.getElementById(`ind-panel-${i}`);
+      if (panel) panel.style.display = 'block';
+    });
+  });
+</script>
