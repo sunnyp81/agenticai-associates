@@ -13,42 +13,27 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What does an AI consultant do?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and builds the solution. At Agentic AI Associates, we cover the full lifecycle: from AI readiness assessment through to deployment, team training, and ongoing optimisation.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'An AI consultant helps businesses identify where artificial intelligence can add value, designs a strategy to implement it, and builds the solution. At Agentic AI Associates, we cover the full lifecycle: from AI readiness assessment through to deployment, team training, and ongoing optimisation.' },
     },
     {
       '@type': 'Question',
       name: 'How much does AI consultancy cost in the UK?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI consultancy in the UK ranges from £150 per hour for advisory sessions to £3,000+ for strategy engagements and custom pricing for implementation projects. We offer a free discovery call to scope your project and provide clear pricing upfront.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'AI consultancy in the UK ranges from £150 per hour for advisory sessions to £3,000+ for strategy engagements and custom pricing for implementation projects. We offer a free discovery call to scope your project and provide clear pricing upfront.' },
     },
     {
       '@type': 'Question',
       name: 'How long does an AI project take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI Readiness Assessment takes 2-4 weeks. Strategy engagements run 2-6 weeks. Implementation projects deliver first results within 6-8 weeks. Agentic AI systems with complex workflow automation may take longer depending on integration requirements.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'An AI Readiness Assessment takes 2-4 weeks. Strategy engagements run 2-6 weeks. Implementation projects deliver first results within 6-8 weeks.' },
     },
     {
       '@type': 'Question',
       name: 'Do I need technical expertise to work with you?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. We work with business owners, operations directors, and leadership teams who understand their business challenges but not necessarily AI technology. We handle the technical complexity and communicate in plain language.' },
     },
     {
       '@type': 'Question',
       name: 'What is agentic AI?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Agentic AI refers to AI systems that take sequences of actions autonomously to complete complex, multi-step tasks — rather than simply responding to single prompts. These systems use tools, browse data sources, make decisions, and check their work, enabling automation of workflows that previously required human judgment.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'Agentic AI refers to AI systems that take sequences of actions autonomously to complete complex, multi-step tasks — rather than simply responding to single prompts. These systems use tools, browse data sources, make decisions, and check their work, enabling automation of workflows that previously required human judgment.' },
     },
   ],
 };
@@ -88,58 +73,48 @@ const faqs = [
   schema={schemas}
 >
 
-  <!-- ─── [00] HERO ─────────────────────────────────────────���── -->
-  <section style="background: #080f1e; padding: 5rem 1.5rem 6rem; position: relative; overflow: hidden;">
-    <!-- Ambient glow blobs -->
-    <div style="position:absolute; top:-200px; right:-200px; width:700px; height:700px; background:radial-gradient(circle, rgba(13,148,136,0.15), transparent 60%); pointer-events:none;"></div>
-    <div style="position:absolute; bottom:-100px; left:-100px; width:500px; height:500px; background:radial-gradient(circle, rgba(30,58,95,0.4), transparent 60%); pointer-events:none;"></div>
-    <!-- Scan lines -->
+  <!-- ─── [00] HERO ─────────────────────────────────────────── -->
+  <section class="hero-section">
+    <div style="position:absolute;top:-200px;right:-200px;width:min(700px,100vw);height:min(700px,100vw);background:radial-gradient(circle,rgba(13,148,136,0.15),transparent 60%);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(30,58,95,0.4),transparent 60%);pointer-events:none;"></div>
     <div class="scan-overlay" aria-hidden="true"></div>
 
     <div class="container" style="position:relative;">
-      <!-- Meta row -->
-      <div class="signal-kicker" style="margin-bottom:2rem; gap:1.5rem; flex-wrap:wrap;">
+
+      <!-- Meta row: condensed on mobile -->
+      <div class="hero-meta-row signal-kicker">
         <span><span class="n">▸</span> UK_AI_CONSULTANCY</span>
-        <span>FOUNDED 2025</span>
-        <span>PRACTITIONER-LED</span>
-        <span style="margin-left:auto;" class="live-dot"><span class="live-dot-pulse"></span>LIVE</span>
+        <span class="hidden sm:inline">FOUNDED 2025</span>
+        <span class="hidden sm:inline">PRACTITIONER-LED</span>
+        <span class="live-dot ml-auto"><span class="live-dot-pulse"></span>LIVE</span>
       </div>
 
-      <!-- Headline with typewriter -->
-      <h1 id="hero-headline" style="font-family:var(--font-grotesk); font-size:clamp(3rem,9vw,6.5rem); font-weight:500; letter-spacing:-0.035em; line-height:0.9; margin-bottom:2.5rem; color:#f0f9ff; max-width:1100px;">
-        AI systems that deliver<br>
-        <span id="tw-target" style="color:#5eead4;" class="text-glow-bright">from week one.</span><span class="tw-cursor" id="tw-cursor"></span>
+      <!-- Headline -->
+      <h1 class="hero-headline">
+        AI systems that deliver<br class="hidden sm:block">
+        <span id="tw-target" class="text-glow-bright" style="color:#5eead4;">from week one.</span><span class="tw-cursor" id="tw-cursor"></span>
       </h1>
 
       <!-- Sub + CTAs -->
-      <div style="display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:end; margin-bottom:3rem;" class="md:grid-cols-[1.2fr_auto]">
-        <p style="font-size:1.1875rem; line-height:1.6; color:#94a3b8; margin:0; max-width:640px; font-family:var(--font-sans);">
-          We build and deploy agentic AI that produces measurable results — not strategy decks that sit in a drawer. Founded by practitioners, not career consultants.
-        </p>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
-          <a href="/contact/" class="btn-glow">
-            Book a Discovery Call →
-          </a>
-          <a href="/get-started/" class="btn-outline">
-            Start with an Assessment
-          </a>
-        </div>
+      <p class="hero-sub">
+        We build and deploy agentic AI that produces measurable results — not strategy decks that sit in a drawer. Founded by practitioners, not career consultants.
+      </p>
+      <div class="hero-ctas">
+        <a href="/contact/" class="btn-glow">Book a Discovery Call →</a>
+        <a href="/get-started/" class="btn-outline">Start with an Assessment</a>
       </div>
 
-      <!-- Signal Live Graph -->
-      <div style="position:relative; border:1px solid rgba(255,255,255,0.07); border-radius:12px; overflow:hidden; background:rgba(0,0,0,0.2);" aria-hidden="true">
-        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, #0d9488, #5eead4, transparent);"></div>
-        <div style="padding:0.75rem 1.25rem; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:0.75rem;">
+      <!-- Live graph: hidden on mobile, shown md+ -->
+      <div class="hidden md:block graph-wrapper" aria-hidden="true">
+        <div class="graph-topbar">
+          <span style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#0d9488,#5eead4,transparent);"></span>
           <span class="live-dot"><span class="live-dot-pulse"></span>AGENT NETWORK · LIVE SESSION</span>
-          <span style="margin-left:auto; font-family:var(--font-mono); font-size:0.6rem; color:#475569; letter-spacing:0.1em;">~/engagements/active ▸ monitoring</span>
+          <span class="graph-path">~/engagements/active ▸ monitoring</span>
         </div>
-        <svg id="signal-graph" viewBox="0 0 960 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; display:block; padding:1rem 0.5rem;">
-          <!-- Grid lines -->
+        <svg viewBox="0 0 960 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;padding:1rem 0.5rem;">
           <line x1="0" y1="90" x2="960" y2="90" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
           <line x1="0" y1="45" x2="960" y2="45" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
           <line x1="0" y1="135" x2="960" y2="135" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-
-          <!-- Edges -->
           <line x1="80" y1="90" x2="220" y2="55" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
           <line x1="220" y1="55" x2="400" y2="90" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
           <line x1="400" y1="90" x2="560" y2="45" stroke="rgba(13,148,136,0.25)" stroke-width="1"/>
@@ -148,63 +123,62 @@ const faqs = [
           <line x1="220" y1="55" x2="310" y2="140" stroke="rgba(13,148,136,0.15)" stroke-width="1"/>
           <line x1="400" y1="90" x2="490" y2="150" stroke="rgba(13,148,136,0.15)" stroke-width="1"/>
           <line x1="560" y1="45" x2="640" y2="140" stroke="rgba(13,148,136,0.15)" stroke-width="1"/>
-
-          <!-- Pulsing nodes -->
-          <circle cx="80" cy="90" r="5" fill="rgba(13,148,136,0.4)" style="animation:node-a 3s ease-in-out infinite;"/>
-          <circle cx="80" cy="90" r="9" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1" style="animation:ring-a 3s ease-in-out infinite;"/>
-
-          <circle cx="220" cy="55" r="7" fill="#0d9488" style="animation:node-b 3s ease-in-out infinite 0.5s;"/>
-          <circle cx="220" cy="55" r="12" fill="none" stroke="rgba(13,148,136,0.25)" stroke-width="1" style="animation:ring-b 3s ease-in-out infinite 0.5s;"/>
-
-          <circle cx="400" cy="90" r="9" fill="#0d9488" style="filter:drop-shadow(0 0 8px #0d9488); animation:node-main 3s ease-in-out infinite 0.2s;"/>
-          <circle cx="400" cy="90" r="15" fill="none" stroke="rgba(13,148,136,0.3)" stroke-width="1.5" style="animation:ring-main 3s ease-in-out infinite 0.2s;"/>
-
-          <circle cx="560" cy="45" r="6" fill="rgba(94,234,212,0.6)" style="animation:node-c 3s ease-in-out infinite 0.8s;"/>
-          <circle cx="560" cy="45" r="11" fill="none" stroke="rgba(94,234,212,0.2)" stroke-width="1" style="animation:ring-c 3s ease-in-out infinite 0.8s;"/>
-
-          <circle cx="720" cy="80" r="7" fill="#0d9488" style="animation:node-d 3s ease-in-out infinite 1s;"/>
-          <circle cx="720" cy="80" r="12" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1" style="animation:ring-d 3s ease-in-out infinite 1s;"/>
-
-          <circle cx="880" cy="55" r="5" fill="rgba(13,148,136,0.5)" style="animation:node-e 3s ease-in-out infinite 1.3s;"/>
-
-          <circle cx="310" cy="140" r="4" fill="rgba(13,148,136,0.35)" style="animation:node-f 3s ease-in-out infinite 0.7s;"/>
-          <circle cx="490" cy="150" r="4" fill="rgba(94,234,212,0.3)" style="animation:node-f 3s ease-in-out infinite 1.1s;"/>
-          <circle cx="640" cy="140" r="4" fill="rgba(13,148,136,0.3)" style="animation:node-f 3s ease-in-out infinite 0.4s;"/>
-
-          <!-- Labels -->
+          <circle cx="80" cy="90" r="5" fill="rgba(13,148,136,0.4)" style="animation:nd-a 3s ease-in-out infinite;"/>
+          <circle cx="80" cy="90" r="9" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1" style="animation:rg-a 3s ease-in-out infinite;"/>
+          <circle cx="220" cy="55" r="7" fill="#0d9488" style="animation:nd-b 3s ease-in-out infinite 0.5s;"/>
+          <circle cx="220" cy="55" r="12" fill="none" stroke="rgba(13,148,136,0.25)" stroke-width="1" style="animation:rg-b 3s ease-in-out infinite 0.5s;"/>
+          <circle cx="400" cy="90" r="9" fill="#0d9488" style="filter:drop-shadow(0 0 8px #0d9488);animation:nd-main 3s ease-in-out infinite 0.2s;"/>
+          <circle cx="400" cy="90" r="15" fill="none" stroke="rgba(13,148,136,0.3)" stroke-width="1.5" style="animation:rg-main 3s ease-in-out infinite 0.2s;"/>
+          <circle cx="560" cy="45" r="6" fill="rgba(94,234,212,0.6)" style="animation:nd-c 3s ease-in-out infinite 0.8s;"/>
+          <circle cx="560" cy="45" r="11" fill="none" stroke="rgba(94,234,212,0.2)" stroke-width="1" style="animation:rg-c 3s ease-in-out infinite 0.8s;"/>
+          <circle cx="720" cy="80" r="7" fill="#0d9488" style="animation:nd-d 3s ease-in-out infinite 1s;"/>
+          <circle cx="720" cy="80" r="12" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1" style="animation:rg-d 3s ease-in-out infinite 1s;"/>
+          <circle cx="880" cy="55" r="5" fill="rgba(13,148,136,0.5)" style="animation:nd-e 3s ease-in-out infinite 1.3s;"/>
+          <circle cx="310" cy="140" r="4" fill="rgba(13,148,136,0.35)" style="animation:nd-f 3s ease-in-out infinite 0.7s;"/>
+          <circle cx="490" cy="150" r="4" fill="rgba(94,234,212,0.3)" style="animation:nd-f 3s ease-in-out infinite 1.1s;"/>
+          <circle cx="640" cy="140" r="4" fill="rgba(13,148,136,0.3)" style="animation:nd-f 3s ease-in-out infinite 0.4s;"/>
           <text x="400" y="83" fill="rgba(255,255,255,0.7)" font-family="JetBrains Mono,monospace" font-size="8" text-anchor="middle" letter-spacing="1">ORCHESTRATOR</text>
           <text x="220" y="48" fill="rgba(94,234,212,0.7)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">INTAKE</text>
           <text x="560" y="38" fill="rgba(94,234,212,0.7)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">ANALYSE</text>
           <text x="720" y="73" fill="rgba(94,234,212,0.6)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">EXECUTE</text>
           <text x="880" y="48" fill="rgba(94,234,212,0.5)" font-family="JetBrains Mono,monospace" font-size="7" text-anchor="middle" letter-spacing="1">OUTPUT</text>
-
-          <!-- Moving data packets -->
-          <circle r="3" fill="#5eead4" style="offset-path:path('M80,90 L400,90'); offset-distance:0%; animation:pkt1 4s linear infinite; opacity:0;"/>
-          <circle r="2.5" fill="#5eead4" style="offset-path:path('M220,55 L400,90'); offset-distance:0%; animation:pkt2 3.5s linear infinite 1s; opacity:0;"/>
-          <circle r="3" fill="#5eead4" style="offset-path:path('M400,90 L720,80'); offset-distance:0%; animation:pkt3 4.5s linear infinite 0.5s; opacity:0;"/>
-          <circle r="2" fill="rgba(94,234,212,0.8)" style="offset-path:path('M560,45 L880,55'); offset-distance:0%; animation:pkt4 3.8s linear infinite 2s; opacity:0;"/>
+          <circle r="3" fill="#5eead4" style="offset-path:path('M80,90 L400,90');offset-distance:0%;animation:pkt1 4s linear infinite;opacity:0;"/>
+          <circle r="2.5" fill="#5eead4" style="offset-path:path('M220,55 L400,90');offset-distance:0%;animation:pkt2 3.5s linear infinite 1s;opacity:0;"/>
+          <circle r="3" fill="#5eead4" style="offset-path:path('M400,90 L720,80');offset-distance:0%;animation:pkt3 4.5s linear infinite 0.5s;opacity:0;"/>
+          <circle r="2" fill="rgba(94,234,212,0.8)" style="offset-path:path('M560,45 L880,55');offset-distance:0%;animation:pkt4 3.8s linear infinite 2s;opacity:0;"/>
         </svg>
-
-        <!-- Status bar -->
-        <div style="padding:0.625rem 1.25rem; border-top:1px solid rgba(255,255,255,0.06); display:flex; gap:2rem; flex-wrap:wrap;">
-          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em;"><span style="color:#5eead4;">●</span> 4 agents active</span>
-          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em;"><span style="color:#5eead4;">●</span> evals passing 96/100</span>
-          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em;"><span style="color:#5eead4;">●</span> guardrails active</span>
-          <span style="font-family:var(--font-mono); font-size:0.625rem; color:#475569; letter-spacing:0.1em; margin-left:auto;">latency 94ms ↓</span>
+        <div class="graph-statusbar">
+          <span class="gstat"><span style="color:#5eead4;">●</span> 4 agents active</span>
+          <span class="gstat"><span style="color:#5eead4;">●</span> evals 96/100</span>
+          <span class="gstat"><span style="color:#5eead4;">●</span> guardrails active</span>
+          <span class="gstat" style="margin-left:auto;">latency 94ms ↓</span>
         </div>
       </div>
 
-      <!-- Meta bar -->
-      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:0; border:1px solid rgba(255,255,255,0.07); border-radius:12px; overflow:hidden; margin-top:1.5rem;" class="sm:grid-cols-4">
+      <!-- Mobile: simplified terminal block instead of full graph -->
+      <div class="md:hidden mobile-terminal" aria-hidden="true">
+        <div class="mobile-terminal-bar">
+          <span class="live-dot"><span class="live-dot-pulse"></span>AGENT NETWORK · LIVE</span>
+        </div>
+        <div class="mobile-terminal-body">
+          <div><span style="color:#5eead4;">$</span> aia deploy --agent=inbox_triage</div>
+          <div style="color:#475569;">  › evals passing · 96/100</div>
+          <div style="color:#475569;">  › guardrails active · 12 policies</div>
+          <div><span style="color:#10b981;">✓</span> live · first-week results queued</div>
+        </div>
+      </div>
+
+      <!-- Meta bar: 2×2 on mobile, 4×1 on sm+ -->
+      <div class="meta-bar">
         {[
           ['LOCATION', 'London, UK'],
-          ['STATUS', 'Q3 Engagements Open'],
+          ['STATUS', 'Q3 Open'],
           ['FOUNDED', '2025'],
           ['GDPR', 'Registered'],
-        ].map(([k, v], i) => (
-          <div style={`padding:1.25rem 1.5rem; ${i < 3 ? 'border-right:1px solid rgba(255,255,255,0.06);' : ''} border-top:1px solid rgba(255,255,255,0.06);`}>
-            <div style="font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:#5eead4; margin-bottom:0.375rem;">{k}</div>
-            <div style="font-family:var(--font-grotesk); font-size:0.9375rem; font-weight:500; color:#f0f9ff;">{v}</div>
+        ].map(([k, v]) => (
+          <div class="meta-cell">
+            <div class="meta-key">{k}</div>
+            <div class="meta-val">{v}</div>
           </div>
         ))}
       </div>
@@ -212,23 +186,23 @@ const faqs = [
   </section>
 
   <!-- ─── [01] PROCEDURE ────────────────────────────────────── -->
-  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
+  <section class="sig-section" style="background:#080f1e;">
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[01]</span> <span>Procedure</span></span>
         <h2>Three steps to working AI.</h2>
       </div>
-      <div style="display:grid; grid-template-columns:1fr; gap:1.25rem;" class="md:grid-cols-3">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {[
           { n: '01', label: 'Free', title: 'Discovery Call', body: '30 minutes. We listen, assess your situation, and tell you honestly whether AI can help. If not, we say so.' },
           { n: '02', label: 'Fixed fee', title: 'AI Readiness Assessment', body: 'A structured audit of your data, processes, and team. You leave with a prioritised roadmap and clear ROI ranges.' },
           { n: '03', label: 'Scoped', title: 'Engagement', body: 'Strategy, pilot, or full implementation — scoped against your assessment findings. No surprises, no scope creep.' },
         ].map((step, i) => (
-          <div class="signal-card" style={i === 0 ? 'background:linear-gradient(155deg, rgba(13,148,136,0.08), transparent 60%);' : ''}>
-            <div style="font-family:var(--font-mono); font-size:3.5rem; color:#5eead4; font-weight:400; letter-spacing:-0.04em; line-height:1; margin-bottom:1.25rem;" class="text-glow">{step.n}</div>
+          <div class="signal-card" style={i === 0 ? 'background:linear-gradient(155deg,rgba(13,148,136,0.08),transparent 60%);' : ''}>
+            <div class="step-num text-glow">{step.n}</div>
             <span class="mono-tag" style="margin-bottom:0.875rem;">{step.label}</span>
-            <h3 style="font-family:var(--font-grotesk); font-size:1.375rem; font-weight:500; letter-spacing:-0.02em; margin:0 0 0.75rem; color:#f0f9ff;">{step.title}</h3>
-            <p style="font-size:0.9375rem; line-height:1.65; color:#64748b; margin:0;">{step.body}</p>
+            <h3 class="step-title">{step.title}</h3>
+            <p class="step-body">{step.body}</p>
           </div>
         ))}
       </div>
@@ -236,60 +210,58 @@ const faqs = [
   </section>
 
   <!-- ─── [02] CAPABILITIES ─────────────────────────────────── -->
-  <section style="background:#0d1625; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
+  <section class="sig-section sig-section-alt">
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[02]</span> <span>Capabilities</span></span>
         <h2>Services that ship.</h2>
       </div>
-      <div style="display:grid; grid-template-columns:1fr; gap:1rem;" class="md:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((svc) => (
-          <a href={svc.href} class="signal-card" style="text-decoration:none; display:flex; flex-direction:column;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.125rem;">
-              <div style="width:40px; height:40px; border-radius:8px; background:rgba(13,148,136,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <a href={svc.href} class="signal-card svc-card">
+            <div class="svc-card-top">
+              <div class="svc-icon">
                 <svg width="20" height="20" fill="none" stroke="#0d9488" stroke-width="1.5" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d={svc.icon}/>
                 </svg>
               </div>
-              <span style="color:#475569; font-size:1.125rem; transition:transform 0.2s, color 0.2s;" class="hover-arrow">→</span>
+              <span class="svc-arrow">→</span>
             </div>
             <span class="mono-tag-accent">{svc.tag}</span>
-            <h3 style="font-family:var(--font-grotesk); font-size:1.1875rem; font-weight:500; letter-spacing:-0.02em; margin:0 0 0.625rem; color:#f0f9ff; flex:1;">{svc.title}</h3>
-            <p style="font-size:0.875rem; line-height:1.65; color:#64748b; margin:0 0 1rem;">{svc.description}</p>
-            <span style="font-family:var(--font-mono); font-size:0.75rem; color:#0d9488; letter-spacing:0.06em;">VIEW SERVICE →</span>
+            <h3 class="svc-title">{svc.title}</h3>
+            <p class="svc-desc">{svc.description}</p>
+            <span class="svc-cta">VIEW SERVICE →</span>
           </a>
         ))}
       </div>
-      <div style="text-align:center; margin-top:2.5rem;">
+      <div class="section-cta">
         <a href="/what-we-do/" class="btn-outline">View All Services</a>
       </div>
     </div>
   </section>
 
-  <!-- ─── [03] EVIDENCE ────────────────────────────────────���─ -->
-  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06); position:relative; overflow:hidden;">
-    <!-- Waveform ambient top -->
-    <div style="position:absolute; top:0; left:0; right:0; height:80px; pointer-events:none; opacity:0.4;" aria-hidden="true">
-      <div class="waveform-row" id="wf-top" style="padding:0 1.5rem;"></div>
+  <!-- ─── [03] EVIDENCE ────────────────────────────────────── -->
+  <section class="sig-section" style="background:#080f1e;overflow:hidden;">
+    <!-- Waveform ambient: overflow hidden on parent, so bars don't escape -->
+    <div class="wf-ambient wf-top" aria-hidden="true">
+      <div class="waveform-row" id="wf-top"></div>
     </div>
-    <!-- Waveform ambient bottom -->
-    <div style="position:absolute; bottom:0; left:0; right:0; height:60px; pointer-events:none; opacity:0.25; transform:scaleY(-1);" aria-hidden="true">
-      <div class="waveform-row" id="wf-bottom" style="padding:0 1.5rem;"></div>
+    <div class="wf-ambient wf-bottom" aria-hidden="true">
+      <div class="waveform-row" id="wf-bottom"></div>
     </div>
-
     <div class="container" style="position:relative;">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[03]</span> <span>Evidence</span></span>
         <h2>Proof, not promises.</h2>
       </div>
-      <div style="display:grid; grid-template-columns:1fr; gap:1.25rem;" class="md:grid-cols-3">
-        {results.map((r, i) => (
-          <div class="signal-card" style="position:relative; overflow:hidden;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, #0d9488, rgba(94,234,212,0.3), transparent);"></div>
-            <div style="font-family:var(--font-grotesk); font-size:5rem; font-weight:500; color:#5eead4; letter-spacing:-0.05em; line-height:1; margin-bottom:0.75rem;" class="text-glow">{r.metric}</div>
-            <p style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.2em; color:#475569; margin:0 0 0.5rem; text-transform:uppercase;">{r.metricLabel}</p>
-            <h3 style="font-family:var(--font-grotesk); font-size:1.0625rem; font-weight:500; color:#f0f9ff; margin:0 0 0.5rem;">{r.headline}</h3>
-            <p style="font-size:0.875rem; color:#64748b; line-height:1.6; margin:0;">{r.description}</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {results.map((r) => (
+          <div class="signal-card stat-card">
+            <div class="stat-top-line"></div>
+            <div class="stat-num text-glow">{r.metric}</div>
+            <p class="stat-label">{r.metricLabel}</p>
+            <h3 class="stat-title">{r.headline}</h3>
+            <p class="stat-desc">{r.description}</p>
           </div>
         ))}
       </div>
@@ -297,15 +269,29 @@ const faqs = [
   </section>
 
   <!-- ─── [04] INDUSTRIES ───────────────────────────────────── -->
-  <section style="background:#0d1625; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
+  <section class="sig-section sig-section-alt">
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[04]</span> <span>Industries</span></span>
         <h2>For your sector.</h2>
       </div>
-      <div style="display:grid; grid-template-columns:1fr; gap:1.5rem;" class="md:grid-cols-[240px_1fr]">
-        <!-- Tab list -->
-        <div style="display:flex; flex-direction:column; gap:2px; border-left:1px solid rgba(255,255,255,0.07);" role="tablist" aria-label="Industries">
+      <!-- Mobile: horizontal scrolling tab pills -->
+      <div class="ind-tabs-mobile" role="tablist" aria-label="Industries">
+        {industries.map((ind, i) => (
+          <button
+            class:list={['ind-pill', i === 0 ? 'active' : '']}
+            data-ind={i}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            aria-controls={`ind-panel-${i}`}
+          >
+            {ind.title}
+          </button>
+        ))}
+      </div>
+      <!-- Desktop: sidebar layout -->
+      <div class="ind-layout">
+        <div class="ind-sidebar" role="tablist" aria-label="Industries">
           {industries.map((ind, i) => (
             <button
               class:list={['industry-tab', i === 0 ? 'active' : '']}
@@ -319,62 +305,61 @@ const faqs = [
             </button>
           ))}
         </div>
-        <!-- Panels -->
-        {industries.map((ind, i) => (
-          <div
-            id={`ind-panel-${i}`}
-            role="tabpanel"
-            class="signal-card"
-            style={`background:linear-gradient(160deg, rgba(13,148,136,0.06), transparent 60%); ${i !== 0 ? 'display:none;' : ''}`}
-          >
-            <div style="font-family:var(--font-mono); font-size:0.6875rem; letter-spacing:0.2em; color:#5eead4; margin-bottom:1rem;">{ind.code} · {ind.title.toUpperCase()}</div>
-            <h3 style="font-family:var(--font-grotesk); font-size:clamp(1.5rem,3vw,2.5rem); font-weight:500; letter-spacing:-0.025em; margin:0 0 1rem; color:#f0f9ff;">{ind.title}</h3>
-            <p style="font-size:1.0625rem; line-height:1.65; color:#94a3b8; margin:0 0 1.5rem; max-width:600px;">{ind.blurb}</p>
-            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-              {ind.tags.map(tag => (
-                <span class="mono-tag">{tag}</span>
-              ))}
+        <div class="ind-panels">
+          {industries.map((ind, i) => (
+            <div
+              id={`ind-panel-${i}`}
+              role="tabpanel"
+              class="signal-card ind-panel"
+              style={i !== 0 ? 'display:none;' : ''}
+            >
+              <div class="ind-code">{ind.code} · {ind.title.toUpperCase()}</div>
+              <h3 class="ind-title">{ind.title}</h3>
+              <p class="ind-blurb">{ind.blurb}</p>
+              <div class="ind-tags">
+                {ind.tags.map(tag => <span class="mono-tag">{tag}</span>)}
+              </div>
+              <a href={`/industries/${ind.title.toLowerCase()}/`} class="ind-link">
+                EXPLORE {ind.title.toUpperCase()} AI →
+              </a>
             </div>
-            <a href={`/industries/${ind.title.toLowerCase()}/`} style="display:inline-flex; align-items:center; gap:0.5rem; margin-top:1.5rem; font-family:var(--font-mono); font-size:0.75rem; color:#0d9488; letter-spacing:0.06em; text-decoration:none;">
-              EXPLORE {ind.title.toUpperCase()} AI →
-            </a>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <div style="text-align:center; margin-top:2.5rem;">
+      <div class="section-cta">
         <a href="/industries/" class="btn-outline">View All Industries</a>
       </div>
     </div>
   </section>
 
   <!-- ─── [05] DIFFERENTIATORS ─────────────────────────────── -->
-  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
+  <section class="sig-section" style="background:#080f1e;">
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[05]</span> <span>About</span></span>
         <h2>Built by practitioners.</h2>
       </div>
-      <div style="display:grid; grid-template-columns:1fr; gap:1.25rem;" class="md:grid-cols-3">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {[
           { n: '01', title: 'We ship working systems', body: 'This website ranked on Google and generated an enterprise lead within 7 days. We build with the same speed and rigour for our clients.' },
           { n: '02', title: 'Transparent pricing', body: 'Fixed-fee assessments. Clear scoping. No hidden costs, no billable hour surprises. You know what you are paying before we start.' },
           { n: '03', title: 'UK expertise, founder-led', body: 'You work directly with the founder. We understand UK regulation, GDPR, and the business landscape. No junior consultants, no handoffs.' },
         ].map(f => (
           <div class="signal-card">
-            <div style="font-family:var(--font-mono); font-size:2.25rem; color:#5eead4; font-weight:400; letter-spacing:-0.03em; line-height:1; margin-bottom:1.25rem;" class="text-glow">{f.n}</div>
-            <h3 style="font-family:var(--font-grotesk); font-size:1.1875rem; font-weight:500; letter-spacing:-0.01em; margin:0 0 0.75rem; color:#f0f9ff;">{f.title}</h3>
-            <p style="font-size:0.9375rem; line-height:1.65; color:#64748b; margin:0;">{f.body}</p>
+            <div class="diff-num text-glow">{f.n}</div>
+            <h3 class="diff-title">{f.title}</h3>
+            <p class="diff-body">{f.body}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ─── [06] TECHNOLOGY STACK ─────────────────────────────── -->
-  <section style="background:#0d1625; padding:3rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06);">
+  <!-- ─── [06] TECH STACK ───────────────────────────────────── -->
+  <section class="sig-section-sm sig-section-alt">
     <div class="container">
-      <p style="text-align:center; font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.2em; color:#475569; text-transform:uppercase; margin-bottom:2rem;">// TECHNOLOGY STACK</p>
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2.5rem;">
+      <p class="stack-label">// TECHNOLOGY STACK</p>
+      <div class="flex flex-wrap justify-center items-center gap-8">
         {['OpenAI', 'Anthropic', 'Google Cloud', 'Microsoft Azure', 'AWS', 'Hugging Face'].map(name => (
           <span class="trust-bar-logo">{name}</span>
         ))}
@@ -382,25 +367,25 @@ const faqs = [
     </div>
   </section>
 
-  <!-- ─── [07] FAQ ────────────────────────────────────────���─── -->
-  <section style="background:#080f1e; padding:6rem 1.5rem; border-top:1px solid rgba(255,255,255,0.06);">
-    <div class="container" style="max-width:900px;">
+  <!-- ─── [07] FAQ ──────────────────────────────────────────── -->
+  <section class="sig-section" style="background:#080f1e;">
+    <div class="container faq-container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[07]</span> <span>FAQ</span></span>
         <h2>Common questions.</h2>
       </div>
-      <div style="border-top:1px solid rgba(255,255,255,0.07);">
+      <div class="faq-list">
         {faqs.map((f, i) => (
-          <details style="border-bottom:1px solid rgba(255,255,255,0.07);" class="signal-faq">
-            <summary style="display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0.25rem; cursor:pointer; list-style:none; gap:1rem;">
-              <span style="display:flex; gap:1.25rem; align-items:baseline; font-family:var(--font-sans);">
-                <span style="font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.16em; color:#5eead4; min-width:36px;">Q.0{i + 1}</span>
-                <span style="font-size:1.0625rem; font-weight:500; color:#f0f9ff;">{f.q}</span>
+          <details class="signal-faq">
+            <summary class="faq-summary">
+              <span class="faq-inner">
+                <span class="faq-qnum">Q.0{i + 1}</span>
+                <span class="faq-q">{f.q}</span>
               </span>
-              <span class="faq-icon" style="font-size:1.25rem; color:#475569; flex-shrink:0; transition:transform 0.2s;">+</span>
+              <span class="faq-icon">+</span>
             </summary>
-            <div style="padding:0 0.25rem 1.5rem 3.5rem; max-width:800px;">
-              <p style="margin:0; font-size:0.9375rem; line-height:1.75; color:#64748b;">{f.a}</p>
+            <div class="faq-answer">
+              <p>{f.a}</p>
             </div>
           </details>
         ))}
@@ -421,119 +406,577 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  /* FAQ rotate + icon */
-  details.signal-faq[open] .faq-icon {
-    transform: rotate(45deg);
-    color: #0d9488;
+  /* ── SECTION SPACING ─────────────────────────────────────── */
+  .sig-section {
+    padding: 3.5rem 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
-  details.signal-faq summary::-webkit-details-marker { display: none; }
-
-  /* Responsive grid overrides */
+  .sig-section-alt {
+    background: #0d1625;
+  }
+  .sig-section-sm {
+    padding: 2.5rem 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
   @media (min-width: 768px) {
-    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-    .md\:grid-cols-\[240px_1fr\] { grid-template-columns: 240px 1fr; }
-    .md\:grid-cols-\[1\.2fr_auto\] { grid-template-columns: 1.2fr auto; }
+    .sig-section { padding: 5.5rem 1.5rem; }
+    .sig-section-sm { padding: 3rem 1.5rem; }
+  }
+
+  /* ── HERO ────────────────────────────────────────────────── */
+  .hero-section {
+    background: #080f1e;
+    padding: 3.5rem 1.25rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (min-width: 768px) {
+    .hero-section { padding: 5rem 1.5rem 6rem; }
+  }
+
+  .hero-meta-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-headline {
+    font-family: var(--font-grotesk);
+    font-size: clamp(2.25rem, 9vw, 6.5rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 0.92;
+    margin-bottom: 1.5rem;
+    color: #f0f9ff;
+  }
+  @media (min-width: 768px) {
+    .hero-headline { margin-bottom: 2rem; }
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #94a3b8;
+    margin: 0 0 1.75rem;
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    .hero-sub { font-size: 1.1875rem; margin-bottom: 2rem; }
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: 480px) {
+    .hero-ctas { flex-direction: row; flex-wrap: wrap; }
+  }
+  .hero-ctas .btn-glow,
+  .hero-ctas .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  @media (min-width: 480px) {
+    .hero-ctas .btn-glow,
+    .hero-ctas .btn-outline { width: auto; }
+  }
+
+  /* ── GRAPH (desktop only) ─────────────────────────────────── */
+  .graph-wrapper {
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+  .graph-topbar {
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+  .graph-path {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: #475569;
+    letter-spacing: 0.1em;
+  }
+  .graph-statusbar {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .gstat {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: #475569;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── MOBILE TERMINAL (mobile only) ───────────────────────── */
+  .mobile-terminal {
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.25);
+    margin-bottom: 1.25rem;
+  }
+  .mobile-terminal-bar {
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+  }
+  .mobile-terminal-bar::after {
+    content:'';
+    position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,#0d9488,transparent);
+  }
+  .mobile-terminal-body {
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 2;
+    color: #94a3b8;
+  }
+
+  /* ── META BAR ─────────────────────────────────────────────── */
+  .meta-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    overflow: hidden;
   }
   @media (min-width: 640px) {
-    .sm\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .meta-bar { grid-template-columns: repeat(4, 1fr); }
   }
-  @media (min-width: 1024px) {
-    .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .meta-cell {
+    padding: 1rem 1.125rem;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .meta-cell:nth-child(2n) { border-right: none; }
+  .meta-cell:nth-child(3),
+  .meta-cell:nth-child(4) { border-bottom: none; }
+  @media (min-width: 640px) {
+    .meta-cell { border-right: 1px solid rgba(255,255,255,0.06); border-bottom: none; }
+    .meta-cell:nth-child(2n) { border-right: 1px solid rgba(255,255,255,0.06); }
+    .meta-cell:last-child { border-right: none; }
+    .meta-cell:nth-child(3) { border-bottom: none; }
+  }
+  .meta-key {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: #5eead4;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+  .meta-val {
+    font-family: var(--font-grotesk);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #f0f9ff;
+  }
+  @media (min-width: 640px) {
+    .meta-val { font-size: 0.9375rem; }
   }
 
-  /* SVG graph node animations */
-  @keyframes node-a { 0%,100%{opacity:.4;} 50%{opacity:.9;} }
-  @keyframes node-b { 0%,100%{opacity:.6;} 50%{opacity:1;} }
-  @keyframes node-main { 0%,100%{opacity:.8;} 50%{opacity:1; filter:drop-shadow(0 0 12px #5eead4);} }
-  @keyframes node-c { 0%,100%{opacity:.5;} 50%{opacity:.9;} }
-  @keyframes node-d { 0%,100%{opacity:.6;} 50%{opacity:1;} }
-  @keyframes node-e { 0%,100%{opacity:.3;} 50%{opacity:.7;} }
-  @keyframes node-f { 0%,100%{opacity:.3;} 50%{opacity:.6;} }
-  @keyframes ring-a { 0%,100%{opacity:.2; r:9;} 50%{opacity:.5; r:13;} }
-  @keyframes ring-b { 0%,100%{opacity:.2; r:12;} 50%{opacity:.5; r:17;} }
-  @keyframes ring-main { 0%,100%{opacity:.25; r:15;} 50%{opacity:.6; r:22;} }
-  @keyframes ring-c { 0%,100%{opacity:.15; r:11;} 50%{opacity:.4; r:16;} }
-  @keyframes ring-d { 0%,100%{opacity:.15; r:12;} 50%{opacity:.4; r:17;} }
+  /* ── STEP CARDS ──────────────────────────────────────────── */
+  .step-num {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    color: #5eead4;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .step-title {
+    font-family: var(--font-grotesk);
+    font-size: 1.1875rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0.5rem 0 0.625rem;
+    color: #f0f9ff;
+  }
+  .step-body {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #64748b;
+    margin: 0;
+  }
 
-  /* Data packets */
-  @keyframes pkt1 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
-  @keyframes pkt2 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
-  @keyframes pkt3 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
-  @keyframes pkt4 { 0%{offset-distance:0%;opacity:0;} 8%{opacity:1;} 92%{opacity:1;} 100%{offset-distance:100%;opacity:0;} }
+  /* ── SERVICES ────────────────────────────────────────────── */
+  .svc-card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .svc-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.875rem;
+  }
+  .svc-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(13,148,136,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .svc-card:hover .svc-icon { background: rgba(13,148,136,0.2); }
+  .svc-arrow {
+    color: #475569;
+    font-size: 1rem;
+    transition: transform 0.2s, color 0.2s;
+  }
+  .svc-card:hover .svc-arrow { color: #5eead4; transform: translateX(4px); }
+  .svc-title {
+    font-family: var(--font-grotesk);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.5rem;
+    color: #f0f9ff;
+    flex: 1;
+    transition: color 0.2s;
+  }
+  .svc-card:hover .svc-title { color: #5eead4; }
+  .svc-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.65;
+    margin: 0 0 1rem;
+  }
+  .svc-cta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #0d9488;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── STATS ───────────────────────────────────────────────── */
+  .wf-ambient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 64px;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .wf-top { top: 0; opacity: 0.35; }
+  .wf-bottom { bottom: 0; opacity: 0.2; transform: scaleY(-1); }
+
+  .stat-card { position: relative; overflow: hidden; }
+  .stat-top-line {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0d9488, rgba(94,234,212,0.3), transparent);
+  }
+  .stat-num {
+    font-family: var(--font-grotesk);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 500;
+    color: #5eead4;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 0.625rem;
+  }
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: #475569;
+    margin: 0 0 0.375rem;
+    text-transform: uppercase;
+  }
+  .stat-title {
+    font-family: var(--font-grotesk);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f0f9ff;
+    margin: 0 0 0.375rem;
+  }
+  .stat-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── INDUSTRIES ──────────────────────────────────────────── */
+  /* Mobile: horizontal scroll pills */
+  .ind-tabs-mobile {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    scrollbar-width: none;
+  }
+  .ind-tabs-mobile::-webkit-scrollbar { display: none; }
+  @media (min-width: 768px) { .ind-tabs-mobile { display: none; } }
+
+  .ind-pill {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+  .ind-pill.active,
+  .ind-pill:hover { color: #f0f9ff; border-color: #0d9488; background: rgba(13,148,136,0.1); }
+
+  /* Desktop: sidebar layout */
+  .ind-layout { display: none; }
+  @media (min-width: 768px) {
+    .ind-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 1.5rem;
+    }
+  }
+  .ind-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-left: 1px solid rgba(255,255,255,0.07);
+  }
+  .ind-panels { min-height: 260px; }
+
+  .ind-code {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    color: #5eead4;
+    margin-bottom: 0.75rem;
+  }
+  .ind-title {
+    font-family: var(--font-grotesk);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    margin: 0 0 0.875rem;
+    color: #f0f9ff;
+  }
+  .ind-blurb {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #94a3b8;
+    margin: 0 0 1.25rem;
+    max-width: 560px;
+  }
+  .ind-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .ind-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #0d9488;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+  }
+  .ind-link:hover { color: #5eead4; }
+
+  /* Mobile industry panels: shown below pills */
+  @media (max-width: 767px) {
+    .ind-panels { display: block; }
+    .ind-panel { display: block !important; }
+    .ind-panel + .ind-panel { display: none !important; }
+  }
+
+  /* ── DIFFERENTIATORS ─────────────────────────────────────── */
+  .diff-num {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    color: #5eead4;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .diff-title {
+    font-family: var(--font-grotesk);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.625rem;
+    color: #f0f9ff;
+  }
+  .diff-body {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* ── TECH STACK ──────────────────────────────────────────── */
+  .stack-label {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: #475569;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── FAQ ─────────────────────────────────────────────────── */
+  .faq-container { max-width: 860px; }
+  .faq-list { border-top: 1px solid rgba(255,255,255,0.07); }
+  details.signal-faq { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .faq-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.25rem 0.25rem;
+    cursor: pointer;
+    list-style: none;
+    gap: 1rem;
+  }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-inner {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    font-family: var(--font-sans);
+  }
+  .faq-qnum {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    color: #5eead4;
+    min-width: 36px;
+    padding-top: 3px;
+    flex-shrink: 0;
+  }
+  .faq-q {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f0f9ff;
+    line-height: 1.4;
+  }
+  @media (min-width: 640px) {
+    .faq-q { font-size: 1.0625rem; }
+  }
+  .faq-icon {
+    font-size: 1.25rem;
+    color: #475569;
+    flex-shrink: 0;
+    transition: transform 0.2s, color 0.2s;
+    margin-top: 2px;
+  }
+  details.signal-faq[open] .faq-icon { transform: rotate(45deg); color: #0d9488; }
+  .faq-answer {
+    padding: 0 0.25rem 1.25rem 3.25rem;
+    max-width: 780px;
+  }
+  .faq-answer p { margin: 0; font-size: 0.9375rem; line-height: 1.75; color: #64748b; }
+
+  /* ── SHARED ─────────────────────────────────────────────── */
+  .section-cta { text-align: center; margin-top: 2rem; }
+  .signal-divider h2 { font-size: clamp(1.5rem, 4vw, 2.75rem); }
+
+  /* ── GRAPH NODE ANIMATIONS ───────────────────────────────── */
+  @keyframes nd-a { 0%,100%{opacity:.4}50%{opacity:.9} }
+  @keyframes nd-b { 0%,100%{opacity:.6}50%{opacity:1} }
+  @keyframes nd-main { 0%,100%{opacity:.8}50%{opacity:1;filter:drop-shadow(0 0 12px #5eead4)} }
+  @keyframes nd-c { 0%,100%{opacity:.5}50%{opacity:.9} }
+  @keyframes nd-d { 0%,100%{opacity:.6}50%{opacity:1} }
+  @keyframes nd-e { 0%,100%{opacity:.3}50%{opacity:.7} }
+  @keyframes nd-f { 0%,100%{opacity:.3}50%{opacity:.6} }
+  @keyframes rg-a { 0%,100%{opacity:.2;r:9}50%{opacity:.5;r:13} }
+  @keyframes rg-b { 0%,100%{opacity:.2;r:12}50%{opacity:.5;r:17} }
+  @keyframes rg-main { 0%,100%{opacity:.25;r:15}50%{opacity:.6;r:22} }
+  @keyframes rg-c { 0%,100%{opacity:.15;r:11}50%{opacity:.4;r:16} }
+  @keyframes rg-d { 0%,100%{opacity:.15;r:12}50%{opacity:.4;r:17} }
+  @keyframes pkt1 { 0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0} }
+  @keyframes pkt2 { 0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0} }
+  @keyframes pkt3 { 0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0} }
+  @keyframes pkt4 { 0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0} }
 </style>
 
 <script>
-  // Typewriter cycling phrases
+  // Typewriter
   const phrases = ['from week one.', 'that ship.', 'that stick.', 'that pay back.'];
   const target = document.getElementById('tw-target');
-  let idx = 0;
-  let charIdx = 0;
-  let deleting = false;
-  let paused = false;
-
+  let idx = 0, charIdx = 0, deleting = false, paused = false;
   function tick() {
     if (!target) return;
     const phrase = phrases[idx];
-
-    if (paused) {
-      paused = false;
-      setTimeout(tick, 1200);
-      return;
-    }
-
+    if (paused) { paused = false; setTimeout(tick, 1200); return; }
     if (!deleting) {
       target.textContent = phrase.slice(0, charIdx + 1);
       charIdx++;
-      if (charIdx === phrase.length) {
-        deleting = true;
-        paused = true;
-      }
+      if (charIdx === phrase.length) { deleting = true; paused = true; }
     } else {
       target.textContent = phrase.slice(0, charIdx - 1);
       charIdx--;
-      if (charIdx === 0) {
-        deleting = false;
-        idx = (idx + 1) % phrases.length;
-      }
+      if (charIdx === 0) { deleting = false; idx = (idx + 1) % phrases.length; }
     }
-
     setTimeout(tick, deleting ? 45 : 85);
   }
-
-  // Start after a short delay
   setTimeout(tick, 1500);
 
-  // Waveform bars generator
-  function buildWaveform(id: string, bars: number) {
+  // Waveform bars — fewer on mobile
+  function buildWaveform(id: string) {
     const container = document.getElementById(id);
     if (!container) return;
+    const bars = window.innerWidth < 640 ? 40 : 100;
     for (let i = 0; i < bars; i++) {
       const bar = document.createElement('div');
       bar.className = 'wb';
-      const delay = (Math.random() * 2).toFixed(2);
-      const duration = (0.6 + Math.random() * 1.4).toFixed(2);
-      bar.style.cssText = `animation:wave-bar ${duration}s ease-in-out infinite ${delay}s;`;
+      bar.style.cssText = `animation:wave-bar ${(0.6 + Math.random() * 1.4).toFixed(2)}s ease-in-out infinite ${(Math.random() * 2).toFixed(2)}s;`;
       container.appendChild(bar);
     }
   }
+  buildWaveform('wf-top');
+  buildWaveform('wf-bottom');
 
-  buildWaveform('wf-top', 120);
-  buildWaveform('wf-bottom', 100);
+  // Industry tabs — unified handler for both pill and sidebar tabs
+  function setupTabs() {
+    const allTabs = document.querySelectorAll<HTMLButtonElement>('[data-ind]');
+    const panels = document.querySelectorAll<HTMLElement>('[id^="ind-panel-"]');
 
-  // Industry tabs
-  const tabs = document.querySelectorAll<HTMLButtonElement>('.industry-tab');
-  const panels = document.querySelectorAll<HTMLElement>('[id^="ind-panel-"]');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const i = tab.dataset.ind;
-      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-      panels.forEach(p => { p.style.display = 'none'; });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      const panel = document.getElementById(`ind-panel-${i}`);
-      if (panel) panel.style.display = 'block';
+    allTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const i = tab.dataset.ind!;
+        // Update all tabs (both pill + sidebar) with same index
+        allTabs.forEach(t => {
+          t.classList.toggle('active', t.dataset.ind === i);
+          t.setAttribute('aria-selected', t.dataset.ind === i ? 'true' : 'false');
+        });
+        // Show matching panel only (on md+)
+        if (window.innerWidth >= 768) {
+          panels.forEach(p => { p.style.display = p.id === `ind-panel-${i}` ? 'block' : 'none'; });
+        }
+      });
     });
-  });
+  }
+  setupTabs();
 </script>
