@@ -96,10 +96,10 @@ const schemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
       `} />
     )}
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body>
     <a href="#main" class="skip-link">Skip to content</a>
     <Nav />
-    <main id="main" class="flex-1">
+    <main id="main" style="min-height: calc(100vh - 4rem);">
       <slot />
     </main>
     <Footer />

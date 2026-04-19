@@ -4,7 +4,7 @@ import { siteConfig, mainNav } from '@/data/site-config';
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50" style="background: #080f1e; border-bottom: 1px solid rgba(255,255,255,0.07); backdrop-filter: blur(12px);">
+<header id="site-nav" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 100; background: rgba(8, 15, 30, 0.85); border-bottom: 1px solid rgba(255,255,255,0.07); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: background 0.25s ease, border-color 0.25s ease;">
   <div class="container flex items-center justify-between" style="height: 4rem;">
 
     <!-- Signal logo + brand -->
@@ -105,6 +105,7 @@ const currentPath = Astro.url.pathname;
   const menu = document.getElementById('mobile-menu');
   const openIcon = document.getElementById('menu-open');
   const closeIcon = document.getElementById('menu-close');
+  const nav = document.getElementById('site-nav');
 
   toggle?.addEventListener('click', () => {
     const isOpen = menu?.classList.toggle('hidden') === false;
@@ -112,4 +113,18 @@ const currentPath = Astro.url.pathname;
     openIcon?.classList.toggle('hidden', isOpen);
     closeIcon?.classList.toggle('hidden', !isOpen);
   });
+
+  // Solidify nav background after scroll past hero
+  const setNavSolid = () => {
+    if (!nav) return;
+    if (window.scrollY > 12) {
+      nav.style.background = 'rgba(8, 15, 30, 0.96)';
+      nav.style.borderBottomColor = 'rgba(13, 148, 136, 0.18)';
+    } else {
+      nav.style.background = 'rgba(8, 15, 30, 0.85)';
+      nav.style.borderBottomColor = 'rgba(255,255,255,0.07)';
+    }
+  };
+  setNavSolid();
+  window.addEventListener('scroll', setNavSolid, { passive: true });
 </script>
