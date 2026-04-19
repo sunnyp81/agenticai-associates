@@ -53,6 +53,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* In-content anchor links — teal, underlined on hover */
+.prose a,
+article a:not(.btn-glow):not(.btn-outline):not(.btn-primary):not(.btn-white):not(.signal-card):not(.live-dot) {
+  color: #5eead4;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(94, 234, 212, 0.35);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.prose a:hover,
+article a:not(.btn-glow):not(.btn-outline):not(.btn-primary):not(.btn-white):not(.signal-card):not(.live-dot):hover {
+  color: #99f6e4;
+  border-bottom-color: #5eead4;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
