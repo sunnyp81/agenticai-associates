@@ -53,6 +53,34 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Reduce motion / mobile perf: kill backdrop-filter and heavy animations on small screens */
+@media (max-width: 767px) {
+  /* backdrop-filter on a sticky nav is the #1 cause of mobile scroll jank */
+  #site-nav {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #080f1e !important;
+  }
+  /* Scan overlay repeating-gradient repaint storm on scroll */
+  .scan-overlay { display: none; }
+  /* Cap waveform/pulse counts via animation-iteration could go here later */
+}
+
+/* Respect user's reduced-motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* GPU-promote the animated agent graph SVG */
+.agent-graph {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 /* In-content anchor links — teal, underlined on hover */
 .prose a,
 article a:not(.btn-glow):not(.btn-outline):not(.btn-primary):not(.btn-white):not(.signal-card):not(.live-dot) {

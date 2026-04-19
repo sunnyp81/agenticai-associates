@@ -123,40 +123,46 @@ const faqs = [
           <line class="edge e4" x1="170" y1="310" x2="300" y2="430"/>
           <line class="edge e5" x1="170" y1="310" x2="60"  y2="430"/>
 
-          <!-- Packets: SMIL <animateMotion> guarantees path-following in all browsers -->
-          <circle class="pkt p0" r="4" fill="#5eead4">
-            <animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"
-              path="M170,60 L60,190" rotate="0"/>
+          <!-- Packets: ONE smooth traversal per 9.6s cycle, gated by opacity to active window -->
+          <circle class="pkt" r="4" fill="#5eead4">
+            <animateMotion dur="9.6s" repeatCount="indefinite" begin="0s"
+              path="M170,60 L60,190" calcMode="linear"
+              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
             <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="0s"
               values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
           </circle>
-          <circle class="pkt p1" r="4" fill="#5eead4">
-            <animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"
-              path="M170,60 L300,190" rotate="0"/>
+          <circle class="pkt" r="4" fill="#5eead4">
+            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-1.6s"
+              path="M170,60 L300,190" calcMode="linear"
+              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
             <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-1.6s"
               values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
           </circle>
-          <circle class="pkt p2" r="4" fill="#5eead4">
-            <animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"
-              path="M60,190 L170,310" rotate="0"/>
+          <circle class="pkt" r="4" fill="#5eead4">
+            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-3.2s"
+              path="M60,190 L170,310" calcMode="linear"
+              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
             <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-3.2s"
               values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
           </circle>
-          <circle class="pkt p3" r="4" fill="#5eead4">
-            <animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"
-              path="M300,190 L170,310" rotate="0"/>
+          <circle class="pkt" r="4" fill="#5eead4">
+            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-4.8s"
+              path="M300,190 L170,310" calcMode="linear"
+              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
             <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-4.8s"
               values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
           </circle>
-          <circle class="pkt p4" r="4" fill="#5eead4">
-            <animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"
-              path="M170,310 L300,430" rotate="0"/>
+          <circle class="pkt" r="4" fill="#5eead4">
+            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-6.4s"
+              path="M170,310 L300,430" calcMode="linear"
+              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
             <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-6.4s"
               values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
           </circle>
-          <circle class="pkt p5" r="4" fill="#5eead4">
-            <animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"
-              path="M170,310 L60,430" rotate="0"/>
+          <circle class="pkt" r="4" fill="#5eead4">
+            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-8s"
+              path="M170,310 L60,430" calcMode="linear"
+              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
             <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-8s"
               values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
           </circle>
