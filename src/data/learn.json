@@ -1036,6 +1036,321 @@
         "text": "Preparing for a career in AI consulting? Explore our team and opportunities.",
         "href": "/contact/"
       }
+    },
+    {
+      "slug": "agentic-ai-vs-rpa",
+      "name": "Agentic AI vs RPA",
+      "title": "Agentic AI vs RPA: Which Is Right for Enterprise Automation? — Agentic AI Associates",
+      "description": "Agentic AI and RPA both automate work, but they fail and succeed at different things. A practical comparison for UK enterprise buyers — with a decision framework.",
+      "primaryKeyword": "agentic ai vs rpa",
+      "publishedAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "sections": [
+        {
+          "heading": "The Short Answer",
+          "slug": "the-short-answer",
+          "body": "<p>Robotic Process Automation (RPA) is the right tool when a process is stable, rule-based, and performed at high volume against systems that do not offer clean APIs. Agentic AI is the right tool when a process is variable, requires interpretation of unstructured input, or needs to reason across multiple systems and decide what to do next. Most enterprises end up using both — RPA for the brittle back-office workflows, agents for the knowledge work that sits on top.</p><p>The mistake most buyers make is treating them as competitors. They are complementary. The decision framework is not \"which one\" — it is \"which workflow goes to which\".</p><p>This page breaks down the differences that actually matter at enterprise scale, gives you a decision tree to apply to your own workflows, and flags the failure modes each approach produces so you know what you are signing up for.</p>"
+        },
+        {
+          "heading": "What RPA Actually Does Well",
+          "slug": "what-rpa-does-well",
+          "body": "<p>RPA replays human UI interactions against legacy systems. A bot opens an application, clicks the same buttons a human would click, reads the same screens, types the same data. When the process is stable and the screens never change, RPA is excellent — it never gets bored, never mistypes, and scales without headcount.</p><p>The sweet spot is high-volume, rule-based work against systems that do not offer APIs — invoice posting in older ERP systems, data migration between platforms, scheduled report extraction, and compliance checks that follow fixed logic. UiPath, Blue Prism, Automation Anywhere and Microsoft Power Automate all ship production-grade tooling for this class of problem.</p><p>The failure mode is equally well-known: RPA bots break when the UI changes. A system upgrade, a new field, a changed layout — and the bot stops. Maintenance overhead grows faster than most programmes forecast, and the \"bot estate\" becomes a shadow IT problem within two to three years if nobody governs it.</p>"
+        },
+        {
+          "heading": "What Agentic AI Actually Does Well",
+          "slug": "what-agentic-ai-does-well",
+          "body": "<p>Agentic AI uses a reasoning model (typically an LLM) to interpret inputs, plan steps, call tools or APIs, observe results, and adapt. Instead of replaying a fixed sequence, an agent reasons about what the next step should be based on the current state of the world.</p><p>The sweet spot is variable work on unstructured inputs — reading a document and extracting what matters, triaging a customer email across multiple possible routes, drafting a response against a knowledge base, reconciling inconsistent data from two systems. Anywhere a human is currently making a judgement that requires reading, comparing, or summarising, an agent is a plausible candidate.</p><p>The failure modes are different and worth taking seriously. Agents hallucinate when they lack grounding, they can take expensive or irreversible actions if guardrails are weak, and their reasoning steps are harder to audit than an RPA flowchart. Production-grade agentic AI needs retrieval grounding, tool-use constraints, approval checkpoints for high-stakes actions, and observability that an auditor can read.</p>"
+        },
+        {
+          "heading": "A Decision Framework You Can Actually Use",
+          "slug": "decision-framework",
+          "body": "<p>For each candidate workflow, ask five questions in order. The answers point you cleanly to RPA, agents, or a hybrid.</p><ol><li><strong>Is the process stable?</strong> If the steps, systems and rules change more than twice a year, RPA will be brittle. Consider agents with a declarative policy instead.</li><li><strong>Is the input structured or unstructured?</strong> Structured input (CSV, fixed form fields) suits RPA. Unstructured input (email, PDF, free-text notes) suits agents.</li><li><strong>Does the process require judgement?</strong> Judgement needs a reasoning layer. Rule execution does not.</li><li><strong>Is the action reversible?</strong> High-stakes irreversible actions (payments, legal commitments, clinical decisions) need strong approval gates regardless of automation type, but agents specifically need extra care here.</li><li><strong>Do the systems have APIs?</strong> If yes, agents calling APIs will be more durable than RPA replaying screens. If no, RPA is often the only option.</li></ol><p>Most enterprise programmes land on a mix: RPA for the data-entry backbone, agents for the interpretation and orchestration on top, and a shared governance framework over both. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI work</a> and <a href=\"/what-we-do/ai-automation/\">automation approach</a> for how we scope these together.</p>"
+        },
+        {
+          "heading": "Cost, Governance and the Honest Trade-offs",
+          "slug": "cost-governance-trade-offs",
+          "body": "<p>Unit cost per transaction is usually lower for RPA once the bot is built — agents pay per token and the bill compounds at volume. At scale, that gap matters. Hybrid designs put the expensive reasoning step at the top of the funnel and the cheap execution step downstream.</p><p>Governance posture differs significantly. RPA lives in the SDLC world — version control, test environments, release management. Agentic AI adds model risk management, prompt-injection defence, retrieval grounding, and outcome monitoring. If you have an FCA, PRA, MHRA or Ofcom posture, the agent governance framework is typically heavier than the RPA equivalent.</p><p>The honest trade-off: RPA is cheaper to run but more expensive to maintain. Agents are more expensive to run but more resilient to change. The right balance depends on how stable your systems and processes actually are — which is a conversation worth having with someone who will tell you the uncomfortable truth, not the vendor-favourable one.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do I have to choose one or the other?",
+          "answer": "No — and most enterprises do not. RPA typically handles the structured, high-volume backbone; agents handle the interpretation and orchestration on top. A good programme governs both inside a single automation framework rather than letting them grow as separate silos."
+        },
+        {
+          "question": "Is agentic AI replacing RPA?",
+          "answer": "It is expanding what is automatable rather than replacing what is already automated. The RPA bots running stable back-office workflows are not the right thing to rewrite as agents — the workflows that never got RPA'd because they needed judgement are."
+        },
+        {
+          "question": "How do I know if a vendor is selling me agents or glorified RPA?",
+          "answer": "Ask whether the system reasons about its next step or executes a fixed sequence. Ask how the system handles an input it has never seen before. Ask what happens when a tool call fails. Genuine agentic systems have graceful failure modes; scripted systems break."
+        },
+        {
+          "question": "What is the typical cost difference at scale?",
+          "answer": "RPA unit cost is usually pennies per transaction once at volume. Agent unit cost depends on the model and the depth of reasoning, and can be orders of magnitude higher. Design patterns that keep the expensive reasoning step at the top of the funnel bring the blended cost down meaningfully."
+        },
+        {
+          "question": "How should governance differ between the two?",
+          "answer": "RPA needs SDLC discipline and bot estate governance. Agents add model documentation, prompt-injection defence, retrieval grounding, and outcome monitoring. Regulated sectors need both, plus a named accountable owner under frameworks like FCA SM&CR."
+        }
+      ],
+      "relatedLearnPages": ["agentic-ai-vs-chatbots", "in-house-ai-team-vs-consultancy", "build-vs-buy-ai-agents"],
+      "commercialCTA": {
+        "text": "Scoping agents or RPA (or both) for your enterprise? Start with an AI Readiness Assessment.",
+        "href": "/what-we-do/ai-readiness-assessment/"
+      }
+    },
+    {
+      "slug": "agentic-ai-vs-chatbots",
+      "name": "Agentic AI vs Chatbots",
+      "title": "Agentic AI vs Chatbots: Why the Difference Matters — Agentic AI Associates",
+      "description": "Chatbots and AI agents look similar in a demo and behave very differently in production. A practical comparison for UK enterprise buyers deciding between the two.",
+      "primaryKeyword": "agentic ai vs chatbots",
+      "publishedAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "sections": [
+        {
+          "heading": "The Short Answer",
+          "slug": "the-short-answer",
+          "body": "<p>A chatbot is a conversation interface. An AI agent is a system that does work — often with a conversation interface attached, sometimes without one at all. The distinction matters because buying a chatbot when you needed an agent produces a visibly underwhelming product, and buying an agent when you needed a chatbot produces an over-engineered support function.</p><p>Most of the \"AI chatbot\" products on the market today are somewhere on the spectrum between the two. The interesting question is not the name — it is what the system can actually do when the conversation ends.</p><p>This page walks through what each approach does well, how to tell what you actually bought, and how to scope an engagement so the deliverable matches the business outcome.</p>"
+        },
+        {
+          "heading": "What a Chatbot Actually Is",
+          "slug": "what-a-chatbot-is",
+          "body": "<p>A chatbot in the narrow sense answers questions. It takes a user input, retrieves or generates a response, and returns text. The most capable chatbots ground answers in your documentation and a knowledge base; the least capable ones rely on scripted flows that frustrate more than they help.</p><p>Modern LLM-powered chatbots — built on retrieval-augmented generation over your own content — are genuinely useful for support deflection, internal help desks, and HCP medical information inbound queries. They do one thing well: answer questions about a corpus you control, in the voice you want, with citations you can check.</p><p>The ceiling is also well defined. A chatbot can tell a customer their order status is \"delayed\"; it cannot re-route the shipment, compensate the customer, or escalate to a logistics partner. The moment the conversation requires an action in the world, you are in agent territory.</p>"
+        },
+        {
+          "heading": "What an Agent Actually Is",
+          "slug": "what-an-agent-is",
+          "body": "<p>An agent is a system that plans, calls tools, observes results, and adapts. The conversation (if there is one) is one of several inputs; the outputs include actions taken against real systems — updating a record, triggering a refund, scheduling a job, drafting a document for human approval.</p><p>The defining feature is not the LLM; it is the tool-use loop. An agent that only replies with text is a chatbot with a clever preamble. An agent that reads an email, identifies the intent, looks up the customer in the CRM, checks the order in the OMS, initiates a partial refund within policy, and drafts the response for a human to approve — that is doing work.</p><p>The production demands are correspondingly higher. Tool authentication, action reversibility, approval checkpoints for material decisions, observability across the full loop, and governance that a regulator can read. An agent is an operational system, not a conversation product.</p>"
+        },
+        {
+          "heading": "How to Tell What a Vendor Is Really Selling",
+          "slug": "how-to-tell",
+          "body": "<p>Vendor marketing has largely collapsed the distinction, so it falls to the buyer. Four questions separate chatbots from agents in a vendor conversation.</p><ol><li><strong>What does the system do after the reply?</strong> If nothing — it is a chatbot. If it takes an action in another system — it is at least partly an agent.</li><li><strong>How does it handle a tool failure?</strong> Chatbots do not have tools to fail. Agents have clear recovery paths when a tool call errors.</li><li><strong>Who approves high-stakes actions?</strong> Genuine agents have approval patterns for material decisions. If a demo shows the system acting without any human in the loop on something expensive or irreversible, ask harder questions.</li><li><strong>What is the audit trail?</strong> Chatbot logs show conversations. Agent logs show decisions, tool calls, results and approvals. A regulator reading the log should be able to reconstruct a specific action.</li></ol><p>If you want the capability but not the complexity, scope accordingly. Some workflows genuinely need only a chatbot. See our <a href=\"/what-we-do/conversational-ai/\">conversational AI approach</a> for where we recommend a chatbot, and our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> for where we recommend an agent instead.</p>"
+        },
+        {
+          "heading": "Which Business Outcomes Fit Each",
+          "slug": "which-outcomes-fit-each",
+          "body": "<p>Chatbots are the right tool when the outcome is \"answer the question\" or \"deflect the ticket\". Tier-one support inbound, internal help desks, product onboarding, medical information inbound, HR FAQ, sales enablement Q&A — all of these benefit from a grounded, conversational interface without needing to take action in other systems.</p><p>Agents are the right tool when the outcome is \"do the work\" or \"complete the transaction\". Claims triage, lead-to-test-drive coordination, SIM lifecycle operations, grant application drafting, matter intake, onboarding orchestration, churn-save drafting — all require reading, reasoning, calling tools, and updating systems of record.</p><p>The honest answer for a lot of enterprise buyers is that they need both — a chatbot interface sitting on top of an agent backbone. The interface is what the user sees; the agent is what actually moves the numbers. Scope both together rather than bolting an agent onto a chatbot project at month six.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is every AI chatbot now an agent?",
+          "answer": "No. Plenty of modern chatbots are genuinely just conversation interfaces over a knowledge base, and that is fine when the problem is \"answer the question\". The test is whether the system takes action in other systems, not whether it uses an LLM."
+        },
+        {
+          "question": "Do I need an agent if I only want to deflect support tickets?",
+          "answer": "Usually not. A grounded chatbot with good retrieval over your knowledge base will deflect tickets well. Agents become worth the complexity when the ticket needs an action — a refund, a rescheduling, a record update — not just an answer."
+        },
+        {
+          "question": "Can a chatbot evolve into an agent later?",
+          "answer": "Sometimes, but the architectural choices differ enough that retrofitting is often more painful than starting again. If you expect to take actions within 12 months, scope for agents from day one and use a chatbot interface on top."
+        },
+        {
+          "question": "What governance differences matter?",
+          "answer": "Chatbots need content grounding, tone control and hallucination monitoring. Agents add tool authorisation, action reversibility, approval gates, and outcome monitoring. Regulated sectors need a fuller model risk and accountability framework for agents."
+        },
+        {
+          "question": "How do I explain the difference to my board?",
+          "answer": "Chatbots answer questions; agents do work. A chatbot can tell a customer their order is late. An agent can reschedule the delivery, compensate the customer, and close the ticket — with the right guardrails and approvals."
+        }
+      ],
+      "relatedLearnPages": ["agentic-ai-vs-rpa", "build-vs-buy-ai-agents", "when-to-hire-an-ai-consultant"],
+      "commercialCTA": {
+        "text": "Figuring out whether you need a chatbot, an agent, or both? Start with an AI Readiness Assessment.",
+        "href": "/what-we-do/ai-readiness-assessment/"
+      }
+    },
+    {
+      "slug": "in-house-ai-team-vs-consultancy",
+      "name": "In-House AI Team vs Consultancy",
+      "title": "In-House AI Team vs AI Consultancy: Cost, Speed and Risk Compared — Agentic AI Associates",
+      "description": "Should you hire an in-house AI team or engage a consultancy? A practical comparison on cost, speed, risk, and what to do when you need both.",
+      "primaryKeyword": "in-house ai team vs consultancy",
+      "publishedAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "sections": [
+        {
+          "heading": "The Short Answer",
+          "slug": "the-short-answer",
+          "body": "<p>In-house is the right investment when AI is becoming a core capability of the business — something you intend to do continuously, not episodically. Consultancy is the right investment when you need to ship a specific outcome faster than hiring allows, or when you are early enough that the right shape of the in-house team is not yet obvious.</p><p>Most enterprises end up using both at different stages. Consultancy delivers the first two or three agentic workloads and leaves behind the architecture, governance posture, and operational runbooks. In-house takes over the ongoing portfolio and scales it. The failure mode is treating it as an either-or decision at a point when the business is not yet clear which capability it is building.</p><p>This page breaks down the real cost comparison (including hidden costs), the speed and risk trade-offs, and when to switch from one mode to the other.</p>"
+        },
+        {
+          "heading": "The Real Cost of an In-House AI Team",
+          "slug": "cost-in-house",
+          "body": "<p>A credible in-house AI capability in the UK rarely costs less than £600k-£900k a year loaded — a senior ML/AI lead (£120-£180k), two to three engineers (£90-£130k each), a product manager (£90-£120k), and the infrastructure, tooling and compute spend that goes with running production AI. That is before you count recruitment cost (typically 20-30% of first-year salary per hire) and the first-year productivity ramp on every new joiner.</p><p>Hiring timeline in the current market runs 4-6 months for the senior lead and 3-4 months for the engineers. That is calendar time in which no outcome is being shipped. For a business that has already identified a high-value workflow, the opportunity cost of a 6-month hiring cycle frequently exceeds the cost of engaging a consultancy to ship the workflow in 12 weeks.</p><p>The strategic case for in-house is never just cost — it is continuity. The team you build today will own the production systems for years. If AI is becoming a core capability, you want that knowledge inside. If AI is still a bet, you do not want the headcount committed until the bet is clearer.</p>"
+        },
+        {
+          "heading": "The Real Cost of an AI Consultancy",
+          "slug": "cost-consultancy",
+          "body": "<p>UK consultancy day rates for senior AI practitioners typically run £800-£1,500 per day for independent mid-market specialists and significantly higher for brand-name firms. A focused 8-12 week engagement landing a production agentic workload usually sits in the £40k-£150k range depending on scope, regulated sector loading, and integration complexity.</p><p>The compressed timeline is the main case for consultancy, not headcount arbitrage. A specialist team already has the patterns, the governance templates, the integration experience, and the scar tissue from prior deployments. They ship the first workload in a quarter while an in-house team is still recruiting the second engineer.</p><p>The failure mode to watch is engagement overspend — an initial £80k scope becomes a £400k programme because discovery kept finding new problems. Honest consultancies price fixed-fee against defined deliverables. If the scope shifts, the conversation is transparent and the client gets to decide, not discover.</p>"
+        },
+        {
+          "heading": "Speed, Risk and Hidden Trade-offs",
+          "slug": "speed-risk-trade-offs",
+          "body": "<p>Speed-to-first-outcome is the clearest trade-off. Consultancy wins on month one; in-house wins on year two and beyond if the portfolio grows as planned. The middle ground — year one — is where most mistakes get made, typically by scaling up in-house before the first outcome proves the case.</p><p>Risk profile differs too. In-house risk is people risk — the team you hired leaves, or the skill mix turns out wrong. Consultancy risk is continuity risk — the engagement ends and the operational knowledge leaves with the consultants unless deliberate handover is part of the contract. Good consultancy engagements treat knowledge transfer as a first-class deliverable, not a final-week slide deck.</p><p>The hidden trade-off most buyers miss: an in-house team will tell you what they can build; a consultancy will tell you what you should build. Both perspectives matter. If you only have one, you get either tech-driven roadmaps that ignore commercial priorities, or commercial roadmaps that miss technical dead ends. The mature pattern is to use both, deliberately.</p>"
+        },
+        {
+          "heading": "When to Switch from One to the Other",
+          "slug": "when-to-switch",
+          "body": "<p>Most enterprises pass through three predictable stages. Stage one: you have not yet shipped a production AI workload. Consultancy is almost always right — the cost of getting the architecture and governance wrong exceeds the cost of the engagement.</p><p>Stage two: one or two workloads are in production and the board is asking about the roadmap. This is the point to start hiring the in-house lead, while a consultancy ships workload three and hands over. The lead hires the team against a known, working architecture rather than a hypothesis.</p><p>Stage three: in-house runs the portfolio, consultancy is used selectively for spikes — new regulated sectors, specific technical depth (model fine-tuning, agent evaluation infrastructure), or governance reviews from an independent party. At this stage the relationship looks nothing like the stage-one engagement and both sides should expect that.</p><p>The failure mode is staying at stage one too long (consultancy-dependent with no internal capability) or jumping to stage three too early (fully in-house before the patterns are proven). See our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> for how we scope the starting point.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is consultancy always more expensive than in-house?",
+          "answer": "No. In the first 6-12 months, consultancy is almost always cheaper per outcome shipped because you pay only for the work, not the ramp time. Past 18-24 months in-house wins if the portfolio has grown enough to justify the committed headcount."
+        },
+        {
+          "question": "Can a consultancy help us hire our in-house team?",
+          "answer": "A good consultancy will help you scope the roles, interview candidates, and avoid hiring the wrong shape of team. That work sits outside the engagement deliverables but is one of the most valuable by-products of the right relationship."
+        },
+        {
+          "question": "How do we avoid consultancy lock-in?",
+          "answer": "Make knowledge transfer a first-class deliverable, not an afterthought. Own the code, the architecture, the runbooks and the evaluation data from day one. A consultancy that resists that is the wrong consultancy."
+        },
+        {
+          "question": "What size of business should go in-house first?",
+          "answer": "Very few. The case for in-house-first is strongest when AI is already a core capability — product companies shipping AI features, or data-rich businesses where the team will be productive immediately. For everyone else, consultancy ships the first outcome while the in-house decision clarifies."
+        },
+        {
+          "question": "How long should a typical consultancy engagement be?",
+          "answer": "A first engagement to ship a production workload is usually 8-16 weeks. Ongoing partnership relationships run longer but should be structured around defined deliverables, not open-ended retainer creep."
+        }
+      ],
+      "relatedLearnPages": ["when-to-hire-an-ai-consultant", "how-to-choose-an-ai-consultant", "agentic-ai-vs-rpa"],
+      "commercialCTA": {
+        "text": "Weighing in-house vs consultancy for your AI roadmap? Start with an AI Readiness Assessment.",
+        "href": "/what-we-do/ai-readiness-assessment/"
+      }
+    },
+    {
+      "slug": "agentic-ai-vs-generative-ai",
+      "name": "Agentic AI vs Generative AI",
+      "title": "Agentic AI vs Generative AI: What the Difference Actually Means — Agentic AI Associates",
+      "description": "Generative AI produces content. Agentic AI does work. A practical distinction for enterprise buyers deciding what to build first.",
+      "primaryKeyword": "agentic ai vs generative ai",
+      "publishedAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "sections": [
+        {
+          "heading": "The Short Answer",
+          "slug": "the-short-answer",
+          "body": "<p>Generative AI is the capability — a model that produces text, images, code or audio from a prompt. Agentic AI is an architecture that uses generative AI as one component to accomplish multi-step work, with tools, memory, and goals. Put differently: generative AI is an engine; agentic AI is a vehicle built around the engine.</p><p>The confusion is understandable because vendors market both under the same banner. The practical consequence is that enterprise buyers often pay for agentic AI when what they need is a generative AI deployment, or pay for a generative AI project when what they actually needed was an agent architecture from day one.</p><p>This page explains the distinction in terms that translate to scoping decisions — what to build first, what to build later, and what to avoid until the foundations are in place.</p>"
+        },
+        {
+          "heading": "Generative AI: The Capability",
+          "slug": "generative-ai-capability",
+          "body": "<p>Generative AI refers to models that produce novel output — most visibly the large language models (GPT, Claude, Gemini) but also image models (Midjourney, Stable Diffusion), code models (Copilot-style), and audio models. The model takes a prompt and returns a completion. That is the full cycle.</p><p>Enterprise applications of raw generative AI are genuine but narrower than the marketing suggests. First-draft content generation, summarisation of long documents, translation, basic classification, simple extraction. Each of these is valuable and often the right first step into AI for a business without prior experience.</p><p>The ceiling is reached quickly. Raw generative AI has no memory between interactions, no ability to take actions in other systems, and no grounding in your company's current data unless you wrap it. It is a very capable writing and thinking tool, not an operational system. See our <a href=\"/what-we-do/generative-ai/\">generative AI work</a> for where it genuinely earns its keep.</p>"
+        },
+        {
+          "heading": "Agentic AI: The Architecture",
+          "slug": "agentic-ai-architecture",
+          "body": "<p>Agentic AI is an architecture that uses one or more generative models as components in a larger system. The system has goals, memory (short-term working memory and sometimes long-term), access to tools (APIs, databases, search, other agents), and a control loop that reasons about what to do next.</p><p>An agent that processes customer onboarding reads the document the customer uploaded (generative AI for extraction), calls the KYC provider (tool use), compares against sanctions lists (tool use), scores the risk profile (possibly a traditional ML model), drafts an outcome letter (generative AI), and either completes or escalates (rule engine). Generative AI is one ingredient — probably three or four of the steps. The value is in the loop, not any single step.</p><p>This architectural shift changes the buying conversation. A generative AI project is typically weeks; an agentic project is typically months. A generative AI project ships content; an agentic project ships operational capability. The risk profile, governance needs, and commercial return all differ.</p>"
+        },
+        {
+          "heading": "When to Start with Generative AI",
+          "slug": "start-with-generative",
+          "body": "<p>If the business has no prior production AI experience, starting with a focused generative AI deployment is often the right move. Pick one high-volume content task — first-draft marketing copy, summarisation of board papers, customer-email drafting, internal knowledge-base Q&A — and ship it well. Learn the governance, the evaluation discipline, and the change management.</p><p>The learning from that first deployment is disproportionately valuable. Teams that have shipped one production generative AI workload make far better decisions on the next agentic project. Teams that try to start with a complex multi-agent system without that grounding tend to learn expensive lessons late.</p><p>The rule of thumb is that the first production AI workload in a business should be something the team can put into production in 6-10 weeks and measure against a specific metric. That is almost never a full agentic system.</p>"
+        },
+        {
+          "heading": "When to Invest in Agentic Architecture",
+          "slug": "invest-in-agentic",
+          "body": "<p>Once the team has shipped a generative workload and the business has identified a workflow where the bottleneck is not content — it is coordination, reasoning, or multi-system work — you are in agentic territory. Claims triage, lead-to-test-drive routing, SIM lifecycle operations, grant application drafting with funder-specific compliance — none of these are solved by a smart writing tool.</p><p>The investment is meaningfully larger. Agentic work requires a planning loop, tool authentication, memory architecture, approval patterns for material actions, retrieval grounding for accuracy, and observability across the full cycle. Governance adds model documentation, prompt-injection defence, and outcome monitoring. For regulated sectors, the framework extends further.</p><p>The return is also meaningfully larger when the use case fits. An agent replaces operational capability, not just content production. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> for how we scope this class of engagement.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is agentic AI just generative AI with extra steps?",
+          "answer": "Architecturally, yes — but the extra steps change everything. Memory, tools, approval gates, and the reasoning loop move the system from a writing tool to an operational one. The commercial and governance implications are different, and so are the risks."
+        },
+        {
+          "question": "Can I skip generative AI and go straight to agents?",
+          "answer": "You can, but it is rarely the cheapest route. Teams that start with a focused generative AI deployment learn the governance and evaluation discipline quickly, then apply it to the agent project. Jumping straight to agents without that foundation tends to cost more, not less."
+        },
+        {
+          "question": "Which models do agents actually use?",
+          "answer": "Usually a mix. A capable reasoning model for planning (GPT-4 class or equivalent), smaller models for specific tasks (extraction, classification), and sometimes traditional ML models for scoring. The agent orchestrates the right model for the right step."
+        },
+        {
+          "question": "How do costs compare?",
+          "answer": "Generative AI costs are per-token on the model and relatively predictable. Agent costs include model tokens, tool-call infrastructure, observability, and governance overhead. Per-outcome agent costs can be higher — but they replace operational capability, which usually justifies the investment when the use case fits."
+        },
+        {
+          "question": "Does my governance need to change?",
+          "answer": "Yes. Generative AI needs content governance — tone, brand, hallucination monitoring. Agentic AI adds tool authorisation, action reversibility, approval gates, and outcome monitoring. The regulatory framing also shifts because agents take actions, not just generate text."
+        }
+      ],
+      "relatedLearnPages": ["agentic-ai-vs-rpa", "agentic-ai-vs-chatbots", "build-vs-buy-ai-agents"],
+      "commercialCTA": {
+        "text": "Deciding between generative AI and agentic AI for your next project? Start with an AI Readiness Assessment.",
+        "href": "/what-we-do/ai-readiness-assessment/"
+      }
+    },
+    {
+      "slug": "build-vs-buy-ai-agents",
+      "name": "Build vs Buy: AI Agents",
+      "title": "Build vs Buy AI Agents: How to Choose the Right Path — Agentic AI Associates",
+      "description": "Build a custom AI agent, buy a vertical agent product, or pick a platform in between? A decision framework for UK enterprise buyers.",
+      "primaryKeyword": "build vs buy ai agents",
+      "publishedAt": "2026-04-22",
+      "updatedAt": "2026-04-22",
+      "sections": [
+        {
+          "heading": "The Short Answer",
+          "slug": "the-short-answer",
+          "body": "<p>Buy a vertical agent product when an off-the-shelf solution covers 80% of your workflow and the last 20% does not genuinely differentiate the business. Build custom when the workflow is part of your operational moat, touches deeply proprietary data, or requires a regulator posture no vendor covers by default. Use a platform (LangGraph, n8n, CrewAI, vendor-specific orchestrators) when the answer is \"mostly buy, some custom\" — which is the most common answer.</p><p>The mistake most buyers make is treating this as a binary. Build-vs-buy is three options, not two, and the right answer is usually a composition — buy the generic capabilities, build the differentiating ones, and choose a platform that lets both live together.</p><p>This page gives you a decision framework, the cost and risk trade-offs, and the common failure modes of each path.</p>"
+        },
+        {
+          "heading": "When to Buy",
+          "slug": "when-to-buy",
+          "body": "<p>Vertical AI agent products have matured significantly — sales development, customer support deflection, legal document review, sales ops automation, procurement. If your workflow is a commodity and your main differentiator is somewhere else in the business, buying is almost always the right answer.</p><p>The test is not \"can we build it cheaper\" (you probably cannot, given vendor scale) — the test is \"does owning this capability advance our competitive position\". If the answer is no, buy. If the answer is yes, the conversation gets more interesting.</p><p>Honest vendor selection matters. Ask what data leaves your estate. Ask how tenant isolation works. Ask for references from customers at your scale and in your sector. Ask what the exit path looks like if the vendor is acquired or goes out of business. A good vendor answers these questions plainly; a bad one deflects.</p>"
+        },
+        {
+          "heading": "When to Build",
+          "slug": "when-to-build",
+          "body": "<p>Custom build is the right answer when at least one of three conditions holds. First: the workflow is genuinely differentiating — your claim handling, your pricing engine, your content moderation posture — and off-the-shelf products would homogenise it. Second: the data is deeply proprietary in a way that cannot cross a vendor boundary — patient data under strict clinical governance, high-sensitivity financial data under a specific regulator posture, national-security-relevant data. Third: no vendor covers your sector credibly, which is more common than vendor marketing suggests.</p><p>Building is more expensive up front and cheaper long-term if the workflow matters enough to justify ownership. The real cost to watch is ongoing — maintenance, model upgrades, evaluation discipline, governance against evolving regulation. A custom agent is a system you will own for years, not a project that ends.</p><p>The failure mode is building generic capability that a vendor would have provided better. If three competing vendors offer what you were going to build, the buy conversation deserves another look.</p>"
+        },
+        {
+          "heading": "The Platform Middle Path",
+          "slug": "platform-middle-path",
+          "body": "<p>Most enterprises land on a composition — buy the generic capabilities (support deflection, sales development, meeting summarisation) and build the workflows that sit at the core of the operating model. The glue is an agentic platform.</p><p>The current landscape ranges from developer-focused frameworks (LangGraph, CrewAI, AutoGen) to low-code orchestrators (n8n, Make, Zapier with agentic features), to cloud-vendor platforms (Vertex AI Agent Builder, Azure AI Foundry, AWS Bedrock Agents), to bespoke enterprise platforms (Salesforce Agentforce, ServiceNow AI Agents, SAP Joule). Each has a different balance of ease, lock-in, and ceiling.</p><p>The platform decision deserves its own short engagement — it locks in data-flow patterns, vendor dependencies, and governance architecture for years. Getting it wrong is recoverable; getting it right the first time saves a lot of rework.</p>"
+        },
+        {
+          "heading": "A Decision Framework You Can Actually Use",
+          "slug": "decision-framework",
+          "body": "<p>For each candidate workflow, score it against five criteria. The pattern of answers points to build, buy, or platform.</p><ol><li><strong>Differentiation:</strong> does this workflow make the business visibly better than competitors? If yes → build. If no → buy or platform.</li><li><strong>Data sensitivity:</strong> can the data cross a vendor boundary under acceptable terms? If no → build. If yes → buy or platform.</li><li><strong>Regulatory posture:</strong> does your regulator require specific controls that no vendor covers? If yes → build. If no → buy or platform.</li><li><strong>Availability:</strong> do three or more credible vendors offer this capability? If yes → buy looks safe. If no → build or platform.</li><li><strong>Longevity:</strong> will this workflow still matter in three years? If no → buy or platform. If yes → factor long-term ownership cost into the build case.</li></ol><p>The output is usually a mixed portfolio — a handful of custom builds for the workflows that matter most, a larger set of bought products for everything else, and a platform that lets them coexist. See our <a href=\"/what-we-do/ai-strategy/\">AI strategy work</a> for how we scope this decision at portfolio level.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is building always more expensive?",
+          "answer": "Upfront — almost always. Over 3-5 years of ownership the comparison flips for workflows that genuinely matter, because vendor pricing tends to rise and lock-in compounds. The honest comparison is total cost of ownership, not year-one cost."
+        },
+        {
+          "question": "How do I avoid platform lock-in?",
+          "answer": "Keep your agent logic, evaluation data, and prompts portable — treat the platform as the runtime, not the source of truth. Store prompts and evaluations in version-controlled code, not the platform's proprietary format. Exit costs are low when the IP is yours."
+        },
+        {
+          "question": "What about open-source agent frameworks?",
+          "answer": "LangGraph, CrewAI, AutoGen and others are production-viable if the team has the engineering maturity to run them. The trade-off is flexibility versus the managed-service convenience of vendor platforms. Both have their place."
+        },
+        {
+          "question": "Should we build first and buy later, or the other way round?",
+          "answer": "Almost always buy-first, build-later. A bought product ships a working outcome quickly and teaches the team what the right custom build should look like. Building first without that context tends to produce the wrong system."
+        },
+        {
+          "question": "How do we know when to revisit the build-vs-buy decision?",
+          "answer": "Every 12-18 months is reasonable. The vendor landscape shifts, model capabilities shift, and your own priorities shift. A decision that made sense a year ago may no longer, and the cost of revisiting is low if you kept your agent logic portable."
+        }
+      ],
+      "relatedLearnPages": ["agentic-ai-vs-rpa", "agentic-ai-vs-chatbots", "in-house-ai-team-vs-consultancy"],
+      "commercialCTA": {
+        "text": "Facing a build-vs-buy decision on your AI roadmap? Start with an AI Readiness Assessment.",
+        "href": "/what-we-do/ai-readiness-assessment/"
+      }
     }
   ]
 }
