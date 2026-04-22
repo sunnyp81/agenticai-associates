@@ -1120,6 +1120,1228 @@
         "healthcare",
         "education"
       ]
+    },
+    {
+      "slug": "iot-connectivity",
+      "name": "AI for IoT & Connectivity",
+      "title": "AI Consultant for IoT & Connectivity Providers — Agentic AI Associates",
+      "description": "Agentic AI for IoT, M2M and connectivity providers. SIM lifecycle automation, tariff optimisation, network operations copilots, and churn prediction for MVNOs and carriers.",
+      "primaryKeyword": "ai for iot connectivity",
+      "icon": "strategy",
+      "intro": "<p>Connectivity providers sit on some of the richest operational data in the UK economy — millions of SIMs, billions of session records, live signalling from across the mobile core — and very little of it drives day-to-day decisions. Agentic AI changes that. Instead of dashboards humans rarely open, agents watch the data continuously and act: pausing a SIM before a fraud pattern completes, recommending a tariff switch before a customer churns, drafting an incident note the moment a cell cluster degrades.</p>\n<p>We work with UK IoT and M2M connectivity providers on exactly this class of problem — the kind where the value is not a single model but a persistent system that reasons, acts, and hands off to humans at the right points. Every engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps the BSS/OSS stack, signalling and charging feeds, and the team shape around them before we recommend anything.</p>\n<p>The connectivity stack is unforgiving. Five-nines uptime, regulator scrutiny, narrow hardware constraints on edge devices, and customers who notice outages in seconds. Nothing we build is a greenfield science project — we design against your existing core, your existing CRM, and the realities of your roaming partners.</p>",
+      "painPoints": [
+        {
+          "title": "SIM lifecycle operations are still manual",
+          "description": "Activation, suspension, tariff change, and end-of-life still move through tickets and spreadsheets in most operators. Each manual step is a latency cost and a margin leak, and none of it scales to connected-device volumes."
+        },
+        {
+          "title": "Fraud and anomaly detection lag the attack",
+          "description": "Roaming fraud, SIM-box abuse, and traffic pumping patterns are often only caught in the monthly reconciliation. By the time finance flags it, the loss has landed."
+        },
+        {
+          "title": "Tariff and plan decisions are made blind",
+          "description": "Operators see usage in aggregate but struggle to match each customer to the right plan in real time. Over-bundled customers churn on renewal; under-bundled ones generate margin-destroying overage support tickets."
+        },
+        {
+          "title": "Network and NOC teams drown in signal",
+          "description": "Alert fatigue across NOC, SOC and field-ops is the norm. Root-cause analysis for a cell-site issue still takes engineers hours of correlation across three or four systems that do not talk to each other."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Automation Across SIM and Device Lifecycles",
+          "body": "<p>We build agents that own specific operational workflows end-to-end. A SIM lifecycle agent handles activations, pauses, tariff swaps, and eUICC profile updates against your provisioning platform — with human approval baked in where policy demands it. A billing-exceptions agent clears the daily queue of unmatched CDRs, mediation errors, and roaming discrepancies in hours rather than days. A renewal agent triggers tariff re-recommendations based on actual usage against quota, not a blanket email. These are production agents with audit trails, rollback, and observability — not chatbots bolted onto a helpdesk. Read more about our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> and <a href=\"/what-we-do/ai-automation/\">intelligent automation</a> patterns.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Analysis of Signalling and Usage Data",
+          "body": "<p>Connectivity providers generate signalling, session, and charging data at a scale most industries never see. We build pipelines that turn that firehose into decision-grade signal: per-customer usage profiles, anomaly baselines at SIM level, and traffic-shape clustering that exposes which customers are approaching churn, upsell, or fraud thresholds. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns run on your data warehouse — we do not move raw CDRs off-platform unless your architecture requires it, and we design for the audit posture your regulators expect.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "AI Compliance Monitoring for Ofcom, PECR and GDPR",
+          "body": "<p>Connectivity providers sit under Ofcom, the PECR regime, the Telecommunications Security Act, and UK GDPR simultaneously. AI can do more than audit after the fact — we build monitoring agents that evaluate marketing consents before a campaign sends, flag data retention overruns against your retention schedule, and produce evidence packs on demand. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> is designed for sectors where a compliance slip is a reportable event, not a slap on the wrist.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Demand and Capacity Forecasting for Networks",
+          "body": "<p>Capacity planning in connectivity is never generic. Cell-site utilisation, roaming partner traffic, MVNO wholesale demand — each has a different seasonality and a different cost of getting it wrong. We train models on your own traffic history rather than sector averages, because a fleet-telematics customer base behaves nothing like a consumer IoT base. The output feeds capacity planning, wholesale negotiation, and infrastructure investment cases directly. See how our <a href=\"/what-we-do/applied-ai/\">applied AI</a> work translates the same forecasting patterns across sectors.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Connectivity Providers",
+          "body": "<p>Connectivity providers tend to get the most ROI from these clusters — each can ship as a standalone pilot in 8-12 weeks before scaling.</p>\n<ul>\n  <li><strong>SIM lifecycle automation:</strong> activation, suspension, tariff change, eUICC profile management, bulk operations with policy guardrails.</li>\n  <li><strong>Fraud and revenue assurance:</strong> roaming fraud detection, SIM-box pattern recognition, bypass detection, CDR reconciliation agents.</li>\n  <li><strong>Customer operations:</strong> tier-one support deflection, onboarding copilots for enterprise accounts, churn-risk detection with retention-offer routing.</li>\n  <li><strong>Network and NOC:</strong> alert triage and de-duplication, correlation across NOC/SOC/field-ops feeds, first-draft incident notes generated at page time.</li>\n  <li><strong>Commercial and wholesale:</strong> tariff optimisation per customer segment, wholesale partner margin analysis, contract renewal risk scoring.</li>\n</ul>\n<p>Pick one cluster, prove it in a quarter, then extend. The <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> output ranks all five against your data maturity, regulatory posture and commercial priorities.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with MVNOs as well as full MNOs?",
+          "answer": "Yes. The operational surface is different — an MVNO leans heavily on the host network's feeds and on its BSS — but the agentic AI patterns port cleanly. We have worked with UK connectivity businesses across the MVNO, M2M and IoT aggregator segments."
+        },
+        {
+          "question": "Can AI automate SIM provisioning safely?",
+          "answer": "Yes, when it is designed with policy guardrails and human approval points in the right places. We build agents that handle the volume cases automatically and escalate the edge cases — they do not make unilateral changes to customer billing or security posture without a defined approval path."
+        },
+        {
+          "question": "What systems do you integrate with?",
+          "answer": "We integrate with the common BSS/OSS, CRM and provisioning platforms you would expect — Salesforce, NetCracker, Amdocs, Oracle BRM, MATRIXX, and the major eUICC and SM-DP+ vendors — plus whatever in-house systems carry your customer, charging and signalling data."
+        },
+        {
+          "question": "How do you handle data residency and security?",
+          "answer": "All engagements are designed to UK data-residency and TSA requirements. We default to processing data inside your existing infrastructure rather than moving it to third-party platforms, and every system we build has an audit trail a regulator can read."
+        },
+        {
+          "question": "What does a first engagement look like?",
+          "answer": "Almost always an AI Readiness Assessment — a fixed-fee, fixed-scope engagement that maps your data, stack, and team capability and produces a prioritised roadmap. From there, implementation is scoped separately against the findings."
+        },
+        {
+          "question": "How long until a connectivity operator sees results?",
+          "answer": "A focused pilot — for example a SIM lifecycle automation agent or a fraud detection agent — typically ships in 8 to 12 weeks. Full programme scale-out across multiple workflows usually runs 6 to 12 months depending on system complexity."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-automation",
+        "ai-governance"
+      ],
+      "relatedIndustries": [
+        "finance",
+        "manufacturing"
+      ]
+    },
+    {
+      "slug": "saas",
+      "name": "AI for SaaS",
+      "title": "AI Consultant for SaaS Companies — Agentic AI Associates",
+      "description": "Agentic AI for UK SaaS businesses. Onboarding copilots, churn prediction, expansion-revenue agents, support deflection and product analytics that compound with every release.",
+      "primaryKeyword": "ai consultant for saas",
+      "icon": "strategy",
+      "intro": "<p>SaaS businesses run on two numbers that rarely get the attention they deserve: time-to-value for new accounts and net revenue retention on existing ones. Every other metric — CAC, gross margin, Rule-of-40 — is downstream of how quickly a customer gets activated and how well you spot the accounts drifting towards churn. Agentic AI moves both.</p>\n<p>We work with UK SaaS companies — from product-led mid-market platforms to enterprise vertical SaaS — on where agentic systems genuinely move the needle and where they would be a distraction. The honest answer for a lot of SaaS teams is that their product analytics stack already has the signal; they just do not have anything that reads it continuously and acts.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your product telemetry, CS motion, billing data, and support queue against realistic agent opportunities — not the ones the vendors are selling this quarter.</p>",
+      "painPoints": [
+        {
+          "title": "Onboarding is the silent churn driver",
+          "description": "Most SaaS products lose more revenue in the first 30 days than in any comparable window. CS teams cannot manually nurture every new account, so the long tail activates badly or not at all."
+        },
+        {
+          "title": "Churn is detected too late",
+          "description": "Usage patterns reveal churn risk weeks before a cancellation email arrives, but no human watches every account daily. By the time a CSM spots it, the renewal conversation is already lost."
+        },
+        {
+          "title": "Support costs scale worse than revenue",
+          "description": "Support ticket volume grows roughly linearly with customers, while ARPU rarely grows as fast. Most SaaS businesses hit a point where support margin collapses long before the board expected."
+        },
+        {
+          "title": "Product analytics produce reports, not decisions",
+          "description": "Dashboards are read once a week, if that. The insights they contain age before anyone acts. The gap is not analytics — it is an agent that reads the dashboard every hour and does something useful."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Onboarding, Expansion and Support",
+          "body": "<p>We build agents that own specific revenue-adjacent workflows. An onboarding agent watches activation milestones per account and nudges the user, the CSM, or both when momentum stalls — with different playbooks for SMB self-serve versus enterprise assisted. An expansion agent watches product-qualified-lead signals (feature limits hit, seat requests, integration usage) and drafts an expansion motion before the AE notices. A tier-one support agent handles the top 15 repeat questions autonomously and routes the rest with context already attached. These are operational systems you can audit, not magic. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> and <a href=\"/what-we-do/conversational-ai/\">conversational AI</a> patterns.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "Product Telemetry as a Decision Feed",
+          "body": "<p>Most SaaS businesses already have the data in Segment, Amplitude, Mixpanel, or a warehouse-native stack. What is missing is the layer that turns telemetry into daily decisions. We build pipelines that score each account against activation, retention and expansion models — not generic benchmarks, your models trained on your cohorts. The output feeds CRM, CS tooling, and in-product prompts directly, so the insight lands where someone can act on it. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns run inside your warehouse and respect multi-tenant isolation by design.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "Multi-Tenant AI Governance and Data Isolation",
+          "body": "<p>Embedding AI features into a SaaS product is the single easiest way to create a GDPR incident or a customer data-leakage story that kills a deal cycle. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> covers the specific SaaS failure modes: tenant bleed in retrieval systems, prompt-injection via user-generated content, model outputs that leak other tenants' data, and the audit trail your SOC 2 and ISO 27001 auditors will expect.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "ARR, Churn and Expansion Forecasting",
+          "body": "<p>Board-ready forecasts in SaaS are rarely just a model — they are a model plus a narrative your CFO can defend. We build forecasting pipelines that produce both. Cohort-level NRR forecasts, expansion pipeline predictions, and churn-risk segmentation feed directly into the QBR pack. The output is defensible because it is built on your own data, not an industry benchmark with error bars wide enough to hide in. See how our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting translates across sectors.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-Impact AI Use Cases for UK SaaS Companies",
+          "body": "<p>SaaS teams tend to get the best ROI from these five clusters. Each is a standalone pilot in 8-12 weeks.</p>\n<ul>\n  <li><strong>Onboarding and activation:</strong> milestone monitoring, personalised in-product prompts, CSM handoff agents, at-risk-new-account alerts.</li>\n  <li><strong>Churn and retention:</strong> early-warning models, save-motion drafting, win-back sequencing, contract-renewal risk scoring.</li>\n  <li><strong>Expansion revenue:</strong> PQL detection, seat-utilisation alerts, upsell message drafting for AEs, multi-product attach scoring.</li>\n  <li><strong>Support deflection:</strong> repeat-question automation, in-context help agents, escalation routing with full conversation history.</li>\n  <li><strong>Product embed:</strong> agentic features inside the product itself — assistants, natural-language query, workflow automation — built with proper tenant isolation.</li>\n</ul>\n<p>Pick one, prove it against a specific metric, extend. The <a href=\"/what-we-do/ai-readiness-assessment/\">readiness assessment</a> ranks all five against your data posture and commercial priorities.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "We already have Amplitude and a CS platform. Do we need more tooling?",
+          "answer": "Usually no. The gap is rarely more tools — it is an agent that reads the tools you have and acts on what it sees. We typically build on top of existing stacks rather than replace them."
+        },
+        {
+          "question": "How do you handle multi-tenant data separation for AI features?",
+          "answer": "Tenant isolation is a design constraint from the first sprint, not a retrofit. That means per-tenant embeddings and retrieval, prompt sanitisation for user-generated content, and output filtering so one customer's data never surfaces in another's session."
+        },
+        {
+          "question": "Will this work for PLG and sales-led motions?",
+          "answer": "Yes, but the agents are shaped differently. PLG benefits most from in-product, per-user agents; sales-led motions benefit most from account-level agents that coordinate CS, AE and support activity. We design the agent to the motion, not the other way round."
+        },
+        {
+          "question": "What do you integrate with?",
+          "answer": "The usual SaaS stack — Segment, Amplitude, Mixpanel, Snowflake, BigQuery, Salesforce, HubSpot, Gainsight, Intercom, Zendesk, Stripe — plus whatever bespoke billing or product analytics you run."
+        },
+        {
+          "question": "Can we keep compliance with SOC 2 and ISO 27001 after adding AI features?",
+          "answer": "Yes, provided AI features are designed with the same audit posture as the rest of the product. We work to SOC 2 Common Criteria and ISO 27001 Annex A controls from the start and leave you with the evidence pack your auditors will ask for."
+        },
+        {
+          "question": "How quickly does a SaaS business see impact?",
+          "answer": "A focused pilot — churn-risk scoring or onboarding agent for a single cohort — usually ships in 8 to 12 weeks. Measurable retention or expansion impact typically shows in 2-3 renewal cycles depending on contract length."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "data-ai",
+        "ai-governance"
+      ],
+      "relatedIndustries": [
+        "ecommerce",
+        "iot-connectivity"
+      ]
+    },
+    {
+      "slug": "fintech",
+      "name": "AI for Fintech",
+      "title": "AI Consultant for Fintech — Agentic AI Associates",
+      "description": "Agentic AI for UK fintechs. KYC/KYB automation, transaction monitoring, fraud detection, regulatory reporting, and customer operations built for FCA scrutiny.",
+      "primaryKeyword": "ai consultant for fintech",
+      "icon": "strategy",
+      "intro": "<p>Fintech lives in a regulatory sandwich — a growth team pushing for speed, a compliance team with reportable obligations, and a technology team in the middle being asked to do both at once. Agentic AI is one of the very few tools that can genuinely serve all three. Done well, it compresses KYC and KYB cycles, catches fraud patterns earlier, and produces the audit trail the FCA expects as a by-product rather than a last-minute scramble.</p>\n<p>We work with UK fintechs across payments, lending, digital banking, wealth and insurtech-adjacent models. The thread that runs through all of them is the same — regulated processes that cannot tolerate opaque models, customer experiences that cannot tolerate latency, and a tech team that cannot afford to build the wrong agent first.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your core banking or ledger, your compliance systems, and your customer data — because in fintech, the data architecture is the constraint, not the model choice.</p>",
+      "painPoints": [
+        {
+          "title": "KYC and KYB bottlenecks kill conversion",
+          "description": "Manual document review and EDD queues add days to onboarding. Conversion drops hard past 24 hours; beyond 72 hours, most applicants never come back."
+        },
+        {
+          "title": "Fraud detection models decay silently",
+          "description": "Static rules and quarterly model refreshes lag adversaries who iterate weekly. By the time a new typology is added to the rulebook, the attackers have moved on."
+        },
+        {
+          "title": "Regulatory reporting eats engineering capacity",
+          "description": "Suspicious Activity Reports, transaction monitoring, and regulatory returns consume engineering time that should be spent on product. The workarounds are fragile and break with every regulator update."
+        },
+        {
+          "title": "Customer support cannot scale with a lending book",
+          "description": "A growing loan or card book generates exponential complaint, query and collections volume. Hiring lags and NPS drops before the CFO sees it coming."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic KYC, KYB and Onboarding Automation",
+          "body": "<p>We build agents that own specific regulated workflows end-to-end, with full audit trail and policy guardrails. A KYC agent handles document capture, extraction, sanctions screening and PEP matching, escalating only the genuine edge cases to a human reviewer. A KYB agent pulls Companies House, beneficial ownership and adverse media data into a single risk narrative. A transaction monitoring agent scores activity against your typologies in real time and drafts the SAR narrative before a human reviews it. These are regulated-industry agents with approval paths, not unilateral systems — see our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> and <a href=\"/what-we-do/ai-automation/\">automation</a> patterns.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Transaction and Behavioural Analysis",
+          "body": "<p>Fintechs sit on behavioural data that most banks would envy — clean, timestamped, API-native. We build pipelines that turn that into real-time risk signal. Behavioural biometrics, device fingerprint consistency, transaction graph analysis, and peer-cohort anomaly detection feed your fraud and credit models with features that static rules cannot match. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns run inside your infrastructure and are designed for regulator-readable explainability.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "FCA-Ready AI Governance and Model Risk",
+          "body": "<p>The FCA expects model risk management, not just model performance. SS1/23 (for PRA-regulated firms), SYSC 8 outsourcing rules, Consumer Duty fair-value assessments, and the SM&CR accountability for AI outputs all land on the same table. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> is built for that table — model documentation, challenger models, monitoring, and the evidence pack your Skilled Person Review will ask for.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Credit, Liquidity and Fraud Loss Forecasting",
+          "body": "<p>Board-ready fintech forecasts are rarely a single model — they are a credit-loss model, a liquidity model, a fraud-loss model and a customer-lifetime model, all of which need to reconcile. We build forecasting pipelines that produce that coherent view, scenario-tested for the regulatory stress cases you will be asked to defend. Applied AI for <a href=\"/what-we-do/applied-ai/\">forecasting</a> done properly stops the quarter-end finance scramble.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Fintechs",
+          "body": "<p>Fintechs tend to compound value from these five clusters — each can ship as a pilot in 8-12 weeks with the regulatory posture already in place.</p>\n<ul>\n  <li><strong>Onboarding and financial crime:</strong> KYC/KYB document extraction, sanctions and PEP screening, adverse media monitoring, EDD agents.</li>\n  <li><strong>Transaction monitoring:</strong> real-time typology detection, SAR narrative drafting, alert de-duplication, typology discovery from labelled cases.</li>\n  <li><strong>Credit and underwriting:</strong> alternative data ingestion, affordability modelling, decision explainability, Consumer Duty fair-value evidence.</li>\n  <li><strong>Customer operations:</strong> first-line support deflection, collections treatment personalisation, complaint triage with FOS posture baked in.</li>\n  <li><strong>RegTech and reporting:</strong> regulatory return assembly, rule-change monitoring, horizon scanning for incoming FCA and PRA policy.</li>\n</ul>\n<p>Pick one cluster. Prove it against a measurable regulatory or commercial metric. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can AI decisions meet FCA explainability expectations?",
+          "answer": "Yes, when the model and its surround are designed for it. That means challenger models, per-decision reason codes, feature attribution, and human review where the stakes demand it. We design for a Skilled Person Review, not just a first audit."
+        },
+        {
+          "question": "How do you handle Consumer Duty for AI-driven decisions?",
+          "answer": "Consumer Duty fair-value and foreseeable-harm obligations apply to AI outputs the same as any other decision. We build in outcome monitoring, vulnerability detection, and fair-value evidence as first-class artefacts — not post-hoc documents."
+        },
+        {
+          "question": "Can you integrate with our core banking or ledger?",
+          "answer": "Yes. We have worked across ThoughtMachine Vault, Mambu, 10x, and bespoke ledger platforms. We design for eventual migration risk as well as current integration."
+        },
+        {
+          "question": "What is the posture on data residency and cloud?",
+          "answer": "Default is UK data residency, production workloads inside your existing AWS, Azure or GCP estate, and private model endpoints rather than public APIs for any regulated workflow."
+        },
+        {
+          "question": "Do you work with pre-authorisation fintechs?",
+          "answer": "Yes, though the engagement looks different — more focused on building the governance and evidence the FCA will expect to see at authorisation, with agent workloads kept narrow until you are live."
+        },
+        {
+          "question": "How quickly does a fintech see results?",
+          "answer": "A focused pilot — a KYC agent or a transaction monitoring enhancement — typically ships in 8 to 12 weeks. Regulatory posture sign-off may add time depending on your internal model risk process."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-governance",
+        "data-ai"
+      ],
+      "relatedIndustries": [
+        "finance",
+        "legal"
+      ]
+    },
+    {
+      "slug": "insurance",
+      "name": "AI for Insurance",
+      "title": "AI Consultant for Insurance — Agentic AI Associates",
+      "description": "Agentic AI for UK insurers, MGAs and brokers. Claims triage, underwriting copilots, fraud detection, policy document intelligence, and regulator-ready governance.",
+      "primaryKeyword": "ai consultant for insurance",
+      "icon": "strategy",
+      "intro": "<p>Insurance is a business of documents, decisions and distribution — and each of those three surfaces is where agentic AI changes the economics. Documents, because every claim, quote and policy is a piece of unstructured text that has historically needed a human. Decisions, because underwriting and claims handling are decision pipelines with clear audit requirements. Distribution, because broker and customer interactions are where retention is won or lost.</p>\n<p>We work with UK insurers, MGAs and brokers across personal lines, commercial, specialty and Lloyd's market models. The technology stack differs — Guidewire, Duck Creek, bespoke policy admin, London Market platforms — but the operational patterns repeat. Claims queues grow faster than adjusters. Underwriting appetite and referral rules drift out of sync with the portfolio. And the FCA, Lloyd's and the PRA each want something slightly different from the same data.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your policy admin, claims, distribution and rating stack before anything is scoped.</p>",
+      "painPoints": [
+        {
+          "title": "Claims cycle times stay stubbornly long",
+          "description": "FNOL, triage, allocation, adjuster workflow and settlement each add days. The customer experiences one timeline; the insurer sees five handoffs — each is an opportunity to lose trust."
+        },
+        {
+          "title": "Underwriting referral rules drift",
+          "description": "As the book grows, referral rules that made sense at launch produce too many or too few referrals. Underwriters lose hours on trivial cases while real exposures slip through unreviewed."
+        },
+        {
+          "title": "Fraud patterns outpace rule-based detection",
+          "description": "Organised fraud rings evolve faster than quarterly rule reviews. The cases that reach SIU are often the obvious ones; the expensive ones are already paid out."
+        },
+        {
+          "title": "Broker and distribution data never reconciles",
+          "description": "Broker portals, bordereaux feeds, and core policy admin produce different numbers for the same portfolio. Commission disputes and regulatory reporting both suffer."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Claims, FNOL and Underwriting Automation",
+          "body": "<p>We build agents that own specific insurance workflows end-to-end, with strict approval paths where regulation demands. A claims triage agent reads FNOL notifications, classifies severity and complexity, and routes to the right adjuster queue with a first-pass reserve recommendation. A document-intelligence agent extracts data from policy schedules, medical reports and engineers' reports into structured fields the core system can use. A pre-underwriting agent prepares a submission pack for a complex risk — pulling public data, previous loss history, and sanctions checks — before the underwriter sees it. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> and <a href=\"/what-we-do/ai-automation/\">automation</a> work.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Portfolio and Loss Analysis",
+          "body": "<p>Insurance has always been a data industry, but most carriers still analyse on cycles — monthly portfolio reviews, quarterly reserving, annual strategy. We build pipelines that shift that rhythm to daily or hourly: loss-ratio drift alerts by segment, frequency and severity anomalies on fresh claims, and emerging-risk signal from unstructured claims narratives. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns preserve the Solvency II and Lloyd's Minimum Standards posture you already operate under.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "FCA, PRA and Lloyd's Ready AI Governance",
+          "body": "<p>Insurance AI governance is not just FCA — it is FCA, PRA, Lloyd's Minimum Standards, Consumer Duty, fair-value assessments and, for pricing, the General Insurance Pricing Practices regime. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> is built for that matrix: model documentation, bias and fairness testing, walk-forward validation, and the audit pack your actuarial function and Skilled Person Review will expect.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Reserving, Capital and Claims Forecasting",
+          "body": "<p>Reserving, capital modelling and claims-frequency forecasting all benefit from the same treatment: replace static, lagged models with pipelines that refresh against fresh data and stay explainable to the actuarial function. We build that infrastructure alongside your actuaries rather than around them — the goal is to compress the cycle, not replace the judgement. See how our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting patterns extend across regulated sectors.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Insurers",
+          "body": "<p>Insurers tend to find the highest ROI in these five clusters. Each can ship as a pilot in 8-12 weeks.</p>\n<ul>\n  <li><strong>Claims and FNOL:</strong> FNOL triage, severity classification, reserve recommendation, document extraction, adjuster copilot.</li>\n  <li><strong>Underwriting and risk:</strong> submission enrichment, referral-rule optimisation, exposure concentration alerts, pre-bind checks.</li>\n  <li><strong>Fraud and SIU:</strong> claims narrative analysis, network and link analysis, organised-fraud pattern detection, investigator copilot.</li>\n  <li><strong>Customer and broker operations:</strong> first-line support, broker support automation, renewals and retention scoring, complaint triage.</li>\n  <li><strong>Pricing and actuarial support:</strong> walk-forward pricing validation, GIPP evidence generation, reserving cycle compression, experience studies.</li>\n</ul>\n<p>Pick one cluster. Ship it. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with Lloyd's market syndicates and MGAs?",
+          "answer": "Yes. The Lloyd's posture is different — MGAA, coverholder audits, bordereaux reporting and Lloyd's Minimum Standards all shape what agents can and cannot do. We design with that reality in mind rather than discovering it late."
+        },
+        {
+          "question": "How do you handle GIPP and Consumer Duty for AI-driven pricing?",
+          "answer": "GIPP compliance and Consumer Duty fair-value overlap — both need evidence of outcome testing and fair treatment across segments. We build monitoring for both as part of the AI pipeline, not as a retrospective report."
+        },
+        {
+          "question": "What core systems do you integrate with?",
+          "answer": "Guidewire ClaimCenter/PolicyCenter, Duck Creek, Sapiens, and a long list of bespoke policy admin and Lloyd's platforms. Integration pattern depends on how much control you have of the data layer."
+        },
+        {
+          "question": "Can agents operate inside a regulated underwriting decision?",
+          "answer": "Yes, provided the decision architecture is transparent — challenger-model validation, feature attribution, and human sign-off on anything that materially changes premium or declines cover. We design for auditability first, speed second."
+        },
+        {
+          "question": "How do you handle sensitive claims data and data minimisation?",
+          "answer": "All processing defaults to inside your estate; sensitive categories (health, vulnerability) get additional controls by default; model inputs are minimised to what the decision actually needs. UK GDPR Article 22 posture is baked in."
+        },
+        {
+          "question": "How quickly does an insurer see impact?",
+          "answer": "A focused pilot — FNOL triage or submission enrichment — usually ships in 8 to 12 weeks. Loss-ratio impact typically takes longer because of the reserving cycle, but operational metrics (cycle time, queue depth, referral quality) move in the first quarter."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-governance",
+        "ai-automation"
+      ],
+      "relatedIndustries": [
+        "finance",
+        "legal"
+      ]
+    },
+    {
+      "slug": "logistics",
+      "name": "AI for Logistics & Fleet",
+      "title": "AI Consultant for Logistics & Fleet — Agentic AI Associates",
+      "description": "Agentic AI for UK logistics, last-mile and fleet operators. Route optimisation, driver ops, exception handling, telematics intelligence, and customer comms that stay accurate in real time.",
+      "primaryKeyword": "ai consultant for logistics",
+      "icon": "strategy",
+      "intro": "<p>Logistics runs on two currencies: minutes and miles. Every operational decision — routing, loading, driver allocation, exception handling — is a trade between them. Agentic AI changes the decision cadence. Instead of a daily plan that degrades from the first missed pickup, you get a live system that replans as reality unfolds and keeps the customer communication in step with it.</p>\n<p>We work with UK logistics businesses across 3PL, parcel, last-mile, specialist and own-fleet operators. The operational truth in every one of them is the same: the plan is obsolete the moment the first van leaves, and the cost of replanning manually is higher than the cost of the disruption.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your TMS, WMS, telematics and customer comms stack — because in logistics, the data is in five systems and none of them agrees with the others on where a parcel is.</p>",
+      "painPoints": [
+        {
+          "title": "Plans decay the moment the day starts",
+          "description": "Route plans built overnight lose accuracy on the first traffic incident, failed delivery or late collection. Manual replanning lags reality by hours."
+        },
+        {
+          "title": "Customer comms drift out of step with operations",
+          "description": "The tracking page says one thing, the driver knows another, and the contact centre gets the call. Most complaints are not about failure — they are about being told the wrong thing."
+        },
+        {
+          "title": "Driver ops still run on paper and phone calls",
+          "description": "Exception handling, POD disputes, returns processing and driver check-in are often still manual. Each one is minutes added to the shift and a margin hit over a month."
+        },
+        {
+          "title": "Telematics data is gathered, not used",
+          "description": "Most fleets pay for telematics and use 10% of what it produces. The patterns in fuel burn, harsh-braking, idling and route adherence rarely feed back into daily decisions."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Dispatch, Exception Handling and Customer Comms",
+          "body": "<p>We build agents that live in the operational loop. A dispatch agent replans routes continuously as exceptions land, with clear guardrails on customer-commitment windows. An exception agent handles failed deliveries, returns triage, and driver escalations with templated playbooks and the right human sign-off points. A customer comms agent keeps the tracking page, ETA notifications and contact centre notes aligned from the same source of truth. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a> and <a href=\"/what-we-do/conversational-ai/\">conversational AI</a> for logistics-grade applications.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Telematics and Performance Analysis",
+          "body": "<p>Fleet telematics, WMS throughput, and driver performance data contain more than enough signal to drive daily decisions — most operators just never wire it together. We build pipelines that unify telematics, TMS, and WMS into per-driver, per-route, per-depot dashboards with anomaly detection on top. The output is not another report — it is a set of triggers the operations team actually acts on. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns are designed for the depot-level latency and connectivity realities of real logistics environments.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "Driver Hours, DVSA and Duty-of-Care Monitoring",
+          "body": "<p>Driver hours (WTD and RTD regs), DVSA operator licence conditions, tachograph compliance and duty-of-care obligations are non-negotiable and largely still monitored manually. Our <a href=\"/what-we-do/ai-governance/\">AI governance</a> and compliance work packages these into continuous monitoring — so an infringement risk is flagged in-shift, not discovered during an audit.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Demand, Volume and Capacity Forecasting",
+          "body": "<p>Volume forecasting for logistics has to work at multiple horizons at once — next-hour capacity for a depot, next-week staffing plan, next-month peak prep. We build forecasting pipelines that produce coherent numbers across those horizons, trained on your own history rather than sector averages that miss your customer mix. See how our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting patterns translate across operational sectors.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Logistics Operators",
+          "body": "<p>Logistics operators tend to compound value from these five clusters — each is a pilot in 8-12 weeks.</p>\n<ul>\n  <li><strong>Dynamic routing and dispatch:</strong> live route replanning, stop sequencing, driver-vehicle matching, congestion-aware ETAs.</li>\n  <li><strong>Exception and returns handling:</strong> failed-delivery triage, returns routing, driver escalation agents, POD dispute resolution.</li>\n  <li><strong>Customer experience:</strong> live ETA accuracy, proactive delay comms, contact centre deflection, complaint triage.</li>\n  <li><strong>Driver and fleet operations:</strong> driver coaching insights from telematics, fuel burn anomaly detection, hours-of-service monitoring.</li>\n  <li><strong>Depot and warehouse:</strong> labour planning, putaway optimisation, dock scheduling, inventory anomaly detection.</li>\n</ul>\n<p>Pick one. Ship a 90-day pilot. Extend into the adjacent cluster.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with 3PLs as well as own-fleet operators?",
+          "answer": "Yes. The operational shape is different — 3PLs have customer SLAs and multi-shipper data isolation to manage — but the agent patterns port cleanly with the right design."
+        },
+        {
+          "question": "Can AI replace our TMS or WMS?",
+          "answer": "Almost never, and we would rarely recommend it. The highest-value work tends to sit on top of existing TMS/WMS as orchestration and intelligence, not as a replacement. Replacement projects are two-year programmes; orchestration projects are two-quarter programmes."
+        },
+        {
+          "question": "What telematics platforms do you support?",
+          "answer": "The common ones — Samsara, Lightfoot, Webfleet, MichelinConnectedFleet, Microlise, Quartix — plus direct integration with tachograph downloads and bespoke platforms. We build once and make the downstream models platform-agnostic."
+        },
+        {
+          "question": "Will drivers accept AI in the cab?",
+          "answer": "Driver adoption is an operational problem, not a technology one. We design agent interventions to make the driver's shift easier — better sequencing, fewer admin taps, fewer useless calls from the contact centre — not to surveil. Adoption follows usefulness."
+        },
+        {
+          "question": "How do you handle the connectivity gaps in real-world fleets?",
+          "answer": "Every design assumes intermittent connectivity. Edge caching, offline-first data capture, and deferred-sync reconciliation are baked in. You cannot run logistics AI as if every vehicle has a perfect 4G connection, because they never do."
+        },
+        {
+          "question": "How quickly does a logistics operator see impact?",
+          "answer": "A focused pilot — a dispatch agent or a customer comms agent — typically ships in 8 to 12 weeks. Operational metrics (failed deliveries, contact centre volume, driver overtime) move inside the first quarter."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-automation",
+        "applied-ai"
+      ],
+      "relatedIndustries": [
+        "supply-chain",
+        "manufacturing"
+      ]
+    },
+    {
+      "slug": "energy-utilities",
+      "name": "AI for Energy & Utilities",
+      "title": "AI Consultant for Energy & Utilities — Agentic AI Associates",
+      "description": "Agentic AI for UK energy suppliers, DNOs and water utilities. Smart meter analytics, customer operations, asset health forecasting, and Ofgem/Ofwat-ready governance.",
+      "primaryKeyword": "ai consultant for energy utilities",
+      "icon": "strategy",
+      "intro": "<p>Energy and water utilities run two parallel businesses at once: a physical network business and a regulated consumer business. Each produces its own data — SCADA, smart meters, network telemetry, billing, CRM, field work orders — and almost none of it is integrated where a daily decision actually happens. Agentic AI is one of the few levers that can genuinely work across that divide.</p>\n<p>We work with UK suppliers, DNOs, and water companies on the specific problems that regulation and net-zero obligations have made urgent: smart meter data that needs to drive tariffs in near-real-time, network assets with ageing profiles that cannot wait for a five-yearly review, and customer operations under Ofgem or Ofwat scrutiny.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your SCADA, metering, billing and field systems before anything is scoped.</p>",
+      "painPoints": [
+        {
+          "title": "Smart meter data is gathered but not decisioned",
+          "description": "Half-hourly data is a regulatory asset most suppliers still treat as a billing input. The price-signalling, demand-response and churn-prediction value goes largely unrealised."
+        },
+        {
+          "title": "Asset health runs on calendar, not condition",
+          "description": "Transformers, mains and substations get scheduled inspections rather than condition-based ones. The cost is either over-maintenance or the occasional preventable failure at regulatory cost."
+        },
+        {
+          "title": "Customer operations buckle under tariff churn",
+          "description": "Price cap changes, tariff switches and TVB obligations generate volume that contact centres cannot staff through. NPS and complaint volumes move in the wrong direction simultaneously."
+        },
+        {
+          "title": "Field work is planned separately from network reality",
+          "description": "Work order planning is often disconnected from live network condition and customer-impact modelling. The wrong jobs get prioritised, and the regulator notices."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Customer Operations and Field Work Orchestration",
+          "body": "<p>We build agents that own specific utility workflows end-to-end with full audit trail. A customer-ops agent handles tariff switches, vulnerable-customer flags, and complaint triage with Ofgem Consumer Standards baked in. A field-work agent takes work orders, asset condition data, customer-impact modelling and crew availability and produces a daily plan that holds up against reality. A meter-read exceptions agent clears MPAN/MPRN data issues that currently sit in a team inbox for weeks. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a>.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "Smart Meter, SCADA and Asset Data Integration",
+          "body": "<p>The data is there — smart meter half-hourly reads, SCADA, GIS, asset registers, DNO flow data — it is just not integrated where decisions happen. We build pipelines that unify these feeds into per-asset, per-customer, per-circuit models with anomaly detection and forecasting on top. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns handle the real-world messiness — inconsistent meter read quality, GIS/asset register mismatches, SCADA latency — rather than assuming clean data.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "Ofgem, Ofwat and Consumer Standards Monitoring",
+          "body": "<p>Utilities operate under a regulator matrix that other sectors rarely match — Ofgem, Ofwat, the DCC framework, Consumer Duty analogues, vulnerable-customer obligations, and the price cap mechanics. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> packages compliance as continuous monitoring — fair-treatment evidence, vulnerability identification, and the audit trail your regulator will expect.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Demand, Asset Health and Price Exposure Forecasting",
+          "body": "<p>Utilities need three simultaneous forecasts: demand at half-hourly resolution, asset failure probability on a long horizon, and commercial price exposure on a trading horizon. We build forecasting pipelines that produce coherent numbers across those scales, trained on your own data and the weather/market signals that actually drive them. See how our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting extends across regulated sectors.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Utilities",
+          "body": "<p>Utilities tend to get the most return from these five clusters.</p>\n<ul>\n  <li><strong>Customer operations:</strong> tariff-switch automation, vulnerability detection, complaint triage, contact centre deflection with price-cap and TVB rules baked in.</li>\n  <li><strong>Metering and billing:</strong> MPAN/MPRN exception clearance, meter read anomaly detection, billing dispute analysis, theft detection.</li>\n  <li><strong>Asset health:</strong> condition-based maintenance prioritisation, failure-mode prediction, substation and pumping-station health scoring.</li>\n  <li><strong>Field operations:</strong> dynamic work order planning, crew routing, customer-impact-aware outage planning.</li>\n  <li><strong>Trading and procurement:</strong> short-term demand forecasting, imbalance position forecasting, hedging decision support.</li>\n</ul>\n<p>Pick one cluster. Prove it. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with suppliers as well as network operators?",
+          "answer": "Yes, though the operational shape differs significantly. Suppliers have retail customer dynamics; DNOs have network and safety regulation. We design the agent architecture to match — shared infrastructure, different guardrails."
+        },
+        {
+          "question": "How do you handle DCC, MPAN/MPRN and meter data standards?",
+          "answer": "We work inside the DCC ecosystem where your meter data lives, handle UK MPAN/MPRN data structures natively, and integrate with the common MDD platforms rather than building our own."
+        },
+        {
+          "question": "Can AI meet Ofgem vulnerable-customer obligations?",
+          "answer": "Done properly, AI improves them. Continuous vulnerability detection — payment stress, self-disconnection patterns, medical equipment dependency flags — surfaces the customers who need protection earlier than a human review cycle would."
+        },
+        {
+          "question": "What core systems do you integrate with?",
+          "answer": "Common billing platforms (Gentrack, SAP IS-U, Oracle CC&B), GIS platforms (Esri, GE Smallworld), SCADA historians, and the DCC adapters — plus the bespoke platforms most UK utilities still run alongside."
+        },
+        {
+          "question": "How do you handle data security in a critical national infrastructure context?",
+          "answer": "CNI-grade security posture from day one — NIS Regulations compliance, OT/IT segregation preserved, and all design choices pass a threat model before they hit production. We do not retrofit security."
+        },
+        {
+          "question": "How long until a utility sees impact?",
+          "answer": "A focused pilot — vulnerability detection or work-order prioritisation — typically ships in 8 to 12 weeks. Customer-facing metrics move first; asset and trading metrics take longer because of the cycle length."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-governance",
+        "applied-ai"
+      ],
+      "relatedIndustries": [
+        "government",
+        "manufacturing"
+      ]
+    },
+    {
+      "slug": "pharma-life-sciences",
+      "name": "AI for Pharma & Life Sciences",
+      "title": "AI Consultant for Pharma & Life Sciences — Agentic AI Associates",
+      "description": "Agentic AI for UK pharma, biotech and life sciences. Regulatory document intelligence, pharmacovigilance automation, clinical operations, and MHRA-ready governance.",
+      "primaryKeyword": "ai consultant for pharma",
+      "icon": "strategy",
+      "intro": "<p>Pharma and life sciences live in a document economy. Every decision — a clinical trial protocol, a regulatory submission, a pharmacovigilance signal, a medical information response — is a piece of carefully written text that has historically needed a qualified human to read, interpret and respond. Agentic AI, used with discipline, can take a lot of the reading and drafting off the qualified human without taking the judgement.</p>\n<p>We work with UK pharma, biotech and medical device companies on exactly the workflows where agents can compress cycle time without touching the regulated judgement call. That means document intelligence, case processing, and operational automation — not decisions that require a QP signature or a clinical author.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your regulatory operations, clinical operations, PV system, and medical information stack — because in pharma the system is the process.</p>",
+      "painPoints": [
+        {
+          "title": "Regulatory operations are doc-heavy and bottlenecked",
+          "description": "Preparing a CTA, MAA or variation submission consumes regulatory writers, labelling specialists and publishing teams for months. Cycle time is the single biggest controllable cost of going to market."
+        },
+        {
+          "title": "Pharmacovigilance case volume outpaces hiring",
+          "description": "ICSR volume grows with indications, geographies and digital channels. PV case processing costs scale close to linearly with volume; the economics will break for most mid-cap pharma before 2030."
+        },
+        {
+          "title": "Medical information response times degrade",
+          "description": "MI queries from HCPs and patients must be answered accurately and on time. Scaling the medical information function without compromising quality is a recurring operational headache."
+        },
+        {
+          "title": "Clinical ops data sits in silos",
+          "description": "EDC, CTMS, eTMF and safety systems each hold part of the clinical picture. Study teams spend more time reconciling systems than running the study."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Document Intelligence and Case Processing",
+          "body": "<p>We build agents that own specific life-sciences workflows end-to-end, with the sign-off gates pharma demands. A regulatory document agent extracts and drafts sections of CTD modules, variations, and clinical study reports — with a medical writer reviewing and approving every output. A PV case intake agent handles ICSR triage, duplicate detection, MedDRA coding and narrative first-draft, with case processors reviewing before submission. A medical information agent drafts responses against the MI letter library with referenceable provenance. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a>.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Clinical and Safety Data Analysis",
+          "body": "<p>Clinical and safety data analysis is a regulated analytics problem — the statistical rigour is non-negotiable, but the data preparation and signal-detection surround is where AI gives real lift. We build pipelines that accelerate signal detection in PV, cross-study safety monitoring, and protocol deviation analysis, all with the validation posture and 21 CFR Part 11 / EU Annex 11 alignment the MHRA expects. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns preserve the computerised-system-validation posture rather than route around it.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "MHRA, EMA and GxP-Aligned AI Governance",
+          "body": "<p>AI in a GxP environment is a qualified-system problem. Validation, change control, data integrity (ALCOA+), 21 CFR Part 11 / Annex 11 alignment, and the MHRA's evolving expectations for AI all land on the same validation plan. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> is built for that environment — IQ/OQ/PQ artefacts, change control discipline, and the audit trail an MHRA or EMA inspection will ask for.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Demand, Supply and Enrolment Forecasting",
+          "body": "<p>Pharma forecasting problems repeat — trial enrolment projection, supply-chain risk forecasting against manufacturing capacity, launch-demand modelling. We build forecasting pipelines that layer onto your existing forecasting process rather than replace it, with explainability your finance and commercial teams can defend. Our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting work translates the same patterns across operational sectors.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Pharma and Biotech",
+          "body": "<p>Pharma tends to compound value from these clusters. Each is a pilot in 8-12 weeks inside an appropriate validation wrapper.</p>\n<ul>\n  <li><strong>Regulatory operations:</strong> CTD module drafting, labelling comparison, variation impact assessment, regulatory intelligence monitoring.</li>\n  <li><strong>Pharmacovigilance:</strong> ICSR intake triage, MedDRA coding assistance, narrative drafting, literature signal detection.</li>\n  <li><strong>Medical information:</strong> MI query triage, response drafting against the MI library, adverse-event detection in inbound queries.</li>\n  <li><strong>Clinical operations:</strong> protocol deviation detection, site performance analytics, eTMF completeness monitoring, query management automation.</li>\n  <li><strong>Commercial and launch:</strong> HCP engagement intelligence, field-force insight generation, payer-evidence synthesis.</li>\n</ul>\n<p>Each cluster lives inside its own validation wrapper. No shortcut.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "How do you handle GxP validation for AI systems?",
+          "answer": "AI in GxP contexts is validated as a computerised system — risk-assessed, functionally specified, IQ/OQ/PQ evidenced, with change control and periodic review. We work to GAMP 5 alignment and the specific expectations the MHRA has published for AI in regulated contexts."
+        },
+        {
+          "question": "Can AI operate inside a regulated decision?",
+          "answer": "In GxP contexts, agents typically draft and extract — qualified humans always approve. We design the approval gates and evidence trail so the qualified person's role is preserved, not eroded."
+        },
+        {
+          "question": "What systems do you integrate with?",
+          "answer": "The regulated-system stack — Veeva Vault, ArisGlobal, Oracle Argus, Medidata Rave, IQVIA platforms, and the common eTMF and CTMS platforms — plus the MHRA submission channels and EudraVigilance."
+        },
+        {
+          "question": "Can you work within our computerised system validation framework?",
+          "answer": "Yes. We expect to operate inside your CSV framework, not around it. Every deliverable fits the validation plan — user requirements, functional specs, test scripts, traceability — rather than being bolted on after the fact."
+        },
+        {
+          "question": "How do you handle patient data and ALCOA+ principles?",
+          "answer": "All processing defaults to inside your validated estate, patient identifiers are minimised or tokenised, audit trails preserve attribution and contemporaneity, and every system is designed to the ALCOA+ principles from day one."
+        },
+        {
+          "question": "How quickly does a pharma engagement show return?",
+          "answer": "Faster than most expect on ops metrics (cycle times, case throughput, MI response times) — 8 to 12 weeks on a focused pilot. Regulatory cycle-time improvements take longer because submission cycles are long."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-governance",
+        "data-ai"
+      ],
+      "relatedIndustries": [
+        "healthcare",
+        "legal"
+      ]
+    },
+    {
+      "slug": "construction",
+      "name": "AI for Construction",
+      "title": "AI Consultant for Construction — Agentic AI Associates",
+      "description": "Agentic AI for UK construction, main contractors and specialist subcontractors. Bid and tender intelligence, CDM compliance, programme risk, and site operations automation.",
+      "primaryKeyword": "ai consultant for construction",
+      "icon": "strategy",
+      "intro": "<p>Construction runs on three things: tenders won, programmes kept, and margin protected. All three are document-heavy, evidence-heavy, and deeply collaborative — exactly the conditions where agentic AI starts to change the economics. Not by replacing a quantity surveyor or a site manager, but by handling the reading, drafting and reconciliation that currently eats their week.</p>\n<p>We work with UK main contractors, specialist subcontractors, and tier-one consultancies on the operational surfaces where agents realistically earn their keep — bid and tender, CDM compliance, programme and risk, and commercial operations.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your estimating, commercial, programme and HSQE stack — because in construction, the systems landscape is rarely tidy, and the edges are where the risk sits.</p>",
+      "painPoints": [
+        {
+          "title": "Tender and bid response is manually intensive",
+          "description": "PQQ, ITT and framework responses repeat 70% of previous content but still consume bid teams for weeks. Win rate suffers when the time goes on formatting rather than positioning."
+        },
+        {
+          "title": "CDM and H&S compliance evidence is scattered",
+          "description": "Method statements, RAMS, COSHH assessments, accident reporting, and CDM dutyholder evidence sit across site systems, email and shared drives. HSE-ready evidence takes days to assemble."
+        },
+        {
+          "title": "Programme risks are known but not acted on",
+          "description": "Planners and PMs have the data — 4D models, programme updates, daily logs — but rarely a system that reads it all continuously and flags the emerging slippage before the next steering group."
+        },
+        {
+          "title": "Cost certainty erodes between stages",
+          "description": "RIBA stage moves (2→3→4), design changes and supply-chain price volatility all erode the early-cost position. Commercial teams catch it at month-end, not in time to act."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Bid, Commercial and Site Operations",
+          "body": "<p>We build agents that own specific construction workflows end-to-end. A bid agent reads PQQ and ITT documents, scores go/no-go against win-theme criteria, drafts responses from a referenceable content library, and flags compliance clauses that need legal review. A commercial agent monitors cost packages, supply-chain price movement, and variation signals across the programme. A site-documents agent keeps RAMS, COSHH and inspection records synchronised with the active programme and flags gaps before the HSE does. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a>.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Programme and Risk Analysis",
+          "body": "<p>Construction produces more structured and semi-structured data than most industries give it credit for — programme files, daily progress logs, 4D model deltas, cost reports, supply-chain quotes. We build pipelines that integrate those feeds into live programme and risk dashboards — but more usefully, into agents that read the dashboards and raise action items. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns work with the reality of construction data: messy, distributed, and heavy on unstructured text.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "CDM, HSE and Golden Thread Monitoring",
+          "body": "<p>CDM dutyholder obligations, HSE reporting, Building Safety Act Golden Thread requirements for higher-risk buildings, and the evolving Gateway regime all converge on the same need: continuous, evidence-based compliance rather than periodic paperwork. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> packages construction compliance as continuous monitoring with an inspection-ready audit trail.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Cost, Programme and Labour Forecasting",
+          "body": "<p>Construction forecasting is a layered problem — programme duration, cost-at-completion, labour demand across trades, materials supply — all of which interact. We build forecasting pipelines that produce coherent numbers across those layers, trained on your own project history rather than sector averages that rarely fit. See how our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting patterns extend across project-based industries.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Construction",
+          "body": "<p>Construction businesses tend to find the highest ROI in these clusters.</p>\n<ul>\n  <li><strong>Bid and tender:</strong> PQQ/ITT response drafting, go/no-go scoring, compliance clause detection, win-theme library management.</li>\n  <li><strong>Commercial and cost:</strong> variation risk scoring, subcontractor spend analytics, early-warning cost drift detection.</li>\n  <li><strong>Programme and risk:</strong> programme deviation detection, risk register automation, lookahead drafting.</li>\n  <li><strong>HSQE and compliance:</strong> RAMS and COSHH maintenance, CDM evidence orchestration, Golden Thread record keeping.</li>\n  <li><strong>Site operations:</strong> daily diary drafting, plant utilisation analysis, materials waste detection, quality inspection triage.</li>\n</ul>\n<p>Pick one. Ship a pilot over a single project. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does AI actually help on live sites, or only in the office?",
+          "answer": "Both, but the on-site applications have higher adoption barriers. Office workflows — bid, commercial, programme — see ROI first. Site applications (inspection triage, daily diary, plant utilisation) follow once the data discipline is in place."
+        },
+        {
+          "question": "Can AI help with Building Safety Act and Golden Thread obligations?",
+          "answer": "Yes — especially for higher-risk buildings where Golden Thread evidence must be maintained across the whole project lifecycle. Agents can keep records synchronised, flag gaps early, and produce inspection-ready evidence packs."
+        },
+        {
+          "question": "What core systems do you integrate with?",
+          "answer": "The common construction stack — Primavera P6, Asta Powerproject, Autodesk Build/BIM 360, Procore, CausewayOne, Oracle Aconex, CMS bid management, and the bespoke estimating systems most UK main contractors still run."
+        },
+        {
+          "question": "Can this work for subcontractors too, not just main contractors?",
+          "answer": "Yes. The agent shape differs — subcontractors benefit most from bid automation and variation capture; main contractors benefit most from programme and commercial orchestration. Both are worth pursuing."
+        },
+        {
+          "question": "How do you handle commercially sensitive tender data?",
+          "answer": "All tender data stays inside your estate, model inputs are minimised, and we design for the commercial-confidentiality posture tender work demands. No inputs leave your controlled environment to public APIs."
+        },
+        {
+          "question": "How quickly does a construction business see impact?",
+          "answer": "Bid-response efficiency and programme-risk visibility move fastest — within the first project cycle, typically 3-6 months depending on project duration. Site-level applications usually take longer because of site adoption dynamics."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-automation",
+        "applied-ai"
+      ],
+      "relatedIndustries": [
+        "real-estate",
+        "manufacturing"
+      ]
+    },
+    {
+      "slug": "hospitality",
+      "name": "AI for Hospitality",
+      "title": "AI Consultant for Hospitality — Agentic AI Associates",
+      "description": "Agentic AI for UK hotels, hospitality groups and F&B operators. Revenue management, guest experience, operations automation, and demand forecasting that adapts in real time.",
+      "primaryKeyword": "ai consultant for hospitality",
+      "icon": "strategy",
+      "intro": "<p>Hospitality is a business of tiny decisions made millions of times — what rate to load, which guest to upsell, which shift to staff, which review to respond to first. Every one of those decisions gets better with live data and a system that acts on it in minutes rather than days.</p>\n<p>We work with UK hotel groups, independent operators, F&B groups and hospitality tech businesses on the surfaces where agents genuinely earn their keep — revenue management, guest experience and service recovery, and back-of-house operations.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your PMS, RMS, CRM and review stack — because in hospitality, the integrations are almost always the constraint.</p>",
+      "painPoints": [
+        {
+          "title": "Revenue management lags real demand",
+          "description": "Most RMSs reprice on daily or 4-hourly cycles. Demand signals — flight pricing, event announcements, weather — move faster. Revenue is left on the table or given away through overly cautious rates."
+        },
+        {
+          "title": "Guest experience suffers at scale",
+          "description": "Personalisation that works in a small boutique collapses in a group portfolio. Housekeeping, F&B, and front desk operate from different data, and the guest feels the seams."
+        },
+        {
+          "title": "Review response is always playing catch-up",
+          "description": "Reviews across Booking, Google, Tripadvisor and direct channels pile up. Manual response drafting and escalation routing becomes a bottleneck that directly affects conversion."
+        },
+        {
+          "title": "Labour costs outpace revenue in shoulder periods",
+          "description": "Staffing is planned on forecasts that miss the real variance. Over-staffed slow nights and under-staffed spikes both hurt — and both are predictable with the right signal."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Revenue Management, Guest Experience and Ops",
+          "body": "<p>We build agents that own specific hospitality workflows end-to-end. A revenue agent monitors pace, pickup, competitor rates, and external demand signals and recommends rate moves within approved guardrails. A guest-ops agent handles pre-arrival messaging, upsell offers, and service recovery with personalisation drawn from PMS and CRM rather than a generic template. A review agent triages and drafts responses with sentiment-aware escalation to the right manager. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> and <a href=\"/what-we-do/conversational-ai/\">conversational AI</a> approaches.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Demand and Guest Intelligence",
+          "body": "<p>The data exists — PMS, RMS, CRM, POS, booking-engine, review platforms — it just does not meet in one place. We build pipelines that unify those feeds into per-property, per-segment, per-guest intelligence, then wire it into the tools the operations team already uses. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns respect hospitality tech realities: messy integrations, inconsistent guest IDs, and daily close cycles.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "Data Protection, Accessibility and Licensing Compliance",
+          "body": "<p>Hospitality compliance surfaces rarely get listed in an AI business case, but they matter — UK GDPR around guest data, accessibility obligations across booking and in-stay, licensing and immigration (SRA, short-term let registration) for the relevant operators. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> packages these as continuous monitoring rather than annual audits.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Demand, Labour and Revenue Forecasting",
+          "body": "<p>Hospitality forecasting is a multi-horizon problem — next-day staffing, next-week pace, next-month revenue, next-year strategy. We build forecasting pipelines that produce coherent numbers across horizons, trained on your portfolio and the local demand drivers that actually matter. Our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting work is built for operational use, not dashboards for dashboards' sake.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Hospitality",
+          "body": "<p>Hospitality operators tend to compound value from these clusters.</p>\n<ul>\n  <li><strong>Revenue management:</strong> dynamic pricing with external signal integration, competitor rate monitoring, rate-code optimisation, channel-mix intelligence.</li>\n  <li><strong>Guest experience:</strong> personalised pre-arrival, in-stay upsell, post-stay reactivation, VIP identification across portfolio.</li>\n  <li><strong>Review and reputation:</strong> multi-channel review triage, response drafting, sentiment tracking, service-recovery escalation.</li>\n  <li><strong>Labour and operations:</strong> demand-aware staffing, housekeeping scheduling against arrival/departure pattern, F&B prep forecasting.</li>\n  <li><strong>Distribution and marketing:</strong> channel mix optimisation, OTA commission analysis, direct-booking reactivation, segment-level pricing.</li>\n</ul>\n<p>Pick one cluster. Pilot on one property or region. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with independent hotels as well as groups?",
+          "answer": "Yes. Independents benefit most from focused automation around revenue management and guest experience; groups benefit most from portfolio-wide intelligence and centralised agents. We scope to the operating model."
+        },
+        {
+          "question": "Can AI replace our revenue management system?",
+          "answer": "Usually not, and we would rarely recommend it. The highest-value work layers on top of IDeaS, Duetto, or your existing RMS with external-signal integration and action automation."
+        },
+        {
+          "question": "What integrations do you support?",
+          "answer": "The common PMS stack — Opera, Mews, Cloudbeds, protel, RMS Cloud — plus IDeaS, Duetto, Review Pro, Guestline, and the channel managers. Integration effort is usually the binding constraint."
+        },
+        {
+          "question": "Will AI hurt the feel of the guest experience?",
+          "answer": "The opposite, when it is done properly. AI handles the logistics the guest never wanted to deal with — check-in, pre-arrival detail, service recovery — freeing the team to do the human parts better."
+        },
+        {
+          "question": "How do you handle UK GDPR for guest personalisation?",
+          "answer": "Personalisation runs on legitimate interest or consent as appropriate; data retention follows defined schedules; cross-border flows (for international guests) are handled under valid mechanisms. We build GDPR posture into the design."
+        },
+        {
+          "question": "How quickly does a hospitality operator see impact?",
+          "answer": "Revenue and guest-experience metrics typically move inside a quarter. The gains compound over seasonality cycles — a year of data in production meaningfully changes what the models can do."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "data-ai",
+        "applied-ai"
+      ],
+      "relatedIndustries": [
+        "retail",
+        "ecommerce"
+      ]
+    },
+    {
+      "slug": "media-publishing",
+      "name": "AI for Media & Publishing",
+      "title": "AI Consultant for Media & Publishing — Agentic AI Associates",
+      "description": "Agentic AI for UK publishers, broadcasters and media groups. Editorial workflows, rights and metadata, ad operations, audience intelligence, and IPSO-ready governance.",
+      "primaryKeyword": "ai consultant for media publishing",
+      "icon": "strategy",
+      "intro": "<p>Media and publishing businesses live at the intersection of creative judgement and operational scale — a newsroom makes editorial decisions dozens of times an hour, an ad operations team balances thousands of campaigns a day, and a rights team manages catalogues that outlive any individual editor. Agentic AI does not replace editorial judgement, but it can absolutely take the operational drag off the people exercising it.</p>\n<p>We work with UK publishers, broadcasters, independent media groups and B2B information businesses on the surfaces where agents realistically help — editorial support, rights and metadata, advertising operations, and audience intelligence.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your CMS, DAM, ad stack and audience data — because in media, the fragmentation of the tooling is the real cost, not any individual tool.</p>",
+      "painPoints": [
+        {
+          "title": "Editorial workflows drown in repetitive tasks",
+          "description": "Fact-checking, related-story linking, tagging, headline testing, and social drafting eat editorial hours that should go to reporting and commissioning."
+        },
+        {
+          "title": "Rights and metadata discipline breaks at scale",
+          "description": "As catalogues grow, rights clearance, licensing status, and metadata completeness drift. The cost shows up as missed monetisation and occasional legal surprises."
+        },
+        {
+          "title": "Ad operations never get ahead of the problems",
+          "description": "Campaign setup, pacing, creative approval, and delivery diagnostics all compete for ad ops attention. The inventory side works; the problem-solving side is chronically behind."
+        },
+        {
+          "title": "Audience data is rich but rarely actionable",
+          "description": "First-party data, paywall signals, newsletter engagement and CRM all exist — but rarely drive the next editorial or commercial decision in anything like real time."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Editorial, Rights and Ad Ops",
+          "body": "<p>We build agents that own specific media workflows end-to-end. An editorial assistant agent handles routine fact-checking, related-article linking, headline testing and social drafting — always with an editor in the loop. A rights and metadata agent keeps catalogue records coherent, flags expiring licences, and maintains metadata to the quality your systems need. An ad ops agent handles campaign setup QA, pacing alerts and creative-approval routing. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> and <a href=\"/what-we-do/ai-content-marketing/\">AI content</a> patterns.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Audience and Content Intelligence",
+          "body": "<p>The data is fragmented across CMS, paywall, CRM, newsletter and ad server. We build pipelines that unify those feeds into per-article, per-segment intelligence — what to commission next, what to surface on the homepage, what to send to which newsletter segment. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns respect the publisher reality: high cardinality on content IDs, seasonal volatility, and the attention economics that actually drive monetisation.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "IPSO, Ofcom, Accessibility and UK GDPR Monitoring",
+          "body": "<p>Media compliance surfaces — IPSO editorial codes, Ofcom broadcast rules, accessibility obligations (EAA, WCAG), UK GDPR across audience data, and the evolving Online Safety Act posture — are usually monitored in cycles. We build continuous monitoring instead, so pre-publication checks happen as a matter of course rather than a retrospective review. See our <a href=\"/what-we-do/ai-governance/\">AI governance</a> approach.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Audience, Subscription and Revenue Forecasting",
+          "body": "<p>Publishers need forecasts that reconcile: audience growth, subscription churn and acquisition, ad revenue by channel, and content performance by category. We build forecasting pipelines that produce coherent numbers across those horizons — trained on your data, not industry benchmarks that never fit any individual publisher. Our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting work is operational.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Media & Publishing",
+          "body": "<p>Media operators tend to compound value from these clusters.</p>\n<ul>\n  <li><strong>Editorial support:</strong> fact-check assistance, related-story linking, tagging and topic taxonomy maintenance, headline and social A/B.</li>\n  <li><strong>Rights and archive:</strong> metadata completion, rights-expiry monitoring, archive search, catalogue enrichment.</li>\n  <li><strong>Ad operations:</strong> campaign setup QA, pacing alerts, creative approval routing, viewability and verification escalation.</li>\n  <li><strong>Audience and subscription:</strong> paywall conversion modelling, churn prediction, newsletter engagement scoring, segment-level recommendations.</li>\n  <li><strong>Operations and infrastructure:</strong> commissioning assistance, production workflow automation, accessibility checks, translation and localisation support.</li>\n</ul>\n<p>Pick one. Pilot over a quarter. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Will AI write the journalism?",
+          "answer": "No. We do not build systems to replace reporters or editors. We build systems that remove the operational drag so editors can commission more and reporters can report more. Editorial judgement stays with humans."
+        },
+        {
+          "question": "How do you handle IPSO and Ofcom obligations?",
+          "answer": "AI outputs that touch published content go through the same editorial governance as human-produced content. We build pre-publication checks and the audit trail IPSO and Ofcom complaints would ask for."
+        },
+        {
+          "question": "What systems do you integrate with?",
+          "answer": "Common CMS (Arc XP, WordPress VIP, bespoke platforms), DAM platforms, Google Ad Manager, Piano and Zephr paywalls, and the newsletter/CRM stacks publishers actually run. Integration effort varies by stack age."
+        },
+        {
+          "question": "Can this work for B2B information businesses too?",
+          "answer": "Yes, and often with higher ROI. B2B information has denser metadata, richer user signals, and more willingness-to-pay — agents layered onto that produce measurable commercial lift quickly."
+        },
+        {
+          "question": "How do you handle copyright and training-data concerns?",
+          "answer": "We do not train on client content unless there is a specific contracted purpose and clear rights. Most of our work uses retrieval-augmented approaches that reference content rather than absorbing it."
+        },
+        {
+          "question": "How quickly does a publisher see impact?",
+          "answer": "Editorial-ops metrics and ad-ops throughput move inside a quarter. Audience and subscription metrics move over several cycles because the decision feedback loop is longer."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-content-marketing",
+        "data-ai"
+      ],
+      "relatedIndustries": [
+        "marketing",
+        "ecommerce"
+      ]
+    },
+    {
+      "slug": "professional-services",
+      "name": "AI for Professional Services",
+      "title": "AI Consultant for Professional Services — Agentic AI Associates",
+      "description": "Agentic AI for UK accounting, consulting and professional services firms. Proposal and matter intake, knowledge management, utilisation analytics, and partner-ready governance.",
+      "primaryKeyword": "ai consultant for professional services",
+      "icon": "strategy",
+      "intro": "<p>Professional services firms sell time — and the economics turn on how much of that time actually reaches the client rather than the internal machine. Agentic AI changes the ratio. Proposal production, matter intake, knowledge search, document drafting and utilisation analytics are all surfaces where agents realistically take work off the fee earner without taking the judgement.</p>\n<p>We work with UK accountancy firms, management consultancies, architecture and engineering practices, and other fee-earning professional businesses — distinct from legal, which has its own page — on the operational surfaces where agents earn their keep.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your practice management, CRM, knowledge and document systems — because the integration question is usually the one that determines time-to-value.</p>",
+      "painPoints": [
+        {
+          "title": "Proposal production is the chronic time sink",
+          "description": "Every proposal repeats 70% of previous content but still consumes partners and marketing for days. Win rate is shaped more by time-to-respond than content quality."
+        },
+        {
+          "title": "Knowledge sits in thousands of documents nobody can find",
+          "description": "Past engagements, precedents, and sector insight exist — but live in DM systems, email and shared drives. The fee earner rebuilds what the firm already has, over and over."
+        },
+        {
+          "title": "Utilisation and profitability drift quarter to quarter",
+          "description": "Time recording lags, matter profitability analysis runs on monthly cycles, and realisation rate erosion is spotted too late to act on."
+        },
+        {
+          "title": "Risk and intake processes create client friction",
+          "description": "Conflict checks, AML/KYC for regulated firms, and matter intake take days. Clients feel it; fee earners work around it."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Proposals, Matter Intake and Document Workflows",
+          "body": "<p>We build agents that own specific professional-services workflows. A proposal agent reads an RFP, matches it against your precedent library, drafts a first response, and flags compliance clauses for review. A matter-intake agent handles conflict checks, AML/KYC where required, engagement letter drafting, and timecode setup. A knowledge agent answers internal questions by reading the firm's own materials with referenceable provenance — not a generic chatbot. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a>.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Utilisation, Realisation and Pipeline Analysis",
+          "body": "<p>Practice management and CRM systems contain the data — utilisation, realisation, matter profitability, pipeline — but rarely surface it in time. We build pipelines that shift the cadence from monthly to daily, with per-partner, per-team, per-matter intelligence that feeds the partner review rather than ambushes it. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns integrate with the real professional-services stack.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "Regulator, AML and Professional Standards Monitoring",
+          "body": "<p>Professional services firms operate under sector regulators — ICAEW, ACCA, RIBA, IMC and others — each with its own standards. For regulated firms AML obligations add another layer. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> packages these as continuous evidence rather than periodic submission, which is how most regulators will want it by 2027.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Pipeline, Capacity and Revenue Forecasting",
+          "body": "<p>Professional services forecasting rarely works well because the inputs are noisy and the pipeline signal is lagged. We build forecasting pipelines that integrate CRM pipeline, practice-management capacity, and resourcing data into a coherent revenue view — with partner-level explainability. Our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting work is operational rather than theatrical.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Professional Services Firms",
+          "body": "<p>Professional services firms tend to find the highest return in these clusters.</p>\n<ul>\n  <li><strong>Proposal and business development:</strong> RFP response drafting, bid qualification scoring, pursuit-team coordination, precedent library management.</li>\n  <li><strong>Matter intake and risk:</strong> conflict checks, AML/KYC automation for regulated firms, engagement letter drafting, scope clarification.</li>\n  <li><strong>Knowledge and precedent:</strong> searchable knowledge agents, precedent surfacing, expertise mapping across the firm, onboarding content.</li>\n  <li><strong>Practice operations:</strong> utilisation anomaly detection, realisation rate tracking, matter profitability drift alerts, time-entry assistance.</li>\n  <li><strong>Delivery and drafting:</strong> document drafting support, quality review assistance, client-ready output packaging.</li>\n</ul>\n<p>Pick one. Pilot on one practice area or team. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "How do you handle client confidentiality?",
+          "answer": "All processing defaults to inside your estate, client-matter data never trains a public model, and information barriers in your DM system are preserved in the agent architecture. We design for audit by a regulator or a client, not convenience."
+        },
+        {
+          "question": "What practice management systems do you integrate with?",
+          "answer": "The common stack — Elite 3E, Aderant Expert, Practice Engine, CCH Central — plus the DM systems (NetDocuments, iManage, SharePoint), CRM (Salesforce, InterAction) and conflict/AML platforms. Integration effort varies by age of install."
+        },
+        {
+          "question": "Will AI write client deliverables?",
+          "answer": "Drafts, yes — final deliverables, no. Client-ready output is a partner judgement call, and we design the workflow so the partner's role is preserved. The gain is on drafting time and consistency, not on deskilling the review."
+        },
+        {
+          "question": "How do we get the firm to actually adopt the tools?",
+          "answer": "Adoption is the real constraint, not technology. We design agent interventions that make the fee earner's work visibly faster from day one — and we work with partners to build the usage discipline around them."
+        },
+        {
+          "question": "What about the regulators' stance on AI in professional advice?",
+          "answer": "Every sector regulator is signalling expectations — ICAEW, ACCA, RIBA and others. We track the guidance, design for the common direction (transparency, human accountability, data protection), and document the posture so it survives a regulator visit."
+        },
+        {
+          "question": "How quickly does a professional services firm see impact?",
+          "answer": "Proposal response time and knowledge search speed move inside a quarter. Utilisation and realisation metrics move over several quarters because the feedback loop is the engagement cycle."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-governance",
+        "data-ai"
+      ],
+      "relatedIndustries": [
+        "legal",
+        "finance"
+      ]
+    },
+    {
+      "slug": "automotive",
+      "name": "AI for Automotive",
+      "title": "AI Consultant for Automotive — Agentic AI Associates",
+      "description": "Agentic AI for UK automotive retail, dealer groups, OEMs and fleet operators. Dealership operations, F&I compliance, aftersales automation, and demand forecasting.",
+      "primaryKeyword": "ai consultant for automotive",
+      "icon": "strategy",
+      "intro": "<p>UK automotive runs three different businesses under one industry label — retail and dealer groups, OEM and importer operations, and fleet and leasing. Each has its own commercial physics but they share the same underlying pressures: electrification timelines, F&I regulatory scrutiny, and an aftersales market where parts and labour economics are tightening year on year.</p>\n<p>We work with UK dealer groups, OEM importers, fleet operators and automotive tech businesses on the surfaces where agentic AI moves the numbers — dealership operations, F&I compliance, aftersales automation, and demand forecasting against an electrification transition that no historical dataset captures cleanly.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your DMS, CRM, aftersales and parts systems — because the DMS landscape in the UK is still fragmented and that shapes what is realistically buildable.</p>",
+      "painPoints": [
+        {
+          "title": "Dealership lead-to-test-drive conversion leaks",
+          "description": "Enquiries arrive across web, portals, phone and walk-in. Conversion drops with every hour between enquiry and response, and most dealer groups still rely on manual follow-up routines that cannot keep pace."
+        },
+        {
+          "title": "F&I compliance risks scale with volume",
+          "description": "FCA consumer credit rules, Consumer Duty fair-value assessment, and the scrutiny on motor finance after recent regulatory moves all converge on F&I. Manual compliance evidence is fragile."
+        },
+        {
+          "title": "Aftersales demand is forecast weakly",
+          "description": "Workshop capacity, parts inventory, and service-plan demand are often forecast on last-year-plus-growth rules. Electrification, MOT-volume variance, and parts supply disruption all break those rules."
+        },
+        {
+          "title": "Customer data across the lifecycle never reconciles",
+          "description": "Sales, F&I, service, and warranty each hold a piece of the customer. The dealer group loses retention battles because no system puts the whole picture in front of a service advisor."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Dealer Operations, F&I and Aftersales",
+          "body": "<p>We build agents that own specific automotive workflows end-to-end. A lead-response agent handles multi-channel enquiries, qualifies and routes to the right dealership and adviser, and keeps the nurture warm with stock-accurate messaging. An F&I compliance agent maintains the evidence pack — affordability, suitability, disclosure — in the structure the FCA will ask for. An aftersales agent coordinates MOT and service reminders, parts availability and technician scheduling with the DMS as system of record. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a>.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Stock, Pricing and Customer Intelligence",
+          "body": "<p>Dealer groups sit on stock, lead, sale and aftersales data that rarely reconcile. We build pipelines that integrate DMS, web and portal feeds, F&I outcomes and service history into a unified customer and stock view — with pricing intelligence layered on top. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns work with the realities of UK DMS platforms (Pinnacle, Keyloop, CDK, Gemini and bespoke systems) rather than assuming a clean data lake.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "FCA, Consumer Duty and GDPR Monitoring for Motor Retail",
+          "body": "<p>The FCA motor-finance landscape has been reshaped — affordability, disclosure, commissions, and fair-value. Consumer Duty applies across the customer lifecycle. UK GDPR sits across the stack. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> packages these obligations as continuous monitoring with evidence structured the way an FCA review will want to consume it.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Demand, Stock, Aftersales and EV Transition Forecasting",
+          "body": "<p>Automotive forecasting is harder than it used to be because the electrification transition breaks the historical model assumptions. We build forecasting pipelines that integrate your own stock, pricing, aftersales and enquiry data with the external signals that actually matter — with explainability your commercial director can defend in a manufacturer review. Our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting work is operational.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Automotive Businesses",
+          "body": "<p>Automotive businesses tend to compound value from these clusters.</p>\n<ul>\n  <li><strong>Lead and sales operations:</strong> multi-channel lead response, test-drive booking automation, stock-accurate nurture, lost-lead reactivation.</li>\n  <li><strong>F&I and compliance:</strong> affordability and suitability evidence, Consumer Duty fair-value analysis, disclosure documentation, commission-arrangement transparency.</li>\n  <li><strong>Aftersales and service:</strong> service-plan uptake, MOT reminders, parts availability forecasting, technician scheduling optimisation.</li>\n  <li><strong>Stock and pricing:</strong> used-car pricing intelligence, stock mix optimisation, days-in-stock drift detection.</li>\n  <li><strong>Customer lifecycle:</strong> cross-sell (new-to-used, sales-to-service, service-to-F&I), churn-risk detection, warranty and recall coordination.</li>\n</ul>\n<p>Pick one. Pilot across a franchise or region. Extend.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with OEMs as well as dealer groups?",
+          "answer": "Yes. The operational shape is different — OEMs think in importer, network and fleet terms; dealers think in showroom, F&I and aftersales terms. Agent architecture adapts but the patterns port."
+        },
+        {
+          "question": "What DMS platforms do you integrate with?",
+          "answer": "The common UK stack — Pinnacle, Keyloop (formerly CDK), Gemini, Navigator, Titanium — plus manufacturer portals and the lead aggregators (Auto Trader, CarGurus, Cazana). Integration effort depends on DMS access."
+        },
+        {
+          "question": "How do you handle the post-FCA-review motor finance landscape?",
+          "answer": "We design agent workflows around the current and foreseeable FCA posture — affordability, suitability, disclosure, fair value — and build the evidence pack so a Skilled Person Review can read it without translation."
+        },
+        {
+          "question": "Can AI help with the EV transition commercially?",
+          "answer": "Yes. EV transition creates forecasting problems (residuals, aftersales demand, charging patterns) that old methods handle badly. Agents that blend your data with external signals outperform last-year-plus-growth rules by a meaningful margin."
+        },
+        {
+          "question": "How do you handle customer data across the sales-service-warranty lifecycle?",
+          "answer": "We treat lifecycle data unification as a first-class design problem — unified customer ID, consent propagation, and retention discipline — so aftersales can see the sale and sales can see the service history."
+        },
+        {
+          "question": "How quickly does an automotive business see impact?",
+          "answer": "Lead response time and aftersales uptake move inside a quarter. F&I compliance posture improvement and stock-pricing impact show over 2-3 quarters because the decision cadence is longer."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-automation",
+        "ai-governance"
+      ],
+      "relatedIndustries": [
+        "finance",
+        "supply-chain"
+      ]
+    },
+    {
+      "slug": "charities-nonprofits",
+      "name": "AI for Charities & Nonprofits",
+      "title": "AI Consultant for Charities & Nonprofits — Agentic AI Associates",
+      "description": "Agentic AI for UK charities, nonprofits and social enterprises. Fundraising operations, supporter care, grants and reporting, Charity Commission and Fundraising Regulator ready.",
+      "primaryKeyword": "ai consultant for charities",
+      "icon": "strategy",
+      "intro": "<p>Charity and nonprofit operations carry a contradiction: the need to do more is relentless, but the budget to do more never keeps pace. Agentic AI is one of the few levers that meaningfully shifts that maths — by taking operational load off small teams without compromising the trust and accountability donors, beneficiaries and regulators expect.</p>\n<p>We work with UK charities, social enterprises and grant-making trusts on the surfaces where agents genuinely help — fundraising operations, supporter and beneficiary care, grants and reporting, and compliance against a Fundraising Regulator and Charity Commission posture that has tightened in recent years.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> — including a frank look at whether an agent is the right investment at all. Some charities are better served by stripping things out than adding AI in.</p>",
+      "painPoints": [
+        {
+          "title": "Supporter journeys leak donations",
+          "description": "First-time donor conversion to regular giving, lapsed-donor reactivation, and legacy-intender nurture are all shaped by timing. Small teams cannot hit every moment that matters."
+        },
+        {
+          "title": "Grants and reporting consume disproportionate time",
+          "description": "Applying for grants, managing restricted funds, and producing funder reports can absorb a large share of programme-management capacity — reducing what reaches the mission."
+        },
+        {
+          "title": "Beneficiary data is under-used or used nervously",
+          "description": "Case management data holds insight that could improve service design — but the safeguarding and data-protection posture rightly makes charities cautious about doing anything clever with it."
+        },
+        {
+          "title": "Compliance obligations stack up",
+          "description": "Charity Commission reporting, Fundraising Regulator standards, UK GDPR, safeguarding duties, and gift-aid compliance all sit on limited governance capacity."
+        }
+      ],
+      "solutionSections": [
+        {
+          "solution": "automation",
+          "heading": "Agentic Supporter Care, Grants and Programme Operations",
+          "body": "<p>We build agents that own specific charity workflows end-to-end — with human oversight baked in where mission and trust demand. A supporter-journey agent handles onboarding, thank-you personalisation, reactivation and legacy-intender nurture with proper tone and restrictions. A grants agent supports application drafting against the funder's criteria and maintains compliance evidence for live grants. A reporting agent assembles funder reports from activity, finance and outcome data. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI approach</a>.</p>",
+          "linkSlug": "/what-we-do/agentic-ai/"
+        },
+        {
+          "solution": "data-analysis",
+          "heading": "AI-Powered Supporter, Fundraising and Programme Intelligence",
+          "body": "<p>Most charities sit on a CRM, finance system and case-management data that never meet in one place. We build pipelines that integrate those feeds into per-supporter, per-programme, per-appeal intelligence — so fundraising and programme decisions can be made weekly rather than quarterly. Our <a href=\"/what-we-do/data-ai/\">data AI</a> patterns treat safeguarding and vulnerability with the care they deserve.</p>",
+          "linkSlug": "/what-we-do/data-ai/"
+        },
+        {
+          "solution": "compliance-monitoring",
+          "heading": "Charity Commission, Fundraising Regulator and GDPR Monitoring",
+          "body": "<p>Charity governance is a real and increasing surface area — Charity Commission expectations on trustees, Fundraising Regulator standards on supporter treatment, UK GDPR across donor and beneficiary data, and safeguarding duties across beneficiary-facing services. Our <a href=\"/what-we-do/ai-governance/\">AI governance framework</a> packages this as continuous monitoring rather than annual scramble.</p>",
+          "linkSlug": "/what-we-do/ai-governance/"
+        },
+        {
+          "solution": "forecasting",
+          "heading": "Income, Demand and Capacity Forecasting for Charities",
+          "body": "<p>Charity forecasting has to reconcile three things at once: income by stream, demand on services, and staff and volunteer capacity. We build forecasting pipelines that produce coherent numbers across those — with explainability trustees can read. Our <a href=\"/what-we-do/applied-ai/\">applied AI</a> forecasting patterns translate across mission-led organisations.</p>",
+          "linkSlug": "/what-we-do/applied-ai/"
+        },
+        {
+          "solution": "use-cases",
+          "heading": "High-ROI AI Use Cases for UK Charities",
+          "body": "<p>Charities tend to get the highest return from these clusters. Each is a pilot in 8-12 weeks.</p>\n<ul>\n  <li><strong>Fundraising and supporter care:</strong> first-gift thank-you personalisation, lapsed reactivation, legacy intender nurture, mid-value donor development.</li>\n  <li><strong>Grants and fundraising admin:</strong> application drafting support, restricted-fund tracking, funder reporting assembly, pipeline management.</li>\n  <li><strong>Programme operations:</strong> case-management triage, service demand forecasting, safeguarding-aware signal detection.</li>\n  <li><strong>Compliance and governance:</strong> Charity Commission reporting assembly, Fundraising Regulator evidence, UK GDPR posture monitoring.</li>\n  <li><strong>Communications and campaigns:</strong> segment-aware content, email and social drafting with tone guardrails, campaign performance monitoring.</li>\n</ul>\n<p>Pick one. Pilot on one team. Extend only if the return is real.</p>",
+          "linkSlug": "/what-we-do/ai-readiness-assessment/"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Should a small charity even invest in AI?",
+          "answer": "Not always. We will say so if an engagement would not pay back. When we recommend it, the starting point is almost always fundraising operations or grants admin — where the time saved goes directly back to mission."
+        },
+        {
+          "question": "How do you handle beneficiary data and safeguarding?",
+          "answer": "Beneficiary data gets treated with the same care as patient data in healthcare — minimisation, strict access controls, auditability, and safeguarding-aware design. We do not use beneficiary data to train models unless there is a very specific mission-aligned reason and proper consent."
+        },
+        {
+          "question": "What systems do you integrate with?",
+          "answer": "The common charity stack — Raiser's Edge, Salesforce NPSP, Blackbaud, ThankQ, Donorfy — plus the case-management and grants platforms the sector uses. Integration effort is usually the binding constraint."
+        },
+        {
+          "question": "Can AI help with grant applications?",
+          "answer": "Yes — as a drafting support for applications, compliance evidence for live grants, and reporting assembly at the end. The grants team still owns the funder relationship and the narrative; the agent takes the admin drag off."
+        },
+        {
+          "question": "How do you price for the charity sector?",
+          "answer": "Every engagement is fixed-fee and scoped honestly. We want charities to get a real return — we will not stretch a project beyond where the value is clear, and we are open about what is and is not worth doing."
+        },
+        {
+          "question": "How quickly does a charity see impact?",
+          "answer": "Fundraising operations and grants admin move fastest — inside a quarter. Programme-level impact takes longer and depends heavily on data quality and safeguarding posture."
+        }
+      ],
+      "relatedServices": [
+        "agentic-ai",
+        "ai-governance",
+        "ai-automation"
+      ],
+      "relatedIndustries": [
+        "government",
+        "healthcare"
+      ]
     }
   ]
 }
