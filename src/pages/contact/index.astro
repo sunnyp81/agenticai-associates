@@ -8,15 +8,15 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
 ---
 
 <BaseLayout
-  title="Contact Us — Hire an AI Consultant | Agentic AI Associates"
-  description="Get in touch with Agentic AI Associates. Book a free AI consultation or send us a message. UK-based AI consultancy, ready to help."
+  title="Contact Us — Book a Fit Call | Agentic AI Associates"
+  description="Get in touch with Agentic AI Associates. Book a 30-minute fit call or send us a message. UK mid-market AI operations consultancy."
 >
   <!-- Hero -->
   <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
     <div class="container">
       <BreadcrumbNav items={[{ label: 'Contact', href: '/contact/' }]} />
       <h1 class="text-white max-w-3xl">Get in Touch</h1>
-      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">Book a free consultation or send us a message. We typically respond within 24 hours.</p>
+      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">Book a 30-minute fit call or send us a message. We typically respond within one working day.</p>
     </div>
   </section>
 
@@ -90,12 +90,12 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
           <div class="dot-grid absolute inset-0 opacity-[0.06]"></div>
           <div class="relative">
             <p class="text-xs font-bold uppercase tracking-[0.2em] mb-3" style="color: #5eead4;">Prefer to Talk?</p>
-            <h2 class="text-white text-3xl md:text-4xl font-extrabold mb-4">Book a Free Consultation</h2>
+            <h2 class="text-white text-3xl md:text-4xl font-extrabold mb-4">Book a 30-Minute Fit Call</h2>
             <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
-              A 30-minute discovery call. No sales pitch — just an honest conversation about your AI challenges and whether we're the right fit to help.
+              No sales pitch. An honest conversation about your operational pressure points — we'll tell you straight whether a Phase 1 Diagnostic is the right fit.
             </p>
             <a href={siteConfig.contact.bookingUrl} target="_blank" rel="noopener noreferrer" class="btn-glow text-base">
-              Book a 30-Minute Call
+              Book a Fit Call
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>

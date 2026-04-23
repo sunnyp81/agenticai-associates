@@ -7,11 +7,11 @@ import { buildFAQSchema, buildServiceSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
 
 const faqs = [
-  { question: 'How much does the AI Readiness Assessment cost?', answer: 'The assessment is a fixed-fee engagement. Contact us for current pricing — it depends on the size and complexity of your organisation, but we always provide a clear price upfront with no hidden costs.' },
-  { question: 'What happens after the assessment?', answer: 'You receive a complete report with a prioritised AI roadmap. If you want us to help execute it, we scope that as a separate engagement. There is no obligation to continue.' },
-  { question: 'Do you offer fixed-price projects?', answer: 'Yes. For well-defined projects, we prefer fixed-price engagements. You know exactly what you are paying upfront. For ongoing work, we offer monthly retainer packages starting from £1,500.' },
-  { question: 'How long does a typical engagement take?', answer: 'The AI Readiness Assessment takes 2 to 4 weeks. Strategy engagements run 2 to 6 weeks. Implementation projects deliver first results within 6 to 8 weeks, with full deployment in 3 to 6 months.' },
-  { question: 'Do you work with small businesses?', answer: 'We work with businesses of all sizes. Our assessment and strategy services are designed to be accessible. For smaller businesses, we also offer advisory sessions from £150 per hour.' },
+  { question: 'How much does the Phase 1 Diagnostic cost?', answer: 'Phase 1 Diagnostic is a fixed fee of £6,500 for a three-week engagement, covering operational review, opportunity prioritisation, and a board-ready AI roadmap. No hidden costs. Rate held for twelve months from signature.' },
+  { question: 'What happens after the Diagnostic?', answer: 'You receive the prioritised roadmap plus a board-ready business case with investment ranges and expected returns per workflow. Phase 2 Build is contracted separately if you decide to proceed — there is no prior commitment from either side.' },
+  { question: 'How is Phase 2 Build priced?', answer: 'Phase 2 Build is embedded delivery of the priority workflow, charged at £850 per day on a time-and-materials basis or as a milestone fixed-fee. Typical engagements run 3–6 months with a working system delivered inside the first 90 days.' },
+  { question: 'What does Phase 3 Retain cover?', answer: 'Phase 3 is a £10,000 per month retainer — one day per week of founder-led advisory, governance, and scale-out oversight as you extend AI across the business. Rolling three-month terms, extendable.' },
+  { question: 'Do you work with small businesses?', answer: 'We focus on UK mid-market B2B — typically £100M–£500M in revenue, often PE-backed. If that is not you, we are not the right fit, and we will tell you so on the fit call rather than waste either side\'s time.' },
 ];
 
 const faqSchema = buildFAQSchema(faqs);
@@ -26,8 +26,8 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
 ---
 
 <BaseLayout
-  title="Get Started — AI Readiness Assessment | Agentic AI Associates"
-  description="Start your AI journey with a fixed-fee AI Readiness Assessment. Clear pricing, no hidden fees. Book a free discovery call."
+  title="Get Started — Phase 1 Diagnostic | Agentic AI Associates"
+  description="Every engagement starts with the Phase 1 Diagnostic — £6,500 fixed fee, three weeks, board-ready AI roadmap. Then Phase 2 Build at £850/day, Phase 3 Retain at £10k/month."
   schema={schemas}
 >
   <!-- Hero -->
@@ -40,7 +40,7 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
   </section>
 
   <div class="container section-sm">
-    <!-- Entry point: Assessment -->
+    <!-- Entry point: Phase 1 Diagnostic -->
     <div class="max-w-4xl mx-auto">
       <div class="card border-[var(--color-accent)] border-2 p-8 md:p-10">
         <div class="flex items-start gap-4 mb-6">
@@ -50,20 +50,21 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
             </svg>
           </div>
           <div>
-            <h2 class="text-2xl font-bold mb-1">AI Readiness Assessment</h2>
-            <p class="text-sm text-[var(--color-text-muted)]">Fixed fee &middot; 2-4 weeks &middot; No obligation to continue</p>
+            <p class="text-xs font-mono tracking-widest uppercase" style="color: #0d9488;">Phase 01</p>
+            <h2 class="text-2xl font-bold mb-1">Diagnostic</h2>
+            <p class="text-sm text-[var(--color-text-muted)]"><strong>£6,500 fixed fee</strong> &middot; 3 weeks &middot; No commitment to Phase 2</p>
           </div>
         </div>
 
-        <p class="text-[var(--color-text-muted)] leading-relaxed mb-6">We audit your data, processes, technology, and team capability. You receive a scored matrix of AI opportunities with estimated ROI, a technology gap analysis, and a phased roadmap you can act on immediately.</p>
+        <p class="text-[var(--color-text-muted)] leading-relaxed mb-6">A structured review of your operations, data, and team capability. You leave with a board-ready AI roadmap — prioritised by ROI, ranked for fit, cost, and risk — plus an investment-sized business case for the phase that comes next.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {[
-            'Data maturity assessment',
+            'Operational workflow review',
             'AI opportunity scoring matrix',
-            'Technology gap analysis',
-            'Team skills audit',
-            'Phased 12-24 month roadmap',
+            'Technology + data gap analysis',
+            'Team capability audit',
+            'Prioritised 12-month roadmap',
             'Board-ready business case',
           ].map(item => (
             <div class="flex gap-2 text-sm">
@@ -75,39 +76,36 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
 
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="/contact/" class="btn-glow">
-            Book a Free Discovery Call
+            Book a Fit Call
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
-          <a href="/what-we-do/ai-readiness-assessment/" class="btn btn-outline">Learn More</a>
+          <a href="/what-we-do/ai-readiness-assessment/" class="btn btn-outline">Read the Diagnostic Brief</a>
         </div>
       </div>
 
-      <!-- What happens next -->
+      <!-- Phases 2 + 3 -->
       <div class="mt-16">
-        <h2 class="text-center mb-10">What Happens After the Assessment</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 class="text-center mb-3">After the Diagnostic</h2>
+        <p class="text-center text-sm text-[var(--color-text-muted)] mb-10 max-w-2xl mx-auto leading-relaxed">Phase 2 and Phase 3 are contracted separately, on board approval. Rates are held for twelve months from Phase 1 signature.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
-            { step: '1', title: 'AI Strategy', desc: 'We build a detailed AI roadmap based on the assessment findings. Typically 2-6 weeks.', range: 'From £3,000' },
-            { step: '2', title: 'Pilot & Proof of Concept', desc: 'We build and test your highest-priority AI use case in a single department.', range: 'From £10,000' },
-            { step: '3', title: 'Full Implementation', desc: 'Multi-use-case deployment across your organisation with training and ongoing support.', range: 'Scoped individually' },
+            { step: '02', title: 'Build', desc: 'We embed alongside your team to deliver the priority workflow scoped in Phase 1 — shipped, measurable, running inside 90 days. PI/PL cover, DPIA, and governance in place before go-live.', range: '£850/day · 3–6 months' },
+            { step: '03', title: 'Retain', desc: 'Founder-led advisory, governance, and scale-out oversight as you extend AI across the business. One day per week. Rolling three-month terms, extendable.', range: '£10,000/month · 1 day/week' },
           ].map(item => (
-            <div class="text-center">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgba(13,148,136,0.1);">
-                <span class="text-sm font-bold" style="color: #0d9488;">{item.step}</span>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
-              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-2">{item.desc}</p>
-              <p class="text-xs font-semibold text-[var(--color-accent)]">{item.range}</p>
+            <div class="text-center md:text-left">
+              <p class="text-xs font-mono tracking-widest uppercase mb-2" style="color: #0d9488;">Phase {item.step}</p>
+              <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">{item.desc}</p>
+              <p class="text-sm font-semibold text-[var(--color-accent)]">{item.range}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Retainer note -->
-      <div class="mt-12 text-center">
-        <p class="text-[var(--color-text-muted)]">
-          <strong class="text-[var(--color-text)]">Ongoing support</strong> available from £1,500/month. Advisory sessions from £150/hour.
-          <a href="/what-we-do/ongoing-support/" class="text-[var(--color-primary-light)] hover:text-[var(--color-accent)]">Learn about retainer packages</a>.
+      <!-- Not the right fit -->
+      <div class="mt-12 text-center max-w-2xl mx-auto">
+        <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+          <strong class="text-[var(--color-text)]">Not our focus:</strong> we don\'t offer hourly advisory, small-business packages, or PoC sandboxes. If that\'s the shape of engagement you need, we\'ll say so on the fit call.
         </p>
       </div>
     </div>
@@ -118,9 +116,9 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
   </div>
 
   <CTABanner
-    headline="Every Engagement Starts with a Conversation"
-    text="30 minutes, no obligation. Tell us what you're working on and we'll give you an honest assessment."
-    buttonText="Book a Discovery Call"
+    headline="Every engagement starts with a 30-minute fit call."
+    text="Tell us what you're working on. We'll confirm whether Phase 1 Diagnostic is the right fit — and if it isn't, we'll say so."
+    buttonText="Book a Fit Call"
     buttonHref="/contact/"
   />
 </BaseLayout>
