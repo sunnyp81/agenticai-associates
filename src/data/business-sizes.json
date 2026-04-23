@@ -42,7 +42,7 @@
       "faq": [
         {
           "question": "How much does AI consultancy cost for a small business?",
-          "answer": "Our small business packages start from £1,500 for a strategy session and roadmap. Implementation projects typically range from £3,000 to £8,000 depending on complexity. We always provide a fixed quote before work begins."
+          "answer": "We focus on UK mid-market B2B — typically £100M–£500M revenue, often PE-backed. Our engagement runs as Phase 1 Diagnostic £6,500 (3 weeks), Phase 2 Build £850/day (3–6 months), Phase 3 Retain £10,000/month. If you're a smaller business, we'll tell you straight on the 30-minute fit call rather than sell you something that doesn't fit."
         },
         {
           "question": "Do I need technical skills to use AI in my business?",
@@ -61,7 +61,10 @@
           "answer": "Absolutely. In fact, smaller teams often see the biggest proportional gains because AI can handle tasks that would otherwise require hiring additional staff. A single AI chatbot can handle enquiries that previously took hours each day."
         }
       ],
-      "relatedServices": ["ai-strategy", "ai-training"]
+      "relatedServices": [
+        "ai-strategy",
+        "ai-training"
+      ]
     },
     {
       "slug": "enterprise",
@@ -124,7 +127,10 @@
           "answer": "Absolutely. We provide independent vendor assessments, help you write RFPs, evaluate proposals, and negotiate contracts. Because we don't resell technology, our advice is always in your interest."
         }
       ],
-      "relatedServices": ["ai-strategy", "ai-automation"]
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation"
+      ]
     },
     {
       "slug": "startups",
@@ -168,7 +174,7 @@
       "faq": [
         {
           "question": "How much does AI consultancy cost for a startup?",
-          "answer": "Our startup sprints start from £2,000 for a focused strategy and architecture review. Ongoing advisory retainers are available from £500 per month. We also offer equity-adjusted pricing for pre-revenue startups with strong potential."
+          "answer": "We focus on UK mid-market B2B (£100M–£500M revenue, often PE-backed) rather than pre-revenue or seed-stage startups. Our engagement is Phase 1 Diagnostic £6,500 (3 weeks), Phase 2 Build £850/day, Phase 3 Retain £10,000/month. If you're earlier stage, we'll signpost you somewhere more appropriate on the fit call."
         },
         {
           "question": "We're pre-revenue. Is it too early for AI consultancy?",
@@ -187,7 +193,10 @@
           "answer": "We work with startups from pre-seed through Series B. The nature of our support evolves with your stage — from foundational strategy and MVP guidance at the earliest stages to scaling architecture and team building as you grow."
         }
       ],
-      "relatedServices": ["ai-strategy", "generative-ai"]
+      "relatedServices": [
+        "ai-strategy",
+        "generative-ai"
+      ]
     },
     {
       "slug": "smes",
@@ -235,7 +244,7 @@
         },
         {
           "question": "How much should an SME budget for AI consultancy?",
-          "answer": "A comprehensive AI audit and strategy starts from £3,000. Implementation projects typically range from £5,000 to £20,000 depending on scope. Monthly advisory retainers start from £750. We always recommend starting with a strategy phase to ensure your investment is well directed."
+          "answer": "We focus on UK mid-market B2B (£100M–£500M revenue). For smaller SMEs, our engagement is often larger than the right fit — Phase 1 Diagnostic is £6,500, Phase 2 Build £850/day, Phase 3 Retain £10,000/month. The 30-minute fit call is the fastest way to confirm whether this is the right shape of engagement for your business."
         },
         {
           "question": "Will AI replace jobs in my business?",
@@ -250,7 +259,10 @@
           "answer": "Absolutely. We collaborate with your existing IT team or managed service provider to ensure smooth implementation. We handle the AI strategy and specialist work while your IT provider manages the infrastructure and day-to-day support."
         }
       ],
-      "relatedServices": ["ai-strategy", "ai-automation"]
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation"
+      ]
     }
   ]
 }

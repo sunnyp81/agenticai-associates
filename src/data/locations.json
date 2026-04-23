@@ -31,7 +31,7 @@
       "faq": [
         {
           "question": "How much does AI consultancy cost in London?",
-          "answer": "London AI consultancy rates are typically 15-25% above national averages. Expect £100-£200 per hour or £700-£1,500 per day depending on the consultant's experience and specialisation. Fixed-price projects start from £3,000 for strategy engagements."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         },
         {
           "question": "Do you work with London startups?",
@@ -50,8 +50,15 @@
           "answer": "Yes. Financial services is one of our core verticals. We've worked with banks, insurers, asset managers, and fintech companies on AI strategy, implementation, and regulatory compliance."
         }
       ],
-      "relatedLocations": ["reading", "bristol"],
-      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
+      "relatedLocations": [
+        "reading",
+        "bristol"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
     },
     {
       "slug": "manchester",
@@ -79,7 +86,7 @@
       "faq": [
         {
           "question": "How much does AI consultancy cost in Manchester?",
-          "answer": "Manchester AI consultancy rates are typically 5-10% below London prices. Expect £80-£160 per hour or £600-£1,200 per day. Fixed-price strategy projects start from £2,500."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         },
         {
           "question": "Do you work with businesses outside central Manchester?",
@@ -94,8 +101,15 @@
           "answer": "Yes. We've worked with businesses across MediaCityUK and Manchester's creative industries, helping them adopt AI tools for content production, audience analysis, and advertising optimisation."
         }
       ],
-      "relatedLocations": ["leeds", "birmingham"],
-      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
+      "relatedLocations": [
+        "leeds",
+        "birmingham"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
     },
     {
       "slug": "birmingham",
@@ -138,8 +152,15 @@
           "answer": "Absolutely. Many of our Birmingham clients are SMEs. We offer packages specifically designed for smaller businesses, with fixed pricing and practical recommendations that match your budget and team capacity."
         }
       ],
-      "relatedLocations": ["manchester", "leicester"],
-      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
+      "relatedLocations": [
+        "manchester",
+        "leicester"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
     },
     {
       "slug": "leeds",
@@ -179,11 +200,18 @@
         },
         {
           "question": "What are typical AI consultancy rates in Leeds?",
-          "answer": "Leeds rates are typically 5-15% below London levels. Expect £80-£150 per hour or £600-£1,100 per day for experienced AI consultants. The region offers excellent value compared to the South East."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         }
       ],
-      "relatedLocations": ["manchester", "birmingham"],
-      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
+      "relatedLocations": [
+        "manchester",
+        "birmingham"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
     },
     {
       "slug": "bristol",
@@ -223,11 +251,18 @@
         },
         {
           "question": "How do Bristol AI consultancy rates compare to London?",
-          "answer": "Bristol rates are typically 10-20% below London levels, offering excellent value. Expect £80-£150 per hour or £600-£1,100 per day for experienced consultants."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         }
       ],
-      "relatedLocations": ["london", "reading"],
-      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
+      "relatedLocations": [
+        "london",
+        "reading"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
     },
     {
       "slug": "edinburgh",
@@ -271,11 +306,18 @@
         },
         {
           "question": "What are AI consultancy rates in Edinburgh?",
-          "answer": "Edinburgh rates are similar to other major UK cities outside London. Expect £80-£160 per hour or £600-£1,200 per day for experienced AI consultants."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         }
       ],
-      "relatedLocations": ["glasgow", "scotland"],
-      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
+      "relatedLocations": [
+        "glasgow",
+        "scotland"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
     },
     {
       "slug": "glasgow",
@@ -315,11 +357,18 @@
         },
         {
           "question": "What are AI consultancy costs in Glasgow?",
-          "answer": "Glasgow rates are competitive — typically £75-£140 per hour or £550-£1,000 per day. The city offers excellent value compared to London and the South East while maintaining access to strong AI talent."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         }
       ],
-      "relatedLocations": ["edinburgh", "scotland"],
-      "relatedServices": ["ai-strategy", "ai-training", "ai-automation"]
+      "relatedLocations": [
+        "edinburgh",
+        "scotland"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-training",
+        "ai-automation"
+      ]
     },
     {
       "slug": "reading",
@@ -359,15 +408,22 @@
         },
         {
           "question": "How do Thames Valley AI consultancy rates compare?",
-          "answer": "Thames Valley rates are close to London levels due to the concentration of enterprise clients. Expect £90-£170 per hour or £650-£1,300 per day for experienced AI consultants."
+          "answer": "Our engagement runs in three fixed phases rather than hourly or day-rate advisory: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature. See Get Started for details."
         },
         {
           "question": "Can you advise on AI integration into software products?",
           "answer": "Yes. We help software companies evaluate which AI capabilities to integrate, choose between build and buy approaches, and design architectures that scale. This is particularly relevant for Thames Valley SaaS and enterprise software companies."
         }
       ],
-      "relatedLocations": ["london", "bristol"],
-      "relatedServices": ["ai-strategy", "ai-automation", "generative-ai"]
+      "relatedLocations": [
+        "london",
+        "bristol"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
     },
     {
       "slug": "leicester",
@@ -403,15 +459,22 @@
         },
         {
           "question": "What does AI consultancy cost in Leicester?",
-          "answer": "East Midlands rates are competitive — typically £70-£130 per hour or £500-£950 per day. This makes AI consultancy more accessible for the region's businesses compared to London or the Thames Valley."
+          "answer": "Independent AI consultant day rates across Leicester typically fall in the £500–£950 range. Our own engagement is packaged, not time-and-materials advisory: Phase 1 Diagnostic is £6,500 for 3 weeks (board-ready roadmap), Phase 2 Build is £850/day for embedded delivery (3–6 months), Phase 3 Retain is £10,000/month for governance and scale-out (1 day/week). See Get Started for the full structure."
         },
         {
           "question": "Is Leicester's business community ready for AI?",
           "answer": "Increasingly yes. While adoption is earlier-stage than in London or Manchester, Leicester businesses are recognising the competitive advantage AI provides. Those moving now will establish a significant lead over slower-moving competitors."
         }
       ],
-      "relatedLocations": ["birmingham", "leeds"],
-      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
+      "relatedLocations": [
+        "birmingham",
+        "leeds"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
     },
     {
       "slug": "scotland",
@@ -458,8 +521,15 @@
           "answer": "AI regulation is largely UK-wide, but the Scottish Government has its own AI strategy and ethical guidelines for public sector AI use. We ensure our advice accounts for both UK-wide and Scotland-specific requirements."
         }
       ],
-      "relatedLocations": ["edinburgh", "glasgow"],
-      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
+      "relatedLocations": [
+        "edinburgh",
+        "glasgow"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
     },
     {
       "slug": "northern-ireland",
@@ -499,11 +569,18 @@
         },
         {
           "question": "What are AI consultancy rates in Northern Ireland?",
-          "answer": "Northern Ireland offers the most competitive AI consultancy rates in the UK. Expect £65-£120 per hour or £450-£900 per day for experienced consultants. This makes expert AI guidance accessible to businesses of all sizes."
+          "answer": "Independent AI consultant day rates across Northern Ireland typically fall in the £450–£900 range. Our own engagement is packaged, not time-and-materials advisory: Phase 1 Diagnostic is £6,500 for 3 weeks (board-ready roadmap), Phase 2 Build is £850/day for embedded delivery (3–6 months), Phase 3 Retain is £10,000/month for governance and scale-out (1 day/week). See Get Started for the full structure."
         }
       ],
-      "relatedLocations": ["scotland", "leeds"],
-      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
+      "relatedLocations": [
+        "scotland",
+        "leeds"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
     },
     {
       "slug": "norfolk",
@@ -543,15 +620,22 @@
         },
         {
           "question": "What are AI consultancy rates in Norfolk?",
-          "answer": "East Anglia rates are competitive — typically £70-£130 per hour or £500-£950 per day. The region offers excellent value compared to London and the South East, making expert AI consultancy accessible to a wider range of businesses."
+          "answer": "Independent AI consultant day rates across Norfolk typically fall in the £500–£950 range. Our own engagement is packaged, not time-and-materials advisory: Phase 1 Diagnostic is £6,500 for 3 weeks (board-ready roadmap), Phase 2 Build is £850/day for embedded delivery (3–6 months), Phase 3 Retain is £10,000/month for governance and scale-out (1 day/week). See Get Started for the full structure."
         },
         {
           "question": "Is Norfolk's internet infrastructure good enough for AI?",
           "answer": "Norwich and the major towns have strong broadband and 4G/5G coverage. Rural areas can be more challenging, but many AI applications — particularly in agriculture — are designed to work with intermittent connectivity, processing data locally and syncing when connections are available."
         }
       ],
-      "relatedLocations": ["london", "leicester"],
-      "relatedServices": ["ai-strategy", "ai-automation", "ai-training"]
+      "relatedLocations": [
+        "london",
+        "leicester"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
     }
   ]
 }

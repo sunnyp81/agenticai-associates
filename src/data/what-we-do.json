@@ -156,7 +156,7 @@
         },
         {
           "question": "What does an AI strategy cost?",
-          "answer": "Strategy engagements start from £3,000 for smaller organisations. Contact us for a scoped proposal."
+          "answer": "Phase 1 Diagnostic is a £6,500 fixed fee for 3 weeks — delivers strategy as a prioritised, board-ready AI roadmap with investment-sized ranges per workflow. Phase 2 Build contracts separately if you decide to proceed."
         },
         {
           "question": "Will you help us implement the strategy?",
@@ -239,7 +239,7 @@
         },
         {
           "question": "What does an agentic AI project cost?",
-          "answer": "It depends on the complexity of the workflow. Simple single-agent systems start from £10,000. Multi-agent enterprise systems are scoped individually."
+          "answer": "Phase 2 Build runs at £850/day, typically 3–6 months, with a working system shipped inside the first 90 days. Milestone fixed-fee pricing available for well-defined scope. Phase 1 Diagnostic (£6,500) sizes the Build investment precisely before you commit."
         },
         {
           "question": "How long does it take to build an agentic system?",
@@ -278,7 +278,7 @@
         },
         {
           "heading": "Content and Workflow Pipelines",
-          "body": "<p>Generative AI shines for content production at scale — when paired with proper quality controls. We build pipelines for marketing copy variants, technical documentation drafts, code generation, image synthesis, multilingual content, and automated reporting. Every pipeline includes prompt templates aligned to your brand voice, evaluation against quality rubrics, human approval gates for high-stakes content, and version control. Teams using our pipelines typically produce 5-10x more content per week with higher consistency and lower revision cycles. The <a href=\"/what-we-do/ai-automation/\">AI automation</a> framework handles the orchestration, and the <a href=\"/what-we-do/ai-content-marketing/\">AI content marketing</a> capability provides the editorial overlay.</p>"
+          "body": "<p>Generative AI shines for content production at scale — when paired with proper quality controls. We build pipelines for marketing copy variants, technical documentation drafts, code generation, image synthesis, multilingual content, and automated reporting. Every pipeline includes prompt templates aligned to your brand voice, evaluation against quality rubrics, human approval gates for high-stakes content, and version control. Teams using our pipelines typically produce 5-10x more content per week with higher consistency and lower revision cycles. The <a href=\"/what-we-do/ai-automation/\">AI automation</a> framework handles the orchestration.</p>"
         },
         {
           "heading": "Cost Optimisation",
@@ -602,7 +602,7 @@
         },
         {
           "heading": "AI Governance for SMEs",
-          "body": "<p>Enterprise-grade governance consulting typically costs £50,000 or more. We offer scaled governance frameworks for mid-market businesses — the same rigour at a price point that makes sense for organisations with 50 to 500 employees.</p>"
+          "body": "<p>Enterprise-grade governance consulting typically runs six figures at Big 4 rates. Our three-phase structure brings the same rigour at mid-market budgets — £6,500 Diagnostic, £850/day Build, £10,000/month Retain.</p>"
         }
       ],
       "features": [
@@ -642,7 +642,7 @@
         },
         {
           "question": "How much does AI governance consulting cost?",
-          "answer": "We offer scaled packages from £5,000 for an initial governance assessment through to £25,000+ for comprehensive frameworks. Contact us for a scoped proposal."
+          "answer": "Governance scoping runs inside Phase 1 Diagnostic (£6,500 fixed fee) — we map your AI risk posture, compliance obligations, and governance gaps. Implementation runs in Phase 2 Build at £850/day, typically 4–8 weeks for a mid-market framework. Phase 3 Retain at £10,000/month provides ongoing governance oversight."
         }
       ],
       "relatedServices": [
@@ -721,7 +721,7 @@
         },
         {
           "question": "How much do workshops cost?",
-          "answer": "Half-day sessions start from £1,500. Full-day workshops from £2,500. Multi-week programmes are scoped individually."
+          "answer": "We don't run standalone workshops or half-day sessions. Every engagement opens with a 30-minute fit call, then Phase 1 Diagnostic (£6,500 fixed fee, 3 weeks) — which includes a team capability audit and training recommendations as part of the board-ready roadmap."
         },
         {
           "question": "Can you deliver training remotely?",
@@ -800,7 +800,7 @@
       "faq": [
         {
           "question": "What does a retainer cost?",
-          "answer": "Retainer packages start from £1,500 per month. We scope them based on the number of AI systems, level of support required, and frequency of engagement."
+          "answer": "Phase 3 Retain is £10,000 per month for one day per week of founder-led advisory — governance, measurement, and scale-out oversight as you extend AI across the business. Rolling three-month terms, extendable."
         },
         {
           "question": "Can we cancel the retainer?",
@@ -900,85 +900,6 @@
         "retail",
         "supply-chain",
         "finance"
-      ]
-    },
-    {
-      "slug": "ai-content-marketing",
-      "name": "AI for Content & Marketing",
-      "title": "AI Content & Marketing Consulting UK — Scalable Content Generation",
-      "description": "AI-powered content creation and marketing automation. Scale content production while maintaining quality and brand voice.",
-      "primaryKeyword": "ai content marketing consulting",
-      "icon": "sparkles",
-      "entryPoint": false,
-      "intro": "<p>AI can scale your content production dramatically — but only if it is set up properly. We build content systems that combine generative AI with editorial discipline, brand voice consistency, and quality control at scale. Most teams using AI for content end up with average copy at higher volume; we help you ship better copy at higher volume.</p>\n<p>UK marketing teams we work with typically lift content output 3-5x within the first quarter while maintaining or improving editorial quality scores. SEO traffic compounds 30-60% within six months as keyword coverage expands and content depth increases. The recovered marketing capacity gets reinvested in creative work and channel experimentation, not extra production hires.</p>\n<p>Every content engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> mapping your CMS, brand guidelines, content workflows, and SEO posture. We work natively with WordPress, Webflow, Contentful, Sanity, Storyblok, and the major UK CMS platforms. Pilots ship in 6-10 weeks. Every system respects ICO direct marketing rules, ASA advertising standards, accessibility requirements, and Google Search Quality Rater Guidelines on AI-generated content.</p>",
-      "sections": [
-        {
-          "heading": "Content at Scale",
-          "body": "<p>Content at scale is not just about volume — it is about coverage. We build pipelines that map your full keyword opportunity, prioritise topics by commercial value and competitive difficulty, draft outlines aligned to search intent and your brand POV, generate first drafts with proper structure and source citations, and route through editorial review before publication. Output covers blog posts, landing pages, comparison pages, FAQ pages, and supporting content like glossaries and resource hubs. The <a href=\"/what-we-do/generative-ai/\">generative AI</a> capability provides the underlying models, and the <a href=\"/what-we-do/data-ai/\">data AI</a> work surfaces the search and behavioural data that drives prioritisation.</p>"
-        },
-        {
-          "heading": "Marketing Automation",
-          "body": "<p>Marketing automation extends AI content into the activation layer. We build systems that personalise email subject lines and content per recipient, generate ad copy variants for testing at scale, draft social media content tailored to each platform, write meta descriptions and structured data for SEO, and produce multilingual versions for international audiences. Every output respects brand voice guidelines and passes through quality gates appropriate to the channel risk. The <a href=\"/what-we-do/ai-automation/\">AI automation</a> capability handles the orchestration across email, ads, social, and web, and the <a href=\"/what-we-do/conversational-ai/\">conversational AI</a> work extends content into chat-based engagement.</p>"
-        },
-        {
-          "heading": "Brand Voice Consistency",
-          "body": "<p>The biggest failure mode in AI content is brand voice drift — copy that reads like every other AI-generated marketing post on the internet. We solve this systematically. Brand voice guidelines get codified into prompt templates with positive and negative examples. Style guide enforcement runs automatically on every draft against tone, vocabulary, sentence structure, and prohibited terms. Editorial review by a human always remains in the loop for high-stakes content. Continuous evaluation tracks brand voice consistency scores over time and surfaces drift before it becomes obvious. Our <a href=\"/industries/marketing/\">marketing industry</a> work brings the same brand discipline to client engagements at scale.</p>"
-        },
-        {
-          "heading": "Quality Controls",
-          "body": "<p>Quality at scale requires layered controls. We build systems with mandatory source citation for any factual claim, plagiarism and originality scoring before publication, fact-checking workflows for high-stakes content (regulated industries, technical claims, statistics), readability scoring matched to audience reading level, and accessibility compliance checking for inclusive design. SEO quality gates verify proper heading structure, internal linking, meta tag completeness, and structured data. Every published piece tracks back to its source prompts, models, and editorial reviewers — if something goes wrong, full audit trail exists. Our <a href=\"/what-we-do/ai-governance/\">AI governance</a> framework provides the policy spine, and the <a href=\"/what-we-do/ongoing-support/\">ongoing support</a> capability maintains evaluation and improvement cycles in production.</p>"
-        },
-        {
-          "heading": "Common AI Content Marketing Use Cases",
-          "body": "<p>Five clusters consistently deliver the strongest results for UK content marketing teams.</p>\n<ul>\n  <li><strong>SEO content production:</strong> blog posts, landing pages, comparison pages, glossaries, resource hubs aligned to keyword opportunity.</li>\n  <li><strong>Lifecycle and email:</strong> behavioural email content, subject line variants, post-purchase sequences, win-back content, nurture journeys.</li>\n  <li><strong>Paid creative:</strong> ad copy variants for testing, headline and CTA optimisation, landing page variants, multilingual ad creative.</li>\n  <li><strong>Social and community:</strong> platform-specific social posts, community management responses, voice-of-customer content from reviews.</li>\n  <li><strong>Sales enablement:</strong> case studies, comparison sheets, objection-handling content, proposal sections, technical documentation.</li>\n</ul>\n<p>Most teams get the strongest first win from SEO content production — measurable traffic growth within a quarter and clear cost-per-asset comparison vs prior production methods. Our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> ranks these against your CMS environment, brand guidelines, and SEO opportunity.</p>"
-        }
-      ],
-      "features": [
-        {
-          "title": "Content Pipeline",
-          "description": "Automated production of product descriptions, articles, and marketing copy."
-        },
-        {
-          "title": "Brand Voice Tuning",
-          "description": "AI configured to match your brand's tone, style, and messaging."
-        },
-        {
-          "title": "Quality Automation",
-          "description": "Automated checks for quality, accuracy, and brand compliance."
-        },
-        {
-          "title": "Marketing Personalisation",
-          "description": "AI-driven customer segmentation and message targeting."
-        },
-        {
-          "title": "Campaign Optimisation",
-          "description": "Automated testing and optimisation of marketing campaigns."
-        },
-        {
-          "title": "Analytics & Attribution",
-          "description": "AI-powered marketing analytics and multi-touch attribution."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Will AI content hurt our SEO?",
-          "answer": "Not when done properly. Google penalises low-quality content, not AI-generated content. We build systems that produce content search engines value — original, useful, and well-structured."
-        },
-        {
-          "question": "How do you maintain brand voice?",
-          "answer": "We train the AI on examples of your existing content, create detailed style guides, and include human review in the pipeline."
-        }
-      ],
-      "relatedServices": [
-        "generative-ai",
-        "ai-automation",
-        "ai-strategy"
-      ],
-      "relatedIndustries": [
-        "marketing",
-        "ecommerce",
-        "retail",
-        "education"
       ]
     }
   ]

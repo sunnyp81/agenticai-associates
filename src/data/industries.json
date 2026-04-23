@@ -144,12 +144,6 @@
           "linkSlug": "/what-we-do/data-ai/"
         },
         {
-          "solution": "content-creation",
-          "heading": "AI Content Creation in Legal",
-          "body": "<p>Client alerts, thought leadership articles, and know-how updates are essential for business development but take hours to produce. Our <a href=\"/what-we-do/generative-ai/\">generative AI</a> content tools draft client briefings from regulatory updates, generate first drafts of articles from case law, and produce tailored newsletters segmented by practice area. Every piece goes through your editorial process — the AI handles the heavy lifting, your lawyers add the expertise and sign-off.</p>",
-          "linkSlug": "/what-we-do/ai-content-marketing/"
-        },
-        {
           "solution": "use-cases",
           "heading": "Highest-ROI AI Use Cases for UK Law Firms",
           "body": "<p>Five use case clusters consistently deliver the fastest payback for UK practices.</p>\n<ul>\n  <li><strong>Contract lifecycle:</strong> clause extraction, redlining against playbooks, automated NDA turnaround, lease abstraction.</li>\n  <li><strong>Disclosure and discovery:</strong> document triage by relevance and privilege, deduplication, predictive coding for litigation.</li>\n  <li><strong>Knowledge management:</strong> precedent search across the firm's prior work, matter pack assembly, automated client briefings.</li>\n  <li><strong>Compliance and risk:</strong> conflict checks, AML and sanctions monitoring, deadline and limitation tracking, file note review for SRA standards.</li>\n  <li><strong>Business development:</strong> lateral hire pipeline analysis, cross-sell opportunity surfacing, client value forecasting, RFP response drafting.</li>\n</ul>\n<p>Most firms get the strongest first win from contract lifecycle or disclosure — both have clear time-saving metrics partners can defend at the management committee. Our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> ranks these against your matter mix, document store, and PMS to recommend the right starting pilot.</p>",
@@ -508,12 +502,6 @@
           "heading": "AI-Powered Data Analysis in Education",
           "body": "<p>Schools and universities sit on rich student data they rarely use for early intervention. Our analytics pipelines surface early-warning signals from attendance, behaviour, assessment, and engagement data combined. Predict A-level result drift 6-9 months before final exams. Identify pupils at risk of persistent absence before the threshold triggers. Surface VLE engagement drops that correlate with assignment failures in HE. The <a href=\"/what-we-do/data-ai/\">data AI</a> capability runs entirely in your environment, complies with the DfE data protection in schools guidance, and respects safeguarding boundaries strictly. Similar early-warning patterns power our work with <a href=\"/industries/government/\">public sector</a> teams identifying citizens at risk of safeguarding escalation.</p>",
           "linkSlug": "/what-we-do/data-ai/"
-        },
-        {
-          "solution": "content-creation",
-          "heading": "AI Content Creation in Education",
-          "body": "<p>Creating high-quality learning materials takes enormous time. Our <a href=\"/what-we-do/generative-ai/\">generative AI</a> tools help educators produce differentiated resources, assessment materials, and revision guides tailored to specific syllabi and student ability levels. Generate question banks aligned to exam board specifications. Create adapted versions of materials for SEND students. Produce multilingual resources for EAL learners. The AI handles the production — teachers maintain full editorial control over quality and accuracy.</p>",
-          "linkSlug": "/what-we-do/ai-content-marketing/"
         },
         {
           "solution": "customer-support",
@@ -962,12 +950,6 @@
         }
       ],
       "solutionSections": [
-        {
-          "solution": "content-creation",
-          "heading": "AI Content Creation in Marketing",
-          "body": "<p>We build content production systems that multiply your team's output without sacrificing quality. AI-generated first drafts for blog posts, social content, and email campaigns — tuned to your brand voice and style guide. Automated ad copy variations for testing across platforms. Product description generation from data feeds. Video script drafts from brief to outline. One UK agency we worked with tripled their content output while reducing production costs by 40%. Human editors always have final say — our <a href=\"/what-we-do/generative-ai/\">generative AI</a> handles volume, your team ensures quality.</p>",
-          "linkSlug": "/what-we-do/ai-content-marketing/"
-        },
         {
           "solution": "data-analysis",
           "heading": "AI-Powered Data Analysis in Marketing",
@@ -1997,7 +1979,7 @@
         {
           "solution": "automation",
           "heading": "Agentic Editorial, Rights and Ad Ops",
-          "body": "<p>We build agents that own specific media workflows end-to-end. An editorial assistant agent handles routine fact-checking, related-article linking, headline testing and social drafting — always with an editor in the loop. A rights and metadata agent keeps catalogue records coherent, flags expiring licences, and maintains metadata to the quality your systems need. An ad ops agent handles campaign setup QA, pacing alerts and creative-approval routing. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> and <a href=\"/what-we-do/ai-content-marketing/\">AI content</a> patterns.</p>",
+          "body": "<p>We build agents that own specific media workflows end-to-end. An editorial assistant agent handles routine fact-checking, related-article linking, headline testing and social drafting — always with an editor in the loop. A rights and metadata agent keeps catalogue records coherent, flags expiring licences, and maintains metadata to the quality your systems need. An ad ops agent handles campaign setup QA, pacing alerts and creative-approval routing. See our <a href=\"/what-we-do/agentic-ai/\">agentic AI</a>.</p>",
           "linkSlug": "/what-we-do/agentic-ai/"
         },
         {
@@ -2053,7 +2035,6 @@
       ],
       "relatedServices": [
         "agentic-ai",
-        "ai-content-marketing",
         "data-ai"
       ],
       "relatedIndustries": [

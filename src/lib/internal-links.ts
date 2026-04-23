@@ -11,7 +11,6 @@ const hubSpokes: Record<string, string[]> = {
     'ai-training',
     'ongoing-support',
     'applied-ai',
-    'ai-content-marketing',
   ],
   industries: [
     'healthcare',
