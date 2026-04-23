@@ -11,7 +11,9 @@
 /solutions/ /what-we-do/ 301
 /solutions/automation/ /what-we-do/ai-automation/ 301
 /solutions/data-analysis/ /what-we-do/data-ai/ 301
-/solutions/content-creation/ /what-we-do/ai-content-marketing/ 301
+/solutions/content-creation/ /what-we-do/applied-ai/ 301
+/what-we-do/ai-content-marketing/ /what-we-do/applied-ai/ 301
+/what-we-do/ai-content-marketing /what-we-do/applied-ai/ 301
 /solutions/customer-support/ /what-we-do/conversational-ai/ 301
 /solutions/forecasting/ /what-we-do/applied-ai/ 301
 /solutions/compliance-monitoring/ /what-we-do/ai-governance/ 301
