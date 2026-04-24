@@ -1,20 +1,3 @@
 {
-  "results": [
-    {
-      "slug": "wireless-logic-q2c",
-      "metric": "3 weeks",
-      "metricLabel": "Phase 1 scoping in flight",
-      "headline": "Q2C zero-touch automation — currently scoping",
-      "description": "We're designing a 24/7 Quote-to-Cash pipeline for a PE-backed European IoT operator — contract capture, credit check, ERP booking, and dispatch — across eight regions. Board-ready business case delivers mid-May.",
-      "anonymous": true
-    },
-    {
-      "slug": "timezone-operations",
-      "metric": "10 sec",
-      "metricLabel": "credit check, any time zone",
-      "headline": "Operations that don't wait for office hours",
-      "description": "International B2B credit decisions commonly sit in a 1–2 day manual queue, waiting on daytime reviews. Automated decision paths collapse that to a sub-10-second decision — the same pattern repeats across onboarding, dispatch, and post-sale workflows.",
-      "anonymous": false
-    }
-  ]
+  "results": []
 }
