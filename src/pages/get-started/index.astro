@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 import { buildFAQSchema, buildServiceSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
 
@@ -31,8 +32,9 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
   schema={schemas}
 >
   <!-- Hero -->
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="network" seed="get-started" />
+    <div class="container relative">
       <BreadcrumbNav items={[{ label: 'Get Started', href: '/get-started/' }]} />
       <h1 class="text-white max-w-3xl">Get Started</h1>
       <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">Every engagement begins with understanding your business. No sales pitch — just an honest assessment of where AI can help.</p>

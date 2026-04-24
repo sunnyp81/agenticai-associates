@@ -1,0 +1,272 @@
+---
+// Subtle animated network graph for landing-page heroes.
+// Peripheral decoration, not a focal point. 40% opacity, slow 12s cycle.
+// Hidden below md breakpoint. Pure SVG + SMIL, no JS. Pointer-events: none.
+//
+// Variant shifts node layout + palette subtly per page category so
+// different hub sections feel distinct without needing bespoke designs.
+interface Props {
+  variant?: 'network' | 'orbit' | 'flow' | 'pulse';
+  seed?: string;
+}
+
+const { variant = 'network', seed = '' } = Astro.props;
+
+// Deterministic cycle offset from seed so every page on the same layout
+// drifts slightly differently — avoids the uncanny-identical-animation look.
+const hashSeed = seed
+  ? seed.split('').reduce((a, c) => ((a << 5) - a + c.charCodeAt(0)) | 0, 0)
+  : 0;
+const drift = ((Math.abs(hashSeed) % 40) / 10).toFixed(2); // 0.00–3.90s
+---
+
+<div class="hero-signal" aria-hidden="true" data-variant={variant}>
+  <svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" class="hs-svg">
+    <defs>
+      <radialGradient id="hs-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#5eead4" stop-opacity="0.6" />
+        <stop offset="100%" stop-color="#5eead4" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+
+    {/* Ambient glow behind the central node */}
+    <circle class="hs-glow-a" cx="210" cy="140" r="80" fill="url(#hs-glow)" />
+
+    {/* Edges — 6 of them, dotted and cycling via CSS */}
+    {variant === 'orbit' ? (
+      <>
+        <line class="hs-edge e0" x1="210" y1="140" x2="80"  y2="70"  />
+        <line class="hs-edge e1" x1="210" y1="140" x2="340" y2="70"  />
+        <line class="hs-edge e2" x1="210" y1="140" x2="60"  y2="200" />
+        <line class="hs-edge e3" x1="210" y1="140" x2="360" y2="210" />
+        <line class="hs-edge e4" x1="210" y1="140" x2="200" y2="40"  />
+        <line class="hs-edge e5" x1="210" y1="140" x2="200" y2="240" />
+      </>
+    ) : variant === 'flow' ? (
+      <>
+        <line class="hs-edge e0" x1="50"  y1="140" x2="150" y2="90"  />
+        <line class="hs-edge e1" x1="150" y1="90"  x2="250" y2="140" />
+        <line class="hs-edge e2" x1="250" y1="140" x2="350" y2="90"  />
+        <line class="hs-edge e3" x1="50"  y1="140" x2="150" y2="190" />
+        <line class="hs-edge e4" x1="150" y1="190" x2="250" y2="140" />
+        <line class="hs-edge e5" x1="250" y1="140" x2="350" y2="190" />
+      </>
+    ) : variant === 'pulse' ? (
+      <>
+        <line class="hs-edge e0" x1="210" y1="140" x2="210" y2="60"  />
+        <line class="hs-edge e1" x1="210" y1="140" x2="130" y2="100" />
+        <line class="hs-edge e2" x1="210" y1="140" x2="130" y2="180" />
+        <line class="hs-edge e3" x1="210" y1="140" x2="210" y2="220" />
+        <line class="hs-edge e4" x1="210" y1="140" x2="290" y2="180" />
+        <line class="hs-edge e5" x1="210" y1="140" x2="290" y2="100" />
+      </>
+    ) : (
+      <>
+        <line class="hs-edge e0" x1="70"  y1="80"  x2="180" y2="140" />
+        <line class="hs-edge e1" x1="180" y1="140" x2="340" y2="70"  />
+        <line class="hs-edge e2" x1="70"  y1="80"  x2="90"  y2="210" />
+        <line class="hs-edge e3" x1="90"  y1="210" x2="180" y2="140" />
+        <line class="hs-edge e4" x1="180" y1="140" x2="320" y2="200" />
+        <line class="hs-edge e5" x1="340" y1="70"  x2="320" y2="200" />
+      </>
+    )}
+
+    {/* Nodes — small rounded rects with mono labels */}
+    {variant === 'orbit' ? (
+      <>
+        <g class="hs-node hs-node-center"><rect x="198" y="128" width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="68"  y="58"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="328" y="58"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="48"  y="188" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="348" y="198" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="190" y="28"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="190" y="228" width="20" height="20" rx="3"/></g>
+      </>
+    ) : variant === 'flow' ? (
+      <>
+        <g class="hs-node"><rect x="38"  y="128" width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="138" y="78"  width="24" height="24" rx="4"/></g>
+        <g class="hs-node hs-node-center"><rect x="238" y="128" width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="338" y="78"  width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="138" y="178" width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="338" y="178" width="24" height="24" rx="4"/></g>
+      </>
+    ) : variant === 'pulse' ? (
+      <>
+        <g class="hs-node hs-node-center"><rect x="198" y="128" width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="200" y="48"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="120" y="88"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="120" y="168" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="200" y="208" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="280" y="168" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="280" y="88"  width="20" height="20" rx="3"/></g>
+      </>
+    ) : (
+      <>
+        <g class="hs-node"><rect x="58"  y="68"  width="24" height="24" rx="4"/></g>
+        <g class="hs-node hs-node-center"><rect x="168" y="128" width="24" height="24" rx="4"/></g>
+        <g class="hs-node"><rect x="328" y="58"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="78"  y="198" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="308" y="188" width="20" height="20" rx="3"/></g>
+      </>
+    )}
+
+    {/* Packets — 2 moving dots on 12s cycle with staggered start */}
+    {variant === 'orbit' ? (
+      <>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            path="M210,140 L80,70" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+        </circle>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            path="M210,140 L360,210" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+        </circle>
+      </>
+    ) : variant === 'flow' ? (
+      <>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            path="M50,140 L150,90 L250,140 L350,90" keyPoints="0;1;1" keyTimes="0;0.5;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.5;0.51;1"/>
+        </circle>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            path="M50,140 L150,190 L250,140 L350,190" keyPoints="0;1;1" keyTimes="0;0.5;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.5;0.51;1"/>
+        </circle>
+      </>
+    ) : variant === 'pulse' ? (
+      <>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            path="M210,140 L210,60" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+        </circle>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            path="M210,140 L290,180" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+        </circle>
+      </>
+    ) : (
+      <>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            path="M70,80 L180,140 L340,70" keyPoints="0;1;1" keyTimes="0;0.5;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.5;0.51;1"/>
+        </circle>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            path="M180,140 L320,200" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
+            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+        </circle>
+      </>
+    )}
+  </svg>
+</div>
+
+<style>
+  .hero-signal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420px;
+    height: 280px;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+    opacity: 0.45;
+    z-index: 0;
+    mask-image: linear-gradient(to left, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 50%, transparent 100%);
+  }
+  @media (min-width: 768px) {
+    .hero-signal { display: block; }
+  }
+  @media (min-width: 1280px) {
+    .hero-signal { width: 520px; height: 320px; }
+  }
+
+  .hs-svg { width: 100%; height: 100%; display: block; }
+
+  /* Ambient glow — slow breathing */
+  .hs-glow-a { animation: hs-breathe 8s ease-in-out infinite; }
+  @keyframes hs-breathe {
+    0%, 100% { opacity: 0.45; }
+    50%      { opacity: 0.75; }
+  }
+
+  /* Edges — thin teal lines with dotted-to-solid cycle (12s per edge, staggered) */
+  .hs-edge {
+    fill: none;
+    stroke: rgba(94, 234, 212, 0.25);
+    stroke-width: 1;
+    stroke-dasharray: 3 4;
+    animation: hs-edge-cycle 12s linear infinite;
+  }
+  .hs-edge.e0 { animation-delay: 0s; }
+  .hs-edge.e1 { animation-delay: -2s; }
+  .hs-edge.e2 { animation-delay: -4s; }
+  .hs-edge.e3 { animation-delay: -6s; }
+  .hs-edge.e4 { animation-delay: -8s; }
+  .hs-edge.e5 { animation-delay: -10s; }
+  @keyframes hs-edge-cycle {
+    0%, 20% {
+      stroke: rgba(13, 148, 136, 0.85);
+      stroke-width: 1.25;
+      stroke-dasharray: 0;
+    }
+    21%, 100% {
+      stroke: rgba(94, 234, 212, 0.22);
+      stroke-width: 1;
+      stroke-dasharray: 3 4;
+    }
+  }
+
+  /* Nodes — soft teal fill, stroke, subtle pulse */
+  .hs-node rect {
+    fill: #0a0f1c;
+    stroke: rgba(13, 148, 136, 0.7);
+    stroke-width: 1;
+  }
+  .hs-node-center rect {
+    stroke: rgba(94, 234, 212, 0.9);
+    stroke-width: 1.25;
+    filter: drop-shadow(0 0 4px rgba(94, 234, 212, 0.35));
+    animation: hs-node-pulse 4s ease-in-out infinite;
+  }
+  @keyframes hs-node-pulse {
+    0%, 100% { filter: drop-shadow(0 0 3px rgba(94, 234, 212, 0.25)); }
+    50%      { filter: drop-shadow(0 0 8px rgba(94, 234, 212, 0.55)); }
+  }
+
+  /* Packets start hidden; animation above reveals them during active 1/3 of cycle */
+  .hs-pkt { opacity: 0; filter: drop-shadow(0 0 3px #5eead4); }
+
+  /* Reduced motion — freeze animations, keep graph visible as static decoration */
+  @media (prefers-reduced-motion: reduce) {
+    .hs-glow-a,
+    .hs-edge,
+    .hs-node-center rect,
+    .hs-pkt animateMotion,
+    .hs-pkt animate {
+      animation: none !important;
+    }
+    .hs-edge {
+      stroke: rgba(94, 234, 212, 0.3);
+      stroke-dasharray: 3 4;
+    }
+    .hs-pkt { opacity: 0; }
+  }
+</style>

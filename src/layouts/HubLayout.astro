@@ -4,6 +4,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import HubCard from '@/components/HubCard.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 
 interface Props {
   title: string;
@@ -22,8 +23,9 @@ const { title, description, heroTitle, heroSubtitle, breadcrumbs, pages, hubPath
 
 <BaseLayout title={title} description={description} schema={schema}>
   <!-- Hero -->
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="network" seed={hubPath} />
+    <div class="container relative">
       <BreadcrumbNav items={breadcrumbs} />
       <h1 class="text-white max-w-3xl">{heroTitle}</h1>
       <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">{heroSubtitle}</p>

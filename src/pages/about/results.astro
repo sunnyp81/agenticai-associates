@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import CTABanner from '@/components/CTABanner.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 import { getResults } from '@/lib/page-factory';
 
 const results = getResults();
@@ -11,8 +12,9 @@ const results = getResults();
   title="Results — Agentic AI Associates"
   description="Real results from real engagements. See how we deliver measurable AI impact for UK businesses."
 >
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="network" seed="results" />
+    <div class="container relative">
       <BreadcrumbNav items={[
         { label: 'About', href: '/about/' },
         { label: 'Results', href: '/about/results/' },

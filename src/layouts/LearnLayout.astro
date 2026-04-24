@@ -5,6 +5,7 @@ import TableOfContents from '@/components/TableOfContents.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 import { buildArticleSchema, buildFAQSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
 import { getRelatedLearnPages } from '@/lib/page-factory';
@@ -48,8 +49,9 @@ const headings = page.sections.map((s) => ({
 
 <BaseLayout title={page.title} description={page.description} schema={schemas} type="article">
   <!-- Hero -->
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="flow" seed={page.slug} />
+    <div class="container relative">
       <BreadcrumbNav items={[
         { label: 'Learn', href: '/learn/' },
         { label: page.name, href: `/learn/${page.slug}/` },

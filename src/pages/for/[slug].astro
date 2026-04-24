@@ -5,6 +5,7 @@ import FeatureGrid from '@/components/FeatureGrid.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 import { buildFAQSchema } from '@/lib/schema';
 import { getBusinessSizePaths, getRelatedWhatWeDo } from '@/lib/page-factory';
 
@@ -20,8 +21,9 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
 ---
 
 <BaseLayout title={page.title} description={page.description} schema={schemas}>
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="orbit" seed={page.slug} />
+    <div class="container relative">
       <BreadcrumbNav items={[
         { label: page.name, href: `/for/${page.slug}/` },
       ]} />

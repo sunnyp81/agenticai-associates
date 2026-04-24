@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import CTABanner from '@/components/CTABanner.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 import { buildOrganizationSchema, buildPersonSchema } from '@/lib/schema';
 
 const schemas = [buildOrganizationSchema(), buildPersonSchema()];
@@ -13,8 +14,9 @@ const schemas = [buildOrganizationSchema(), buildPersonSchema()];
   schema={schemas}
 >
   <!-- Hero -->
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="network" seed="about" />
+    <div class="container relative">
       <BreadcrumbNav items={[{ label: 'About', href: '/about/' }]} />
       <h1 class="text-white max-w-3xl">About Us</h1>
       <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">We're AI consultants who actually build things. Not slide decks — systems.</p>

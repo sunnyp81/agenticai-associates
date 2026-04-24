@@ -4,6 +4,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
+import HeroSignal from '@/components/HeroSignal.astro';
 import { buildLocalBusinessSchema, buildFAQSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
 
@@ -39,8 +40,9 @@ const schemas = [localSchema, ...(faqSchema ? [faqSchema] : [])];
 
 <BaseLayout title={page.title} description={page.description} schema={schemas}>
   <!-- Hero -->
-  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section">
-    <div class="container">
+  <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
+    <HeroSignal variant="pulse" seed={page.slug} />
+    <div class="container relative">
       <BreadcrumbNav items={[
         { label: 'Locations', href: '/locations/' },
         { label: page.name, href: `/locations/${page.slug}/` },
