@@ -14,7 +14,7 @@ const { headings } = Astro.props;
         <li class:list={[heading.depth === 3 ? 'ml-4' : '']}>
           <a
             href={`#${heading.slug}`}
-            class="text-sm text-[var(--color-primary-light)] hover:text-[var(--color-accent)] transition-colors"
+            class="text-sm text-[var(--color-accent-light)] hover:text-[var(--color-accent)] transition-colors"
           >
             {heading.text}
           </a>

@@ -35,12 +35,12 @@ const drift = ((Math.abs(hashSeed) % 40) / 10).toFixed(2); // 0.00–3.90s
     {/* Edges — 6 of them, dotted and cycling via CSS */}
     {variant === 'orbit' ? (
       <>
-        <line class="hs-edge e0" x1="210" y1="140" x2="80"  y2="70"  />
-        <line class="hs-edge e1" x1="210" y1="140" x2="340" y2="70"  />
-        <line class="hs-edge e2" x1="210" y1="140" x2="60"  y2="200" />
-        <line class="hs-edge e3" x1="210" y1="140" x2="360" y2="210" />
-        <line class="hs-edge e4" x1="210" y1="140" x2="200" y2="40"  />
-        <line class="hs-edge e5" x1="210" y1="140" x2="200" y2="240" />
+        <line class="hs-edge e0" x1="210" y1="140" x2="310" y2="140" />
+        <line class="hs-edge e1" x1="210" y1="140" x2="260" y2="227" />
+        <line class="hs-edge e2" x1="210" y1="140" x2="160" y2="227" />
+        <line class="hs-edge e3" x1="210" y1="140" x2="110" y2="140" />
+        <line class="hs-edge e4" x1="210" y1="140" x2="160" y2="53"  />
+        <line class="hs-edge e5" x1="210" y1="140" x2="260" y2="53"  />
       </>
     ) : variant === 'flow' ? (
       <>
@@ -74,13 +74,14 @@ const drift = ((Math.abs(hashSeed) % 40) / 10).toFixed(2); // 0.00–3.90s
     {/* Nodes — small rounded rects with mono labels */}
     {variant === 'orbit' ? (
       <>
+        {/* Hexagonal layout — 6 satellites at 60° intervals around centre (210,140), radius 100 */}
         <g class="hs-node hs-node-center"><rect x="198" y="128" width="24" height="24" rx="4"/></g>
-        <g class="hs-node"><rect x="68"  y="58"  width="20" height="20" rx="3"/></g>
-        <g class="hs-node"><rect x="328" y="58"  width="20" height="20" rx="3"/></g>
-        <g class="hs-node"><rect x="48"  y="188" width="20" height="20" rx="3"/></g>
-        <g class="hs-node"><rect x="348" y="198" width="20" height="20" rx="3"/></g>
-        <g class="hs-node"><rect x="190" y="28"  width="20" height="20" rx="3"/></g>
-        <g class="hs-node"><rect x="190" y="228" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="300" y="130" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="250" y="217" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="150" y="217" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="100" y="130" width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="150" y="43"  width="20" height="20" rx="3"/></g>
+        <g class="hs-node"><rect x="250" y="43"  width="20" height="20" rx="3"/></g>
       </>
     ) : variant === 'flow' ? (
       <>
@@ -114,17 +115,24 @@ const drift = ((Math.abs(hashSeed) % 40) / 10).toFixed(2); // 0.00–3.90s
     {/* Packets — 2 moving dots on 12s cycle with staggered start */}
     {variant === 'orbit' ? (
       <>
+        {/* 3 packets on 12s cycle, staggered by 4s — always one visibly orbiting */}
         <circle class="hs-pkt" r="2.5" fill="#5eead4">
           <animateMotion dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
-            path="M210,140 L80,70" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+            path="M210,140 L310,140" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
           <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${drift}s`}
-            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+            values="0.9;0.9;0;0" keyTimes="0;0.333;0.334;1"/>
         </circle>
         <circle class="hs-pkt" r="2.5" fill="#5eead4">
-          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
-            path="M210,140 L360,210" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
-          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 6}s`}
-            values="0.8;0.8;0;0" keyTimes="0;0.333;0.334;1"/>
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 4}s`}
+            path="M210,140 L160,227" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 4}s`}
+            values="0.9;0.9;0;0" keyTimes="0;0.333;0.334;1"/>
+        </circle>
+        <circle class="hs-pkt" r="2.5" fill="#5eead4">
+          <animateMotion dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 8}s`}
+            path="M210,140 L260,53" keyPoints="0;1;1" keyTimes="0;0.333;1" calcMode="linear"/>
+          <animate attributeName="opacity" dur="12s" repeatCount="indefinite" begin={`-${Number(drift) + 8}s`}
+            values="0.9;0.9;0;0" keyTimes="0;0.333;0.334;1"/>
         </circle>
       </>
     ) : variant === 'flow' ? (
