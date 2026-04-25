@@ -626,7 +626,7 @@ const faqs = [
      the rect after the label disappears. */
   @media (max-width: 767px) {
     .agent-graph .n-l { display: none; }
-    .agent-graph .n-n { font-size: 28px; transform: translateY(-12px); }
+    .agent-graph .n-n { font-size: 28px; }
   }
   .graph-path {
     margin-left: auto;
@@ -1147,4 +1147,14 @@ const faqs = [
       else if (!rafId) rafId = requestAnimationFrame(tick);
     });
   })();
+
+  // CSS translateY uses CSS px, not SVG user units — at mobile scale (~0.37×) the old
+  // -12px was moving text ~32 SVG units instead of 12, pushing labels above their boxes.
+  // Fix: shift the y attribute by exactly 12 SVG user units when labels are hidden.
+  if (window.innerWidth < 768) {
+    document.querySelectorAll<SVGTextElement>('.agent-graph .n-n').forEach(el => {
+      const y = parseFloat(el.getAttribute('y') || '0');
+      el.setAttribute('y', String(y - 12));
+    });
+  }
 </script>

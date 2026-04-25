@@ -180,6 +180,37 @@ export function buildArticleSchema(opts: {
   };
 }
 
+export function buildDefinedTermSchema(opts: {
+  term: string;
+  definition: string;
+  url: string;
+  sameAs?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: opts.term,
+    description: opts.definition,
+    url: opts.url,
+    ...(opts.sameAs?.length && { sameAs: opts.sameAs }),
+  };
+}
+
+export function buildSpeakableSchema(opts: {
+  url: string;
+  cssSelectors: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    url: opts.url,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: opts.cssSelectors,
+    },
+  };
+}
+
 export function buildLocalBusinessSchema(opts: {
   name: string;
   description: string;
