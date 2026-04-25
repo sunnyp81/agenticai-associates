@@ -145,20 +145,16 @@ const faqs = [
         <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" class="graph-svg agent-graph" preserveAspectRatio="xMidYMid meet">
           <defs>
             <pattern id="hg-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1b1b1f" stroke-width="0.5"/>
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#222" stroke-width="0.5"/>
             </pattern>
-            <radialGradient id="hg-core-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"  stop-color="#00E5FF" stop-opacity="0.10"/>
-              <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
-            </radialGradient>
-            <!-- hg-glow filter removed: feGaussianBlur on moving packets caused mobile jank.
-                 Halo is now a low-opacity larger circle, GPU-cheap. -->
+            <filter id="hg-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.5"/>
+            </filter>
           </defs>
 
-          <rect width="900" height="400" fill="url(#hg-grid)" opacity="0.55"/>
-          <ellipse cx="460" cy="200" rx="380" ry="180" fill="url(#hg-core-glow)"/>
+          <rect width="900" height="400" fill="url(#hg-grid)" opacity="0.4"/>
 
-          <!-- 8 edges, rest-state rules -->
+          <!-- 8 edges, rest-state rules (matches original C_Signal: stroke=#222, width=1) -->
           <g class="hg-edges">
             <line class="hg-edge-rest" data-i="0" x1="80"  y1="100" x2="280" y2="80" />
             <line class="hg-edge-rest" data-i="1" x1="80"  y1="100" x2="280" y2="220"/>
@@ -182,31 +178,31 @@ const faqs = [
             <line class="hg-trail" data-i="7" x1="640" y1="260" x2="640" y2="260"/>
           </g>
 
-          <!-- Packets — glow halo + core dot -->
+          <!-- Packets — soft Gaussian-blurred halo + crisp core (matches original C_Signal) -->
           <g class="hg-pkts">
-            <g class="hg-pkt" data-i="0"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="1"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="2"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="3"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="4"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="5"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="6"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
-            <g class="hg-pkt" data-i="7"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="0"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="1"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="2"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="3"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="4"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="5"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="6"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="7"><circle r="3" fill="#00E5FF" filter="url(#hg-glow)"/><circle r="2" fill="#00E5FF"/></g>
           </g>
 
           <!-- 7 labelled nodes (INPUT → AGENT/TOOL → AGENT(core) → AGENT/HUMAN → OUTPUT) -->
           <g class="node">
-            <rect x="20"  y="80"  width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <rect x="20"  y="80"  width="120" height="40" rx="6" fill="#050507" stroke="#222"/>
             <text x="80"  y="98"  text-anchor="middle" class="n-l">INPUT</text>
             <text x="80"  y="113" text-anchor="middle" class="n-n">Email in</text>
           </g>
           <g class="node node-agent">
-            <rect x="220" y="60"  width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF"/>
+            <rect x="220" y="60"  width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF" stroke-width="1.5"/>
             <text x="280" y="78"  text-anchor="middle" class="n-l">AGENT</text>
             <text x="280" y="93"  text-anchor="middle" class="n-n">Triage</text>
           </g>
           <g class="node">
-            <rect x="220" y="200" width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <rect x="220" y="200" width="120" height="40" rx="6" fill="#050507" stroke="#222"/>
             <text x="280" y="218" text-anchor="middle" class="n-l">TOOL</text>
             <text x="280" y="233" text-anchor="middle" class="n-n">CRM</text>
           </g>
@@ -216,17 +212,17 @@ const faqs = [
             <text x="460" y="163" text-anchor="middle" class="n-n">Knowledge</text>
           </g>
           <g class="node node-agent">
-            <rect x="580" y="100" width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF"/>
+            <rect x="580" y="100" width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF" stroke-width="1.5"/>
             <text x="640" y="118" text-anchor="middle" class="n-l">AGENT</text>
             <text x="640" y="133" text-anchor="middle" class="n-n">Draft reply</text>
           </g>
           <g class="node">
-            <rect x="580" y="240" width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <rect x="580" y="240" width="120" height="40" rx="6" fill="#050507" stroke="#222"/>
             <text x="640" y="258" text-anchor="middle" class="n-l">HUMAN</text>
             <text x="640" y="273" text-anchor="middle" class="n-n">Reviewer</text>
           </g>
           <g class="node">
-            <rect x="760" y="160" width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <rect x="760" y="160" width="120" height="40" rx="6" fill="#050507" stroke="#222"/>
             <text x="820" y="178" text-anchor="middle" class="n-l">OUTPUT</text>
             <text x="820" y="193" text-anchor="middle" class="n-n">Sent</text>
           </g>
@@ -565,10 +561,13 @@ const faqs = [
 
   /* ── GRAPH ────────────────────────────────────────────────── */
   .graph-wrapper {
-    border: 1px solid rgba(255,255,255,0.07);
+    border: 1px solid #222;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(0,0,0,0.2);
+    /* Soft cyan core glow rendered via CSS gradient (cheaper than animated SVG ellipse) */
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(0,229,255,0.08), transparent 70%),
+      #050507;
     margin-bottom: 1.25rem;
     position: relative;
   }
@@ -595,36 +594,31 @@ const faqs = [
   }
 
   /* ── Agent graph: rest-state edges, live trails, packets, nodes ─ */
+  /* Matches original C_Signal: rest=#222 width=1, trail=accent width=1.5 */
   .agent-graph .hg-edge-rest {
     fill: none;
-    stroke: rgba(0, 229, 255, 0.22);
+    stroke: #222;
     stroke-width: 1;
   }
   .agent-graph .hg-trail {
     stroke: #00E5FF;
-    stroke-width: 1.8;
-    stroke-linecap: round;
+    stroke-width: 1.5;
     fill: none;
     opacity: 0;
   }
   .agent-graph .hg-pkt { opacity: 0; }
-  .agent-graph .node rect {
-    /* override default */
-  }
-  .agent-graph .node-core rect {
-    filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.45));
-  }
+  /* node-core: matches the original — same accent stroke as other AGENTs, no glow filter */
   .agent-graph .n-l {
     font-family: var(--font-mono);
     font-size: 8px;
-    letter-spacing: 1.4px;
-    fill: #00E5FF;
+    letter-spacing: 1.6px;
+    fill: #888;
   }
   .agent-graph .n-n {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
+    font-family: var(--font-grotesk);
+    font-size: 12px;
     font-weight: 500;
-    fill: #EDEDEA;
+    fill: #fff;
   }
   .graph-path {
     margin-left: auto;
@@ -1102,7 +1096,8 @@ const faqs = [
     ];
     const trails = root.querySelectorAll('.hg-trail');
     const pkts   = root.querySelectorAll('.hg-pkt');
-    const PERIOD = 2.0, STAGGER = 0.25;
+    // Matches original C_Signal: 120-frame period @60fps = 2s, 18-frame stagger = 0.3s
+    const PERIOD = 2.0, STAGGER = 0.3;
     let start = 0, rafId = 0;
 
     const tick = (ts) => {
