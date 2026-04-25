@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CTABanner from '@/components/CTABanner.astro';
-import { buildWebSiteSchema, buildOrganizationSchema } from '@/lib/schema';
+import { buildWebSiteSchema, buildOrganizationSchema, buildDefinedTermSchema, buildSpeakableSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
 import { getResults } from '@/lib/page-factory';
 
 const results = getResults();
@@ -38,7 +39,32 @@ const faqSchema = {
   ],
 };
 
-const schemas = [buildWebSiteSchema(), buildOrganizationSchema(), faqSchema];
+const definedTermAgentic = buildDefinedTermSchema({
+  term: 'Agentic AI',
+  definition: 'A class of AI systems that take sequences of actions autonomously to complete multi-step business tasks — using tools, querying data, making decisions, and verifying their own work — rather than waiting for a human prompt at every step.',
+  url: `${siteConfig.url}/#agentic-ai`,
+  sameAs: ['https://en.wikipedia.org/wiki/Intelligent_agent'],
+});
+
+const definedTermAssessment = buildDefinedTermSchema({
+  term: 'AI Readiness Assessment',
+  definition: 'A 3-week fixed-fee diagnostic (£6,500) that audits a business\'s data, processes, team capability, and governance posture, then delivers a ranked roadmap of the highest-ROI AI use cases.',
+  url: `${siteConfig.url}/what-we-do/ai-readiness-assessment/#defined-term`,
+});
+
+const speakableHome = buildSpeakableSchema({
+  url: siteConfig.url + '/',
+  cssSelectors: ['.hero-headline', '.hero-sub', '.phase-card .phase-price'],
+});
+
+const schemas = [
+  buildWebSiteSchema(),
+  buildOrganizationSchema(),
+  faqSchema,
+  definedTermAgentic,
+  definedTermAssessment,
+  speakableHome,
+];
 
 const services = [
   { tag: 'ASSESS-01', title: 'AI Readiness Assessment', description: 'Fixed-fee audit of your data, processes, and team. Walk away with a prioritised AI roadmap and clear ROI ranges.', href: '/what-we-do/ai-readiness-assessment/', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
@@ -76,7 +102,7 @@ const faqs = [
   <!-- ─── [00] HERO ─────────────────────────────────────────── -->
   <section class="hero-section">
     <div style="position:absolute;top:-200px;right:-200px;width:min(700px,100vw);height:min(700px,100vw);background:radial-gradient(circle,rgba(0,229,255,0.15),transparent 60%);pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(30,58,95,0.4),transparent 60%);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,255,0.4),transparent 60%);pointer-events:none;"></div>
     <div class="scan-overlay" aria-hidden="true"></div>
 
     <div class="container" style="position:relative;">
@@ -96,11 +122,11 @@ const faqs = [
       </h1>
 
       <!-- Sub + CTAs -->
-      <p class="hero-sub">
-        We build and deploy agentic AI that produces measurable results — not strategy decks that sit in a drawer. Founded by practitioners, not career consultants.
+      <p class="hero-sub page-intro">
+        <strong style="color:#EDEDEA;font-weight:600;">Agentic AI Associates is a UK consultancy that designs, builds, and operates agentic AI systems</strong> — autonomous software agents that execute multi-step business workflows end-to-end. We replace strategy decks with working systems, founded by practitioners not career consultants.
       </p>
       <p style="font-family:var(--font-mono);font-size:0.75rem;line-height:1.7;letter-spacing:0.02em;color:#6c6c72;margin:-0.5rem 0 1.75rem;max-width:640px;">
-        <span class="n" style="color:#00E5FF;">▸</span> We work with UK mid-market B2B — typically £100M–£500M revenue, often PE-backed — when the board wants an AI story this quarter, not next year.
+        <span class="n" style="color:#00E5FF;">▸</span> We work with UK mid-market B2B — typically £100M–£500M revenue, often PE-backed — when the board wants an AI story this quarter, not next year. Every engagement starts with a <a href="/what-we-do/ai-readiness-assessment/" style="color:#00E5FF;text-decoration:none;border-bottom:1px solid rgba(0,229,255,0.4);">£6,500 AI Readiness Assessment</a>.
       </p>
       <div class="hero-ctas">
         <a href="/contact/" class="btn-glow">Book a Fit Call →</a>
@@ -111,95 +137,98 @@ const faqs = [
       <div class="graph-wrapper" aria-hidden="true">
         <div class="graph-topbar">
           <span style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#00E5FF,#00E5FF,transparent);"></span>
-          <span class="live-dot"><span class="live-dot-pulse"></span>AGENT · inbox_triage.v3</span>
-          <span class="graph-path">● RUNNING</span>
+          <span class="live-dot"><span class="live-dot-pulse"></span>AGENT · inbox_triage.v3 · RUNNING</span>
+          <span class="graph-path">+12 actions/min</span>
         </div>
 
         <div class="graph-svg-frame">
-        <svg viewBox="0 0 360 500" xmlns="http://www.w3.org/2000/svg" class="graph-svg agent-graph">
-          <!-- 6 edges. Each cycles through 9.6s; active 0-33% of cycle, dimmed 33-100%.
-               Stagger by index * 1.6s so 2 are active at any moment, rotating. -->
-          <line class="edge e0" x1="170" y1="60"  x2="60"  y2="190"/>
-          <line class="edge e1" x1="170" y1="60"  x2="300" y2="190"/>
-          <line class="edge e2" x1="60"  y1="190" x2="170" y2="310"/>
-          <line class="edge e3" x1="300" y1="190" x2="170" y2="310"/>
-          <line class="edge e4" x1="170" y1="310" x2="300" y2="430"/>
-          <line class="edge e5" x1="170" y1="310" x2="60"  y2="430"/>
+        <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" class="graph-svg agent-graph" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <pattern id="hg-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1b1b1f" stroke-width="0.5"/>
+            </pattern>
+            <radialGradient id="hg-core-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"  stop-color="#00E5FF" stop-opacity="0.10"/>
+              <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+            </radialGradient>
+            <!-- hg-glow filter removed: feGaussianBlur on moving packets caused mobile jank.
+                 Halo is now a low-opacity larger circle, GPU-cheap. -->
+          </defs>
 
-          <!-- Packets: ONE smooth traversal per 9.6s cycle, gated by opacity to active window -->
-          <circle class="pkt" r="4" fill="#00E5FF">
-            <animateMotion dur="9.6s" repeatCount="indefinite" begin="0s"
-              path="M170,60 L60,190" calcMode="linear"
-              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
-            <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="0s"
-              values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
-          </circle>
-          <circle class="pkt" r="4" fill="#00E5FF">
-            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-1.6s"
-              path="M170,60 L300,190" calcMode="linear"
-              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
-            <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-1.6s"
-              values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
-          </circle>
-          <circle class="pkt" r="4" fill="#00E5FF">
-            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-3.2s"
-              path="M60,190 L170,310" calcMode="linear"
-              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
-            <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-3.2s"
-              values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
-          </circle>
-          <circle class="pkt" r="4" fill="#00E5FF">
-            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-4.8s"
-              path="M300,190 L170,310" calcMode="linear"
-              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
-            <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-4.8s"
-              values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
-          </circle>
-          <circle class="pkt" r="4" fill="#00E5FF">
-            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-6.4s"
-              path="M170,310 L300,430" calcMode="linear"
-              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
-            <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-6.4s"
-              values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
-          </circle>
-          <circle class="pkt" r="4" fill="#00E5FF">
-            <animateMotion dur="9.6s" repeatCount="indefinite" begin="-8s"
-              path="M170,310 L60,430" calcMode="linear"
-              keyPoints="0;1;1" keyTimes="0;0.333;1" rotate="0"/>
-            <animate attributeName="opacity" dur="9.6s" repeatCount="indefinite" begin="-8s"
-              values="1;1;0;0" keyTimes="0;0.333;0.334;1"/>
-          </circle>
+          <rect width="900" height="400" fill="url(#hg-grid)" opacity="0.55"/>
+          <ellipse cx="460" cy="200" rx="380" ry="180" fill="url(#hg-core-glow)"/>
 
-          <!-- Nodes: rounded rect cards with label + name -->
-          <g class="node node-input">
-            <rect x="116" y="42"  width="108" height="36" rx="4" fill="#0a0f1c" stroke="#1f2a3d"/>
-            <text x="170" y="57"  text-anchor="middle" class="n-l">INPUT</text>
-            <text x="170" y="71"  text-anchor="middle" class="n-n">Email inbox</text>
+          <!-- 8 edges, rest-state rules -->
+          <g class="hg-edges">
+            <line class="hg-edge-rest" data-i="0" x1="80"  y1="100" x2="280" y2="80" />
+            <line class="hg-edge-rest" data-i="1" x1="80"  y1="100" x2="280" y2="220"/>
+            <line class="hg-edge-rest" data-i="2" x1="280" y1="80"  x2="460" y2="150"/>
+            <line class="hg-edge-rest" data-i="3" x1="280" y1="220" x2="460" y2="150"/>
+            <line class="hg-edge-rest" data-i="4" x1="460" y1="150" x2="640" y2="120"/>
+            <line class="hg-edge-rest" data-i="5" x1="640" y1="120" x2="640" y2="260"/>
+            <line class="hg-edge-rest" data-i="6" x1="640" y1="120" x2="820" y2="180"/>
+            <line class="hg-edge-rest" data-i="7" x1="640" y1="260" x2="820" y2="180"/>
+          </g>
+
+          <!-- Live trails — full line A→packet, opacity fades 1→0 -->
+          <g class="hg-trails">
+            <line class="hg-trail" data-i="0" x1="80"  y1="100" x2="80"  y2="100"/>
+            <line class="hg-trail" data-i="1" x1="80"  y1="100" x2="80"  y2="100"/>
+            <line class="hg-trail" data-i="2" x1="280" y1="80"  x2="280" y2="80" />
+            <line class="hg-trail" data-i="3" x1="280" y1="220" x2="280" y2="220"/>
+            <line class="hg-trail" data-i="4" x1="460" y1="150" x2="460" y2="150"/>
+            <line class="hg-trail" data-i="5" x1="640" y1="120" x2="640" y2="120"/>
+            <line class="hg-trail" data-i="6" x1="640" y1="120" x2="640" y2="120"/>
+            <line class="hg-trail" data-i="7" x1="640" y1="260" x2="640" y2="260"/>
+          </g>
+
+          <!-- Packets — glow halo + core dot -->
+          <g class="hg-pkts">
+            <g class="hg-pkt" data-i="0"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="1"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="2"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="3"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="4"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="5"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="6"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+            <g class="hg-pkt" data-i="7"><circle r="7" fill="#00E5FF" opacity="0.18"/><circle r="3" fill="#00E5FF"/></g>
+          </g>
+
+          <!-- 7 labelled nodes (INPUT → AGENT/TOOL → AGENT(core) → AGENT/HUMAN → OUTPUT) -->
+          <g class="node">
+            <rect x="20"  y="80"  width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <text x="80"  y="98"  text-anchor="middle" class="n-l">INPUT</text>
+            <text x="80"  y="113" text-anchor="middle" class="n-n">Email in</text>
           </g>
           <g class="node node-agent">
-            <rect x="6"   y="172" width="108" height="36" rx="4" fill="#0a0f1c" stroke="#00E5FF"/>
-            <text x="60"  y="187" text-anchor="middle" class="n-l">AGENT</text>
-            <text x="60"  y="201" text-anchor="middle" class="n-n">Triage</text>
+            <rect x="220" y="60"  width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF"/>
+            <text x="280" y="78"  text-anchor="middle" class="n-l">AGENT</text>
+            <text x="280" y="93"  text-anchor="middle" class="n-n">Triage</text>
           </g>
-          <g class="node node-tool">
-            <rect x="246" y="172" width="108" height="36" rx="4" fill="#0a0f1c" stroke="#1f2a3d"/>
-            <text x="300" y="187" text-anchor="middle" class="n-l">TOOL</text>
-            <text x="300" y="201" text-anchor="middle" class="n-n">CRM lookup</text>
+          <g class="node">
+            <rect x="220" y="200" width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <text x="280" y="218" text-anchor="middle" class="n-l">TOOL</text>
+            <text x="280" y="233" text-anchor="middle" class="n-n">CRM</text>
+          </g>
+          <g class="node node-agent node-core">
+            <rect x="400" y="130" width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF" stroke-width="1.5"/>
+            <text x="460" y="148" text-anchor="middle" class="n-l">AGENT</text>
+            <text x="460" y="163" text-anchor="middle" class="n-n">Knowledge</text>
           </g>
           <g class="node node-agent">
-            <rect x="116" y="292" width="108" height="36" rx="4" fill="#0a0f1c" stroke="#00E5FF"/>
-            <text x="170" y="307" text-anchor="middle" class="n-l">AGENT</text>
-            <text x="170" y="321" text-anchor="middle" class="n-n">Reply draft</text>
+            <rect x="580" y="100" width="120" height="40" rx="6" fill="#050507" stroke="#00E5FF"/>
+            <text x="640" y="118" text-anchor="middle" class="n-l">AGENT</text>
+            <text x="640" y="133" text-anchor="middle" class="n-n">Draft reply</text>
           </g>
-          <g class="node node-human">
-            <rect x="246" y="412" width="108" height="36" rx="4" fill="#0a0f1c" stroke="#1f2a3d"/>
-            <text x="300" y="427" text-anchor="middle" class="n-l">HUMAN</text>
-            <text x="300" y="441" text-anchor="middle" class="n-n">Reviewer</text>
+          <g class="node">
+            <rect x="580" y="240" width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <text x="640" y="258" text-anchor="middle" class="n-l">HUMAN</text>
+            <text x="640" y="273" text-anchor="middle" class="n-n">Reviewer</text>
           </g>
-          <g class="node node-output">
-            <rect x="6"   y="412" width="108" height="36" rx="4" fill="#0a0f1c" stroke="#1f2a3d"/>
-            <text x="60"  y="427" text-anchor="middle" class="n-l">OUTPUT</text>
-            <text x="60"  y="441" text-anchor="middle" class="n-n">Sent reply</text>
+          <g class="node">
+            <rect x="760" y="160" width="120" height="40" rx="6" fill="#050507" stroke="#1b1b1f"/>
+            <text x="820" y="178" text-anchor="middle" class="n-l">OUTPUT</text>
+            <text x="820" y="193" text-anchor="middle" class="n-n">Sent</text>
           </g>
         </svg>
         </div>
@@ -234,7 +263,7 @@ const faqs = [
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[01]</span> <span>Engagement</span></span>
-        <h2>Three phases. Transparent pricing.</h2>
+        <h2>How does our AI engagement model work?</h2>
         <p style="font-size:1rem;line-height:1.65;color:#8a8a92;margin:1rem 0 0;max-width:640px;">Every engagement opens with a 30-minute fit call. From there, one fixed-fee diagnostic, then embedded build, then ongoing retainer — stepped so you can stop or continue at any phase boundary.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -259,7 +288,7 @@ const faqs = [
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[02]</span> <span>Capabilities</span></span>
-        <h2>Services that ship.</h2>
+        <h2>What AI services do we offer?</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((svc) => (
@@ -298,7 +327,7 @@ const faqs = [
     <div class="container" style="position:relative;">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[03]</span> <span>Evidence</span></span>
-        <h2>Proof, not promises.</h2>
+        <h2>What proof do we have that this works?</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {results.map((r) => (
@@ -320,7 +349,7 @@ const faqs = [
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[04]</span> <span>Industries</span></span>
-        <h2>For your sector.</h2>
+        <h2>Which UK industries do we work with?</h2>
       </div>
       <!-- Mobile: horizontal scrolling tab pills -->
       <div class="ind-tabs-mobile" role="tablist" aria-label="Industries">
@@ -384,7 +413,7 @@ const faqs = [
     <div class="container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[05]</span> <span>About</span></span>
-        <h2>Built by practitioners.</h2>
+        <h2>Who built Agentic AI Associates?</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
         {[
@@ -419,7 +448,7 @@ const faqs = [
     <div class="container faq-container">
       <div class="signal-divider">
         <span class="signal-kicker"><span class="n">[07]</span> <span>FAQ</span></span>
-        <h2>Common questions.</h2>
+        <h2>Common questions about working with us.</h2>
       </div>
       <div class="faq-list">
         {faqs.map((f, i) => (
@@ -559,39 +588,32 @@ const faqs = [
   @media (min-width: 768px) { .graph-svg-frame { padding: 1.25rem 1rem; } }
   .graph-svg {
     width: 100%;
-    max-width: 360px;
+    max-width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 9 / 4;
   }
-  @media (min-width: 768px) { .graph-svg { max-width: 420px; } }
 
-  /* ── Agent graph: edges, packets, nodes ───────────────────── */
-  .agent-graph .edge {
+  /* ── Agent graph: rest-state edges, live trails, packets, nodes ─ */
+  .agent-graph .hg-edge-rest {
     fill: none;
-    stroke: #1e2a3d;
+    stroke: rgba(0, 229, 255, 0.22);
     stroke-width: 1;
-    stroke-dasharray: 3 3;
-    animation: edge-cycle 9.6s linear infinite;
   }
-  .agent-graph .edge.e0 { animation-delay: 0s; }
-  .agent-graph .edge.e1 { animation-delay: -1.6s; }
-  .agent-graph .edge.e2 { animation-delay: -3.2s; }
-  .agent-graph .edge.e3 { animation-delay: -4.8s; }
-  .agent-graph .edge.e4 { animation-delay: -6.4s; }
-  .agent-graph .edge.e5 { animation-delay: -8s; }
-  @keyframes edge-cycle {
-    0%, 33.3% {
-      stroke: #00E5FF;
-      stroke-width: 2;
-      stroke-dasharray: 0;
-    }
-    33.4%, 100% {
-      stroke: #1e2a3d;
-      stroke-width: 1;
-      stroke-dasharray: 3 3;
-    }
+  .agent-graph .hg-trail {
+    stroke: #00E5FF;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    fill: none;
+    opacity: 0;
   }
-  .agent-graph .pkt { opacity: 0; }
+  .agent-graph .hg-pkt { opacity: 0; }
+  .agent-graph .node rect {
+    /* override default */
+  }
+  .agent-graph .node-core rect {
+    filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.45));
+  }
   .agent-graph .n-l {
     font-family: var(--font-mono);
     font-size: 8px;
@@ -608,9 +630,10 @@ const faqs = [
     margin-left: auto;
     font-family: var(--font-mono);
     font-size: 0.6rem;
-    color: #6c6c72;
+    color: #00E5FF;
     letter-spacing: 0.1em;
   }
+  @media (min-width: 768px) { .graph-path { font-size: 0.65rem; } }
   .graph-statusbar {
     padding: 0.5rem 0.875rem;
     border-top: 1px solid rgba(255,255,255,0.06);
@@ -1059,4 +1082,66 @@ const faqs = [
     });
   }
   setupTabs();
+
+  // ── Homepage agent-graph animation (rAF, matches original SignalLiveGraph) ──
+  // Period 2s per edge, 8 edges with 0.25s stagger → 4 packets in flight at once.
+  // Trail = line A → packet, opacity 1 − p (fades toward target).
+  (() => {
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const root = document.querySelector('.agent-graph');
+    if (!root || reduce) return;
+    const EDGES = [
+      [80, 100, 280, 80],
+      [80, 100, 280, 220],
+      [280, 80,  460, 150],
+      [280, 220, 460, 150],
+      [460, 150, 640, 120],
+      [640, 120, 640, 260],
+      [640, 120, 820, 180],
+      [640, 260, 820, 180],
+    ];
+    const trails = root.querySelectorAll('.hg-trail');
+    const pkts   = root.querySelectorAll('.hg-pkt');
+    const PERIOD = 2.0, STAGGER = 0.25;
+    let start = 0, rafId = 0;
+
+    const tick = (ts) => {
+      if (!start) start = ts;
+      const t = (ts - start) / 1000;
+      for (let i = 0; i < EDGES.length; i++) {
+        const phase = ((t + i * STAGGER) % PERIOD) / PERIOD;
+        const active = phase < 0.5;
+        const trail = trails[i], pkt = pkts[i];
+        if (!trail || !pkt) continue;
+        if (active) {
+          const p = phase * 2; // 0..1 traversal
+          const [x1, y1, x2, y2] = EDGES[i];
+          const px = x1 + (x2 - x1) * p;
+          const py = y1 + (y2 - y1) * p;
+          trail.setAttribute('x2', px.toFixed(2));
+          trail.setAttribute('y2', py.toFixed(2));
+          trail.style.opacity = String(1 - p);
+          pkt.setAttribute('transform', `translate(${px.toFixed(2)} ${py.toFixed(2)})`);
+          pkt.style.opacity = '1';
+        } else {
+          trail.style.opacity = '0';
+          pkt.style.opacity = '0';
+        }
+      }
+      rafId = requestAnimationFrame(tick);
+    };
+    rafId = requestAnimationFrame(tick);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { if (!rafId) rafId = requestAnimationFrame(tick); }
+        else { cancelAnimationFrame(rafId); rafId = 0; }
+      });
+    }, { threshold: 0 });
+    io.observe(root);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) { cancelAnimationFrame(rafId); rafId = 0; }
+      else if (!rafId) rafId = requestAnimationFrame(tick);
+    });
+  })();
 </script>
