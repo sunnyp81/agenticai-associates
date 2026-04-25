@@ -6,7 +6,7 @@ import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
 import HeroSignal from '@/components/HeroSignal.astro';
-import { buildServiceSchema, buildFAQSchema } from '@/lib/schema';
+import { buildServiceSchema, buildDefinedTermSchema, buildSpeakableSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
 import { getRelatedIndustries, getRelatedWhatWeDo } from '@/lib/page-factory';
 
@@ -23,19 +23,42 @@ interface Props {
     faq: { question: string; answer: string }[];
     relatedServices: string[];
     relatedIndustries: string[];
+    definedTerm?: { term: string; definition: string; sameAs?: string[] };
   };
 }
 
 const { page } = Astro.props;
+const pageUrl = `${siteConfig.url}/what-we-do/${page.slug}/`;
 
 const serviceSchema = buildServiceSchema({
   name: page.name,
   description: page.description,
-  url: `${siteConfig.url}/what-we-do/${page.slug}/`,
+  url: pageUrl,
 });
 
-const faqSchema = buildFAQSchema(page.faq);
-const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+// FAQPage schema is emitted by the FAQ.astro component — do not duplicate here.
+
+const definedTermSchema = page.definedTerm
+  ? buildDefinedTermSchema({
+      term: page.definedTerm.term,
+      definition: page.definedTerm.definition,
+      url: `${pageUrl}#defined-term`,
+      sameAs: page.definedTerm.sameAs,
+    })
+  : null;
+
+// Speakable: lift the lead paragraph and the per-page summary block for
+// voice-assistant + LLM citation extraction.
+const speakableSchema = buildSpeakableSchema({
+  url: pageUrl,
+  cssSelectors: ['.page-intro', '.page-tldr', '.page-h1'],
+});
+
+const schemas = [
+  serviceSchema,
+  ...(definedTermSchema ? [definedTermSchema] : []),
+  speakableSchema,
+];
 
 const relatedIndustries = getRelatedIndustries(page.relatedIndustries);
 const relatedServices = getRelatedWhatWeDo(page.relatedServices);
@@ -50,8 +73,14 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
         { label: 'What We Do', href: '/what-we-do/' },
         { label: page.name, href: `/what-we-do/${page.slug}/` },
       ]} />
-      <h1 class="text-white max-w-3xl">{page.name}</h1>
-      <div class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed prose prose-invert prose-p:my-0"><Fragment set:html={page.intro} /></div>
+      <h1 class="page-h1 text-white max-w-3xl">{page.name}</h1>
+      <div class="page-intro text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed prose prose-invert prose-p:my-0"><Fragment set:html={page.intro} /></div>
+      {page.definedTerm && (
+        <div id="defined-term" class="sr-only" itemscope itemtype="https://schema.org/DefinedTerm">
+          <span itemprop="name">{page.definedTerm.term}</span>:
+          <span itemprop="description">{page.definedTerm.definition}</span>
+        </div>
+      )}
       {page.entryPoint ? (
         <a href="/contact/" class="btn-glow mt-6">
           Book a Fit Call
@@ -67,7 +96,7 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       <!-- Main content -->
       <div class="lg:col-span-2 order-1">
-        <p class="text-sm text-slate-500 mb-8 pb-4 border-b border-slate-100">Written by <strong>Sunny Patel</strong>, Founder, Agentic AI Associates</p>
+        <p class="text-sm mb-8 pb-4" style="color:#6c6c72; border-bottom:1px solid rgba(255,255,255,0.07);">Written by <strong style="color:#EDEDEA;">Sunny Patel</strong>, Founder, Agentic AI Associates</p>
 
         <div class="prose">
           {page.sections.map((section) => (
@@ -91,7 +120,7 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
         {page.entryPoint && (
           <div class="card bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-primary-light)]/5 border-[var(--color-accent)]/20">
             <h3 class="text-lg font-semibold mb-2">Start Here</h3>
-            <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">30-minute fit call with the founder. We'll confirm whether Phase 1 Diagnostic (£6,500 · 3 weeks) fits your situation.</p>
+            <p class="text-sm text-[var(--color-text-muted)] mb-5 leading-relaxed">30-minute fit call with the founder. We'll confirm whether Phase 1 Diagnostic (3 weeks · fixed fee) fits your situation.</p>
             <a href="/contact/" class="btn btn-primary text-sm w-full justify-center">Book a Fit Call</a>
           </div>
         )}
@@ -135,7 +164,7 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
 
   <CTABanner
     headline="Ready to see if this is the right fit?"
-    text="30-minute fit call. We'll confirm whether a Phase 1 Diagnostic (£6,500 · 3 weeks) is right for your situation — and if it isn't, we'll tell you so."
+    text="30-minute fit call. We'll confirm whether a Phase 1 Diagnostic (3 weeks · fixed fee) is right for your situation — and if it isn't, we'll tell you so."
     buttonText="Book a Fit Call"
     buttonHref="/contact/"
     secondaryText="View All Services"

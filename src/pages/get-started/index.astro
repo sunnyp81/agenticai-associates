@@ -46,15 +46,15 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
     <div class="max-w-4xl mx-auto">
       <div class="card border-[var(--color-accent)] border-2 p-8 md:p-10">
         <div class="flex items-start gap-4 mb-6">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(13,148,136,0.1);">
-            <svg class="w-6 h-6" style="color: #0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,229,255,0.1);">
+            <svg class="w-6 h-6" style="color: #00E5FF;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
           <div>
-            <p class="text-xs font-mono tracking-widest uppercase" style="color: #0d9488;">Phase 01</p>
+            <p class="text-xs font-mono tracking-widest uppercase" style="color: #00E5FF;">Phase 01</p>
             <h2 class="text-2xl font-bold mb-1">Diagnostic</h2>
-            <p class="text-sm text-[var(--color-text-muted)]"><strong>£6,500 fixed fee</strong> &middot; 3 weeks &middot; No commitment to Phase 2</p>
+            <p class="text-sm text-[var(--color-text-muted)]"><strong>Fixed fee</strong> &middot; 3 weeks &middot; No commitment to Phase 2</p>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
             { step: '03', title: 'Retain', desc: 'Founder-led advisory, governance, and scale-out oversight as you extend AI across the business. One day per week. Rolling three-month terms, extendable.', range: '£10,000/month · 1 day/week' },
           ].map(item => (
             <div class="text-center md:text-left">
-              <p class="text-xs font-mono tracking-widest uppercase mb-2" style="color: #0d9488;">Phase {item.step}</p>
+              <p class="text-xs font-mono tracking-widest uppercase mb-2" style="color: #00E5FF;">Phase {item.step}</p>
               <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
               <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">{item.desc}</p>
               <p class="text-sm font-semibold text-[var(--color-accent)]">{item.range}</p>
