@@ -4,21 +4,42 @@ import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import ContactForm from '@/components/ContactForm.astro';
 import HeroSignal from '@/components/HeroSignal.astro';
 import { siteConfig } from '@/data/site-config';
+import { buildHowToSchema, buildSpeakableSchema } from '@/lib/schema';
 
 const sent = Astro.url.searchParams.get('sent') === 'true';
+
+const contactHowTo = buildHowToSchema({
+  name: 'How to engage Agentic AI Associates',
+  description: 'The 3-step process to engage Agentic AI Associates for an AI consultancy project.',
+  url: `${siteConfig.url}/contact/`,
+  totalTime: 'PT15M',
+  steps: [
+    { name: 'Listen', text: 'Tell us about your business, your operational pressure points, and what you are trying to achieve. We listen first — no pitch.' },
+    { name: 'Assess', text: 'We give you an honest view of where AI can (and cannot) help in the next 90 days, and whether the £6,500 Phase 1 Diagnostic is the right next step.' },
+    { name: 'Propose', text: 'If there is a fit, we send a written proposal with scope, timeline, fixed pricing, and named deliverables — typically within one working day of the fit call.' },
+  ],
+});
+
+const contactSpeakable = buildSpeakableSchema({
+  url: `${siteConfig.url}/contact/`,
+  cssSelectors: ['.page-h1', '.page-intro'],
+});
+
+const schemas = [contactHowTo, contactSpeakable];
 ---
 
 <BaseLayout
   title="Contact Us — Book a Fit Call | Agentic AI Associates"
   description="Get in touch with Agentic AI Associates. Book a 30-minute fit call or send us a message. UK mid-market AI operations consultancy."
+  schema={schemas}
 >
   <!-- Hero -->
   <section class="bg-[var(--color-hero-bg)] text-[var(--color-hero-text)] section relative overflow-hidden">
     <HeroSignal variant="pulse" seed="contact" />
     <div class="container relative">
       <BreadcrumbNav items={[{ label: 'Contact', href: '/contact/' }]} />
-      <h1 class="text-white max-w-3xl">Get in Touch</h1>
-      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">Book a 30-minute fit call or send us a message. We typically respond within one working day.</p>
+      <h1 class="page-h1 text-white max-w-3xl">Contact Agentic AI Associates</h1>
+      <p class="page-intro text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed"><strong style="color:#EDEDEA;">Book a 30-minute fit call or send a message — we respond to every enquiry within one working day.</strong> Not sure what you need? Browse <a href="/what-we-do/" style="color:#00E5FF;">our services</a> or read about <a href="/about/">how we work</a>.</p>
     </div>
   </section>
 
@@ -29,8 +50,8 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
         <h2 class="mb-6">Send Us a Message</h2>
 
         {sent && (
-          <div class="mb-6 p-4 rounded-lg bg-green-50 border border-green-200 text-green-800 text-sm">
-            <strong>Message sent.</strong> We'll get back to you within 24 hours.
+          <div class="mb-6 p-4 rounded-lg text-sm" style="background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.3); color: #7DF5FF;">
+            <strong style="color: #00E5FF;">✓ Message sent.</strong> We'll get back to you within one working day.
           </div>
         )}
 
@@ -57,7 +78,7 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
             </div>
             <div>
               <dt class="text-[var(--color-text-muted)]">Response Time</dt>
-              <dd class="font-medium">Within 24 hours</dd>
+              <dd class="font-medium">Within one working day</dd>
             </div>
           </dl>
         </div>
@@ -84,14 +105,14 @@ const sent = Astro.url.searchParams.get('sent') === 'true';
   </div>
 
   <!-- Book a Call — full-width section, proper breathing room -->
-  <section class="section" style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
+  <section class="section" style="background: #f8fafc; border-top: 1px solid #EDEDEA;">
     <div class="container">
       <div class="max-w-3xl mx-auto">
-        <div class="relative overflow-hidden rounded-2xl p-10 md:p-14" style="background: #080f1e;">
-          <div class="aurora-blob w-80 h-80 top-[-60px] right-[-40px]" style="background: #0d9488;"></div>
+        <div class="relative overflow-hidden rounded-2xl p-10 md:p-14" style="background: #050507;">
+          <div class="aurora-blob w-80 h-80 top-[-60px] right-[-40px]" style="background: #00E5FF;"></div>
           <div class="dot-grid absolute inset-0 opacity-[0.06]"></div>
           <div class="relative">
-            <p class="text-xs font-bold uppercase tracking-[0.2em] mb-3" style="color: #5eead4;">Prefer to Talk?</p>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] mb-3" style="color: #00E5FF;">Prefer to Talk?</p>
             <h2 class="text-white text-3xl md:text-4xl font-extrabold mb-4">Book a 30-Minute Fit Call</h2>
             <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
               No sales pitch. An honest conversation about your operational pressure points — we'll tell you straight whether a Phase 1 Diagnostic is the right fit.

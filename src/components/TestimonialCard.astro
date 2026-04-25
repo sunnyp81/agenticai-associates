@@ -9,11 +9,11 @@ interface Props {
 const { quote, name, role, company } = Astro.props;
 ---
 
-<blockquote class="card flex flex-col h-full" style="transition: box-shadow 0.2s ease, transform 0.2s ease;" onmouseenter="this.style.boxShadow='0 4px 16px rgba(13,148,136,0.12)'" onmouseleave="this.style.boxShadow=''">
-  <svg class="w-8 h-8 mb-4 flex-shrink-0" style="color: #5eead4;" fill="currentColor" viewBox="0 0 24 24">
+<blockquote class="card flex flex-col h-full" style="transition: box-shadow 0.2s ease, transform 0.2s ease;" onmouseenter="this.style.boxShadow='0 4px 16px rgba(0,229,255,0.12)'" onmouseleave="this.style.boxShadow=''">
+  <svg class="w-8 h-8 mb-4 flex-shrink-0" style="color: #00E5FF;" fill="currentColor" viewBox="0 0 24 24">
     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
   </svg>
-  <p class="text-[var(--color-text)] leading-relaxed flex-1 mb-4 border-l-4 pl-6" style="border-color: rgba(94,234,212,0.3);">{quote}</p>
+  <p class="text-[var(--color-text)] leading-relaxed flex-1 mb-4 border-l-4 pl-6" style="border-color: rgba(0,229,255,0.3);">{quote}</p>
   <footer class="border-t border-[var(--color-border)] pt-4">
     <cite class="not-italic">
       <span class="font-semibold text-sm text-[var(--color-primary-dark)]">{name}</span>

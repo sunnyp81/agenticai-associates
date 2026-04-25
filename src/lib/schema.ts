@@ -180,6 +180,63 @@ export function buildArticleSchema(opts: {
   };
 }
 
+export function buildDefinedTermSchema(opts: {
+  term: string;
+  definition: string;
+  url: string;
+  inDefinedTermSet?: string;
+  sameAs?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: opts.term,
+    description: opts.definition,
+    url: opts.url,
+    inDefinedTermSet: opts.inDefinedTermSet || `${siteConfig.url}/#glossary`,
+    ...(opts.sameAs && opts.sameAs.length > 0 && { sameAs: opts.sameAs }),
+  };
+}
+
+export function buildSpeakableSchema(opts: {
+  url: string;
+  cssSelectors: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    url: opts.url,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: opts.cssSelectors,
+    },
+  };
+}
+
+export function buildHowToSchema(opts: {
+  name: string;
+  description: string;
+  url: string;
+  totalTime?: string;
+  steps: { name: string; text: string; url?: string }[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    ...(opts.totalTime && { totalTime: opts.totalTime }),
+    step: opts.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      ...(s.url && { url: s.url }),
+    })),
+  };
+}
+
 export function buildLocalBusinessSchema(opts: {
   name: string;
   description: string;

@@ -4,23 +4,23 @@ import { siteConfig, mainNav } from '@/data/site-config';
 const currentPath = Astro.url.pathname;
 ---
 
-<header id="site-nav" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 100; background: rgba(8, 15, 30, 0.85); border-bottom: 1px solid rgba(255,255,255,0.07); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: background 0.25s ease, border-color 0.25s ease;">
+<header id="site-nav" style="position: sticky; position: -webkit-sticky; top: 0; z-index: 100; background: rgba(5,5,7, 0.85); border-bottom: 1px solid rgba(255,255,255,0.07); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: background 0.25s ease, border-color 0.25s ease;">
   <div class="container flex items-center justify-between" style="height: 4rem;">
 
     <!-- Signal logo + brand -->
     <a href="/" class="flex items-center gap-3" style="text-decoration: none;" aria-label="Agentic AI Associates home">
       <!-- Crosshair SVG logo -->
       <svg width="28" height="28" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="1" y="1" width="28" height="28" rx="5" stroke="#0d9488" stroke-width="1.5"/>
-        <circle cx="15" cy="15" r="3.5" fill="#0d9488"/>
-        <line x1="4" y1="15" x2="11.5" y2="15" stroke="#0d9488" stroke-width="1.2"/>
-        <line x1="18.5" y1="15" x2="26" y2="15" stroke="#0d9488" stroke-width="1.2"/>
-        <line x1="15" y1="4" x2="15" y2="11.5" stroke="#0d9488" stroke-width="1.2"/>
-        <line x1="15" y1="18.5" x2="15" y2="26" stroke="#0d9488" stroke-width="1.2"/>
+        <rect x="1" y="1" width="28" height="28" rx="5" stroke="#00E5FF" stroke-width="1.5"/>
+        <circle cx="15" cy="15" r="3.5" fill="#00E5FF"/>
+        <line x1="4" y1="15" x2="11.5" y2="15" stroke="#00E5FF" stroke-width="1.2"/>
+        <line x1="18.5" y1="15" x2="26" y2="15" stroke="#00E5FF" stroke-width="1.2"/>
+        <line x1="15" y1="4" x2="15" y2="11.5" stroke="#00E5FF" stroke-width="1.2"/>
+        <line x1="15" y1="18.5" x2="15" y2="26" stroke="#00E5FF" stroke-width="1.2"/>
       </svg>
       <div>
-        <div style="font-family: var(--font-grotesk); font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; color: #f0f9ff; line-height: 1.1;">AGENTIC.AI</div>
-        <div style="font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.18em; color: #475569; line-height: 1;">ASSOCIATES / UK</div>
+        <div style="font-family: var(--font-grotesk); font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; color: #EDEDEA; line-height: 1.1;">AGENTIC.AI</div>
+        <div style="font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.18em; color: #6c6c72; line-height: 1;">ASSOCIATES / UK</div>
       </div>
     </a>
 
@@ -32,8 +32,8 @@ const currentPath = Astro.url.pathname;
           class:list={[
             'text-sm font-medium transition-colors px-3 py-2 rounded-full',
             currentPath.startsWith(item.href)
-              ? 'text-[#5eead4]'
-              : 'text-[#94a3b8] hover:text-[#e2e8f0]',
+              ? 'text-[#00E5FF]'
+              : 'text-[#8a8a92] hover:text-[#EDEDEA]',
           ]}
           style="font-family: var(--font-grotesk);"
         >
@@ -57,7 +57,7 @@ const currentPath = Astro.url.pathname;
     <button
       id="mobile-toggle"
       class="lg:hidden p-2"
-      style="color: #94a3b8;"
+      style="color: #8a8a92;"
       aria-label="Toggle menu"
       aria-expanded="false"
     >
@@ -79,8 +79,8 @@ const currentPath = Astro.url.pathname;
           class:list={[
             'py-2.5 px-3 rounded-lg text-sm font-medium transition-colors',
             currentPath.startsWith(item.href)
-              ? 'text-[#5eead4]'
-              : 'text-[#94a3b8] hover:text-[#e2e8f0] hover:bg-white/5',
+              ? 'text-[#00E5FF]'
+              : 'text-[#8a8a92] hover:text-[#EDEDEA] hover:bg-white/5',
           ]}
           style="font-family: var(--font-grotesk);"
         >
@@ -118,10 +118,10 @@ const currentPath = Astro.url.pathname;
   const setNavSolid = () => {
     if (!nav) return;
     if (window.scrollY > 12) {
-      nav.style.background = 'rgba(8, 15, 30, 0.96)';
-      nav.style.borderBottomColor = 'rgba(13, 148, 136, 0.18)';
+      nav.style.background = 'rgba(5,5,7, 0.96)';
+      nav.style.borderBottomColor = 'rgba(0,229,255, 0.18)';
     } else {
-      nav.style.background = 'rgba(8, 15, 30, 0.85)';
+      nav.style.background = 'rgba(5,5,7, 0.85)';
       nav.style.borderBottomColor = 'rgba(255,255,255,0.07)';
     }
   };

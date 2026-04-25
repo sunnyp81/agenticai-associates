@@ -40,22 +40,22 @@ const pathData = iconMap[icon || 'default'] || iconMap.default;
 
 <a href={href} class="signal-card group" style="text-decoration:none; display:flex; flex-direction:column; height:100%;">
   <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
-    <div style="width:40px; height:40px; border-radius:8px; background:rgba(13,148,136,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.2s;" class="card-icon">
-      <svg class="w-5 h-5" style="color:#0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div style="width:40px; height:40px; border-radius:8px; background:rgba(0,229,255,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.2s;" class="card-icon">
+      <svg class="w-5 h-5" style="color:#00E5FF;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={pathData} />
       </svg>
     </div>
-    <span style="color:#475569; font-size:1.0625rem; transition:transform 0.2s, color 0.2s;" class="card-arrow">→</span>
+    <span style="color:#6c6c72; font-size:1.0625rem; transition:transform 0.2s, color 0.2s;" class="card-arrow">→</span>
   </div>
-  <h3 style="font-family:var(--font-grotesk); font-size:1.0625rem; font-weight:500; letter-spacing:-0.01em; margin:0 0 0.5rem; color:#f0f9ff; transition:color 0.2s; flex:1;" class="card-title">{title}</h3>
-  <p style="font-size:0.875rem; color:#64748b; line-height:1.65; margin:0 0 1rem;">{description}</p>
-  <span style="font-family:var(--font-mono); font-size:0.7rem; color:#0d9488; letter-spacing:0.06em; display:flex; align-items:center; gap:0.375rem;">
+  <h3 style="font-family:var(--font-grotesk); font-size:1.0625rem; font-weight:500; letter-spacing:-0.01em; margin:0 0 0.5rem; color:#EDEDEA; transition:color 0.2s; flex:1;" class="card-title">{title}</h3>
+  <p style="font-size:0.875rem; color:#6c6c72; line-height:1.65; margin:0 0 1rem;">{description}</p>
+  <span style="font-family:var(--font-mono); font-size:0.7rem; color:#00E5FF; letter-spacing:0.06em; display:flex; align-items:center; gap:0.375rem;">
     LEARN MORE →
   </span>
 </a>
 
 <style>
-  .group:hover .card-icon { background: rgba(13,148,136,0.2); }
-  .group:hover .card-arrow { color: #5eead4; transform: translateX(4px); }
-  .group:hover .card-title { color: #5eead4; }
+  .group:hover .card-icon { background: rgba(0,229,255,0.2); }
+  .group:hover .card-arrow { color: #00E5FF; transform: translateX(4px); }
+  .group:hover .card-title { color: #00E5FF; }
 </style>

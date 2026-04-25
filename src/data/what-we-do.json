@@ -2,7 +2,8 @@
   "hub": {
     "title": "What We Do — AI Consultancy Services & Solutions",
     "description": "AI readiness assessments, agentic AI systems, automation, governance, and training. We build and deploy AI that delivers measurable results for UK businesses.",
-    "primaryKeyword": "ai consultancy services uk"
+    "primaryKeyword": "ai consultancy services uk",
+    "intro": "<p><strong>We deliver AI for UK mid-market businesses across five service lines: AI Readiness Assessment, AI Strategy, agentic AI, AI automation, generative AI, and AI governance.</strong> Every engagement starts with the AI Readiness Assessment — a fixed-fee 3-week diagnostic at £6,500 that maps the highest-ROI use cases to your data, processes, and team capability before any build work.</p><p>Phase 2 build engagements run at £850 per day for embedded delivery (typically 3–6 months per workflow). Phase 3 ongoing governance and optimisation is £10,000 per month. Pricing is fixed, scoped, and stated up front — no billable-hour surprises.</p>"
   },
   "pages": [
     {
@@ -13,22 +14,22 @@
       "primaryKeyword": "ai readiness assessment uk",
       "icon": "strategy",
       "entryPoint": true,
-      "intro": "<p>Most AI projects fail because nobody checked whether the business was ready. Our AI Readiness Assessment is a fixed-fee, fixed-scope engagement that gives you a clear picture of where you stand — and exactly where to start.</p>",
+      "intro": "<p><strong>An AI Readiness Assessment is a fixed-fee, 3-week engagement that audits your data, processes, team capability, and governance posture, then delivers a board-ready roadmap of the highest-ROI AI use cases ranked by feasibility and impact.</strong> The fee is £6,500. The deliverable is a written diagnostic plus a 90-minute walkthrough with the leadership team.</p><p>Most AI projects fail because nobody checked whether the business was ready before writing the proposal. The Assessment is the answer to that — and it is always our Phase 1 entry point before any <a href=\"/what-we-do/agentic-ai/\">agentic AI</a>, <a href=\"/what-we-do/ai-automation/\">automation</a>, or <a href=\"/what-we-do/generative-ai/\">generative AI</a> build work.</p>",
       "sections": [
         {
-          "heading": "What the Assessment Covers",
+          "heading": "What does an AI Readiness Assessment actually cover?",
           "body": "<p>We evaluate four areas: your data maturity (what data you have, where it lives, how clean it is), your technology infrastructure (what systems you run, what APIs are available, what's legacy), your team capability (who has AI skills, what gaps exist), and your process landscape (which workflows are candidates for AI automation).</p><p>The output is not a generic report. It's a scored matrix of AI opportunities specific to your business, ranked by impact and feasibility. Each opportunity includes estimated ROI, timeline, and the resources needed to deliver it.</p>"
         },
         {
-          "heading": "How It Works",
+          "heading": "How does the 3-week assessment work, week by week?",
           "body": "<p>The assessment runs over two to four weeks. Week one: we interview your leadership and frontline teams, review your existing technology stack, and map your key business processes. Week two: we analyse the findings, score opportunities, and build your personalised roadmap.</p><p>You receive a presentation walkthrough plus a written report. No dusty PDF — a living document your team can act on immediately. If you want us to help execute the roadmap, we scope that as a separate engagement based on the assessment findings.</p>"
         },
         {
-          "heading": "Who This Is For",
+          "heading": "Which businesses get the most value from this assessment?",
           "body": "<p>The assessment suits two types of business. First: organisations that know AI matters but haven't started. You need an honest, expert view of what's possible before committing budget. Second: organisations that have tried AI but got stuck — perhaps a pilot that never reached production, or multiple teams buying different tools with no coordination.</p><p>We work across <a href='/industries/finance/'>financial services</a>, <a href='/industries/healthcare/'>healthcare</a>, <a href='/industries/retail/'>retail</a>, <a href='/industries/manufacturing/'>manufacturing</a>, <a href='/industries/legal/'>legal</a>, and professional services. Company size typically ranges from 50 to 500 employees.</p>"
         },
         {
-          "heading": "What You Walk Away With",
+          "heading": "What deliverables do you walk away with?",
           "body": "<p>A scored AI opportunity matrix with estimated ROI for each use case. A technology gap analysis showing what infrastructure changes are needed. A team skills assessment with training recommendations. And a phased roadmap covering the next 12 to 24 months, broken into quarterly sprints with clear deliverables.</p><p>Every recommendation ties back to a business outcome — cost reduction, revenue growth, or operational efficiency. No vanity projects.</p>"
         }
       ],
@@ -90,7 +91,11 @@
         "healthcare",
         "retail",
         "manufacturing"
-      ]
+      ],
+      "definedTerm": {
+        "term": "AI Readiness Assessment",
+        "definition": "A 3-week fixed-fee diagnostic that audits a business's data, processes, team capability, and governance posture, then delivers a ranked roadmap of the highest-ROI AI use cases. Costs £6,500 and produces a written deliverable plus a leadership walkthrough."
+      }
     },
     {
       "slug": "ai-strategy",
@@ -100,22 +105,22 @@
       "primaryKeyword": "ai strategy consultant",
       "icon": "strategy",
       "entryPoint": false,
-      "intro": "<p>Most AI projects fail because there was never a proper plan. We help you build an AI strategy that starts with your actual business problems, not the latest tech hype.</p>",
+      "intro": "<p><strong>AI strategy is a written plan that maps your business priorities to specific, sequenced AI investments — defining what to build, when, why, and what success looks like in pounds and hours saved.</strong> We deliver AI strategies as a fixed-scope 4–6 week engagement, output to board level, with explicit ROI projections and risk registers per initiative.</p><p>Most AI projects fail because there was never a real plan, just a tool selection. We start every strategy engagement with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> (£6,500, 3 weeks) to ground the plan in actual operational reality before strategy work begins.</p>",
       "sections": [
         {
-          "heading": "Why You Need an AI Strategy Before You Build Anything",
+          "heading": "Why do you need an AI strategy before building anything?",
           "body": "<p>Jumping straight into AI tools without a strategy is like renovating a house without blueprints. You might get lucky, but you will almost certainly waste money and end up with something that does not fit together.</p><p>A proper AI strategy starts with understanding where your business actually loses time and money. We audit your operations, talk to your teams, and identify the three to five areas where AI will deliver the fastest, most measurable return.</p>"
         },
         {
-          "heading": "Our Strategy Process",
+          "heading": "How does our AI strategy process work?",
           "body": "<p>We follow a four-phase approach. Phase one is discovery — we spend time with your leadership and frontline teams to understand workflows, pain points, and existing technology. Phase two is opportunity mapping — we match your challenges against proven AI capabilities and score each by impact and feasibility.</p><p>Phase three is roadmap design, where we build a phased plan covering technology choices, data requirements, team skills, and budget. Phase four is the governance framework — the decision-making structure, KPIs, and review cadence to keep your AI programme on track.</p>"
         },
         {
-          "heading": "Who This Is For",
+          "heading": "Who is this AI strategy engagement for?",
           "body": "<p>Organisations that know AI matters but have not started and need a clear-eyed assessment of what is possible, what it costs, and where to begin. Or organisations that have started but feel stuck — perhaps a proof of concept worked but never reached production, or multiple teams are buying different tools with no coordination.</p><p>We work across sectors including <a href='/industries/finance/'>finance</a>, <a href='/industries/healthcare/'>healthcare</a>, <a href='/industries/retail/'>retail</a>, and <a href='/industries/manufacturing/'>manufacturing</a>. Company size typically ranges from 50 to 500 employees.</p>"
         },
         {
-          "heading": "What You Walk Away With",
+          "heading": "What strategy deliverables do you walk away with?",
           "body": "<p>An AI maturity assessment, a prioritised opportunity register with estimated ROI, a 12 to 24 month roadmap broken into quarterly sprints, technology and vendor recommendations, and a risk register with change management plan.</p>"
         }
       ],
@@ -173,7 +178,11 @@
         "healthcare",
         "retail",
         "manufacturing"
-      ]
+      ],
+      "definedTerm": {
+        "term": "AI Strategy",
+        "definition": "A written plan that maps a business's priorities to specific sequenced AI investments — defining what to build, when, why, and what success looks like in measurable terms. Typically delivered as a fixed-scope 4–6 week engagement at board level."
+      }
     },
     {
       "slug": "agentic-ai",
@@ -183,22 +192,22 @@
       "primaryKeyword": "agentic ai consultant uk",
       "icon": "agentic",
       "entryPoint": false,
-      "intro": "<p>Agentic AI is the next evolution beyond chatbots and copilots. These are autonomous systems that plan, execute, and adapt — handling complex workflows end to end. We build them for UK businesses.</p>",
+      "intro": "<p><strong>Agentic AI is a class of AI systems that take sequences of actions autonomously to complete multi-step business tasks</strong> — using tools, querying data, making decisions, and verifying their own work, rather than waiting for a human prompt at every step. We build agentic systems for UK mid-market businesses that deliver measurable workflow outcomes inside 90 days.</p><p>Most pilots ship a working agent in production within 8–12 weeks. We start every engagement with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> (£6,500, 3 weeks) to scope the highest-ROI workflow before any build work.</p>",
       "sections": [
         {
-          "heading": "What Agentic AI Actually Is",
+          "heading": "What is agentic AI, and how is it different from chatbots?",
           "body": "<p>Agentic AI refers to systems that can take sequences of actions autonomously to complete complex, multi-step tasks. Unlike a chatbot that responds to prompts, an agentic system uses tools, browses data sources, makes decisions, and loops back to check its work.</p><p>In practice, this means automating workflows that previously required human judgement — from procurement processes that span multiple systems, to customer service escalations that need context from five different data sources.</p>"
         },
         {
-          "heading": "How We Build Agentic Systems",
+          "heading": "How do you build production-grade agentic systems?",
           "body": "<p>We start by mapping the workflow you want to automate — every decision point, every data source, every exception path. Then we design an agent architecture that handles the happy path and the edge cases.</p><p>We use a combination of LLMs, tool-use frameworks, and custom orchestration to build agents that are reliable enough for production. Every system includes human-in-the-loop controls, so your team stays in charge of high-stakes decisions.</p>"
         },
         {
-          "heading": "Where Agentic AI Delivers Most Value",
+          "heading": "Where does agentic AI deliver the most ROI?",
           "body": "<p>The biggest wins come from multi-step processes that touch multiple systems — procurement, compliance monitoring, customer onboarding, financial reporting. If a workflow requires a person to log into three different tools and make judgement calls, it's a candidate for agentic automation.</p><p>We work across <a href='/industries/finance/'>financial services</a>, <a href='/industries/legal/'>legal</a>, <a href='/industries/healthcare/'>healthcare</a>, and <a href='/industries/manufacturing/'>manufacturing</a>.</p>"
         },
         {
-          "heading": "Governance and Control",
+          "heading": "How do you keep agentic systems safe and auditable?",
           "body": "<p>Autonomous systems need guardrails. Every agentic system we build includes logging, monitoring, human escalation triggers, and audit trails. We design for the UK regulatory environment — GDPR, FCA, ICO — from day one.</p><p>For organisations that need a broader <a href='/what-we-do/ai-governance/'>AI governance framework</a>, we offer dedicated governance consulting.</p>"
         }
       ],
@@ -230,20 +239,28 @@
       ],
       "faq": [
         {
-          "question": "What is the difference between agentic AI and a chatbot?",
-          "answer": "A chatbot responds to prompts. An agentic AI system autonomously plans and executes multi-step workflows, using tools and data sources to complete tasks without constant human direction."
+          "question": "What is agentic AI in plain English?",
+          "answer": "Agentic AI describes AI systems that act autonomously — they read data, use tools, make decisions, and verify results across multi-step workflows, rather than just answering one prompt at a time. A chatbot answers a single question. An agent triages 200 inbox enquiries, looks up CRM records, drafts replies, and routes the difficult ones to a human reviewer — without you asking each time."
         },
         {
-          "question": "Is agentic AI safe for production use?",
-          "answer": "Yes, when built properly. We include human-in-the-loop controls, monitoring, and guardrails in every system. The key is designing for the failure modes, not just the happy path."
+          "question": "How long does an agentic AI project take to deliver?",
+          "answer": "Most pilots ship a working agent in production within 8–12 weeks. We start with a 3-week AI Readiness Assessment (£6,500) to scope the highest-ROI workflow, then a Phase 2 build at £850 per day for 3–6 months for embedded delivery."
         },
         {
-          "question": "What does an agentic AI project cost?",
-          "answer": "Phase 2 Build runs at £850/day, typically 3–6 months, with a working system shipped inside the first 90 days. Milestone fixed-fee pricing available for well-defined scope. Phase 1 Diagnostic (£6,500) sizes the Build investment precisely before you commit."
+          "question": "How do you stop agentic systems from going rogue or making bad decisions?",
+          "answer": "Every agent we build ships with three controls: (1) tight tool scoping so the agent can only call the APIs you approve, (2) human-in-the-loop checkpoints on irreversible actions like sending external emails or making payments, and (3) eval harnesses that score every agent decision against a labelled test set before and after deployment. We do not deploy agents with full autonomy on customer-facing or financial actions without explicit sign-off."
         },
         {
-          "question": "How long does it take to build an agentic system?",
-          "answer": "A focused single-agent system can be prototyped in 2 to 4 weeks and production-ready in 6 to 8 weeks. More complex systems take longer."
+          "question": "What ROI should I expect from agentic AI?",
+          "answer": "Realistic ROI for inbox triage, document extraction, or vendor-onboarding agents is 40–70% reduction in human handling time within the first 90 days post-launch. We benchmark every project against a baseline measured during the assessment phase, so you can attribute the saving to the agent rather than guess."
+        },
+        {
+          "question": "Is my business ready for agentic AI?",
+          "answer": "You are ready if you have a repetitive multi-step process that involves looking up data, applying rules, and producing an output — and that process has clear definitions of \"right\" and \"wrong\" outcomes. You are not ready if the workflow depends on tacit human judgement that has never been written down. Our AI Readiness Assessment maps both sides of that line."
+        },
+        {
+          "question": "Can agentic AI work with our existing tools and systems?",
+          "answer": "Yes. Agents we build integrate over standard APIs (REST, GraphQL), file-based connectors (S3, SharePoint, Google Drive), and direct database connections (Postgres, SQL Server). We have integrated agents with Salesforce, HubSpot, NetSuite, Microsoft Dynamics, Xero, and most major ITSM and EHR systems used in UK mid-market."
         }
       ],
       "relatedServices": [
@@ -256,7 +273,14 @@
         "legal",
         "healthcare",
         "manufacturing"
-      ]
+      ],
+      "definedTerm": {
+        "term": "Agentic AI",
+        "definition": "A class of AI systems that take sequences of actions autonomously to complete multi-step business tasks — using tools, querying data, making decisions, and verifying their own work — rather than waiting for a human prompt at every step.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Intelligent_agent"
+        ]
+      }
     },
     {
       "slug": "generative-ai",
@@ -266,26 +290,26 @@
       "primaryKeyword": "generative ai consultancy uk",
       "icon": "sparkles",
       "entryPoint": false,
-      "intro": "<p>Generative AI is powerful but choosing the wrong model, architecture, or approach wastes money fast. We help UK businesses cut through the hype and build genAI systems that deliver real value — from RAG knowledge systems to content production pipelines to multi-modal applications.</p>\n<p>The biggest risk in generative AI is not technology choice — it is solution-fit. Teams spend six figures fine-tuning a model when retrieval-augmented generation would have delivered better results in three weeks. Or they pick a frontier model for a task a smaller open-weights model handles for 95% less cost. Our generative AI engagements always start with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> to identify the highest-value use cases and right-size the architecture before any build work begins.</p>\n<p>We work with the full spectrum — OpenAI, Anthropic Claude, Google Gemini, Llama, Mistral, and open-weights models hosted on your infrastructure where data residency or cost demand it. Pilots ship in 6-10 weeks against specific business outcomes. Every system includes evaluation harnesses, content safety filters, and observability so you know precisely how the model performs in production over time.</p>",
+      "intro": "<p><strong>Generative AI is a class of machine learning models that produce new content — text, code, images, audio, or structured data — in response to a prompt, by predicting plausible outputs from patterns learnt across very large training datasets.</strong> The most common business use cases are retrieval-augmented question answering, document drafting, content production pipelines, and code-generation copilots.</p><p>The biggest risk in generative AI is not technology choice — it is solution-fit. Teams spend six figures fine-tuning a model when retrieval-augmented generation would have delivered better results in three weeks. Our generative AI engagements always start with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> (£6,500, 3 weeks) to identify the highest-value use cases and right-size the architecture before any build. We work across OpenAI, Anthropic Claude, Google Gemini, Llama, Mistral, and open-weights models. Pilots ship in 6–10 weeks with full evaluation harnesses, content safety filters, and production observability.</p>",
       "sections": [
         {
-          "heading": "Cutting Through the Hype",
+          "heading": "What is generative AI, and how is it different from agentic AI?",
           "body": "<p>Most generative AI vendor pitches conflate three different things — chat interfaces, retrieval systems, and autonomous agents. Each has different risks, costs, and use cases. We work with you to identify which pattern fits your problem. Sometimes the answer is a simple ChatGPT-style chat interface over your documentation. Sometimes it is a retrieval system grounding answers in your knowledge base. Sometimes it is full multi-step <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> workflows that take action. Often the answer is a much smaller model than the conversation suggests. We never recommend frontier models when smaller ones deliver the same business outcome at 1/20th the cost.</p>"
         },
         {
-          "heading": "RAG Systems and Knowledge Bases",
+          "heading": "How do RAG systems work, and when should you use them?",
           "body": "<p>Retrieval-augmented generation is the highest-ROI starting point for most businesses adopting generative AI. We build RAG systems that ground model responses in your actual content — policies, procedures, technical documentation, customer history, product catalogues. Citations let users verify answers. Permission-aware retrieval respects access controls. Continuous evaluation surfaces hallucinations and topic drift. We deploy RAG systems on Pinecone, Weaviate, Qdrant, pgvector, or whatever vector store fits your existing stack. The <a href=\"/what-we-do/conversational-ai/\">conversational AI</a> capability uses RAG as its foundation, and the <a href=\"/what-we-do/data-ai/\">data AI</a> work ensures the underlying content is clean, current, and well-structured.</p>"
         },
         {
-          "heading": "Content and Workflow Pipelines",
+          "heading": "How do you build content and workflow pipelines with generative AI?",
           "body": "<p>Generative AI shines for content production at scale — when paired with proper quality controls. We build pipelines for marketing copy variants, technical documentation drafts, code generation, image synthesis, multilingual content, and automated reporting. Every pipeline includes prompt templates aligned to your brand voice, evaluation against quality rubrics, human approval gates for high-stakes content, and version control. Teams using our pipelines typically produce 5-10x more content per week with higher consistency and lower revision cycles. The <a href=\"/what-we-do/ai-automation/\">AI automation</a> framework handles the orchestration.</p>"
         },
         {
-          "heading": "Cost Optimisation",
+          "heading": "How do you cut generative AI costs without losing output quality?",
           "body": "<p>Generative AI costs spiral fast if you let them. Frontier models cost 10-50x more per token than open-weights alternatives. Naive prompt engineering wastes 60-80% of spend on context that does not change the answer. Caching, batching, and smart routing between models cut bills dramatically. We build systems with cost observability from day one — you see spend per use case, per model, per business unit. Open-weights deployments on your own infrastructure (using vLLM, TGI, or Ollama) eliminate per-token cost for high-volume internal workloads while keeping data inside your environment. Our <a href=\"/what-we-do/ai-strategy/\">AI strategy</a> work always considers total cost of ownership, not just initial deployment cost.</p>"
         },
         {
-          "heading": "Common Generative AI Use Cases",
+          "heading": "What are the most common generative AI use cases in UK mid-market?",
           "body": "<p>Five clusters consistently deliver the strongest ROI for businesses adopting generative AI in production.</p>\n<ul>\n  <li><strong>Knowledge access:</strong> RAG over policies, procedures, technical documentation, prior client work, product catalogues — internal and external.</li>\n  <li><strong>Content production:</strong> marketing copy variants, technical documentation drafts, multilingual content, transcript summarisation, brief writing.</li>\n  <li><strong>Code and engineering:</strong> code review, test generation, documentation, debugging, technical specification drafting, SQL generation.</li>\n  <li><strong>Customer interaction:</strong> support chat, sales discovery conversations, appointment booking, post-purchase engagement, voice IVR.</li>\n  <li><strong>Decision support:</strong> document summarisation for legal and compliance review, contract clause comparison, policy alignment checks.</li>\n</ul>\n<p>Most teams get the strongest first win from knowledge access or content production — both deliver measurable productivity gains in weeks. Our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> ranks these against your data maturity, content needs, and team capacity.</p>"
         }
       ],
@@ -317,16 +341,28 @@
       ],
       "faq": [
         {
-          "question": "Which LLM should we use?",
-          "answer": "It depends on your use case, budget, and data sensitivity requirements. We evaluate options and recommend the best fit — we are vendor neutral."
+          "question": "What is the difference between generative AI and agentic AI?",
+          "answer": "Generative AI produces content (text, images, code) in response to a single prompt. Agentic AI uses generative models as a component but adds tool use, multi-step planning, memory, and self-verification to complete multi-step business tasks autonomously. A copywriter is generative; a research analyst is agentic."
         },
         {
-          "question": "What is RAG and do we need it?",
-          "answer": "RAG (Retrieval-Augmented Generation) connects an LLM to your business data so it can answer questions accurately. If you need AI that knows about your specific documents, policies, or products, yes."
+          "question": "When should you use RAG (retrieval-augmented generation) instead of fine-tuning?",
+          "answer": "Use RAG when your knowledge changes frequently, when answers must be traceable to source documents, or when the underlying corpus is large and updates often (policies, product docs, research libraries). Use fine-tuning when you need consistent style, format, or domain vocabulary that prompting cannot reliably reproduce. RAG ships in 3–6 weeks; fine-tuning is typically 8–12 weeks plus ongoing dataset maintenance."
         },
         {
-          "question": "How do you handle data privacy with LLMs?",
-          "answer": "We design systems that keep sensitive data within your infrastructure. Options include private cloud deployments, on-premise models, and API configurations that prevent data retention."
+          "question": "Which large language model should I use — OpenAI, Anthropic, Google, or open-weights?",
+          "answer": "It depends on three axes: data residency requirements, cost per million tokens at your expected volume, and task suitability. We benchmark candidate models against your actual workload during the assessment phase, so model selection is data-driven rather than vendor-led. UK businesses with data-residency constraints often run open-weights models (Llama 3, Mistral) on UK-hosted infrastructure."
+        },
+        {
+          "question": "How do you stop generative AI from hallucinating or producing wrong answers?",
+          "answer": "Three layers: (1) RAG architecture so answers cite specific source passages a user can verify, (2) eval harnesses that score every output against a labelled test set before deployment and catch regressions in production, and (3) confidence-scored outputs so the system can defer to a human when uncertainty is high. We never ship a generative system without a written eval suite."
+        },
+        {
+          "question": "How long does a generative AI project take to deliver?",
+          "answer": "RAG knowledge systems typically ship in 6–8 weeks. Content production pipelines (e.g. report drafting, summarisation) ship in 4–6 weeks. Multi-modal applications take longer (10–14 weeks) due to evaluation complexity. All projects start with the 3-week AI Readiness Assessment to right-size the architecture."
+        },
+        {
+          "question": "What does generative AI cost to run in production?",
+          "answer": "Highly variable. A RAG system answering 10,000 queries per month on Claude Haiku or GPT-4o-mini typically costs £80–£300/month in model fees plus infrastructure. A heavy content pipeline producing thousands of long-form documents per month can run into thousands. We size cost per use case during the assessment and design for cost-efficiency from day one."
         }
       ],
       "relatedServices": [
@@ -339,7 +375,14 @@
         "finance",
         "marketing",
         "education"
-      ]
+      ],
+      "definedTerm": {
+        "term": "Generative AI",
+        "definition": "A class of machine learning models that produce new content — text, code, images, audio, or structured data — in response to a prompt, by predicting plausible outputs from patterns learnt across very large training datasets. Common business uses include retrieval-augmented question answering, document drafting, and code generation.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+        ]
+      }
     },
     {
       "slug": "ai-automation",
@@ -349,22 +392,22 @@
       "primaryKeyword": "ai automation consulting",
       "icon": "implementation",
       "entryPoint": false,
-      "intro": "<p>Most businesses lose thousands of hours each year on tasks that machines can handle faster and more accurately. We help you identify the right processes to automate and build solutions that stick.</p>",
+      "intro": "<p><strong>AI automation is the use of machine learning, large language models, and rules engines to take repetitive multi-step processes off humans and run them end-to-end with measurable accuracy and audit trails.</strong> Typical projects pay back inside 6 months and reduce human handling time on the targeted workflow by 40–70%.</p><p>Most businesses lose thousands of hours each year on tasks that machines can handle faster and more accurately. We help you identify the right processes to automate, then build, deploy, and monitor solutions that stick. Engagements start with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> (£6,500, 3 weeks) to rank candidate workflows by feasibility and ROI.</p>",
       "sections": [
         {
-          "heading": "What AI Automation Looks Like",
+          "heading": "What does AI automation actually look like in practice?",
           "body": "<p>Modern intelligent automation goes beyond simple macros. Machine learning handles tasks that previously required human judgement — invoice processing, customer onboarding, data entry, regulatory filing, lead qualification, report generation.</p><p>We work with tools like UiPath, Microsoft Power Automate, and custom Python pipelines — choosing whatever fits your existing stack.</p>"
         },
         {
-          "heading": "How We Deliver Automation Projects",
+          "heading": "How do you deliver AI automation projects end-to-end?",
           "body": "<p>Every engagement starts with a process audit. We map your current workflows, identify bottlenecks, and calculate time and cost savings for each automation candidate. Then we prioritise — starting with quick wins that deliver measurable ROI within weeks.</p><p>Our delivery follows an agile approach: build, test, refine, deploy. Your team gets hands-on training, clear documentation, and ongoing support.</p>"
         },
         {
-          "heading": "Scaling Across the Organisation",
+          "heading": "How do you scale AI automation across an organisation?",
           "body": "<p>One successful automation project is the beginning. The real value comes when you build an automation-first culture. We help you create a Centre of Excellence — a small internal team equipped to identify and deploy new automations independently.</p><p>UK organisations that scale automation well typically see 30 to 50 percent reductions in operational costs within two years.</p>"
         },
         {
-          "heading": "Common Automation Use Cases",
+          "heading": "What are the most common AI automation use cases in UK mid-market?",
           "body": "<p>Invoice processing that cuts handling time by up to 80 percent. Employee onboarding that reduces setup from days to hours. Data entry and migration that eliminates copy-paste errors. Regulatory filing that compiles, validates, and submits documents automatically. Lead qualification that scores and routes prospects without manual review. Report generation that produces board packs and client reports on schedule.</p>"
         }
       ],
@@ -396,16 +439,28 @@
       ],
       "faq": [
         {
-          "question": "Which processes should we automate first?",
-          "answer": "We start with high-volume, repetitive tasks that have clear rules. These deliver the fastest ROI with the lowest risk."
+          "question": "What kinds of business processes are good candidates for AI automation?",
+          "answer": "Processes that are repetitive, rules-based, involve structured or semi-structured data, and have a defined \"correct\" output. Strong candidates include invoice processing, customer enquiry triage, document extraction (KYC, contracts, claims), data entry between systems, and report generation. Weak candidates are processes that require nuanced human judgement on novel situations."
         },
         {
-          "question": "How long before we see results?",
-          "answer": "Most clients see measurable results within 4 to 8 weeks. Some quick wins deliver savings within days of deployment."
+          "question": "How long does an AI automation project take to deliver?",
+          "answer": "Most automation projects ship a working production system inside 8–12 weeks for a single workflow. The 3-week AI Readiness Assessment (£6,500) defines scope first; Phase 2 build runs at £850 per day for embedded delivery."
         },
         {
-          "question": "Will automation replace our staff?",
-          "answer": "No. The goal is to free your team from work they shouldn't be doing manually, so they can focus on higher-value activities."
+          "question": "What ROI is realistic from AI automation?",
+          "answer": "For document-heavy workflows (claims, invoices, KYC) we typically see 40–70% reduction in handling time and 90%+ first-pass accuracy within the first 90 days. Pure-rules processes can hit 95%+ automation rates. Workflows with high judgement content land lower (20–40%) but free human time for higher-value work."
+        },
+        {
+          "question": "Will AI automation replace my staff?",
+          "answer": "No, almost never. The economic case for automation in UK mid-market is reclaiming time from constrained teams who already cannot keep up with volume — not headcount reduction. We design automation to handle the high-volume / low-judgement portion so humans can focus on exceptions, customer relationships, and growth work."
+        },
+        {
+          "question": "How do you handle errors and exceptions in automated workflows?",
+          "answer": "Every automation we build includes (1) confidence-scored outputs so low-confidence cases are routed to humans, (2) full audit logging of every decision the system made and why, (3) regression test suites that catch model or rule drift before it reaches production, and (4) alerting when error rates exceed defined thresholds."
+        },
+        {
+          "question": "What systems can your AI automation integrate with?",
+          "answer": "We build over standard interfaces: REST APIs, webhooks, file-based connectors (SFTP, S3, SharePoint, Drive), direct database access (Postgres, SQL Server, MySQL), and message queues (RabbitMQ, SQS). Common integrated platforms include Salesforce, HubSpot, NetSuite, Microsoft Dynamics, Xero, Sage, ServiceNow, and Zendesk."
         }
       ],
       "relatedServices": [
@@ -418,7 +473,11 @@
         "healthcare",
         "retail",
         "manufacturing"
-      ]
+      ],
+      "definedTerm": {
+        "term": "AI Automation",
+        "definition": "The use of machine learning, large language models, and rules engines to take repetitive multi-step business processes off humans and run them end-to-end with measurable accuracy and full audit trails. Typical UK mid-market projects pay back inside 6 months."
+      }
     },
     {
       "slug": "data-ai",
@@ -586,22 +645,22 @@
       "primaryKeyword": "ai governance consulting uk",
       "icon": "governance",
       "entryPoint": false,
-      "intro": "<p>AI without governance is a liability. We help UK businesses build frameworks that ensure their AI systems are safe, fair, compliant, and auditable.</p>",
+      "intro": "<p><strong>AI governance is the set of policies, controls, and audit mechanisms that make AI systems safe, fair, compliant, and explainable across their full lifecycle</strong> — from data sourcing through model selection, deployment, monitoring, and decommissioning. For UK businesses, governance covers GDPR, the EU AI Act (where applicable), sector regulators (FCA, ICO, MHRA), and internal risk frameworks.</p><p>AI without governance is a liability. We help UK businesses build governance frameworks that turn AI from a board-level risk into a board-level capability. Engagements typically start with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> (£6,500, 3 weeks) which includes a governance gap analysis as standard.</p>",
       "sections": [
         {
-          "heading": "Why AI Governance Matters Now",
+          "heading": "Why does AI governance matter right now for UK businesses?",
           "body": "<p>The UK AI Bill and EU AI Act are creating new compliance obligations. Businesses deploying AI need documented governance frameworks, bias monitoring, and audit trails. This is not optional — it is regulatory reality.</p><p>Beyond compliance, governance protects your reputation. An AI system that makes biased decisions or handles personal data incorrectly can cause lasting damage.</p>"
         },
         {
-          "heading": "Our Governance Framework",
+          "heading": "What does our AI governance framework actually cover?",
           "body": "<p>We build practical governance frameworks, not theoretical ones. This covers: AI risk assessment methodology, model documentation standards, bias detection and monitoring, data governance policies, human oversight requirements, and incident response procedures.</p><p>Every framework is tailored to your industry and regulatory environment — <a href='/industries/finance/'>FCA for financial services</a>, <a href='/industries/healthcare/'>CQC and NHS Digital for healthcare</a>, <a href='/industries/legal/'>SRA for legal</a>.</p>"
         },
         {
-          "heading": "Bias Auditing",
+          "heading": "How do you audit AI systems for bias and fairness?",
           "body": "<p>We test your AI systems for demographic bias, data bias, and outcome bias. If we find problems, we help you fix them — through model adjustment, data rebalancing, or process redesign.</p>"
         },
         {
-          "heading": "AI Governance for SMEs",
+          "heading": "What does proportionate AI governance look like for SMEs?",
           "body": "<p>Enterprise-grade governance consulting typically runs six figures at Big 4 rates. Our three-phase structure brings the same rigour at mid-market budgets — £6,500 Diagnostic, £850/day Build, £10,000/month Retain.</p>"
         }
       ],
@@ -633,16 +692,28 @@
       ],
       "faq": [
         {
-          "question": "Do we need AI governance if we only use third-party AI tools?",
-          "answer": "Yes. You are responsible for how AI is used in your business, even if the AI itself is provided by a third party. Governance covers usage policies, data handling, and risk management."
+          "question": "What does AI governance cover in a UK business?",
+          "answer": "Six domains: (1) data lineage and consent under GDPR, (2) model selection and supplier risk, (3) bias and fairness testing across protected characteristics, (4) explainability and decision logging, (5) monitoring for drift and degradation in production, and (6) human oversight and override pathways. We deliver governance as a written framework with named owners, review cadences, and audit trails."
         },
         {
-          "question": "What regulations apply to AI in the UK?",
-          "answer": "GDPR applies to all AI that processes personal data. The UK AI Bill introduces additional requirements. Sector-specific regulations (FCA, CQC, SRA) add further obligations depending on your industry."
+          "question": "Does the EU AI Act apply to UK businesses?",
+          "answer": "Yes, if you place AI systems on the EU market or use them on EU subjects. Even if you do not, the EU AI Act has become a de-facto reference standard, and UK guidance from the ICO and sector regulators is converging on similar principles around risk classification, transparency, and human oversight."
         },
         {
-          "question": "How much does AI governance consulting cost?",
-          "answer": "Governance scoping runs inside Phase 1 Diagnostic (£6,500 fixed fee) — we map your AI risk posture, compliance obligations, and governance gaps. Implementation runs in Phase 2 Build at £850/day, typically 4–8 weeks for a mid-market framework. Phase 3 Retain at £10,000/month provides ongoing governance oversight."
+          "question": "How do you test an AI system for bias?",
+          "answer": "We construct test sets stratified by the protected characteristics relevant to the use case (age, gender, ethnicity, postcode-derived deprivation index, etc.), then measure differential performance — false-positive rates, false-negative rates, calibration error — across each stratum. We document material disparities, the root cause analysis, and the mitigation applied. Bias auditing is repeated quarterly post-deployment."
+        },
+        {
+          "question": "How do you make AI decisions explainable to non-technical stakeholders?",
+          "answer": "Three approaches matched to risk level: (1) for low-risk decisions, structured logging of inputs/outputs is sufficient; (2) for medium-risk decisions, feature attribution methods (SHAP, LIME) produce per-decision explanations; (3) for high-risk decisions affecting individuals (lending, hiring, healthcare), we use inherently interpretable models or require human review on every output."
+        },
+        {
+          "question": "How much does AI governance cost an SME?",
+          "answer": "Proportionate governance for an SME typically costs £8,000–£25,000 to set up (one-off framework + first audit) plus 1–3 days per quarter for ongoing review. We design governance to match actual risk, not enterprise-scale paranoia — most SMEs do not need a Chief AI Ethics Officer, they need clear policies, named owners, and quarterly bias audits."
+        },
+        {
+          "question": "What happens if our AI system makes a wrong decision that harms a customer?",
+          "answer": "You need three things in place before that happens: (1) a written incident response process, (2) decision logs detailed enough to reconstruct what the system did and why, and (3) a documented human review and remediation pathway. We build all three into the governance framework, alongside contractual clauses with model suppliers covering liability for systemic model failures."
         }
       ],
       "relatedServices": [
@@ -655,7 +726,14 @@
         "healthcare",
         "legal",
         "government"
-      ]
+      ],
+      "definedTerm": {
+        "term": "AI Governance",
+        "definition": "The set of policies, controls, and audit mechanisms that make AI systems safe, fair, compliant, and explainable across their full lifecycle — from data sourcing through model selection, deployment, monitoring, and decommissioning. UK governance covers GDPR, EU AI Act, sector regulators, and internal risk frameworks.",
+        "sameAs": [
+          "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/"
+        ]
+      }
     },
     {
       "slug": "ai-training",

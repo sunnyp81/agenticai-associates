@@ -5,7 +5,7 @@ import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
 import HeroSignal from '@/components/HeroSignal.astro';
-import { buildFAQSchema } from '@/lib/schema';
+import { buildDefinedTermSchema, buildSpeakableSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
 import { getRelatedWhatWeDo } from '@/lib/page-factory';
 
@@ -21,13 +21,31 @@ interface Props {
     faq: { question: string; answer: string }[];
     relatedServices: string[];
     relatedIndustries: string[];
+    definedTerm?: { term: string; definition: string; sameAs?: string[] };
   };
 }
 
 const { page } = Astro.props;
+const pageUrl = `${siteConfig.url}/industries/${page.slug}/`;
 
-const faqSchema = buildFAQSchema(page.faq);
-const schemas = faqSchema ? [faqSchema] : [];
+// FAQPage schema is emitted by the FAQ.astro component — do not duplicate here.
+const definedTermSchema = page.definedTerm
+  ? buildDefinedTermSchema({
+      term: page.definedTerm.term,
+      definition: page.definedTerm.definition,
+      url: `${pageUrl}#defined-term`,
+      sameAs: page.definedTerm.sameAs,
+    })
+  : null;
+const speakableSchema = buildSpeakableSchema({
+  url: pageUrl,
+  cssSelectors: ['.page-intro', '.page-h1'],
+});
+
+const schemas = [
+  speakableSchema,
+  ...(definedTermSchema ? [definedTermSchema] : []),
+];
 
 const relatedServices = getRelatedWhatWeDo(page.relatedServices);
 ---
@@ -41,8 +59,14 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
         { label: 'Industries', href: '/industries/' },
         { label: page.name, href: `/industries/${page.slug}/` },
       ]} />
-      <h1 class="text-white max-w-3xl">{page.name}</h1>
-      <div class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed prose prose-invert prose-p:my-0"><Fragment set:html={page.intro} /></div>
+      <h1 class="page-h1 text-white max-w-3xl">{page.name}</h1>
+      <div class="page-intro text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed prose prose-invert prose-p:my-0"><Fragment set:html={page.intro} /></div>
+      {page.definedTerm && (
+        <div id="defined-term" class="sr-only" itemscope itemtype="https://schema.org/DefinedTerm">
+          <span itemprop="name">{page.definedTerm.term}</span>:
+          <span itemprop="description">{page.definedTerm.definition}</span>
+        </div>
+      )}
       <a href="/contact/" class="btn btn-primary mt-6">Get Industry-Specific Advice</a>
     </div>
   </section>

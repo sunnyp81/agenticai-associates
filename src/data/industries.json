@@ -2,7 +2,8 @@
   "hub": {
     "title": "AI Consultancy by Industry — Tailored Solutions for Your Sector",
     "description": "Industry-specific AI consultancy services for healthcare, legal, finance, retail, manufacturing, and more. We understand your sector's unique challenges.",
-    "primaryKeyword": "ai consultancy"
+    "primaryKeyword": "ai consultancy",
+    "intro": "<p><strong>Agentic AI Associates delivers AI consultancy across 25 UK industries</strong> — including healthcare, legal, finance, retail, manufacturing, and education — each with sector-specific data, regulators, and ROI patterns. AI that works in retail forecasting will not work in NHS triage without major adjustment, which is why we specialise rather than generalise.</p><p>Every engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> (£6,500, 3 weeks) that maps your sector's regulatory and operational reality to the highest-ROI use cases before any build work begins.</p>"
   },
   "pages": [
     {
@@ -34,31 +35,31 @@
       "solutionSections": [
         {
           "solution": "automation",
-          "heading": "AI Automation in Healthcare",
+          "heading": "How does AI automation reduce clinical admin burden?",
           "body": "<p>We deploy intelligent automation that handles the repetitive tasks draining your clinical staff. Discharge summaries are generated from clinical notes in under a minute. Appointment scheduling agents cut DNA rates by 30-50% via two-way SMS, calendar sync, and rebooking logic. Referral triage systems route patients to the right specialist first time using consultant-validated rules — not opaque models. One NHS trust we advised cut admin time per patient by 35% within three months. These are production-ready workflows built around your existing EPR and PAS systems — Epic, Cerner, EMIS, SystmOne — not experimental pilots. Our <a href=\"/what-we-do/ai-strategy/\">AI strategy</a> work maps every automation to measurable clinical and operational outcomes, and our <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> systems handle multi-step workflows like consent capture, scheduling, and follow-up end-to-end.</p>",
           "linkSlug": "/what-we-do/ai-automation/"
         },
         {
           "solution": "data-analysis",
-          "heading": "AI-Powered Data Analysis in Healthcare",
+          "heading": "What insights can AI surface from NHS patient data?",
           "body": "<p>Healthcare generates vast amounts of data, but most trusts barely surface 10% of its value. We build AI pipelines that turn patient records, operational metrics, and population health data into actionable insights. Predict 30-day readmission risk before discharge. Identify demographic patterns in A&E attendance. Flag prescribing anomalies across your formulary in near real time. Our models integrate with NHS Spine, EMIS Web, and SystmOne, and respect Caldicott principles end-to-end. The same <a href=\"/what-we-do/data-ai/\">data AI</a> patterns we use here power our work with <a href=\"/industries/government/\">government and public sector</a> teams improving citizen outcomes, and they connect cleanly to our <a href=\"/what-we-do/applied-ai/\">applied AI</a> models for downstream forecasting and decision support.</p>",
           "linkSlug": "/what-we-do/data-ai/"
         },
         {
           "solution": "compliance-monitoring",
-          "heading": "AI Compliance Monitoring in Healthcare",
+          "heading": "How do you keep healthcare AI compliant with NHS DSPT and GDPR?",
           "body": "<p>CQC inspections, GDPR, clinical governance — the compliance burden in healthcare is enormous. Our AI compliance tools monitor documentation, consent records, and clinical protocols against regulatory requirements continuously. Get alerted to gaps weeks before inspectors find them. Automated audit trails give you evidence on demand, not weeks before a visit. We build these systems with the Data Security and Protection Toolkit baked in from day one and follow the <a href=\"/what-we-do/ai-governance/\">AI governance</a> framework that keeps patient trust intact. The same governance scaffolding powers our work in <a href=\"/industries/finance/\">financial services</a> where FCA and PRA scrutiny is just as intense.</p>",
           "linkSlug": "/what-we-do/ai-governance/"
         },
         {
           "solution": "forecasting",
-          "heading": "AI Forecasting in Healthcare",
+          "heading": "How does AI forecasting improve patient flow and capacity planning?",
           "body": "<p>Demand forecasting is critical for workforce planning, bed management, and elective care scheduling. We train models on your historical activity, seasonal patterns, and regional demographics — not generic NHS averages. Predict A&E surges 4-6 weeks in advance. Optimise theatre utilisation by forecasting cancellation rates per consultant. Plan staffing rotas around predicted acuity, not headcount. Most trusts recover the build cost within a single winter pressures cycle. The same <a href=\"/what-we-do/applied-ai/\">applied AI</a> approach drives forecasting wins for <a href=\"/industries/education/\">education providers</a> predicting student demand and <a href=\"/industries/retail/\">retailers</a> planning seasonal inventory.</p>",
           "linkSlug": "/what-we-do/applied-ai/"
         },
         {
           "solution": "use-cases",
-          "heading": "Common AI Use Cases in UK Healthcare",
+          "heading": "What are the most common AI use cases in UK healthcare?",
           "body": "<p>The highest-ROI healthcare AI projects fall into five clusters. Each can ship as a standalone pilot in 8-12 weeks before scaling.</p>\n<ul>\n  <li><strong>Clinical documentation:</strong> ambient scribes that draft consultation notes, automated discharge summaries, coding assistance for SNOMED CT and ICD-10.</li>\n  <li><strong>Patient flow:</strong> referral triage, theatre scheduling optimisation, predictive bed management, A&E demand forecasting.</li>\n  <li><strong>Diagnostics support:</strong> radiology pre-read, retinal screening, dermatology referral grading — always positioned as decision support, never standalone.</li>\n  <li><strong>Operations and back office:</strong> rota optimisation, procurement spend analysis, FOI request automation, complaint response drafting.</li>\n  <li><strong>Patient engagement:</strong> appointment reminders with rebooking, post-op symptom triage, medication adherence prompts, multilingual chat for non-English speakers.</li>\n</ul>\n<p>Pick one cluster, prove the business case in a quarter, then expand. Our <a href=\"/what-we-do/ai-readiness-assessment/\">readiness assessment</a> output ranks all five against your specific data maturity and clinical priorities.</p>",
           "linkSlug": "/what-we-do/ai-readiness-assessment/"
         }
@@ -96,7 +97,14 @@
       "relatedIndustries": [
         "government",
         "education"
-      ]
+      ],
+      "definedTerm": {
+        "term": "NHS Data Security and Protection Toolkit (DSPT)",
+        "definition": "The DSPT is an annual self-assessment that all NHS organisations and any organisation that handles NHS patient data must complete. It evidences compliance with the National Data Guardian's 10 data security standards and is the baseline accreditation for AI vendors deploying in NHS settings.",
+        "sameAs": [
+          "https://www.dsptoolkit.nhs.uk/"
+        ]
+      }
     },
     {
       "slug": "legal",

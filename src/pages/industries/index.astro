@@ -1,17 +1,31 @@
 ---
 import HubLayout from '@/layouts/HubLayout.astro';
 import { getIndustriesHub } from '@/lib/page-factory';
-import { buildFAQSchema } from '@/lib/schema';
+import { buildDefinedTermSchema, buildSpeakableSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
 
 const data = getIndustriesHub();
 
+const sectorCount = data.pages.length;
+
 const faqs = [
-  { question: 'Do you specialise in specific industries?', answer: 'Yes. We have deep experience across 12 sectors including healthcare, legal, finance, retail, and manufacturing. Each industry has unique data, regulations, and workflows — we understand the nuances.' },
-  { question: 'Can AI work for my industry even if it is not listed?', answer: 'Absolutely. The industries on this page are where we have the deepest experience, but AI principles apply broadly. Contact us and we will assess whether we can help.' },
-  { question: 'How do you handle industry-specific regulations?', answer: 'Compliance is built into our approach from day one. Whether it is GDPR, FCA rules, NHS data standards, or sector-specific requirements, we ensure every AI solution meets regulatory standards.' },
+  { question: 'Which industries does Agentic AI Associates specialise in?', answer: `Agentic AI Associates delivers AI consultancy across ${sectorCount} UK industries — including healthcare, legal, finance, retail, manufacturing, and education. Each industry has unique data, regulators, and workflows, and we tailor every engagement to those constraints rather than applying generic patterns.` },
+  { question: 'Can you work with my industry even if it is not on this list?', answer: 'Yes. The industries on this page are where we have the deepest existing experience, but agentic AI patterns transfer across sectors. Book a fit call and we will give you an honest assessment of whether we are the right fit for your specific use case.' },
+  { question: 'How do you handle industry-specific regulations like FCA, GDPR, and NHS DSPT?', answer: 'Compliance is scoped during the £6,500 AI Readiness Assessment, not bolted on afterwards. We work natively with GDPR, the EU AI Act, FCA Senior Managers Regime, NHS Data Security and Protection Toolkit (DSPT), MHRA medical device guidance, and SRA risk frameworks. Every Phase 2 build engagement ships with documented decision logs, bias audits, and named human-oversight pathways.' },
+  { question: 'How do you measure ROI by industry?', answer: 'ROI baselines are sector-specific. Healthcare clients typically reclaim 20–40% of clinical admin time within six months. Document-heavy financial services workflows (KYC, claims, AML triage) typically hit 40–70% reduction in handling time. Retail forecasting projects target 15–25% improvement on stock-out and over-stock costs. We benchmark against measured baselines from your own data, not vendor case studies.' },
 ];
 
-const schema = buildFAQSchema(faqs);
+// FAQPage schema is emitted by the FAQ.astro component inside HubLayout — do not duplicate.
+const definedTerm = buildDefinedTermSchema({
+  term: 'AI Consultancy',
+  definition: 'A professional service that helps businesses identify, design, build, and operate AI systems for measurable commercial outcomes — covering strategy, technical architecture, build, deployment, governance, and post-launch optimisation.',
+  url: `${siteConfig.url}/industries/#defined-term`,
+});
+const speakable = buildSpeakableSchema({
+  url: `${siteConfig.url}/industries/`,
+  cssSelectors: ['.hub-h1', '.hub-intro p:first-child'],
+});
+const hubSchemas = [definedTerm, speakable];
 ---
 
 <HubLayout
@@ -23,12 +37,12 @@ const schema = buildFAQSchema(faqs);
   pages={data.pages.map((p) => ({ slug: p.slug, name: p.name, description: p.description, icon: p.icon }))}
   hubPath="/industries/"
   faqs={faqs}
-  schema={schema ? [schema] : []}
+  schema={hubSchemas}
 >
   <Fragment slot="intro">
     <div class="prose max-w-3xl">
-      <p>AI is not one-size-fits-all. What works in retail forecasting is different from what works in healthcare compliance. That is why we specialise.</p>
-      <p>We have worked with organisations across 12 sectors. Each page below explains how AI applies to your specific industry — the challenges, the solutions, and the outcomes you can expect.</p>
+      <p><strong>Agentic AI Associates delivers AI consultancy across {sectorCount} UK industries</strong> — each with sector-specific data, regulators, and ROI patterns. AI that works in retail forecasting will not work in NHS triage without major adjustment, which is why we specialise rather than generalise.</p>
+      <p>Every engagement starts with a <a href="/what-we-do/ai-readiness-assessment/">£6,500 AI Readiness Assessment</a> (3 weeks) that maps your sector's regulatory and operational reality to the highest-ROI use cases before any build work begins. Browse the industries below to see how AI applies in your specific sector — the challenges, the solutions, and the measurable outcomes.</p>
     </div>
   </Fragment>
 </HubLayout>

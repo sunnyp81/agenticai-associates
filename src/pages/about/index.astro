@@ -3,9 +3,48 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import BreadcrumbNav from '@/components/BreadcrumbNav.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import HeroSignal from '@/components/HeroSignal.astro';
-import { buildOrganizationSchema, buildPersonSchema } from '@/lib/schema';
+import { buildOrganizationSchema, buildPersonSchema, buildFAQSchema, buildSpeakableSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
 
-const schemas = [buildOrganizationSchema(), buildPersonSchema()];
+const aboutFaqs = [
+  {
+    question: 'Who founded Agentic AI Associates?',
+    answer: 'Sunny Patel founded Agentic AI Associates in 2026. Sunny\'s background is in data engineering, applied AI systems, and operational workflow design. He built this site personally, ranked it on Google, and generated an enterprise lead within the first week of launch — the same speed and rigour we bring to client work.',
+  },
+  {
+    question: 'What is Sunny Patel\'s technical background?',
+    answer: 'Sunny works across Python, LangChain, OpenAI, Anthropic Claude, Hugging Face, dbt, Astro, and Next.js for the build side. On the workflow automation side: n8n, Temporal, Make, and custom agentic pipelines. Data stack: Postgres, BigQuery, dbt, with production deployment on Cloudflare and Vercel.',
+  },
+  {
+    question: 'Is Agentic AI Associates GDPR compliant?',
+    answer: 'Yes. Agentic AI Associates is UK-based, ICO-registered, and operates under fully GDPR-compliant data practices. Professional Indemnity and Public Liability cover is placed before any Phase 2 build engagement begins. We will sign your DPA and complete supplier-onboarding questionnaires as part of the standard engagement process.',
+  },
+  {
+    question: 'What size businesses do you typically work with?',
+    answer: 'We focus on UK mid-market B2B — typically £100M to £500M in revenue, often PE-backed — where the board wants an AI story this quarter not next year. We will also engage with smaller businesses where there is a clear fit, but we do not chase enterprise procurement cycles or take on early-stage startups with no commercial validation.',
+  },
+  {
+    question: 'How is Agentic AI Associates different from other AI consultancies?',
+    answer: 'Three differences. (1) We build, we do not just advise — every engagement produces working production software. (2) Pricing is fixed and stated up front: £6,500 Phase 1 Diagnostic, £850/day Phase 2 Build, £10k/month Phase 3 Retain. No billable-hour surprises. (3) We specialise in agentic AI specifically — the next wave beyond chatbots and copilots — rather than spreading thin across the full AI surface.',
+  },
+  {
+    question: 'Where is Agentic AI Associates based?',
+    answer: 'United Kingdom. We work nationally with UK businesses across England, Scotland, Wales, and Northern Ireland, and we operate remotely with on-site visits as needed for discovery, build kickoff, and stakeholder review sessions.',
+  },
+];
+
+const aboutFaqSchema = buildFAQSchema(aboutFaqs);
+const aboutSpeakable = buildSpeakableSchema({
+  url: `${siteConfig.url}/about/`,
+  cssSelectors: ['.page-h1', '.page-intro', '.about-founder-lede'],
+});
+
+const schemas = [
+  buildOrganizationSchema(),
+  buildPersonSchema(),
+  aboutSpeakable,
+  ...(aboutFaqSchema ? [aboutFaqSchema] : []),
+];
 ---
 
 <BaseLayout
@@ -18,50 +57,66 @@ const schemas = [buildOrganizationSchema(), buildPersonSchema()];
     <HeroSignal variant="network" seed="about" />
     <div class="container relative">
       <BreadcrumbNav items={[{ label: 'About', href: '/about/' }]} />
-      <h1 class="text-white max-w-3xl">About Us</h1>
-      <p class="text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed">We're AI consultants who actually build things. Not slide decks — systems.</p>
+      <h1 class="page-h1 text-white max-w-3xl">About Agentic AI Associates</h1>
+      <p class="page-intro text-lg text-slate-300 mt-4 max-w-2xl leading-relaxed"><strong style="color:#EDEDEA;">Agentic AI Associates is a UK-based AI consultancy founded by Sunny Patel in 2026, specialising in agentic AI systems for mid-market businesses.</strong> We build, deploy, and operate working software — not strategy decks.</p>
     </div>
   </section>
 
   <div class="container section-sm">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       <div class="lg:col-span-2 prose">
-        <h2>Who We Are</h2>
-        <p>Agentic AI Associates is a UK-based AI consultancy. We help businesses understand, adopt, and benefit from artificial intelligence. Not in five years. Now.</p>
-        <p>We work with organisations of all sizes — from startups finding product-market fit to enterprises managing complex digital transformations. Our approach is practical, hands-on, and focused on outcomes.</p>
+        <h2>Who is Agentic AI Associates?</h2>
+        <p>Agentic AI Associates is a UK AI consultancy that designs, builds, and operates agentic AI systems for mid-market businesses (typically £100M–£500M revenue, often PE-backed). We work with leadership teams who want measurable AI outcomes inside the current quarter, not a five-year transformation programme.</p>
+        <p>Engagements run in three fixed phases: a <a href="/what-we-do/ai-readiness-assessment/">£6,500 AI Readiness Assessment</a> (3 weeks), a <a href="/what-we-do/agentic-ai/">Phase 2 Build</a> at £850 per day for embedded delivery, and a Phase 3 Retain at £10,000 per month for governance and scale-out. Pricing is fixed up front. No billable-hour surprises.</p>
 
-        <h2>What Makes Us Different</h2>
-        <p><strong>We build, not just advise.</strong> Most consultancies hand you a strategy document and walk away. We stick around for implementation. We write code. We deploy systems. We measure results.</p>
-        <p><strong>We speak plain English.</strong> AI is complex enough without adding consultant-speak. We explain things clearly. Short sentences. No jargon.</p>
-        <p><strong>We specialise in agentic AI.</strong> The next wave of AI isn't chatbots — it's autonomous agents that handle complex workflows end to end. We're building these systems today.</p>
-        <p><strong>We're UK-based.</strong> We understand UK business culture, regulations, and data protection requirements. GDPR compliance is baked into everything we do.</p>
-
-        <h2>Our Expertise</h2>
+        <h2>What makes Agentic AI Associates different?</h2>
         <ul>
-          <li><strong>AI Strategy</strong> — Roadmaps, readiness assessments, opportunity identification</li>
-          <li><strong>Agentic AI</strong> — Autonomous agents, multi-step workflows, tool-use systems</li>
-          <li><strong>Generative AI</strong> — LLMs, RAG architectures, prompt engineering</li>
-          <li><strong>Data & AI</strong> — Pipelines, analytics, machine learning models</li>
-          <li><strong>Implementation</strong> — Integration, deployment, monitoring, optimisation</li>
-          <li><strong>Training</strong> — Workshops, upskilling, responsible AI adoption</li>
+          <li><strong>We build, not just advise.</strong> Most consultancies hand you a strategy document and walk away. We stick around for implementation: we write code, deploy systems, and measure results.</li>
+          <li><strong>We speak plain English.</strong> AI is complex enough without consultant-speak. We explain things clearly — short sentences, no jargon.</li>
+          <li><strong>We specialise in <a href="/what-we-do/agentic-ai/">agentic AI</a>.</strong> The next wave of AI is not chatbots, it is autonomous agents that handle multi-step workflows end-to-end. We are building these systems today.</li>
+          <li><strong>We are UK-based.</strong> We understand UK business culture, regulators (FCA, ICO, MHRA, NHS), and data protection requirements. GDPR compliance is baked into everything we ship.</li>
         </ul>
 
-        <h2>Our Founder</h2>
-        <p><strong>Sunny Patel</strong> is the founder of Agentic AI Associates. He built this site — and it ranked on Google and generated an enterprise lead within a week of launch. That's the kind of speed and rigour he brings to client work. <a href="https://www.linkedin.com/in/sunnypatel" rel="noopener noreferrer">Connect on LinkedIn</a>.</p>
-        <p>Sunny founded Agentic AI Associates because he saw too many businesses being sold AI solutions they didn't need — or being told to wait when they should be acting. His approach is simple: understand the problem first, then apply the right technology.</p>
+        <h2>What AI services do we specialise in?</h2>
+        <ul>
+          <li><strong><a href="/what-we-do/ai-strategy/">AI Strategy</a></strong> — Roadmaps, readiness assessments, opportunity identification</li>
+          <li><strong><a href="/what-we-do/agentic-ai/">Agentic AI</a></strong> — Autonomous agents, multi-step workflows, tool-use systems</li>
+          <li><strong><a href="/what-we-do/generative-ai/">Generative AI</a></strong> — LLMs, RAG architectures, prompt engineering</li>
+          <li><strong><a href="/what-we-do/ai-automation/">AI Automation</a></strong> — Document extraction, workflow orchestration, integration layer</li>
+          <li><strong><a href="/what-we-do/ai-governance/">AI Governance</a></strong> — Bias auditing, compliance frameworks, decision logging</li>
+          <li><strong>Industry depth</strong> — Specialised delivery across <a href="/industries/healthcare/">healthcare</a>, <a href="/industries/finance/">finance</a>, <a href="/industries/legal/">legal</a>, <a href="/industries/manufacturing/">manufacturing</a>, retail, and education.</li>
+        </ul>
 
-        <h3>Credentials &amp; Expertise</h3>
+        <h2>Who founded Agentic AI Associates?</h2>
+        <p class="about-founder-lede"><strong>Sunny Patel founded Agentic AI Associates in 2026</strong>, after spending a decade building production data and AI systems for UK and international businesses. He built this website personally — it ranked on Google and generated an inbound enterprise lead within seven days of launch, which is the same speed and rigour he applies to client engagements. <a href="https://www.linkedin.com/in/sunnypatel" rel="noopener noreferrer">Connect on LinkedIn</a>.</p>
+        <p>Sunny founded the firm because he saw too many businesses sold AI solutions they did not need, or told to wait when they should be acting. The approach is simple: understand the problem first, then apply the right technology.</p>
+
+        <h3>Founder credentials and stack</h3>
         <ul>
           <li>Background in data engineering, applied AI systems, and operational workflow design</li>
-          <li>Technical stack: Python, LangChain, OpenAI, Anthropic Claude, Hugging Face, dbt, Astro, Next.js</li>
-          <li>AI workflow automation with n8n, Temporal, Make, and custom agentic pipelines</li>
-          <li>UK-based; fully GDPR compliant; ICO-registered data practices; PI/PL cover placed before Phase 2 engagements</li>
+          <li>Build stack: Python, LangChain, OpenAI, Anthropic Claude, Hugging Face, dbt, Astro, Next.js</li>
+          <li>Workflow automation: n8n, Temporal, Make, and custom agentic pipelines</li>
+          <li>Data: Postgres, BigQuery, dbt, with Cloudflare and Vercel for production deployment</li>
+          <li>UK-based; fully GDPR-compliant; ICO-registered data practices; PI/PL cover placed before any Phase 2 engagement</li>
         </ul>
 
-        <h2>Our Values</h2>
-        <p><strong>Honesty first.</strong> If AI isn't right for your problem, we'll tell you. We'd rather lose a project than waste your money.</p>
-        <p><strong>Ship over plan.</strong> We believe in working software over PowerPoint slides. Every engagement produces something real.</p>
-        <p><strong>Measure everything.</strong> If we can't measure the impact, we haven't finished the job.</p>
+        <h2>What principles do we work by?</h2>
+        <ul>
+          <li><strong>Honesty first.</strong> If AI is not right for your problem, we will tell you. We would rather lose a project than waste your money.</li>
+          <li><strong>Ship over plan.</strong> Working software over PowerPoint slides. Every engagement produces something real.</li>
+          <li><strong>Measure everything.</strong> If we cannot measure the impact, we have not finished the job.</li>
+          <li><strong>Practitioner-led.</strong> The person designing your system is the person building it. No handoffs to a delivery team.</li>
+        </ul>
+
+        <h2>Frequently asked questions about Agentic AI Associates</h2>
+        <dl class="space-y-4 mt-4">
+          {aboutFaqs.map((f) => (
+            <div>
+              <dt class="font-semibold" style="color:#EDEDEA;">{f.question}</dt>
+              <dd class="mt-2 leading-relaxed" style="color:#8a8a92;">{f.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
 
       <aside class="space-y-6">

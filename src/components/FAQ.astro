@@ -16,7 +16,7 @@ const schema = buildFAQSchema(faqs);
     <h2 class="mb-8">{heading}</h2>
     <dl class="space-y-3 max-w-3xl">
       {faqs.map((faq) => (
-        <details class="group bg-white border border-[var(--color-border)] rounded-xl overflow-hidden hover:border-[var(--color-accent)]/40 transition-colors">
+        <details class="group bg-transparent border border-[var(--color-border)] rounded-xl overflow-hidden hover:border-[var(--color-accent)]/40 transition-colors">
           <summary class="flex items-center justify-between cursor-pointer px-5 py-4 font-medium text-[var(--color-primary-dark)] hover:text-[var(--color-accent)] transition-colors list-none">
             <dt class="pr-4">{faq.question}</dt>
             <svg class="w-5 h-5 flex-shrink-0 text-[var(--color-text-muted)] group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

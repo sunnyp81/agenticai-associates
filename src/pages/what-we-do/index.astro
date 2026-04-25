@@ -1,18 +1,30 @@
 ---
 import HubLayout from '@/layouts/HubLayout.astro';
 import { getWhatWeDoHub } from '@/lib/page-factory';
-import { buildFAQSchema } from '@/lib/schema';
+import { buildDefinedTermSchema, buildSpeakableSchema } from '@/lib/schema';
+import { siteConfig } from '@/data/site-config';
 
 const data = getWhatWeDoHub();
 
 const faqs = [
-  { question: 'What AI services do you offer?', answer: 'We offer AI readiness assessments, strategy consulting, agentic AI development, generative AI systems, automation, data infrastructure, conversational AI, governance consulting, training, and ongoing support. Every engagement is tailored to your business needs.' },
-  { question: 'Where should we start with AI?', answer: 'Most businesses start with an AI Readiness Assessment. It gives you a clear picture of your data, infrastructure, and team capability — plus a prioritised roadmap of where AI will deliver the most value.' },
-  { question: 'Do you work with businesses that have no AI experience?', answer: 'Yes. Many of our clients are starting from zero. The readiness assessment is specifically designed to take you from where you are to where you need to be.' },
-  { question: 'How much does AI consulting cost?', answer: 'It depends on scope. Our AI Readiness Assessment is a fixed-fee engagement. Strategy projects start from £3,000. Implementation is scoped individually. We always provide clear pricing upfront.' },
+  { question: 'What AI services does Agentic AI Associates offer?', answer: 'Agentic AI Associates offers six core services: AI Readiness Assessment (fixed-fee 3-week diagnostic at £6,500), AI Strategy (4–6 week board-level roadmap), Agentic AI build, AI Automation, Generative AI, and AI Governance. Every engagement starts with the AI Readiness Assessment as Phase 1 before any build work begins.' },
+  { question: 'Where should I start if my business is new to AI?', answer: 'Start with the AI Readiness Assessment. It is a 3-week £6,500 diagnostic that audits your data, processes, team capability, and governance posture, then delivers a board-ready roadmap of the highest-ROI use cases for your specific situation. You finish the assessment with a clear, ranked plan rather than a generic strategy deck.' },
+  { question: 'Do you work with businesses that have no existing AI experience?', answer: 'Yes. The AI Readiness Assessment is designed precisely for that case. Most of our mid-market clients begin with no production AI in place — what they have is a leadership team that wants to act quickly and a real operational problem worth solving. We start there.' },
+  { question: 'How much does AI consultancy cost in the UK?', answer: 'Pricing is fixed and stated up front. Phase 1 Diagnostic (AI Readiness Assessment) is £6,500 for 3 weeks. Phase 2 Build is £850 per day for embedded delivery, typically 3–6 months per workflow. Phase 3 Retain is £10,000 per month for ongoing governance and optimisation. No billable-hour surprises and no hidden fees.' },
+  { question: 'How long does an AI consultancy engagement take end-to-end?', answer: 'Phase 1 Diagnostic takes 3 weeks to a board-ready roadmap. Phase 2 Build takes 3–6 months with a working production system inside the first 90 days. Phase 3 Retain runs on rolling 3-month terms. Most clients are in production with a measurable result inside 16 weeks of starting Phase 1.' },
 ];
 
-const schema = buildFAQSchema(faqs);
+// FAQPage schema is emitted by the FAQ.astro component inside HubLayout — do not duplicate.
+const definedTerm = buildDefinedTermSchema({
+  term: 'AI Readiness Assessment',
+  definition: 'A 3-week fixed-fee diagnostic (£6,500) that audits a business\'s data, processes, team capability, and governance posture, then delivers a board-ready roadmap of the highest-ROI AI use cases ranked by feasibility and impact.',
+  url: `${siteConfig.url}/what-we-do/ai-readiness-assessment/#defined-term`,
+});
+const speakable = buildSpeakableSchema({
+  url: `${siteConfig.url}/what-we-do/`,
+  cssSelectors: ['.hub-h1', '.hub-intro p:first-child'],
+});
+const hubSchemas = [definedTerm, speakable];
 ---
 
 <HubLayout
@@ -24,12 +36,12 @@ const schema = buildFAQSchema(faqs);
   pages={data.pages.map((p) => ({ slug: p.slug, name: p.name, description: p.description, icon: p.icon }))}
   hubPath="/what-we-do/"
   faqs={faqs}
-  schema={schema ? [schema] : []}
+  schema={hubSchemas}
 >
   <Fragment slot="intro">
     <div class="prose max-w-3xl">
-      <p>AI is transforming how UK businesses operate. But knowing where to start — and what to prioritise — is the hard part. That is what we do.</p>
-      <p>Every engagement below is designed to deliver measurable results. Browse our services to find the right starting point for your business.</p>
+      <p><strong>Agentic AI Associates delivers six AI services for UK mid-market businesses</strong>: <a href="/what-we-do/ai-readiness-assessment/">AI Readiness Assessment</a>, <a href="/what-we-do/ai-strategy/">AI Strategy</a>, <a href="/what-we-do/agentic-ai/">agentic AI</a>, <a href="/what-we-do/ai-automation/">AI automation</a>, <a href="/what-we-do/generative-ai/">generative AI</a>, and <a href="/what-we-do/ai-governance/">AI governance</a>. Every engagement begins with the AI Readiness Assessment — a fixed-fee 3-week diagnostic at £6,500 that maps the highest-ROI use cases to your data and processes before any build work begins.</p>
+      <p>Phase 2 build engagements run at £850 per day for embedded delivery (typically 3–6 months per workflow). Phase 3 ongoing governance and optimisation is £10,000 per month. Pricing is fixed, scoped, and stated up front — no billable-hour surprises.</p>
     </div>
   </Fragment>
 </HubLayout>
