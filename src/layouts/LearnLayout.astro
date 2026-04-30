@@ -5,6 +5,7 @@ import TableOfContents from '@/components/TableOfContents.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
+import InsightsCallout from '@/components/InsightsCallout.astro';
 import HeroSignal from '@/components/HeroSignal.astro';
 import { buildArticleSchema, buildFAQSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
@@ -124,6 +125,8 @@ const headings = page.sections.map((s) => ({
       <FAQ faqs={page.faq} />
     </div>
   )}
+
+  <InsightsCallout slug={page.slug} cluster="learn" />
 
   <!-- CTA -->
   <CTABanner

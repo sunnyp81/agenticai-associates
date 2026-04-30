@@ -1,0 +1,70 @@
+---
+interface Props {
+  slug: string;
+  cluster?: 'industry' | 'service' | 'learn' | 'location' | 'business-size';
+}
+
+const { slug, cluster = 'service' } = Astro.props;
+
+const insights = {
+  studio: {
+    href: '/insights/agent-studio-build-vs-buy/',
+    title: 'Agent Studio: Build vs Buy for Regulated Enterprises',
+    blurb: '12-criterion matrix across LangGraph, Bedrock Agents, Copilot Studio, Vertex, Writer, Glean, and custom builds.',
+  },
+  sdlc: {
+    href: '/insights/agentic-sdlc-regulated-engineering/',
+    title: 'Agentic SDLC for Regulated Engineering Teams',
+    blurb: 'Five-phase framework, audit-trail schema, SM&CR mapping, and the seven failure modes we see most often.',
+  },
+  fca: {
+    href: '/insights/fca-ai-governance-playbook/',
+    title: 'FCA AI Governance Playbook',
+    blurb: 'Controls map, AI Risk Register schema, Consumer Duty outcome rubric, and Senior Manager mapping.',
+  },
+};
+
+const regulatedIndustries = new Set(['fintech', 'finance', 'insurance', 'pharma-life-sciences', 'healthcare', 'legal', 'government']);
+const governanceServices = new Set(['ai-governance', 'ai-strategy', 'ai-readiness-assessment']);
+const platformServices = new Set(['agentic-ai', 'applied-ai', 'ai-automation', 'generative-ai', 'data-ai']);
+
+let picks: (typeof insights)[keyof typeof insights][] = [];
+
+if (cluster === 'industry' && regulatedIndustries.has(slug)) {
+  picks = [insights.fca, insights.sdlc, insights.studio];
+} else if (cluster === 'industry') {
+  picks = [insights.studio, insights.sdlc];
+} else if (cluster === 'service' && governanceServices.has(slug)) {
+  picks = [insights.fca, insights.sdlc];
+} else if (cluster === 'service' && platformServices.has(slug)) {
+  picks = [insights.studio, insights.sdlc];
+} else if (cluster === 'service') {
+  picks = [insights.studio, insights.fca];
+} else if (cluster === 'learn') {
+  picks = [insights.studio, insights.fca];
+} else {
+  picks = [insights.studio, insights.sdlc, insights.fca];
+}
+
+picks = picks.slice(0, 3);
+---
+
+{picks.length > 0 && (
+  <section class="container section-sm">
+    <div class="border-t border-slate-800 pt-12">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-2">Related thinking</p>
+      <h2 class="text-2xl font-bold text-white mb-6">Frameworks we apply on engagements like this</h2>
+      <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {picks.map((p) => (
+          <li class="border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition-colors bg-slate-950/40">
+            <a href={p.href} class="block group">
+              <h3 class="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors mb-2">{p.title}</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">{p.blurb}</p>
+              <p class="mt-4 text-sm font-semibold text-cyan-400">Read →</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}

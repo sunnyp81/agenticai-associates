@@ -5,6 +5,7 @@ import FeatureGrid from '@/components/FeatureGrid.astro';
 import FAQ from '@/components/FAQ.astro';
 import CTABanner from '@/components/CTABanner.astro';
 import RelatedLinks from '@/components/RelatedLinks.astro';
+import InsightsCallout from '@/components/InsightsCallout.astro';
 import HeroSignal from '@/components/HeroSignal.astro';
 import { buildServiceSchema, buildDefinedTermSchema, buildSpeakableSchema } from '@/lib/schema';
 import { siteConfig } from '@/data/site-config';
@@ -161,6 +162,8 @@ const relatedServices = getRelatedWhatWeDo(page.relatedServices);
       <FAQ faqs={page.faq} />
     </div>
   )}
+
+  <InsightsCallout slug={page.slug} cluster="service" />
 
   <CTABanner
     headline="Ready to see if this is the right fit?"

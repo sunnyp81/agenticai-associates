@@ -67,7 +67,11 @@
           "answer": "An AI consultant provides independent advice and strategy. An AI agency typically builds and manages AI solutions on your behalf. Consultants help you make decisions; agencies execute them. Some firms, including ours, offer both advisory and implementation services."
         }
       ],
-      "relatedLearnPages": ["what-does-an-ai-consultant-do", "how-to-choose-an-ai-consultant", "benefits-of-hiring-an-ai-consultant"],
+      "relatedLearnPages": [
+        "what-does-an-ai-consultant-do",
+        "how-to-choose-an-ai-consultant",
+        "benefits-of-hiring-an-ai-consultant"
+      ],
       "commercialCTA": {
         "text": "Looking to hire an AI consultant for your business?",
         "href": "/what-we-do/"
@@ -135,7 +139,11 @@
           "answer": "Common tools include data analysis platforms (Python, Jupyter), cloud AI services (AWS, Azure, GCP), project management tools (Jira, Notion), and presentation software. The specific toolkit depends on the consultant's specialisation and the client's technology stack."
         }
       ],
-      "relatedLearnPages": ["what-is-an-ai-consultant", "ai-consultant-job-description", "ai-consultant-skills"],
+      "relatedLearnPages": [
+        "what-is-an-ai-consultant",
+        "ai-consultant-job-description",
+        "ai-consultant-skills"
+      ],
       "commercialCTA": {
         "text": "Want to see what an AI consultant could do for your business?",
         "href": "/contact/"
@@ -203,71 +211,13 @@
           "answer": "Demand for AI consultants has never been higher. The rapid adoption of generative AI across industries has created a surge in advisory needs. Salaries are strong, and the field offers genuine variety in work. It's one of the most promising career paths in technology."
         }
       ],
-      "relatedLearnPages": ["become-ai-consultant-no-experience", "ai-consultant-certification", "ai-consultant-career-path"],
+      "relatedLearnPages": [
+        "become-ai-consultant-no-experience",
+        "ai-consultant-certification",
+        "ai-consultant-career-path"
+      ],
       "commercialCTA": {
         "text": "Already an AI professional? See our open consulting positions.",
-        "href": "/contact/"
-      }
-    },
-    {
-      "slug": "become-ai-consultant-no-experience",
-      "name": "Become an AI Consultant with No Experience",
-      "title": "How to Become an AI Consultant with No Experience — Practical Guide",
-      "description": "No AI experience? No problem. Learn how to break into AI consulting from scratch with actionable steps, free resources, and a realistic timeline.",
-      "primaryKeyword": "become ai consultant no experience",
-      "publishedAt": "2026-04-05",
-      "updatedAt": "2026-04-05",
-      "sections": [
-        {
-          "heading": "Starting from Zero — It's More Common Than You Think",
-          "slug": "starting-from-zero",
-          "body": "<p>Many of today's best AI consultants didn't start in technology at all. Teachers, marketers, accountants, and project managers have all made successful transitions into AI consulting. The field is young enough that unconventional backgrounds are the norm, not the exception.</p><p>What you bring from your previous career is often more valuable than you realise. Industry knowledge, stakeholder management, project delivery, and problem-solving skills all transfer directly. The technical AI knowledge is the piece you need to add — and it's the most learnable part of the equation.</p><p>The key is to be strategic about your transition. Don't try to become a machine learning researcher. Focus on becoming someone who understands AI well enough to advise businesses on its practical application. That's a much more achievable goal and, frankly, a more commercially valuable one.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "A 12-Month Learning Plan",
-          "slug": "12-month-plan",
-          "body": "<p><strong>Months 1-3:</strong> Build foundational AI literacy. Complete Google's AI Essentials certificate. Read <em>AI Superpowers</em> by Kai-Fu Lee and <em>Prediction Machines</em> by Agrawal, Gans, and Goldfarb. Follow AI news daily through The Batch (Andrew Ng's newsletter) and MIT Technology Review.</p><p><strong>Months 4-6:</strong> Deepen technical understanding. Take Andrew Ng's Machine Learning Specialisation on Coursera. Learn basic Python through Codecademy or freeCodeCamp. Start experimenting with AI tools like ChatGPT, Midjourney, and automation platforms like Make or Zapier.</p><p><strong>Months 7-9:</strong> Build your consulting toolkit. Study business case development, ROI analysis, and change management fundamentals. Create AI strategy templates. Write about AI applications in your industry on LinkedIn or a personal blog.</p><p><strong>Months 10-12:</strong> Gain practical experience. Offer pro-bono AI assessments to small businesses in your network. Attend AI meetups and industry events. Apply for junior AI consulting roles or start freelancing on platforms like Upwork with competitive introductory rates.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Leveraging Your Existing Career",
-          "slug": "leveraging-existing-career",
-          "body": "<p>Your previous career isn't a disadvantage — it's your niche. AI consultants with domain expertise command premium rates because they understand the specific challenges, regulations, and workflows of their industry. A former nurse who becomes an AI consultant for healthcare organisations brings irreplaceable context.</p><p>Identify the intersection between your existing knowledge and AI opportunities. If you worked in finance, study AI applications in fraud detection, risk modelling, and automated trading. If you were in marketing, focus on AI-driven personalisation, content generation, and predictive analytics.</p><p>This domain-first approach also makes it easier to find your first clients. Your existing professional network already trusts your industry expertise. When you add credible AI knowledge on top, you become a uniquely valuable advisor. Start conversations with former colleagues about how AI is affecting their work — these discussions often turn into consulting opportunities.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Building Credibility Without a Track Record",
-          "slug": "building-credibility",
-          "body": "<p>The chicken-and-egg problem — you need experience to get clients, but you need clients to get experience — is real. Here's how to break the cycle. Start by creating visible proof of your knowledge. Write case studies (even hypothetical ones), publish AI analysis articles, and share insights on LinkedIn consistently.</p><p>Offer free or heavily discounted AI assessments to 3-5 businesses. Treat these as paid engagements in terms of quality and professionalism. Document the process, measure results, and ask for testimonials. These become your first case studies and references.</p><p>Get certified. While certifications alone won't make you a consultant, they provide third-party validation that's especially important when you lack a track record. Google Professional Machine Learning Engineer, Microsoft Azure AI Fundamentals, and IBM AI Engineering Professional Certificate are all respected credentials that signal competence to potential clients.</p>",
-          "depth": 2
-        }
-      ],
-      "faq": [
-        {
-          "question": "Can I really become an AI consultant with no technical background?",
-          "answer": "Yes. Many successful AI consultants started without technical backgrounds. The key is building sufficient AI literacy to advise credibly — you don't need to build models yourself. Focus on understanding capabilities, limitations, and business applications."
-        },
-        {
-          "question": "How much can I earn as a new AI consultant?",
-          "answer": "Entry-level AI consultants in the UK typically earn £35,000 to £50,000 in salaried roles. Freelancers starting out might charge £300 to £500 per day. Rates increase rapidly with experience — within 2-3 years, £700 to £1,200 per day is achievable."
-        },
-        {
-          "question": "What free resources should I start with?",
-          "answer": "Google AI Essentials (free on Coursera), Elements of AI (University of Helsinki), fast.ai's Practical Deep Learning course, and Andrew Ng's The Batch newsletter. These provide a solid foundation at zero cost."
-        },
-        {
-          "question": "Should I get an AI certification before starting?",
-          "answer": "Certifications help with credibility but aren't required before you start learning and building experience. Aim to complete at least one recognised certification within your first 6 months. Google and Microsoft certifications are particularly well-regarded."
-        },
-        {
-          "question": "Is age a barrier to becoming an AI consultant?",
-          "answer": "Not at all. Career changers in their 30s, 40s, and beyond often make excellent AI consultants because they bring decades of professional experience and industry knowledge. Maturity and business acumen are significant advantages in consulting."
-        }
-      ],
-      "relatedLearnPages": ["how-to-become-an-ai-consultant", "ai-consultant-skills", "ai-consultant-certification"],
-      "commercialCTA": {
-        "text": "Ready to explore AI consulting as a career? Get in touch.",
         "href": "/contact/"
       }
     },
@@ -329,7 +279,11 @@
           "answer": "Having a broad foundation with one or two deep specialisations is ideal. Generative AI, computer vision, and NLP are currently the highest-demand specialisations. Choose based on your interests and the industries you want to serve."
         }
       ],
-      "relatedLearnPages": ["how-to-become-an-ai-consultant", "ai-consultant-certification", "ai-consultant-career-path"],
+      "relatedLearnPages": [
+        "how-to-become-an-ai-consultant",
+        "ai-consultant-certification",
+        "ai-consultant-career-path"
+      ],
       "commercialCTA": {
         "text": "Our consultants bring all these skills to your business. See our services.",
         "href": "/what-we-do/"
@@ -387,78 +341,14 @@
           "answer": "Partners at major AI consultancies in the UK can earn £200,000 to £500,000+ depending on the firm's size and their book of business. Independent consultants who build successful boutique firms can exceed these figures."
         }
       ],
-      "relatedLearnPages": ["how-to-become-an-ai-consultant", "ai-consultant-salary", "ai-consultant-skills"],
+      "relatedLearnPages": [
+        "how-to-become-an-ai-consultant",
+        "ai-consultant-salary",
+        "ai-consultant-skills"
+      ],
       "commercialCTA": {
         "text": "Interested in joining our AI consulting team?",
         "href": "/contact/"
-      }
-    },
-    {
-      "slug": "ai-consultant-certification",
-      "name": "AI Consultant Certification",
-      "title": "AI Consultant Certification — Best Certifications to Get in 2026",
-      "description": "Compare the best AI certifications for consultants. Covers Google, Microsoft, IBM, AWS, and specialist credentials with costs, difficulty, and career value.",
-      "primaryKeyword": "ai consultant certification",
-      "publishedAt": "2026-04-05",
-      "updatedAt": "2026-04-05",
-      "sections": [
-        {
-          "heading": "Why Certifications Matter for AI Consultants",
-          "slug": "why-certifications-matter",
-          "body": "<p>Certifications serve two purposes for AI consultants: they validate your knowledge and they signal credibility to clients. In a field where anyone can claim AI expertise, a recognised certification provides third-party proof that you've been tested and passed.</p><p>This is particularly valuable if you're transitioning from a non-technical background or building an independent consulting practice. When clients are choosing between consultants, certifications can tip the balance — especially for larger organisations with procurement requirements that explicitly list preferred credentials.</p><p>That said, certifications alone won't make you a successful consultant. They're best viewed as one component of a broader credibility portfolio that includes practical experience, case studies, and professional references. The most effective approach is to combine 2-3 well-chosen certifications with demonstrable project experience.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Top AI Certifications for 2026",
-          "slug": "top-certifications",
-          "body": "<p><strong>Google Professional Machine Learning Engineer</strong> — One of the most respected AI certifications globally. Covers ML model building, deployment, and operationalisation on Google Cloud. Cost: approximately £250. Difficulty: high. Best for consultants advising on cloud-based AI implementations.</p><p><strong>Microsoft Azure AI Engineer Associate (AI-102)</strong> — Validates skills in building AI solutions on Azure, including cognitive services, NLP, and computer vision. Cost: approximately £200. Difficulty: medium-high. Particularly valuable for consultants working with Microsoft-heavy enterprise clients.</p><p><strong>AWS Machine Learning Specialty</strong> — Covers data engineering, exploratory data analysis, modelling, and ML implementation on AWS. Cost: approximately £250. Difficulty: high. Essential if your clients use Amazon Web Services.</p><p><strong>IBM AI Engineering Professional Certificate</strong> — Available through Coursera, this covers deep learning, neural networks, and AI application deployment. Cost: approximately £35/month (typically 3-6 months). Difficulty: medium. Good entry point with strong brand recognition.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Specialist and Strategy Certifications",
-          "slug": "specialist-certifications",
-          "body": "<p>Beyond the major cloud certifications, several specialist credentials are worth considering depending on your focus area.</p><p><strong>Google AI Essentials</strong> — A foundational certificate covering core AI concepts, responsible AI, and prompt engineering. Ideal for consultants who advise on AI strategy rather than technical implementation. Beginner-friendly and completable in under 10 hours.</p><p><strong>CDMP (Certified Data Management Professional)</strong> — While not AI-specific, data governance is critical to successful AI deployment. This DAMA International certification covers data quality, architecture, and governance — all essential for AI consultants advising on data strategy.</p><p><strong>MIT Sloan Artificial Intelligence: Implications for Business Strategy</strong> — An executive education programme that covers AI from a business strategy perspective. Expensive (approximately £2,500) but carries significant weight with senior stakeholders and provides frameworks specifically designed for strategic AI advisory work.</p><p><strong>Certified AI Ethics Professional</strong> — Offered by various bodies, AI ethics certifications are growing in importance as regulation tightens. Look for programmes accredited by recognised industry bodies rather than generic online courses.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "How to Choose the Right Certifications",
-          "slug": "choosing-certifications",
-          "body": "<p>Don't collect certifications randomly. Choose strategically based on your target clients, your existing skills, and the gaps in your credibility profile. Two or three well-chosen certifications are more valuable than a wall of badges that lack coherence.</p><p><strong>If you advise enterprise clients:</strong> Prioritise cloud platform certifications (Google, Azure, or AWS) matching your clients' infrastructure. Add a governance or ethics certification for compliance-focused industries.</p><p><strong>If you advise SMEs and startups:</strong> Google AI Essentials plus one cloud certification provides broad coverage. The MIT Sloan programme adds strategic credibility if budget allows.</p><p><strong>If you're career-switching:</strong> Start with Google AI Essentials, then pursue the IBM Professional Certificate for practical skills and brand recognition. Add a cloud platform certification once you have some practical experience to contextualise the learning.</p><p>Keep certifications current. Most cloud certifications expire after 2-3 years and require recertification. Budget time and money for renewals, and treat them as opportunities to refresh your knowledge rather than administrative burdens.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Certifications vs Practical Experience",
-          "slug": "certifications-vs-experience",
-          "body": "<p>Let's be honest: no client has ever hired a consultant solely because of a certification. Certifications open doors and build baseline trust. Practical experience and proven results close deals and build careers.</p><p>The ideal combination is certifications that validate your knowledge plus case studies that demonstrate your impact. When you list a Google ML Engineer certification alongside a case study showing how you helped a client reduce operational costs by 30% using machine learning, you become compelling on both dimensions.</p><p>If you're forced to choose between spending time on another certification or completing a real project (even a pro-bono one), choose the project every time. A documented success story with a named client reference is worth more than any certificate — and it's something no exam can replicate.</p>",
-          "depth": 2
-        }
-      ],
-      "faq": [
-        {
-          "question": "What's the best AI certification for beginners?",
-          "answer": "Google AI Essentials is the best starting point — it's affordable, beginner-friendly, and covers core concepts including responsible AI. The IBM AI Engineering Professional Certificate on Coursera is also excellent for building practical skills from scratch."
-        },
-        {
-          "question": "How much do AI certifications cost?",
-          "answer": "Costs range from free (some introductory courses) to £2,500+ (executive programmes). Cloud platform certifications from Google, Microsoft, and AWS typically cost £200-£250 per exam. Coursera-based programmes cost approximately £35 per month."
-        },
-        {
-          "question": "Do clients actually care about certifications?",
-          "answer": "Enterprise clients and procurement teams often check for relevant certifications. Smaller businesses care more about demonstrated results. In either case, certifications strengthen your position when combined with practical experience and strong references."
-        },
-        {
-          "question": "How long does it take to get certified?",
-          "answer": "Entry-level certifications like Google AI Essentials can be completed in a week. Cloud platform certifications typically require 2-4 months of study. Executive programmes vary from several days (intensive) to several months (part-time)."
-        },
-        {
-          "question": "Are online AI certifications respected?",
-          "answer": "Yes, provided they're from recognised providers. Google, Microsoft, AWS, IBM, and established universities carry genuine weight. Be cautious of certifications from unknown providers — check whether your target clients and employers recognise them before investing."
-        }
-      ],
-      "relatedLearnPages": ["how-to-become-an-ai-consultant", "ai-consultant-skills", "become-ai-consultant-no-experience"],
-      "commercialCTA": {
-        "text": "Our certified consultants are ready to help your business. See our services.",
-        "href": "/what-we-do/"
       }
     },
     {
@@ -517,139 +407,13 @@
           "answer": "Financial services, healthcare, retail, manufacturing, and the public sector are the largest employers of AI consultants in the UK. Technology companies and professional services firms also hire extensively."
         }
       ],
-      "relatedLearnPages": ["what-does-an-ai-consultant-do", "ai-consultant-salary", "ai-consultant-skills"],
+      "relatedLearnPages": [
+        "what-does-an-ai-consultant-do",
+        "ai-consultant-salary",
+        "ai-consultant-skills"
+      ],
       "commercialCTA": {
         "text": "Looking to hire an AI consultant? We can help.",
-        "href": "/contact/"
-      }
-    },
-    {
-      "slug": "ai-consultant-salary",
-      "name": "AI Consultant Salary",
-      "title": "AI Consultant Salary UK — 2026 Pay Guide by Level & Location",
-      "description": "UK AI consultant salary data for 2026. Covers pay by experience level, location, and specialism. Includes contractor day rates and bonus expectations.",
-      "primaryKeyword": "ai consultant salary",
-      "publishedAt": "2026-04-05",
-      "updatedAt": "2026-04-05",
-      "sections": [
-        {
-          "heading": "AI Consultant Salary Overview — UK 2026",
-          "slug": "salary-overview",
-          "body": "<p>AI consultants in the UK are among the highest-paid technology professionals. Strong demand and limited supply of experienced consultants have pushed salaries well above general IT consulting averages. Here's what you can expect at each career level in 2026.</p><p><strong>Junior AI Consultant (0-2 years):</strong> £35,000 to £55,000 per year. Entry-level roles at consulting firms or in-house positions. Typically focused on research, analysis, and supporting senior consultants on client engagements.</p><p><strong>Mid-Level AI Consultant (2-5 years):</strong> £55,000 to £85,000 per year. Independent project management, direct client interaction, and growing responsibility for deliverable quality. This is where compensation accelerates rapidly based on specialisation and reputation.</p><p><strong>Senior AI Consultant (5-8 years):</strong> £85,000 to £130,000 per year. Project leadership, business development contribution, and mentoring juniors. Specialists in high-demand areas like generative AI or AI governance can command the upper end of this range.</p><p><strong>Principal / Director (8+ years):</strong> £130,000 to £200,000+ per year. Practice leadership, major account management, and strategic direction. Equity participation or profit sharing is common at this level, significantly increasing total compensation.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Salary by Location Across the UK",
-          "slug": "salary-by-location",
-          "body": "<p>Location significantly impacts AI consultant salaries, though the gap has narrowed since remote work became standard.</p><p><strong>London:</strong> Salaries are 15-25% higher than the national average. A mid-level AI consultant in London typically earns £65,000 to £95,000. The premium reflects both the concentration of enterprise clients and the higher cost of living.</p><p><strong>Manchester and Leeds:</strong> The northern tech hubs offer competitive salaries at 5-10% below London rates. A mid-level consultant can expect £55,000 to £80,000. Strong demand from financial services and digital transformation projects.</p><p><strong>Edinburgh and Glasgow:</strong> Scotland's tech sector has grown substantially. AI consultant salaries are comparable to northern England, with a slight premium in Edinburgh due to its financial services cluster. Mid-level range: £55,000 to £78,000.</p><p><strong>Bristol, Birmingham, and other cities:</strong> Regional salaries typically range from £50,000 to £75,000 at mid-level. Remote-first firms are helping to level the playing field, but on-site roles in regional offices still pay less than London equivalents.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Contractor and Freelance Day Rates",
-          "slug": "contractor-day-rates",
-          "body": "<p>Many AI consultants work as contractors or freelancers, where compensation is measured in daily rates rather than annual salaries. UK contractor rates for AI consultants in 2026 are robust.</p><p><strong>Junior contractor:</strong> £350 to £550 per day. Typically working inside a larger team or supporting a senior consultant. Most common through recruitment agencies or consulting firm subcontracting.</p><p><strong>Mid-level contractor:</strong> £550 to £900 per day. Independent delivery capability, direct client relationships, and specific technical or domain expertise. This is the sweet spot where experienced consultants often transition from permanent employment.</p><p><strong>Senior / specialist contractor:</strong> £900 to £1,500 per day. Deep expertise in high-demand areas like generative AI strategy, AI governance, or enterprise AI architecture. These rates are typically achieved through direct client relationships and a strong personal brand.</p><p><strong>Top-tier / niche specialist:</strong> £1,500 to £2,500+ per day. Reserved for consultants with exceptional track records, unique expertise, or executive-level advisory capabilities. Typically short-duration engagements with FTSE 100 companies or major public sector programmes.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Factors That Influence AI Consultant Pay",
-          "slug": "factors-influencing-pay",
-          "body": "<p>Several factors beyond experience and location affect how much an AI consultant earns.</p><p><strong>Specialisation:</strong> Consultants focused on generative AI, AI governance, or healthcare AI currently command premium rates. Generalist consultants earn solid salaries but rarely reach the top of the range.</p><p><strong>Industry focus:</strong> Financial services and pharmaceutical clients typically pay more than retail or public sector clients. This reflects both the complexity of the work and the budgets available.</p><p><strong>Firm type:</strong> Big four consulting firms (Deloitte, PwC, EY, KPMG) pay well but typically less than specialist AI boutiques or independent contracting at equivalent seniority. The trade-off is job security, training, and brand credibility.</p><p><strong>Business development ability:</strong> Consultants who bring in new clients earn significantly more — either through higher salaries, bonuses, or profit sharing. At senior levels, your book of business matters more than your technical skills for compensation purposes.</p><p><strong>Certifications and credentials:</strong> While certifications alone don't dramatically increase pay, they can be the differentiator in competitive hiring situations and help justify higher rates to clients, particularly in enterprise procurement processes.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "How to Maximise Your AI Consulting Earnings",
-          "slug": "maximise-earnings",
-          "body": "<p>The highest-earning AI consultants share several strategies. First, they <strong>specialise</strong> rather than generalise. Becoming the go-to expert in a specific AI domain or industry commands higher rates than being broadly competent across everything.</p><p>Second, they <strong>build a personal brand</strong>. Publishing articles, speaking at conferences, and maintaining an active LinkedIn presence generates inbound client enquiries. Consultants who are sought out by clients rather than competing for roles can negotiate from a position of strength.</p><p>Third, they <strong>move to independent consulting</strong> once they have sufficient reputation and network. The difference between a £90,000 salary and a £1,000 per day rate (approximately £220,000 per year) is substantial, even accounting for the overhead and business development time of running your own practice.</p><p>Finally, they <strong>negotiate effectively</strong>. Many AI consultants leave money on the table by not negotiating their initial offer. Research market rates thoroughly, quantify the value you've delivered for previous clients, and be prepared to walk away from offers that don't reflect your worth.</p>",
-          "depth": 2
-        }
-      ],
-      "faq": [
-        {
-          "question": "What's the average AI consultant salary in the UK?",
-          "answer": "The average salaried AI consultant in the UK earns approximately £65,000 to £75,000 per year in 2026. This varies significantly by experience level, with juniors earning from £35,000 and senior consultants exceeding £130,000."
-        },
-        {
-          "question": "Do AI consultants earn more than data scientists?",
-          "answer": "At mid to senior levels, yes. AI consultants typically earn 10-20% more than data scientists at equivalent experience levels. The premium reflects the broader skill set required — combining technical knowledge with business advisory and client management capabilities."
-        },
-        {
-          "question": "How much do AI consultants earn in London?",
-          "answer": "London-based AI consultants earn 15-25% above national averages. A mid-level consultant in London typically earns £65,000 to £95,000. Senior London consultants regularly exceed £130,000 plus bonuses."
-        },
-        {
-          "question": "Is AI consulting a well-paid career compared to other tech roles?",
-          "answer": "Yes. AI consulting is one of the highest-paid technology career paths in the UK. It consistently outpaces general software development, IT management, and project management roles. Only specialised engineering roles at top tech companies and AI research positions compete on compensation."
-        },
-        {
-          "question": "Do AI consultant salaries include bonuses?",
-          "answer": "Most consulting firm roles include performance bonuses of 10-25% of base salary. Senior roles often include larger bonuses tied to business development targets. Independent consultants don't receive bonuses but set their own rates, which typically result in higher total compensation."
-        }
-      ],
-      "relatedLearnPages": ["ai-consultant-hourly-rate", "ai-consultant-career-path", "ai-consultant-job-description"],
-      "commercialCTA": {
-        "text": "Hire experienced AI consultants at competitive rates.",
-        "href": "/what-we-do/"
-      }
-    },
-    {
-      "slug": "ai-consultant-hourly-rate",
-      "name": "AI Consultant Hourly Rate",
-      "title": "AI Consultant Hourly Rate UK — What to Expect in 2026",
-      "description": "UK AI consultant hourly rates for 2026. Compare rates by experience, specialism, and engagement type. Includes guidance on budgeting for AI consultancy.",
-      "primaryKeyword": "ai consultant hourly rate",
-      "publishedAt": "2026-04-05",
-      "updatedAt": "2026-04-05",
-      "sections": [
-        {
-          "heading": "AI Consultant Hourly Rate Ranges — UK 2026",
-          "slug": "hourly-rate-ranges",
-          "body": "<p>AI consultancy in the UK is typically priced by the day rather than the hour, but many clients — particularly smaller businesses — prefer hourly pricing for flexibility. Here are the current UK market rates for 2026.</p><p><strong>Junior AI consultants:</strong> £50 to £80 per hour. Suitable for well-defined tasks like data analysis, tool configuration, and research support. Typically less experienced with limited advisory capability.</p><p><strong>Mid-level AI consultants:</strong> £80 to £130 per hour. Capable of independent advisory work, strategy development, and project management. The most commonly hired level for SME engagements.</p><p><strong>Senior AI consultants:</strong> £130 to £200 per hour. Deep expertise, proven track records, and the ability to advise at board level. Typically engaged for strategy, governance, and complex implementation oversight.</p><p><strong>Specialist / expert level:</strong> £200 to £350+ per hour. Niche specialists in areas like AI governance, generative AI architecture, or specific industry verticals. Reserved for high-stakes engagements where specialist knowledge is critical.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Day Rates vs Hourly Rates — What's Better Value?",
-          "slug": "day-rates-vs-hourly",
-          "body": "<p>Most experienced AI consultants prefer day rates over hourly billing. A typical consulting day is 7-8 hours, and the day rate usually offers a small discount compared to the equivalent hourly calculation. For example, a consultant charging £130/hour might offer a day rate of £900 rather than £1,040.</p><p>Day rates work well for structured engagements — strategy projects, workshops, and implementation sprints. They give both parties clarity and reduce the friction of tracking individual hours. Hourly rates suit ad-hoc advisory work, ongoing support retainers, and situations where the scope is genuinely unpredictable.</p><p>For <strong>small businesses and startups</strong>, hourly rates often make more sense because they allow you to control spending tightly. You might book 4-8 hours of AI consultancy to explore a specific question rather than committing to a full-day engagement. Many consultants offer minimum booking periods of 2-4 hours for hourly work.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Factors That Affect Hourly Rates",
-          "slug": "factors-affecting-rates",
-          "body": "<p>Several factors drive the wide range in AI consultant hourly rates.</p><p><strong>Specialisation premium:</strong> Consultants with expertise in high-demand areas like generative AI strategy, AI safety and governance, or industry-specific AI applications charge 20-40% more than generalists. The premium reflects scarcity — there simply aren't enough specialists to meet demand.</p><p><strong>Engagement type:</strong> Strategy and advisory work commands higher rates than implementation support. This is because strategy engagements require more senior expertise and carry greater responsibility for outcomes. A wrong strategic recommendation is costlier than a technical implementation error.</p><p><strong>Client size and sector:</strong> Enterprise clients typically pay higher rates than SMEs. Financial services and pharmaceutical clients pay more than retail or public sector clients. This reflects both budget availability and the complexity of the advisory environment.</p><p><strong>Urgency and availability:</strong> Last-minute engagements or consultants with limited availability can command premium rates. If you need a specialist AI consultant next week rather than next month, expect to pay 20-30% more.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Budgeting for AI Consultancy",
-          "slug": "budgeting-for-consultancy",
-          "body": "<p>When budgeting for AI consultancy, think in terms of total engagement cost rather than hourly rates alone. A senior consultant at £180/hour who solves your problem in 20 hours (£3,600) is better value than a junior at £60/hour who takes 80 hours (£4,800) and delivers a weaker outcome.</p><p>Typical AI consultancy project budgets in the UK:</p><ul><li><strong>AI strategy assessment:</strong> £2,000 to £8,000 (1-3 days of senior consultant time plus deliverable preparation)</li><li><strong>Implementation project:</strong> £5,000 to £30,000 (varies widely based on complexity and duration)</li><li><strong>Monthly advisory retainer:</strong> £750 to £3,000 (typically 4-16 hours of senior consultant access per month)</li><li><strong>Executive AI workshop:</strong> £1,500 to £4,000 (half-day or full-day interactive session)</li></ul><p>Always clarify what's included in the rate. Some consultants include preparation time and follow-up communications. Others bill strictly for face-to-face or active working hours. Understanding the billing model prevents surprises and helps you compare quotes accurately.</p>",
-          "depth": 2
-        }
-      ],
-      "faq": [
-        {
-          "question": "What's the average AI consultant hourly rate in the UK?",
-          "answer": "The average is approximately £100 to £130 per hour for a competent mid-level consultant. Rates range from £50/hour for junior consultants to £350+ for top-tier specialists."
-        },
-        {
-          "question": "Are AI consultant rates negotiable?",
-          "answer": "Yes. Most consultants have flexibility, especially for longer engagements or retainer arrangements. A 3-month retainer might secure a 10-15% discount on the standard hourly rate. However, significantly undercutting market rates usually means compromising on quality."
-        },
-        {
-          "question": "Should I hire by the hour or by the project?",
-          "answer": "Fixed-price projects reduce your risk for well-defined work. Hourly rates are better for exploratory or ongoing advisory work where scope may change. Many successful engagements combine a fixed-price strategy phase with hourly implementation support."
-        },
-        {
-          "question": "Why are AI consultant rates so much higher than general IT consultants?",
-          "answer": "AI consultancy requires a combination of advanced technical knowledge, strategic thinking, and the ability to navigate rapidly evolving technology. The supply of genuinely qualified AI consultants is still limited relative to demand, which sustains premium pricing."
-        },
-        {
-          "question": "How do UK AI consultant rates compare internationally?",
-          "answer": "UK rates are typically 10-20% lower than US rates but higher than most of Europe. London rates specifically are comparable to New York and San Francisco. Remote work has introduced some price pressure from lower-cost markets, but clients often prefer local consultants for communication and regulatory alignment."
-        }
-      ],
-      "relatedLearnPages": ["ai-consultant-salary", "how-to-choose-an-ai-consultant", "benefits-of-hiring-an-ai-consultant"],
-      "commercialCTA": {
-        "text": "Get a transparent quote for AI consultancy. No hidden costs.",
         "href": "/contact/"
       }
     },
@@ -709,7 +473,11 @@
           "answer": "Quality AI consultancy in the UK typically costs £80-£180 per hour or £600-£1,200 per day for experienced practitioners. Significantly cheaper options may lack depth; significantly more expensive options may not deliver proportionally more value. Focus on the expected return on investment rather than the absolute cost."
         }
       ],
-      "relatedLearnPages": ["when-to-hire-an-ai-consultant", "ai-consultant-vs-vendor", "benefits-of-hiring-an-ai-consultant"],
+      "relatedLearnPages": [
+        "when-to-hire-an-ai-consultant",
+        "ai-consultant-vs-vendor",
+        "benefits-of-hiring-an-ai-consultant"
+      ],
       "commercialCTA": {
         "text": "Ready to choose? Book a free consultation with our team.",
         "href": "/contact/"
@@ -771,7 +539,11 @@
           "answer": "That's a sign you've hired a good one. Honest consultants will tell you when AI isn't the answer. Their recommendation might save you thousands on unnecessary technology and redirect your investment toward solutions that actually address your problem."
         }
       ],
-      "relatedLearnPages": ["how-to-choose-an-ai-consultant", "benefits-of-hiring-an-ai-consultant", "what-is-an-ai-consultant"],
+      "relatedLearnPages": [
+        "how-to-choose-an-ai-consultant",
+        "benefits-of-hiring-an-ai-consultant",
+        "what-is-an-ai-consultant"
+      ],
       "commercialCTA": {
         "text": "Think it might be time? Book a free initial consultation.",
         "href": "/contact/"
@@ -839,7 +611,11 @@
           "answer": "Establish clear success metrics before the engagement begins — time saved, costs reduced, revenue generated, or capabilities built. A good consultant will help you define these metrics and measure progress throughout the engagement."
         }
       ],
-      "relatedLearnPages": ["how-to-choose-an-ai-consultant", "when-to-hire-an-ai-consultant", "ai-consultant-vs-vendor"],
+      "relatedLearnPages": [
+        "how-to-choose-an-ai-consultant",
+        "when-to-hire-an-ai-consultant",
+        "ai-consultant-vs-vendor"
+      ],
       "commercialCTA": {
         "text": "Experience these benefits first-hand. Talk to our team.",
         "href": "/contact/"
@@ -901,7 +677,11 @@
           "answer": "It can appear cheaper initially but often costs more in total. Businesses that choose vendors without independent guidance frequently select wrong-fit products, overpay for features they don't need, or face expensive switching costs later. The consultant's fee is typically a small fraction of the total technology investment they help you optimise."
         }
       ],
-      "relatedLearnPages": ["how-to-choose-an-ai-consultant", "benefits-of-hiring-an-ai-consultant", "when-to-hire-an-ai-consultant"],
+      "relatedLearnPages": [
+        "how-to-choose-an-ai-consultant",
+        "benefits-of-hiring-an-ai-consultant",
+        "when-to-hire-an-ai-consultant"
+      ],
       "commercialCTA": {
         "text": "Need independent advice before choosing a vendor? We can help.",
         "href": "/what-we-do/"
@@ -963,77 +743,13 @@
           "answer": "Specialise. Freelance consultants who are known for a specific expertise area attract higher-quality clients and command better rates than generalists. Choose a specialisation based on your strongest skills and the market demand you observe."
         }
       ],
-      "relatedLearnPages": ["ai-consultant-hourly-rate", "ai-consultant-career-path", "how-to-become-an-ai-consultant"],
+      "relatedLearnPages": [
+        "ai-consultant-hourly-rate",
+        "ai-consultant-career-path",
+        "how-to-become-an-ai-consultant"
+      ],
       "commercialCTA": {
         "text": "Interested in freelance AI consulting opportunities? Let's talk.",
-        "href": "/contact/"
-      }
-    },
-    {
-      "slug": "ai-consultant-interview-questions",
-      "name": "AI Consultant Interview Questions",
-      "title": "AI Consultant Interview Questions — Prepare for Your Next Interview",
-      "description": "Top AI consultant interview questions with expert answers. Covers technical, behavioural, and case study questions for all experience levels.",
-      "primaryKeyword": "ai consultant interview questions",
-      "publishedAt": "2026-04-05",
-      "updatedAt": "2026-04-05",
-      "sections": [
-        {
-          "heading": "What to Expect in an AI Consultant Interview",
-          "slug": "what-to-expect",
-          "body": "<p>AI consultant interviews typically combine three elements: technical assessment, behavioural questions, and case studies. The balance depends on the role — strategy-focused positions emphasise case studies and business acumen, while implementation roles lean toward technical evaluation.</p><p>Most firms use a multi-stage process: an initial screening call, a technical or case study round, and a final round with senior leadership. Independent consulting roles may involve a portfolio review and a mock client engagement instead. The entire process usually takes 2-4 weeks.</p><p>The key difference from standard tech interviews is the emphasis on <strong>communication</strong>. You're not just being tested on what you know — you're being tested on how well you can explain it to non-technical stakeholders. Every answer should demonstrate both competence and clarity. Practice explaining complex AI concepts as if you were speaking to a business-savvy CEO who doesn't have a technical background.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Technical Interview Questions",
-          "slug": "technical-questions",
-          "body": "<p>Technical questions test your AI knowledge and your ability to apply it practically. Here are common questions with guidance on strong answers.</p><p><strong>\"Explain the difference between supervised and unsupervised learning with business examples.\"</strong> Strong answers use real-world scenarios — spam detection (supervised) vs customer segmentation (unsupervised) — rather than textbook definitions. Show you can connect technical concepts to business value.</p><p><strong>\"A client wants to predict customer churn. Walk me through your approach.\"</strong> Cover the full lifecycle: define what churn means for this business, assess available data, select appropriate models, evaluate performance, and plan deployment. Mention business considerations like what actions the client will take based on predictions.</p><p><strong>\"What are the limitations of large language models?\"</strong> Discuss hallucination, context window constraints, training data cutoffs, cost implications, and data privacy concerns. Demonstrate balanced understanding — not just enthusiasm for the technology, but awareness of where it falls short.</p><p><strong>\"How would you evaluate whether an AI solution is working?\"</strong> Talk about defining success metrics before deployment, monitoring for drift, comparing against baselines, and measuring business impact rather than just model accuracy. This shows you think beyond the technical to the organisational.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Behavioural and Situational Questions",
-          "slug": "behavioural-questions",
-          "body": "<p>Behavioural questions assess your consulting skills — how you handle clients, manage conflicts, and navigate ambiguity.</p><p><strong>\"Tell me about a time you had to push back on a client's request.\"</strong> Describe a situation where a client wanted something inadvisable, how you communicated your concerns diplomatically, and the outcome. Show that you can be both respectful and firm when professional judgment demands it.</p><p><strong>\"How would you handle a stakeholder who's resistant to AI?\"</strong> Discuss understanding their concerns first (they're often valid), addressing specific objections with evidence, starting small with low-risk demonstrations, and building trust through transparent communication. Never dismiss resistance as ignorance.</p><p><strong>\"Describe how you'd manage a project that's going off track.\"</strong> Cover early detection of problems, transparent communication with the client, root cause analysis, and corrective action planning. Emphasise that you address issues proactively rather than hoping they resolve themselves.</p><p><strong>\"How do you stay current with AI developments?\"</strong> Be specific. Name the publications you read, conferences you attend, communities you participate in, and how you experiment with new technologies. Vague answers like \"I follow AI news\" are weak. Concrete answers like \"I test every major LLM release within a week and write comparative notes\" are compelling.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Case Study Questions",
-          "slug": "case-study-questions",
-          "body": "<p>Case studies are the centrepiece of consulting interviews. You'll be given a business scenario and asked to develop an AI approach in real-time. Here's how to excel.</p><p><strong>Structure your response.</strong> Start by clarifying the problem (ask questions — interviewers expect this), then outline your approach, identify key assumptions, propose solutions, and discuss risks and success metrics. A structured, logical framework impresses more than a brilliant but disorganised answer.</p><p><strong>Common case study themes:</strong></p><ul><li>Assessing AI readiness for a specific organisation</li><li>Building a business case for an AI investment</li><li>Evaluating and recommending between AI vendors</li><li>Designing an AI strategy for a specific industry challenge</li><li>Troubleshooting a failed AI implementation</li></ul><p><strong>Think out loud.</strong> Interviewers want to see your reasoning process, not just your conclusion. Explain why you're asking certain questions, why you're prioritising one approach over another, and what trade-offs you're considering. This transparency demonstrates the analytical thinking that clients value in a consultant.</p><p><strong>Don't be afraid to say \"I don't know.\"</strong> If you encounter something outside your expertise, acknowledge it honestly and explain how you'd go about finding the answer. Consultants who pretend to know everything are less trustworthy than those who are honest about their boundaries.</p>",
-          "depth": 2
-        },
-        {
-          "heading": "Questions to Ask Your Interviewer",
-          "slug": "questions-to-ask",
-          "body": "<p>Strong candidates ask thoughtful questions. Here are some that demonstrate genuine interest and professional maturity.</p><p><strong>\"What does a typical client engagement look like here?\"</strong> This reveals the firm's operating model and helps you assess whether the role matches your expectations.</p><p><strong>\"How does the team stay current with rapid changes in AI?\"</strong> Shows you care about continuous learning and gives insight into the firm's investment in professional development.</p><p><strong>\"What's the biggest challenge your AI practice is facing right now?\"</strong> Demonstrates strategic thinking and gives you material for follow-up discussion where you can showcase relevant experience.</p><p><strong>\"How do you measure success for AI consultants in this role?\"</strong> Practical question that shows you're outcome-focused and helps you understand career progression expectations.</p><p><strong>\"Can you describe a recent project that didn't go as planned and what you learned?\"</strong> Tests whether the firm has a healthy learning culture. Their response tells you as much about the organisation as their answer to your technical questions tells them about you.</p>",
-          "depth": 2
-        }
-      ],
-      "faq": [
-        {
-          "question": "How should I prepare for an AI consultant interview?",
-          "answer": "Review fundamental AI concepts, prepare 3-4 strong project stories using the STAR method, practice case studies out loud, research the firm's AI practice and recent projects, and prepare thoughtful questions. Mock interviews with a friend or mentor are invaluable."
-        },
-        {
-          "question": "Do AI consultant interviews include coding tests?",
-          "answer": "Some implementation-focused roles include coding assessments, typically in Python. Strategy and advisory roles rarely require live coding but may ask you to review code or discuss technical architectures. Check with the recruiter about the format beforehand."
-        },
-        {
-          "question": "What's the most common mistake in AI consultant interviews?",
-          "answer": "Being too technical without connecting to business value. Interviewers want to see that you can translate AI capabilities into business outcomes. Every technical answer should include a 'so what' — why does this matter to the client?"
-        },
-        {
-          "question": "How important is industry knowledge in the interview?",
-          "answer": "Very important if you're applying for an industry-specific role. Research the target industry's AI adoption patterns, regulatory environment, and common use cases. For generalist roles, demonstrating breadth across multiple industries is more valuable."
-        },
-        {
-          "question": "Should I mention AI tools I've used personally?",
-          "answer": "Absolutely. Hands-on experience with tools like ChatGPT, Claude, Midjourney, or automation platforms demonstrates genuine engagement with the technology. Describe how you've used them practically, not just that you've tried them."
-        }
-      ],
-      "relatedLearnPages": ["ai-consultant-job-description", "ai-consultant-skills", "how-to-become-an-ai-consultant"],
-      "commercialCTA": {
-        "text": "Preparing for a career in AI consulting? Explore our team and opportunities.",
         "href": "/contact/"
       }
     },
@@ -1094,7 +810,11 @@
           "answer": "RPA needs SDLC discipline and bot estate governance. Agents add model documentation, prompt-injection defence, retrieval grounding, and outcome monitoring. Regulated sectors need both, plus a named accountable owner under frameworks like FCA SM&CR."
         }
       ],
-      "relatedLearnPages": ["agentic-ai-vs-chatbots", "in-house-ai-team-vs-consultancy", "build-vs-buy-ai-agents"],
+      "relatedLearnPages": [
+        "agentic-ai-vs-chatbots",
+        "in-house-ai-team-vs-consultancy",
+        "build-vs-buy-ai-agents"
+      ],
       "commercialCTA": {
         "text": "Scoping agents or RPA (or both) for your enterprise? Start with an AI Readiness Assessment.",
         "href": "/what-we-do/ai-readiness-assessment/"
@@ -1157,7 +877,11 @@
           "answer": "Chatbots answer questions; agents do work. A chatbot can tell a customer their order is late. An agent can reschedule the delivery, compensate the customer, and close the ticket — with the right guardrails and approvals."
         }
       ],
-      "relatedLearnPages": ["agentic-ai-vs-rpa", "build-vs-buy-ai-agents", "when-to-hire-an-ai-consultant"],
+      "relatedLearnPages": [
+        "agentic-ai-vs-rpa",
+        "build-vs-buy-ai-agents",
+        "when-to-hire-an-ai-consultant"
+      ],
       "commercialCTA": {
         "text": "Figuring out whether you need a chatbot, an agent, or both? Start with an AI Readiness Assessment.",
         "href": "/what-we-do/ai-readiness-assessment/"
@@ -1220,7 +944,11 @@
           "answer": "A first engagement to ship a production workload is usually 8-16 weeks. Ongoing partnership relationships run longer but should be structured around defined deliverables, not open-ended retainer creep."
         }
       ],
-      "relatedLearnPages": ["when-to-hire-an-ai-consultant", "how-to-choose-an-ai-consultant", "agentic-ai-vs-rpa"],
+      "relatedLearnPages": [
+        "when-to-hire-an-ai-consultant",
+        "how-to-choose-an-ai-consultant",
+        "agentic-ai-vs-rpa"
+      ],
       "commercialCTA": {
         "text": "Weighing in-house vs consultancy for your AI roadmap? Start with an AI Readiness Assessment.",
         "href": "/what-we-do/ai-readiness-assessment/"
@@ -1283,7 +1011,11 @@
           "answer": "Yes. Generative AI needs content governance — tone, brand, hallucination monitoring. Agentic AI adds tool authorisation, action reversibility, approval gates, and outcome monitoring. The regulatory framing also shifts because agents take actions, not just generate text."
         }
       ],
-      "relatedLearnPages": ["agentic-ai-vs-rpa", "agentic-ai-vs-chatbots", "build-vs-buy-ai-agents"],
+      "relatedLearnPages": [
+        "agentic-ai-vs-rpa",
+        "agentic-ai-vs-chatbots",
+        "build-vs-buy-ai-agents"
+      ],
       "commercialCTA": {
         "text": "Deciding between generative AI and agentic AI for your next project? Start with an AI Readiness Assessment.",
         "href": "/what-we-do/ai-readiness-assessment/"
@@ -1346,7 +1078,11 @@
           "answer": "Every 12-18 months is reasonable. The vendor landscape shifts, model capabilities shift, and your own priorities shift. A decision that made sense a year ago may no longer, and the cost of revisiting is low if you kept your agent logic portable."
         }
       ],
-      "relatedLearnPages": ["agentic-ai-vs-rpa", "agentic-ai-vs-chatbots", "in-house-ai-team-vs-consultancy"],
+      "relatedLearnPages": [
+        "agentic-ai-vs-rpa",
+        "agentic-ai-vs-chatbots",
+        "in-house-ai-team-vs-consultancy"
+      ],
       "commercialCTA": {
         "text": "Facing a build-vs-buy decision on your AI roadmap? Start with an AI Readiness Assessment.",
         "href": "/what-we-do/ai-readiness-assessment/"
