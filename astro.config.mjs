@@ -2,6 +2,15 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import preact from '@astrojs/preact';
+import { execSync } from 'node:child_process';
+
+const lastDeployIso = (() => {
+  try {
+    return execSync('git log -1 --format=%cI', { encoding: 'utf8' }).trim();
+  } catch {
+    return new Date().toISOString();
+  }
+})();
 
 export default defineConfig({
   site: 'https://agenticai.associates',
@@ -11,7 +20,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       serialize(item) {
-        item.lastmod = new Date().toISOString();
+        item.lastmod = lastDeployIso;
         const url = item.url;
         if (url === 'https://agenticai.associates/') item.priority = 1.0;
         else if (/\/what-we-do\/$/.test(url)) item.priority = 0.9;
