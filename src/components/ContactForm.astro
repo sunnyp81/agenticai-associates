@@ -33,15 +33,28 @@ import { siteConfig } from '@/data/site-config';
     </div>
   </div>
 
-  <div>
-    <label for="company" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Company <span class="text-[var(--color-text-muted)]">(optional)</span></label>
-    <input
-      type="text"
-      id="company"
-      name="$company"
-      class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
-      placeholder="Your company"
-    />
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="company" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Company <span class="text-[var(--color-text-muted)]">(optional)</span></label>
+      <input
+        type="text"
+        id="company"
+        name="$company"
+        class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
+        placeholder="Your company"
+      />
+    </div>
+    <div>
+      <label for="phone" class="block text-sm font-medium text-[var(--color-text)] mb-1.5">Phone <span class="text-[var(--color-text-muted)]">(optional)</span></label>
+      <input
+        type="tel"
+        id="phone"
+        name="$phone"
+        autocomplete="tel"
+        class="w-full px-4 py-3 rounded-lg border border-[var(--color-border)] bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition"
+        placeholder="+44 7000 000000"
+      />
+    </div>
   </div>
 
   <div>
