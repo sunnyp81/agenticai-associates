@@ -1,0 +1,192 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site-config';
+
+const slug = 'langgraph-vs-bedrock-vs-copilot-studio';
+const title = 'LangGraph vs Bedrock Agents vs Copilot Studio: A Regulated Buyer\'s Comparison (2026)';
+const description = 'A focused comparison of the three platforms most often shortlisted by FCA-regulated UK firms — covering audit fidelity, model portability, identity, cost predictability, and the architectural decisions that lock you in.';
+const datePublished = '2026-04-30';
+const url = `${siteConfig.url}/insights/${slug}/`;
+
+const matrix = [
+  { criterion: 'Orchestration model', lg: 'State graph (DAG of nodes), persisted via checkpointer; full state visibility per step', br: 'Hosted action groups + sessions; you describe steps, AWS runs them', cs: 'Trigger → action chain, low-code with optional Power Automate' },
+  { criterion: 'Hosting', lg: 'Wherever you can run Python — EKS, ECS, on-prem, serverless', br: 'AWS regions only; eu-west-2 + UK Sovereign for UK regulated', cs: 'Microsoft 365 / Azure; UK Data Boundary configurable' },
+  { criterion: 'Audit fidelity', lg: 'Every state transition + tool call available; pair with LangSmith or roll your own', br: 'CloudTrail + Bedrock invocation logs (good but coarser than state-graph)', cs: 'Purview integration logs interactions; finer detail requires custom telemetry' },
+  { criterion: 'Model choice', lg: 'Anthropic, OpenAI, Bedrock, Vertex, local — any LLM via adapter', br: 'Bedrock catalogue (Anthropic where regional, Meta, Mistral, Amazon Nova, ~50 total)', cs: 'GPT-4 family + Phi via Azure OpenAI; locked stack' },
+  { criterion: 'Identity / RBAC', lg: 'Build it (works with any IdP via OIDC libs)', br: 'IAM-native; agent identity = IAM role with policy', cs: 'Entra ID native; strongest-in-class for enterprise SSO' },
+  { criterion: 'Tool ecosystem', lg: 'Any Python library; full programmatic control', br: 'Bedrock Action Groups + Lambda; AWS service calls native', cs: 'Power Platform (~1,400 connectors); enterprise systems lit up by default' },
+  { criterion: 'Cost model', lg: 'Token costs + your infra; variable but visible', br: 'Token + agent invocation + Bedrock fees; variable', cs: 'Per-user/month licensing + token consumption; predictable upper bound' },
+  { criterion: 'Time to first agent in regulated context', lg: '6–10 weeks', br: '4–8 weeks', cs: '2–4 weeks (low-code starts faster, hits limits faster too)' },
+  { criterion: 'Vendor concentration risk', lg: 'Low (open source MIT)', br: 'High (AWS lock-in)', cs: 'Very high (Microsoft licensing + connector lock-in)' },
+  { criterion: 'On-prem / air-gap', lg: 'Yes', br: 'No', cs: 'No' },
+  { criterion: 'Eval + observability', lg: 'LangSmith (paid) or roll your own (Langfuse, Helicone, Arize)', br: 'Bedrock Evaluations + Studio (basic but improving)', cs: 'Copilot Studio Analytics; basic, integrates with Sentinel for security' },
+  { criterion: 'Best fit', lg: 'Engineering-led firms with platform team and audit-first posture', br: 'AWS-native shops with regulated workloads in the AWS perimeter', cs: 'M365/Dynamics-native shops, internal copilots, knowledge-worker AI' },
+];
+
+const faq = [
+  { q: 'Which one wins for an FCA-regulated savings or wealth platform?', a: 'In our experience, the answer depends almost entirely on the existing infrastructure stack. AWS-native firms default to Bedrock Agents because the IAM-native identity story and CloudTrail audit posture are already sunk costs they have already paid. M365-heavy firms default to Copilot Studio for the same reason on the Microsoft side. Engineering-led firms with a platform team and a strong audit requirement go LangGraph because the state-graph audit fidelity is closest to what an FCA supervisor expects when they ask "show me what the agent decided and why." There is no platform-led answer; the answer is operating-model led.' },
+  { q: 'What\'s the audit difference in practice?', a: 'LangGraph captures the entire state graph for every run — every node visited, every input, every output, every tool call. You can replay a run from a checkpoint and see what the agent saw. Bedrock Agents capture invocation, action calls, and traces but at a coarser grain than the state graph. Copilot Studio captures interactions and tool invocations through Purview but with the orchestration logic less directly inspectable. For regulated firms, the difference matters: a state-graph audit is naturally sufficient to answer the question "what decision was made and why?"; the others require additional telemetry.' },
+  { q: 'How does cost compare for a 50-engineer firm?', a: 'Hard to give exact numbers because token spend dominates and varies by use case. Order-of-magnitude: LangGraph self-hosted = token cost + ~£4k/month infra (compute + LangSmith) + 2 senior engineers of platform-team carry; Bedrock Agents = token cost + agent invocation fees (~10–20% premium on raw token) + AWS infrastructure costs that you may already have; Copilot Studio = ~£25–50/user/month for Power Platform and Copilot Studio licensing, plus Azure OpenAI tokens, more predictable but with a per-seat ceiling that scales linearly. Most firms underestimate the operational carry of LangGraph and overestimate the licensing economics of Copilot Studio.' },
+  { q: 'Can I mix platforms?', a: 'Yes, and many firms do. The most common pattern is Copilot Studio for internal-employee productivity copilots (HR queries, IT helpdesk, document drafting) plus LangGraph or Bedrock for customer-facing or regulated workloads. The integration point is your control plane — the policy, identity, audit, and budget layer that sits between every agent (regardless of platform) and the data, models, and tools they access. Mixing platforms only works if you have a control plane that abstracts platform differences.' },
+  { q: 'Where do Vertex AI Agent Builder and Writer Palmyra fit?', a: 'Vertex AI Agent Builder is the Google-native equivalent of Bedrock Agents — strong if you are GCP-native, weaker fit otherwise. Writer Palmyra is a different category: a regulated-enterprise content and agent platform with strong privacy posture and a curated stack, often selected by firms whose primary use case is content generation under regulatory constraint. We cover both in the full matrix on the agent-studio build vs buy page.' },
+  { q: 'How locked-in am I really to LangGraph?', a: 'Less than to the proprietary platforms, but not zero. The state-graph definitions are portable Python and the open-source license eliminates vendor risk. The lock-in is operational — your platform team has skills, your CI/CD has integrations, your eval suite has expectations. Migration to a different orchestrator (CrewAI, AutoGen, custom) is a 6–10 week engineering effort for a typical regulated production deployment. Migration off Bedrock Agents to LangGraph is usually 12–16 weeks because you also have to rebuild the audit pipeline.' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@id': `${siteConfig.url}/#founder` },
+  publisher: { '@id': `${siteConfig.url}/#organization` },
+  mainEntityOfPage: url,
+  image: `${siteConfig.url}/og-default.png`,
+  about: ['LangGraph', 'Bedrock Agents', 'Copilot Studio', 'Agent platform comparison', 'AI agent orchestration platform'],
+  keywords: 'langgraph vs bedrock agents, langgraph vs copilot studio, bedrock agents vs copilot studio, agent platform comparison, ai agent orchestration platform',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteConfig.url}/insights/` },
+    { '@type': 'ListItem', position: 3, name: 'LangGraph vs Bedrock vs Copilot Studio', item: url },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={[articleSchema, faqSchema, breadcrumbSchema]} type="article">
+  <article class="mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg">
+    <nav class="text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-cyan-300">Home</a> · <a href="/insights/" class="hover:text-cyan-300">Insights</a> · <span class="text-slate-300">LangGraph vs Bedrock vs Copilot Studio</span>
+    </nav>
+
+    <header class="mb-12 not-prose">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-4">Platform Comparison · 10 min read</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">{title}</h1>
+      <p class="text-xl text-slate-300 leading-relaxed">{description}</p>
+      <p class="mt-6 text-sm text-slate-400">Published 30 April 2026 · By Sunny Patel, Founder, Agentic AI Associates</p>
+    </header>
+
+    <section>
+      <h2 id="thesis">The thesis</h2>
+      <p>Three platforms dominate the shortlists we see in 2026 engagements with regulated UK firms: <strong>LangGraph</strong> (open source, engineering-led), <strong>Bedrock Agents</strong> (AWS-native, IAM-led), and <strong>Microsoft Copilot Studio</strong> (M365-native, license-led). Each wins in a different shape of firm. The decision is not technical superiority — it is operating-model fit.</p>
+      <p>This page compares them on the criteria that matter to the regulated buyer, with the honest answer to the most common question CTOs ask us in scoping calls: which one wins?</p>
+    </section>
+
+    <section>
+      <h2 id="matrix">The comparison matrix</h2>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold min-w-[180px]">Criterion</th>
+              <th class="px-3 py-3 text-left font-semibold min-w-[200px]">LangGraph</th>
+              <th class="px-3 py-3 text-left font-semibold min-w-[200px]">Bedrock Agents</th>
+              <th class="px-3 py-3 text-left font-semibold min-w-[200px]">Copilot Studio</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {matrix.map((m, i) => (
+              <tr class={i % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 align-top font-semibold text-white text-xs">{m.criterion}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{m.lg}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{m.br}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{m.cs}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="when-each-wins">When each wins</h2>
+
+      <h3 id="langgraph-wins">LangGraph wins when…</h3>
+      <ul>
+        <li>You have a platform engineering team of 2+ senior engineers with capacity</li>
+        <li>Audit-grade decision visibility is non-negotiable (FCA-supervised, with state-graph replay as a requirement)</li>
+        <li>You expect to swap models frequently (frontier rotation, regional Anthropic availability shifts, cost optimisation)</li>
+        <li>Your data residency or air-gap requirements rule out US-hosted vendor agent platforms</li>
+        <li>AI is on the path to being a strategic moat, not just a productivity layer</li>
+      </ul>
+
+      <h3 id="bedrock-wins">Bedrock Agents wins when…</h3>
+      <ul>
+        <li>The firm is AWS-native, with most regulated workloads already in the AWS perimeter</li>
+        <li>IAM is the existing identity and authorisation backbone</li>
+        <li>The dominant LLM choice is Anthropic + a long tail (Bedrock\'s catalogue is broad enough)</li>
+        <li>Time-to-production matters and you are willing to accept Bedrock\'s coarser audit grain in exchange</li>
+        <li>You can absorb the AWS lock-in dimension as part of an existing concentration risk</li>
+      </ul>
+
+      <h3 id="copilot-wins">Copilot Studio wins when…</h3>
+      <ul>
+        <li>Microsoft 365 is the dominant productivity layer and Entra ID is the IdP</li>
+        <li>The use case is internal-employee copilots — HR, IT helpdesk, document drafting — rather than customer-facing AI</li>
+        <li>Predictable per-user licensing economics matter more than model flexibility</li>
+        <li>Power Platform connectors give you immediate enterprise-system reach</li>
+        <li>You can layer your own audit and governance on top, or accept Purview\'s coverage as sufficient</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="hidden-costs">The hidden costs nobody quotes</h2>
+      <ul>
+        <li><strong>Audit pipeline build.</strong> If you go Bedrock or Copilot Studio and need state-graph-grade audit, you are building it. Budget 2 engineers for 8–12 weeks.</li>
+        <li><strong>Eval infrastructure.</strong> All three platforms ship some eval surface. None of them ship the eval pipeline a regulated firm needs (model regression tests, drift monitoring, cohort comparison). Budget another platform engineer half-time.</li>
+        <li><strong>Identity scope expansion.</strong> Vendor agent identity systems make broad assumptions about what an agent is allowed to do. Constraining them to FCA-acceptable scope is non-trivial — particularly for Copilot Studio which inherits Entra-wide ACLs.</li>
+        <li><strong>Vendor lock-in migration cost.</strong> Already covered above. Consider it part of the TCO calculation, not a future contingency.</li>
+        <li><strong>Skills carry.</strong> LangGraph requires Python platform engineering. Bedrock requires AWS depth. Copilot Studio requires Power Platform fluency. Hire and retain accordingly.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="decision-framework">A decision framework you can use this week</h2>
+      <ol>
+        <li>Where does your firm\'s identity backbone live (AWS IAM / Entra ID / mixed / DIY)? That single answer eliminates one or two of the three.</li>
+        <li>Do you have a platform engineering team with ≥2 senior engineers of available capacity? If no, eliminate LangGraph.</li>
+        <li>Are your regulated workloads bound to an AWS perimeter or a Microsoft perimeter? Default to the matching native platform.</li>
+        <li>Does the use case require state-graph-grade audit fidelity or is decision-grade enough? If state-graph required, default to LangGraph regardless of perimeter, unless you commit budget to building the equivalent on Bedrock.</li>
+        <li>Map the choice against your <a href="/insights/agent-studio-build-vs-buy/" class="text-cyan-400">build vs buy decision tree</a>. The platform decision is downstream of the build-vs-buy decision; do not invert.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently asked questions</h2>
+      {faq.map((f) => (
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-white">{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="not-prose mt-16 p-8 rounded-xl bg-gradient-to-br from-cyan-950/40 to-slate-900 border border-cyan-500/20">
+      <h2 class="text-2xl font-bold text-white mb-3">Run this against your stack</h2>
+      <p class="text-slate-300 mb-6">A Phase-Gate Diagnostic compares the three (and the four other vendor stacks in the full matrix) against your regulatory perimeter, identity backbone, and engineering capacity. Two weeks, £6,500, written deliverable.</p>
+      <a href="/get-started/" class="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors">Book a Fit Call →</a>
+    </section>
+
+    <aside class="mt-16 not-prose">
+      <h2 class="text-lg font-semibold text-cyan-300 mb-4">Related thinking</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>→ <a href="/insights/agent-studio-build-vs-buy/" class="text-cyan-400 hover:text-cyan-300">Agent Studio: Build vs Buy (pillar)</a></li>
+        <li>→ <a href="/insights/agentic-sdlc-regulated-engineering/" class="text-cyan-400 hover:text-cyan-300">Agentic SDLC for Regulated Engineering Teams</a></li>
+        <li>→ <a href="/insights/fca-ai-governance-playbook/" class="text-cyan-400 hover:text-cyan-300">FCA AI Governance Playbook</a></li>
+        <li>→ <a href="/what-we-do/agentic-ai/" class="text-cyan-400 hover:text-cyan-300">Our Agentic AI service</a></li>
+      </ul>
+    </aside>
+  </article>
+</BaseLayout>

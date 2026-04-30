@@ -1,0 +1,160 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site-config';
+
+const slug = 'smcr-ai-accountability';
+const title = 'SM&CR and AI: Who\'s Accountable When an Agent Goes Wrong?';
+const description = 'A working answer to the question every Senior Manager at a UK regulated firm is now asking — how Senior Manager Function holders attest to AI systems they did not build, write, or fully understand.';
+const datePublished = '2026-04-30';
+const url = `${siteConfig.url}/insights/${slug}/`;
+
+const scenarios = [
+  { situation: 'AI system makes a wrong call on a regulated decision (e.g. suitability, fraud, vulnerable-customer support)', accountable: 'SMF holder for the business area where the decision was made (typically SMF24, SMF18, or the relevant business head with a Statement of Responsibility covering AI)', evidence: 'Boundary document, decision log with agent rationale, sample-review records, and the Senior Manager\'s most recent attestation' },
+  { situation: 'Vendor model used by an AI system is deprecated or behaves differently after an update', accountable: 'SMF holder for the system + SMF4 (Chief Risk) for the model-risk dimension', evidence: 'Version pin in the AI Risk Register entry, model change-control log, regression-test results' },
+  { situation: 'AI system breaches a customer-data class it should not have accessed', accountable: 'SMF24 (Chief Operations) plus SMF17 (MLRO) if AML/KYC, plus the DPO operating under SMF16 (Compliance)', evidence: 'Boundary document, IAM scope, audit log of the breach, incident report' },
+  { situation: 'Engineering team uses AI coding assistant and ships a regulatory-affecting bug', accountable: 'SMF24 (or whoever holds the Statement of Responsibility for engineering) for the bug; the AI assistant is a tool, not the accountable party', evidence: 'Code review record, test coverage at point of release, whether the AI assistant was logged as the source of the change' },
+  { situation: 'AI-driven communication produces misleading information to a customer', accountable: 'SMF16 (Compliance Oversight) for the perimeter breach; SMF for the business area for the customer outcome', evidence: 'Communication log, AI rationale, plain-English testing record, vulnerable-customer review' },
+  { situation: 'Third-party AI vendor has an outage that breaches an Important Business Service impact tolerance', accountable: 'SMF24 + SMF for Operational Resilience (often SMF1 in smaller firms)', evidence: 'Outsourcing register, IBS mapping, scenario-tested fallback, outage timeline' },
+];
+
+const faq = [
+  { q: 'Can a Senior Manager delegate AI accountability to a vendor?', a: 'No. SM&CR accountability is non-delegable. The vendor can be contractually responsible for service levels, indemnities, and warranties, but the regulated person — the SMF holder — remains the accountable party. The most common drafting error is treating an outsourcing agreement as a transfer of accountability rather than a transfer of execution.' },
+  { q: 'Who at a typical UK fintech ends up accountable for AI?', a: 'In firms with a Chief Operating Officer who holds SMF24, that role is the most common landing spot for operational AI. Where SMF24 does not exist, the responsibility usually falls to the CTO holding SMF18 (Other Overall Responsibility) or to the CEO under SMF1. For Material-tier consumer-facing AI, the firm should consider whether the responsibility sits naturally with the SMF for the business line affected, with SMF4 (Chief Risk) responsible for the cross-cutting model risk.' },
+  { q: 'What does an SMF holder actually need to know about an AI system to attest?', a: 'They do not need to understand the model architecture. They need to: (1) know what the system does, what data it touches, what decisions it influences; (2) know the boundary — what it cannot do; (3) trust the audit trail to give them retrospective visibility; (4) know who the operational owner is and how decisions reach review; (5) have a credible kill-switch they could invoke. If any of these is missing, the attestation is unsafe.' },
+  { q: 'Is "agentic" AI different in accountability terms from non-agentic AI?', a: 'Yes, materially. Non-agentic AI (e.g. a classifier producing a probability) is a static decision-support tool with predictable inputs and outputs. Agentic AI takes actions over time, choosing among options, calling tools, and producing a state graph of decisions. Accountability for agentic AI requires accountability for the decision graph, not just the output — which is why the audit-trail design we describe in our SDLC playbook records every decision point, every tool call, and every retrieval, not just the final answer.' },
+  { q: 'When should a firm appoint a dedicated SMF for AI?', a: 'There is no FCA requirement for a dedicated AI SMF, and we do not recommend creating one until the firm operates at a scale where AI is a strategic business line in its own right. For most firms, AI accountability sits within existing SMF duties via amended Statements of Responsibility. Creating a new SMF role for AI before the operating model warrants it tends to dilute accountability rather than concentrate it.' },
+  { q: 'Does the FCA expect personal liability for SMF holders on AI?', a: 'Yes. SM&CR is built on personal liability of approved persons. The duty of responsibility means an SMF holder can be held personally accountable for failures within their area. The FCA has not, as of 2026, taken enforcement action against an SMF holder specifically for an AI failure, but the supervisory expectation that they could is explicit in the FCA\'s public communications since 2024.' },
+  { q: 'How do you write a Statement of Responsibility that covers AI properly?', a: 'Three rules: (1) name the AI within the SMF holder\'s prescribed responsibilities — do not leave it implicit; (2) tie it to the operating model — say what they oversee, not what they technically own; (3) align it to the AI Risk Register — every Material-tier system should be reflected in at least one Statement of Responsibility. We have observed firms attempt to bury AI inside catch-all "operational technology" clauses; supervisors do not regard this as adequate.' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@id': `${siteConfig.url}/#founder` },
+  publisher: { '@id': `${siteConfig.url}/#organization` },
+  mainEntityOfPage: url,
+  image: `${siteConfig.url}/og-default.png`,
+  about: ['SM&CR AI accountability', 'FCA AI governance', 'Senior Manager Function AI', 'AI model risk FCA', 'Statement of Responsibility AI'],
+  keywords: 'sm&cr ai accountability, smf ai accountability, fca ai governance, smf4 ai, smf24 ai, statement of responsibility ai',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteConfig.url}/insights/` },
+    { '@type': 'ListItem', position: 3, name: 'SM&CR and AI Accountability', item: url },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={[articleSchema, faqSchema, breadcrumbSchema]} type="article">
+  <article class="mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg">
+    <nav class="text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-cyan-300">Home</a> · <a href="/insights/" class="hover:text-cyan-300">Insights</a> · <span class="text-slate-300">SM&CR and AI Accountability</span>
+    </nav>
+
+    <header class="mb-12 not-prose">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-4">Compliance Briefing · 9 min read</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">{title}</h1>
+      <p class="text-xl text-slate-300 leading-relaxed">{description}</p>
+      <p class="mt-6 text-sm text-slate-400">Published 30 April 2026 · By Sunny Patel, Founder, Agentic AI Associates</p>
+      <p class="mt-4 text-xs text-slate-500 italic">Informational only, not legal advice. Confirm interpretations with your firm's legal and compliance teams.</p>
+    </header>
+
+    <section>
+      <h2 id="thesis">The thesis</h2>
+      <p>SM&CR is not technology-neutral. It was written before agentic AI existed, and the answer to "who is accountable when an agent goes wrong?" is the same answer SM&CR gave in 2016 to the question "who is accountable when an outsourced provider goes wrong?" — the regulated firm, through a named Senior Manager Function holder, with a Statement of Responsibility that covers the relevant area. AI changes the operational mechanics of accountability, not its location.</p>
+      <p>This page maps the question through six common scenarios, names the SMF role that ends up accountable in each, and lists the evidence that holder needs to be holding when supervision asks. It draws on the engagements we run with regulated firms in 2025–2026 — wealth, savings, payments, and insurance — and on the FCA's AI Approach as published.</p>
+    </section>
+
+    <section>
+      <h2 id="map">The accountability map (six scenarios)</h2>
+      <p>Each scenario names the SMF role most often accountable, and the evidence that holder must be able to produce on demand. The mapping is not law. It is the operational pattern we have seen survive supervisory scrutiny.</p>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold min-w-[280px]">Scenario</th>
+              <th class="px-3 py-3 text-left font-semibold min-w-[200px]">Accountable</th>
+              <th class="px-3 py-3 text-left font-semibold">Evidence required</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {scenarios.map((s, i) => (
+              <tr class={i % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{s.situation}</td>
+                <td class="px-3 py-3 align-top text-xs text-cyan-300 font-semibold leading-relaxed">{s.accountable}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{s.evidence}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="three-rules">Three rules for SMF holders inheriting AI</h2>
+
+      <h3 id="rule-1">Rule 1 — Boundary before output</h3>
+      <p>An SMF holder should never attest to "the AI works." They should attest to <strong>the AI operated within its boundary</strong>. The boundary is the document — the Agentic Capability Boundary in our playbook — that names every system the AI is allowed to read or act on, every data class it can touch, and every action it cannot take. If the boundary is correctly enforced and the audit trail confirms it, the SMF holder can attest with confidence even on systems they did not build and would not understand at code level.</p>
+
+      <h3 id="rule-2">Rule 2 — Audit trail before model</h3>
+      <p>The SMF holder does not need a deep grasp of model architecture. They do need a tamper-evident, decision-grade audit trail they can interrogate retrospectively. Hashed, append-only storage with 7-year retention, capturing every agent decision, every tool call, every retrieval, with the agent\'s articulated rationale. If the audit trail is solid, the SMF holder has the same defensive posture as a Senior Manager attesting to a manual process performed by named humans.</p>
+
+      <h3 id="rule-3">Rule 3 — Kill switch before launch</h3>
+      <p>Before any AI system reaches production for regulated workloads, the kill switch is documented, the on-call rota is named, the time-to-disable is measured (target: under 60 minutes), and the procedure is rehearsed. Most kill switches we audit have never been tested. Test them quarterly. The SMF holder cannot defend an attestation if the only kill switch evidence is "we wrote a runbook."</p>
+    </section>
+
+    <section>
+      <h2 id="statement-of-responsibility">Drafting AI into Statements of Responsibility</h2>
+      <p>The Statement of Responsibility is the SM&CR document that lists what an SMF holder is accountable for. AI accountability lives here, not in some separate AI policy. The drafting pattern we use:</p>
+      <ul>
+        <li><strong>Name the system class explicitly.</strong> "All deployed AI systems within Operations, including agentic systems used in customer support and engineering automation." Not "operational technology," which is too broad.</li>
+        <li><strong>Reference the AI Risk Register by name.</strong> "Accountable for the operation of all systems recorded in the AI Risk Register at Material or Significant tier." This binds the SoR to a live operational artefact.</li>
+        <li><strong>Tie to attestation cadence.</strong> "Quarterly attestation that systems operated within boundary, with monthly Model Risk Committee participation."</li>
+        <li><strong>Cross-reference cross-cutting SMFs.</strong> "Cross-cutting model-risk responsibility held by SMF4 (Chief Risk); cross-cutting compliance perimeter held by SMF16."</li>
+      </ul>
+      <p>For Material-tier consumer-facing AI — for example an AI driving suitability decisions, lending decisions, or high-volume Consumer Duty touchpoints — the responsibility may need explicit mention in two SoRs (the business-line SMF and SMF4), with the boundary between them documented.</p>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently asked questions</h2>
+      {faq.map((f) => (
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-white">{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="not-prose mt-16 p-8 rounded-xl bg-gradient-to-br from-cyan-950/40 to-slate-900 border border-cyan-500/20">
+      <h2 class="text-2xl font-bold text-white mb-3">Make this real for your firm</h2>
+      <p class="text-slate-300 mb-6">A Phase-Gate Diagnostic produces the AI Risk Register, the Statements of Responsibility text, and the kill-switch playbook your Senior Managers can sign. Two weeks, £6,500.</p>
+      <a href="/get-started/" class="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors">Book a Fit Call →</a>
+    </section>
+
+    <aside class="mt-16 not-prose">
+      <h2 class="text-lg font-semibold text-cyan-300 mb-4">Related thinking</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>→ <a href="/insights/fca-ai-governance-playbook/" class="text-cyan-400 hover:text-cyan-300">FCA AI Governance Playbook (pillar)</a></li>
+        <li>→ <a href="/insights/agentic-sdlc-regulated-engineering/" class="text-cyan-400 hover:text-cyan-300">Agentic SDLC for Regulated Engineering Teams</a></li>
+        <li>→ <a href="/what-we-do/ai-governance/" class="text-cyan-400 hover:text-cyan-300">Our AI Governance service</a></li>
+        <li>→ <a href="/industries/fintech/" class="text-cyan-400 hover:text-cyan-300">For Fintech</a></li>
+        <li>→ <a href="/industries/finance/" class="text-cyan-400 hover:text-cyan-300">For Finance & Wealth Management</a></li>
+      </ul>
+    </aside>
+  </article>
+</BaseLayout>

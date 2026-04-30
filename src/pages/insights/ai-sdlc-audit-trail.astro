@@ -1,0 +1,148 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site-config';
+
+const slug = 'ai-sdlc-audit-trail';
+const title = 'AI SDLC Audit Trail: 12 Fields the FCA Will Ask About';
+const description = 'A field-by-field reference for the audit-trail schema regulated firms need when agents touch the software delivery pipeline — what to capture, why, where to store it, and the failure modes that void the evidence.';
+const datePublished = '2026-04-30';
+const url = `${siteConfig.url}/insights/${slug}/`;
+
+const fields = [
+  { n: 1, name: 'event_id', what: 'Globally unique identifier for the action — UUIDv7 recommended for time-orderability', why: 'Lets you reference any single event in incident response, audit queries, and supervisory disclosures', failures: 'Reusing IDs across replays. Using DB autoincrement (creates ordering ambiguity across shards).' },
+  { n: 2, name: 'timestamp_utc', what: 'ISO-8601 with millisecond precision, always UTC', why: 'Reconstructs sequence; aligns with other regulated logs (trade, transaction, communication) on the same clock', failures: 'Local timezones. Second-precision (loses ordering for fast multi-step runs).' },
+  { n: 3, name: 'agent_id + version_hash', what: 'Identifier of the agent definition + a content hash of the agent code, prompt, and tool list at runtime', why: 'A regulator asking "exactly what agent did this?" should be answerable in one query. Hashes prevent ambiguity from later edits.', failures: 'Logging agent name only. Letting agent definitions mutate without versioning. Storing the hash but not the underlying versioned definition.' },
+  { n: 4, name: 'model + grounding_source', what: 'Exact model identifier (provider + name + version + region) and the retrieval index, knowledge base, or memory store used', why: 'Reproduces the inference inputs. Required for model-risk attestation (SS1/23 alignment) and for incident replay.', failures: '"claude-3" with no version. Vector-store ID without the index version. Mixing inference-time and training-time grounding.' },
+  { n: 5, name: 'principal', what: 'Human or service identity that initiated the run — typically OIDC subject claim or service-account ARN', why: 'Ties an action to an accountable human or named service, not a faceless agent', failures: 'Agent self-initiated runs with no parent principal. Service-account chains where the upstream principal is lost.' },
+  { n: 6, name: 'smf_owner', what: 'The Senior Manager Function holder accountable for this agent, recorded as a stable internal reference', why: 'Direct mapping from event to SM&CR-attesting human; supports the quarterly attestation pack', failures: 'Logging the role name but not the ID (hard to query when SMF holders rotate). Not maintaining historical mapping.' },
+  { n: 7, name: 'data_classes_touched', what: 'Set of data classifications referenced, e.g. {public, internal, customer_pii, financial_account}', why: 'Allows a single query to answer "did any agent ever touch class X?". Critical for boundary enforcement and breach detection.', failures: 'Free-text class labels. Coarse-grained classes that mask sensitive subsets. Logging "customer_data" instead of typed classes.' },
+  { n: 8, name: 'tools_invoked', what: 'Ordered list of tool calls with hashes of inputs and outputs and the result status', why: 'Reconstructs the action sequence. Supports retrospective tool-level boundary checks.', failures: 'Logging tool names without inputs. Storing PII in tool-call payloads in clear (use hashes; store the cleartext under separate access if needed).' },
+  { n: 9, name: 'decision_rationale', what: 'The agent\'s articulated reason for the action, captured at the time, in plain text or structured form', why: 'Required for Consumer Duty outcome 4 (consumer understanding) where AI influences customer-facing actions; supports incident triage', failures: 'Capturing only the LLM output, not the reasoning. Summarising rationale at write time (loses fidelity).' },
+  { n: 10, name: 'outcome', what: 'Enumerated result: success | refused_by_policy | escalated_to_human | failed | aborted | timed_out', why: 'Lets you query the population of outcomes by agent, period, or use case for Model Risk Committee review', failures: 'Free-text outcomes. Conflating "refused by policy" with "failed".' },
+  { n: 11, name: 'cost_units', what: 'Tokens consumed, tool fees, infrastructure metered units, and a denormalised total in pence', why: 'Budget enforcement, chargeback, and cost-attribution analytics. Also flags anomalous runs.', failures: 'Token counts from the LLM provider mixed across input/output (must be split). Forgetting tool-call costs.' },
+  { n: 12, name: 'review_status', what: 'unreviewed | sampled_clean | sampled_flagged | escalated | resolved', why: 'Drives the monthly Model Risk Committee sample-review queue and quarterly attestation evidence', failures: 'Status set once and never updated. No process to mark events as reviewed.' },
+];
+
+const faq = [
+  { q: 'How long do I need to keep this data?', a: 'Default to seven years for FCA-regulated workloads, aligned to most existing record-keeping obligations under SYSC. Some Consumer Duty-related records benefit from longer retention; fraud and AML records may be governed by separate schedules. Confirm with your firm\'s record-retention policy and your DPO.' },
+  { q: 'Where should the audit trail physically live?', a: 'Append-only, hash-chained storage with object lock or equivalent immutability. Common implementations: AWS S3 with Object Lock (Compliance mode), Azure Blob with immutable storage policies, or a managed compliance-grade store. Avoid using your APM (Datadog, New Relic) as the source of truth — APMs are excellent for operational telemetry but most do not meet the tamper-evident expectations a supervisor will probe.' },
+  { q: 'Can I redact PII before writing?', a: 'You can and often should. The pattern is: write the structured event with hashes of sensitive fields, store cleartext (if needed at all) in a separately-access-controlled store keyed by the same event_id, with an entitlement model that lets only named roles retrieve it. This way the audit trail is fully queryable for governance purposes without becoming a PII liability.' },
+  { q: 'Do I really need decision_rationale on every action?', a: 'Yes for any action that influences a regulated decision or a consumer-facing outcome. The cheap answer is to capture the agent\'s scratchpad or chain-of-thought verbatim. The robust answer is to require structured rationale (a typed object: justification, alternatives_considered, policy_constraints) — agents with this requirement built into the prompt produce significantly better audit evidence.' },
+  { q: 'How do I prove tamper-evidence?', a: 'Three layers. (1) Storage-level immutability (Object Lock, immutable blob, WORM appliance). (2) Hash-chained event sequencing — each event\'s hash includes the previous event\'s hash, so any tampering breaks the chain at the affected point. (3) Periodic anchoring — write a daily root hash to a separate system (or, for higher-stakes use, a public ledger). Most regulated firms get to the first two and stop; the third is appropriate for firms with the highest supervisory exposure.' },
+  { q: 'How does this differ from a typical application audit log?', a: 'A typical application audit log captures user actions on application surfaces. An AI SDLC audit trail captures agent decisions, the inputs they relied on, the rationale they articulated, and the actions they took. The granularity is finer (per-decision, not per-request), the schema is richer (rationale, model, grounding), and the retention policy is stricter. They are complementary; the application audit log does not substitute.' },
+  { q: 'Is this overkill for a small fintech?', a: 'No. The cost of building the schema right at the start of an agentic SDLC programme is roughly two engineer-weeks. The cost of bolting it on after a supervisor or audit asks for it is closer to three engineer-months plus a credibility tax. Smaller firms have less margin to absorb the second cost. Build it once, properly, in Phase 0 of the framework.' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@id': `${siteConfig.url}/#founder` },
+  publisher: { '@id': `${siteConfig.url}/#organization` },
+  mainEntityOfPage: url,
+  image: `${siteConfig.url}/og-default.png`,
+  about: ['AI SDLC audit trail', 'AI audit log', 'AI code review compliance', 'FCA AI governance', 'Tamper-evident audit'],
+  keywords: 'ai sdlc audit trail, ai audit log schema, fca ai audit, agentic ai audit trail, ai code review compliance',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteConfig.url}/insights/` },
+    { '@type': 'ListItem', position: 3, name: 'AI SDLC Audit Trail', item: url },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={[articleSchema, faqSchema, breadcrumbSchema]} type="article">
+  <article class="mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg">
+    <nav class="text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-cyan-300">Home</a> · <a href="/insights/" class="hover:text-cyan-300">Insights</a> · <span class="text-slate-300">AI SDLC Audit Trail</span>
+    </nav>
+
+    <header class="mb-12 not-prose">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-4">Reference Schema · 11 min read</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">{title}</h1>
+      <p class="text-xl text-slate-300 leading-relaxed">{description}</p>
+      <p class="mt-6 text-sm text-slate-400">Published 30 April 2026 · By Sunny Patel, Founder, Agentic AI Associates</p>
+    </header>
+
+    <section>
+      <h2 id="why-this-matters">Why this is the most-deferred decision in regulated agentic AI</h2>
+      <p>If you do one thing right at the start of an agentic SDLC programme in a regulated firm, do this. Get the audit-trail schema right in Phase 0 and the rest of the programme stays operationally clean. Get it wrong and you are rebuilding it under regulatory pressure six months in.</p>
+      <p>Below is the 12-field schema we install in regulated engagements. Field by field: what to capture, why a supervisor cares, and the failure modes that look like compliance but are not.</p>
+    </section>
+
+    <section>
+      <h2 id="schema">The 12-field schema</h2>
+
+      {fields.map((f) => (
+        <div class="my-10 not-prose p-6 rounded-lg border border-slate-800 bg-slate-950/40">
+          <div class="flex items-baseline gap-3 mb-3">
+            <span class="text-cyan-400 font-mono font-semibold">{`${f.n.toString().padStart(2, '0')}.`}</span>
+            <h3 class="text-xl font-bold text-white font-mono">{f.name}</h3>
+          </div>
+          <dl class="grid gap-3 text-sm">
+            <div><dt class="text-cyan-300 font-semibold mb-1">What to capture</dt><dd class="text-slate-300 leading-relaxed">{f.what}</dd></div>
+            <div><dt class="text-cyan-300 font-semibold mb-1">Why a supervisor cares</dt><dd class="text-slate-300 leading-relaxed">{f.why}</dd></div>
+            <div><dt class="text-amber-300 font-semibold mb-1">Common failure modes</dt><dd class="text-slate-300 leading-relaxed">{f.failures}</dd></div>
+          </dl>
+        </div>
+      ))}
+    </section>
+
+    <section>
+      <h2 id="storage-architecture">Storage architecture in one paragraph</h2>
+      <p>Write events to an append-only, hash-chained store with WORM-grade immutability. AWS S3 Object Lock (Compliance mode) and Azure immutable Blob storage are the two most common implementations we see in regulated UK firms. Layer a daily root-hash anchor written to a separate system. Keep PII out of the primary store using hashes plus an entitlement-controlled cleartext sidecar keyed by event_id. Index for common queries (by agent, by SMF owner, by data class, by date range) on a separate read replica or search index — never on the immutable store directly.</p>
+    </section>
+
+    <section>
+      <h2 id="what-supervisors-actually-ask">What supervisors actually ask for</h2>
+      <p>Five questions, asked in some form, in every supervisory engagement we have observed where AI was a topic:</p>
+      <ol>
+        <li><strong>Show me an agent decision from yesterday and tell me who is accountable.</strong> Schema fields needed: 1, 2, 3, 6, 9. If you cannot answer in under two minutes, the audit trail is not yet fit-for-purpose.</li>
+        <li><strong>Show me every time an agent touched class X data in the last 90 days.</strong> Schema fields: 7. Indexed access to data_classes_touched is non-negotiable.</li>
+        <li><strong>Show me the rate of refused_by_policy outcomes by agent.</strong> Schema field: 10. This is the supervisor checking whether your boundary is being tested or just nominal.</li>
+        <li><strong>What evidence do you have that this agent has not been tampered with since deployment?</strong> Schema field: 3. The version hash is your answer; without it you have a credibility problem regardless of other controls.</li>
+        <li><strong>Walk me through how a single decision was made.</strong> Schema fields: 1, 4, 7, 8, 9. End-to-end replay capability — what the agent saw, what tools it used, why it chose what it did.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently asked questions</h2>
+      {faq.map((f) => (
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-white">{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="not-prose mt-16 p-8 rounded-xl bg-gradient-to-br from-cyan-950/40 to-slate-900 border border-cyan-500/20">
+      <h2 class="text-2xl font-bold text-white mb-3">Build this into your programme</h2>
+      <p class="text-slate-300 mb-6">A Phase-Gate Diagnostic produces the audit-trail schema, storage architecture, and access-control model your engineering and compliance teams need to ship in Phase 0.</p>
+      <a href="/get-started/" class="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors">Book a Fit Call →</a>
+    </section>
+
+    <aside class="mt-16 not-prose">
+      <h2 class="text-lg font-semibold text-cyan-300 mb-4">Related thinking</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>→ <a href="/insights/agentic-sdlc-regulated-engineering/" class="text-cyan-400 hover:text-cyan-300">Agentic SDLC for Regulated Engineering Teams (pillar)</a></li>
+        <li>→ <a href="/insights/fca-ai-governance-playbook/" class="text-cyan-400 hover:text-cyan-300">FCA AI Governance Playbook</a></li>
+        <li>→ <a href="/insights/smcr-ai-accountability/" class="text-cyan-400 hover:text-cyan-300">SM&CR and AI Accountability</a></li>
+        <li>→ <a href="/what-we-do/ai-governance/" class="text-cyan-400 hover:text-cyan-300">Our AI Governance service</a></li>
+      </ul>
+    </aside>
+  </article>
+</BaseLayout>
