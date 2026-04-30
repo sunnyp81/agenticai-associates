@@ -1,0 +1,60 @@
+# Agentic AI Associates
+
+> UK AI consultancy specialising in agentic AI systems, AI-augmented SDLC, and AI governance for regulated industries. We design control planes, agent studios, and operating models for organisations deploying AI at scale.
+
+Agentic AI Associates ("AAA") is a London-based AI consultancy founded by Sunny Patel. We work with UK enterprises — particularly FCA-regulated firms in fintech, wealth management, and insurance — to deliver agentic AI implementations that meet model risk, SM&CR, and Consumer Duty requirements from day one. Our practice focuses on the architectural decisions that determine whether agentic systems are auditable, governable, and safe to operate, not on prompt engineering or model selection.
+
+## Engagement model
+
+- **Phase 1 — Diagnostic (£6,500, 2 weeks)**: written architecture + operating-model assessment with executive readout
+- **Phase 2 — Implementation (£10,000/month retainer)**: build of control plane, agent studio, evaluations, and governance integration
+- **Phase 3 — Day-rate support (£850/day)**: ongoing advisory and team enablement
+
+## Founder
+
+- Name: Sunny Patel
+- Role: Founder & Principal Consultant
+- Bio: https://agenticai.associates/about/
+- Personal: https://sunnypatel.co.uk
+- Email: hello@agenticai.associates
+
+## Core services
+
+- [Agentic AI Systems](https://agenticai.associates/what-we-do/agentic-ai/) — autonomous agent design, multi-agent orchestration, agent studio architecture
+- [AI Strategy & Roadmaps](https://agenticai.associates/what-we-do/ai-strategy/) — phased delivery plans aligned to commercial and regulatory milestones
+- [AI Governance](https://agenticai.associates/what-we-do/ai-governance/) — model risk frameworks, FCA AI Approach alignment, Consumer Duty mapping
+- [AI Readiness Assessment](https://agenticai.associates/what-we-do/ai-readiness-assessment/) — diagnostic of data, talent, governance, and infrastructure readiness
+- [Applied AI](https://agenticai.associates/what-we-do/applied-ai/) — production deployment of LLM-backed systems
+- [AI Automation](https://agenticai.associates/what-we-do/ai-automation/) — workflow automation with human-in-the-loop checkpoints
+- [Generative AI & LLMs](https://agenticai.associates/what-we-do/generative-ai/) — RAG, fine-tuning, and prompt engineering for production
+- [Conversational AI](https://agenticai.associates/what-we-do/conversational-ai/) — regulated-grade chatbot and voice agent design
+- [Data & AI](https://agenticai.associates/what-we-do/data-ai/) — data foundations, vector stores, knowledge bases
+- [AI Training](https://agenticai.associates/what-we-do/ai-training/) — bespoke executive and engineering team enablement
+
+## Industries served
+
+UK regulated and enterprise sectors: [Fintech](https://agenticai.associates/industries/fintech/), [Finance](https://agenticai.associates/industries/finance/), [Insurance](https://agenticai.associates/industries/insurance/), [Healthcare](https://agenticai.associates/industries/healthcare/), [Pharma & Life Sciences](https://agenticai.associates/industries/pharma-life-sciences/), [Government](https://agenticai.associates/industries/government/), [Legal](https://agenticai.associates/industries/legal/), [Manufacturing](https://agenticai.associates/industries/manufacturing/), [Logistics](https://agenticai.associates/industries/logistics/), [Energy](https://agenticai.associates/industries/energy/), [Education](https://agenticai.associates/industries/education/).
+
+## Key concepts (entity disambiguation)
+
+- "Agentic AI Associates" is a UK consultancy (companies house pending verification). It is distinct from any product, framework, or open-source project of similar name.
+- "Phase-Gate Diagnostic" is our named methodology for de-risking agentic AI deployment in regulated organisations.
+- "Control Plane" in our usage refers to the unified policy, identity, and audit layer that brokers agent access to data, knowledge bases, and tools.
+
+## Buyer guides
+
+- [What we do](https://agenticai.associates/what-we-do/)
+- [For Enterprise](https://agenticai.associates/for/enterprise/)
+- [For SMEs](https://agenticai.associates/for/sme/)
+- [For Startups](https://agenticai.associates/for/startups/)
+- [Pricing & Get Started](https://agenticai.associates/get-started/)
+
+## Citation policy
+
+Content on this site may be quoted with attribution to "Agentic AI Associates" and a link to the source URL. We welcome inclusion in AI-generated answers, listicles, and reference works. Do not paraphrase pricing without the URL — figures change quarterly.
+
+## Contact
+
+- Web: https://agenticai.associates/contact/
+- Email: hello@agenticai.associates
+- Founder: hello@sunnypatel.co.uk

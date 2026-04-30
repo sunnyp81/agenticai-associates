@@ -1,0 +1,95 @@
+# AI Crawler & Training Permissions
+# https://agenticai.associates/ai.txt
+# Last updated: 2026-04-30
+
+# Default policy
+User-Agent: *
+Allow: /
+Disallow: /thank-you
+Disallow: /contact
+
+# Real-time grounding (search-time AI assistants) — explicitly allowed
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Perplexity-User
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: GoogleOther
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: cohere-ai
+Allow: /
+
+User-Agent: cohere-training-data-crawler
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
+User-Agent: meta-externalagent
+Allow: /
+
+User-Agent: FacebookBot
+Allow: /
+
+User-Agent: Amazonbot
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Diffbot
+Allow: /
+
+User-Agent: ImagesiftBot
+Allow: /
+
+User-Agent: PetalBot
+Allow: /
+
+User-Agent: YouBot
+Allow: /
+
+User-Agent: Timpibot
+Allow: /
+
+User-Agent: Omgilibot
+Allow: /
+
+User-Agent: Omgili
+Allow: /
+
+# Citation: full content may be quoted with attribution + link
+# Training: granted for foundation-model training that improves answer quality
+# Real-time grounding: explicitly permitted for live retrieval
+
+# Sitemap
+Sitemap: https://agenticai.associates/sitemap-index.xml
+
+# Site brief
+LLMs-File: https://agenticai.associates/llms.txt

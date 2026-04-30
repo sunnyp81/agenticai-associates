@@ -32,7 +32,52 @@ const siteName = siteConfig.name;
 const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = image || `${siteUrl}/og-default.png`;
 
-const schemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
+const customSchemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
+
+// Sitewide schema — emitted on every page for entity disambiguation in AI search
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: siteName,
+  alternateName: 'AAA',
+  url: siteUrl,
+  logo: `${siteUrl}/og-default.png`,
+  description: siteConfig.description,
+  email: siteConfig.contact.email,
+  founder: {
+    '@type': 'Person',
+    '@id': `${siteUrl}/#founder`,
+    name: siteConfig.founder.name,
+    jobTitle: siteConfig.founder.jobTitle,
+    url: siteConfig.founder.personalUrl,
+    worksFor: { '@id': `${siteUrl}/#organization` },
+  },
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  knowsAbout: [
+    'Agentic AI',
+    'AI-augmented SDLC',
+    'Agent platform architecture',
+    'AI governance',
+    'FCA AI compliance',
+    'Consumer Duty AI',
+    'Model risk management',
+    'Multi-agent orchestration',
+  ],
+  sameAs: [siteConfig.founder.personalUrl].filter(Boolean),
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteName,
+  publisher: { '@id': `${siteUrl}/#organization` },
+  inLanguage: 'en-GB',
+};
+
+const schemas = [orgSchema, websiteSchema, ...customSchemas];
 ---
 
 <!doctype html>
@@ -41,6 +86,7 @@ const schemas = Array.isArray(schema) ? schema : schema ? [schema] : [];
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#080f1e" />
+    <meta http-equiv="Content-Signal" content="search=yes,ai-input=yes,ai-train=no" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
