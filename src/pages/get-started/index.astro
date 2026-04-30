@@ -23,7 +23,21 @@ const assessmentSchema = buildServiceSchema({
   url: `${siteConfig.url}/get-started/`,
 });
 
-const schemas = [assessmentSchema, ...(faqSchema ? [faqSchema] : [])];
+const offerCatalogRef = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  '@id': `${siteConfig.url}/#offer-catalog`,
+  name: 'Agentic AI Associates Engagement Phases',
+  provider: { '@id': `${siteConfig.url}/#organization` },
+  url: `${siteConfig.url}/get-started/`,
+  itemListElement: [
+    { '@type': 'Offer', '@id': `${siteConfig.url}/#offer-phase1`, name: 'Phase 1 — Diagnostic', priceSpecification: { '@type': 'PriceSpecification', price: 6500, priceCurrency: 'GBP', valueAddedTaxIncluded: false }, eligibleDuration: { '@type': 'QuantitativeValue', value: 3, unitCode: 'WEE' }, availability: 'https://schema.org/InStock', areaServed: { '@type': 'Country', name: 'United Kingdom' } },
+    { '@type': 'Offer', '@id': `${siteConfig.url}/#offer-phase2`, name: 'Phase 2 — Build', priceSpecification: { '@type': 'UnitPriceSpecification', price: 850, priceCurrency: 'GBP', unitCode: 'DAY', referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'DAY' }, valueAddedTaxIncluded: false }, availability: 'https://schema.org/InStock', areaServed: { '@type': 'Country', name: 'United Kingdom' } },
+    { '@type': 'Offer', '@id': `${siteConfig.url}/#offer-phase3`, name: 'Phase 3 — Retain', priceSpecification: { '@type': 'UnitPriceSpecification', price: 10000, priceCurrency: 'GBP', unitCode: 'MON', referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }, valueAddedTaxIncluded: false }, availability: 'https://schema.org/InStock', areaServed: { '@type': 'Country', name: 'United Kingdom' } },
+  ],
+};
+
+const schemas = [assessmentSchema, offerCatalogRef, ...(faqSchema ? [faqSchema] : [])];
 ---
 
 <BaseLayout

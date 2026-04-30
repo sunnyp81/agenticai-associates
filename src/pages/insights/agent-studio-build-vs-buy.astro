@@ -82,6 +82,22 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['Agent platform architecture', 'Build vs buy AI agents', 'LangGraph', 'Bedrock Agents', 'Copilot Studio', 'Regulated fintech AI'],
   keywords: 'agent studio architecture, agent platform build vs buy, langgraph vs bedrock agents, copilot studio enterprise, ai agent orchestration platform, agentic ai control plane, agent platform fintech',
+  inLanguage: 'en-GB',
+  wordCount: 3200,
+  '@id': `${url}#article`,
+  hasPart: [
+    { '@type': 'Article', '@id': `${siteConfig.url}/insights/langgraph-vs-bedrock-vs-copilot-studio/#article`, name: 'LangGraph vs Bedrock Agents vs Copilot Studio' },
+  ],
+  mentions: [
+    { '@type': 'SoftwareApplication', name: 'LangGraph', sameAs: 'https://www.langchain.com/langgraph' },
+    { '@type': 'SoftwareApplication', name: 'Amazon Bedrock Agents', sameAs: 'https://aws.amazon.com/bedrock/agents/' },
+    { '@type': 'SoftwareApplication', name: 'Microsoft Copilot Studio', sameAs: 'https://learn.microsoft.com/en-us/microsoft-copilot-studio/' },
+    { '@type': 'SoftwareApplication', name: 'Vertex AI Agent Builder', sameAs: 'https://cloud.google.com/products/agent-builder' },
+    { '@type': 'SoftwareApplication', name: 'Writer Palmyra', sameAs: 'https://writer.com/' },
+    { '@type': 'SoftwareApplication', name: 'Glean', sameAs: 'https://www.glean.com/' },
+    { '@type': 'GovernmentOrganization', name: 'Financial Conduct Authority', sameAs: 'https://www.fca.org.uk/' },
+    { '@type': 'Thing', name: 'SM&CR', sameAs: 'https://www.fca.org.uk/firms/senior-managers-certification-regime' },
+  ],
 };
 
 const faq = [

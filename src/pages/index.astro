@@ -57,9 +57,54 @@ const speakableHome = buildSpeakableSchema({
   cssSelectors: ['.hero-headline', '.hero-sub', '.phase-card .phase-price'],
 });
 
+const offerCatalogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  '@id': `${siteConfig.url}/#offer-catalog`,
+  name: 'Agentic AI Associates Engagement Phases',
+  provider: { '@id': `${siteConfig.url}/#organization` },
+  itemListElement: [
+    {
+      '@type': 'Offer',
+      '@id': `${siteConfig.url}/#offer-phase1`,
+      name: 'Phase 1 — Diagnostic',
+      description: '3-week fixed-fee operational review delivering a board-ready AI roadmap. Includes data, processes, team capability, and governance posture audit.',
+      category: 'AI Consultancy',
+      url: `${siteConfig.url}/get-started/`,
+      priceSpecification: { '@type': 'PriceSpecification', price: 6500, priceCurrency: 'GBP', valueAddedTaxIncluded: false },
+      eligibleDuration: { '@type': 'QuantitativeValue', value: 3, unitCode: 'WEE' },
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      '@id': `${siteConfig.url}/#offer-phase2`,
+      name: 'Phase 2 — Build',
+      description: 'Embedded delivery of the priority workflow scoped in Phase 1, shipped and measurable inside 90 days. Time-and-materials or milestone fixed-fee.',
+      category: 'AI Consultancy',
+      url: `${siteConfig.url}/get-started/`,
+      priceSpecification: { '@type': 'UnitPriceSpecification', price: 850, priceCurrency: 'GBP', unitCode: 'DAY', referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'DAY' }, valueAddedTaxIncluded: false },
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      availability: 'https://schema.org/InStock',
+    },
+    {
+      '@type': 'Offer',
+      '@id': `${siteConfig.url}/#offer-phase3`,
+      name: 'Phase 3 — Retain',
+      description: 'Founder-led advisory, governance, and scale-out oversight. One day per week. Rolling three-month terms.',
+      category: 'AI Consultancy',
+      url: `${siteConfig.url}/get-started/`,
+      priceSpecification: { '@type': 'UnitPriceSpecification', price: 10000, priceCurrency: 'GBP', unitCode: 'MON', referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }, valueAddedTaxIncluded: false },
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      availability: 'https://schema.org/InStock',
+    },
+  ],
+};
+
 const schemas = [
   buildWebSiteSchema(),
   buildOrganizationSchema(),
+  offerCatalogSchema,
   faqSchema,
   definedTermAgentic,
   definedTermAssessment,

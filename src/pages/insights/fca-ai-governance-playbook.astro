@@ -62,6 +62,22 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['FCA AI governance', 'AI Consumer Duty fintech', 'AI model risk FCA', 'SM&CR AI accountability', 'FCA AI register', 'AI governance fintech UK', 'Regulated AI deployment UK'],
   keywords: 'fca ai governance, fca cp24/16 ai, ai consumer duty fintech, ai model risk fca, fca ai register, sm&cr ai accountability, ai governance fintech uk, regulated ai deployment uk',
+  inLanguage: 'en-GB',
+  wordCount: 3800,
+  '@id': `${url}#article`,
+  hasPart: [
+    { '@type': 'Article', '@id': `${siteConfig.url}/insights/smcr-ai-accountability/#article`, name: 'SM&CR and AI Accountability' },
+  ],
+  mentions: [
+    { '@type': 'GovernmentOrganization', name: 'Financial Conduct Authority', sameAs: 'https://www.fca.org.uk/' },
+    { '@type': 'GovernmentOrganization', name: 'Prudential Regulation Authority', sameAs: 'https://www.bankofengland.co.uk/prudential-regulation' },
+    { '@type': 'Thing', name: 'SM&CR', sameAs: 'https://www.fca.org.uk/firms/senior-managers-certification-regime' },
+    { '@type': 'Thing', name: 'FCA AI Approach', sameAs: 'https://www.fca.org.uk/firms/innovation/ai-approach' },
+    { '@type': 'Thing', name: 'Consumer Duty', sameAs: 'https://www.fca.org.uk/firms/consumer-duty' },
+    { '@type': 'Thing', name: 'SS1/23', sameAs: 'https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss' },
+    { '@type': 'Thing', name: 'EU AI Act', sameAs: 'https://artificialintelligenceact.eu/' },
+    { '@type': 'Thing', name: 'UK GDPR', sameAs: 'https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/' },
+  ],
 };
 
 const faqSchema = {

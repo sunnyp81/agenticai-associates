@@ -44,6 +44,22 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['Agentic SDLC', 'AI augmented software development', 'AI code review compliance', 'FCA AI governance', 'AI SDLC audit trail'],
   keywords: 'agentic sdlc, ai augmented sdlc, ai augmented software development, ai code review compliance, ai sdlc fca, ai sdlc audit trail, agentic delivery framework',
+  inLanguage: 'en-GB',
+  wordCount: 4000,
+  '@id': `${url}#article`,
+  hasPart: [
+    { '@type': 'Article', '@id': `${siteConfig.url}/insights/ai-sdlc-audit-trail/#article`, name: 'AI SDLC Audit Trail Schema' },
+    { '@type': 'Article', '@id': `${siteConfig.url}/insights/agentic-ai-report-generation-regulated/#article`, name: 'Agentic AI for Report Generation' },
+  ],
+  mentions: [
+    { '@type': 'GovernmentOrganization', name: 'Financial Conduct Authority', sameAs: 'https://www.fca.org.uk/' },
+    { '@type': 'Thing', name: 'SM&CR', sameAs: 'https://www.fca.org.uk/firms/senior-managers-certification-regime' },
+    { '@type': 'Thing', name: 'FCA AI Approach', sameAs: 'https://www.fca.org.uk/firms/innovation/ai-approach' },
+    { '@type': 'Thing', name: 'Consumer Duty', sameAs: 'https://www.fca.org.uk/firms/consumer-duty' },
+    { '@type': 'SoftwareApplication', name: 'LangGraph', sameAs: 'https://www.langchain.com/langgraph' },
+    { '@type': 'SoftwareApplication', name: 'Amazon Bedrock Agents', sameAs: 'https://aws.amazon.com/bedrock/agents/' },
+    { '@type': 'SoftwareApplication', name: 'Claude Code', sameAs: 'https://claude.com/claude-code' },
+  ],
 };
 
 const howToSchema = {

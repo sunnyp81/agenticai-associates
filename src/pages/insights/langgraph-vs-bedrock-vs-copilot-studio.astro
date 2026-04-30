@@ -45,6 +45,19 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['LangGraph', 'Bedrock Agents', 'Copilot Studio', 'Agent platform comparison', 'AI agent orchestration platform'],
   keywords: 'langgraph vs bedrock agents, langgraph vs copilot studio, bedrock agents vs copilot studio, agent platform comparison, ai agent orchestration platform',
+  inLanguage: 'en-GB',
+  wordCount: 2400,
+  '@id': `${url}#article`,
+  isPartOf: { '@type': 'Article', '@id': `${siteConfig.url}/insights/agent-studio-build-vs-buy/#article`, name: 'Agent Studio: Build vs Buy' },
+  mentions: [
+    { '@type': 'SoftwareApplication', name: 'LangGraph', sameAs: 'https://www.langchain.com/langgraph' },
+    { '@type': 'SoftwareApplication', name: 'Amazon Bedrock Agents', sameAs: 'https://aws.amazon.com/bedrock/agents/' },
+    { '@type': 'SoftwareApplication', name: 'Microsoft Copilot Studio', sameAs: 'https://learn.microsoft.com/en-us/microsoft-copilot-studio/' },
+    { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com/' },
+    { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com/' },
+    { '@type': 'Thing', name: 'Microsoft Entra ID', sameAs: 'https://www.microsoft.com/security/business/identity-access/microsoft-entra-id' },
+    { '@type': 'Thing', name: 'AWS IAM', sameAs: 'https://aws.amazon.com/iam/' },
+  ],
 };
 
 const faqSchema = {

@@ -40,6 +40,16 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['SM&CR AI accountability', 'FCA AI governance', 'Senior Manager Function AI', 'AI model risk FCA', 'Statement of Responsibility AI'],
   keywords: 'sm&cr ai accountability, smf ai accountability, fca ai governance, smf4 ai, smf24 ai, statement of responsibility ai',
+  inLanguage: 'en-GB',
+  wordCount: 2200,
+  '@id': `${url}#article`,
+  isPartOf: { '@type': 'Article', '@id': `${siteConfig.url}/insights/fca-ai-governance-playbook/#article`, name: 'FCA AI Governance Playbook' },
+  mentions: [
+    { '@type': 'GovernmentOrganization', name: 'Financial Conduct Authority', sameAs: 'https://www.fca.org.uk/' },
+    { '@type': 'Thing', name: 'SM&CR', sameAs: 'https://www.fca.org.uk/firms/senior-managers-certification-regime' },
+    { '@type': 'Thing', name: 'Consumer Duty', sameAs: 'https://www.fca.org.uk/firms/consumer-duty' },
+    { '@type': 'Thing', name: 'FCA AI Approach', sameAs: 'https://www.fca.org.uk/firms/innovation/ai-approach' },
+  ],
 };
 
 const faqSchema = {

@@ -46,6 +46,18 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['AI SDLC audit trail', 'AI audit log', 'AI code review compliance', 'FCA AI governance', 'Tamper-evident audit'],
   keywords: 'ai sdlc audit trail, ai audit log schema, fca ai audit, agentic ai audit trail, ai code review compliance',
+  inLanguage: 'en-GB',
+  wordCount: 2500,
+  '@id': `${url}#article`,
+  isPartOf: { '@type': 'Article', '@id': `${siteConfig.url}/insights/agentic-sdlc-regulated-engineering/#article`, name: 'Agentic SDLC for Regulated Engineering' },
+  mentions: [
+    { '@type': 'GovernmentOrganization', name: 'Financial Conduct Authority', sameAs: 'https://www.fca.org.uk/' },
+    { '@type': 'Thing', name: 'SM&CR', sameAs: 'https://www.fca.org.uk/firms/senior-managers-certification-regime' },
+    { '@type': 'Thing', name: 'Consumer Duty', sameAs: 'https://www.fca.org.uk/firms/consumer-duty' },
+    { '@type': 'Thing', name: 'AWS S3 Object Lock', sameAs: 'https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html' },
+    { '@type': 'Thing', name: 'Azure immutable Blob storage', sameAs: 'https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview' },
+    { '@type': 'Thing', name: 'SS1/23 Model Risk Management', sameAs: 'https://www.bankofengland.co.uk/prudential-regulation/publication/2023/may/model-risk-management-principles-for-banks-ss' },
+  ],
 };
 
 const faqSchema = {

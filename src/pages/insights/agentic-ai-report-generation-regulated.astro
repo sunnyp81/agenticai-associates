@@ -49,6 +49,17 @@ const articleSchema = {
   image: `${siteConfig.url}/og-default.png`,
   about: ['Agentic AI report generation', 'AI for report writing', 'AI report generation regulated', 'AI generated reports FCA', 'AI report drafting compliance'],
   keywords: 'agentic ai for report generation, agentic ai to generate reports, agentic ai for report writing, ai report generation regulated, ai report writing fca',
+  inLanguage: 'en-GB',
+  wordCount: 2500,
+  '@id': `${url}#article`,
+  isPartOf: { '@type': 'Article', '@id': `${siteConfig.url}/insights/agentic-sdlc-regulated-engineering/#article`, name: 'Agentic SDLC for Regulated Engineering' },
+  mentions: [
+    { '@type': 'GovernmentOrganization', name: 'Financial Conduct Authority', sameAs: 'https://www.fca.org.uk/' },
+    { '@type': 'Thing', name: 'Consumer Duty', sameAs: 'https://www.fca.org.uk/firms/consumer-duty' },
+    { '@type': 'Thing', name: 'GABRIEL', sameAs: 'https://www.fca.org.uk/firms/gabriel' },
+    { '@type': 'Thing', name: 'COREP', sameAs: 'https://www.eba.europa.eu/risk-analysis-and-data/reporting-frameworks' },
+    { '@type': 'Thing', name: 'FINREP', sameAs: 'https://www.eba.europa.eu/risk-analysis-and-data/reporting-frameworks' },
+  ],
 };
 
 const faqSchema = {
