@@ -2,7 +2,7 @@
 import { siteConfig } from '@/data/site-config';
 ---
 
-<form id="contact-form" method="POST" class="space-y-5">
+<form id="contact-form" method="POST" class="space-y-5 contact-form">
   <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
   <input type="hidden" name="subject" value="Enquiry from agenticai.associates" />
   <input type="hidden" name="_site" value="agenticai.associates" />
@@ -99,6 +99,21 @@ import { siteConfig } from '@/data/site-config';
   <h3 class="text-xl font-semibold text-[var(--color-text)] mb-2">Thanks &mdash; message received</h3>
   <p class="text-[var(--color-text-muted)]">We'll get back to you within 1 working day.</p>
 </div>
+
+<style>
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    color: #0f172a;
+  }
+  .contact-form select:invalid {
+    color: #475569;
+  }
+  .contact-form ::placeholder {
+    color: #64748b;
+    opacity: 1;
+  }
+</style>
 
 <script>
   const form = document.getElementById('contact-form') as HTMLFormElement | null;
