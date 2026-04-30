@@ -1,0 +1,232 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site-config';
+
+const slug = 'agentic-sdlc-regulated-engineering';
+const title = 'Agentic SDLC for Regulated Engineering Teams';
+const description = 'A reference architecture for AI-augmented software delivery in FCA-supervised firms — phased framework, audit-trail design, SM&CR control mapping, and the failure modes we see most often in 2026.';
+const datePublished = '2026-04-30';
+const url = `${siteConfig.url}/insights/${slug}/`;
+
+const phases = [
+  { n: 'Phase 0', name: 'Boundary mapping', duration: '1–2 weeks', output: 'Agentic Capability Boundary document — what the agent layer is allowed to touch, separated from regulatory/non-regulatory data domains.' },
+  { n: 'Phase 1', name: 'Read-only augmentation', duration: '4–6 weeks', output: 'Agents that read, summarise, and propose — never act. PR review, test generation suggestions, design-doc critique. Audit trail is observation-grade.' },
+  { n: 'Phase 2', name: 'Suggested actions, human approval', duration: '6–8 weeks', output: 'Agents that draft commits, IaC changes, and tickets. Every action requires named human approval. Audit trail is decision-grade.' },
+  { n: 'Phase 3', name: 'Bounded autonomous action', duration: '8–12 weeks', output: 'Agents that act within a tightly scoped envelope (specific repos, pre-approved change types, value caps). Audit trail is regulatory-grade.' },
+  { n: 'Phase 4', name: 'Multi-agent delivery', duration: 'ongoing', output: 'Coordinated agents handling spec → code → test → deploy → monitor across approved envelopes. Each agent has a named SMF-attested owner.' },
+];
+
+const auditFields = [
+  { field: 'event_id', purpose: 'Immutable UUID for the action' },
+  { field: 'timestamp_utc', purpose: 'ISO-8601 with millisecond precision' },
+  { field: 'agent_id + version_hash', purpose: 'Pin the exact agent definition responsible' },
+  { field: 'model + grounding_source', purpose: 'Reproduce the inference inputs' },
+  { field: 'principal', purpose: 'Human or service identity that initiated the run' },
+  { field: 'smf_owner', purpose: 'Senior Manager Function holder accountable for this agent (often SMF24 — Chief Operations)' },
+  { field: 'data_classes_touched', purpose: 'Set notation, e.g. {public, internal, customer_pii} — checked against agent permitted_classes' },
+  { field: 'tools_invoked', purpose: 'Ordered list of tool calls with their input/output hashes' },
+  { field: 'decision_rationale', purpose: 'The agent\'s articulated reason — required by Consumer Duty outcome 4 (consumer understanding)' },
+  { field: 'outcome', purpose: 'success | refused_by_policy | escalated_to_human | failed' },
+  { field: 'cost_units', purpose: 'Tokens, tool fees, infrastructure — for budget enforcement and chargeback' },
+  { field: 'review_status', purpose: 'unreviewed | sampled_clean | sampled_flagged — feeds the monthly Model Risk Committee' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@id': `${siteConfig.url}/#founder` },
+  publisher: { '@id': `${siteConfig.url}/#organization` },
+  mainEntityOfPage: url,
+  image: `${siteConfig.url}/og-default.png`,
+  about: ['Agentic SDLC', 'AI augmented software development', 'AI code review compliance', 'FCA AI governance', 'AI SDLC audit trail'],
+  keywords: 'agentic sdlc, ai augmented sdlc, ai augmented software development, ai code review compliance, ai sdlc fca, ai sdlc audit trail, agentic delivery framework',
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Phase-Gate adoption of Agentic SDLC in a regulated firm',
+  description: 'Five-phase adoption framework for introducing agents into a regulated software delivery pipeline.',
+  step: phases.map((p, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: `${p.n} — ${p.name}`,
+    text: p.output,
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteConfig.url}/insights/` },
+    { '@type': 'ListItem', position: 3, name: 'Agentic SDLC for Regulated Engineering', item: url },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={[articleSchema, howToSchema, breadcrumbSchema]} type="article">
+  <article class="mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg">
+    <nav class="text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-cyan-300">Home</a> · <a href="/insights/" class="hover:text-cyan-300">Insights</a> · <span class="text-slate-300">Agentic SDLC</span>
+    </nav>
+
+    <header class="mb-12 not-prose">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-4">Reference Architecture · 15 min read</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">{title}</h1>
+      <p class="text-xl text-slate-300 leading-relaxed">{description}</p>
+      <p class="mt-6 text-sm text-slate-400">Published 30 April 2026 · By Sunny Patel, Founder, Agentic AI Associates</p>
+    </header>
+
+    <section>
+      <h2 id="tldr">The thesis in one paragraph</h2>
+      <p>Agentic SDLC fails in regulated firms not because the agents are bad, but because the firms try to retrofit autonomy onto a pipeline never designed for non-deterministic actors. The fix is not better prompts. It is a phased adoption that earns audit trust before it grants action latitude — and an audit-trail schema designed from the first commit, not bolted on after the FCA shows up.</p>
+    </section>
+
+    <section>
+      <h2 id="why-now">Why this is on every regulated CTO's desk in 2026</h2>
+      <p>Three forces are converging. First, frontier models in 2025–2026 became measurably useful at code generation, test design, and dependency review for production codebases over 100k LOC. Second, frameworks like LangGraph, Bedrock Agents, and Claude Code matured to the point that multi-step agents can hold state across hours-long delivery tasks. Third, the FCA's <a href="https://www.fca.org.uk/firms/innovation/ai-approach" class="text-cyan-400">AI Approach</a> and the broader Consumer Duty regime crystallised expectations: regulated firms are accountable for AI outcomes, model risk, and consumer-facing decisions, with named Senior Manager Function holders attesting.</p>
+      <p>The result: every Head of Engineering at an FCA-supervised firm has been told, by their CTO or COO, to "figure out the AI in the pipeline" — without compromising any of the controls that make their pipeline supervised in the first place.</p>
+      <p>This page is the framework we hand to those Heads of Engineering. It is not a vendor pitch and it is not a maturity model. It is a phased delivery and audit architecture you can implement, and the failure modes we have observed often enough to name.</p>
+    </section>
+
+    <section>
+      <h2 id="phases">The five-phase framework</h2>
+      <p>The phases are sequential. Skipping is the most common failure mode we see; the second is collapsing all five into a single pilot and "evaluating" it.</p>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold">Phase</th>
+              <th class="px-3 py-3 text-left font-semibold">Name</th>
+              <th class="px-3 py-3 text-left font-semibold">Duration</th>
+              <th class="px-3 py-3 text-left font-semibold">Output</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {phases.map((p, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 font-mono text-cyan-400 align-top">{p.n}</td>
+                <td class="px-3 py-3 align-top font-semibold text-white">{p.name}</td>
+                <td class="px-3 py-3 align-top text-xs text-slate-400">{p.duration}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{p.output}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="phase-0">Phase 0 — Boundary mapping</h3>
+      <p>The phase most firms skip and most regret skipping. Before any agent touches the codebase, you draft a one-page <strong>Agentic Capability Boundary</strong>: a document that names every system the agent layer will read or act on, classifies the data therein under your existing data-classification schema, and identifies which Senior Manager Function holder owns each system.</p>
+      <p>The Boundary is a refusal as much as a permission. It is the document you point to when someone asks "could the agent get to the customer KYC store?" — the answer is "no, and here is the SMF24-signed page that says so."</p>
+      <p>Phase 0 takes one to two weeks and is led by your Head of Engineering with input from the CISO, the data-protection lead, and whichever Senior Manager will own the agentic delivery scope (usually SMF24 in firms where it exists, otherwise SMF4 or SMF18).</p>
+
+      <h3 id="phase-1">Phase 1 — Read-only augmentation</h3>
+      <p>The agents in Phase 1 do four jobs and only four: <strong>summarise</strong> (existing code, PRs, design docs), <strong>review</strong> (proposing changes for human consideration), <strong>generate-for-review</strong> (test cases, IaC suggestions, dependency notes), and <strong>retrieve-and-synthesise</strong> (linking related issues, prior incidents, internal documentation).</p>
+      <p>They do not commit, do not push, do not invoke deployment, do not call paid third-party APIs without a per-action human OK. The audit trail captures every prompt, retrieval, and output — but the audit grade is "observation": you are recording what the agent saw and proposed, not what it changed.</p>
+      <p>The win in Phase 1 is calibration. Your engineers learn what the agents are good and bad at, your CISO and DPO see the audit data flow in real conditions, and your Senior Manager develops a defensible posture before authority increases.</p>
+      <p>Most firms try to skip directly to Phase 2 or 3. We have not yet seen one succeed. Phase 1 is six weeks of trust-building you cannot buy back later.</p>
+
+      <h3 id="phase-2">Phase 2 — Suggested actions, human approval</h3>
+      <p>Phase 2 introduces <em>action proposals</em>: the agent drafts a commit, an IaC change, a Jira ticket, a database migration plan. Every proposal is presented to a named human reviewer who approves, modifies, or rejects. The reviewer's identity is logged alongside the agent's proposal.</p>
+      <p>The audit grade upgrades to "decision": you are recording the joint decision of agent and human, with both contributions distinguishable and both retrievable. Crucially, you can answer the question "who made this change?" with both names attached, and you can answer "why?" with the agent's articulated rationale.</p>
+      <p>This is the first phase where Consumer Duty <em>outcome 4 — consumer understanding</em> applies, even for internal engineering tools, because it sets the precedent for how the firm will handle agent-influenced decisions when they later reach customer surfaces.</p>
+
+      <h3 id="phase-3">Phase 3 — Bounded autonomous action</h3>
+      <p>The agent acts within a tightly drawn envelope. The envelope is defined by: specific repositories, pre-approved change types (e.g. dependency upgrades within a semver range, test-coverage-only commits, IaC drift remediation), value caps (e.g. a deployment that consumes under a defined £-cap of cloud spend), and time windows (e.g. business hours, post-deploy soak periods).</p>
+      <p>The audit grade reaches "regulatory": each autonomous action is logged with a complete decision trail, attestation by the SMF owner, and a sample-review schedule (typically 5–10% of actions reviewed monthly by the Model Risk Committee).</p>
+      <p>Phase 3 needs the control plane built — not bolted-on. By this stage you have it because Phases 1 and 2 forced you to build the audit pipeline first.</p>
+
+      <h3 id="phase-4">Phase 4 — Multi-agent delivery</h3>
+      <p>Phase 4 is the steady state, not a finish line. Multiple agents — each with a single responsibility, a permitted scope, an SMF owner, and a budget — coordinate to deliver work end-to-end within their combined envelopes. A spec agent writes the design from a Linear ticket; a coding agent implements; a test agent expands coverage; a review agent runs static and dynamic checks; a deploy agent pushes through pre-approved environments.</p>
+      <p>None of the individual agents is autonomous in the sense the technology press uses the word. The <em>system</em> appears autonomous because the human approval gates are placed at the joints, not at every action.</p>
+    </section>
+
+    <section>
+      <h2 id="audit-trail">The audit-trail schema (the part nobody else writes about)</h2>
+      <p>Every regulated agentic SDLC implementation we have run starts and ends with the audit-trail schema. It is the single most important architectural decision and the one most often deferred. Below is the minimum schema we install in Phase 0 and never have to redesign in later phases.</p>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold min-w-[220px]">Field</th>
+              <th class="px-3 py-3 text-left font-semibold">Purpose</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {auditFields.map((f, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 font-mono text-cyan-400 align-top">{f.field}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{f.purpose}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>The schema is written to an <strong>append-only, hash-chained store</strong> with a 7-year retention. We typically use AWS S3 with Object Lock (Compliance mode) or Azure immutable storage. The hash chain protects against tampering and gives you a forensic posture if a regulator ever asks.</p>
+      <p>A common shortcut — using your APM (Datadog, New Relic) as the audit store — fails the FCA's "tamper-evident" expectations and re-creates the work later under regulatory pressure. Build it once, properly, in Phase 0.</p>
+    </section>
+
+    <section>
+      <h2 id="smcr-mapping">SM&CR mapping</h2>
+      <p>For every agent you put into production, name the SMF holder who owns it. In our 2026 engagements with UK firms, the typical mapping is:</p>
+      <ul>
+        <li><strong>SMF24 (Chief Operations)</strong> — owns agents that touch operational processes, including engineering automation</li>
+        <li><strong>SMF4 (Chief Risk)</strong> — owns model-risk attestation across all agents and the AI Risk Register</li>
+        <li><strong>SMF18 (Other Overall Responsibility)</strong> — fallback for firms without SMF24, often the CTO carries this</li>
+        <li><strong>SMF16 (Compliance Oversight)</strong> — owns the controls that ensure agent outputs meet regulatory perimeter (e.g. financial promotions, advice boundaries)</li>
+      </ul>
+      <p>The mapping is not academic. Each agent's record in the agent register cites its SMF owner, and the SMF owner signs an attestation each quarter that the agent operated within its boundary. If the agent did not, the record shows what it did instead and what was done about it.</p>
+    </section>
+
+    <section>
+      <h2 id="failure-modes">Failure modes we have catalogued</h2>
+      <ul>
+        <li><strong>Phase-skipping pilots.</strong> Firm tries Phase 3 in week one, gets a working demo, declares victory, has no audit trail. Recovery: full restart at Phase 0, three months lost.</li>
+        <li><strong>"Sandbox" overreach.</strong> Agent runs in a sandbox that turns out to share an IAM identity with the production data plane. Recovery: incident, one-time exemption with the FCA, network re-segmentation.</li>
+        <li><strong>Audit trail in the APM.</strong> Datadog or New Relic used as the source of truth. Tampering not preventable. Recovery: rebuild audit pipeline at month six, double work.</li>
+        <li><strong>Anonymous model use.</strong> Agent can choose any model on any provider; no version-pinning. SMF holder cannot attest. Recovery: pin model + version per agent, lose flexibility, regret nothing.</li>
+        <li><strong>No human-in-the-loop budget.</strong> Phase 2 designed but reviewers' time was never carved out; queue grows; team gives up. Recovery: 0.5 FTE per active agent for the first six months.</li>
+        <li><strong>Tool-call sprawl.</strong> Agent given a generic "execute_shell" tool; permits anything. Recovery: typed, narrow tools per agent, list approved by SMF.</li>
+        <li><strong>The "we'll write the policy later" failure.</strong> The agent ships before the policy. Recovery: policy + register written before any code change, even if it slows Phase 1 by a week.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="what-this-costs">What this costs in time and money</h2>
+      <p>For a regulated firm with 30–80 engineers and a working CI/CD pipeline, our experience is:</p>
+      <ul>
+        <li><strong>Phase 0 + 1:</strong> 6–8 weeks elapsed, 1.5 FTE engineering effort, plus 0.2 FTE risk + compliance. Direct vendor cost: minimal (model API spend under £2k/month).</li>
+        <li><strong>Phase 2:</strong> +6–8 weeks, 2.0 FTE, control-plane build begins in parallel.</li>
+        <li><strong>Phase 3:</strong> +8–12 weeks, 3.0 FTE peak, control plane reaches regulatory grade.</li>
+        <li><strong>Phase 4:</strong> ongoing, ~2.0 FTE platform team plus per-agent ownership distributed across product teams.</li>
+      </ul>
+      <p>Total elapsed: 6–9 months from board sign-off to a multi-agent delivery system in production. Total cost of build: typically £400k–£700k including platform, control-plane, and operational team carve-out for the first 18 months. Returns we have measured for firms in Phase 4 sit between 18% and 35% reduction in lead time per change, with no measurable regression in quality or incident rates when the framework is followed.</p>
+    </section>
+
+    <section class="not-prose mt-16 p-8 rounded-xl bg-gradient-to-br from-cyan-950/40 to-slate-900 border border-cyan-500/20">
+      <h2 class="text-2xl font-bold text-white mb-3">Apply this to your firm</h2>
+      <p class="text-slate-300 mb-6">A Phase-Gate Diagnostic runs the framework above against your specific regulatory perimeter, engineering capacity, and existing controls. Two weeks, £6,500, written architecture and operating-model assessment delivered to your board.</p>
+      <a href="/get-started/" class="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors">Book a Fit Call →</a>
+    </section>
+
+    <aside class="mt-16 not-prose">
+      <h2 class="text-lg font-semibold text-cyan-300 mb-4">Related</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>→ <a href="/insights/agent-studio-build-vs-buy/" class="text-cyan-400 hover:text-cyan-300">Agent Studio: Build vs Buy for Regulated Enterprises</a></li>
+        <li>→ <a href="/insights/fca-ai-governance-playbook/" class="text-cyan-400 hover:text-cyan-300">FCA AI Governance Playbook</a></li>
+        <li>→ <a href="/what-we-do/ai-governance/" class="text-cyan-400 hover:text-cyan-300">Our AI Governance service</a></li>
+        <li>→ <a href="/what-we-do/applied-ai/" class="text-cyan-400 hover:text-cyan-300">Applied AI in production</a></li>
+        <li>→ <a href="/industries/finance/" class="text-cyan-400 hover:text-cyan-300">For Finance & Wealth Management</a></li>
+      </ul>
+    </aside>
+  </article>
+</BaseLayout>

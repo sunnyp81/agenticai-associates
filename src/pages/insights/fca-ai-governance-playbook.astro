@@ -1,0 +1,243 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site-config';
+
+const slug = 'fca-ai-governance-playbook';
+const title = 'FCA AI Governance Playbook: SM&CR, Consumer Duty, Model Risk';
+const description = 'An operational playbook for AI deployment under the FCA AI Approach — Senior Manager mapping (SMF4/SMF24), Consumer Duty outcome rubric, AI Risk Register schema, and the controls UK regulated firms are actually expected to operate.';
+const datePublished = '2026-04-30';
+const url = `${siteConfig.url}/insights/${slug}/`;
+
+const controlMap = [
+  { domain: 'Identification', controls: ['Maintain an AI Inventory of every model, agent, and AI-influenced decision flow in production', 'Each entry has owner, model + version, data classes, regulatory perimeter, deployment date, last-review date'] },
+  { domain: 'Risk classification', controls: ['Classify each AI system on a 4-tier scale: Minimal / Limited / Significant / Material', 'Material-tier systems require Board-level approval and a Model Risk attestation pack'] },
+  { domain: 'Senior Manager accountability', controls: ['Each AI system has a named SMF owner (typically SMF24, SMF4, or SMF18)', 'SMF holders attest quarterly that systems operated within boundary'] },
+  { domain: 'Model risk', controls: ['Independent model validation for Significant and Material tiers', 'Annual model review with documented re-attestation', 'Performance drift monitoring with thresholds and escalation paths'] },
+  { domain: 'Consumer Duty outcomes', controls: ['Outcome 1 — Products & services: AI-driven product features designed to consumer benefit', 'Outcome 2 — Price & value: AI-driven pricing decisions tested for fair value', 'Outcome 3 — Consumer understanding: AI-influenced communications meet plain-English standards', 'Outcome 4 — Consumer support: AI-driven support flows tested for vulnerable customers'] },
+  { domain: 'Audit & evidence', controls: ['Tamper-evident audit trail with 7-year retention', 'Sample reviews of AI decisions feeding the Model Risk Committee', 'Incident log linking AI events to firm-wide incident management'] },
+  { domain: 'Third-party AI', controls: ['Outsourcing register entry for every external AI vendor', 'Operational resilience assessment: what happens if vendor fails, raises prices 5×, or deprecates'] },
+  { domain: 'Customer-facing transparency', controls: ['Disclosure to customers when AI materially influences a decision affecting them', 'Right-to-human-review clearly documented and operational'] },
+];
+
+const registerFields = [
+  { field: 'system_id', type: 'string (uuid)', desc: 'Internal identifier' },
+  { field: 'name', type: 'string', desc: 'Human-readable name' },
+  { field: 'description', type: 'string', desc: 'What it does, in plain English' },
+  { field: 'tier', type: 'enum: minimal | limited | significant | material', desc: 'Risk classification' },
+  { field: 'smf_owner', type: 'string', desc: 'Senior Manager Function holder' },
+  { field: 'model + version', type: 'string', desc: 'e.g. claude-opus-4-7@2026-01-15' },
+  { field: 'grounding_sources', type: 'array<string>', desc: 'Knowledge bases, vector stores, retrieval indices' },
+  { field: 'data_classes', type: 'set<string>', desc: 'e.g. {public, internal, customer_pii, financial}' },
+  { field: 'regulatory_perimeter', type: 'array<string>', desc: 'e.g. [Consumer_Duty, FSMA_Article_3, GDPR_Art_22]' },
+  { field: 'consumer_facing', type: 'boolean', desc: 'Does output reach a retail customer?' },
+  { field: 'deployment_date', type: 'date', desc: 'Production live date' },
+  { field: 'last_review_date', type: 'date', desc: 'Last Model Risk Committee review' },
+  { field: 'next_review_due', type: 'date', desc: 'Computed from tier (Material = 6mo, Significant = 12mo, lower = 24mo)' },
+  { field: 'attestation_record', type: 'string (link)', desc: 'Latest SMF attestation document' },
+  { field: 'incident_log_link', type: 'string (link)', desc: 'Reference to firm incident system' },
+  { field: 'kill_switch', type: 'string', desc: 'Documented procedure to disable the system in <60 minutes' },
+];
+
+const faq = [
+  { q: 'Who is accountable for AI under SM&CR?', a: 'A named Senior Manager Function holder for each AI system. The most common assignments in 2026 are SMF24 (Chief Operations) for operational AI, SMF4 (Chief Risk) for model risk and the AI Risk Register itself, SMF18 (Other Overall Responsibility) where SMF24 does not exist, and SMF16 (Compliance Oversight) for AI affecting regulatory perimeter such as financial promotions or advice. Accountability is not delegable — the SMF holder cannot push it to a vendor or to a junior team. They sign the attestation.' },
+  { q: 'Does the FCA have an AI Register that firms have to file?', a: 'There is no public FCA-hosted register that firms file into as of April 2026. What the FCA does expect is that supervised firms maintain their own AI Inventory or AI Risk Register, available on request and aligned with the firm\'s governance and SM&CR responsibilities. The FCA AI Approach makes the inventory expectation explicit. Firms that cannot produce one within hours of a request are at supervisory risk.' },
+  { q: 'How does Consumer Duty apply to AI-driven decisions?', a: 'Directly. The four Consumer Duty outcomes apply to any product, service, or communication that reaches a retail customer, including those influenced by AI. The most common operational gap is outcome 3 (consumer understanding) — AI-driven communications must be testable for plain-English clarity and for vulnerable-customer suitability. The second is outcome 4 (consumer support) — AI-driven support flows must not produce worse outcomes for vulnerable customers, and firms must be able to evidence this with data.' },
+  { q: 'What is the difference between FCA Significant and Material AI risk tiers?', a: 'In our framework, Significant means the AI materially influences regulated decisions but is contained to a defined business unit; Material means the AI sits in a critical business service or directly produces customer-affecting outcomes at scale. Material tier triggers Board-level approval, an independent model validation, and a 6-month review cycle. The FCA does not mandate this 4-tier scheme — but it does expect firms to operate a risk-tiering approach proportionate to potential harm, and our scheme is one defensible interpretation.' },
+  { q: 'Are large language models classified as Material risk by default?', a: 'No. The model is not the unit of analysis — the application is. A general-purpose LLM grounding internal documentation for a retrieval-augmented chatbot used by employees is typically Limited tier. The same model used to draft customer-facing responses without human review is Material tier. Tiering follows use, not technology.' },
+  { q: 'Can we use ChatGPT Enterprise or Claude for Work and stay compliant?', a: 'Yes for non-regulated workloads, with controls. The vendor must be in your outsourcing register, the data classes that flow to the vendor must be approved, and the use case must sit in the appropriate risk tier. For regulated workloads — anything touching regulated decisions, customer data, financial promotions, or advice — you typically need an enterprise contract with explicit data residency, a UK or EU region, the vendor\'s SOC 2 / ISO 27001 evidence in your control library, and an attestation by the SMF owner that the use is bounded.' },
+  { q: 'What is a "kill switch" and what makes one credible?', a: 'A kill switch is the documented procedure that disables an AI system in under 60 minutes from a single decision-maker. Credibility means it has been rehearsed, the access required to invoke it is held by a named on-call rota, and the action is audit-logged. Most firms write the procedure once at deployment and never test it. We recommend quarterly tabletop exercises and at least one annual live-trigger drill in a non-production-equivalent environment.' },
+  { q: 'Where does the AI Act fit?', a: 'For UK firms, the EU AI Act applies if you place AI systems on the EU market or if your output reaches EU users. The Act\'s risk-tiering (Unacceptable / High / Limited / Minimal) is conceptually similar but legally distinct from FCA tiering. UK-only firms primarily follow the FCA AI Approach plus existing UK GDPR, FSMA, and Consumer Duty. Firms with EU exposure must operate both regimes, which usually means the stricter of the two becomes the operational standard.' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@id': `${siteConfig.url}/#founder` },
+  publisher: { '@id': `${siteConfig.url}/#organization` },
+  mainEntityOfPage: url,
+  image: `${siteConfig.url}/og-default.png`,
+  about: ['FCA AI governance', 'AI Consumer Duty fintech', 'AI model risk FCA', 'SM&CR AI accountability', 'FCA AI register', 'AI governance fintech UK', 'Regulated AI deployment UK'],
+  keywords: 'fca ai governance, fca cp24/16 ai, ai consumer duty fintech, ai model risk fca, fca ai register, sm&cr ai accountability, ai governance fintech uk, regulated ai deployment uk',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteConfig.url}/insights/` },
+    { '@type': 'ListItem', position: 3, name: 'FCA AI Governance Playbook', item: url },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} schema={[articleSchema, faqSchema, breadcrumbSchema]} type="article">
+  <article class="mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg">
+    <nav class="text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-cyan-300">Home</a> · <a href="/insights/" class="hover:text-cyan-300">Insights</a> · <span class="text-slate-300">FCA AI Governance Playbook</span>
+    </nav>
+
+    <header class="mb-12 not-prose">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-4">Operational Playbook · 14 min read</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">{title}</h1>
+      <p class="text-xl text-slate-300 leading-relaxed">{description}</p>
+      <p class="mt-6 text-sm text-slate-400">Published 30 April 2026 · By Sunny Patel, Founder, Agentic AI Associates</p>
+      <p class="mt-4 text-xs text-slate-500 italic">This page is informational, not legal advice. Confirm all interpretations with your firm\'s legal and compliance functions.</p>
+    </header>
+
+    <section>
+      <h2 id="why-this-exists">Why this playbook exists</h2>
+      <p>Most published material on FCA AI governance is written by law firms describing what the regulation says. That is necessary, but it is not sufficient. The Heads of Risk, COOs, and CTOs we work with at FCA-supervised firms in 2026 know what the regulation says. What they do not have is a clean operational map of <strong>what to actually run</strong>: which controls, which registers, which review cadences, which Senior Manager attests to what, and which artefacts a supervisor will ask to see when the firm is reviewed.</p>
+      <p>This page is that map. It is the operational view we have built and tested across 2025–2026 engagements with UK fintech, wealth, payments, and insurance firms. It does not replace legal advice or your firm\'s own compliance interpretation. It does give you a defensible starting point.</p>
+    </section>
+
+    <section>
+      <h2 id="regulatory-stack">The regulatory stack you are operating against</h2>
+      <p>For UK financial services firms in 2026, AI governance sits at the intersection of several regimes:</p>
+      <ul>
+        <li><strong>FCA AI Approach</strong> (published April 2024 and updated through 2025) — the FCA\'s articulation of how existing rules apply to AI</li>
+        <li><strong>Senior Managers and Certification Regime (SM&CR)</strong> — accountability for AI outcomes attaches to named Senior Managers</li>
+        <li><strong>Consumer Duty</strong> (PRIN 2A) — outcome-based standards applying to AI-influenced consumer touchpoints</li>
+        <li><strong>SS1/23 model risk management</strong> (PRA, applicable to dual-regulated firms) — model risk principles, frequently used as a template even by FCA-only firms</li>
+        <li><strong>UK GDPR + Article 22</strong> — automated decision-making rights, including AI-driven decisions producing legal or similarly significant effects</li>
+        <li><strong>Operational Resilience</strong> (PS21/3 and related) — important business services, including those underpinned by AI, must remain within impact tolerance</li>
+        <li><strong>EU AI Act</strong> (where you have EU market or user exposure)</li>
+      </ul>
+      <p>Operationally, the firms that implement this well treat the FCA AI Approach as the umbrella and pull specific obligations from the regimes underneath. The playbook below follows that pattern.</p>
+    </section>
+
+    <section>
+      <h2 id="controls-map">The FCA AI Controls Map</h2>
+      <p>Eight control domains. Inside each, the specific controls we install in firms going through Phase-Gate Diagnostic engagements. Adjust to your tier and risk profile, but the domains themselves are non-negotiable.</p>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold min-w-[180px]">Domain</th>
+              <th class="px-3 py-3 text-left font-semibold">Controls</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {controlMap.map((d, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 align-top font-semibold text-white">{d.domain}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">
+                  <ul class="space-y-1 m-0 p-0 list-none">
+                    {d.controls.map((c) => <li>· {c}</li>)}
+                  </ul>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="risk-register">The AI Risk Register schema</h2>
+      <p>The single most-asked-for artefact in supervisory engagements. Every Material- and Significant-tier AI system in your firm has a record with these fields.</p>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold min-w-[180px]">Field</th>
+              <th class="px-3 py-3 text-left font-semibold min-w-[200px]">Type</th>
+              <th class="px-3 py-3 text-left font-semibold">Description</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {registerFields.map((f, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 font-mono text-cyan-400 align-top text-xs">{f.field}</td>
+                <td class="px-3 py-3 align-top text-xs text-slate-400">{f.type}</td>
+                <td class="px-3 py-3 align-top text-xs leading-relaxed">{f.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>A spreadsheet is fine for under 20 systems. Beyond that, you want a small internal application with versioning and event hooks into your existing GRC tooling. Whatever you build, make sure: (1) every record has a designated SMF owner; (2) the next-review-due date is enforced; (3) the record is referenced from every related artefact (model card, vendor contract, incident report).</p>
+    </section>
+
+    <section>
+      <h2 id="smf-mapping">SM&CR mapping in practice</h2>
+      <p>The mapping between AI systems and Senior Manager Functions varies by firm structure. The patterns we see most often:</p>
+      <ul>
+        <li><strong>SMF24 (Chief Operations)</strong> — owns operational AI, including engineering automation, RPA, and back-office processing AI. In firms without SMF24, this commonly falls to SMF18 with the CTO carrying the responsibility</li>
+        <li><strong>SMF4 (Chief Risk)</strong> — owns model risk attestation across the firm, the AI Risk Register itself, and the model validation function</li>
+        <li><strong>SMF16 (Compliance Oversight)</strong> — owns the controls that ensure AI does not breach regulatory perimeter (financial promotions, advice boundaries, customer suitability)</li>
+        <li><strong>SMF17 (MLRO)</strong> — for AI in financial crime detection, false-positive review, and SAR drafting</li>
+        <li><strong>SMF3 (Executive Director)</strong> or SMF1 (CEO) — for Material-tier AI affecting strategic decision-making or significant customer outcomes</li>
+      </ul>
+      <p>Whichever mapping you choose, document the rationale. When the regulator asks "why is SMF24 accountable for this AI?", the answer cannot be "because that\'s where it landed."</p>
+    </section>
+
+    <section>
+      <h2 id="consumer-duty">Consumer Duty for AI — the outcome rubric</h2>
+      <p>Translating the four Consumer Duty outcomes into AI-specific tests:</p>
+      <ul>
+        <li><strong>Outcome 1 — Products and services.</strong> Does the AI feature deliver to the target market? Test: AI feature usage and outcomes broken down by customer segment, with vulnerable-customer cohorts identifiable. Evidence: quarterly product-outcome review with AI-specific section.</li>
+        <li><strong>Outcome 2 — Price and value.</strong> If AI influences pricing or value (e.g. dynamic pricing, AI underwriting), is the outcome fair value? Test: comparative analysis of AI vs non-AI cohort outcomes; statistical fairness testing. Evidence: fair-value review packs include an AI dimension.</li>
+        <li><strong>Outcome 3 — Consumer understanding.</strong> Are AI-generated or AI-shaped communications understandable? Test: readability scoring (Flesch-Kincaid or equivalent), comprehension testing on a sample, vulnerable-customer reviewer panel. Evidence: communication review log with AI-touched items flagged.</li>
+        <li><strong>Outcome 4 — Consumer support.</strong> Do AI-driven support flows treat vulnerable customers no worse than non-AI flows? Test: vulnerable-customer outcome metrics on AI-handled vs human-handled cases; explicit escalation paths to human review. Evidence: customer support outcome reports with AI vs human comparison.</li>
+      </ul>
+      <p>The hardest of these in practice is outcome 4. It requires the operational data to compare AI-handled and human-handled cases on like-for-like vulnerable-customer cohorts. Most firms do not have this data. Building it is a six-month effort and needs to start before AI-driven support reaches Material tier, not after.</p>
+    </section>
+
+    <section>
+      <h2 id="review-cadence">The review cadence</h2>
+      <p>What runs when, in a firm with mature AI governance:</p>
+      <ul>
+        <li><strong>Daily:</strong> automated drift and anomaly monitoring on Material- and Significant-tier systems, with on-call alerting</li>
+        <li><strong>Weekly:</strong> incident triage if anything has been flagged; sample review of agent outputs feeding the next monthly review</li>
+        <li><strong>Monthly:</strong> Model Risk Committee — reviews flagged samples, considers any tier changes, signs off changes to deployed agents</li>
+        <li><strong>Quarterly:</strong> SMF attestations on each owned system; AI Risk Register full review; Consumer Duty AI section in the firm\'s outcome reports</li>
+        <li><strong>Annually:</strong> independent model validation for Material tier; Board AI risk report; full kill-switch drill</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently asked questions</h2>
+      {faq.map((f) => (
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-white">{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="not-prose mt-16 p-8 rounded-xl bg-gradient-to-br from-cyan-950/40 to-slate-900 border border-cyan-500/20">
+      <h2 class="text-2xl font-bold text-white mb-3">Operationalise this in your firm</h2>
+      <p class="text-slate-300 mb-6">A Phase-Gate Diagnostic implements the controls map, AI Risk Register, and SMF attestation pack against your specific regulatory perimeter. Two weeks, £6,500, written deliverables your Senior Managers can sign on.</p>
+      <a href="/get-started/" class="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors">Book a Fit Call →</a>
+    </section>
+
+    <aside class="mt-16 not-prose">
+      <h2 class="text-lg font-semibold text-cyan-300 mb-4">Related</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>→ <a href="/insights/agent-studio-build-vs-buy/" class="text-cyan-400 hover:text-cyan-300">Agent Studio: Build vs Buy for Regulated Enterprises</a></li>
+        <li>→ <a href="/insights/agentic-sdlc-regulated-engineering/" class="text-cyan-400 hover:text-cyan-300">Agentic SDLC for Regulated Engineering Teams</a></li>
+        <li>→ <a href="/what-we-do/ai-governance/" class="text-cyan-400 hover:text-cyan-300">Our AI Governance service</a></li>
+        <li>→ <a href="/industries/fintech/" class="text-cyan-400 hover:text-cyan-300">For Fintech</a></li>
+        <li>→ <a href="/industries/insurance/" class="text-cyan-400 hover:text-cyan-300">For Insurance</a></li>
+      </ul>
+    </aside>
+  </article>
+</BaseLayout>

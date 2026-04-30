@@ -20,6 +20,8 @@ export default defineConfig({
         else if (/\/industries\/$/.test(url)) item.priority = 0.8;
         else if (/\/industries\/[^/]+\/$/.test(url)) item.priority = 0.8;
         else if (/\/get-started\/$/.test(url)) item.priority = 0.8;
+        else if (/\/insights\/$/.test(url)) item.priority = 0.9;
+        else if (/\/insights\/[^/]+\/$/.test(url)) item.priority = 0.9;
         else if (/\/(about|learn)\/$/.test(url)) item.priority = 0.7;
         else if (/\/learn\/[^/]+\/$/.test(url)) item.priority = 0.7;
         else if (/\/locations\/[^/]+\/$/.test(url)) item.priority = 0.7;

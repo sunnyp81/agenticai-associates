@@ -1,0 +1,257 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/data/site-config';
+
+const slug = 'agent-studio-build-vs-buy';
+const title = 'Agent Studio: Build vs Buy for Regulated Enterprises (2026)';
+const description = 'A 12-criterion scoring matrix across seven agent platforms — LangGraph, Bedrock Agents, Copilot Studio, Vertex AI Agent Builder, Writer Palmyra, Glean, and custom — judged for FCA-regulated and £bn-AUM organisations.';
+const datePublished = '2026-04-30';
+const url = `${siteConfig.url}/insights/${slug}/`;
+
+const platforms = [
+  { name: 'LangGraph', vendor: 'LangChain', license: 'MIT (open)', deployment: 'Self-host any cloud or on-prem' },
+  { name: 'Bedrock Agents', vendor: 'AWS', license: 'Proprietary', deployment: 'AWS regions only' },
+  { name: 'Copilot Studio', vendor: 'Microsoft', license: 'Proprietary', deployment: 'Microsoft 365 / Azure' },
+  { name: 'Vertex AI Agent Builder', vendor: 'Google', license: 'Proprietary', deployment: 'Google Cloud' },
+  { name: 'Writer Palmyra', vendor: 'Writer', license: 'Proprietary', deployment: 'Writer cloud / private dedicated' },
+  { name: 'Glean Workflow', vendor: 'Glean', license: 'Proprietary', deployment: 'Glean cloud / dedicated tenant' },
+  { name: 'Custom build', vendor: 'In-house', license: 'Owned', deployment: 'Wherever you want' },
+];
+
+const criteria = [
+  {
+    n: 1, name: 'Audit-trail completeness', weight: 'Critical for FCA',
+    rows: ['Strong — full state graph capturable', 'Strong — CloudTrail + Bedrock logs', 'Partial — Purview integration but coarse', 'Strong — Cloud Logging + Trace', 'Partial — workflow logs, no token-level trace', 'Strong — full step + retrieval log', 'As-built — depends on instrumentation'],
+  },
+  {
+    n: 2, name: 'Data residency (UK/EU)', weight: 'Critical for FCA',
+    rows: ['Whatever you deploy', 'eu-west-2 + UK Sovereign region', 'UK data boundary (M365)', 'europe-west2 (London)', 'EU only on enterprise tier', 'Dedicated EU tenant', 'Whatever you deploy'],
+  },
+  {
+    n: 3, name: 'Model portability', weight: 'High',
+    rows: ['Any LLM via adapter', 'Bedrock catalogue (~50 models, no Anthropic in some regions)', 'GPT-4 family + Phi (locked)', 'Gemini + Anthropic + Llama on Vertex', 'Palmyra + select frontier (locked stack)', 'OpenAI/Anthropic/Gemini swap', 'Anything — you own the call'],
+  },
+  {
+    n: 4, name: 'On-prem / air-gap option', weight: 'High for some regulated',
+    rows: ['Yes — open source', 'No', 'No', 'No', 'No (private dedicated only)', 'No', 'Yes'],
+  },
+  {
+    n: 5, name: 'Identity + RBAC integration', weight: 'High',
+    rows: ['Build it (OIDC libs available)', 'IAM-native', 'Entra ID native — strongest in class', 'IAM-native', 'SAML/SCIM standard', 'SAML/SCIM, Slack/Drive/Confluence ACLs respected', 'Whatever you build'],
+  },
+  {
+    n: 6, name: 'SM&CR mapping support', weight: 'Critical for FCA',
+    rows: ['Build it', 'Manual via tags + IAM', 'Manual via Purview labels', 'Manual via labels + IAM', 'Workflow-level approvals', 'Workflow-level approvals', 'You design it'],
+  },
+  {
+    n: 7, name: 'Tool/skill ecosystem', weight: 'High',
+    rows: ['Vast — any Python lib', 'Bedrock action groups + Lambda', 'Power Platform (~1,400 connectors)', 'Vertex extensions + functions', 'Writer skills marketplace (limited)', 'Curated enterprise connectors', 'Whatever you ship'],
+  },
+  {
+    n: 8, name: 'Eval + observability', weight: 'High',
+    rows: ['LangSmith (paid) or roll your own', 'Bedrock Evaluations (basic) + Studio', 'Copilot Studio Analytics (basic)', 'Vertex AI Evaluation', 'Built-in eval suite (good)', 'Strong analytics, weak eval', 'Build with Langfuse/Helicone/Arize'],
+  },
+  {
+    n: 9, name: 'Cost predictability', weight: 'Medium',
+    rows: ['Token + infra (variable)', 'Token + agent invocation (variable)', 'Per-user/month (predictable)', 'Token + agent (variable)', 'Per-user/month (predictable)', 'Per-user/month (predictable)', 'Whatever you build to'],
+  },
+  {
+    n: 10, name: 'Time-to-first-agent (regulated context)', weight: 'Medium',
+    rows: ['6–10 weeks', '4–8 weeks', '2–4 weeks', '4–8 weeks', '4–6 weeks', '2–6 weeks', '12–20 weeks'],
+  },
+  {
+    n: 11, name: 'Vendor concentration risk', weight: 'High',
+    rows: ['Low — open source', 'High — AWS lock-in', 'Very high — MS lock-in', 'High — GCP lock-in', 'High', 'High', 'Low (your code)'],
+  },
+  {
+    n: 12, name: 'Best for', weight: '',
+    rows: ['Engineering-led firms with platform team', 'AWS-native shops with regulated workloads', 'M365/Dynamics shops, internal copilots', 'GCP-native shops, multi-modal needs', 'Regulated enterprise, content-heavy', 'Knowledge-worker productivity layer', 'Firms with strategic AI moat ambitions'],
+  },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished,
+  dateModified: datePublished,
+  author: { '@id': `${siteConfig.url}/#founder` },
+  publisher: { '@id': `${siteConfig.url}/#organization` },
+  mainEntityOfPage: url,
+  image: `${siteConfig.url}/og-default.png`,
+  about: ['Agent platform architecture', 'Build vs buy AI agents', 'LangGraph', 'Bedrock Agents', 'Copilot Studio', 'Regulated fintech AI'],
+  keywords: 'agent studio architecture, agent platform build vs buy, langgraph vs bedrock agents, copilot studio enterprise, ai agent orchestration platform, agentic ai control plane, agent platform fintech',
+};
+
+const faq = [
+  { q: 'When does building a custom agent platform make sense?', a: 'When agentic AI is a strategic moat (not a cost line), when no vendor stack covers your regulatory perimeter (rare in UK fintech but possible in defence, pharma R&D, or sovereign cloud mandates), or when you operate at a scale where platform-fee economics break against custom infrastructure (typically £30k+/month in vendor fees).' },
+  { q: 'Why does LangGraph score well despite being open source?', a: 'For regulated firms, the open-source license is a feature, not a liability. It means full visibility of the orchestration logic for audit, no vendor data residency surprises, and zero lock-in if you need to migrate. The trade-off is that you carry the platform-team cost — typically two senior engineers — that you would otherwise pay for as part of a vendor SaaS fee.' },
+  { q: 'Does Copilot Studio satisfy FCA AI governance requirements?', a: 'Partially. It covers identity, ACLs, and basic logging well via Entra and Purview. Where it falls short for FCA-supervised firms is fine-grained audit at the token/decision level, model risk attestation, and SM&CR-level approval workflows for autonomous actions. These need to be layered on top of Copilot Studio with a control plane the FCA-supervised entity owns.' },
+  { q: 'How do you score vendor concentration risk in practice?', a: 'We map every workload to its platform, model, retrieval store, and identity provider, then ask: if the platform vendor changed pricing 5×, deprecated an API, or had a 30-day outage, what is the migration cost in calendar weeks and engineering effort? Anything over 12 weeks of migration is a Critical concentration risk that needs a board-level mitigation.' },
+  { q: 'What is a "control plane" in this context?', a: 'A control plane is the unified policy, identity, audit, and budget layer that sits between your agents and the data, knowledge bases, tools, and models they access. It enforces who can do what, logs every decision, and gives the FCA SMF holder a single place to attest to. In our taxonomy it is distinct from the agent platform (LangGraph, Bedrock, etc.) — the platform runs agents; the control plane governs them.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteConfig.url}/insights/` },
+    { '@type': 'ListItem', position: 3, name: 'Agent Studio Build vs Buy', item: url },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
+  type="article"
+>
+  <article class="mx-auto max-w-4xl px-6 py-16 prose prose-invert prose-lg">
+    <nav class="text-sm text-slate-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-cyan-300">Home</a> · <a href="/insights/" class="hover:text-cyan-300">Insights</a> · <span class="text-slate-300">Agent Studio: Build vs Buy</span>
+    </nav>
+
+    <header class="mb-12 not-prose">
+      <p class="text-sm font-semibold uppercase tracking-wider text-cyan-400 mb-4">Reference Framework · 12 min read</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">{title}</h1>
+      <p class="text-xl text-slate-300 leading-relaxed">{description}</p>
+      <p class="mt-6 text-sm text-slate-400">Published 30 April 2026 · By Sunny Patel, Founder, Agentic AI Associates</p>
+    </header>
+
+    <section>
+      <h2 id="tldr">TL;DR</h2>
+      <p>If you are a £bn-AUM, FCA-regulated firm asking whether to build or buy your agent studio, the honest answer is <strong>hybrid</strong>: buy the agent platform, build the control plane. The platform decision (LangGraph, Bedrock, Copilot Studio, Vertex, Writer, Glean) is a make-or-buy of orchestration mechanics. The control-plane decision — policy, identity, audit, model-risk attestation, SM&CR approval — is non-negotiably yours, because the FCA holds your Senior Manager accountable, not the vendor.</p>
+      <p>Below is the 12-criterion matrix we use in Phase-Gate Diagnostic engagements, the decision tree we hand to boards, and the three patterns we have seen succeed in regulated UK firms in 2025–2026.</p>
+    </section>
+
+    <section>
+      <h2 id="why-the-question-is-mis-framed">Why "build vs buy" is the wrong question</h2>
+      <p>In the conversations we have with CTOs and Heads of Engineering at FCA-supervised firms — wealth managers, payments platforms, insurance carriers, savings apps — the build-vs-buy framing arrives pre-loaded with a mistake: it assumes the agent platform <em>is</em> the strategic asset. It is not. The strategic asset is the <strong>control plane</strong>: the layer that governs which agents can access which data under which policy, with what audit, attested by which Senior Manager.</p>
+      <p>We have yet to see a regulated firm where the agent platform itself is the differentiator. We have seen many where the control plane is — because the control plane is what your auditor, your compliance team, your CRO, and the FCA all want a single place to inspect. Vendors do not give you that single place. You have to design it.</p>
+      <p>Reframed properly, the question becomes:</p>
+      <ol>
+        <li>Which <strong>agent platform</strong> minimises time-to-production and ongoing engineering load while satisfying our regulatory perimeter?</li>
+        <li>Which <strong>control-plane components</strong> must we own outright, regardless of platform choice?</li>
+        <li>How do we sequence the two so that platform decisions do not foreclose control-plane options later?</li>
+      </ol>
+      <p>The matrix below answers the first question. The decision tree at the end answers the second and third.</p>
+    </section>
+
+    <section>
+      <h2 id="scoring-matrix">The 12-criterion scoring matrix</h2>
+      <p>Seven platforms, twelve criteria, scored as we have observed them perform in 2025–2026 engagements with UK regulated firms. Where a platform's behaviour depends on tier or configuration, we have noted the realistic enterprise default rather than the marketing claim.</p>
+
+      <div class="overflow-x-auto my-8 not-prose rounded-lg border border-slate-800">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-900 text-cyan-300">
+            <tr>
+              <th class="px-3 py-3 text-left font-semibold">#</th>
+              <th class="px-3 py-3 text-left font-semibold min-w-[180px]">Criterion</th>
+              {platforms.map((p) => <th class="px-3 py-3 text-left font-semibold min-w-[160px]">{p.name}</th>)}
+            </tr>
+          </thead>
+          <tbody class="text-slate-300">
+            {criteria.map((c, idx) => (
+              <tr class={idx % 2 === 0 ? 'bg-slate-950/50' : 'bg-slate-900/30'}>
+                <td class="px-3 py-3 font-mono text-cyan-400">{c.n}</td>
+                <td class="px-3 py-3 align-top"><div class="font-semibold text-white">{c.name}</div>{c.weight && <div class="text-xs text-slate-500 mt-1">{c.weight}</div>}</td>
+                {c.rows.map((r) => <td class="px-3 py-3 align-top text-xs leading-relaxed">{r}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>A platform's score on any single criterion is rarely the deciding factor. The pattern of <em>which criteria matter most for your firm</em> is. A wealth manager with £5bn AUM and a UK-only client base will weight criteria 1, 2, 6, and 11 (audit, residency, SM&CR, concentration) above criteria 7 and 9 (ecosystem, cost predictability). A neobank with a US expansion plan inverts that.</p>
+    </section>
+
+    <section>
+      <h2 id="three-archetypes">Three patterns that work</h2>
+
+      <h3 id="pattern-a">Pattern A — Buy platform, build control plane (the £bn fintech default)</h3>
+      <p>The pattern we have seen succeed most often in regulated UK firms with £500m+ AUM or £100m+ revenue. The firm picks a vendor agent platform — typically Bedrock Agents (if AWS-native), Copilot Studio (if M365-native), or LangGraph self-hosted (if engineering-led with a platform team) — and builds an in-house control plane that sits in front of every agent invocation.</p>
+      <p>The control plane is the single place where:</p>
+      <ul>
+        <li>An agent identity is resolved to a Senior Manager-approved scope</li>
+        <li>The data classification of every retrieval is checked against the agent's permitted classes</li>
+        <li>The decision-and-tool-call log is written to an immutable audit store with a 7-year retention</li>
+        <li>Budget and rate limits are enforced per-agent, per-team, and per-purpose</li>
+        <li>Model risk attestation is bound to model + version + grounding source</li>
+      </ul>
+      <p>Time to first agent in production: 8–12 weeks. Time to scaled deployment across 5+ business areas: 6–9 months. Vendor lock-in is real but bounded — the control plane is portable, so a platform swap is contained to the agent-orchestration layer.</p>
+
+      <h3 id="pattern-b">Pattern B — Vendor stack with shadow control plane (the time-to-market path)</h3>
+      <p>Right pattern for SMEs in regulated industries (sub-£100m revenue) where the cost of a custom control plane is disproportionate, and time-to-market is the binding constraint.</p>
+      <p>Choose a single vendor stack that bundles agent platform, identity, retrieval, and observability — typically Glean, Writer, or Microsoft (Copilot Studio + Purview + Sentinel). Layer a thin "shadow control plane" on top consisting of:</p>
+      <ul>
+        <li>A board-signed agent register (spreadsheet, then a simple internal app) listing every deployed agent with owner, scope, model, data classes, and approval date</li>
+        <li>A weekly export of the vendor's audit log into your own immutable store</li>
+        <li>A monthly model-risk review meeting feeding into the AI Risk Register</li>
+      </ul>
+      <p>You accept platform lock-in in exchange for buying back six months of engineering time. Defensible to the FCA if and only if the agent register is operationally live and the Senior Manager attesting can demonstrate it.</p>
+
+      <h3 id="pattern-c">Pattern C — Build everything (rare, justified)</h3>
+      <p>Justified in three cases: (a) AI delivery <em>is</em> the product (not a productivity layer), (b) sovereign or air-gapped deployment requirements that no vendor satisfies, or (c) scale at which vendor fees exceed £400k/year and platform-team economics flip.</p>
+      <p>Time to first production agent: 16–24 weeks. Total cost of ownership for the first 18 months is rarely below £600k including platform team, eval infrastructure, and observability. Worth it when AI is a moat. Almost never worth it when AI is an enabler.</p>
+    </section>
+
+    <section>
+      <h2 id="decision-tree">The decision tree</h2>
+      <p>Five questions, asked in order. Stop at the first <strong>No</strong>.</p>
+      <ol>
+        <li><strong>Is agentic AI a strategic moat for the firm, or an enabler?</strong> If moat, jump to question 5. If enabler, continue.</li>
+        <li><strong>Is the firm AWS-, M365-, or GCP-native?</strong> Default to the platform's native agent layer (Bedrock, Copilot Studio, Vertex). Vendor concentration risk is already incurred elsewhere; agents shouldn't compound it.</li>
+        <li><strong>Do we have a platform engineering team of 2+ senior engineers with capacity?</strong> If yes, LangGraph self-hosted is in play and gives the cleanest control-plane integration. If no, stick with native vendor.</li>
+        <li><strong>Are our data residency or air-gap requirements impossible to meet on the chosen vendor's UK/EU regions?</strong> If yes, escalate to Pattern C. If no, lock the platform and design the control plane.</li>
+        <li><strong>Have we sized the control-plane build at 2–4 engineers for 6–9 months, with a designated SMF owner?</strong> If yes, proceed. If no, the platform decision is premature — fix the control-plane staffing first.</li>
+      </ol>
+      <p>The most common failure mode we see is firms who ship a vendor-platform pilot in 6 weeks, declare success, and then spend the next year discovering they have no control plane and no path to SM&CR-attestable scale.</p>
+    </section>
+
+    <section>
+      <h2 id="what-we-do-with-this">What we do with this in a Phase-Gate Diagnostic</h2>
+      <p>In a two-week Phase-Gate Diagnostic engagement (£6,500), the matrix above is one of three deliverables. We run it against your specific regulatory perimeter, AWS/Azure/GCP commitments, and existing engineering capacity. The other two deliverables are a control-plane reference architecture and a 12-month phased delivery plan with FCA-control checkpoints.</p>
+      <p>The output is a written assessment your board can act on — not a PowerPoint deck and not an open-ended consulting engagement. We have run this for firms making first agent decisions, and for firms recovering from a stalled pilot. In both cases the same matrix applies.</p>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently asked questions</h2>
+      {faq.map((f) => (
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-white">{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="not-prose mt-16 p-8 rounded-xl bg-gradient-to-br from-cyan-950/40 to-slate-900 border border-cyan-500/20">
+      <h2 class="text-2xl font-bold text-white mb-3">Run this against your firm</h2>
+      <p class="text-slate-300 mb-6">A Phase-Gate Diagnostic is two weeks, £6,500, ends with a written architecture and operating-model assessment, and pays for itself the first time it stops a wrong platform decision.</p>
+      <a href="/get-started/" class="inline-block px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition-colors">Book a Fit Call →</a>
+    </section>
+
+    <aside class="mt-16 not-prose">
+      <h2 class="text-lg font-semibold text-cyan-300 mb-4">Related</h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>→ <a href="/insights/agentic-sdlc-regulated-engineering/" class="text-cyan-400 hover:text-cyan-300">Agentic SDLC for Regulated Engineering Teams</a></li>
+        <li>→ <a href="/insights/fca-ai-governance-playbook/" class="text-cyan-400 hover:text-cyan-300">FCA AI Governance Playbook</a></li>
+        <li>→ <a href="/what-we-do/agentic-ai/" class="text-cyan-400 hover:text-cyan-300">Our Agentic AI service</a></li>
+        <li>→ <a href="/industries/fintech/" class="text-cyan-400 hover:text-cyan-300">For Fintech</a></li>
+        <li>→ <a href="/industries/finance/" class="text-cyan-400 hover:text-cyan-300">For Finance & Wealth Management</a></li>
+      </ul>
+    </aside>
+  </article>
+</BaseLayout>
