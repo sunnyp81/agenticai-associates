@@ -148,6 +148,12 @@ import { siteConfig } from '@/data/site-config';
           },
           body: JSON.stringify(data),
         });
+        // Fire-and-forget: also send to AAA Inbound Leads intake worker (creates Paperclip issue + wakes AAA-Sales)
+        fetch('https://aaa-intake.sunnypat81.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ brand: 'AAA', name: data.name, email: data.email, phone: data.$phone || '', message: `Topic: ${data.$topic || 'n/a'}\nCompany: ${data.$company || 'n/a'}\n\n${data.message}` }),
+        }).catch(() => {});
         form.hidden = true;
         successEl.hidden = false;
       } catch (err) {
