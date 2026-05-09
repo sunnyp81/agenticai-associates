@@ -431,23 +431,23 @@
       "intro": "<p>AI is only as good as the data behind it. We help UK businesses build the data infrastructure that makes AI possible — from foundational pipelines to advanced analytics. Without solid data foundations, even the best models produce unreliable results.</p>\n<p>Most AI projects fail at the data layer, not the model layer. Teams discover their customer records sit across 12 systems with conflicting schemas. The product catalogue exists in three places with different SKU conventions. The data warehouse last refreshed six months ago. Our data engagements always begin with an honest audit through our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> so we know exactly what we are working with before recommending change.</p>\n<p>Whether you need a modern data warehouse, real-time pipelines, or production-grade machine learning models, we build the foundations that make AI delivery predictable. Most pilots ship in 8-12 weeks against a single high-value use case before scaling. We work with Snowflake, Databricks, BigQuery, Synapse, dbt, Fivetran, Airflow, and the major cloud platforms — no vendor lock-in.</p>",
       "sections": [
         {
-          "heading": "Data Strategy and Architecture",
+          "heading": "How Should You Design Your Data Strategy and Architecture?",
           "body": "<p>Data strategy work translates business priorities into a concrete data architecture decision tree. Should you centralise in a warehouse, federate across a lakehouse, or run a data mesh? Which workloads belong in real-time pipelines vs nightly batch? How does your data layer support agentic AI workflows where models read AND write back? We design pragmatic architectures that suit your scale, team, and budget — not theoretical reference architectures from a vendor whitepaper. Our <a href=\"/what-we-do/ai-strategy/\">AI strategy</a> work always feeds into the data architecture phase, ensuring every pipeline serves a business outcome rather than building data assets that nobody uses.</p>"
         },
         {
-          "heading": "Pipelines and Integration",
+          "heading": "How Do You Build Reliable Data Pipelines and Integrations?",
           "body": "<p>Your data lives across CRMs, ERPs, marketing platforms, finance systems, ticketing tools, and dozens of SaaS apps. We build the pipelines that bring it together reliably — using Fivetran or Airbyte for ingestion, dbt for transformation, and Airflow or Dagster for orchestration. Real-time pipelines stream events from Kafka or Kinesis into your warehouse and AI models. Reverse ETL pushes enriched data back into operational systems where teams already work. The <a href=\"/what-we-do/ai-automation/\">AI automation</a> we build relies on clean integrated data, and the <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> systems we deploy use the same pipelines as their connective tissue.</p>"
         },
         {
-          "heading": "Analytics and Machine Learning",
+          "heading": "What Can Analytics and Machine Learning Reveal for Your Business?",
           "body": "<p>Analytics and ML capabilities turn data into decisions. We build dashboards in Looker, Tableau, Power BI, or Metabase tailored to the audience — exec dashboards for boards, operational reports for shift leaders, ad-hoc analysis tools for analysts. Machine learning models cover classification (customer segmentation, fraud scoring), regression (forecasting, pricing), clustering (cohort discovery), and recommendations. Every model ships with explainability built in, monitoring in production, and retraining pipelines so accuracy does not silently drift. The <a href=\"/what-we-do/applied-ai/\">applied AI</a> capability turns model outputs into specific business products like demand forecasts and predictive maintenance schedules.</p>"
         },
         {
-          "heading": "Data Governance",
+          "heading": "Why Does Data Governance Matter for AI Success?",
           "body": "<p>Data governance is the unsexy work that determines whether your AI program survives an audit, a regulator visit, or a major incident. We help you establish clear data ownership, classification taxonomies, retention schedules, access policies, lineage tracking, and quality monitoring. UK GDPR, sector-specific rules (FCA SS1/23, NHS DSPT, ICO employment guidance), and the new EU AI Act all demand provable data governance. Our governance frameworks integrate with the wider <a href=\"/what-we-do/ai-governance/\">AI governance</a> work so model and data accountability live in the same operating model rather than being managed separately by different teams.</p>"
         },
         {
-          "heading": "Common Data and AI Use Cases",
+          "heading": "What Are the Highest-ROI Data and AI Use Cases?",
           "body": "<p>Five clusters of work consistently deliver the strongest ROI for businesses building data foundations alongside AI capability.</p>\n<ul>\n  <li><strong>Customer data unification:</strong> identity resolution, CDP build-out, single customer view, GDPR-compliant first-party data activation.</li>\n  <li><strong>Operational analytics:</strong> real-time dashboards on inventory, throughput, SLAs, financial position, with alerting on threshold breaches.</li>\n  <li><strong>Predictive modelling:</strong> demand forecasting, attrition prediction, anomaly detection, propensity scoring across the customer base.</li>\n  <li><strong>Reverse ETL and activation:</strong> push warehouse-derived insights back to Salesforce, HubSpot, ad platforms, and customer service tools.</li>\n  <li><strong>ML platform and MLOps:</strong> feature stores, model registries, deployment pipelines, monitoring, retraining triggers.</li>\n</ul>\n<p>Most clients get the strongest first win from customer unification or operational analytics — both create immediate business value while laying the foundation for downstream AI work. Our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> ranks these against your stack, team, and revenue priorities.</p>"
         }
       ],
@@ -479,12 +479,28 @@
       ],
       "faq": [
         {
-          "question": "Do we need a data strategy before starting AI?",
-          "answer": "In most cases, yes. AI depends on good data. A data strategy ensures you have the right data, in the right format, with the right governance."
+          "question": "How much does data and AI infrastructure consultancy cost?",
+          "answer": "Phase 1 Diagnostic is £6,500 fixed fee (3 weeks) — covers a data maturity audit and prioritised roadmap. Phase 2 Build runs at £850/day embedded, typically 3–6 months. Phase 3 Retain is £10,000/month for ongoing governance and pipeline support."
         },
         {
-          "question": "What if our data is a mess?",
-          "answer": "That is common. We start with a data audit, identify the most critical gaps, and build a phased plan to get your data AI-ready."
+          "question": "How quickly can we see value from a data pipeline project?",
+          "answer": "A focused data pipeline pilot typically ships in 8–12 weeks and delivers the first usable analytics within that window. Phase 2 Build then scales across the estate over 3–6 months."
+        },
+        {
+          "question": "What ROI can we expect from modern data infrastructure?",
+          "answer": "Clients typically see 20–40% reduction in analyst prep time, 30–50% faster time-to-insight for business decisions, and 15–25% working capital release from better demand forecasting — all within the first two quarters after launch."
+        },
+        {
+          "question": "Who benefits most from a data and AI infrastructure engagement?",
+          "answer": "Mid-market businesses (50–500 employees) that have data spread across multiple SaaS tools and ERP systems, but lack a unified analytics layer. Also organisations that have tried AI projects and hit the data-quality wall before achieving production deployment."
+        },
+        {
+          "question": "Which cloud platforms and tools do you work with?",
+          "answer": "We work with Snowflake, Databricks, BigQuery, Azure Synapse, dbt, Fivetran, Airbyte, Airflow, and Dagster. We are vendor-neutral — we recommend the stack that fits your existing infrastructure and team skills, not the one we happen to resell."
+        },
+        {
+          "question": "Do we need to migrate our existing systems to benefit?",
+          "answer": "Rarely. We build pipelines that sit alongside your existing ERP, CRM, and finance systems rather than replacing them. The goal is to unlock the data already in your systems, not force a costly rip-and-replace project."
         }
       ],
       "relatedServices": [
@@ -497,7 +513,14 @@
         "healthcare",
         "retail",
         "manufacturing"
-      ]
+      ],
+      "definedTerm": {
+        "term": "Data & AI Infrastructure",
+        "definition": "The pipelines, warehouses, analytics platforms, and ML models organisations build to make AI projects reliable and production-ready.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Data_engineering"
+        ]
+      }
     },
     {
       "slug": "conversational-ai",
@@ -510,23 +533,23 @@
       "intro": "<p>Conversational AI has moved far beyond scripted chatbots. We build systems that understand context, hold real conversations across multiple turns, and integrate with your back-office systems to actually resolve issues — not just deflect them. The technology now genuinely deflects 50-70% of contact-centre volume without frustrating customers.</p>\n<p>The UK businesses we work with — from financial services firms to retailers to NHS trusts — typically deflect 50-70% of inbound contact-centre volume within the first quarter while improving CSAT scores. The recovered agent capacity goes back into complex cases that need human empathy and judgement, not extra hires.</p>\n<p>Every conversational AI engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> mapping your contact-centre platform, knowledge base, CRM, and identity verification stack. We work natively with Genesys, NICE, Five9, Zendesk, Intercom, Salesforce Service Cloud, and the major UK-hosted contact-centre platforms. Pilots ship in 6-10 weeks. Every system respects PCI DSS, UK GDPR, the FCA fair customer treatment principles, and accessibility requirements under the Equality Act 2010.</p>",
       "sections": [
         {
-          "heading": "Beyond Basic Chatbots",
+          "heading": "How Has Conversational AI Moved Beyond Basic Chatbots?",
           "body": "<p>Old-school decision-tree chatbots fail because customers do not phrase questions the way the script anticipates. Modern conversational AI uses large language models grounded in your knowledge base via retrieval — so it understands intent flexibly while citing real source documents. We build systems that handle multi-turn conversations, resolve issues by calling back-office APIs (not just providing information), and escalate cleanly to human agents with full context. The <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> patterns we use let conversations span multiple systems — order lookup → return triage → refund processing → confirmation — without bouncing the customer between channels.</p>"
         },
         {
-          "heading": "Omnichannel Deployment",
+          "heading": "How Do You Deploy Conversational AI Across Multiple Channels?",
           "body": "<p>Customers do not think in channels — they expect the same conversation to continue from chat to phone to email. We deploy unified conversational AI across web chat, WhatsApp Business, Facebook Messenger, voice IVR, in-app chat, and email. State persists across channels so customers never repeat themselves. Voice deployments use modern speech recognition and synthesis to feel natural rather than robotic. Integration with your contact-centre platform (Genesys, NICE, Five9, Salesforce Service Cloud) means agents always inherit full context when calls escalate, and post-call summaries write back automatically. The <a href=\"/what-we-do/ai-automation/\">AI automation</a> capability handles the after-call work that wastes 30-40% of agent time today.</p>"
         },
         {
-          "heading": "Measurable Customer Support Impact",
+          "heading": "How Do You Measure the Customer Support Impact of Conversational AI?",
           "body": "<p>Conversational AI ROI is straightforward to measure. Containment rate (issues resolved without human handoff), CSAT for AI conversations vs human, average handle time, first-contact resolution, and net cost per contact. UK retailers we work with hit 55-65% containment within three months for high-volume issue types like order tracking, returns, and store information. Financial services typically reach 40-50% containment in the first year (more nuanced regulated conversations limit the ceiling). Our <a href=\"/industries/retail/\">retail</a> and <a href=\"/industries/finance/\">financial services</a> work both rely on the same conversational AI patterns adapted for sector-specific compliance and CX expectations.</p>"
         },
         {
-          "heading": "Enterprise Knowledge Bases",
+          "heading": "How Can Conversational AI Power Internal Knowledge Bases?",
           "body": "<p>The biggest internal use case for conversational AI is employee enablement. We build knowledge agents that answer staff questions about HR policy, IT support, procurement processes, brand guidelines, sales enablement materials, and product technical specifications. Retrieval-augmented generation grounds every answer in your actual documentation — not hallucinated content. Source citation lets users verify and dig deeper. Permission-aware retrieval ensures sensitive content stays restricted. The same <a href=\"/what-we-do/data-ai/\">data AI</a> infrastructure that powers customer-facing AI feeds the internal knowledge agents, and the <a href=\"/what-we-do/agentic-ai/\">agentic AI</a> framework lets internal agents take action — raising tickets, drafting documents, scheduling meetings — not just answer questions.</p>"
         },
         {
-          "heading": "Highest-ROI Conversational AI Use Cases",
+          "heading": "What Are the Highest-ROI Conversational AI Use Cases?",
           "body": "<p>Five clusters consistently deliver the strongest combination of cost reduction and CX improvement.</p>\n<ul>\n  <li><strong>Customer support deflection:</strong> tier-1 issue resolution, order and account queries, returns and refunds, store and branch information.</li>\n  <li><strong>Sales and pre-sales:</strong> product discovery, quote requests, qualification, appointment booking, abandoned-cart recovery conversations.</li>\n  <li><strong>Internal employee enablement:</strong> HR policy chat, IT support tier-1, procurement guidance, sales enablement, technical knowledge.</li>\n  <li><strong>Field service and operations:</strong> appointment scheduling, technician dispatch, status updates, completion confirmations, customer surveys.</li>\n  <li><strong>Regulated conversations:</strong> banking servicing within FCA boundaries, insurance claims first notification, NHS appointment management within DSPT.</li>\n</ul>\n<p>Most teams get the strongest first win from customer support deflection or internal employee enablement — both deliver measurable cost savings without touching regulated decisions. Our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> ranks these against your contact-centre platform, knowledge base maturity, and compliance environment.</p>"
         }
       ],
@@ -558,12 +581,28 @@
       ],
       "faq": [
         {
-          "question": "How is this different from a basic chatbot?",
-          "answer": "Basic chatbots follow scripts. Our conversational AI systems understand context, handle complex queries, access your data, and know when to bring in a human."
+          "question": "How much does a conversational AI project cost?",
+          "answer": "Phase 1 Diagnostic is £6,500 (3 weeks) and maps your contact-centre platform, knowledge base, and CRM integration before scoping the build. Phase 2 Build runs at £850/day, typically 3–6 months for a production-grade system. Phase 3 Retain is £10,000/month for ongoing optimisation and retraining."
         },
         {
-          "question": "What channels can you deploy to?",
-          "answer": "Web chat, WhatsApp, SMS, voice, Microsoft Teams, Slack — any channel your customers or staff use."
+          "question": "How quickly will a conversational AI system pay for itself?",
+          "answer": "Most clients hit payback within 6–9 months. A typical mid-size contact centre sees 50–70% containment within the first quarter, reducing cost-per-contact by 30–50%. A pilot ships in 6–10 weeks, so the ROI clock starts early."
+        },
+        {
+          "question": "What containment rates can we realistically achieve in Year 1?",
+          "answer": "UK retailers typically reach 55–65% containment for high-volume issue types within three months. Financial services firms, where conversations are more regulated, typically reach 40–50% in the first year. Both figures improve as the system learns from live interactions."
+        },
+        {
+          "question": "Which businesses benefit most from conversational AI?",
+          "answer": "Businesses handling 500+ inbound contacts per week across any channel — telephone, web chat, email, or WhatsApp. Contact centres, ecommerce brands, financial services firms, and HR teams with high-volume repetitive enquiries all see the fastest payback."
+        },
+        {
+          "question": "How does conversational AI integrate with our existing contact-centre platform?",
+          "answer": "We work natively with Genesys, NICE, Five9, Zendesk, Intercom, and Salesforce Service Cloud. Integration typically takes 2–4 weeks within Phase 2 Build, and agents always inherit full conversation context when calls escalate."
+        },
+        {
+          "question": "How do you handle PCI DSS and UK GDPR compliance in a conversational AI system?",
+          "answer": "Every system we build respects PCI DSS, UK GDPR, FCA fair-treatment principles, and accessibility requirements under the Equality Act 2010 from day one. Sensitive data such as card numbers is masked in transit and never stored in conversation logs."
         }
       ],
       "relatedServices": [
@@ -576,7 +615,14 @@
         "healthcare",
         "finance",
         "retail"
-      ]
+      ],
+      "definedTerm": {
+        "term": "Conversational AI",
+        "definition": "Software that understands and generates natural language in dialogue — chatbots, voice assistants, and multi-turn agents — enabling customers and staff to interact with business systems in plain English.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Chatbot"
+        ]
+      }
     },
     {
       "slug": "ai-governance",
@@ -668,23 +714,23 @@
       "intro": "<p>Your AI strategy is only as good as your team's ability to execute it. We deliver practical, hands-on AI training that turns leaders, managers, and technical teams into confident operators of AI systems. The training that sticks is not abstract theory — it is workshops where people actually use the tools on their own work.</p>\n<p>UK organisations we work with see measurable productivity gains within four weeks of cohort training as participants apply techniques to live work. Manager-level cohorts typically commit to specific automation projects within a fortnight, and technical cohorts ship their first internal genAI prototype during the programme. Most clients return for second and third cohorts within six months as demand spreads through the business.</p>\n<p>Every training engagement begins with a discovery session to map current AI literacy, business priorities, and the specific outcomes you want to drive. We then design cohorts at three levels — executive (board and SLT), management (operations and functional leads), and practitioner (technical teams). Pilot cohorts run 4-8 weeks. We work in person across the UK and remotely via Microsoft Teams or Zoom, with all materials, recordings, and follow-up resources delivered through your LMS or our hosted platform.</p>",
       "sections": [
         {
-          "heading": "Training That Sticks",
+          "heading": "Why Does AI Training That Sticks Require Hands-On Application?",
           "body": "<p>Most corporate AI training fails because it teaches concepts without application. People sit through slides on transformer architectures and large language models, then go back to inboxes and never use a tool. Our training is workshop-led — every session has participants applying techniques to their actual work problems. Marketing managers leave with three live prompts they use weekly. Operations leads leave with a process automation prototype. Engineers leave with a working RAG system over team documentation. The <a href=\"/what-we-do/ongoing-support/\">ongoing support</a> capability provides the post-training reinforcement that converts learning into operating habit.</p>"
         },
         {
-          "heading": "Workshop Formats",
+          "heading": "What Workshop Formats Work Best for Different Teams?",
           "body": "<p>We deliver training in formats that match how teams actually work. Half-day executive sessions cover AI governance, opportunity mapping, and competitive context for board and SLT. Two-day immersives for cross-functional management teams build literacy and identify the first wave of projects. Six-week practitioner cohorts (typically 1.5 hours weekly + assignments) develop deep skills in genAI, conversational AI, agentic systems, or applied ML. Bespoke workshops for specific functions (HR, finance, marketing, legal) cover the use cases and tools most relevant to that team. The format always serves the outcome — we never deliver training without clear alignment on what changes after.</p>"
         },
         {
-          "heading": "Topics We Cover",
+          "heading": "What Topics Do Our AI Training Programmes Cover?",
           "body": "<p>Our curriculum covers the full breadth of practical AI for UK businesses. Generative AI fundamentals — what models can and cannot do, how to write prompts that work, when to use which model. Building with retrieval — RAG systems for knowledge access. Agentic AI — multi-step workflows that take action. AI governance and ethics — UK regulatory landscape, EU AI Act, fairness and explainability. Data foundations — what AI needs from data infrastructure to actually work. The <a href=\"/what-we-do/agentic-ai/\">agentic AI</a>, <a href=\"/what-we-do/generative-ai/\">generative AI</a>, and <a href=\"/what-we-do/ai-governance/\">AI governance</a> capabilities all feed our training content with current implementation lessons.</p>"
         },
         {
-          "heading": "Measuring Impact",
+          "heading": "How Do You Measure the Impact of AI Training?",
           "body": "<p>Training impact is measured concretely. Pre and post cohort assessments quantify capability gains across knowledge, confidence, and applied skill. Project portfolios capture the specific automations, prototypes, and process changes participants ship during the programme. Six-week and twelve-week follow-up reviews track which projects went into production and what business value they delivered. We never deliver training as a tick-box exercise — every cohort closes with a programme review and a recommendation on next steps. The <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> often follows training as participants identify the next wave of opportunities to scope formally.</p>"
         },
         {
-          "heading": "Common AI Training Engagements",
+          "heading": "What Are the Most Effective AI Training Engagement Patterns?",
           "body": "<p>Five engagement patterns consistently deliver the strongest learning outcomes for UK organisations.</p>\n<ul>\n  <li><strong>Board and SLT briefings:</strong> half-day sessions on AI strategy, governance, competitive landscape, and opportunity prioritisation.</li>\n  <li><strong>Cross-functional management cohorts:</strong> two-day immersives building literacy across business unit leaders and identifying first-wave projects.</li>\n  <li><strong>Practitioner upskilling:</strong> six-week cohorts for technical teams covering genAI, RAG, agentic systems, evaluation, and MLOps.</li>\n  <li><strong>Function-specific workshops:</strong> tailored content for HR, finance, marketing, legal, operations, with use cases and tools specific to that function.</li>\n  <li><strong>Train-the-trainer programmes:</strong> equipping internal L&D and AI champions to scale literacy across the organisation continuously.</li>\n</ul>\n<p>Most clients get the strongest first win from a cross-functional management cohort — it builds shared literacy and surfaces the highest-ROI projects in the same engagement. Our discovery call scopes the right format against your team size, current literacy, and business priorities.</p>"
         }
       ],
@@ -716,16 +762,28 @@
       ],
       "faq": [
         {
-          "question": "Who are the workshops designed for?",
-          "answer": "We run sessions for all levels — from board-level awareness to technical deep-dives. Each session is tailored to the audience."
+          "question": "How much does AI training for business teams cost?",
+          "answer": "Every engagement opens with a Phase 1 Diagnostic (£6,500 fixed fee, 3 weeks) that includes a team capability audit and training recommendations as part of a board-ready roadmap. Delivery of training cohorts runs within Phase 2 Build at £850/day. Ongoing quarterly refreshers are covered by Phase 3 Retain at £10,000/month."
         },
         {
-          "question": "How much do workshops cost?",
-          "answer": "We don't run standalone workshops or half-day sessions. Every engagement opens with a 30-minute fit call, then Phase 1 Diagnostic (£6,500 fixed fee, 3 weeks) — which includes a team capability audit and training recommendations as part of the board-ready roadmap."
+          "question": "How long does an AI training programme take to deliver?",
+          "answer": "Executive briefings run as half-day sessions. Cross-functional management cohorts typically take two days. Practitioner upskilling runs over six weeks (90-minute weekly sessions plus assignments). Pilot cohorts launch within 4–8 weeks of the discovery call."
         },
         {
-          "question": "Can you deliver training remotely?",
-          "answer": "Yes. We deliver in-person and remote workshops. Both formats are fully interactive."
+          "question": "What productivity improvements should we expect after training?",
+          "answer": "UK organisations we work with see measurable productivity gains within four weeks of cohort training as participants apply techniques to live work. Manager-level cohorts typically commit to specific automation projects within a fortnight; technical cohorts ship their first internal prototype during the programme."
+        },
+        {
+          "question": "Who is AI training designed for — technical or non-technical staff?",
+          "answer": "Both. We run cohorts at three levels: executive (board and SLT, half-day), management (operations and functional leads, two-day), and practitioner (technical teams, six-week). Each cohort is scoped separately against the audience's literacy and business priorities."
+        },
+        {
+          "question": "Can you deliver AI training for specific functions like HR, finance, or marketing?",
+          "answer": "Yes. Bespoke function-specific workshops cover the AI use cases and tools most relevant to each team. HR cohorts focus on recruitment automation and people analytics; finance cohorts on forecasting and anomaly detection; marketing cohorts on content automation and campaign optimisation."
+        },
+        {
+          "question": "How is your training different from generic AI courses online?",
+          "answer": "Generic courses teach concepts. Our training is workshop-led — every session has participants applying techniques to their actual work problems. We use your data, your tools, and your business challenges so skills transfer directly to the day job rather than staying theoretical."
         }
       ],
       "relatedServices": [
@@ -738,7 +796,14 @@
         "finance",
         "healthcare",
         "government"
-      ]
+      ],
+      "definedTerm": {
+        "term": "AI Training for Business Teams",
+        "definition": "Structured education programmes that build AI literacy, prompt-engineering skills, and operational confidence across business leaders and technical staff.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Artificial_intelligence"
+        ]
+      }
     },
     {
       "slug": "ongoing-support",
@@ -751,23 +816,23 @@
       "intro": "<p>AI is not a one-off project. Systems need monitoring, models need retraining, and your strategy needs to evolve as the technology and your business change. Our retainer support keeps your AI delivery on track without forcing you to build a full internal AI function from scratch.</p>\n<p>UK businesses we support on retainer typically maintain 95%+ uptime on production AI systems, retrain models on a 4-8 week cycle, and ship 6-12 new automations per year through the retainer relationship — at lower cost than equivalent in-house headcount. The retainer model lets you access senior AI capability without committing to permanent hires before the business case is fully proven.</p>\n<p>Every retainer relationship starts with a structured handover from the original delivery team or an audit of inherited systems if we are picking up someone else's build. We then agree service levels, escalation pathways, monthly steering rhythm, and a 12-month roadmap of additions and improvements. Retainers run from 4 days per month for smaller estates up to fractional CTO/Chief AI Officer engagements 2-3 days per week. We work across UK time zones with named senior consultants who stay with your account.</p>",
       "sections": [
         {
-          "heading": "Why Ongoing Support Matters",
+          "heading": "Why Does AI Need Ongoing Support After Launch?",
           "body": "<p>Production AI systems decay if left alone. Model performance drifts as customer behaviour, product mix, and market conditions change. RAG systems degrade if knowledge bases are not maintained. Conversational AI accuracy slips when new product launches introduce vocabulary the system has never seen. Cost per query creeps up as prompt patterns become inefficient. We monitor all of this continuously, retrain models on agreed cycles, refresh knowledge bases, and rewrite prompts as model versions update. The <a href=\"/what-we-do/ai-strategy/\">AI strategy</a> we agreed at the start gets reviewed quarterly so the roadmap stays aligned with business priorities, not the original assumptions.</p>"
         },
         {
-          "heading": "What Retainer Support Includes",
+          "heading": "What Does an AI Retainer Support Package Include?",
           "body": "<p>A standard retainer covers production monitoring (model performance, system uptime, cost tracking, content safety incidents), scheduled retraining (typically 4-8 week cycles depending on use case), incident response (named on-call within agreed SLA), continuous improvement (monthly recommendations and small enhancements), and quarterly strategy reviews. Larger retainers add new use case scoping and delivery, governance committee participation, and team upskilling support. Every retainer comes with a monthly written report and a steering call so executives stay informed without micromanaging. The <a href=\"/what-we-do/ai-governance/\">AI governance</a> framework we apply means audit evidence is always current, not assembled in a panic for the next regulator visit.</p>"
         },
         {
-          "heading": "Flexible Engagement",
+          "heading": "How Does a Flexible Retainer Engagement Work?",
           "body": "<p>Retainer engagements scale to your needs and budget. Smallest engagements are 4 days per month covering monitoring and small changes for one or two production systems. Mid-size retainers run 8-12 days per month for businesses with 5-10 production AI systems requiring regular evolution. Largest engagements include fractional senior leadership at 8-12 days per month for organisations building internal AI teams who need experienced steering until those teams are autonomous. We never lock you into multi-year contracts — every retainer is reviewed quarterly and either party can adjust scope or end with reasonable notice. The <a href=\"/what-we-do/ai-training/\">AI training</a> capability runs alongside many retainers as we transfer knowledge to client teams over time.</p>"
         },
         {
-          "heading": "Fractional AI Leadership",
+          "heading": "What Does Fractional AI Leadership Provide?",
           "body": "<p>Many mid-market UK businesses need senior AI leadership but cannot justify a full-time hire at six-figure salary plus equity. Fractional Chief AI Officer or VP AI engagements give you that seniority on a retainer basis — typically 2-3 days per week. We attend your exec meetings, lead AI strategy reviews with the board, manage relationships with AI vendors and platforms, hire and manage internal AI team members, and represent the AI function externally to investors, customers, and partners. Most fractional engagements run 12-18 months as the business builds toward an internal hire we then help recruit. Our <a href=\"/what-we-do/ai-strategy/\">AI strategy</a> work often evolves into fractional leadership as scope expands.</p>"
         },
         {
-          "heading": "Common Retainer Patterns",
+          "heading": "What Are the Most Common AI Retainer Patterns?",
           "body": "<p>Five retainer shapes cover the vast majority of UK business needs for ongoing AI support.</p>\n<ul>\n  <li><strong>Production maintenance:</strong> 4-6 days/month covering monitoring, retraining, incident response for established AI systems.</li>\n  <li><strong>Continuous delivery:</strong> 8-12 days/month combining maintenance with regular new automation delivery for growing AI estates.</li>\n  <li><strong>Fractional AI leadership:</strong> 8-12 days/month providing senior strategic capacity for mid-market businesses building AI capability.</li>\n  <li><strong>Governance and audit:</strong> 2-4 days/month for businesses where the AI build is mature but governance evidence and audit support remain gaps.</li>\n  <li><strong>Hybrid build-and-run:</strong> mixed engagement where part of the team delivers new AI capability while another part runs production support.</li>\n</ul>\n<p>Most clients start with production maintenance after their first project goes live, then expand scope as the AI estate grows. Our team agrees the right shape during the handover or audit phase before any retainer commitments are made.</p>"
         }
       ],
@@ -799,16 +864,28 @@
       ],
       "faq": [
         {
-          "question": "What does a retainer cost?",
-          "answer": "Phase 3 Retain is £10,000 per month for one day per week of founder-led advisory — governance, measurement, and scale-out oversight as you extend AI across the business. Rolling three-month terms, extendable."
+          "question": "How much does ongoing AI retainer support cost?",
+          "answer": "Phase 3 Retain is £10,000/month for one day per week of founder-led advisory — covering governance, model drift monitoring, measurement, and scale-out oversight. Rolling three-month terms, extendable. Smaller 4-day/month maintenance retainers are also available; contact us for a bespoke scope."
         },
         {
-          "question": "Can we cancel the retainer?",
-          "answer": "Yes. Our retainers run on a rolling monthly basis with 30 days notice."
+          "question": "How quickly can a retainer start after a Phase 2 Build?",
+          "answer": "A structured handover from the delivery team typically takes 1–2 weeks. We agree service levels, escalation pathways, monthly steering rhythm, and a 12-month improvement roadmap before the retainer formally starts."
         },
         {
-          "question": "Do you support systems you did not build?",
-          "answer": "Yes. We are happy to take over monitoring and optimisation of AI systems built by other teams or vendors."
+          "question": "What ROI do businesses see from ongoing AI support versus handling it in-house?",
+          "answer": "UK businesses on retainer typically maintain 95%+ uptime on production AI systems, retrain models on a 4–8 week cycle, and ship 6–12 new automations per year through the retainer relationship — at lower cost than equivalent in-house headcount at senior AI engineer rates."
+        },
+        {
+          "question": "Who needs a retainer — only businesses with large AI estates?",
+          "answer": "Even businesses with a single production AI system benefit from retainer oversight. Model drift, knowledge base staleness, and cost creep can all undermine a system that worked perfectly at launch. Smaller retainers start at 4 days/month and scale as the AI estate grows."
+        },
+        {
+          "question": "Can you provide retainer support for AI systems you did not build?",
+          "answer": "Yes. We audit inherited systems as part of the retainer onboarding, agree a baseline, and then provide ongoing monitoring and improvement. This is particularly useful when in-house teams built the original system and have since moved on."
+        },
+        {
+          "question": "What is fractional AI leadership and when does it make sense?",
+          "answer": "Fractional Chief AI Officer or VP AI engagements provide senior AI leadership 2–3 days per week without a full-time hire. They make sense for mid-market businesses that need board-level AI strategy, vendor management, and team building but cannot yet justify a six-figure permanent salary."
         }
       ],
       "relatedServices": [
@@ -821,7 +898,14 @@
         "healthcare",
         "retail",
         "manufacturing"
-      ]
+      ],
+      "definedTerm": {
+        "term": "AI Retainer Support",
+        "definition": "Ongoing advisory, monitoring, and governance service that keeps AI systems performing after launch — covering model retraining, drift detection, and strategic roadmap updates.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Managed_services"
+        ]
+      }
     },
     {
       "slug": "applied-ai",
@@ -834,23 +918,23 @@
       "intro": "<p>Not every AI problem is a language model problem. We build applied AI solutions — computer vision, forecasting, anomaly detection, recommendation systems, optimisation — that solve specific business challenges in production. Where genAI gets the headlines, applied AI usually delivers the measurable ROI.</p>\n<p>UK businesses we work with through applied AI engagements typically see clear payback within one operational cycle — a quarter for retail forecasting, a season for manufacturing predictive maintenance, a year for insurance loss-cost models. The advantage of applied AI is that the metrics are concrete and the comparison to the prior baseline is unambiguous. You either forecast more accurately or you do not. The model either catches more defects or it does not.</p>\n<p>Every applied AI engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> mapping your data sources, the business decision the model needs to support, and the integration paths to operational systems. Pilots ship in 8-14 weeks. We work with PyTorch, TensorFlow, scikit-learn, XGBoost, and the modern stack of foundation models for vision and time-series tasks. Every model ships with monitoring, retraining pipelines, and explainability appropriate for the use case.</p>",
       "sections": [
         {
-          "heading": "Computer Vision",
+          "heading": "What Business Problems Can Computer Vision Solve?",
           "body": "<p>Computer vision quietly powers more production AI than any other category — quality inspection in manufacturing, document processing in finance, medical imaging in healthcare, in-store analytics in retail, security and safety monitoring in logistics. We build vision systems that catch defects at line speed, classify documents and extract structured data, count and track objects, identify safety violations, and verify compliance. Our <a href=\"/industries/manufacturing/\">manufacturing</a> work uses vision for quality inspection. <a href=\"/industries/healthcare/\">Healthcare</a> deployments support radiology pre-read and dermatology referral grading (always as decision support, never standalone). The same patterns apply across <a href=\"/industries/retail/\">retail</a> in-store analytics and <a href=\"/industries/finance/\">financial services</a> document automation.</p>"
         },
         {
-          "heading": "Forecasting and Prediction",
+          "heading": "How Does AI Forecasting and Prediction Work for Your Business?",
           "body": "<p>Forecasting models are the highest-volume applied AI deployment in UK business. Demand forecasting at SKU-store-day level for retail and ecommerce. Workforce demand prediction for healthcare and contact centres. Maintenance failure prediction for manufacturing and infrastructure. Cash flow and customer attrition forecasting for financial services. We build forecasting models that combine traditional time-series methods (ARIMA, Prophet, exponential smoothing) with modern approaches (gradient boosting, neural forecasting, foundation models for time-series). The <a href=\"/industries/supply-chain/\">supply chain</a> and <a href=\"/industries/manufacturing/\">manufacturing</a> work both rely heavily on forecasting capability, and the same patterns apply for <a href=\"/industries/retail/\">retail</a> demand planning and <a href=\"/industries/government/\">public sector</a> service demand modelling.</p>"
         },
         {
-          "heading": "Natural Language Processing",
+          "heading": "What Can Natural Language Processing Do Beyond Generative AI?",
           "body": "<p>NLP covers the applied AI work that does not require generative models — text classification, named entity extraction, sentiment analysis, topic modelling, document similarity, automated tagging. We build NLP pipelines that classify support tickets to the right routing queue, extract structured data from unstructured documents (invoices, contracts, medical notes), surface sentiment and topic patterns from voice-of-customer data, and tag content automatically against taxonomies. Our <a href=\"/what-we-do/conversational-ai/\">conversational AI</a> capability uses NLP for intent classification, and our <a href=\"/what-we-do/generative-ai/\">generative AI</a> work often layers genAI on top of an NLP foundation rather than replacing it entirely.</p>"
         },
         {
-          "heading": "Anomaly Detection",
+          "heading": "How Does Anomaly Detection Catch Problems Before They Escalate?",
           "body": "<p>Anomaly detection catches the things that should not be happening — fraud, equipment failure, security incidents, data quality issues, operational outliers. We build anomaly detection systems that combine statistical methods (control charts, isolation forests) with machine learning approaches (autoencoders, one-class SVMs) and modern foundation models for unsupervised pattern recognition. Production deployments include monitoring dashboards, alerting workflows, and feedback loops so analysts can label false positives and the model improves over time. Our <a href=\"/industries/finance/\">financial services</a> work uses anomaly detection for transaction monitoring and fraud. <a href=\"/industries/manufacturing/\">Manufacturing</a> uses it for early failure detection on critical equipment.</p>"
         },
         {
-          "heading": "Common Applied AI Use Cases",
+          "heading": "What Are the Highest-ROI Applied AI Use Cases?",
           "body": "<p>Five clusters consistently deliver the strongest measurable ROI for applied AI deployments.</p>\n<ul>\n  <li><strong>Demand forecasting:</strong> SKU-level retail forecasts, workforce demand for service operations, customer call volume for contact centres.</li>\n  <li><strong>Predictive maintenance:</strong> equipment failure prediction in manufacturing, fleet maintenance scheduling, infrastructure asset monitoring.</li>\n  <li><strong>Quality and inspection:</strong> vision-based defect detection, document processing accuracy verification, audit sample selection.</li>\n  <li><strong>Risk and fraud:</strong> transaction monitoring, claims fraud scoring, credit risk modelling, security anomaly detection.</li>\n  <li><strong>Optimisation:</strong> route planning, scheduling, inventory placement, pricing optimisation, resource allocation.</li>\n</ul>\n<p>Most clients get the strongest first win from forecasting or quality inspection — both deliver clear measurable ROI within one operational cycle. Our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> ranks these against your data maturity, operational priorities, and integration constraints.</p>"
         }
       ],
@@ -882,12 +966,28 @@
       ],
       "faq": [
         {
-          "question": "Do we need large datasets for applied AI?",
-          "answer": "It depends on the problem. Some techniques work with modest data. We assess data requirements during scoping and recommend approaches that fit your data reality."
+          "question": "How much does an applied AI project cost?",
+          "answer": "Phase 1 Diagnostic is £6,500 (3 weeks) and maps your data sources, the business decision the model must support, and integration paths to operational systems. Phase 2 Build runs at £850/day with pilots shipping in 8–14 weeks. Phase 3 Retain at £10,000/month covers monitoring, retraining, and roadmap evolution."
         },
         {
-          "question": "How accurate are forecasting models?",
-          "answer": "Accuracy depends on data quality and the domain. We provide confidence intervals and error metrics so you know exactly how reliable the forecasts are."
+          "question": "How long does an applied AI pilot take to deliver results?",
+          "answer": "Focused pilots ship in 8–14 weeks. Retail demand forecasting shows measurable accuracy improvement within one trading cycle; manufacturing predictive maintenance catches early failure signals within the first quarter; fraud anomaly detection improves precision within weeks of go-live."
+        },
+        {
+          "question": "What ROI can applied AI realistically deliver in the first year?",
+          "answer": "UK businesses typically see clear payback within one operational cycle. Retail forecasting clients recover inventory-holding costs within a season. Manufacturing clients see 15–25% reduction in unplanned downtime. Insurance clients improve fraud-catch rates by 20–35% while reducing false positives by 30–50%."
+        },
+        {
+          "question": "How much data do we need before applied AI becomes viable?",
+          "answer": "It depends on the technique. Forecasting models need at least 12–18 months of historical data at the required granularity. Computer vision defect-detection models can work with as few as a few hundred labelled images using transfer learning. We assess data requirements during Phase 1 and recommend approaches that fit your data reality."
+        },
+        {
+          "question": "How do applied AI models integrate with our existing operational systems?",
+          "answer": "We design integrations that fit your ERP, WMS, MES, or CRM via standard APIs — no rip-and-replace. Model outputs are pushed directly into the systems where decisions are made: reorder recommendations into the buying tool, maintenance alerts into the CMMS, fraud scores into the transaction review queue."
+        },
+        {
+          "question": "How do you keep applied AI models accurate over time?",
+          "answer": "Every model we deploy ships with monitoring dashboards, drift detection, and retraining pipelines. We set clear performance thresholds and retraining triggers so accuracy does not silently degrade as your business evolves. Phase 3 Retain covers this on an ongoing basis."
         }
       ],
       "relatedServices": [
@@ -900,7 +1000,14 @@
         "retail",
         "supply-chain",
         "finance"
-      ]
+      ],
+      "definedTerm": {
+        "term": "Applied AI",
+        "definition": "The use of machine learning techniques — computer vision, forecasting, NLP, anomaly detection — to solve specific, measurable business problems with quantifiable outcomes.",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Applied_machine_learning"
+        ]
+      }
     }
   ]
 }
