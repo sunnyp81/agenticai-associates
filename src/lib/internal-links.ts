@@ -63,6 +63,12 @@ const hubSpokes: Record<string, string[]> = {
     'scotland',
     'northern-ireland',
     'norfolk',
+    'salford',
+    'surrey',
+    'kent',
+    'bedfordshire',
+    'wokingham',
+    'kensington',
   ],
 };
 

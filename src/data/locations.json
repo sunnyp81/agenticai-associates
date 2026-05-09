@@ -1,16 +1,16 @@
 {
   "hub": {
-    "title": "AI Consultant UK — Local AI Consultancy Services Near You",
-    "description": "Find AI consultancy services across the UK. From London to Edinburgh, we provide local AI strategy, implementation, and training.",
-    "primaryKeyword": "ai consultancy uk"
+    "title": "Agentic AI Consultant UK — Local Consultancy Services Near You",
+    "description": "Find agentic AI consultancy services across the UK. From London to Edinburgh, we build autonomous AI systems with local strategy, implementation, and training.",
+    "primaryKeyword": "agentic ai consultancy uk"
   },
   "pages": [
     {
       "slug": "london",
       "name": "AI Consultancy London",
-      "title": "AI Consultant London — Strategy & Implementation",
-      "description": "AI consultancy services in London. Expert AI strategy, implementation, and training for businesses across the capital. From fintech to creative industries.",
-      "primaryKeyword": "ai consultancy london",
+      "title": "Agentic AI Consultant London — Strategy & Implementation",
+      "description": "Agentic AI consultancy in London. Autonomous AI systems for fintech, healthcare, and creative industries. Fixed-fee diagnostic from £6,500. Book a fit call.",
+      "primaryKeyword": "agentic ai consultant london",
       "intro": "London is the UK's AI capital. With more AI companies than any other European city and a concentration of enterprise clients across every sector, the demand for expert AI consultancy here is immense. We help London businesses — from City fintech firms to Shoreditch startups — navigate the AI landscape with confidence.",
       "areaServed": "London",
       "region": "Greater London",
@@ -63,9 +63,9 @@
     {
       "slug": "manchester",
       "name": "AI Consultancy Manchester",
-      "title": "AI Consultant Manchester — Strategy & Implementation",
-      "description": "AI consultancy services in Manchester. Expert AI strategy for the North West's thriving digital economy. From MediaCityUK to the Northern Quarter.",
-      "primaryKeyword": "ai consultancy manchester",
+      "title": "Agentic AI Consultant Manchester — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Manchester. Autonomous AI systems for media, e-commerce, and manufacturing across Greater Manchester. Fixed-fee diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant manchester",
       "intro": "Manchester is the UK's second city for tech — and its AI ambitions match. With MediaCityUK, a booming digital sector, and major investments from the likes of Google and Amazon, Greater Manchester is rapidly becoming a powerhouse for AI adoption. We help Manchester businesses harness AI practically and profitably.",
       "areaServed": "Manchester",
       "region": "Greater Manchester",
@@ -114,9 +114,9 @@
     {
       "slug": "birmingham",
       "name": "AI Consultancy Birmingham",
-      "title": "AI Consultant Birmingham — Strategy & Implementation",
-      "description": "AI consultancy services in Birmingham and the West Midlands. Practical AI strategy for the region's diverse business community.",
-      "primaryKeyword": "ai consultancy birmingham",
+      "title": "Agentic AI Consultant Birmingham — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Birmingham and the West Midlands. Autonomous AI for automotive, manufacturing, and professional services. Fixed-fee diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant birmingham",
       "intro": "Birmingham is reinventing itself as a technology hub. With HS2 on the horizon, a thriving professional services sector, and major investments in the city's innovation quarter, the West Midlands is primed for AI adoption. We bring expert AI consultancy to Birmingham businesses ready to move.",
       "areaServed": "Birmingham",
       "region": "West Midlands",
@@ -165,9 +165,9 @@
     {
       "slug": "leeds",
       "name": "AI Consultancy Leeds",
-      "title": "AI Consultant Leeds — Strategy & Implementation",
-      "description": "AI consultancy services in Leeds and Yorkshire. Expert AI strategy for the region's growing digital and financial services sectors.",
-      "primaryKeyword": "ai consultancy leeds",
+      "title": "Agentic AI Consultant Leeds — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Leeds and Yorkshire. Autonomous AI for financial services, healthcare, and legal. Fixed-fee diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant leeds",
       "intro": "Leeds has quietly built one of the UK's most impressive digital economies. With a financial services sector second only to London, a thriving tech community, and a cost base that attracts ambitious businesses, Yorkshire's capital is ready for AI. We help Leeds businesses adopt AI with the same no-nonsense practicality the city is known for.",
       "areaServed": "Leeds",
       "region": "West Yorkshire",
@@ -216,9 +216,9 @@
     {
       "slug": "bristol",
       "name": "AI Consultancy Bristol",
-      "title": "AI Consultant Bristol — Strategy & Implementation",
-      "description": "AI consultancy services in Bristol and the South West. Expert AI strategy for the region's aerospace, creative, and deep tech sectors.",
-      "primaryKeyword": "ai consultancy bristol",
+      "title": "Agentic AI Consultant Bristol — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Bristol and the South West. Autonomous AI for aerospace, creative industries, and cleantech. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant bristol",
       "intro": "Bristol is the South West's technology capital — a city where deep tech meets creative flair. With aerospace giants, a vibrant startup scene, and strong university research, Bristol businesses are well-positioned to lead AI adoption. We bring specialist AI consultancy to help them do exactly that.",
       "areaServed": "Bristol",
       "region": "South West England",
@@ -267,9 +267,9 @@
     {
       "slug": "edinburgh",
       "name": "AI Consultancy Edinburgh",
-      "title": "AI Consultant Edinburgh — Strategy & Implementation",
-      "description": "AI consultancy services in Edinburgh. Expert AI strategy for Scotland's capital, from financial services to world-class research commercialisation.",
-      "primaryKeyword": "ai consultancy edinburgh",
+      "title": "Agentic AI Consultant Edinburgh — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Edinburgh. Autonomous AI for financial services, tourism, and public sector. Scotland's data science capital. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant edinburgh",
       "intro": "Edinburgh is a world-class centre for data science and artificial intelligence. Home to the University of Edinburgh's School of Informatics — one of the largest and most respected in Europe — and a financial services sector managing over £1 trillion in assets, Edinburgh businesses have both the talent and the demand for serious AI. We provide the expert consultancy to connect the two.",
       "areaServed": "Edinburgh",
       "region": "Lothian",
@@ -322,9 +322,9 @@
     {
       "slug": "glasgow",
       "name": "AI Consultancy Glasgow",
-      "title": "AI Consultant Glasgow — Strategy & Implementation",
-      "description": "AI consultancy services in Glasgow. Expert AI strategy for Scotland's largest city, from engineering to creative industries and the public sector.",
-      "primaryKeyword": "ai consultancy glasgow",
+      "title": "Agentic AI Consultant Glasgow — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Glasgow. Autonomous AI for engineering, creative industries, and healthcare across the West of Scotland. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant glasgow",
       "intro": "Glasgow is Scotland's economic engine — the UK's third-largest city by GDP with strengths in engineering, creative industries, and public services. The city's industrial heritage is evolving into a digital future, and AI is central to that transformation. We bring practical AI consultancy to Glasgow's ambitious business community.",
       "areaServed": "Glasgow",
       "region": "Greater Glasgow",
@@ -373,9 +373,9 @@
     {
       "slug": "reading",
       "name": "AI Consultancy Reading",
-      "title": "AI Consultant Reading — Strategy & Implementation",
-      "description": "AI consultancy services in Reading and the Thames Valley. Expert AI strategy for the UK's Silicon Valley, from enterprise tech to pharma.",
-      "primaryKeyword": "ai consultancy reading",
+      "title": "Agentic AI Consultant Reading — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Reading and the Thames Valley. Autonomous AI for enterprise tech, pharma, and professional services. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant reading",
       "intro": "Reading sits at the heart of the Thames Valley — the UK's answer to Silicon Valley. With Microsoft, Oracle, Huawei, and hundreds of technology companies based here, the region has an unmatched concentration of enterprise technology expertise. We help Thames Valley businesses adopt AI with the strategic clarity and technical depth this market demands.",
       "areaServed": "Reading",
       "region": "Berkshire",
@@ -428,9 +428,9 @@
     {
       "slug": "leicester",
       "name": "AI Consultancy Leicester",
-      "title": "AI Consultant Leicester — Strategy & Implementation",
-      "description": "AI consultancy services in Leicester and the East Midlands. Practical AI strategy for manufacturing, retail, and the region's diverse business community.",
-      "primaryKeyword": "ai consultancy leicester",
+      "title": "Agentic AI Consultant Leicester — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Leicester and the East Midlands. Autonomous AI for manufacturing, food, and logistics. Fixed-fee diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant leicester",
       "intro": "Leicester sits at the crossroads of the East Midlands — a region with deep roots in manufacturing, textiles, and food production, now evolving toward technology-driven growth. We bring AI consultancy to Leicester businesses ready to modernise operations, improve efficiency, and compete in increasingly digital markets.",
       "areaServed": "Leicester",
       "region": "Leicestershire",
@@ -479,9 +479,9 @@
     {
       "slug": "scotland",
       "name": "AI Consultancy Scotland",
-      "title": "AI Consultant Scotland — National AI Consultancy Services",
-      "description": "AI consultancy services across Scotland. From Edinburgh's data science community to Glasgow's engineering sector and the Highlands' unique opportunities.",
-      "primaryKeyword": "ai consultancy scotland",
+      "title": "Agentic AI Consultant Scotland — National AI Consultancy Services",
+      "description": "Agentic AI consultancy across Scotland. From Edinburgh's data science hub to Glasgow's engineering sector. Autonomous AI systems. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant scotland",
       "intro": "Scotland is a world leader in AI research and a growing force in commercial AI adoption. With two of Europe's top data science universities, a financial sector managing over £1 trillion, and ambitious government investment in digital transformation, Scotland offers fertile ground for AI innovation. We provide AI consultancy across the entire country.",
       "areaServed": "Scotland",
       "region": "Scotland",
@@ -534,9 +534,9 @@
     {
       "slug": "northern-ireland",
       "name": "AI Consultancy Northern Ireland",
-      "title": "AI Consultant Northern Ireland — Strategy & Implementation",
-      "description": "AI consultancy services in Northern Ireland. Expert AI strategy for Belfast's growing tech sector and businesses across the region.",
-      "primaryKeyword": "ai consultancy northern ireland",
+      "title": "Agentic AI Consultant Northern Ireland — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Northern Ireland. Autonomous AI for Belfast's fintech cluster, cybersecurity, and agri-food sectors. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant northern ireland",
       "intro": "Northern Ireland's technology sector has grown remarkably over the past decade. With Belfast's booming fintech scene, a strong cybersecurity cluster, and significant investment from global tech companies, Northern Ireland is increasingly a serious AI market. We provide AI consultancy that helps businesses across the region compete on a global stage.",
       "areaServed": "Northern Ireland",
       "region": "Northern Ireland",
@@ -585,9 +585,9 @@
     {
       "slug": "norfolk",
       "name": "AI Consultancy Norfolk",
-      "title": "AI Consultant Norfolk — Strategy & Implementation",
-      "description": "AI consultancy services in Norfolk and East Anglia. Expert AI strategy for agriculture, energy, insurance, and the region's growing tech community.",
-      "primaryKeyword": "ai consultancy norfolk",
+      "title": "Agentic AI Consultant Norfolk — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Norfolk and East Anglia. Autonomous AI for insurance, precision agriculture, and offshore energy. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant norfolk",
       "intro": "Norfolk may not be the first place people think of for AI, but that's changing. With a strong agricultural sector ripe for precision farming, a significant insurance industry in Norwich, and growing renewable energy operations along the coast, Norfolk businesses have compelling reasons to adopt AI. We bring expert consultancy to help them do it right.",
       "areaServed": "Norfolk",
       "region": "East Anglia",
@@ -635,6 +635,292 @@
         "ai-strategy",
         "ai-automation",
         "ai-training"
+      ]
+    },
+    {
+      "slug": "salford",
+      "name": "AI Consultancy Salford",
+      "title": "Agentic AI Consultant Salford — MediaCityUK & Greater Manchester",
+      "description": "Agentic AI consultancy in Salford. Autonomous AI systems for MediaCityUK, digital agencies, and Greater Manchester businesses. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant salford",
+      "intro": "Salford is where Greater Manchester's digital economy is concentrated. MediaCityUK hosts the BBC, ITV, and dock10 — the UK's largest HD studio. Combined with the University of Salford's digital innovation programmes and a fast-growing tech startup scene, Salford businesses are primed for AI adoption that delivers real commercial advantage.",
+      "areaServed": "Salford",
+      "region": "Greater Manchester",
+      "sections": [
+        {
+          "heading": "Salford's Digital Economy",
+          "body": "<p>MediaCityUK has transformed Salford into one of the UK's most important media and technology hubs. The BBC's northern headquarters, ITV Granada, and dock10 employ thousands of people in content production, broadcasting, and digital services. This concentration of media and technology talent creates strong demand for AI consultancy across content automation, audience analytics, and production efficiency.</p><p>Beyond MediaCityUK, Salford's tech ecosystem extends along the A6 corridor and into the city centre. Digital agencies, SaaS companies, and e-commerce businesses are adopting AI to compete with larger London-based rivals. The University of Salford's School of Science, Engineering and Environment produces AI-ready graduates, while its Industry Collaboration Zones connect businesses with academic research.</p><p>Salford's position within Greater Manchester gives businesses access to one of the UK's largest talent pools outside London. Combined with lower operating costs than the city centre, Salford offers an excellent environment for AI-first businesses.</p>"
+        },
+        {
+          "heading": "AI for Salford's Key Sectors",
+          "body": "<p><strong>Media and broadcasting:</strong> AI is reshaping content production at MediaCityUK. Automated transcription, content recommendation engines, audience sentiment analysis, and programmatic advertising all rely on sophisticated AI systems. We help media businesses adopt these tools while maintaining editorial integrity and creative quality.</p><p><strong>Digital agencies:</strong> Salford's growing digital agency sector uses AI for campaign optimisation, content generation, SEO automation, and client reporting. We help agencies integrate AI into their service delivery — creating efficiency gains that improve margins and client outcomes simultaneously.</p><p><strong>E-commerce:</strong> Greater Manchester's strong e-commerce sector benefits from AI-powered personalisation, demand forecasting, chatbot customer service, and dynamic pricing. Salford-based retailers competing nationally need these tools to match the sophistication of larger competitors.</p>"
+        },
+        {
+          "heading": "Why Choose an AI Consultant in Salford?",
+          "body": "<p>Salford's proximity to central Manchester means businesses here get the best of both worlds — access to Greater Manchester's full talent pool and business network, with the cost advantages and community feel of Salford's own ecosystem.</p><p>We provide on-site AI consultancy across Salford, including MediaCityUK, Salford Quays, Eccles, Swinton, and Walkden. Our consultants understand the local business landscape and the practical challenges of implementing AI in organisations of all sizes.</p><p>For Salford businesses considering AI for the first time, our Phase 1 Diagnostic is designed as a low-risk entry point. In three weeks, you get a clear, jargon-free AI roadmap tailored to your specific business — not a generic presentation of what AI could theoretically do.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with businesses at MediaCityUK?",
+          "answer": "Yes. We work with media companies, production houses, digital agencies, and technology firms across MediaCityUK and the wider Salford Quays area."
+        },
+        {
+          "question": "How much does AI consultancy cost in Salford?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        },
+        {
+          "question": "Can AI help digital agencies in Salford?",
+          "answer": "Absolutely. AI tools for content generation, campaign optimisation, SEO analysis, and client reporting can dramatically improve agency efficiency and margins. We help agencies adopt AI without disrupting client delivery."
+        },
+        {
+          "question": "Do you cover all of Greater Manchester?",
+          "answer": "Yes. Our Salford and Manchester practices cover the entire Greater Manchester conurbation — Salford, Trafford, Stockport, Bolton, Oldham, Wigan, Rochdale, Bury, and Tameside."
+        }
+      ],
+      "relatedLocations": [
+        "manchester",
+        "leeds"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
+    },
+    {
+      "slug": "surrey",
+      "name": "AI Consultancy Surrey",
+      "title": "Agentic AI Consultant Surrey — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Surrey. Autonomous AI for pharma, professional services, and technology businesses across the county. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant surrey",
+      "intro": "Surrey is home to some of the UK's most successful businesses — from global pharmaceutical companies along the M25 corridor to technology firms clustered around Guildford and the Surrey Research Park. With a highly educated workforce and proximity to both London and Heathrow, Surrey businesses are well-positioned to lead AI adoption.",
+      "areaServed": "Surrey",
+      "region": "South East England",
+      "sections": [
+        {
+          "heading": "Surrey's Business Landscape",
+          "body": "<p>Surrey has one of the UK's strongest economies outside London. The county hosts major pharmaceutical companies including GSK and Pfizer, technology firms around the Surrey Research Park, and a dense concentration of professional services businesses serving London clients from a more cost-effective base.</p><p>Guildford's gaming industry — home to studios like EA and Supermassive Games — adds a creative technology dimension. The University of Surrey's AI and machine learning research programmes produce graduates who increasingly stay local, building Surrey's tech talent pool.</p><p>Surrey businesses tend to be sophisticated technology users who need expert guidance on AI strategy rather than basic digital transformation. They want consultants who can engage at board level and deliver advice that reflects the complexity of their operations.</p>"
+        },
+        {
+          "heading": "AI for Surrey's Key Industries",
+          "body": "<p><strong>Pharmaceuticals and life sciences:</strong> Surrey's pharma cluster uses AI for drug discovery acceleration, clinical trial design, regulatory document analysis, and pharmacovigilance. We bring specialist understanding of MHRA requirements and the unique data challenges of pharmaceutical AI.</p><p><strong>Professional services:</strong> Law firms, consultancies, and financial advisers across Surrey adopt AI for document review, client analytics, and operational efficiency. We guide professional services businesses through AI adoption with sensitivity to confidentiality and regulatory requirements.</p><p><strong>Technology and gaming:</strong> Guildford's tech cluster and gaming studios use AI for product development, testing automation, and user experience optimisation. We help technology companies integrate AI into their products and internal operations.</p>"
+        },
+        {
+          "heading": "AI Consultancy Across Surrey",
+          "body": "<p>Our Surrey practice covers Guildford, Woking, Reigate, Epsom, Farnham, and the wider county. We understand that Surrey businesses operate in a high-cost environment where AI investments need to deliver clear, measurable returns quickly.</p><p>Surrey's excellent transport links — M25, M3, and fast rail to London — make on-site consultancy straightforward. Many of our Surrey clients combine face-to-face workshops for discovery and strategy sessions with remote delivery for implementation support.</p><p>We serve businesses of all sizes across Surrey, from global corporates with UK headquarters here to growing SMEs in Guildford's tech cluster. Our approach scales to match — from enterprise governance frameworks to lean startup sprints.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you cover all of Surrey?",
+          "answer": "Yes. We serve Guildford, Woking, Reigate, Epsom, Farnham, Staines, and the wider Surrey area. On-site and remote consultancy options are available."
+        },
+        {
+          "question": "Can you help pharmaceutical companies with AI?",
+          "answer": "Yes. Pharmaceutical AI is one of our specialisms, covering drug discovery, clinical trial optimisation, regulatory compliance, and pharmacovigilance. We understand MHRA requirements and pharmaceutical data governance."
+        },
+        {
+          "question": "What are AI consultancy rates in Surrey?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        }
+      ],
+      "relatedLocations": [
+        "london",
+        "reading"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-governance"
+      ]
+    },
+    {
+      "slug": "kent",
+      "name": "AI Consultancy Kent",
+      "title": "Agentic AI Consultant Kent — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Kent. Autonomous AI for logistics, manufacturing, and professional services across the Garden of England. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant kent",
+      "intro": "Kent sits at the UK's gateway to Europe, with a diverse economy spanning logistics, manufacturing, agriculture, and a growing technology sector. From the Channel ports to the Medway towns and the creative hub of Folkestone, Kent businesses are increasingly recognising AI as a competitive necessity rather than a future possibility.",
+      "areaServed": "Kent",
+      "region": "South East England",
+      "sections": [
+        {
+          "heading": "Kent's Economic Strengths",
+          "body": "<p>Kent's strategic position as the UK's closest point to continental Europe makes it a logistics and distribution powerhouse. The Port of Dover, Eurotunnel, and the M20/M2 corridors handle a significant proportion of UK-EU trade. AI applications in route optimisation, customs processing, and supply chain management are directly relevant to Kent's core economy.</p><p>Beyond logistics, Kent has a strong manufacturing base, productive agricultural land, and a growing technology sector centred around Ashford, Maidstone, and the Discovery Park enterprise zone in Sandwich. The University of Kent and Canterbury Christ Church University contribute research and graduate talent to the region's digital ambitions.</p><p>We help Kent businesses adopt AI that addresses their specific challenges — whether that's automating customs documentation for a logistics firm in Dover, optimising crop yields for an agricultural business in the Weald, or improving client service for a professional services firm in Royal Tunbridge Wells.</p>"
+        },
+        {
+          "heading": "AI for Kent's Key Sectors",
+          "body": "<p><strong>Logistics and distribution:</strong> Kent's position on major trade routes creates immense AI opportunity. Route optimisation, predictive maintenance for fleets, automated customs documentation, and warehouse robotics management all deliver measurable returns for logistics businesses.</p><p><strong>Manufacturing:</strong> From pharmaceuticals at Discovery Park to engineering firms across the county, Kent manufacturers use AI for predictive maintenance, quality control, and production scheduling. We help manufacturers implement AI that fits their existing workflows and budget constraints.</p><p><strong>Agriculture and viticulture:</strong> Kent is England's most productive agricultural county and its leading wine-producing region. Precision agriculture AI, crop disease detection, and yield forecasting offer genuine value to farms and vineyards across the county.</p>"
+        },
+        {
+          "heading": "AI Consultancy Across Kent",
+          "body": "<p>Our Kent practice covers Canterbury, Maidstone, Ashford, Tunbridge Wells, Dover, Folkestone, and the Medway towns. We understand the county's economic geography and the different AI opportunities across its diverse business communities.</p><p>Kent's proximity to London means businesses here compete with the capital for talent and clients. AI adoption can level this playing field — enabling Kent businesses to deliver London-quality service at Kent cost structures. That's a compelling value proposition we help our clients articulate and deliver.</p><p>We combine on-site consultancy for key workshops and meetings with remote delivery for ongoing implementation support. Kent's excellent rail links make face-to-face engagement practical across the county.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you cover all of Kent?",
+          "answer": "Yes. We serve Canterbury, Maidstone, Ashford, Dover, Folkestone, Tunbridge Wells, the Medway towns, and the wider county. On-site and remote options available."
+        },
+        {
+          "question": "Can AI help logistics businesses in Kent?",
+          "answer": "Absolutely. Logistics AI — route optimisation, fleet management, customs automation, and warehouse operations — delivers some of the fastest ROI we see. Kent's logistics sector is particularly well-suited to AI adoption."
+        },
+        {
+          "question": "What are AI consultancy rates in Kent?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        }
+      ],
+      "relatedLocations": [
+        "london",
+        "surrey"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
+    },
+    {
+      "slug": "bedfordshire",
+      "name": "AI Consultancy Bedfordshire",
+      "title": "Agentic AI Consultant Bedfordshire — Strategy & Implementation",
+      "description": "Agentic AI consultancy in Bedfordshire. Autonomous AI for aerospace, logistics, and research businesses. Cranfield and Luton. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant bedfordshire",
+      "intro": "Bedfordshire combines aerospace excellence at Cranfield with a major logistics hub around Luton and the M1 corridor. The University of Cranfield's world-class engineering and AI research, combined with the county's strategic location between London and the Midlands, makes Bedfordshire a natural fit for practical AI adoption.",
+      "areaServed": "Bedfordshire",
+      "region": "East of England",
+      "sections": [
+        {
+          "heading": "Bedfordshire's Business Environment",
+          "body": "<p>Bedfordshire punches above its weight in aerospace and defence. Cranfield University is a global centre of excellence in aviation, automotive, and AI engineering. The university's partnerships with Airbus, Rolls-Royce, and the MoD create a knowledge-intensive corridor that extends across the county.</p><p>Luton's position on the M1 and its proximity to London make it a logistics and distribution hub. London Luton Airport and the surrounding business parks employ thousands in aviation, warehousing, and supply chain operations — all sectors where AI delivers measurable efficiency gains.</p><p>Bedford's growing technology sector and the county's relatively affordable commercial property attract businesses that want proximity to London without London costs. This pragmatic economic positioning aligns well with our no-nonsense approach to AI consultancy.</p>"
+        },
+        {
+          "heading": "AI for Bedfordshire's Economy",
+          "body": "<p><strong>Aerospace and defence:</strong> Cranfield's aerospace cluster uses AI for autonomous systems, predictive maintenance, simulation, and certification compliance. We bring consultancy that bridges Cranfield's cutting-edge research and the practical needs of commercial aerospace operations.</p><p><strong>Logistics and aviation:</strong> AI optimises every link in the logistics chain — from warehouse picking to last-mile delivery, from flight scheduling to ground operations. Bedfordshire's logistics businesses gain competitive advantage through faster, smarter operations.</p><p><strong>Research and education:</strong> Bedfordshire's universities and research institutions use AI for data analysis, research automation, and student experience. We help academic institutions commercialise AI research and adopt AI for their own administrative and teaching operations.</p>"
+        },
+        {
+          "heading": "Local AI Consultancy",
+          "body": "<p>Our Bedfordshire practice covers Luton, Bedford, Dunstable, Cranfield, and the surrounding area. We also serve businesses in neighbouring Buckinghamshire and Hertfordshire, leveraging Bedfordshire's central position in the London-Midlands corridor.</p><p>We understand that Bedfordshire businesses value practical advice over theoretical frameworks. Our consultancy is designed to deliver clear, actionable recommendations that reflect real business constraints — budgets, team capabilities, and the need for tangible ROI within defined timeframes.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with aerospace companies near Cranfield?",
+          "answer": "Yes. Aerospace AI is one of our specialisms. We work with companies across the Cranfield corridor on predictive maintenance, autonomous systems, simulation, and regulatory compliance."
+        },
+        {
+          "question": "What are AI consultancy rates in Bedfordshire?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        },
+        {
+          "question": "Do you cover Buckinghamshire and Hertfordshire too?",
+          "answer": "Yes. Our Bedfordshire base covers the wider area including Milton Keynes, Aylesbury, St Albans, and Watford. The M1 corridor makes on-site consultancy straightforward across the region."
+        }
+      ],
+      "relatedLocations": [
+        "london",
+        "leicester"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
+    },
+    {
+      "slug": "wokingham",
+      "name": "AI Consultancy Wokingham",
+      "title": "Agentic AI Consultant Wokingham — Thames Valley AI Services",
+      "description": "Agentic AI consultancy in Wokingham and the Thames Valley. Autonomous AI for technology, professional services, and enterprise businesses. Diagnostic from £6,500.",
+      "primaryKeyword": "agentic ai consultant wokingham",
+      "intro": "Wokingham sits at the heart of the Thames Valley technology corridor — one of Europe's most concentrated clusters of enterprise technology companies. With major operations from tech giants and a dense network of specialist firms, Wokingham businesses operate in a sophisticated market where AI is not optional but essential for competitive positioning.",
+      "areaServed": "Wokingham",
+      "region": "Berkshire",
+      "sections": [
+        {
+          "heading": "Wokingham's Technology Ecosystem",
+          "body": "<p>Wokingham Borough and the surrounding area host a remarkable concentration of technology companies. The Thames Valley corridor running through Wokingham, Bracknell, and Reading contains UK headquarters for some of the world's largest technology firms, alongside hundreds of specialist software, cybersecurity, and data analytics companies.</p><p>This density creates a business community that's already technology-literate and ready for AI. Companies here don't need convincing that AI matters — they need expert guidance on which AI initiatives to prioritise, how to implement them effectively, and how to measure ROI against their existing technology investments.</p><p>The area's excellent schools, transport links, and quality of life attract senior technology professionals who might otherwise be in London. This talent concentration means Wokingham businesses can build strong AI teams locally — and we help with hiring strategy, team structure, and capability development.</p>"
+        },
+        {
+          "heading": "AI for Thames Valley Businesses",
+          "body": "<p><strong>Enterprise technology:</strong> Wokingham's tech companies use AI to enhance their products, automate testing, improve customer support, and optimise sales operations. We help technology firms integrate AI strategically — ensuring it strengthens their market position rather than just adding features.</p><p><strong>Professional services:</strong> Accountancy, legal, and consulting firms in the Thames Valley adopt AI for document analysis, client insights, and operational efficiency. We guide implementation with sensitivity to the confidentiality and compliance requirements of professional services.</p><p><strong>Financial services:</strong> The Thames Valley's proximity to London supports a significant financial services presence. AI in risk assessment, fraud detection, and customer analytics delivers measurable value for firms operating in this sector.</p>"
+        },
+        {
+          "heading": "Local AI Consultancy",
+          "body": "<p>Our Wokingham practice covers the borough and the wider Thames Valley — including Bracknell, Crowthorne, Woodley, and Earley. We also serve businesses across neighbouring Reading, Windsor, and the wider Berkshire area.</p><p>We understand that Thames Valley businesses expect consultants who match their technical depth. Our team brings genuine AI expertise — not repackaged management consulting with an AI label. We can discuss transformer architectures and board-level strategy with equal fluency, which is exactly what this market demands.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you cover the whole Thames Valley?",
+          "answer": "Yes. Our practice covers Wokingham, Bracknell, Reading, Windsor, Maidenhead, and the broader Berkshire and South Oxfordshire area."
+        },
+        {
+          "question": "Can you help technology companies integrate AI into their products?",
+          "answer": "Absolutely. We help tech firms evaluate which AI capabilities to build or buy, design architectures that scale, and develop go-to-market strategies for AI-enhanced products."
+        },
+        {
+          "question": "What are AI consultancy rates in Wokingham?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        }
+      ],
+      "relatedLocations": [
+        "reading",
+        "london"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
+    },
+    {
+      "slug": "kensington",
+      "name": "AI Consultancy Kensington",
+      "title": "Agentic AI Consultant Kensington — West London AI Services",
+      "description": "Agentic AI consultancy in Kensington and West London. Autonomous AI for luxury brands, private equity, and high-net-worth advisory firms. From £6,500.",
+      "primaryKeyword": "agentic ai consultant kensington",
+      "intro": "Kensington and the Royal Borough of Kensington and Chelsea represent one of London's most prestigious business addresses. Home to luxury brands, private equity firms, international organisations, and high-net-worth advisory businesses, Kensington demands AI consultancy that matches its standards — discreet, sophisticated, and commercially rigorous.",
+      "areaServed": "Kensington",
+      "region": "Greater London",
+      "sections": [
+        {
+          "heading": "Kensington's Business Community",
+          "body": "<p>The Royal Borough hosts a distinctive business community. High Street Kensington and the surrounding streets house luxury retail, private wealth management, art dealers, and boutique professional services firms. South Kensington's museum quarter and Imperial College London add cultural and academic dimensions.</p><p>Imperial College's AI research is world-class — the college's computing department produces groundbreaking work in machine learning, computer vision, and robotics. This proximity means Kensington businesses can access cutting-edge AI knowledge, but they need consultants who can translate academic innovation into practical business value.</p><p>The area's international character — with businesses serving global clients across multiple time zones and languages — creates specific AI requirements around multilingual communication, cross-border compliance, and culturally sensitive automation.</p>"
+        },
+        {
+          "heading": "AI for Kensington's Industries",
+          "body": "<p><strong>Luxury retail and brands:</strong> AI powers personalised client experiences, inventory optimisation, and demand forecasting for luxury brands. We help premium retailers adopt AI that enhances exclusivity rather than commoditising the customer experience.</p><p><strong>Private equity and wealth management:</strong> AI in deal sourcing, portfolio analytics, risk assessment, and investor reporting delivers significant competitive advantage for PE firms and family offices. We ensure AI implementations meet the confidentiality standards these businesses require.</p><p><strong>Cultural and creative organisations:</strong> Kensington's museums, galleries, and cultural institutions use AI for visitor analytics, collection management, and digital engagement. We bring sensitivity to the cultural mission alongside commercial pragmatism.</p>"
+        },
+        {
+          "heading": "West London AI Consultancy",
+          "body": "<p>Our Kensington practice covers the Royal Borough, Chelsea, Hammersmith, Fulham, and the wider West London area. We understand that businesses here expect consultants who present well, communicate clearly, and deliver to the highest standards.</p><p>Discretion matters in Kensington. Many of our clients here prefer confidential engagements, and we respect that completely. Our consulting approach is designed for environments where trust, professionalism, and results speak louder than case studies and marketing.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with luxury brands?",
+          "answer": "Yes. We help luxury brands adopt AI that enhances the client experience — personalisation, clienteling, inventory optimisation, and demand sensing — while maintaining the exclusivity and discretion that premium brands require."
+        },
+        {
+          "question": "Can you help private equity firms with AI?",
+          "answer": "Absolutely. We help PE firms with AI-powered deal sourcing, portfolio company optimisation, risk analytics, and investor reporting. All engagements are fully confidential."
+        },
+        {
+          "question": "What are AI consultancy rates in Kensington?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        }
+      ],
+      "relatedLocations": [
+        "london",
+        "surrey"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "generative-ai",
+        "ai-governance"
       ]
     }
   ]
