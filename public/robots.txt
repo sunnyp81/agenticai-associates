@@ -1,25 +1,19 @@
-# robots.txt for agenticai.associates
-# Cloudflare AI Scrapers feature MUST be OFF in dashboard for this to take effect
-# Settings → Security → Bots → Configure Super Bot Fight Mode → AI Scrapers and Crawlers: OFF
+# agenticai.associates robots.txt
+# Allow search, AI input (citations in answer engines), and AI training.
+# Content-Signal overrides Cloudflare's default ai-train=no injection.
 
 User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=yes
 Allow: /
 Disallow: /thank-you
 
-# Real-time grounding for AI assistants — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
 User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: GPTBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -34,49 +28,37 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: GoogleOther
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-User-agent: Amazonbot
+User-agent: CCBot
 Allow: /
 
 User-agent: meta-externalagent
 Allow: /
 
-User-agent: FacebookBot
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 User-agent: cohere-ai
 Allow: /
 
-User-agent: cohere-training-data-crawler
+User-agent: DuckAssistBot
 Allow: /
 
-User-agent: CCBot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Diffbot
-Allow: /
-
-User-agent: PetalBot
+User-agent: MistralAI-User
 Allow: /
 
 User-agent: YouBot
 Allow: /
-
-User-agent: Timpibot
-Allow: /
-
-# Content signals (Cloudflare RFC 9309 extension)
-# search=yes  : indexing for traditional search permitted
-# ai-input=yes: real-time grounding (RAG/search-time) permitted
-# ai-train=no : foundation-model training NOT permitted by default
-# Override per-bot above by Allow:/
 
 Sitemap: https://agenticai.associates/sitemap-index.xml
