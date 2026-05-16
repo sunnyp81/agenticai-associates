@@ -2,6 +2,7 @@
 import Nav from '@/components/Nav.astro';
 import Footer from '@/components/Footer.astro';
 import CookieConsent from '@/components/CookieConsent.astro';
+import SidebarTOC from '@/components/SidebarTOC.astro';
 import { siteConfig } from '@/data/site-config';
 import '@/styles/global.css';
 
@@ -150,6 +151,7 @@ const schemas = [orgSchema, websiteSchema, ...customSchemas];
     <Nav />
     <main id="main" style="min-height: calc(100vh - 4rem);">
       <slot />
+      <SidebarTOC />
     </main>
     <Footer />
     <CookieConsent />
