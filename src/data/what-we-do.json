@@ -1,7 +1,7 @@
 {
   "hub": {
-    "title": "Agentic AI Consultancy Services UK — Fixed-Fee Pricing",
-    "description": "UK agentic AI consultancy services: readiness assessments, autonomous systems, automation, governance, training. Fixed-fee phases. Book a call.",
+    "title": "What We Do — AI Consultancy Services UK",
+    "description": "AI consultancy services: assessments, autonomous agents, automation, generative AI, governance. Fixed-fee engagement model starting £6,500. Book a call.",
     "primaryKeyword": "agentic ai consultancy services uk"
   },
   "pages": [
@@ -261,8 +261,8 @@
     {
       "slug": "generative-ai",
       "name": "Generative AI & LLMs",
-      "title": "Generative AI Consultancy UK — Cut LLM Cost 95% (2026)",
-      "description": "UK generative AI consultancy: RAG systems, LLM cost optimisation up to 95%, content pipelines. Pilots ship in 6-10 weeks. Book a free call.",
+      "title": "Generative AI Consultancy — Save 95% on LLM Costs",
+      "description": "Expert generative AI consulting: RAG systems, cut LLM costs 95%, content pipelines. Pilots ship in 6-10 weeks. UK businesses. Book a call →",
       "primaryKeyword": "generative ai consultancy uk",
       "icon": "sparkles",
       "entryPoint": false,
