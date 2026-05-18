@@ -139,8 +139,8 @@ const faqs = [
 ---
 
 <BaseLayout
-  title="Agentic AI Consultancy UK — £6,500 Diagnostic"
-  description="UK agentic AI consultants. Fixed-fee diagnostic from £6,500. Working system in 90 days. Book a call →"
+  title="AI Consultancy: £6,500 Fixed + 90-Day Build"
+  description="Fixed-fee AI diagnostic: 3-week roadmap £6,500. Autonomous systems in 90 days. Board-ready strategy. Book your fit call now →"
   schema={schemas}
 >
 
@@ -445,6 +445,30 @@ const faqs = [
       </div>
       <div class="section-cta">
         <a href="/industries/" class="btn-outline">View All Industries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── [04.5] AGENTIC AI EXPLAINED ─────────────────────── -->
+  <section class="sig-section sig-section-alt">
+    <div class="container">
+      <div class="signal-divider">
+        <span class="signal-kicker"><span class="n">[04b]</span> <span>What We Build</span></span>
+        <h2>What is agentic AI and why does it matter for UK business?</h2>
+        <p style="font-size:1rem;line-height:1.65;color:#8a8a92;margin:1rem 0 0;max-width:640px;">Agentic AI differs fundamentally from chatbots and copilots. Rather than waiting for a human prompt at every step, agentic systems plan and execute multi-step workflows autonomously — breaking complex business problems into executable actions, checking their work, and adapting when things go wrong.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {[
+          { heading: 'The Business Case', body: '<p>Most UK businesses still rely on humans to juggle multiple systems — logging into CRM to check customer history, then ERP to see stock, then email to send an approval request. Agentic systems handle all three steps autonomously. One insurance client we advised cut claims triage time from 2 days to 4 hours using agentic workflows. A manufacturing firm reduced purchase order processing from 3 days to 90 minutes. A financial services team recovered 15% of operational staff capacity — all redirected to client relationship work, not data entry.</p><p>The gains compound because agentic systems scale linearly. Double your transaction volume and your cost per transaction actually drops, not rises.</p>' },
+          { heading: 'Why Now, Why UK', body: '<p>Agentic AI is mature in production now — not theoretical, not research. Three years ago it was too slow and too unreliable. Today, models like Claude and GPT-4 execute complex workflows with 95%+ accuracy, and the cost per transaction is dropping every quarter.</p><p>UK businesses have an advantage: strong regulatory expectations around auditability, data governance, and responsible AI adoption. We build agentic systems that are <em>designed</em> for UK compliance — GDPR by default, FCA-compliant logging, audit trails that regulators actually want to see. This is not a feature we bolt on at the end; it is the foundation.</p>' },
+          { heading: 'Where Agentic AI Wins Most', body: '<p>Agentic workflows deliver fastest ROI when they touch multiple systems and require human judgement at inflection points — not complete autonomy. Loan underwriting where the agent gathers data, scores risk, then flags edge cases for human review. Procurement where the agent finds vendors, compares terms, then escalates final approval. Customer onboarding where the agent verifies identity, captures compliance documents, then hands off to relationship management.</p><p>These workflows are exactly where UK businesses lose the most time and money to context-switching and manual handoff.</p>' },
+          { heading: 'Our Consultant Difference', body: '<p>Agentic AI requires deep understanding of both AI capability <em>and</em> your specific business workflows. Most AI consultancies approach it backwards — they propose a chatbot or automation tool, then try to fit your business to the tool. We work backwards: understand your workflow end-to-end, identify exactly where human judgment is required (and preserve it), then build an agentic system that accelerates the judgment, not replaces it.</p><p>We are UK-based practitioners with 15+ years in financial services, insurance, and manufacturing. We know how your industry actually operates — not from case studies, but from having lived in it.</p>' },
+        ].map(item => (
+          <div class="signal-card">
+            <h3 style="font-family:var(--font-grotesk);font-size:1.0625rem;font-weight:500;letter-spacing:-0.01em;margin:0 0 0.625rem;color:#EDEDEA;">{item.heading}</h3>
+            <div set:html={item.body} style="font-size:0.9375rem;line-height:1.65;color:#6c6c72;" />
+          </div>
+        ))}
       </div>
     </div>
   </section>
