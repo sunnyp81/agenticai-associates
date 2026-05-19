@@ -2,6 +2,139 @@
 
 ---
 
+## Run 2 — 2026-05-19
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimization based on pattern audit of all JSON data files.
+
+### Audit Summary
+- **Total pages scanned:** 75 (all data files checked)
+- **Pages with issues at start of run:** 21 (title > 60 or desc > 155)
+- **Pages optimized this run:** 10 (max per run)
+- **Pages with issues remaining:** 11 (queued for Run 3)
+- **Primary issues fixed this run:**
+  - 6 learn pages with title > 60 chars (including 3 with brand suffix " — Agentic AI Associates" pushing to 76–89 chars)
+  - 1 learn page with desc > 155 chars
+  - 1 industry page with title over 60 chars (government, 61)
+  - 2 industry pages with desc severely over 155 chars (saas 174, logistics 188)
+
+### Pages Optimized
+
+#### 1. `/learn/in-house-ai-team-vs-consultancy/`
+- **Before title (89):** `In-House AI Team vs AI Consultancy: Cost, Speed and Risk Compared — Agentic AI Associates`
+- **After title (51):** `In-House AI Team vs Consultancy: 5 Factors Compared`
+- **Before desc (140):** `Should you hire an in-house AI team or engage a consultancy? A practical comparison on cost, speed, risk, and what to do when you need both.`
+- **After desc (142):** `Should you hire in-house AI talent or engage a consultancy? Compare cost, speed and risk — then get our free decision guide for UK businesses.`
+- **Fixes:** Title shortened 38 chars (removed brand suffix), number '5' added, desc refreshed with CTA
+
+#### 2. `/learn/agentic-ai-vs-generative-ai/`
+- **Before title (87):** `Agentic AI vs Generative AI: What the Difference Actually Means — Agentic AI Associates`
+- **After title (56):** `Agentic AI vs Generative AI: What Really Matters in 2026`
+- **Before desc (129):** `Generative AI produces content. Agentic AI does work. A practical distinction for enterprise buyers deciding what to build first.`
+- **After desc (147):** `Generative AI creates content. Agentic AI does work. Learn the real distinction and decide what to build first with our expert guide for UK buyers.`
+- **Fixes:** Title shortened 31 chars (removed brand suffix), year anchor added, desc expanded with CTA power words
+
+#### 3. `/learn/build-vs-buy-ai-agents/`
+- **Before title (76):** `Build vs Buy AI Agents: How to Choose the Right Path — Agentic AI Associates`
+- **After title (52):** `Build vs Buy AI Agents: 3 Frameworks to Choose Right`
+- **Before desc (132):** `Build a custom AI agent, buy a vertical agent product, or pick a platform in between? A decision framework for UK enterprise buyers.`
+- **After desc (133):** `Build custom, buy a vertical product, or use a platform? Get our 3-step decision framework for UK enterprise AI buyers — free to use.`
+- **Fixes:** Title shortened 24 chars (removed brand suffix), number '3' added, desc rewritten with CTA
+
+#### 4. `/learn/what-does-an-ai-consultant-do/`
+- **Before title (68):** `What Does an AI Consultant Do? Day-to-Day Responsibilities Explained`
+- **After title (55):** `What Does an AI Consultant Do? Roles & Responsibilities`
+- **Before desc (142):** `Discover what an AI consultant actually does day-to-day. From strategy workshops to implementation oversight, learn the real responsibilities.`
+- **After desc (138):** `Discover what an AI consultant does day-to-day — strategy workshops, delivery oversight, and more. Book a free call to see if we're a fit.`
+- **Fixes:** Title shortened 13 chars, desc shortened and CTA added
+
+#### 5. `/learn/benefits-of-hiring-an-ai-consultant/`
+- **Before title (66):** `Benefits of Hiring an AI Consultant — Why Expert Guidance Pays Off`
+- **After title (52):** `7 Proven Benefits of Hiring an AI Consultant in 2026`
+- **Before desc (142):** `Discover the key benefits of hiring an AI consultant. From faster ROI to risk reduction, learn why businesses invest in external AI expertise.`
+- **After desc (147):** `Discover 7 proven benefits of hiring an AI consultant — faster ROI, lower risk, and faster implementation. See results UK businesses have achieved.`
+- **Fixes:** Title shortened 14 chars, number '7' and power word 'Proven' added, year anchor added, desc echoes number
+
+#### 6. `/learn/ai-consultant-career-path/`
+- **Before title (63):** `AI Consultant Career Path — From Junior to Partner (2026 Guide)`
+- **After title (52):** `AI Consultant Career Path: Junior to Partner in 2026`
+- **Before desc (152):** `Map your AI consulting career from entry-level to senior partner. Covers progression, timelines, salary expectations, and how to accelerate your growth.`
+- **After desc (152):** `Map your AI consulting career from entry-level to senior partner. Covers progression, timelines, salary expectations, and how to accelerate your growth.`
+- **Fixes:** Title shortened 11 chars (colon replaces em-dash, removed 'Guide' wrapper)
+
+#### 7. `/learn/ai-consultant-vs-vendor/`
+- **Before title (56):** `AI Consultant vs Vendor — Which Does Your Business Need?` _(unchanged)_
+- **Before desc (159):** `Understand the difference between hiring an AI consultant and buying from an AI vendor. Learn when each option makes sense and how to combine both effectively.`
+- **After desc (147):** `Understand the difference between an AI consultant and a vendor. Learn when each makes sense — and when to combine both — with our practical guide.`
+- **Fixes:** Desc shortened 12 chars below limit, power phrase 'practical guide' added as CTA
+
+#### 8. `/industries/government/`
+- **Before title (61):** `AI Consultant for Government Agencies — Agentic AI Associates`
+- **After title (54):** `Agentic AI for UK Government & Public Sector — Experts`
+- **Before desc (146):** `Government AI consultant helping UK councils and public sector bodies improve services, reduce costs, and deploy AI responsibly and transparently.`
+- **After desc (150):** `Agentic AI for UK councils and public sector bodies. Improve services, cut costs, and deploy AI responsibly. GDPR and ICO compliant. Book a free call.`
+- **Fixes:** Title shortened 7 chars, 'Agentic AI' moved to front, 'Experts' power word, desc adds compliance anchor (GDPR/ICO) and CTA
+
+#### 9. `/industries/saas/`
+- **Before title (56):** `AI Consultant for SaaS Companies — Agentic AI Associates`
+- **After title (49):** `Agentic AI for UK SaaS Companies — Proven Results`
+- **Before desc (174):** `Agentic AI for UK SaaS businesses. Onboarding copilots, churn prediction, expansion-revenue agents, support deflection and product analytics that compound with every release.`
+- **After desc (144):** `Agentic AI for UK SaaS. Onboarding copilots, churn prediction, expansion-revenue agents, and support deflection that improve with every release.`
+- **Fixes:** Title rewritten with 'Agentic AI' and power phrase 'Proven Results', desc shortened 30 chars
+
+#### 10. `/industries/logistics/`
+- **Before title (59):** `AI Consultant for Logistics & Fleet — Agentic AI Associates`
+- **After title (51):** `Agentic AI for UK Logistics & Fleet — Cut Costs Now`
+- **Before desc (188):** `Agentic AI for UK logistics, last-mile and fleet operators. Route optimisation, driver ops, exception handling, telematics intelligence, and customer comms that stay accurate in real time.`
+- **After desc (148):** `Agentic AI for UK logistics and fleet operators. Route optimisation, driver ops, exception handling, and real-time customer comms. Book a free call.`
+- **Fixes:** Title rewritten with 'Agentic AI' and urgency phrase 'Cut Costs Now', desc shortened 40 chars, CTA added
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs to submit on next run with credentials:
+  - https://agenticai.associates/learn/in-house-ai-team-vs-consultancy/
+  - https://agenticai.associates/learn/agentic-ai-vs-generative-ai/
+  - https://agenticai.associates/learn/build-vs-buy-ai-agents/
+  - https://agenticai.associates/learn/what-does-an-ai-consultant-do/
+  - https://agenticai.associates/learn/benefits-of-hiring-an-ai-consultant/
+  - https://agenticai.associates/learn/ai-consultant-career-path/
+  - https://agenticai.associates/learn/ai-consultant-vs-vendor/
+  - https://agenticai.associates/industries/government/
+  - https://agenticai.associates/industries/saas/
+  - https://agenticai.associates/industries/logistics/
+
+### Recommendations for Run 3
+Pages remaining with measurable issues (11 total):
+
+**Title > 60 chars (2 pages):**
+- `/learn/how-to-become-an-ai-consultant/` — T:61 (1 char over)
+- `/learn/ai-consultant-skills/` — T:61 (1 char over)
+
+**Desc > 155 chars (9 pages):**
+- `/learn/how-to-choose-an-ai-consultant/` — D:157
+- `/industries/fintech/` — D:158
+- `/industries/insurance/` — D:162
+- `/industries/automotive/` — D:163
+- `/industries/energy-utilities/` — D:165
+- `/industries/media-publishing/` — D:167
+- `/what-we-do/ai-readiness-assessment/` — D:167
+- `/industries/construction/` — D:172
+- `/industries/hospitality/` — D:173
+
+**Pattern opportunities for Run 3:**
+- Location pages all share the same description template with only city name swapped — diversify top 5 by city-specific industry hook (e.g. London → fintech, Manchester → manufacturing)
+- `/for/` pages have no power words — add numbers (e.g. "30-Day AI Audit" for enterprise, "Fixed-Fee" for small-business)
+- Consider adding review date anchors "(Updated 2026)" to stale-looking learn titles
+
+**Set up .env with credentials to enable:**
+- GSC data pull for actual CTR/position data to prioritise by impressions
+- Bing Webmaster indexed page count
+- IndexNow submission after each run
+
+---
+
 ## Run 1 — 2026-05-17
 
 ### Data Sources
