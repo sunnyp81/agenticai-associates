@@ -2,6 +2,134 @@
 
 ---
 
+## Run 3 — 2026-05-21
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimization based on pattern audit — targeting pages flagged in Run 2 recommendations.
+
+### Audit Summary
+- **Total pages scanned:** 75 (all data files checked)
+- **Pages with issues at start of run:** 11 (carried from Run 2)
+- **Pages optimised this run:** 10 (max per run)
+- **Pages with issues remaining:** 1 (queued for Run 4)
+- **Primary issues fixed this run:**
+  - 7 industry pages with desc > 155 chars and brand suffix in title
+  - 1 what-we-do page with desc > 155 chars
+  - 1 learn page with title > 60 chars (desc also updated with CTA)
+  - 1 learn page with desc > 155 chars
+
+### Pages Optimised
+
+#### 1. `/industries/fintech/`
+- **Before title (49):** `AI Consultant for Fintech — Agentic AI Associates`
+- **After title (52):** `Agentic AI for UK Fintechs — FCA-Compliant Solutions`
+- **Before desc (158):** `Agentic AI for UK fintechs. KYC/KYB automation, transaction monitoring, fraud detection, regulatory reporting, and customer operations built for FCA scrutiny.`
+- **After desc (142):** `Agentic AI for UK fintechs. KYC/KYB automation, fraud detection, regulatory reporting, and customer ops — FCA-ready. Speak to an expert today.`
+- **Fixes:** Title rewritten with 'Agentic AI' + FCA compliance signal; desc shortened 16 chars, CTA added, redundant items merged
+
+#### 2. `/industries/insurance/`
+- **Before title (51):** `AI Consultant for Insurance — Agentic AI Associates`
+- **After title (51):** `Agentic AI for UK Insurers & MGAs — Expert Coverage`
+- **Before desc (162):** `Agentic AI for UK insurers, MGAs and brokers. Claims triage, underwriting copilots, fraud detection, policy document intelligence, and regulator-ready governance.`
+- **After desc (150):** `Agentic AI for UK insurers, MGAs and brokers. Claims triage, underwriting copilots, fraud detection, and regulator-ready governance. Book a free call.`
+- **Fixes:** Title rewritten with 'Agentic AI' + 'Expert Coverage' power phrase; desc shortened 12 chars, removed 'policy document intelligence' to make room for CTA
+
+#### 3. `/industries/energy-utilities/`
+- **Before title (60):** `AI Consultant for Energy & Utilities — Agentic AI Associates`
+- **After title (53):** `Agentic AI for UK Energy & Utilities — Net Zero Ready`
+- **Before desc (165):** `Agentic AI for UK energy suppliers, DNOs and water utilities. Smart meter analytics, customer operations, asset health forecasting, and Ofgem/Ofwat-ready governance.`
+- **After desc (150):** `Agentic AI for UK energy, DNOs and water utilities. Smart meter analytics, asset health, and Ofgem/Ofwat-ready governance. Book a free discovery call.`
+- **Fixes:** Title shortened 7 chars, 'Net Zero Ready' replaces brand suffix (highly relevant sector signal); desc shortened 15 chars, 'customer operations' merged into concise phrasing, CTA added
+
+#### 4. `/industries/construction/`
+- **Before title (54):** `AI Consultant for Construction — Agentic AI Associates`
+- **After title (54):** `Agentic AI for UK Construction & Contractors — Results`
+- **Before desc (172):** `Agentic AI for UK construction, main contractors and specialist subcontractors. Bid and tender intelligence, CDM compliance, programme risk, and site operations automation.`
+- **After desc (149):** `Agentic AI for UK contractors and subcontractors. Bid intelligence, CDM compliance, programme risk, and site operations automation. Book a free call.`
+- **Fixes:** Title rewritten with 'Agentic AI' + 'Results' power word; desc shortened 23 chars, tightened phrasing, CTA added
+
+#### 5. `/industries/hospitality/`
+- **Before title (53):** `AI Consultant for Hospitality — Agentic AI Associates`
+- **After title (53):** `Agentic AI for UK Hotels & Hospitality — Boost RevPAR`
+- **Before desc (173):** `Agentic AI for UK hotels, hospitality groups and F&B operators. Revenue management, guest experience, operations automation, and demand forecasting that adapts in real time.`
+- **After desc (149):** `Agentic AI for UK hotels and F&B operators. Revenue management, guest experience, ops automation, and demand forecasting. Book a free discovery call.`
+- **Fixes:** Title rewritten with 'Boost RevPAR' (sector-specific metric power phrase); desc shortened 24 chars, removed verbose clause 'adapts in real time', CTA added
+
+#### 6. `/industries/media-publishing/`
+- **Before title (60):** `AI Consultant for Media & Publishing — Agentic AI Associates`
+- **After title (51):** `Agentic AI for UK Media & Publishing — Grow Revenue`
+- **Before desc (167):** `Agentic AI for UK publishers, broadcasters and media groups. Editorial workflows, rights and metadata, ad operations, audience intelligence, and IPSO-ready governance.`
+- **After desc (147):** `Agentic AI for UK publishers and broadcasters. Editorial workflows, rights metadata, ad ops, and IPSO-ready governance. Book a free discovery call.`
+- **Fixes:** Title shortened 9 chars, 'Grow Revenue' replaces brand suffix; desc shortened 20 chars, 'audience intelligence' removed to make room for CTA
+
+#### 7. `/industries/automotive/`
+- **Before title (52):** `AI Consultant for Automotive — Agentic AI Associates`
+- **After title (53):** `Agentic AI for UK Automotive & Dealers — Drive Growth`
+- **Before desc (163):** `Agentic AI for UK automotive retail, dealer groups, OEMs and fleet operators. Dealership operations, F&I compliance, aftersales automation, and demand forecasting.`
+- **After desc (151):** `Agentic AI for UK automotive retail and dealer groups. Dealership ops, F&I compliance, aftersales automation, and demand forecasting. Book a free call.`
+- **Fixes:** Title rewritten with 'Drive Growth' power phrase; desc shortened 12 chars, 'OEMs and fleet operators' tightened, CTA added
+
+#### 8. `/what-we-do/ai-readiness-assessment/`
+- **Before title (47):** `AI Readiness Assessment — Agentic AI Associates`
+- **After title (51):** `AI Readiness Assessment — Fixed-Fee UK Audit (2026)`
+- **Before desc (167):** `Fixed-fee AI readiness assessment for UK businesses. We audit your data, processes, and team capability, then deliver a prioritised roadmap with clear ROI projections.`
+- **After desc (152):** `Fixed-fee AI readiness audit. We assess your data, processes, and team, then deliver a prioritised UK AI roadmap with ROI projections. Book a free call.`
+- **Fixes:** Title adds 'Fixed-Fee' price signal and year anchor (replaces brand suffix); desc shortened 15 chars, tightened phrasing, CTA added
+
+#### 9. `/learn/how-to-become-an-ai-consultant/`
+- **Before title (61):** `How to Become an AI Consultant — Complete Career Guide (2026)`
+- **After title (52):** `How to Become an AI Consultant — 2026 Career Roadmap`
+- **Before desc (149):** `Step-by-step guide to becoming an AI consultant. Covers education, skills, certifications, experience, and how to land your first AI consulting role.`
+- **After desc (144):** `Step-by-step guide to becoming an AI consultant. Covers education, skills, certifications, experience, and landing your first role. Start today.`
+- **Fixes:** Title shortened 9 chars, '2026 Career Roadmap' gives same recency signal more concisely; desc CTA 'Start today.' added
+
+#### 10. `/learn/how-to-choose-an-ai-consultant/`
+- **Before title (57):** `How to Choose an AI Consultant — A Buyer's Guide for 2026` _(unchanged)_
+- **Before desc (157):** `Learn how to choose the right AI consultant for your business. Covers evaluation criteria, red flags, interview questions, and what to look for in proposals.`
+- **After desc (154):** `Learn how to pick the right AI consultant for your business. Covers criteria, red flags, interview questions, and proposal review. Get our free checklist.`
+- **Fixes:** Desc shortened 3 chars below limit, 'evaluation criteria' tightened to 'criteria', 'what to look for in proposals' → 'proposal review', CTA 'Get our free checklist.' added
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs to submit on next run with credentials:
+  - https://agenticai.associates/industries/fintech/
+  - https://agenticai.associates/industries/insurance/
+  - https://agenticai.associates/industries/energy-utilities/
+  - https://agenticai.associates/industries/construction/
+  - https://agenticai.associates/industries/hospitality/
+  - https://agenticai.associates/industries/media-publishing/
+  - https://agenticai.associates/industries/automotive/
+  - https://agenticai.associates/what-we-do/ai-readiness-assessment/
+  - https://agenticai.associates/learn/how-to-become-an-ai-consultant/
+  - https://agenticai.associates/learn/how-to-choose-an-ai-consultant/
+
+### Recommendations for Run 4
+**Only 1 page with a measurable length issue remaining:**
+- `/learn/ai-consultant-skills/` — T:61 (1 char over; title is `AI Consultant Skills — The Complete Skills Breakdown for 2026`)
+  - Suggested fix: `AI Consultant Skills — Complete Skills Guide for 2026` (52 chars)
+
+**Pattern opportunities for Run 4 (no length issues, but CTR improvements):**
+- `/for/` pages still have brand suffix in titles and weak/no power words:
+  - `/for/small-business/` — `AI Consultant for Small Business — Agentic AI Associates` → consider `Agentic AI for UK Small Business — Expert Fixed-Fee Help`
+  - `/for/enterprise/` — `Enterprise AI Consultancy — Agentic AI Associates` → consider `Enterprise Agentic AI Consultancy UK — Scalable Results`
+  - `/for/startups/` — `AI Consultant for Startups — Agentic AI Associates` → consider `Agentic AI for UK Startups — Move Fast, Build Right`
+  - `/for/smes/` — `AI Consultancy for SMEs — Agentic AI Associates` → consider `Agentic AI for UK SMEs — Practical Fixed-Fee Results`
+- Location page descriptions all share one template with only city name varying — diversify top 5 with city-specific industry hooks:
+  - London → fintech / professional services angle
+  - Manchester → manufacturing / logistics angle
+  - Birmingham → automotive / manufacturing angle
+  - Bristol → tech / scale-up angle
+  - Edinburgh → financial services / public sector angle
+
+**Set up .env with credentials to enable:**
+- GSC data pull for actual CTR/position data to prioritise by impressions
+- Bing Webmaster indexed page count
+- IndexNow submission after each run
+
+---
+
 ## Run 2 — 2026-05-19
 
 ### Data Sources
