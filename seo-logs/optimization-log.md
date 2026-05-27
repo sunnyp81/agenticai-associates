@@ -2,6 +2,121 @@
 
 ---
 
+## Run 4 — 2026-05-27
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on pattern audit, targeting Run 3 recommendations.
+
+### Audit Summary
+- **Total pages scanned:** 75 (all data files checked)
+- **Hard rule violations at start:** 1 (title > 60 chars)
+- **CTR pattern issues identified:** 9 (brand suffix in /for/ titles; generic duplicate location descs)
+- **Pages optimised this run:** 10 (max per run)
+- **Pages with issues remaining:** 8 (generic desc: Leicester, Norfolk, Bedfordshire, Wokingham, Kensington, Kent; desc needs CTA: `/learn/ai-consultant-job-description/`, `/learn/ai-consultant-career-path/`)
+
+### Pages Optimised
+
+#### 1. `/learn/ai-consultant-skills/`
+- **Before title (61):** `AI Consultant Skills — The Complete Skills Breakdown for 2026`
+- **After title (53):** `AI Consultant Skills — Complete Skills Guide for 2026`
+- **Before desc (150):** `Discover the essential skills every AI consultant needs. Covers technical, business, and soft skills with practical advice on how to develop each one.`
+- **After desc (151):** `Discover the essential skills every AI consultant needs — technical, business, and soft skills — with practical steps to develop each one. Start today.`
+- **Fixes:** Title shortened 8 chars (removed 'The Complete…Breakdown' → 'Complete…Guide'); desc CTA 'Start today.' appended, 'advice on how to develop' → 'steps to develop' (tighter phrasing)
+
+#### 2. `/for/small-business/`
+- **Before title (56):** `AI Consultant for Small Business — Agentic AI Associates`
+- **After title (56):** `Agentic AI for UK Small Business — Expert Fixed-Fee Help`
+- **Before desc (121):** `Affordable AI consultancy for small businesses. Get expert AI strategy and implementation scaled to your budget and goals.`
+- **After desc (135):** `Agentic AI for UK small businesses. Fixed-fee packages, quick wins in 2 weeks, and team training included. Book a free discovery call.`
+- **Fixes:** Brand suffix replaced with 'Expert Fixed-Fee Help' (specific power phrase); desc gains price signal (fixed-fee), time signal (2 weeks), feature signal (training), and CTA
+
+#### 3. `/for/enterprise/`
+- **Before title (49):** `Enterprise AI Consultancy — Agentic AI Associates`
+- **After title (55):** `Enterprise Agentic AI Consultancy UK — Scalable Results`
+- **Before desc (150):** `Enterprise-grade AI consultancy for large organisations. We deliver AI strategy, governance frameworks, and scalable implementation across departments.`
+- **After desc (139):** `Enterprise agentic AI for large UK organisations. AI strategy, governance frameworks, and scalable implementation. Book a board-level call.`
+- **Fixes:** 'Agentic AI' added to title, 'UK' geo-signal added, 'Scalable Results' power phrase replaces brand suffix; desc tightened (removed 'across departments'), CTA 'Book a board-level call.' added
+
+#### 4. `/for/startups/`
+- **Before title (50):** `AI Consultant for Startups — Agentic AI Associates`
+- **After title (51):** `Agentic AI for UK Startups — Move Fast, Build Right`
+- **Before desc (141):** `AI consultancy built for startups. Move fast with expert guidance on AI product development, investor-ready strategy, and lean implementation.`
+- **After desc (144):** `Agentic AI built for UK startups. Expert guidance on AI product development, investor-ready strategy, and lean implementation. Book a free call.`
+- **Fixes:** 'Agentic AI' moves to front, UK geo-signal added, 'Move Fast, Build Right' replaces brand suffix (echoes startup mindset); desc adds CTA
+
+#### 5. `/for/smes/`
+- **Before title (47):** `AI Consultancy for SMEs — Agentic AI Associates`
+- **After title (52):** `Agentic AI for UK SMEs — Practical Fixed-Fee Results`
+- **Before desc (141):** `AI consultancy tailored for UK SMEs. Practical AI strategy and implementation that drives efficiency and growth without enterprise complexity.`
+- **After desc (157):** `Agentic AI for UK SMEs. Practical AI strategy and implementation that drives efficiency and growth without enterprise complexity. Book a free discovery call.`
+- **Fixes:** 'Agentic AI' front-loaded, 'Practical Fixed-Fee Results' replaces brand suffix; desc adds CTA
+
+#### 6. `/locations/bristol/`
+- **Before title (52):** `Agentic AI Consultants in Bristol | Strategy & Build` _(unchanged)_
+- **Before desc (138):** `Expert agentic AI consultants in Bristol. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (151):** `Agentic AI consultants in Bristol. Aerospace, cleantech, and creative sector specialists. Fixed-fee diagnostic from £6,500. Book a free discovery call.`
+- **Fixes:** Generic template replaced with Bristol-specific industry hooks (aerospace = Airbus/Rolls-Royce/BAE, cleantech, creative); price anchor added; CTA retained
+
+#### 7. `/locations/reading/`
+- **Before title (52):** `Agentic AI Consultants in Reading | Strategy & Build` _(unchanged)_
+- **Before desc (138):** `Expert agentic AI consultants in Reading. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (155):** `Agentic AI consultants in the Thames Valley. Enterprise tech, pharma, and SaaS specialists. Fixed-fee diagnostic from £6,500. Book a free discovery call.`
+- **Fixes:** Generic template replaced with Thames Valley identity (Microsoft/Oracle corridor) + sector hooks (enterprise tech, pharma, SaaS); price anchor added
+
+#### 8. `/locations/surrey/`
+- **Before title (51):** `Agentic AI Consultants in Surrey | Strategy & Build` _(unchanged)_
+- **Before desc (137):** `Expert agentic AI consultants in Surrey. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (150):** `Agentic AI consultants in Surrey. Pharma, gaming, and professional services specialists. Fixed-fee diagnostic from £6,500. Book a free discovery call.`
+- **Fixes:** Generic template replaced with Surrey sector hooks (GSK/Pfizer pharma, Guildford gaming, professional services); price anchor added
+
+#### 9. `/locations/northern-ireland/`
+- **Before title (52):** `Agentic AI Consultants N. Ireland | Strategy & Build` _(unchanged)_
+- **Before desc (147):** `Expert agentic AI consultants in Northern Ireland. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (148):** `Agentic AI consultants in Northern Ireland. Fintech, cybersecurity, and agri-food sector specialists. Fixed-fee diagnostic from £6,500. Book a call.`
+- **Fixes:** Generic template replaced with Northern Ireland sector hooks (Belfast fintech, CSIT cybersecurity, agri-food); price anchor added
+
+#### 10. `/locations/salford/`
+- **Before title (52):** `Agentic AI Consultants in Salford | Strategy & Build` _(unchanged)_
+- **Before desc (138):** `Expert agentic AI consultants in Salford. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (146):** `Agentic AI consultants in Salford & MediaCityUK. Media, digital agency, and e-commerce specialists. Fixed-fee diagnostic from £6,500. Book a call.`
+- **Fixes:** Generic template replaced with Salford identity (MediaCityUK brand recognition) + sector hooks (media/broadcasting, digital agencies, e-commerce); price anchor added
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs to submit on next run with credentials:
+  - https://agenticai.associates/learn/ai-consultant-skills/
+  - https://agenticai.associates/for/small-business/
+  - https://agenticai.associates/for/enterprise/
+  - https://agenticai.associates/for/startups/
+  - https://agenticai.associates/for/smes/
+  - https://agenticai.associates/locations/bristol/
+  - https://agenticai.associates/locations/reading/
+  - https://agenticai.associates/locations/surrey/
+  - https://agenticai.associates/locations/northern-ireland/
+  - https://agenticai.associates/locations/salford/
+
+### Recommendations for Run 5
+**Remaining location pages with generic descriptions (8 total):**
+- `/locations/leicester/` — desc: `Expert agentic AI consultants in Leicester. We design...` → suggest: `Agentic AI consultants in Leicester. Manufacturing, food & drink, and logistics specialists. Fixed-fee diagnostic from £6,500. Book a free call.`
+- `/locations/norfolk/` — desc: generic → suggest hook: insurance (Norwich/Aviva), agriculture, offshore energy
+- `/locations/bedfordshire/` — desc: generic → suggest hook: aerospace (Cranfield), logistics (Luton/M1), research
+- `/locations/wokingham/` — desc: generic → suggest hook: Thames Valley enterprise tech, cybersecurity, financial services
+- `/locations/kensington/` — desc: generic → suggest hook: luxury brands, private equity, wealth management
+- `/locations/kent/` — desc: generic → suggest hook: logistics (Dover), manufacturing, agriculture/viticulture
+
+**Pattern opportunities for Run 5:**
+- Consider adding '2026' year anchors to `/learn/ai-consultant-job-description/` and `/learn/what-is-an-ai-consultant/` titles — both are evergreen pages that would benefit from recency signals
+- `/learn/freelance-ai-consultant/` title has no number ('How to Start and Succeed' vs '5 Steps to Start and Succeed')
+
+**Set up .env with credentials to enable:**
+- GSC data pull for actual CTR/position data to prioritise by impressions
+- Bing Webmaster indexed page count
+- IndexNow submission after each run
+
+---
+
 ## Run 3 — 2026-05-21
 
 ### Data Sources
