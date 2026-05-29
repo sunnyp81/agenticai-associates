@@ -2,6 +2,103 @@
 
 ---
 
+## Run 5 — 2026-05-29
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on pattern audit, targeting Run 4 recommendations.
+
+### Audit Summary
+- **Total pages scanned:** 75 (all data files checked)
+- **Hard rule violations at start:** 0
+- **CTR pattern issues identified:** 9 (generic template descriptions on 6 location pages; learn pages missing 2026 anchors and CTAs)
+- **Pages optimised this run:** 9
+- **Pages with issues remaining:** 0 generic location descriptions remain. All 12 location pages now have city-specific sector hooks.
+
+### Pages Optimised
+
+#### 1. `/locations/leicester/`
+- **Before desc (140):** `Expert agentic AI consultants in Leicester. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (144):** `Agentic AI consultants in Leicester. Manufacturing, food & drink, and logistics specialists. Fixed-fee diagnostic from £6,500. Book a free call.`
+- **Fixes:** Generic template replaced with Leicester-specific sector hooks (manufacturing, food & drink, logistics hub); price anchor added; CTA retained
+
+#### 2. `/locations/norfolk/`
+- **Before desc (138):** `Expert agentic AI consultants in Norfolk. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (143):** `Agentic AI consultants in Norfolk. Insurance, agriculture, and offshore energy specialists. Fixed-fee diagnostic from £6,500. Book a free call.`
+- **Fixes:** Generic template replaced with Norfolk-specific sector hooks (Norwich/Aviva insurance cluster, arable agriculture, offshore North Sea energy); price anchor added
+
+#### 3. `/locations/kent/`
+- **Before desc (135):** `Expert agentic AI consultants in Kent. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (148):** `Agentic AI consultants in Kent. Logistics, manufacturing, and viticulture specialists. Fixed-fee diagnostic from £6,500. Book a free discovery call.`
+- **Fixes:** Generic template replaced with Kent-specific sector hooks (Dover logistics corridor, manufacturing, England's leading wine region); price anchor added
+
+#### 4. `/locations/bedfordshire/`
+- **Before desc (143):** `Expert agentic AI consultants in Bedfordshire. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (149):** `Agentic AI consultants in Bedfordshire. Aerospace, logistics, and Cranfield research specialists. Fixed-fee diagnostic from £6,500. Book a free call.`
+- **Fixes:** Generic template replaced with Bedfordshire-specific hooks (Cranfield aerospace/research corridor, Luton M1 logistics hub); price anchor added
+
+#### 5. `/locations/wokingham/`
+- **Before desc (140):** `Expert agentic AI consultants in Wokingham. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (155):** `Agentic AI consultants in Wokingham. Enterprise tech, cybersecurity, and fintech specialists. Fixed-fee diagnostic from £6,500. Book a free discovery call.`
+- **Fixes:** Generic template replaced with Wokingham/Thames Valley tech corridor hooks (enterprise tech cluster, cybersecurity firms, fintech); price anchor added
+
+#### 6. `/locations/kensington/`
+- **Before desc (141):** `Expert agentic AI consultants in Kensington. We design, build, and deploy autonomous AI agents for your business. Book a free discovery call.`
+- **After desc (150):** `Agentic AI consultants in Kensington. Luxury brands, private equity, and wealth management specialists. Fixed-fee diagnostic from £6,500. Book a call.`
+- **Fixes:** Generic template replaced with Kensington-specific sector hooks (luxury retail/brands, private equity, wealth management/family offices); price anchor added
+
+#### 7. `/learn/what-is-an-ai-consultant/`
+- **Before title (54):** `What Is an AI Consultant? Roles, Skills & What They Do`
+- **After title (54):** `What Is an AI Consultant? Roles, Skills & Costs (2026)`
+- **Before desc (150):** `Learn what an AI consultant is, what they do, and why businesses hire them. Covers roles, responsibilities, skills, and how AI consultants create value.`
+- **After desc (142):** `Learn what an AI consultant does, why businesses hire them, and what they cost. Expert guide to roles, skills, and how to get started in 2026.`
+- **Fixes:** Title swaps 'What They Do' for 'Costs (2026)' — adds high-intent cost signal and year anchor; desc tightened, 'Expert guide' power phrase added, '2026' recency signal added
+
+#### 8. `/learn/ai-consultant-job-description/`
+- **Before title (51):** `AI Consultant Job Description — Roles, Duties & Requirements`
+- **After title (53):** `AI Consultant Job Description — Roles & Duties (2026)`
+- **Before desc (140):** `Complete AI consultant job description template. Covers responsibilities, required skills, qualifications, and what to expect from the role.`
+- **After desc (146):** `Complete AI consultant job description for 2026. Covers responsibilities, required skills, qualifications, and salary. Download our free template.`
+- **Fixes:** Title adds 2026 year anchor (replaces 'Requirements', shortens); desc adds recency signal, swaps 'what to expect from the role' for 'salary' (higher-intent keyword), CTA 'Download our free template.' added
+
+#### 9. `/learn/freelance-ai-consultant/`
+- **Before title (58):** `Freelance AI Consultant — How to Start and Succeed in 2026`
+- **After title (59):** `Freelance AI Consultant — 5 Steps to Start & Succeed (2026)`
+- **Before desc (154):** `Complete guide to becoming a freelance AI consultant. Covers pricing, finding clients, building your brand, and the realities of independent AI consulting.`
+- **After desc (147):** `Complete guide to becoming a freelance AI consultant. Covers day rates, finding clients, building your brand, and IR35. Start earning more in 2026.`
+- **Fixes:** Title adds '5 Steps' number (power word) and retains 2026 anchor; desc swaps 'pricing' for 'day rates' (more specific/searchable), removes verbose 'realities of independent AI consulting', adds IR35 (high-intent UK keyword), CTA 'Start earning more in 2026.' added
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs to submit on next run with credentials:
+  - https://agenticai.associates/locations/leicester/
+  - https://agenticai.associates/locations/norfolk/
+  - https://agenticai.associates/locations/kent/
+  - https://agenticai.associates/locations/bedfordshire/
+  - https://agenticai.associates/locations/wokingham/
+  - https://agenticai.associates/locations/kensington/
+  - https://agenticai.associates/learn/what-is-an-ai-consultant/
+  - https://agenticai.associates/learn/ai-consultant-job-description/
+  - https://agenticai.associates/learn/freelance-ai-consultant/
+
+### Recommendations for Run 6
+**All location descriptions are now unique with sector-specific hooks. Location hub is complete.**
+
+**Pattern opportunities for Run 6:**
+- `/learn/ai-consultant-salary/` — if it exists, add year anchor and salary range number to title (e.g., '£500–£1,500/day: AI Consultant Salary Guide 2026')
+- `/learn/ai-consultant-certification/` — add number of top certs to title (e.g., '5 Best AI Consultant Certifications (2026)')
+- `/learn/become-ai-consultant-no-experience/` — add number or power phrase to title
+- `/solutions/` hub pages — audit for missing CTAs and power words
+- `/what-we-do/` hub — verify all spoke titles have 'Agentic AI' in them and no brand suffix remains
+
+**Set up .env with credentials to enable:**
+- GSC data pull for actual CTR/position data to prioritise by impressions
+- Bing Webmaster indexed page count
+- IndexNow submission after each run
+
+---
+
 ## Run 4 — 2026-05-27
 
 ### Data Sources
