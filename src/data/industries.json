@@ -1,15 +1,15 @@
 {
   "hub": {
-    "title": "AI Consultancy by Industry — Tailored Solutions for Your Sector",
-    "description": "Industry-specific AI consultancy services for healthcare, legal, finance, retail, manufacturing, and more. We understand your sector's unique challenges.",
+    "title": "AI Consultancy by Industry — Sector-Specific Expertise",
+    "description": "Industry-specific agentic AI consultancy for healthcare, legal, finance, and manufacturing. We speak your sector's language. Book a free call.",
     "primaryKeyword": "ai consultancy"
   },
   "pages": [
     {
       "slug": "healthcare",
       "name": "AI for Healthcare",
-      "title": "AI Consultant for Healthcare — Agentic AI Associates",
-      "description": "Healthcare AI consultant helping NHS trusts and private clinics automate admin, improve diagnostics, and reduce waiting times with agentic AI.",
+      "title": "Healthcare AI Consultant UK — NHS Trusts & Private Clinics",
+      "description": "Healthcare AI consultant for NHS trusts and private clinics. Automate admin, cut waiting times, and improve diagnostics with agentic AI. Book a call.",
       "primaryKeyword": "healthcare ai consultant",
       "icon": "healthcare",
       "intro": "<p>Healthcare in the UK faces relentless pressure. Staff shortages, growing waiting lists, and mountains of paperwork drain resources that should go to patient care. AI offers a practical way to ease the burden — from triaging referrals to spotting patterns in patient data that humans cannot process at speed.</p>\n<p>NHS trusts and private providers we work with reclaim 20-40% of clinical admin time within the first six months of deploying agentic workflows. The gains compound: less paperwork means lower burnout, better retention, and shorter waits for patients. Every healthcare engagement begins with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> so we can map your existing EPR, PAS, and reporting stack before recommending changes.</p>\n<p>We work with HL7 and FHIR standards, integrate with NHS Spine where authorised, and design every system against the Data Security and Protection Toolkit. Whether you run a single primary care network or a 500-bed acute trust, we right-size the engagement — most pilots ship a working pipeline in 8-12 weeks.</p>",
@@ -101,8 +101,8 @@
     {
       "slug": "legal",
       "name": "AI for Legal",
-      "title": "AI Consultant for Legal — Agentic AI Associates",
-      "description": "Legal AI consultant helping UK law firms automate document review, contract analysis, and compliance workflows with intelligent AI solutions.",
+      "title": "Legal AI Consultant UK — Document Review & Compliance",
+      "description": "Legal AI consultant for UK law firms. Automate document review, contract analysis, and compliance workflows with agentic AI. Book a free call.",
       "primaryKeyword": "legal ai consultant",
       "icon": "legal",
       "intro": "<p>The legal sector is under pressure to deliver more for less. Clients expect faster turnarounds, transparent pricing, and proactive advice. AI gives law firms a genuine competitive edge — automating the grunt work of document review, contract drafting, and due diligence so solicitors can focus on the work that requires legal judgement.</p>\n<p>UK firms we work with reduce contract review time by 60-80% and disclosure review by 40-60% within the first quarter. The recovered hours go straight back into chargeable advisory work or partner-led business development. We design every system to satisfy SRA principles, the Equality Act, and your firm's existing risk and compliance framework — agentic AI is not a workaround for professional duties.</p>\n<p>Whether you are a regional high-street practice, a Magic Circle international, or in-house counsel for a FTSE 250, we right-size the engagement. Most pilots run on a single matter type — NDAs, leases, employment contracts — prove the value in 6-10 weeks, then scale firm-wide. Start with our <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> to map current matter management, document store, and PMS integration before scoping change.</p>",
@@ -374,8 +374,8 @@
     {
       "slug": "finance",
       "name": "AI for Finance",
-      "title": "AI Consultant for Finance — Agentic AI Associates",
-      "description": "Finance AI consultant helping UK financial services firms automate compliance, detect fraud, and improve decision-making with responsible AI.",
+      "title": "Finance AI Consultant UK — Compliance, Fraud & Risk",
+      "description": "Finance AI consultant for UK financial services firms. Automate compliance, detect fraud, and sharpen decision-making with responsible AI. Book a call.",
       "primaryKeyword": "ai consultant finance",
       "icon": "finance",
       "intro": "<p>Financial services sit at the intersection of massive data volumes, strict regulation, and intense competition. AI is not optional in this sector — it is the table stakes for keeping pace with FCA-supervised challengers, neobanks, and global investment platforms. The question for UK firms is not whether to adopt AI, but how to do it without tripping the regulator.</p>\n<p>Banks, asset managers, and insurers we advise reduce manual control hours by 30-50% within the first six months and shorten KYC onboarding from days to under an hour. Each engagement starts with a <a href=\"/what-we-do/ai-readiness-assessment/\">readiness assessment</a> covering your data lineage, model risk management framework, and existing regulatory commitments — we never deploy something the second line cannot defend.</p>\n<p>We design every solution against SS1/23, the FCA's AI guidance, and the Senior Managers and Certification Regime accountability map. Whether you are a regional building society, a wealth manager, an insurance broker, or a Tier 1 bank, we right-size the engagement — most pilots prove value in 10-14 weeks before scaling across the group.</p>",
@@ -833,8 +833,8 @@
     {
       "slug": "manufacturing",
       "name": "AI for Manufacturing",
-      "title": "AI Consultant for Manufacturing — Agentic AI Associates",
-      "description": "Manufacturing AI consultant helping UK factories reduce downtime, improve quality, and optimise production with practical AI and automation.",
+      "title": "Manufacturing AI Consultant UK — Cut Downtime & Defects",
+      "description": "Manufacturing AI consultant for UK factories. Reduce downtime, improve quality, and optimise production with agentic AI. Book a free call.",
       "primaryKeyword": "ai consultant manufacturing",
       "icon": "manufacturing",
       "intro": "<p>UK manufacturing faces a triple squeeze — rising energy costs, persistent skills shortages, and intensifying global competition. AI addresses all three. Predictive maintenance prevents unplanned downtime that wrecks margins. Quality automation catches defects before they ship. Production scheduling squeezes more throughput from existing capacity without adding heads.</p>\n<p>The UK manufacturers we work with — from precision engineering SMEs to FTSE 100 industrials — typically lift OEE by 4-8 percentage points within two quarters and cut quality escape rate by 30-60% in the same window. Predictive maintenance pilots usually pay for themselves on the first prevented major breakdown.</p>\n<p>Every engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> mapping your shop-floor data, MES, ERP, and quality systems. We work with SAP, Oracle, Infor, Microsoft Dynamics 365 for Manufacturing, and the major MES platforms (Wonderware, Aveva, Rockwell). Most pilots ship in 10-14 weeks and prove ROI within a single quarter — usually on a single line, single asset, or single quality stream before scaling site-wide.</p>",

@@ -2,6 +2,118 @@
 
 ---
 
+## Run 6 — 2026-05-31
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on full pattern audit of all 78 pages across 5 data files.
+
+### Audit Summary
+- **Total pages scanned:** 78 (all data files)
+- **Hard rule violations at start:** 2 (industries hub title 63 chars; SMEs desc 157 chars)
+- **CTR pattern issues identified:** 8 (services and industry pages with no CTA in meta description)
+- **Pages optimised this run:** 10
+- **Duplicate titles:** 0 (verified post-edit)
+
+### Pages Optimised
+
+#### 1. `/industries/` (hub)
+- **Before title (63):** `AI Consultancy by Industry — Tailored Solutions for Your Sector`
+- **After title (54):** `AI Consultancy by Industry — Sector-Specific Expertise`
+- **Before desc (153):** `Industry-specific AI consultancy services for healthcare, legal, finance, retail, manufacturing, and more. We understand your sector's unique challenges.`
+- **After desc (142):** `Industry-specific agentic AI consultancy for healthcare, legal, finance, and manufacturing. We speak your sector's language. Book a free call.`
+- **Fixes:** Title shortened below 60-char limit; 'agentic AI' added to desc; CTA added; brand echo removed.
+
+#### 2. `/industries/healthcare/`
+- **Before title (52):** `AI Consultant for Healthcare — Agentic AI Associates`
+- **After title (58):** `Healthcare AI Consultant UK — NHS Trusts & Private Clinics`
+- **Before desc (142):** `Healthcare AI consultant helping NHS trusts and private clinics automate admin, improve diagnostics, and reduce waiting times with agentic AI.`
+- **After desc (149):** `Healthcare AI consultant for NHS trusts and private clinics. Automate admin, cut waiting times, and improve diagnostics with agentic AI. Book a call.`
+- **Fixes:** Primary keyword repositioned to front of title; UK added; brand suffix replaced with specific audience signal; CTA added to desc.
+
+#### 3. `/industries/legal/`
+- **Before title (47):** `AI Consultant for Legal — Agentic AI Associates`
+- **After title (53):** `Legal AI Consultant UK — Document Review & Compliance`
+- **Before desc (141):** `Legal AI consultant helping UK law firms automate document review, contract analysis, and compliance workflows with intelligent AI solutions.`
+- **After desc (142):** `Legal AI consultant for UK law firms. Automate document review, contract analysis, and compliance workflows with agentic AI. Book a free call.`
+- **Fixes:** Primary keyword to front; UK geo signal added; brand suffix replaced with service hook; CTA added.
+
+#### 4. `/industries/finance/`
+- **Before title (49):** `AI Consultant for Finance — Agentic AI Associates`
+- **After title (51):** `Finance AI Consultant UK — Compliance, Fraud & Risk`
+- **Before desc (141):** `Finance AI consultant helping UK financial services firms automate compliance, detect fraud, and improve decision-making with responsible AI.`
+- **After desc (151):** `Finance AI consultant for UK financial services firms. Automate compliance, detect fraud, and sharpen decision-making with responsible AI. Book a call.`
+- **Fixes:** Primary keyword to front; UK geo signal; brand suffix replaced with use-case hook; CTA added.
+
+#### 5. `/industries/manufacturing/`
+- **Before title (55):** `AI Consultant for Manufacturing — Agentic AI Associates`
+- **After title (55):** `Manufacturing AI Consultant UK — Cut Downtime & Defects`
+- **Before desc (140):** `Manufacturing AI consultant helping UK factories reduce downtime, improve quality, and optimise production with practical AI and automation.`
+- **After desc (138):** `Manufacturing AI consultant for UK factories. Reduce downtime, improve quality, and optimise production with agentic AI. Book a free call.`
+- **Fixes:** Primary keyword to front; UK geo; power word 'Cut'; brand suffix replaced; 'agentic AI' added; CTA added.
+
+#### 6. `/what-we-do/ai-strategy/`
+- **Before title (46):** `AI Strategy & Roadmaps — Agentic AI Associates`
+- **After title (53):** `AI Strategy Consulting UK — Clear Roadmaps, Fixed Fee`
+- **Before desc (126):** `Expert AI strategy consulting. We build clear roadmaps that align AI with your business goals, budget, and timeline. UK-based.`
+- **After desc (144):** `Expert AI strategy consulting for UK businesses. Clear roadmaps aligned to your goals, budget, and timeline. Fixed-fee from £6,500. Book a call.`
+- **Fixes:** 'Consulting UK' added to title; price anchor added to desc; CTA added.
+
+#### 7. `/what-we-do/agentic-ai/`
+- **Before title (48):** `Agentic AI Consultancy UK — Autonomous AI Agents` *(no change)*
+- **Before desc (151):** `We design, build, and deploy agentic AI systems — autonomous agents that handle complex, multi-step business workflows with minimal human intervention.`
+- **After desc (149):** `We design and deploy agentic AI systems — autonomous agents that handle complex business workflows with minimal human intervention. Book a free call.`
+- **Fixes:** Desc trimmed slightly; CTA added.
+
+#### 8. `/what-we-do/ai-training/`
+- **Before title (44):** `AI Training & Workshops UK — Team Upskilling`
+- **After title (54):** `AI Training & Workshops UK — Practical Team Upskilling`
+- **Before desc (134):** `Practical AI training and workshops for UK businesses. Upskill your team on AI tools, prompt engineering, and responsible AI adoption.`
+- **After desc (152):** `Practical AI training and workshops for UK businesses. Upskill your team on AI tools, prompt engineering, and responsible AI adoption. Book a free call.`
+- **Fixes:** Power word 'Practical' added to title; CTA added to desc.
+
+#### 9. `/what-we-do/ongoing-support/`
+- **Before title (45):** `AI Support & Optimisation — Retainer Packages`
+- **After title (56):** `AI Support & Optimisation UK — Monthly Retainer Packages`
+- **Before desc (120):** `Ongoing AI support, monitoring, and optimisation. Retainer packages for businesses that need continuous expert guidance.`
+- **After desc (135):** `Ongoing AI support, monitoring, and optimisation for UK businesses. Expert retainer packages from £1,500/month. Get a free quote today.`
+- **Fixes:** UK geo added to title; price anchor added to desc; CTA added.
+
+#### 10. `/for/smes/`
+- **Before title (52):** `Agentic AI for UK SMEs — Practical Fixed-Fee Results` *(no change)*
+- **Before desc (157):** `Agentic AI for UK SMEs. Practical AI strategy and implementation that drives efficiency and growth without enterprise complexity. Book a free discovery call.`
+- **After desc (140):** `Agentic AI for UK SMEs. Practical AI strategy and implementation that drives real efficiency gains. Fixed-fee from £6,500. Book a free call.`
+- **Fixes:** Desc trimmed from 157 to 140 chars (was over 155-char limit); price anchor added; CTA shortened.
+
+### Data Summary
+- No live GSC or Bing data available (no `.env`)
+- Pattern analysis run across all 78 pages
+- Post-edit: 0 title violations, 0 desc violations, 0 missing CTAs in edited pages
+
+### IndexNow
+- Skipped (no INDEXNOW_KEY in `.env`)
+- URLs ready to submit when key is available:
+  - https://agenticai.associates/industries/
+  - https://agenticai.associates/industries/healthcare/
+  - https://agenticai.associates/industries/legal/
+  - https://agenticai.associates/industries/finance/
+  - https://agenticai.associates/industries/manufacturing/
+  - https://agenticai.associates/what-we-do/ai-strategy/
+  - https://agenticai.associates/what-we-do/agentic-ai/
+  - https://agenticai.associates/what-we-do/ai-training/
+  - https://agenticai.associates/what-we-do/ongoing-support/
+  - https://agenticai.associates/for/smes/
+
+### Recommendations for Run 7
+- **Add `.env` with GSC/Bing/IndexNow credentials** — enables live data-driven optimisation and instant reindexing.
+- **Remaining no-CTA pages:** `supply-chain`, `education`, `ecommerce`, `real-estate`, `marketing`, `saas` — all have descriptive but passive meta descriptions. Add CTAs in next run.
+- **Learn hub and learn pages** (`ai-consultant-career-path`, `when-to-hire-an-ai-consultant`) — no CTAs. Consider adding soft CTAs like "Read the guide" or "Book a free call."
+- **Insights pages** — 6 standalone Astro files not yet reviewed for title/desc quality. Queue for next audit.
+- **Title pattern for industry pages** — new keyword-first pattern (`[Industry] AI Consultant UK — [Hook]`) is now consistent across 4 pages; apply to remaining 6 industry pages.
+
+---
+
 ## Run 5 — 2026-05-29
 
 ### Data Sources
