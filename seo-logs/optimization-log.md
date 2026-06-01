@@ -2,6 +2,117 @@
 
 ---
 
+## Run 7 — 2026-06-01
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on full pattern audit — targeting insights hub (first time reviewed) and remaining no-CTA industry pages flagged in Run 6.
+
+### Audit Summary
+- **Total pages scanned:** 59 (all data files + 7 insights Astro files)
+- **Hard rule violations at start:** 9 (2 titles > 60 chars in insights; 7 descriptions > 155 chars in insights)
+- **CTR pattern issues identified:** 10 (5 no-CTA industry pages; 5 no-CTA insights pages; 2 passive insights descriptions)
+- **Pages optimised this run:** 10
+- **Duplicate titles post-edit:** 0 (verified across all 59 pages)
+
+### Pages Optimised
+
+#### 1. `/insights/langgraph-vs-bedrock-vs-copilot-studio/`
+- **Before title (84):** `LangGraph vs Bedrock Agents vs Copilot Studio: A Regulated Buyer's Comparison (2026)`
+- **After title (56):** `LangGraph vs Bedrock vs Copilot Studio — Regulated Guide`
+- **Before desc (219):** `A focused comparison of the three platforms most often shortlisted by FCA-regulated UK firms — covering audit fidelity, model portability, identity, cost predictability, and the architectural decisions that lock you in.`
+- **After desc (152):** `Three agent platforms for FCA-regulated UK firms: LangGraph, Bedrock, and Copilot Studio — scored on audit fidelity, portability, and lock-in. Read now.`
+- **Fixes:** Title shortened 28 chars (dropped 'Agents', removed year bracket, removed 'A Regulated Buyer's Comparison'); desc cut 67 chars, key criteria retained, CTA 'Read now.' added.
+
+#### 2. `/insights/agentic-ai-report-generation-regulated/`
+- **Before title (72):** `Agentic AI for Report Generation: Regulated-Grade Reference Architecture`
+- **After title (58):** `Agentic AI Report Generation: Regulated-Grade Guide (2026)`
+- **Before desc (222):** `How regulated UK firms use agentic AI to draft, review, and approve reports — with provenance, audit trail, and the human-in-the-loop checkpoints supervisors expect. Reference architecture and 5 patterns we have seen ship.`
+- **After desc (154):** `How regulated UK firms draft, review, and approve reports using agentic AI — with audit trail, provenance, and human-in-the-loop sign-off. Read the guide.`
+- **Fixes:** Title shortened 14 chars ('Reference Architecture' → 'Guide', year anchor added); desc cut 68 chars, key concepts retained, CTA 'Read the guide.' added.
+
+#### 3. `/insights/fca-ai-governance-playbook/`
+- **Before title (60):** `FCA AI Governance Playbook: SM&CR, Consumer Duty, Model Risk` *(no change — exactly 60 chars)*
+- **Before desc (231):** `An operational playbook for AI deployment under the FCA AI Approach — Senior Manager mapping (SMF4/SMF24), Consumer Duty outcome rubric, AI Risk Register schema, and the controls UK regulated firms are actually expected to operate.`
+- **After desc (139):** `FCA AI deployment playbook for UK regulated firms. SM&CR mapping, Consumer Duty rubric, and AI Risk Register schema included. Download now.`
+- **Fixes:** Desc cut 92 chars; verbose preamble removed; benefit statement retained; CTA 'Download now.' added.
+
+#### 4. `/insights/agent-studio-build-vs-buy/`
+- **Before title (59):** `Agent Studio: Build vs Buy for Regulated Enterprises (2026)` *(no change)*
+- **Before desc (216):** `A 12-criterion scoring matrix across seven agent platforms — LangGraph, Bedrock Agents, Copilot Studio, Vertex AI Agent Builder, Writer Palmyra, Glean, and custom — judged for FCA-regulated and £bn-AUM organisations.`
+- **After desc (145):** `Compare 7 agent platforms on 12 criteria — LangGraph, Bedrock, Copilot Studio, and more. The scoring matrix for FCA-regulated UK firms. Read now.`
+- **Fixes:** Desc cut 71 chars; full platform list condensed to top 3 + 'and more'; numeric hook '7 platforms' and '12 criteria' kept front-loaded; CTA 'Read now.' added.
+
+#### 5. `/insights/ai-sdlc-audit-trail/`
+- **Before title (53):** `AI SDLC Audit Trail: 12 Fields the FCA Will Ask About` *(no change)*
+- **Before desc (212):** `A field-by-field reference for the audit-trail schema regulated firms need when agents touch the software delivery pipeline — what to capture, why, where to store it, and the failure modes that void the evidence.`
+- **After desc (122):** `The 12 audit-trail fields FCA firms need when AI agents touch the software pipeline. Free field-by-field reference schema.`
+- **Fixes:** Desc cut 90 chars; verbose middle section removed; '12 fields' number retained as power hook; 'Free' power word added as CTA trigger.
+
+#### 6. `/insights/agentic-sdlc-regulated-engineering/`
+- **Before title (44):** `Agentic SDLC for Regulated Engineering Teams`
+- **After title (51):** `Agentic SDLC for Regulated Engineering Teams (2026)`
+- **Before desc (195):** `A reference architecture for AI-augmented software delivery in FCA-supervised firms — phased framework, audit-trail design, SM&CR control mapping, and the failure modes we see most often in 2026.`
+- **After desc (152):** `How FCA-supervised firms ship software safely with AI agents — five-phase delivery framework, audit-trail design, SM&CR control mapping. Start building.`
+- **Fixes:** Title gains 2026 recency anchor (+7 chars); desc cut 43 chars, 'failure modes' removed, 'five-phase' number added, CTA 'Start building.' added.
+
+#### 7. `/insights/smcr-ai-accountability/`
+- **Before title (57):** `SM&CR and AI: Who's Accountable When an Agent Goes Wrong?` *(no change)*
+- **Before desc (197):** `A working answer to the question every Senior Manager at a UK regulated firm is now asking — how Senior Manager Function holders attest to AI systems they did not build, write, or fully understand.`
+- **After desc (155):** `Who's accountable when an AI agent fails? Practical SM&CR guidance for UK regulated firms — SMF holder responsibilities and attestation evidence. Read now.`
+- **Fixes:** Desc cut 42 chars; verbosity removed; 'Practical' power word added; 'fails' replaces 'goes wrong' (shorter, more direct); CTA 'Read now.' added.
+
+#### 8. `/industries/supply-chain/`
+- **Before title (54):** `AI Consultant for Supply Chain — Agentic AI Associates`
+- **After title (50):** `Agentic AI for UK Supply Chain — Cut Costs & Waste`
+- **Before desc (141, no CTA):** `Supply chain AI consultant helping UK businesses optimise logistics, reduce costs, and build resilient operations with intelligent AI systems.`
+- **After desc (145):** `Supply chain AI consultant helping UK businesses cut costs, optimise logistics, and build resilient operations with agentic AI. Book a free call.`
+- **Fixes:** Brand suffix removed; 'Agentic AI' front-loaded; 'Cut Costs & Waste' power phrase replaces suffix; 'agentic AI' added to desc; CTA 'Book a free call.' added.
+
+#### 9. `/industries/education/`
+- **Before title (51):** `AI Consultant for Education — Agentic AI Associates`
+- **After title (60):** `Agentic AI for UK Education — Reduce Admin, Improve Outcomes`
+- **Before desc (142, no CTA):** `Education AI consultant helping UK schools, universities, and training providers personalise learning and reduce admin with practical AI tools.`
+- **After desc (155):** `Education AI consultant helping UK schools, universities, and training providers personalise learning and reduce admin with practical AI. Book a free call.`
+- **Fixes:** Brand suffix removed; 'Agentic AI' front-loaded; 'Reduce Admin, Improve Outcomes' benefit hook replaces suffix; CTA added; 'tools' removed from desc (saves 6 chars) to fit CTA.
+
+#### 10. `/industries/ecommerce/`
+- **Before title (51):** `AI Consultant for Ecommerce — Agentic AI Associates`
+- **After title (59):** `Agentic AI for UK Ecommerce — Boost Conversions & Cut Costs`
+- **Before desc (139, no CTA):** `Ecommerce AI consultant helping UK online retailers increase conversions, personalise shopping experiences, and automate operations with AI.`
+- **After desc (151):** `Ecommerce AI consultant for UK online retailers. Increase conversions, personalise shopping, and automate operations with agentic AI. Book a free call.`
+- **Fixes:** Brand suffix removed; 'Agentic AI' front-loaded; 'Boost Conversions & Cut Costs' power phrase; 'agentic AI' added to desc; CTA 'Book a free call.' added.
+
+### Data Summary
+- No live GSC or Bing data available (no `.env`)
+- Pattern audit across all 59 tracked pages (industries, what-we-do, learn, insights)
+- **Insights hub fully audited for the first time** — all 7 pages had descriptions 40–92 chars over the 155-char limit; 2 pages had titles over 60 chars
+- Post-edit: 0 title violations, 0 desc violations, 0 missing CTAs in edited pages
+
+### IndexNow
+- Skipped (no INDEXNOW_KEY in `.env`)
+- URLs ready to submit when key is available:
+  - https://agenticai.associates/insights/langgraph-vs-bedrock-vs-copilot-studio/
+  - https://agenticai.associates/insights/agentic-ai-report-generation-regulated/
+  - https://agenticai.associates/insights/fca-ai-governance-playbook/
+  - https://agenticai.associates/insights/agent-studio-build-vs-buy/
+  - https://agenticai.associates/insights/ai-sdlc-audit-trail/
+  - https://agenticai.associates/insights/agentic-sdlc-regulated-engineering/
+  - https://agenticai.associates/insights/smcr-ai-accountability/
+  - https://agenticai.associates/industries/supply-chain/
+  - https://agenticai.associates/industries/education/
+  - https://agenticai.associates/industries/ecommerce/
+
+### Recommendations for Run 8
+- **Remaining no-CTA industry pages (3):** `marketing`, `real-estate`, `saas` — all have brand suffix or passive descriptions. Apply same `Agentic AI for UK [Industry] — [Hook]` pattern.
+- **`/what-we-do/data-ai/`** — T:59, D:151, no CTA. One char under title limit but desc needs a CTA appended.
+- **`/learn/ai-consultant-career-path/`** — T:52, D:152, no CTA. Add CTA to desc.
+- **Insights hub index (`/insights/`)** — review hub-level title and description for the listing page itself.
+- **Add `.env` with GSC/Bing/IndexNow credentials** to enable live data-driven optimisation and instant reindexing on future runs.
+
+---
+
 ## Run 6 — 2026-05-31
 
 ### Data Sources
