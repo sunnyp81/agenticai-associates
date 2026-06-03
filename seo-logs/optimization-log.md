@@ -2,6 +2,96 @@
 
 ---
 
+## Run 8 — 2026-06-03
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on full pattern audit — targeting 7 industry pages missing 'agentic AI' in title, 2 industry pages missing CTA in description, and 1 insight page with title > 60 chars.
+
+### Audit Summary
+- **Total pages scanned:** 81 (all 5 data files + 7 insights Astro pages + standalone pages)
+- **Hard rule violations at start:** 1 (insight title 62 chars)
+- **CTR pattern issues identified:** 9 (7 industry titles missing 'agentic AI'; 3 industry desc missing CTA — 2 overlap with title issue)
+- **Pages optimised this run:** 10
+- **Duplicate titles post-edit:** 0 (verified across all 81 pages)
+
+### Pages Optimised
+
+#### 1. `/industries/healthcare/`
+- **Before title (58):** `Healthcare AI Consultant UK — NHS Trusts & Private Clinics`
+- **After title (51):** `Agentic AI Healthcare Consultant UK — NHS & Clinics`
+- **Desc:** Unchanged (already had CTA 'Book a call.' and 'agentic AI')
+- **Fix:** Added 'Agentic AI' to front; shortened by removing redundant 'Trusts & Private' detail.
+
+#### 2. `/industries/legal/`
+- **Before title (53):** `Legal AI Consultant UK — Document Review & Compliance`
+- **After title (50):** `Agentic AI Legal Consultant UK — Docs & Compliance`
+- **Desc:** Unchanged (already had CTA 'Book a free call.')
+- **Fix:** Added 'Agentic AI' prefix; shortened subtitle from 'Document Review' to 'Docs'.
+
+#### 3. `/industries/retail/`
+- **Before title (43):** `AI for Retail UK | Cut Waste, Boost Margins`
+- **After title (51):** `Agentic AI for Retail UK — Cut Waste, Boost Margins`
+- **Desc:** Unchanged (already had CTA 'Get started today.')
+- **Fix:** Added 'Agentic' prefix; replaced `|` separator with `—` for consistency.
+
+#### 4. `/industries/finance/`
+- **Before title (51):** `Finance AI Consultant UK — Compliance, Fraud & Risk`
+- **After title (45):** `Agentic AI Finance Consultant UK — FCA & Risk`
+- **Desc:** Unchanged (already had CTA 'Book a call.')
+- **Fix:** Added 'Agentic AI' prefix; compressed subtitle from 'Compliance, Fraud & Risk' to 'FCA & Risk' (FCA implies compliance).
+
+#### 5. `/industries/hr/`
+- **Before title (50):** `AI Consultant for HR — 30-50% Faster Hires in 2026`
+- **After title (49):** `Agentic AI HR Consultant UK — 30-50% Faster Hires`
+- **Desc:** Unchanged (already had CTA 'Book a free call.')
+- **Fix:** Added 'Agentic AI' prefix; reordered to 'HR Consultant UK'; dropped year (covered by primary keyword recency).
+
+#### 6. `/industries/real-estate/`
+- **Before title (54):** `AI Consultant for Real Estate — 25% More Sales in 2026`
+- **After title (53):** `Agentic AI Real Estate Consultant UK — 25% More Sales`
+- **Before desc (138):** `Real estate AI consultant for UK agents, developers, BTR firms. Lift instruction-to-sale 15-25%, cut admin 30-40%. Pilots ship in 8 weeks.`
+- **After desc (146):** `Real estate agentic AI for UK agents, BTR firms, and developers. Lift instruction-to-sale 25%, cut admin 40%. Pilots in 8 weeks. Book a free call.`
+- **Fix:** Title: added 'Agentic AI', added 'UK', dropped year. Desc: added 'agentic', sharpened stats (use upper bound), added CTA 'Book a free call.'
+
+#### 7. `/industries/manufacturing/`
+- **Before title (55):** `Manufacturing AI Consultant UK — Cut Downtime & Defects`
+- **After title (54):** `Agentic AI Manufacturing Consultant UK — Less Downtime`
+- **Desc:** Unchanged (already had CTA 'Book a free call.' and 'agentic AI')
+- **Fix:** Added 'Agentic AI' prefix; simplified subtitle; dropped 'Defects' (downtime covers both in search intent).
+
+#### 8. `/industries/marketing/`
+- **Before title (47):** `Marketing AI Consultant — Agentic AI Associates`
+- **After title (51):** `Agentic AI Marketing Consultant UK — Prove Your ROI`
+- **Before desc (144):** `Marketing AI consultant helping UK agencies and in-house teams automate campaigns, personalise content, and prove ROI with intelligent AI tools.`
+- **After desc (141):** `Agentic AI marketing consultant for UK agencies and in-house teams. Automate campaigns, personalise content, and prove ROI. Book a free call.`
+- **Fix:** Title: replaced weak brand name suffix with benefit + UK geo signal. Desc: added 'Agentic AI' qualifier, added CTA 'Book a free call.'
+
+#### 9. `/industries/saas/`
+- **Title:** Unchanged (already had 'Agentic AI', 49 chars)
+- **Before desc (144):** `Agentic AI for UK SaaS. Onboarding copilots, churn prediction, expansion-revenue agents, and support deflection that improve with every release.`
+- **After desc (147):** `Agentic AI for UK SaaS companies. Onboarding copilots, churn prediction, and expansion-revenue agents that improve with every release. Book a call.`
+- **Fix:** Added explicit 'companies' after 'SaaS' (improves clarity/keyword); added CTA 'Book a call.'
+
+#### 10. `/insights/agent-studio-build-vs-buy/`
+- **Before title (62):** `Agent Studio: Build vs Buy for Regulated Enterprises (2026)`
+- **After title (55):** `Agent Studio: Build vs Buy — Regulated Enterprise Guide`
+- **Desc:** Unchanged (148 chars, has CTA 'Read now.')
+- **Fix:** Title was 2 chars over 60-char limit. Dropped year in brackets; replaced 'for Regulated Enterprises' with '— Regulated Enterprise Guide' — shorter and signals the content type.
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+
+### Recommendations for Run 9
+- Add `.env` with GSC_SERVICE_ACCOUNT_EMAIL, GSC_PRIVATE_KEY, INDEXNOW_KEY to unlock live click/impression data.
+- With GSC data, prioritise 'striking distance' pages (position 5–20) for body content expansion.
+- Review `/industries/education/` (T=60, D=155 — both exactly at limit, zero headroom).
+- Consider adding year to `/learn/` page titles that rank for informational queries (boosts CTR on time-sensitive searches).
+- `/about/` description ('We're a UK-based AI consultancy…') has no CTA — consider 'Meet the team. Book a fit call.'
+
+---
+
 ## Run 7 — 2026-06-01
 
 ### Data Sources

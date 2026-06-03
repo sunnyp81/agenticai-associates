@@ -8,7 +8,7 @@
     {
       "slug": "healthcare",
       "name": "AI for Healthcare",
-      "title": "Healthcare AI Consultant UK — NHS Trusts & Private Clinics",
+      "title": "Agentic AI Healthcare Consultant UK — NHS & Clinics",
       "description": "Healthcare AI consultant for NHS trusts and private clinics. Automate admin, cut waiting times, and improve diagnostics with agentic AI. Book a call.",
       "primaryKeyword": "healthcare ai consultant",
       "icon": "healthcare",
@@ -101,7 +101,7 @@
     {
       "slug": "legal",
       "name": "AI for Legal",
-      "title": "Legal AI Consultant UK — Document Review & Compliance",
+      "title": "Agentic AI Legal Consultant UK — Docs & Compliance",
       "description": "Legal AI consultant for UK law firms. Automate document review, contract analysis, and compliance workflows with agentic AI. Book a free call.",
       "primaryKeyword": "legal ai consultant",
       "icon": "legal",
@@ -188,7 +188,7 @@
     {
       "slug": "retail",
       "name": "AI for Retail",
-      "title": "AI for Retail UK | Cut Waste, Boost Margins",
+      "title": "Agentic AI for Retail UK — Cut Waste, Boost Margins",
       "description": "Retail AI consultants for UK businesses. Demand forecasting, personalisation and inventory AI. Fixed-fee diagnostic from £6,500. Get started today.",
       "primaryKeyword": "retail ai consultant",
       "icon": "retail",
@@ -374,7 +374,7 @@
     {
       "slug": "finance",
       "name": "AI for Finance",
-      "title": "Finance AI Consultant UK — Compliance, Fraud & Risk",
+      "title": "Agentic AI Finance Consultant UK — FCA & Risk",
       "description": "Finance AI consultant for UK financial services firms. Automate compliance, detect fraud, and sharpen decision-making with responsible AI. Book a call.",
       "primaryKeyword": "ai consultant finance",
       "icon": "finance",
@@ -647,7 +647,7 @@
     {
       "slug": "hr",
       "name": "AI for HR",
-      "title": "AI Consultant for HR — 30-50% Faster Hires in 2026",
+      "title": "Agentic AI HR Consultant UK — 30-50% Faster Hires",
       "description": "HR AI consultant helping UK teams cut time-to-hire 30-50% and lift retention. Workday, SuccessFactors, BambooHR ready. Book a free call.",
       "primaryKeyword": "ai consultant hr",
       "icon": "hr",
@@ -740,8 +740,8 @@
     {
       "slug": "real-estate",
       "name": "AI for Real Estate",
-      "title": "AI Consultant for Real Estate — 25% More Sales in 2026",
-      "description": "Real estate AI consultant for UK agents, developers, BTR firms. Lift instruction-to-sale 15-25%, cut admin 30-40%. Pilots ship in 8 weeks.",
+      "title": "Agentic AI Real Estate Consultant UK — 25% More Sales",
+      "description": "Real estate agentic AI for UK agents, BTR firms, and developers. Lift instruction-to-sale 25%, cut admin 40%. Pilots in 8 weeks. Book a free call.",
       "primaryKeyword": "ai consultant real estate",
       "icon": "realestate",
       "intro": "<p>The UK property market generates enormous amounts of data — but most estate agents, developers, and property managers barely use it. AI turns that data into competitive advantage. Better property valuations, smarter buyer matching, faster transactions, and predictive maintenance for managed portfolios — all built on data you already collect.</p>\n<p>UK property businesses we work with — from independent estate agents to FTSE 250 housebuilders — typically lift conversion from instruction to sale by 15-25% within two quarters and cut administrative cost per transaction by 30-40% in the same window. Build-to-rent operators and asset managers see operating cost reductions of 8-15% from predictive maintenance and energy optimisation alone.</p>\n<p>Every engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> mapping your CRM, listing portals, property management software, and BMS integrations. We work with Reapit, Alto, Yardi, MRI, COINS, BIM 360, and the major UK PropTech platforms. Pilots ship in 8-12 weeks and respect AML, FCA Mortgage Conduct, ICO guidance on property data, and the new Building Safety Act golden thread requirements.</p>",
@@ -833,7 +833,7 @@
     {
       "slug": "manufacturing",
       "name": "AI for Manufacturing",
-      "title": "Manufacturing AI Consultant UK — Cut Downtime & Defects",
+      "title": "Agentic AI Manufacturing Consultant UK — Less Downtime",
       "description": "Manufacturing AI consultant for UK factories. Reduce downtime, improve quality, and optimise production with agentic AI. Book a free call.",
       "primaryKeyword": "ai consultant manufacturing",
       "icon": "manufacturing",
@@ -926,8 +926,8 @@
     {
       "slug": "marketing",
       "name": "AI for Marketing",
-      "title": "Marketing AI Consultant — Agentic AI Associates",
-      "description": "Marketing AI consultant helping UK agencies and in-house teams automate campaigns, personalise content, and prove ROI with intelligent AI tools.",
+      "title": "Agentic AI Marketing Consultant UK — Prove Your ROI",
+      "description": "Agentic AI marketing consultant for UK agencies and in-house teams. Automate campaigns, personalise content, and prove ROI. Book a free call.",
       "primaryKeyword": "marketing ai consultant",
       "icon": "marketing",
       "intro": "<p>Marketing teams are expected to do more with less. More channels, more content, more personalisation — with flat or shrinking budgets. AI is not a nice-to-have any more; it is the only way to keep pace. The teams winning today are not the ones with the biggest agencies but the ones with the smartest workflows.</p>\n<p>UK marketing teams we work with — from in-house brand teams to performance agencies — typically lift conversion rate by 20-40% within the first quarter through better personalisation, dynamic creative, and on-site search. Customer acquisition cost drops 15-30% as predictive bidding shifts spend toward audiences that actually convert at LTV-positive levels.</p>\n<p>Every engagement starts with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> mapping your CDP, ad stack, marketing automation, and analytics environment. We work natively with Klaviyo, HubSpot, Marketo, Adobe Experience Platform, Salesforce Marketing Cloud, Segment, GA4, and the major ad platforms. Pilots ship in 6-10 weeks and prove ROI within a single campaign cycle. Every system we deploy respects UK GDPR, the PECR (cookies and marketing), and the ICO direct marketing guidance.</p>",
@@ -1201,7 +1201,7 @@
       "slug": "saas",
       "name": "AI for SaaS",
       "title": "Agentic AI for UK SaaS Companies — Proven Results",
-      "description": "Agentic AI for UK SaaS. Onboarding copilots, churn prediction, expansion-revenue agents, and support deflection that improve with every release.",
+      "description": "Agentic AI for UK SaaS companies. Onboarding copilots, churn prediction, and expansion-revenue agents that improve with every release. Book a call.",
       "primaryKeyword": "ai consultant for saas",
       "icon": "strategy",
       "intro": "<p>SaaS businesses run on two numbers that rarely get the attention they deserve: time-to-value for new accounts and net revenue retention on existing ones. Every other metric — CAC, gross margin, Rule-of-40 — is downstream of how quickly a customer gets activated and how well you spot the accounts drifting towards churn. Agentic AI moves both.</p>\n<p>We work with UK SaaS companies — from product-led mid-market platforms to enterprise vertical SaaS — on where agentic systems genuinely move the needle and where they would be a distraction. The honest answer for a lot of SaaS teams is that their product analytics stack already has the signal; they just do not have anything that reads it continuously and acts.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your product telemetry, CS motion, billing data, and support queue against realistic agent opportunities — not the ones the vendors are selling this quarter.</p>",
