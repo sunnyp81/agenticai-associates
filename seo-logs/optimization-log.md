@@ -2,6 +2,111 @@
 
 ---
 
+## Run 9 — 2026-06-05
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on full pattern audit — targeting 2 service pages missing a strong CTA, 4 learn pages with no explicit CTA, the about page description, the locations hub title (pipe separator), and the contact page title (pipe separator).
+
+### Audit Summary
+- **Total pages scanned:** 81 (all 5 data files + standalone Astro pages)
+- **Hard rule violations at start:** 0
+- **CTR pattern issues identified:** 10 (2 service page descs with no/weak CTA; 4 learn page descs with no explicit CTA; 1 industry desc with weak CTA; 1 about page desc with no CTA; 2 hub/standalone titles using `|` separator)
+- **Pages optimised this run:** 10
+- **Duplicate titles post-edit:** 0 (verified across all 78 tracked titles)
+
+### Pages Optimised
+
+#### 1. `/industries/iot-connectivity/`
+- **Title:** Unchanged (56 chars, already has 'Agentic AI')
+- **Before desc (149):** `Agentic AI for IoT, M2M and connectivity providers. SIM lifecycle automation, tariff optimisation, and churn prediction for MVNOs. Get expert advice.`
+- **After desc (148):** `Agentic AI for IoT, M2M and connectivity providers. SIM lifecycle automation, tariff optimisation, and churn prediction for MVNOs. Book a free call.`
+- **Fix:** Replaced weak generic CTA 'Get expert advice.' with direct 'Book a free call.' to match CTA pattern used across industry pages.
+
+#### 2. `/what-we-do/data-ai/`
+- **Title:** Unchanged (59 chars — 'Data & AI Consultancy UK — Pipelines, Analytics & ML Models')
+- **Before desc (151):** `Turn your data into a competitive advantage. We build data pipelines, analytics platforms, and machine learning models that deliver actionable insight.`
+- **After desc (150):** `Turn your data into a competitive advantage. We build data pipelines, analytics platforms, and ML models that deliver actionable insight. Book a call.`
+- **Fix:** Compressed 'machine learning' → 'ML' (saves 14 chars); added 'Book a call.' CTA. Flagged as a missing CTA in Run 7 recommendations — addressed this run.
+
+#### 3. `/what-we-do/ai-governance/`
+- **Title:** Unchanged (55 chars — 'Agentic AI Governance UK — Expert Compliance Frameworks')
+- **Before desc (145):** `Trusted AI governance for UK businesses. Bias audits, GDPR and AI Act compliance, ethics policies, and risk frameworks. Speak to an expert today.`
+- **After desc (143):** `Trusted AI governance for UK businesses. Bias audits, GDPR and AI Act compliance, ethics policies, and risk frameworks. Book a free call today.`
+- **Fix:** Replaced soft 'Speak to an expert today.' with direct 'Book a free call today.' to standardise CTA across service pages.
+
+#### 4. `/learn/` (hub)
+- **Title:** Unchanged (59 chars — 'Learn About AI Consulting — Guides, Careers & Hiring Advice')
+- **Before desc (154):** `Everything you need to know about AI consulting. From what an AI consultant does to how to hire one, certification guides, salary data, and career advice.`
+- **After desc (143):** `Everything you need on AI consulting — from what consultants do, how to hire one, certifications, salary data, and career paths. Start reading.`
+- **Fix:** Trimmed verbose middle; condensed 'certification guides' → 'certifications'; added 'Start reading.' CTA; em-dash replaces 'From' for scan-friendliness.
+
+#### 5. `/learn/ai-consultant-career-path/`
+- **Title:** Unchanged (52 chars — 'AI Consultant Career Path: Junior to Partner in 2026')
+- **Before desc (152):** `Map your AI consulting career from entry-level to senior partner. Covers progression, timelines, salary expectations, and how to accelerate your growth.`
+- **After desc (147):** `Map your AI consulting career from entry-level to partner. Covers progression, timelines, salaries, and how to accelerate your growth. Start today.`
+- **Fix:** Removed 'senior' (saves 7 chars); compressed 'salary expectations' → 'salaries' (saves 11 chars); added 'Start today.' CTA.
+
+#### 6. `/learn/ai-consultant-vs-vendor/`
+- **Title:** Unchanged (56 chars — 'AI Consultant vs Vendor — Which Does Your Business Need?')
+- **Before desc (147):** `Understand the difference between an AI consultant and a vendor. Learn when each makes sense — and when to combine both — with our practical guide.`
+- **After desc (155):** `Understand the difference between an AI consultant and a vendor. Learn when each makes sense and when to combine both — with our practical guide. Read now.`
+- **Fix:** Removed one redundant em-dash from 'sense — and when' (saves 2 chars); added 'Read now.' CTA.
+
+#### 7. `/learn/agentic-ai-vs-generative-ai/`
+- **Title:** Unchanged (56 chars — 'Agentic AI vs Generative AI: What Really Matters in 2026')
+- **Before desc (147):** `Generative AI creates content. Agentic AI does work. Learn the real distinction and decide what to build first with our expert guide for UK buyers.`
+- **After desc (148):** `Generative AI creates content. Agentic AI does work. Learn the real distinction and decide what to build first — free guide for UK buyers. Read now.`
+- **Fix:** Replaced 'with our expert guide' with '— free guide' (power word 'free' added); appended 'Read now.' CTA.
+
+#### 8. `/about/`
+- **Title:** Unchanged (48 chars — 'About Agentic AI Associates — UK AI Consultancy')
+- **Before desc (154):** `Meet the team behind Agentic AI Associates. We're a UK-based AI consultancy helping businesses adopt intelligent systems that deliver measurable results.`
+- **After desc (155):** `Meet the team behind Agentic AI Associates — a UK AI consultancy helping businesses adopt agentic systems that deliver measurable results. Book a fit call.`
+- **Fix:** Replaced full stop after name with em-dash (tighter flow); added 'agentic' qualifier (brand signal); replaced 'intelligent' with 'agentic' (more specific, keyword-aligned); added 'Book a fit call.' CTA.
+
+#### 9. `/locations/` (hub)
+- **Before title (46):** `AI Consultants Near You | Agentic AI Across UK`
+- **After title (50):** `AI Consultants Near You — Agentic AI Across the UK`
+- **Desc:** Unchanged (already has CTA 'Book a free call.')
+- **Fix:** Replaced `|` separator with `—` for visual consistency and SEO best practice; added 'the' for natural phrasing.
+
+#### 10. `/contact/`
+- **Before title (52):** `Contact Us — Book a Fit Call | Agentic AI Associates`
+- **After title (53):** `Contact Agentic AI Associates — Book a Fit Call Today`
+- **Desc:** Unchanged (already has 'Book a 30-minute fit call')
+- **Fix:** Replaced brand-appended `|` pattern with brand-first, single-separator title; added 'Today' urgency word; removed redundant 'Contact Us' and kept brand name prominent.
+
+### Data Summary
+- No live GSC or Bing data available (no `.env`)
+- Full pattern audit run across all 81 pages
+- All 10 edited pages: 0 title violations, 0 desc violations, all CTAs present
+- Post-edit duplicate check: 0 duplicates across 78 tracked titles
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs ready to submit when key is available:
+  - https://agenticai.associates/industries/iot-connectivity/
+  - https://agenticai.associates/what-we-do/data-ai/
+  - https://agenticai.associates/what-we-do/ai-governance/
+  - https://agenticai.associates/learn/
+  - https://agenticai.associates/learn/ai-consultant-career-path/
+  - https://agenticai.associates/learn/ai-consultant-vs-vendor/
+  - https://agenticai.associates/learn/agentic-ai-vs-generative-ai/
+  - https://agenticai.associates/about/
+  - https://agenticai.associates/locations/
+  - https://agenticai.associates/contact/
+
+### Recommendations for Run 10
+- **Add `.env`** with GSC_SERVICE_ACCOUNT_EMAIL, GSC_PRIVATE_KEY, INDEXNOW_KEY to unlock live click/impression data and instant URL reindexing.
+- **`/learn/` body pages with year anchors** — consider adding '(2026)' to titles on pages that rank for time-sensitive queries (e.g. `ai-consultant-vs-vendor`, `agentic-ai-vs-generative-ai`) to boost CTR on recency-sensitive SERPs.
+- **Locations pages individual audit** — the hub title has been fixed; now check each location's title for `|` separators (e.g. `london`, `manchester`, `birmingham` all use `|`). Up to 12 pages to standardise.
+- **`/what-we-do/` remaining title check** — `generative-ai` (46 chars) and `ai-automation` (53 chars) both have no number or power word in their titles; consider adding one.
+- **`/results/` or case study pages** — if added in future, ensure each has a unique benefit-focused title with a number (e.g. '3 Case Studies').
+
+---
+
 ## Run 8 — 2026-06-03
 
 ### Data Sources
