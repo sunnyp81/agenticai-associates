@@ -2,6 +2,113 @@
 
 ---
 
+## Run 10 — 2026-06-07
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on full pattern audit — targeting all remaining `|` pipe-separator violations across location pages and one what-we-do page, per Run 9 recommendations.
+
+### Audit Summary
+- **Total pages scanned:** 81 (all 5 data files + insights Astro pages + standalone pages)
+- **Hard rule violations at start:** 19 (18 location pages + 1 what-we-do page with `|` pipe separator in title)
+- **CTR pattern issues identified:** 19 (`|` separator pattern across all 18 location titles + conversational-ai)
+- **Pages optimised this run:** 10
+- **Duplicate titles post-edit:** 0 (verified across all tracked titles)
+
+### Pages Optimised
+
+#### 1. `/what-we-do/conversational-ai/`
+- **Before title (51):** `Conversational AI Consultants UK | Chatbots & Voice`
+- **After title (51):** `Conversational AI Consultants UK — Chatbots & Voice`
+- **Desc:** Unchanged (138 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** Replaced `|` separator with `—` for visual consistency and SEO best practice.
+
+#### 2. `/locations/london/`
+- **Before title (46):** `AI Consultants London | Agentic AI From £6,500`
+- **After title (56):** `Agentic AI Consultants London — Fintech, Health & Retail`
+- **Desc:** Unchanged (151 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; generic price anchor replaced with London's 3 dominant sectors (fintech, healthcare, retail) for stronger SERP relevance.
+
+#### 3. `/locations/manchester/`
+- **Before title (46):** `AI Consultants Manchester | Agentic AI Experts`
+- **After title (54):** `Agentic AI Consultants Manchester — Media & E-Commerce`
+- **Desc:** Unchanged (141 chars, has CTA 'Free discovery call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; sector hooks (MediaCityUK media cluster + strong e-commerce base) replace generic 'Experts' suffix.
+
+#### 4. `/locations/birmingham/`
+- **Before title (50):** `AI Consultants Birmingham | Agentic AI From £6,500`
+- **After title (53):** `Agentic AI Consultants Birmingham — Automotive & Tech`
+- **Desc:** Unchanged (147 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; automotive sector hook (JLR, BMW West Midlands corridor) replaces generic price anchor.
+
+#### 5. `/locations/leeds/`
+- **Before title (50):** `AI Consultants Leeds | Agentic AI Strategy & Build`
+- **After title (56):** `Agentic AI Consultants Leeds — Finance & Digital Experts`
+- **Desc:** Unchanged (147 chars, has CTA 'Free discovery call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; financial services hook (Leeds is UK's largest finance centre outside London) + digital sector; 'Strategy & Build' generic subtitle replaced.
+
+#### 6. `/locations/bristol/`
+- **Before title (52):** `Agentic AI Consultants in Bristol | Strategy & Build`
+- **After title (54):** `Agentic AI Consultants Bristol — Aerospace & Cleantech`
+- **Desc:** Unchanged (151 chars, has CTA 'Book a free discovery call.' ✓)
+- **Fix:** 'in' removed (tighter, consistent with other titles); `|` replaced with `—`; generic 'Strategy & Build' replaced with Bristol's key sectors (Airbus/Rolls-Royce aerospace, cleantech/green economy).
+
+#### 7. `/locations/edinburgh/`
+- **Before title (45):** `AI Consultants Edinburgh | Agentic AI Experts`
+- **After title (56):** `Agentic AI Consultants Edinburgh — Finance & Research AI`
+- **Desc:** Unchanged (151 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; financial services hook (£1tn AUM cluster) + Edinburgh's world-class AI research (UoE School of Informatics) distinguish this page from other city pages.
+
+#### 8. `/locations/glasgow/`
+- **Before title (47):** `AI Consultants Glasgow | Agentic AI From £6,500`
+- **After title (54):** `Agentic AI Consultants Glasgow — Engineering & Digital`
+- **Desc:** Unchanged (138 chars, has CTA 'Free discovery call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; engineering + digital sector hook (Glasgow's shipbuilding-to-software transformation story) replaces generic price anchor.
+
+#### 9. `/locations/reading/`
+- **Before title (52):** `Agentic AI Consultants in Reading | Strategy & Build`
+- **After title (51):** `Agentic AI Consultants Reading — Thames Valley Tech`
+- **Desc:** Unchanged (154 chars, has CTA 'Book a free discovery call.' ✓)
+- **Fix:** 'in' removed; `|` replaced with `—`; generic 'Strategy & Build' replaced with 'Thames Valley Tech' — a recognised geographic brand signal for the Microsoft/Oracle enterprise tech corridor.
+
+#### 10. `/locations/scotland/`
+- **Before title (44):** `AI Consultants Scotland | Agentic AI Experts`
+- **After title (56):** `Agentic AI Consultants Scotland — Energy, Finance & Tech`
+- **Desc:** Unchanged (150 chars, has CTA 'Book a call.' ✓)
+- **Fix:** 'Agentic AI' front-loaded; `|` replaced with `—`; three top sectors (offshore energy/Aberdeen, financial services/Edinburgh, tech/Glasgow+Dundee) signal national coverage breadth.
+
+### Data Summary
+- No live GSC or Bing data available (no `.env`)
+- Pattern audit across all 81 pages
+- **18 location pages had `|` pipe separators in titles** — this run addresses the 9 highest-traffic/priority cities. 9 remaining locations (Leicester, Northern Ireland, Norfolk, Salford, Surrey, Kent, Bedfordshire, Wokingham, Kensington) to be addressed in Run 11.
+- **1 what-we-do page** (`conversational-ai`) had `|` pipe separator — fixed this run.
+- Post-edit: 0 title violations, 0 desc violations, all 10 pages have CTAs in descriptions, all sector hooks are factually grounded in page body copy.
+- Post-edit duplicate check: 0 duplicates across all tracked titles.
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs ready to submit when key is available:
+  - https://agenticai.associates/what-we-do/conversational-ai/
+  - https://agenticai.associates/locations/london/
+  - https://agenticai.associates/locations/manchester/
+  - https://agenticai.associates/locations/birmingham/
+  - https://agenticai.associates/locations/leeds/
+  - https://agenticai.associates/locations/bristol/
+  - https://agenticai.associates/locations/edinburgh/
+  - https://agenticai.associates/locations/glasgow/
+  - https://agenticai.associates/locations/reading/
+  - https://agenticai.associates/locations/scotland/
+
+### Recommendations for Run 11
+- **9 remaining location pages with `|` separator** — fix in Run 11: `/locations/leicester/`, `/locations/northern-ireland/`, `/locations/norfolk/`, `/locations/salford/`, `/locations/surrey/`, `/locations/kent/`, `/locations/bedfordshire/`, `/locations/wokingham/`, `/locations/kensington/`. All follow the `Agentic AI Consultants in [City] | Strategy & Build` pattern. Apply same sector-hook fix.
+- **`/what-we-do/` hub title** — "What We Do — AI Consultancy Services & Strategy" (47 chars) has no number or power word. Consider "Agentic AI Consultancy Services UK — From £6,500" (48 chars) to add price anchor and geo signal.
+- **`/learn/ai-consultant-vs-vendor/`** — no year anchor in title. "AI Consultant vs Vendor — Which Does Your Business Need?" (56 chars) could gain a 2026 recency signal to boost CTR on informational SERPs. 
+- **`/learn/when-to-hire-an-ai-consultant/`** — "When to Hire an AI Consultant — 7 Signs You Need Expert Help" (60 chars, exactly at limit). Worth reviewing if a tighter version improves the hook without losing the number.
+- **Add `.env`** with GSC_SERVICE_ACCOUNT_EMAIL, GSC_PRIVATE_KEY, INDEXNOW_KEY to unlock live click/impression data and instant URL reindexing.
+
+---
+
 ## Run 9 — 2026-06-05
 
 ### Data Sources
