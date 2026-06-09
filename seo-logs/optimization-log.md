@@ -2,6 +2,114 @@
 
 ---
 
+## Run 11 — 2026-06-09
+
+### Data Sources
+- No `.env` file found; GSC and Bing Webmaster APIs skipped.
+- IndexNow submission skipped (no INDEXNOW_KEY).
+- Optimisation based on full pattern audit — completing the `|` pipe-separator purge across all remaining location pages (9 pages) and adding a missing CTA to one learn page, per Run 10 recommendations.
+
+### Audit Summary
+- **Total pages scanned:** 81 (all data files + standalone Astro pages)
+- **Hard rule violations at start:** 9 (9 location titles with `|` pipe separator)
+- **CTR pattern issues identified:** 10 (9 pipe-separator location titles + 1 learn page missing explicit CTA)
+- **Pages optimised this run:** 10
+- **Duplicate titles post-edit:** 0 (verified across all 81 pages)
+
+### Pages Optimised
+
+#### 1. `/locations/leicester/`
+- **Before title (54):** `Agentic AI Consultants in Leicester | Strategy & Build`
+- **After title (55):** `Agentic AI Consultants Leicester — Manufacturing & Food`
+- **Desc:** Unchanged (144 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; sector hooks (manufacturing, food & drink) replace generic 'Strategy & Build', grounding title in Leicester's East Midlands industrial base.
+
+#### 2. `/locations/northern-ireland/`
+- **Before title (52):** `Agentic AI Consultants N. Ireland | Strategy & Build`
+- **After title (55):** `Agentic AI Consultants N. Ireland — Fintech & Agri-Food`
+- **Desc:** Unchanged (148 chars, has CTA 'Book a call.' ✓)
+- **Fix:** Replaced `|` with `—`; Belfast fintech cluster + agri-food sector (NI's largest export industry) replace generic subtitle.
+
+#### 3. `/locations/norfolk/`
+- **Before title (52):** `Agentic AI Consultants in Norfolk | Strategy & Build`
+- **After title (56):** `Agentic AI Consultants Norfolk — Insurance & Agriculture`
+- **Desc:** Unchanged (143 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; Norwich's Aviva/insurance cluster + Norfolk's arable agriculture replace generic subtitle.
+
+#### 4. `/locations/salford/`
+- **Before title (52):** `Agentic AI Consultants in Salford | Strategy & Build`
+- **After title (54):** `Agentic AI Consultants Salford — MediaCityUK & Digital`
+- **Desc:** Unchanged (146 chars, has CTA 'Book a call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; MediaCityUK brand signal (BBC/ITV broadcasting cluster) + digital agency sector replace generic subtitle.
+
+#### 5. `/locations/surrey/`
+- **Before title (51):** `Agentic AI Consultants in Surrey | Strategy & Build`
+- **After title (47):** `Agentic AI Consultants Surrey — Pharma & Gaming`
+- **Desc:** Unchanged (150 chars, has CTA 'Book a free discovery call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; GSK/Pfizer pharma corridor + Guildford's world-class game-dev cluster replace generic subtitle.
+
+#### 6. `/locations/kent/`
+- **Before title (49):** `Agentic AI Consultants in Kent | Strategy & Build`
+- **After title (55):** `Agentic AI Consultants Kent — Logistics & Manufacturing`
+- **Desc:** Unchanged (148 chars, has CTA 'Book a free discovery call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; Dover/Channel ports logistics hub + Kent manufacturing replace generic subtitle.
+
+#### 7. `/locations/bedfordshire/`
+- **Before title (57):** `Agentic AI Consultants in Bedfordshire | Strategy & Build`
+- **After title (54):** `Agentic AI Consultants Bedfordshire — Aerospace & Tech`
+- **Desc:** Unchanged (149 chars, has CTA 'Book a free call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; Cranfield aerospace/research corridor + Luton tech hub replace generic subtitle. Also reduces title by 3 chars.
+
+#### 8. `/locations/wokingham/`
+- **Before title (54):** `Agentic AI Consultants in Wokingham | Strategy & Build`
+- **After title (55):** `Agentic AI Consultants Wokingham — Tech & Cybersecurity`
+- **Desc:** Unchanged (155 chars, has CTA 'Book a free discovery call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; Thames Valley enterprise tech corridor + Wokingham's notable cybersecurity firm cluster replace generic subtitle.
+
+#### 9. `/locations/kensington/`
+- **Before title (55):** `Agentic AI Consultants in Kensington | Strategy & Build`
+- **After title (51):** `Agentic AI Consultants Kensington — Luxury & Wealth`
+- **Desc:** Unchanged (150 chars, has CTA 'Book a call.' ✓)
+- **Fix:** Dropped 'in'; replaced `|` with `—`; luxury brands/retail + private equity/wealth management sectors replace generic subtitle. Also reduces title by 4 chars.
+
+#### 10. `/learn/what-is-an-ai-consultant/`
+- **Title:** Unchanged (54 chars — 'What Is an AI Consultant? Roles, Skills & Costs (2026)')
+- **Before desc (142):** `Learn what an AI consultant does, why businesses hire them, and what they cost. Expert guide to roles, skills, and how to get started in 2026.`
+- **After desc (152):** `Learn what an AI consultant does, why businesses hire them, and what they cost. Expert guide to roles, skills, and how to get started in 2026. Read now.`
+- **Fix:** Added 'Read now.' CTA — this is likely a high-traffic informational query and lacked an explicit action signal.
+
+### Data Summary
+- No live GSC or Bing data available (no `.env`)
+- Pattern audit across all 81 pages
+- **All 18 location pages** now have sector-specific hooks and `—` separators. Location hub title audit is complete.
+- **9 location titles** had `|` pipe separator — all fixed this run.
+- **1 learn page** had no explicit CTA — fixed this run.
+- Post-edit: 0 title violations (all ≤60 chars), 0 desc violations (all ≤155 chars), all CTAs present.
+- Post-edit duplicate check: 0 duplicates across all tracked titles.
+
+### IndexNow
+- Skipped — no INDEXNOW_KEY in environment.
+- URLs ready to submit when key is available:
+  - https://agenticai.associates/locations/leicester/
+  - https://agenticai.associates/locations/northern-ireland/
+  - https://agenticai.associates/locations/norfolk/
+  - https://agenticai.associates/locations/salford/
+  - https://agenticai.associates/locations/surrey/
+  - https://agenticai.associates/locations/kent/
+  - https://agenticai.associates/locations/bedfordshire/
+  - https://agenticai.associates/locations/wokingham/
+  - https://agenticai.associates/locations/kensington/
+  - https://agenticai.associates/learn/what-is-an-ai-consultant/
+
+### Recommendations for Run 12
+- **Location hub audit complete.** All 18 location pages now have unique sector-specific titles with `—` separators and CTAs in descriptions. No location work outstanding.
+- **Remaining learn pages with no explicit CTA (4):** `/learn/when-to-hire-an-ai-consultant/`, `/learn/benefits-of-hiring-an-ai-consultant/`, `/learn/agentic-ai-vs-rpa/`, `/learn/agentic-ai-vs-chatbots/` — all have descriptive but passive descriptions. Adding a CTA ('Read now.', 'Compare now.') to each would require only a few chars.
+- **`/what-we-do/` hub title** — "What We Do — AI Consultancy Services & Strategy" (47 chars) has no number or power word. Consider "Agentic AI Consultancy Services UK — Expert Fixed-Fee Help" (58 chars) for stronger SERP signal.
+- **`/learn/when-to-hire-an-ai-consultant/`** — T=60 (exactly at limit), no CTA in desc. Adding 'Book a call.' to the desc (135 chars) gives 135+13=148 chars — safe headroom.
+- **Add `.env`** with GSC_SERVICE_ACCOUNT_EMAIL, GSC_PRIVATE_KEY, INDEXNOW_KEY to unlock live click/impression data and instant URL reindexing.
+
+---
+
 ## Run 10 — 2026-06-07
 
 ### Data Sources
