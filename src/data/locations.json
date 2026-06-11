@@ -52,7 +52,12 @@
       ],
       "relatedLocations": [
         "reading",
-        "bristol"
+        "bristol",
+        "wokingham",
+        "kensington",
+        "kent",
+        "bedfordshire",
+        "norfolk"
       ],
       "relatedServices": [
         "ai-strategy",
@@ -103,7 +108,8 @@
       ],
       "relatedLocations": [
         "leeds",
-        "birmingham"
+        "birmingham",
+        "salford"
       ],
       "relatedServices": [
         "ai-strategy",
@@ -417,7 +423,8 @@
       ],
       "relatedLocations": [
         "london",
-        "bristol"
+        "bristol",
+        "wokingham"
       ],
       "relatedServices": [
         "ai-strategy",
