@@ -2,6 +2,167 @@
 
 ---
 
+## Run 12 — 2026-06-11
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based analysis of source files.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Pattern review of service pages, industry pages, and homepage
+- Hard rule violations at start: 0 (all titles ≤60 chars, all descs ≤155 chars)
+- CTR pattern issues identified: 10 (short titles, weak adjectives, missing numbers, vague benefit statements, inconsistent CTAs)
+- Pages optimised: 10
+- Duplicate titles post-edit: 0
+
+### Pages Optimised
+
+#### 1. Homepage (`/`)
+**File:** `src/pages/index.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants UK \| From £6,500` (39) | `Agentic AI Consultants UK — Working System in 90 Days` (53) |
+| Description | `…working system in 90 days. Strategy, build and deploy. Book a free call.` | `…board-ready roadmap in 3 weeks, working system in 90 days. FCA, GDPR & NHS ready. Book a free call.` |
+
+**Rationale:** Title only 39 chars — significant unused ranking headroom. Pipe separator replaced with em-dash. "Working System in 90 Days" is a concrete outcome claim. Description gains regulatory proof points (FCA, GDPR, NHS) for enterprise trust.
+
+---
+
+#### 2. AI Strategy (`/what-we-do/ai-strategy/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `AI Strategy Consulting UK — Clear Roadmaps, Fixed Fee` (53) | `Agentic AI Strategy Consulting UK — Roadmap in 3 Weeks` (54) |
+| Description | `…Clear roadmaps…Book a call.` | `…Board-ready roadmap in 3 weeks, £6,500 fixed fee…Book a free call.` |
+
+**Rationale:** "Clear" is a weak modifier. "Roadmap in 3 Weeks" is concrete and matches Phase 1. "Agentic AI" added for keyword alignment. CTA upgraded from "Book a call" to "Book a free call."
+
+---
+
+#### 3. Data & AI (`/what-we-do/data-ai/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Data & AI Consultancy UK — Pipelines, Analytics & ML Models` (59) | `Data & AI Consultancy UK — Pipelines, Analytics, Real ROI` (57) |
+| Description | `…actionable insight. Book a call.` | `Turn messy data into measurable ROI…No vendor lock-in. Book a free call.` |
+
+**Rationale:** "ML Models" at title-end is low-intent jargon. "Real ROI" is an outcome hook. CTA changed to "free". "No vendor lock-in" adds a differentiator.
+
+---
+
+#### 4. Conversational AI (`/what-we-do/conversational-ai/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Conversational AI Consultants UK — Chatbots & Voice` (51) | `Conversational AI UK — Deflect 50-70% of Contacts` (50) |
+| Description | `…design and build chatbots, voice assistants and NLU systems…` | `…Deflect 50-70% of inbound contacts. Chatbots, voice assistants and NLU…` |
+
+**Rationale:** "Chatbots & Voice" describes features, not outcomes. The 50-70% deflection rate (from page body) is the primary buying signal for contact-centre buyers. Front-loading this stat markedly improves CTR.
+
+---
+
+#### 5. AI Governance (`/what-we-do/ai-governance/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Governance UK — Expert Compliance Frameworks` (55) | `Agentic AI Governance UK — GDPR, AI Act & FCA Ready` (51) |
+| Description | `…risk frameworks. Book a free call today.` | `…GDPR, AI Act & FCA compliance built in. Bias audits, risk frameworks, and audit trails. Book a free call.` |
+
+**Rationale:** "Expert" is an overused, low-signal modifier. Concrete regulatory names (GDPR, AI Act, FCA) target high-intent searches from compliance buyers. "Audit trails" added — explicitly required by FCA/PRA.
+
+---
+
+#### 6. AI Training (`/what-we-do/ai-training/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `AI Training & Workshops UK — Practical Team Upskilling` (54) | `Agentic AI Training UK — Team Productive in 4 Weeks` (51) |
+| Description | `Practical AI training…responsible AI adoption. Book a free call.` | `Hands-on AI training for UK teams. Measurable productivity gains in 4 weeks…Book a free call now.` |
+
+**Rationale:** "Practical" is low-power. "4 Weeks" injects urgency consistent with page body claim. "Agentic AI" added. Cohort tiers (executive/management/practitioner) added for specificity.
+
+---
+
+#### 7. Ongoing Support (`/what-we-do/ongoing-support/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `AI Support & Optimisation UK — Monthly Retainer Packages` (56) | `Agentic AI Retainer UK — Named Consultant, Clear SLAs` (53) |
+| Description | `…Expert retainer packages from £1,500/month. Get a free quote today.` | `…Named consultants, no handoffs. Book a free call today.` |
+
+**Rationale:** "Monthly Retainer Packages" is generic. Named-consultant USP is the conversion driver for buyers burned by big-four handoffs. £1,500/month figure removed — inconsistent with £10,000/month in page FAQ (see pricing flag below).
+
+---
+
+#### 8. Applied AI (`/what-we-do/applied-ai/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Applied Agentic AI UK — Expert CV, Forecasting & NLP` (52) | `Applied Agentic AI UK — Computer Vision, Forecasting & NLP` (58) |
+| Description | `…See proven results. Book a discovery call.` | `…Proven payback in one operating cycle. Book a free call.` |
+
+**Rationale:** "CV" is ambiguous in UK English (résumé). Spelled out to "Computer Vision". "Expert" removed (weak). "Proven payback in one operating cycle" is a stronger, verifiable outcome claim. CTA standardised.
+
+---
+
+#### 9. Finance Industry (`/industries/finance/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Finance Consultant UK — FCA & Risk` (45) | `Agentic AI Finance Consultant UK — Cut KYC Time 80%` (51) |
+| Description | `…responsible AI. Book a call.` | `…FCA-compliant by design. Book a free call.` |
+
+**Rationale:** Title only 45 chars — significant unused space. "FCA & Risk" is vague. KYC is the #1 cost for FS firms; "Cut KYC Time 80%" (from page body) is a powerful, verifiable hook. "Responsible AI" replaced with "FCA-compliant by design." CTA upgraded to "free."
+
+---
+
+#### 10. Education Industry (`/industries/education/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Education — Reduce Admin, Improve Outcomes` (60) | `Agentic AI for UK Education — 12hrs/Week Back per Teacher` (57) |
+| Description | `…reduce admin with practical AI. Book a free call.` | `…Reclaim 12 hours per week per teacher. DfE framework compliant. Book a free call.` |
+
+**Rationale:** Title was exactly at Google's 60-char truncation boundary. "Reduce Admin, Improve Outcomes" is generic. "12hrs/Week Back per Teacher" (from page body) resonates acutely with MAT leadership and school governors. DfE compliance added as trust signal.
+
+---
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/
+- https://agenticai.associates/what-we-do/ai-strategy/
+- https://agenticai.associates/what-we-do/data-ai/
+- https://agenticai.associates/what-we-do/conversational-ai/
+- https://agenticai.associates/what-we-do/ai-governance/
+- https://agenticai.associates/what-we-do/ai-training/
+- https://agenticai.associates/what-we-do/ongoing-support/
+- https://agenticai.associates/what-we-do/applied-ai/
+- https://agenticai.associates/industries/finance/
+- https://agenticai.associates/industries/education/
+
+### Pricing Consistency Flag
+`/what-we-do/ongoing-support/` description previously stated "from £1,500/month" — inconsistent with the FAQ on that page which states £10,000/month. Figure removed in this run. Verify intended retainer price and reinstate in a future non-SEO PR.
+
+### Recommendations for Run 13
+1. **Connect GSC**: Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+2. **Learn hub articles**: Several titles lack numbers and urgency — good Run 13 candidates.
+3. **`/what-we-do/` hub title**: "What We Do — AI Consultancy Services & Strategy" (47 chars) still lacks a number or power word. Consider "Agentic AI Services UK — Strategy, Build & Retain" (49 chars).
+4. **`/industries/government/`**: Not reviewed this run — check title length and benefit hook.
+5. **Monitor delta**: After deploy, check GSC in 4 weeks for CTR/position changes on these 10 pages.
+
+---
+
 ## Run 11 — 2026-06-09
 
 ### Data Sources
