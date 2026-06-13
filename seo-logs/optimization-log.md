@@ -2,6 +2,173 @@
 
 ---
 
+## Run 13 — 2026-06-13
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based analysis of source files.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Pattern review of learn, industries (newer pages), and what-we-do pages
+- Hard rule violations at start: 1 (pre-existing: `/what-we-do/applied-ai/` desc 158 chars — introduced in Run 12, flagged below for Run 14)
+- CTR pattern issues identified: 10 (short titles, weak differentiators, no year anchors, American spellings, amateur abbreviations, vague benefit hooks)
+- Pages optimised: 10
+- Duplicate titles post-edit: 0 (verified across all 74 data-file pages)
+
+### Pages Optimised
+
+#### 1. Learn: `agentic-ai-vs-chatbots` (`/learn/agentic-ai-vs-chatbots/`)
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI vs Chatbots: 5 Key Differences` (41) | `Agentic AI vs Chatbots: 5 Critical Differences (2026)` (53) |
+| Description | `Chatbots and AI agents look similar…our practical guide for UK enterprise buyers.` (154) | `Chatbots answer questions. AI agents take action. Discover 5 key differences and which to deploy first. Free guide for UK enterprise buyers. Read now.` (150) |
+
+**Rationale:** Title was very short at 41 chars — 19 chars of unused SERP real estate. "Key" replaced with "Critical" (stronger power word). Year anchor (2026) added. Desc rewritten with two punchy opening sentences mirroring the page's core contrast ("chatbots answer, agents act") and adds "Free" power word plus explicit "Read now." CTA — the previous desc had no CTA at all.
+
+---
+
+#### 2. Learn: `build-vs-buy-ai-agents` (`/learn/build-vs-buy-ai-agents/`)
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Build vs Buy AI Agents: 3 Frameworks to Choose Right` (52) | `Build vs Buy AI Agents: 3 Decision Frameworks (2026)` (52) |
+| Description | `…Get our 3-step decision framework for UK enterprise AI buyers — free to use.` (133) | `…Our 3-framework guide helps UK enterprise buyers choose right and avoid costly mistakes. Read now.` (155) |
+
+**Rationale:** "to Choose Right" is grammatically awkward and makes the title feel amateurish. "3 Decision Frameworks (2026)" is cleaner and adds recency. Desc gains +22 chars of value — replaces bland "free to use" with a clear benefit ("avoid costly mistakes") and adds "Read now." CTA.
+
+---
+
+#### 3. Learn: `in-house-ai-team-vs-consultancy` (`/learn/in-house-ai-team-vs-consultancy/`)
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `In-House AI Team vs Consultancy: 5 Factors Compared` (51) | `In-House AI Team vs Consultancy: 5 Deciding Factors (2026)` (58) |
+| Description | `…Compare cost, speed and risk — then get our free decision guide for UK businesses.` (142) | `…Compare cost (£600k+ vs day rates), speed, and risk in our free guide for UK leaders. Read now.` (147) |
+
+**Rationale:** "Compared" is a passive weak ending; "Deciding Factors" is active and specific. Year anchor added. Desc uses the actual cost data from the page body ("£600k+ vs day rates") — concrete figures dramatically improve CTR on commercial-intent SERPs. "UK businesses" → "UK leaders" (the actual decision-maker). Soft "then get our free" replaced with direct "Read now."
+
+---
+
+#### 4. Industry: `government` (`/industries/government/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Government & Public Sector — Experts` (54) | `Agentic AI for UK Government — Faster Services, Lower Costs` (59) |
+| Description | `…Improve services, cut costs, and deploy AI responsibly. GDPR and ICO compliant. Book a free call.` (150) | `…Cut costs, improve citizen services, and deploy responsibly. GDPR & ICO compliant. Book a free call.` (146) |
+
+**Rationale:** Flagged in Run 12 recommendations. "& Public Sector" is redundant — "Government" subsumes it. "Experts" is a universally weak differentiator. "Faster Services, Lower Costs" names the two top public-sector buying triggers explicitly. Desc reordered to lead with the cost benefit; "GDPR and ICO" → "GDPR & ICO" (saves 3 chars while matching search phrasing).
+
+---
+
+#### 5. Industry: `manufacturing` (`/industries/manufacturing/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Manufacturing Consultant UK — Less Downtime` (54) | `Agentic AI for UK Manufacturing — Cut Waste, Boost Quality` (58) |
+| Description | `Manufacturing AI consultant for UK factories. Reduce downtime, improve quality, and optimise production with agentic AI. Book a free call.` (138) | `Agentic AI for UK factories. Predictive maintenance, quality AI, and production scheduling — fewer defects and less downtime. Book a free call.` (143) |
+
+**Rationale:** "Less Downtime" is passive and single-benefit. "Cut Waste, Boost Quality" is active, covers two distinct value props matching the page's predictive maintenance + quality vision use cases. Pattern consistent with other industry titles ("for UK [Industry]"). Desc front-loads "Agentic AI for UK factories" for keyword alignment; lists three specific AI use cases before the benefit summary.
+
+---
+
+#### 6. Industry: `construction` (`/industries/construction/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Construction & Contractors — Results` (54) | `Agentic AI for UK Construction — Win More Bids, Cut Risk` (56) |
+| Description | `Agentic AI for UK contractors and subcontractors. Bid intelligence, CDM compliance, programme risk, and site operations automation. Book a free call.` (149) | `Agentic AI for UK contractors. Smarter bid intelligence, CDM compliance, and programme risk — all automated. Fixed-fee from £6,500. Book a free call.` (149) |
+
+**Rationale:** "Results" is the single weakest title suffix possible. "Win More Bids, Cut Risk" names the two primary purchase motivators for UK contractors (winning tenders, managing CDM/programme risk). "& Contractors" dropped — "Construction" implies contractors. Desc gains "Smarter" qualifier and price anchor (£6,500) which sets expectations and filters for qualified leads.
+
+---
+
+#### 7. Industry: `professional-services` (`/industries/professional-services/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for Professional Services — UK Experts` (49) | `Agentic AI for UK Professional Services — Automate & Scale` (58) |
+| Description | `…Proposal intake, knowledge management, utilisation analytics, and partner-ready governance. Start today.` (155) | `…Automate proposals, surface knowledge, track utilisation. Partner-ready governance. Book a free call.` (152) |
+
+**Rationale:** Title was missing "UK" before the category (inconsistent with site-wide pattern). "UK Experts" is a universally weak suffix. "Automate & Scale" speaks directly to the two things professional services firms want from AI: automating admin overhead and scaling throughput. Desc reordered to lead with three action verbs (Automate, surface, track); "Start today" replaced with "Book a free call." CTA.
+
+---
+
+#### 8. Industry: `automotive` (`/industries/automotive/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Automotive & Dealers — Drive Growth` (52) | `Agentic AI for UK Automotive — Dealership Ops & Aftersales` (58) |
+| Description | `Agentic AI for UK automotive retail and dealer groups. Dealership ops, F&I compliance, aftersales automation, and demand forecasting. Book a free call.` (151) | `Agentic AI for UK car dealers and dealer groups. Streamline dealership ops, automate F&I compliance, and boost aftersales revenue. Book a free call.` (148) |
+
+**Rationale:** "Drive Growth" is generic. "Dealership Ops & Aftersales" names the two specific use cases in the page body — buyers searching these terms will see immediate relevance. "& Dealers" dropped from title (redundant with "Automotive"). Desc becomes action-oriented: "Streamline", "automate", "boost" replace flat noun phrases; "aftersales revenue" replaces "aftersales automation" for the outcome-first framing.
+
+---
+
+#### 9. Industry: `charities-nonprofits` (`/industries/charities-nonprofits/`)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Charities & Nonprofits — Expert Support` (57) | `Agentic AI for UK Charities — Fundraise Smarter, Do More` (56) |
+| Description | `…Fundraising ops, supporter care, grants and reporting. Charity Commission ready. Book a free call.` (150) | `…Automate fundraising, supporter care, and grant reporting. Pilots in 8–12 weeks. Book a free call.` (150) |
+
+**Rationale:** "Expert Support" is among the most overused suffixes in the sector. "Fundraise Smarter, Do More" speaks directly to the emotional core of charity leadership decision-making — impact vs overhead. "& Nonprofits" dropped for tightness ("Charities" covers the sector in UK parlance). Desc gains "Automate" verb and the "8–12 weeks" pilot timeline (directly from page body), which reduces perceived risk.
+
+---
+
+#### 10. Service: `generative-ai` (`/what-we-do/generative-ai/`)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Generative AI: Cut LLM Costs 95%, Ship in 6wks` (46) | `Generative AI Consultancy UK — Cut LLM Costs by 95%` (51) |
+| Description | `RAG systems, LLM cost optimization, content pipelines. Cut costs by 95%. Pilots in 6-10 weeks. Production AI. Book a call →` (123) | `RAG systems, LLM cost optimisation, and content pipelines for UK businesses. Cut LLM spend by 95%. Pilots live in 6–10 weeks. Book a free call.` (143) |
+
+**Rationale:** Four issues fixed simultaneously: (1) "6wks" abbreviation looks amateurish in a SERP snippet — expanded to natural phrasing in desc; (2) "Ship in 6wks" in the title dropped in favour of leading with the category keyword "Consultancy UK"; (3) American spelling "optimization" corrected to British "optimisation"; (4) "Book a call →" had a raw arrow character (renders oddly across devices) — replaced with "Book a free call." CTA.
+
+---
+
+### Pre-Existing Violation Found (Not Modified This Run)
+- **`/what-we-do/applied-ai/`** — description is 158 chars (3 over the 155-char limit). Introduced in Run 12. Not changed this run to stay within the 10-page cap. Fix in Run 14.
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/learn/agentic-ai-vs-chatbots/
+- https://agenticai.associates/learn/build-vs-buy-ai-agents/
+- https://agenticai.associates/learn/in-house-ai-team-vs-consultancy/
+- https://agenticai.associates/industries/government/
+- https://agenticai.associates/industries/manufacturing/
+- https://agenticai.associates/industries/construction/
+- https://agenticai.associates/industries/professional-services/
+- https://agenticai.associates/industries/automotive/
+- https://agenticai.associates/industries/charities-nonprofits/
+- https://agenticai.associates/what-we-do/generative-ai/
+
+### Data Summary
+- No live GSC or Bing data (no `.env`)
+- Pattern audit of all 74 data-file pages (5 JSON files)
+- Post-edit: 0 title violations (all 30–60 chars), 0 new desc violations (all ≤155 chars)
+- Post-edit duplicate titles: 0 across all 74 pages
+
+### Recommendations for Run 14
+1. **Fix pre-existing violation**: `/what-we-do/applied-ai/` desc is 158 chars — trim 3 chars (e.g. remove "and" before "anomaly detection").
+2. **`/what-we-do/` hub title**: "What We Do — AI Consultancy Services & Strategy" (47 chars) still has no number or power word. Flagged since Run 10. Consider "Agentic AI Services UK — Strategy, Build & Retain" (49 chars) or "What We Do — Agentic AI Strategy, Build & Retain" (48).
+3. **`/what-we-do/ai-automation/`**: Title "Agentic AI Automation Consultants UK — Expert Results" (53) — "Expert Results" is a weak suffix. Consider "Agentic AI Automation Consultants UK — Proven Outcomes" or add a metric.
+4. **`/what-we-do/ai-readiness-assessment/`**: Title (51) is solid but "Fixed-Fee UK Audit (2026)" — the year may need updating to 2027 if not refreshed before Jan 2027.
+5. **Connect GSC**: Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing on each run.
+
+---
+
 ## Run 12 — 2026-06-11
 
 ### Data Source
