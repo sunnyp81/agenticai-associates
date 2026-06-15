@@ -1,7 +1,7 @@
 {
   "hub": {
-    "title": "What We Do — AI Consultancy Services & Strategy",
-    "description": "AI consultancy services: strategy, agentic systems, automation, generative AI, governance. Fixed-fee from £6,500. Book your fit call →",
+    "title": "Agentic AI Services UK — Strategy, Build & Retain",
+    "description": "Agentic AI consultancy for UK businesses. Strategy, build & support — all fixed fee from £6,500. FCA, GDPR & NHS ready. Book a free call.",
     "primaryKeyword": "agentic ai consultancy services uk"
   },
   "pages": [
@@ -178,7 +178,7 @@
     {
       "slug": "agentic-ai",
       "name": "Agentic AI Systems",
-      "title": "Agentic AI Consultancy UK — Autonomous AI Agents",
+      "title": "Agentic AI Consultancy UK — Autonomous Agents, 6-8 Weeks",
       "description": "We design and deploy agentic AI systems — autonomous agents that handle complex business workflows with minimal human intervention. Book a free call.",
       "primaryKeyword": "agentic ai consultant uk",
       "icon": "agentic",
@@ -348,7 +348,7 @@
     {
       "slug": "ai-automation",
       "name": "AI Automation & Workflows",
-      "title": "Agentic AI Automation Consultants UK — Expert Results",
+      "title": "Agentic AI Automation Consultants UK — Save 30-50% on Costs",
       "description": "Automate complex workflows with agentic AI. UK experts in document processing, RPA replacement, and end-to-end orchestration. Book a free fit call.",
       "primaryKeyword": "ai automation consulting",
       "icon": "implementation",
@@ -831,7 +831,7 @@
       "slug": "applied-ai",
       "name": "Applied AI",
       "title": "Applied Agentic AI UK — Computer Vision, Forecasting & NLP",
-      "description": "Applied agentic AI for UK businesses. Computer vision, demand forecasting, NLP and anomaly detection. Proven payback in one operating cycle. Book a free call.",
+      "description": "Applied agentic AI for UK businesses. Computer vision, demand forecasting, NLP & anomaly detection. Proven payback in 1 operating cycle. Book a free call.",
       "primaryKeyword": "applied ai consulting uk",
       "icon": "applied",
       "entryPoint": false,

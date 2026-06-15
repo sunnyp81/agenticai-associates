@@ -2,6 +2,169 @@
 
 ---
 
+## Run 14 — 2026-06-15
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based analysis of source files.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Pattern review of all 5 data files + standalone Astro pages (get-started)
+- Hard rule violations at start: 2 (pre-existing `/what-we-do/applied-ai/` desc 158 chars introduced Run 12; `/get-started/` desc 170 chars — discovered this run)
+- CTR pattern issues identified: 10 (hub title with no keyword, raw arrow in hub desc, "Expert Results" weak suffix, near-duplicate title with homepage, no year anchor on comparison page, 3 missing CTAs in learn descs, 2 generic business-size titles, pipe separator on get-started)
+- Pages optimised: 10
+- Duplicate titles post-edit: 0 (verified across all data-file and key standalone titles)
+
+### Pages Optimised
+
+#### 1. `/what-we-do/` hub
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `What We Do — AI Consultancy Services & Strategy` (47) | `Agentic AI Services UK — Strategy, Build & Retain` (49) |
+| Description | `AI consultancy services: strategy, agentic systems, automation, generative AI, governance. Fixed-fee from £6,500. Book your fit call →` (133) | `Agentic AI consultancy for UK businesses. Strategy, build & support — all fixed fee from £6,500. FCA, GDPR & NHS ready. Book a free call.` (137) |
+
+**Rationale:** Title had no "Agentic AI" keyword and no number/power word — flagged since Run 10. "What We Do" is a nav label, not a search query. "Strategy, Build & Retain" names all three phases. Desc: raw `→` arrow character (renders oddly across devices, flagged as amateurish in Run 10 for other pages), replaced with "Agentic AI" brand front-load, regulatory proof points (FCA, GDPR, NHS), and clean "Book a free call." CTA.
+
+---
+
+#### 2. `/what-we-do/agentic-ai/`
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultancy UK — Autonomous AI Agents` (48) | `Agentic AI Consultancy UK — Autonomous Agents, 6-8 Weeks` (56) |
+
+**Rationale:** "Autonomous AI Agents" describes the technology but offers no concrete outcome. The service FAQ states agents are "production-ready in 6 to 8 weeks" — added as a specific, verifiable time-to-value hook. "AI" dropped from "Autonomous AI Agents" → "Autonomous Agents" (saves 3 chars; "agentic" in title already implies AI). Note: "Working System in 90 Days" was considered but discarded — that phrase is used in the homepage title and this page needed a distinct hook; 6-8 weeks is specific to the service page FAQ.
+
+---
+
+#### 3. `/what-we-do/ai-automation/`
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Automation Consultants UK — Expert Results` (53) | `Agentic AI Automation Consultants UK — Save 30-50% on Costs` (59) |
+
+**Rationale:** "Expert Results" is the weakest possible title suffix — non-specific, unverifiable, used by every competitor. "Save 30-50% on Costs" is drawn directly from the page body ("UK organisations that scale automation well typically see 30 to 50 percent reductions in operational costs within two years"). Concrete metric and action verb.
+
+---
+
+#### 4. `/what-we-do/applied-ai/` (VIOLATION FIX)
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…NLP and anomaly detection. Proven payback in one operating cycle. Book a free call.` (158) | `…NLP & anomaly detection. Proven payback in 1 operating cycle. Book a free call.` (154) |
+
+**Rationale:** Pre-existing violation introduced in Run 12, flagged in Run 13. Two changes: "and" → "&" saves 2 chars; "one" → "1" saves 2 chars; net -4 chars, 158 → 154 ✓. Both changes improve scannability (ampersand is a natural connector in a list; arabic numeral is faster to parse than spelled-out "one").
+
+---
+
+#### 5. `/learn/agentic-ai-vs-rpa/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI vs RPA: 5 Key Differences Explained` (47) | `Agentic AI vs RPA: 5 Key Differences Explained (2026)` (53) |
+| Description | `Agentic AI and RPA both automate work but fail at different things. Discover which is right for your business with our expert comparison guide.` (143) | `Agentic AI acts on unstructured inputs. RPA scripts fixed steps. Learn 5 key differences and which to deploy for your UK business. Read now.` (140) |
+
+**Rationale:** Title at 47 chars with no year anchor — all peer comparison pages in the site now have (2026). Desc: "Discover" is a weak hook; "our expert comparison guide" is generic. New desc leads with two punchy one-line definitions mirroring the page's core contrast, adds "UK" for geo relevance, and adds "Read now." CTA consistent with all other comparison pages.
+
+---
+
+#### 6. `/learn/when-to-hire-an-ai-consultant/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Not sure if you need an AI consultant? Here are 7 clear signs it's time to bring in expert help, plus guidance on timing and readiness.` (136) | `Not sure if you need an AI consultant? Here are 7 clear signs it's time to bring in expert help — with guidance on timing. Book a free call.` (140) |
+
+**Rationale:** No CTA — flagged in Run 9 and again in Run 11. Title is at the 60-char limit so was not changed. Desc: "plus guidance on timing and readiness" replaced with "— with guidance on timing. Book a free call." (saves "and readiness" for the more direct "Book a free call." CTA). CTA consistent with the commercial intent of this high-conversion page.
+
+---
+
+#### 7. `/learn/benefits-of-hiring-an-ai-consultant/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Discover 7 proven benefits of hiring an AI consultant — faster ROI, lower risk, and faster implementation. See results UK businesses have achieved.` (148) | `7 proven benefits of hiring an AI consultant — faster ROI, lower risk, and faster time to value. Backed by UK business case studies. Read now.` (142) |
+
+**Rationale:** "Discover" removed (weak hook); leading with "7" creates an immediate value-number scan pattern. "faster implementation" → "faster time to value" (outcome language, not process language). "See results UK businesses have achieved" → "Backed by UK business case studies. Read now." — active verb ("Backed"), social proof, and explicit CTA.
+
+---
+
+#### 8. `/for/enterprise/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Enterprise Agentic AI Consultancy UK — Scalable Results` (55) | `Enterprise Agentic AI UK — Lighthouse Wins in 8 Weeks` (53) |
+
+**Rationale:** "Scalable Results" has the same weakness as "Expert Results" and "Proven Outcomes" — meaningless differentiators. "Lighthouse Wins in 8 Weeks" uses the exact language from the page body ("We help you identify lighthouse projects that demonstrate value quickly" + "initial lighthouse projects producing results within the first 8 to 12 weeks"). "Lighthouse" is a term FTSE enterprise buyers recognise from their own AI programme planning. Also drops "Consultancy" — not needed with "Enterprise" at the front.
+
+---
+
+#### 9. `/for/small-business/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Small Business — Expert Fixed-Fee Help` (56) | `Agentic AI for UK Small Business — Pay Back in 60 Days` (54) |
+
+**Rationale:** "Expert Fixed-Fee Help" is two weak terms stacked. The page body explicitly states "positive return within the first 60 days" — that's the primary buy signal for SMB buyers. "Pay Back in 60 Days" is concrete, buyer-centric, and matches the page's core ROI claim. Consistent with the numeric hook pattern used across site (90 days, 3 weeks, 12hrs/week, etc.).
+
+---
+
+#### 10. `/get-started/` (VIOLATION FIX + PIPE FIX)
+**File:** `src/pages/get-started/index.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `Get Started — Phase 1 Diagnostic \| Agentic AI Associates` (56) | `Get Started with Agentic AI — £6,500 Fixed-Fee Diagnostic` (57) |
+| Description | `Every engagement starts with the Phase 1 Diagnostic — £6,500 fixed fee, three weeks, board-ready AI roadmap. Then Phase 2 Build at £850/day, Phase 3 Retain at £10k/month.` (170) | `Start your agentic AI journey. £6,500 fixed-fee diagnostic in 3 weeks delivers a board-ready roadmap — then build at £850/day. Book a free fit call.` (148) |
+
+**Rationale:** Two violations found on this page in this run. (1) Title: `|` pipe separator + brand suffix pattern — consistent with the purge across all pages since Run 10. "Phase 1 Diagnostic" is internal jargon; "£6,500 Fixed-Fee Diagnostic" is visitor-facing language that also serves as a price anchor filtering for qualified leads. (2) Desc was 170 chars — 15 over the limit. Rewritten to 148 chars: removes the three-phase price list (too dense for a snippet) and replaces with a journey narrative + single price anchor + CTA.
+
+---
+
+### Pre-Existing Violations Fixed
+- `/what-we-do/applied-ai/` desc: 158 → 154 chars ✓
+- `/get-started/` desc: 170 → 148 chars ✓ (discovered this run — not in prior logs)
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/what-we-do/
+- https://agenticai.associates/what-we-do/agentic-ai/
+- https://agenticai.associates/what-we-do/ai-automation/
+- https://agenticai.associates/what-we-do/applied-ai/
+- https://agenticai.associates/learn/agentic-ai-vs-rpa/
+- https://agenticai.associates/learn/when-to-hire-an-ai-consultant/
+- https://agenticai.associates/learn/benefits-of-hiring-an-ai-consultant/
+- https://agenticai.associates/for/enterprise/
+- https://agenticai.associates/for/small-business/
+- https://agenticai.associates/get-started/
+
+### Data Summary
+- No live GSC or Bing data (no `.env`)
+- Pattern audit of all 5 data JSON files + key standalone Astro pages
+- Pre-edit hard violations: 2 (applied-ai 158 chars, get-started 170 chars) — both fixed
+- Post-edit: 0 title violations (all 30–59 chars), 0 desc violations (all ≤155 chars)
+- Post-edit duplicate titles: 0 (new agentic-ai title uses "6-8 Weeks" distinct from homepage's "90 Days")
+
+### Recommendations for Run 15
+1. **Connect GSC**: Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+2. **`/for/startups/`** — "Agentic AI for UK Startups — Move Fast, Build Right" (50) — "Move Fast, Build Right" is OK but could be sharper. The page mentions "one to two week" rapid sprints and "investor-ready AI strategy". Consider "Agentic AI for UK Startups — Investor-Ready AI in 2 Weeks" (56).
+3. **`/for/smes/`** — "Agentic AI for UK SMEs — Practical Fixed-Fee Results" (51) — "Practical Fixed-Fee Results" is weak (three different adjectives). Consider "Agentic AI for UK SMEs — Fixed Fee, Real Results" (48) or add a specific metric from the page body.
+4. **`/what-we-do/ai-readiness-assessment/`** — Title "AI Readiness Assessment — Fixed-Fee UK Audit (2026)" (50) — year anchor should be updated to (2027) before January 2027 to maintain recency signal.
+5. **Insights hub desc** (`/insights/`) — "Original methodology, frameworks, and reference architectures from Agentic AI Associates." (87 chars) — very short, no CTA. Consider "Original AI methodology, regulated-sector frameworks, and reference architectures from Agentic AI Associates. Start reading." (122 chars).
+6. **`/learn/ai-consultant-vs-vendor/`** — No year in title; consider adding "(2026)" — but title is 56 chars and would go to 63 with year. Alternative: shorten "Which Does Your Business Need?" → "A 2026 UK Buyer's Guide" to stay under 60.
+
+---
+
 ## Run 13 — 2026-06-13
 
 ### Data Source
