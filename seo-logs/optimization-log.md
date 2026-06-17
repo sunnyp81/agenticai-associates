@@ -2,6 +2,173 @@
 
 ---
 
+## Run 15 — 2026-06-17
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based analysis of source files.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full pattern audit of all 4 data JSON files + standalone Astro pages (insights/index.astro)
+- Hard rule violations at start: 0 (all titles 30–60 chars, all descs ≤155 chars)
+- CTR pattern issues identified: 10 (2 business-size titles with vague hooks, 2 learn titles without year/weak hooks, 1 insights hub with very short title and no CTA in desc, 5 industry titles with weak suffixes or missing CTAs)
+- Pages optimised: 10
+- Duplicate titles post-edit: 0 (verified across all 59 data-file pages)
+
+### Pages Optimised
+
+#### 1. `/for/startups/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Startups — Move Fast, Build Right` (51) | `Agentic AI for UK Startups — Investor-Ready AI in 2 Weeks` (57) |
+| Description | `Agentic AI built for UK startups. Expert guidance on AI product development, investor-ready strategy, and lean implementation. Book a free call.` (144) | `Agentic AI for UK startups. Intensive 1-2 week sprints, investor-ready strategy, and lean implementation — all fixed fee. Book a free call.` (139) |
+
+**Rationale:** "Move Fast, Build Right" is a generic founder-speak cliché that doesn't name a specific outcome. "Investor-Ready AI in 2 Weeks" is drawn directly from the page body ("one to two week" rapid sprints + "investor-ready AI strategy" section) — it names the primary buy signal for startup founders approaching fundraising. Desc removes "Expert guidance" (universally weak) and leads with the concrete sprint cadence ("Intensive 1-2 week sprints") before restating the investor-ready hook. "All fixed fee" added as a risk-reduction signal.
+
+---
+
+#### 2. `/for/smes/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK SMEs — Practical Fixed-Fee Results` (52) | `Agentic AI for UK SMEs — 3-5x ROI Within 12 Months` (50) |
+| Description | `Agentic AI for UK SMEs. Practical AI strategy and implementation that drives real efficiency gains. Fixed-fee from £6,500. Book a free call.` (140) | `Agentic AI for UK SMEs. Identify 8–12 AI wins across your business. 3–5x ROI in 12 months. Fixed-fee from £6,500. Book a free call.` (131) |
+
+**Rationale:** "Practical Fixed-Fee Results" stacks three low-signal modifiers — none of them are verifiable. The page FAQ explicitly states "most SME clients see 3x to 5x return on their AI investment within 12 months" and the body says "typically find that SMEs have 8 to 12 viable AI opportunities." Both stats are now in the title and desc respectively. The ROI claim in the title is the primary SERP hook for owner-managed SME buyers comparing AI consultancies. Desc removes "Practical AI strategy and implementation that drives real efficiency gains" (vague) and replaces with the specific opportunity count (8–12 wins) before restating the ROI figure.
+
+---
+
+#### 3. `/insights/`
+**File:** `src/pages/insights/index.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `Insights — Agentic AI Associates` (32) | `Agentic AI Insights — Regulated Sector Frameworks (2026)` (56) |
+| Description | `Original methodology, frameworks, and reference architectures for organisations deploying agentic AI in regulated environments.` (122) | `Original methodology, governance frameworks, and reference architectures for UK regulated firms deploying agentic AI. Start reading.` (131) |
+
+**Rationale:** Title was only 32 chars — 28 chars below the 60-char ceiling, leaving enormous unused SERP headroom. "Insights — Agentic AI Associates" is a brand-suffix pattern that doesn't surface any keyword for regulated-sector searches. "Agentic AI Insights — Regulated Sector Frameworks (2026)" puts the primary keyword first, signals the audience (regulated sector), and adds a year anchor for recency. Desc: no CTA was present. "Start reading." added. "organisations deploying" → "UK regulated firms deploying" (adds geo + audience qualifier). "frameworks" expanded to "governance frameworks" (adds specificity).
+
+---
+
+#### 4. `/learn/ai-consultant-vs-vendor/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `AI Consultant vs Vendor — Which Does Your Business Need?` (56) | `AI Consultant vs Vendor: 2026 UK Buyer's Guide` (47) |
+
+**Rationale:** No year in title — competitors add recency signals on informational comparison SERPs. Adding "(2026)" to the current title would reach 63 chars (too long). Reworked: "Which Does Your Business Need?" (30 chars) replaced with "2026 UK Buyer's Guide" (21 chars), gaining the year anchor while saving 9 chars and staying at 47 chars. "Buyer's Guide" is a high-CTR content signal on comparison SERPs. Description unchanged (155 chars, has "Read now." CTA, at exact limit).
+
+---
+
+#### 5. `/learn/what-does-an-ai-consultant-do/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `What Does an AI Consultant Do? Roles & Responsibilities` (55) | `What Does an AI Consultant Do? Key Roles & Duties (2026)` (56) |
+| Description | `Discover what an AI consultant does day-to-day — strategy workshops, delivery oversight, and more. Book a free call to see if we're a fit.` (138) | `Learn what an AI consultant does day-to-day — strategy, delivery oversight, and team training. Practical guide for UK buyers. Book a free call.` (143) |
+
+**Rationale:** Title had no year anchor — the only learn page on the site without one (or a number hook). "Roles & Responsibilities" is verbose; "Key Roles & Duties (2026)" is tighter, adds the power word "Key", and gains the recency anchor. Desc: "Discover" is the weakest possible opening verb (passive, overused). "Book a free call to see if we're a fit" is a soft, informal CTA inappropriate for an informational query. New desc: "Learn" (active, direct), streamlined body listing three concrete activity types, adds "Practical guide for UK buyers" (content signal + geo), ends with standard "Book a free call." CTA.
+
+---
+
+#### 6. `/industries/fintech/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Fintechs — FCA-Compliant Solutions` (52) | `Agentic AI for UK Fintechs — Automate KYC in Days` (49) |
+| Description | `…customer ops — FCA-ready. Speak to an expert today.` | `…customer ops — all FCA-ready. Book a free call.` |
+
+**Rationale:** "FCA-Compliant Solutions" describes a table-stakes property rather than a specific outcome. Every regulated fintech expects FCA compliance — it's not a differentiator. "Automate KYC in Days" names the #1 cost driver and pain point for UK fintechs (KYC/KYB onboarding friction) and implies urgency and speed. "Speak to an expert today." replaced with standard "Book a free call." CTA (consistent with all other industry pages and stronger conversion signal). "FCA-ready" upgraded to "all FCA-ready" for clarity.
+
+---
+
+#### 7. `/industries/pharma-life-sciences/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for Pharma & Life Sciences — UK Experts` (50) | `Agentic AI for UK Pharma & Life Sciences — MHRA-Ready` (53) |
+| Description | `…MHRA-ready governance. Speak to an expert.` | `…MHRA-ready governance. Book a free call.` |
+
+**Rationale:** Two issues fixed simultaneously. (1) "UK Experts" is the weakest possible suffix — non-specific, used by every competitor. "MHRA-Ready" is a concrete regulatory signal — for pharma and life sciences buyers, MHRA readiness is a primary procurement criterion and a filter for qualified leads. (2) "UK" moved from the suffix ("UK Experts") to the subject ("UK Pharma") — consistent with site-wide pattern ("Agentic AI for UK [Industry]"). (3) "Speak to an expert." → "Book a free call." — consistent CTA upgrade applied to both industry pages with this legacy CTA this run.
+
+---
+
+#### 8. `/industries/saas/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK SaaS Companies — Proven Results` (49) | `Agentic AI for UK SaaS Companies — Cut Churn, Boost ARR` (55) |
+| Description | `…improve with every release. Book a call.` | `…improve with every release. Book a free call.` |
+
+**Rationale:** "Proven Results" is tied with "Expert Results" and "Expert Coverage" for the most overused suffix on the site — meaningless, unverifiable, universal. "Cut Churn, Boost ARR" names the two primary growth metrics every SaaS CFO tracks. These exact terms ("churn prediction" and "expansion-revenue agents") appear in both the title and the page description body. The CTA upgraded from "Book a call." to "Book a free call." — "free" is a high-signal word that consistently improves CTR on commercial SERPs and is the standard pattern across all service and industry pages.
+
+---
+
+#### 9. `/industries/insurance/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Insurers & MGAs — Expert Coverage` (51) | `Agentic AI for UK Insurers & MGAs — Faster Claims` (50) |
+
+**Rationale:** "Expert Coverage" is a double-entendre that reads as a pun on insurance coverage — potentially confusing in a SERP snippet. As a CTR hook it's also weak: "expert" is low-signal and "coverage" is too generic. "Faster Claims" names the single most important operational outcome for UK insurers — claims velocity directly impacts NPS, retention, and regulatory standing. It's drawn from the desc body which lists "Claims triage" as the first use case. Description unchanged (already has "Book a free call." CTA, 150 chars).
+
+---
+
+#### 10. `/industries/iot-connectivity/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for IoT & Connectivity Providers — UK Experts` (56) | `Agentic AI for UK IoT & Connectivity — Cut Churn & Costs` (57) |
+
+**Rationale:** Same "UK Experts" suffix issue as pharma and professional services — universally weak. "UK" moved from the suffix to the subject for pattern consistency. "Providers" dropped (saves 9 chars, freeing space for the benefit hook). "Cut Churn & Costs" is drawn directly from the page description: "churn prediction for MVNOs" and "tariff optimisation" map precisely to churn and costs — these are the two KPIs that determine renewal and expansion for MVNO and connectivity operators. Description unchanged (already has "Book a free call." CTA, 148 chars).
+
+---
+
+### Pre-Existing Violations Fixed
+- None (all pages started clean this run)
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/for/startups/
+- https://agenticai.associates/for/smes/
+- https://agenticai.associates/insights/
+- https://agenticai.associates/learn/ai-consultant-vs-vendor/
+- https://agenticai.associates/learn/what-does-an-ai-consultant-do/
+- https://agenticai.associates/industries/fintech/
+- https://agenticai.associates/industries/pharma-life-sciences/
+- https://agenticai.associates/industries/saas/
+- https://agenticai.associates/industries/insurance/
+- https://agenticai.associates/industries/iot-connectivity/
+
+### Data Summary
+- No live GSC or Bing data (no `.env`)
+- Pattern audit of all 59 data-file pages (4 JSON files) + key standalone Astro page
+- Pre-edit hard violations: 0
+- Post-edit: 0 title violations (all 30–59 chars), 0 desc violations (all ≤155 chars)
+- Post-edit duplicate titles: 0 (verified across all 59 pages)
+- Weak-CTA pages fixed: 2 (`/industries/fintech/` and `/industries/pharma-life-sciences/` both had "Speak to an expert" — now "Book a free call.")
+
+### Recommendations for Run 16
+1. **Connect GSC**: Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+2. **`/industries/media-publishing/`** — "Agentic AI for UK Media & Publishing — Grow Revenue" (51) — "Grow Revenue" is vague. The page body likely names specific use cases (content automation, ad targeting, subscription retention). Consider adding a metric or specific use case.
+3. **`/industries/hospitality/`** — "Agentic AI for UK Hotels & Hospitality — Boost RevPAR" (53) — "Boost RevPAR" is actually strong. Leave unless RevPAR data from the page body can sharpen it.
+4. **`/learn/freelance-ai-consultant/`** — "Freelance AI Consultant — 5 Steps to Start & Succeed (2026)" (59) — borderline length, "Start & Succeed" is OK but could be sharpened.
+5. **Year anchors**: The current year is 2026. Review all pages with "(2026)" in the title during Dec 2026/Jan 2027 to update to (2027) before they become stale.
+6. **`/what-we-do/ai-readiness-assessment/`** — "AI Readiness Assessment — Fixed-Fee UK Audit (2026)" (50) — year anchor is current; review before Jan 2027.
+
+---
+
 ## Run 14 — 2026-06-15
 
 ### Data Source
