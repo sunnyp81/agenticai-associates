@@ -1,7 +1,7 @@
 {
   "hub": {
-    "title": "Agentic AI Services UK — Strategy, Build & Retain",
-    "description": "Agentic AI consultancy for UK businesses. Strategy, build & support — all fixed fee from £6,500. FCA, GDPR & NHS ready. Book a free call.",
+    "title": "Agentic AI Services UK — Strategy to Deployment, Fixed Fee",
+    "description": "9 agentic AI services for UK businesses — all fixed fee from £6,500. Strategy, build & live support. FCA, GDPR & NHS ready. Book a free call.",
     "primaryKeyword": "agentic ai consultancy services uk"
   },
   "pages": [
@@ -427,7 +427,7 @@
     {
       "slug": "data-ai",
       "name": "Data & AI Infrastructure",
-      "title": "Data & AI Consultancy UK — Pipelines, Analytics, Real ROI",
+      "title": "Data & AI Consultancy UK — Pipelines, ML Models & Real ROI",
       "description": "Turn messy data into measurable ROI. We build AI pipelines, analytics platforms and ML models for UK businesses. No vendor lock-in. Book a free call.",
       "primaryKeyword": "data ai consultancy uk",
       "icon": "data",
@@ -585,8 +585,8 @@
     {
       "slug": "ai-governance",
       "name": "AI Governance & Compliance",
-      "title": "Agentic AI Governance UK — GDPR, AI Act & FCA Ready",
-      "description": "Agentic AI governance for UK businesses. GDPR, AI Act & FCA compliance built in. Bias audits, risk frameworks, and audit trails. Book a free call.",
+      "title": "Agentic AI Governance UK — GDPR, AI Act & FCA Assured",
+      "description": "AI governance for UK businesses. GDPR, AI Act & FCA compliance built in — not bolted on. Bias audits, risk registers, and audit trails. Book a free call.",
       "primaryKeyword": "ai governance consulting uk",
       "icon": "governance",
       "entryPoint": false,
@@ -747,7 +747,7 @@
     {
       "slug": "ongoing-support",
       "name": "Ongoing Support & Optimisation",
-      "title": "Agentic AI Retainer UK — Named Consultant, Clear SLAs",
+      "title": "Agentic AI Retainer UK — Dedicated AI Expert, No Handoffs",
       "description": "Ongoing AI support for UK businesses — monitoring, retraining and quarterly strategy. Named consultants, no handoffs. Book a free call today.",
       "primaryKeyword": "ai support retainer uk",
       "icon": "support",
