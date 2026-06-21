@@ -1,7 +1,7 @@
 {
   "hub": {
-    "title": "AI Consultancy by Industry — Sector-Specific Expertise",
-    "description": "Industry-specific agentic AI consultancy for healthcare, legal, finance, and manufacturing. We speak your sector's language. Book a free call.",
+    "title": "Agentic AI Consultancy by Industry — 25 UK Sectors",
+    "description": "Agentic AI consultancy across 25 UK sectors — from healthcare and fintech to manufacturing and government. Fixed-fee from £6,500. Book a free call.",
     "primaryKeyword": "ai consultancy"
   },
   "pages": [
@@ -1576,8 +1576,8 @@
     {
       "slug": "energy-utilities",
       "name": "AI for Energy & Utilities",
-      "title": "Agentic AI for UK Energy & Utilities — Net Zero Ready",
-      "description": "Agentic AI for UK energy, DNOs and water utilities. Smart meter analytics, asset health, and Ofgem/Ofwat-ready governance. Book a free discovery call.",
+      "title": "Agentic AI for UK Energy & Utilities — Cut Downtime & Costs",
+      "description": "Agentic AI for UK energy, DNOs and water utilities. Smart meter analytics, asset health, and Ofgem/Ofwat-ready governance. Book a free call.",
       "primaryKeyword": "ai consultant for energy utilities",
       "icon": "strategy",
       "intro": "<p>Energy and water utilities run two parallel businesses at once: a physical network business and a regulated consumer business. Each produces its own data — SCADA, smart meters, network telemetry, billing, CRM, field work orders — and almost none of it is integrated where a daily decision actually happens. Agentic AI is one of the few levers that can genuinely work across that divide.</p>\n<p>We work with UK suppliers, DNOs, and water companies on the specific problems that regulation and net-zero obligations have made urgent: smart meter data that needs to drive tariffs in near-real-time, network assets with ageing profiles that cannot wait for a five-yearly review, and customer operations under Ofgem or Ofwat scrutiny.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your SCADA, metering, billing and field systems before anything is scoped.</p>",
@@ -1858,8 +1858,8 @@
     {
       "slug": "hospitality",
       "name": "AI for Hospitality",
-      "title": "Agentic AI for UK Hotels & Hospitality — Boost RevPAR",
-      "description": "Agentic AI for UK hotels and F&B operators. Revenue management, guest experience, ops automation, and demand forecasting. Book a free discovery call.",
+      "title": "Agentic AI for UK Hotels & Hospitality — Smarter Revenue AI",
+      "description": "Agentic AI for UK hotels and F&B operators. Revenue management, guest experience, ops automation, and demand forecasting. Book a free call.",
       "primaryKeyword": "ai consultant for hospitality",
       "icon": "strategy",
       "intro": "<p>Hospitality is a business of tiny decisions made millions of times — what rate to load, which guest to upsell, which shift to staff, which review to respond to first. Every one of those decisions gets better with live data and a system that acts on it in minutes rather than days.</p>\n<p>We work with UK hotel groups, independent operators, F&B groups and hospitality tech businesses on the surfaces where agents genuinely earn their keep — revenue management, guest experience and service recovery, and back-of-house operations.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your PMS, RMS, CRM and review stack — because in hospitality, the integrations are almost always the constraint.</p>",
@@ -1952,8 +1952,8 @@
     {
       "slug": "media-publishing",
       "name": "AI for Media & Publishing",
-      "title": "Agentic AI for UK Media & Publishing — Grow Revenue",
-      "description": "Agentic AI for UK publishers and broadcasters. Editorial workflows, rights metadata, ad ops, and IPSO-ready governance. Book a free discovery call.",
+      "title": "Agentic AI for UK Media & Publishing — Scale Content Output",
+      "description": "Agentic AI for UK publishers and broadcasters. Editorial workflows, rights metadata, ad ops, and IPSO-ready governance. Book a free call.",
       "primaryKeyword": "ai consultant for media publishing",
       "icon": "strategy",
       "intro": "<p>Media and publishing businesses live at the intersection of creative judgement and operational scale — a newsroom makes editorial decisions dozens of times an hour, an ad operations team balances thousands of campaigns a day, and a rights team manages catalogues that outlive any individual editor. Agentic AI does not replace editorial judgement, but it can absolutely take the operational drag off the people exercising it.</p>\n<p>We work with UK publishers, broadcasters, independent media groups and B2B information businesses on the surfaces where agents realistically help — editorial support, rights and metadata, advertising operations, and audience intelligence.</p>\n<p>Every engagement opens with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> that maps your CMS, DAM, ad stack and audience data — because in media, the fragmentation of the tooling is the real cost, not any individual tool.</p>",

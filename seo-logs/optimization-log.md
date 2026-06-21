@@ -2,6 +2,177 @@
 
 ---
 
+## Run 17 — 2026-06-21
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based analysis of source files.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full pattern audit of all 5 data JSON files + standalone Astro pages (about/index.astro)
+- Hard rule violations at start: 0 (smcr-ai-accountability appeared as 18 chars in regex but actual title is 57 chars — escaped-quote false positive, confirmed in file)
+- CTR pattern issues identified: 10 — 4 location titles with sector-name-only hooks (no number/outcome), 1 industries hub without "agentic" keyword or number, 1 enterprise title with jargon ("Lighthouse Wins"), 3 industry titles with generic hooks or non-standard CTAs ("Net Zero Ready", "Grow Revenue", "Boost RevPAR") + desc CTA inconsistencies, 1 about page with vague differentiator and non-standard CTA ("fit call")
+- Pages optimised: 10
+- Duplicate titles post-edit: 0 (verified across all 89 pages)
+
+### Pages Optimised
+
+#### 1. `/locations/birmingham/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Birmingham — Automotive & Tech` (52) | `Agentic AI Consultants Birmingham — AI Roadmap in 3 Weeks` (57) |
+| Description | (unchanged) | (unchanged) |
+
+**Rationale:** "Automotive & Tech" names two sectors without stating any outcome — low CTR pull for searchers comparing AI consultancies. "AI Roadmap in 3 Weeks" adds a number and names the concrete first deliverable (the 3-week diagnostic → roadmap), which is already stated in the description body. Consistent with the standard offering across all location pages.
+
+---
+
+#### 2. `/locations/leeds/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Leeds — Finance & Digital Experts` (55) | `Agentic AI Consultants Leeds — Board-Ready Roadmap, 3 Weeks` (59) |
+| Description | `…Finance, legal and digital sectors. Free discovery call.` | `…Finance, legal and digital sectors. Book a free call.` |
+
+**Rationale:** "Finance & Digital Experts" has the "Experts" suffix — consistently the weakest suffix pattern across the site. For Leeds specifically, "Finance" is the primary sector signal (the page body identifies Leeds as the UK's largest financial centre outside London), but adding "Experts" after it dilutes rather than strengthens it. "Board-Ready Roadmap, 3 Weeks" names the concrete deliverable and the timeframe — two of the three strongest purchase-decision signals. Description: "Free discovery call." → "Book a free call." — standard CTA alignment.
+
+---
+
+#### 3. `/locations/bristol/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Bristol — Aerospace & Cleantech` (53) | `Agentic AI Consultants Bristol — Deep Tech AI, Fixed Fee` (55) |
+| Description | `…Fixed-fee diagnostic from £6,500. Book a free discovery call.` | `…Fixed-fee diagnostic from £6,500. Book a free call.` |
+
+**Rationale:** "Aerospace & Cleantech" describes two sectors Bristol is known for — but in a SERP these signal geography, not the offer. "Deep Tech AI, Fixed Fee" captures Bristol's sector essence ("Deep Tech" — Airbus, Rolls-Royce, BAE, Cambridge spin-offs) and adds the two strongest purchase-decision signals: technology quality ("Deep Tech") and pricing certainty ("Fixed Fee"). Description: "Book a free discovery call." → "Book a free call." — standard CTA alignment.
+
+---
+
+#### 4. `/locations/glasgow/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Glasgow — Engineering & Digital` (53) | `Agentic AI Consultants Glasgow — Engineering AI, Fixed Fee` (57) |
+| Description | `…Engineering, energy and digital sectors. Free discovery call.` | `…Engineering, energy and digital sectors. Book a free call.` |
+
+**Rationale:** "Engineering & Digital" describes sector mix without an outcome hook. Glasgow's identity is engineering-led (the page body: "The city that built ships now builds software") — keeping "Engineering" but pairing it with "AI" (adds technology signal) and "Fixed Fee" (pricing certainty) makes the hook both sector-specific and offer-specific. Description: "Free discovery call." → "Book a free call." — standard CTA alignment.
+
+---
+
+#### 5. `/industries/` (hub)
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `AI Consultancy by Industry — Sector-Specific Expertise` (54) | `Agentic AI Consultancy by Industry — 25 UK Sectors` (50) |
+| Description | `Industry-specific agentic AI consultancy for healthcare, legal, finance, and manufacturing. We speak your sector's language. Book a free call.` (142) | `Agentic AI consultancy across 25 UK sectors — from healthcare and fintech to manufacturing and government. Fixed-fee from £6,500. Book a free call.` (146) |
+
+**Rationale:** Hub title lacked the primary keyword "Agentic AI" — all other hub titles begin with it, which is critical for brand-plus-topic SERP signals and internal link anchor consistency. "Sector-Specific Expertise" is meaningless (every consultant claims this). "25 UK Sectors" is a specific, verifiable count — there are exactly 25 industry pages live. Description now leads with "25 UK sectors" (the count) and names four sectors spread across the spectrum (healthcare, fintech, manufacturing, government) rather than the four most generic ones listed previously. "Fixed-fee from £6,500" is added to the hub description for the first time — this is the primary pricing differentiator and belongs at the hub level.
+
+---
+
+#### 6. `/for/enterprise/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Enterprise Agentic AI UK — Lighthouse Wins in 8 Weeks` (53) | `Enterprise Agentic AI UK — Pilot to Production in 8 Weeks` (57) |
+| Description | (unchanged) | (unchanged) |
+
+**Rationale:** "Lighthouse Wins" is internal jargon — a term consultancies and product teams use for early-adopter proofs of concept, but it is not a term enterprise buyers search for. Enterprise CIOs and COOs search for "pilot to production" language because that transition (from a working prototype to a live, governed system) is the precise problem they need solved. "Pilot to Production in 8 Weeks" names the journey and the timeframe, both of which are signalled in the page body. The 8-week claim is carried over from the original title.
+
+---
+
+#### 7. `/industries/energy-utilities/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Energy & Utilities — Net Zero Ready` (53) | `Agentic AI for UK Energy & Utilities — Cut Downtime & Costs` (59) |
+| Description | `…Ofgem/Ofwat-ready governance. Book a free discovery call.` | `…Ofgem/Ofwat-ready governance. Book a free call.` |
+
+**Rationale:** "Net Zero Ready" is a table-stakes claim for 2026 — every energy sector supplier asserts it, so it has near-zero CTR differentiation. More importantly, it describes a regulatory posture, not an operational outcome. "Cut Downtime & Costs" names the two operational KPIs that actually motivate AI investment in energy and utilities: unplanned outages (which the page body addresses with predictive maintenance and asset health agents) and operating cost efficiency (the perennial driver for DNOs and water utilities under RPI/CPI-X price controls). Description: "Book a free discovery call." → "Book a free call." — standard CTA alignment.
+
+---
+
+#### 8. `/industries/media-publishing/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Media & Publishing — Grow Revenue` (51) | `Agentic AI for UK Media & Publishing — Scale Content Output` (58) |
+| Description | `…IPSO-ready governance. Book a free discovery call.` | `…IPSO-ready governance. Book a free call.` |
+
+**Rationale:** "Grow Revenue" is the most generic possible suffix — used by every sector page across every industry. It names a business outcome but provides no insight into how. "Scale Content Output" is specific to the media and publishing problem: the page body describes agents that handle "routine fact-checking, related-article linking, headline testing and social drafting" — all tasks that increase editorial throughput. "Scale Content Output" is the exact language editorial directors and digital publishers use when evaluating AI. Description: "Book a free discovery call." → "Book a free call." — standard CTA alignment.
+
+---
+
+#### 9. `/industries/hospitality/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Hotels & Hospitality — Boost RevPAR` (53) | `Agentic AI for UK Hotels & Hospitality — Smarter Revenue AI` (59) |
+| Description | `…demand forecasting. Book a free discovery call.` | `…demand forecasting. Book a free call.` |
+
+**Rationale:** "RevPAR" (Revenue Per Available Room) is genuine hospitality KPI language — operators know it — but it is jargon to the broader AI consultancy search audience and may not be recognised in a SERP snippet by buyers who are AI-first rather than hospitality-first. "Smarter Revenue AI" keeps the revenue signal, replaces the jargon with plain language, and adds "AI" as a qualifier that confirms this is an AI-specific offer rather than a revenue management consultancy. The primary keyword "Agentic AI" already appears in the title prefix. Description: "Book a free discovery call." → "Book a free call." — standard CTA alignment.
+
+---
+
+#### 10. `/about/`
+**File:** `src/pages/about/index.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `About Agentic AI Associates — UK AI Consultancy` (48) | `About Agentic AI Associates — The UK's Ops-AI Specialist` (56) |
+| Description | `Meet the team behind Agentic AI Associates — a UK AI consultancy helping businesses adopt agentic systems that deliver measurable results. Book a fit call.` (153) | `Meet the team behind Agentic AI Associates. UK ops-AI consultancy for mid-market firms deploying agentic systems with measurable results. Book a free call.` (155) |
+
+**Rationale:** Title was 48 chars — 12 chars below the 60-char ceiling, leaving unused SERP headroom. "UK AI Consultancy" is a universal suffix with no differentiation. "The UK's Ops-AI Specialist" asserts the specific positioning from the site's strategy document (ops-AI, not SEO/AEO/content marketing), signals expertise ("Specialist" vs "Consultancy"), and adds the definite article ("The UK's") which conveys market leadership. Description: "— a UK AI consultancy helping businesses adopt agentic systems" replaced with "UK ops-AI consultancy for mid-market firms deploying agentic systems" — adds ICP qualifier ("mid-market firms"), uses the exact positioning term ("ops-AI"), and replaces the vague "helping businesses adopt" with the stronger active verb "deploying". Non-standard CTA "Book a fit call." → "Book a free call." for alignment with site-wide CTA.
+
+---
+
+### Duplicate Title Check
+All 89 page titles verified unique after edits.
+
+### CTA Standardisation
+Fixed 5 description CTAs from non-standard to "Book a free call.":
+- `/locations/leeds/`: "Free discovery call." → "Book a free call."
+- `/locations/bristol/`: "Book a free discovery call." → "Book a free call."
+- `/locations/glasgow/`: "Free discovery call." → "Book a free call."
+- `/industries/energy-utilities/`: "Book a free discovery call." → "Book a free call."
+- `/industries/media-publishing/`: "Book a free discovery call." → "Book a free call."
+- `/industries/hospitality/`: "Book a free discovery call." → "Book a free call."
+- `/about/`: "Book a fit call." → "Book a free call."
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/locations/birmingham/
+- https://agenticai.associates/locations/leeds/
+- https://agenticai.associates/locations/bristol/
+- https://agenticai.associates/locations/glasgow/
+- https://agenticai.associates/industries/
+- https://agenticai.associates/for/enterprise/
+- https://agenticai.associates/industries/energy-utilities/
+- https://agenticai.associates/industries/media-publishing/
+- https://agenticai.associates/industries/hospitality/
+- https://agenticai.associates/about/
+
+### Recommendations for Run 18
+- Remaining location pages without outcome hooks: Reading ("Thames Valley Tech" — no number), Leicester ("Manufacturing & Food" — no outcome), Scotland ("Energy, Finance & Tech" — weak "Tech" suffix), Northern Ireland ("Fintech & Agri-Food" — no outcome), Norfolk ("Insurance & Agriculture" — no outcome), Salford ("MediaCityUK & Digital" — no outcome), Surrey (47 chars — still short), Kent ("Logistics & Manufacturing" — no outcome), Bedfordshire ("Aerospace & Tech" — no outcome), Wokingham ("Tech & Cybersecurity" — no outcome), Kensington ("Luxury & Wealth" — no outcome)
+- Locations hub description still mentions only 4 cities — update to reflect the 19 live pages
+- `/industries/logistics/` — "Cut Costs Now" is generic (no specific outcome like "Downtime" or "Routes")
+- `/industries/supply-chain/` — "Cut Costs & Waste" similar generic pattern
+- When GSC data becomes available, prioritise running CTR comparison on location pages optimised across Runs 16–17
+
+---
+
 ## Run 16 — 2026-06-19
 
 ### Data Source
