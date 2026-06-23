@@ -2,6 +2,127 @@
 
 ---
 
+## Run 18 — 2026-06-23
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based analysis of source files.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full pattern audit of all location pages (19 entries), plus cross-check of industries, what-we-do, business-sizes, and learn JSON files
+- Hard length violations: 0 (all insight page titles re-verified — FCA page exactly 60 chars, SMCR page 57 chars; previous Explore agent miscounted HTML entities)
+- CTA inconsistency fixed: 4 pages still had "Book a free discovery call." (reading, surrey, kent, wokingham)
+- Weak suffix issues fixed: 10 location pages with sector-name-only suffixes (no outcome, number, or power word)
+- Pages optimised: 10 (all in `src/data/locations.json`)
+- Duplicate titles post-edit: 0 (verified across all 58 pages in data files)
+- Noted for next run: `for/small-business` description still has "discovery call" CTA; `locations/bedfordshire` title suffix "Aerospace & Tech" still sector-only
+
+### Pages Optimised
+
+#### 1. `/locations/reading/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Reading — Thames Valley Tech` (50) | `Agentic AI Consultants Reading — 3-Week Roadmap, Fixed Fee` (58) |
+| Description | `…Book a free discovery call.` | `…Book a free call.` |
+
+"Thames Valley Tech" names geography that's already in the title. "3-Week Roadmap, Fixed Fee" names the deliverable and pricing certainty. CTA standardised.
+
+---
+
+#### 2. `/locations/surrey/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Surrey — Pharma & Gaming` (47) | `Agentic AI Consultants Surrey — Pharma AI, Fixed Fee` (52) |
+| Description | `…Book a free discovery call.` | `…Book a free call.` |
+
+"Pharma & Gaming" lists sectors without an outcome. "Pharma AI, Fixed Fee" adds the service keyword and pricing certainty pharma buyers need. CTA standardised.
+
+---
+
+#### 3. `/locations/kent/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Kent — Logistics & Manufacturing` (54) | `Agentic AI Consultants Kent — Logistics AI, Fixed Fee` (53) |
+| Description | `…Book a free discovery call.` | `…Book a free call.` |
+
+Kent's primary AI opportunity is logistics (Dover ports, M20 corridor). "Logistics AI, Fixed Fee" focuses the hook. CTA standardised.
+
+---
+
+#### 4. `/locations/wokingham/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Wokingham — Tech & Cybersecurity` (55) | `Agentic AI Consultants Wokingham — Enterprise AI, 3 Weeks` (57) |
+| Description | `…Book a free discovery call.` | `…Book a free call.` |
+
+"Tech & Cybersecurity" describes clients, not what we deliver. "Enterprise AI, 3 Weeks" names buyer type, service, and timeframe. CTA standardised.
+
+---
+
+#### 5. `/locations/leicester/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Leicester — Manufacturing & Food` (54) | `Agentic AI Consultants Leicester — Cut Waste, Fixed Fee` (55) |
+
+"Cut Waste" addresses the primary AI value driver for both manufacturing and food & drink (production waste, spoilage, inventory). "Fixed Fee" adds pricing certainty for cost-conscious East Midlands businesses.
+
+---
+
+#### 6. `/locations/scotland/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Scotland — Energy, Finance & Tech` (55) | `Agentic AI Consultants Scotland — AI Live in 90 Days` (52) |
+
+"Energy, Finance & Tech" could apply to any consultant. The description already states "Working system in 90 days" — moving that concrete deliverable into the title turns it into the hook.
+
+---
+
+#### 7. `/locations/northern-ireland/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants N. Ireland — Fintech & Agri-Food` (55) | `Agentic AI Consultants N. Ireland — Fintech AI, Fixed Fee` (57) |
+
+Belfast's fastest-growing AI opportunity is fintech (FinTrU, Datactics, Lightyear). "Fintech AI" leads with the high-value sector; "Fixed Fee" adds certainty for regulated buyers.
+
+---
+
+#### 8. `/locations/norfolk/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Norfolk — Insurance & Agriculture` (55) | `Agentic AI Consultants Norfolk — Insurance AI, Fixed Fee` (55) |
+
+Norwich's insurance cluster (Aviva HQ) is the primary high-value sector. "Insurance AI" is more specific; "Fixed Fee" appeals to FCA-regulated insurers who need predictable costs.
+
+---
+
+#### 9. `/locations/salford/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Salford — MediaCityUK & Digital` (54) | `Agentic AI Consultants Salford — MediaCity AI, Fixed Fee` (55) |
+
+"MediaCityUK & Digital" is purely descriptive. "MediaCity AI" compresses the local identifier into the hook; "Fixed Fee" attracts media SMEs with tight budgets.
+
+---
+
+#### 10. `/locations/kensington/`
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Kensington — Luxury & Wealth` (51) | `Agentic AI Consultants Kensington — Wealth AI, Fixed Fee` (56) |
+
+Kensington's dominant AI opportunity is wealth management and PE. "Wealth AI" is more precise; "Fixed Fee" signals pricing certainty for HNWI advisory clients.
+
+---
+
+### Recommendations for Next Run
+- Fix `for/small-business` description CTA: still has "Book a free discovery call."
+- Fix `locations/bedfordshire` title: "Aerospace & Tech" is sector-only → suggest "Aerospace AI, 3 Weeks"
+- Submit sitemap to GSC (only ~5/95 pages indexed — critical gap)
+- Flip CF AI-Scrapers toggle OFF to unblock LLM crawlers
+
+---
+
 ## Run 17 — 2026-06-21
 
 ### Data Source
