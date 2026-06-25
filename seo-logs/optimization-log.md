@@ -2,6 +2,68 @@
 
 ---
 
+## Run 19 — 2026-06-25
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based optimisation only.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full audit of all pages: locations (18), what-we-do (11), industries (25), business-sizes (4), learn (16), insights (7), hub indexes, standalone Astro pages.
+- Discovered local repo was 16 commits behind origin — remote had already resolved location discovery-call CTAs in runs 9-18.
+- Remaining `discovery call` found in 1 page: `/for/small-business` description.
+- 2 additional CTR improvements identified: `/about/results` (weak title/desc) and `/insights/ai-sdlc-audit-trail` (no CTA in desc).
+- Pages optimised: 3
+- All `discovery call` references now removed from master.
+
+### Pages Optimised
+
+#### 1. `/for/small-business`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Book a free discovery call.` | `…Book a free call.` |
+
+Last remaining `discovery call` in the codebase. Standardised to match all other pages.
+
+---
+
+#### 2. `/about/results`
+**File:** `src/pages/about/results.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `Results — Agentic AI Associates` (30) | `Agentic AI Results — UK Client Outcomes & ROI Cases` (51) |
+| Description | `Real results from real engagements. See how we deliver measurable AI impact for UK businesses.` (93) | `Agentic AI outcomes from UK client engagements. Measurable ROI, time saved, and process gains — all fixed-fee from £6,500. Book a free fit call.` (145) |
+
+Title was at the bare 30-char minimum with no primary keyword. New title leads with "Agentic AI Results" with outcome signal. Description added benefit statement, price anchor, and CTA (was 93 chars — well below the 155-char ceiling).
+
+---
+
+#### 3. `/insights/ai-sdlc-audit-trail`
+**File:** `src/pages/insights/ai-sdlc-audit-trail.astro`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Free field-by-field reference schema.` (121 chars) | `…Free reference schema for regulated UK engineering teams. Read now.` (151 chars) |
+
+Only 121 chars with no explicit CTA. Added audience qualifier (regulated UK engineering teams) and "Read now." click trigger. Optimises for B2B regulated-sector SERPs where the audience qualifier improves relevance.
+
+### Data Summary
+No live GSC/Bing data. Pattern-based audit only.
+
+### Recommendations for Next Run
+- Check `/for/` business-sizes page body copy — the small-business intro still mentions "a free discovery call" (body text, not meta). Consider whether to update.
+- Consider whether `| pipe` title format on 18 location pages is optimal — outcome-specific suffixes (e.g. "AI Live in 90 Days") may outperform generic "Strategy & Build" in CTR.
+- Consider `/contact/` description (129 chars) — could be enriched with ICP qualifier.
+- Flip CF AI-Scrapers toggle OFF (outstanding — see CLAUDE.md warning).
+- Submit sitemap to GSC (only ~5/95 pages indexed — critical gap).
+
+---
+
 ## Run 18 — 2026-06-23
 
 ### Data Source
