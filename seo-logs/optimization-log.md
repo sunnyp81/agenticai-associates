@@ -2,6 +2,167 @@
 
 ---
 
+## Run 20 — 2026-06-27
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based optimisation only.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full audit of all data files (locations, industries, what-we-do, business-sizes, learn) plus standalone Astro pages (contact, insights x7).
+- Hard violations: 0 found, 0 introduced.
+- CTR pattern issues identified: 10 across 8 files.
+- Pages optimised: 10
+- Duplicate titles post-edit: 0 (verified across all 91 pages).
+
+### Pages Optimised
+
+#### 1. `/locations/` hub
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `AI Consultants Near You — Agentic AI Across the UK` (50) | `Agentic AI Consultants UK — 18 Cities, Fixed Fee` (48) |
+
+All other hub titles begin with "Agentic AI" — the locations hub was the sole exception. "AI Consultants Near You" reads like navigation copy, not a search query. "Agentic AI Consultants UK — 18 Cities, Fixed Fee" opens with the primary keyword, includes a specific verifiable count (18 live location pages), and adds the pricing certainty signal used across all service hubs.
+
+---
+
+#### 2. `/locations/bedfordshire/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI Consultants Bedfordshire — Aerospace & Tech` (54) | `Agentic AI Consultants Bedfordshire — Aerospace AI, 3 Weeks` (59) |
+
+"Aerospace & Tech" names two sector categories with no outcome hook — flagged in both Run 18 and Run 19 recommendations. Bedfordshire's primary AI opportunity is aerospace (Cranfield University, Airbus Defence at adjacent Stevenage, Marshall Aerospace). "Aerospace AI" adds the technology signal; "3 Weeks" is the concrete time-to-value promise used across the highest-performing location titles.
+
+---
+
+#### 3. `/contact/`
+**File:** `src/pages/contact/index.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `Contact Agentic AI Associates — Book a Fit Call Today` (52) | `Contact Agentic AI Associates — Book a Free Call Today` (53) |
+| Description | `Get in touch with Agentic AI Associates. Book a 30-minute fit call or send us a message. UK mid-market AI operations consultancy.` (129) | `Speak to Agentic AI Associates — UK ops-AI consultancy for FCA-regulated and PE-backed mid-market firms. Book a 30-minute free call or drop us a message.` (153) |
+
+Two issues: (1) "fit call" was inconsistent with the sitewide standard CTA "free call" — standardised. (2) Desc was only 129 chars (26 chars below the ceiling) with no ICP qualifier. New desc adds "FCA-regulated and PE-backed mid-market firms" — the exact ICP — which improves relevance for the highest-intent branded search queries. Flagged for enrichment in Run 19 recommendations.
+
+---
+
+#### 4. `/for/small-business/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Agentic AI for UK small businesses. Fixed-fee packages, quick wins in 2 weeks, and team training included. Book a free call.` (124) | `Agentic AI for UK small businesses. Fixed-fee from £6,500, quick wins in 2 weeks, team training included — positive ROI in 60 days. Book a free call.` (149) |
+
+Desc was only 124 chars (31 below the ceiling) with no price anchor or ROI claim. Added "Fixed-fee from £6,500" (sets qualified-lead expectation) and "positive ROI in 60 days" (drawn directly from page body: "positive return within the first 60 days"). The title already carries the 60-day hook — restating it in the desc creates title-to-meta message consistency that improves Quality Score signals.
+
+---
+
+#### 5. `/industries/logistics/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Logistics & Fleet — Cut Costs Now` (51) | `Agentic AI for UK Logistics & Fleet — Cut Route Costs` (53) |
+
+"Cut Costs Now" uses "Now" as a pseudo-power word but offers no specificity about which costs. The page description leads with "Route optimisation" as the primary use case. "Cut Route Costs" names the primary AI application — route optimisation translates directly to fuel savings, which is the #1 AI-measurable ROI metric for UK logistics and fleet operators.
+
+---
+
+#### 6. `/industries/supply-chain/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Supply Chain — Cut Costs & Waste` (50) | `Agentic AI for UK Supply Chain — Reduce Waste & Delays` (54) |
+
+"Cut Costs & Waste" overlaps too closely with the logistics page ("Cut Route Costs") and is generic. Supply chain AI buyers are primarily concerned with two pain points: excess inventory waste (shrinkage, spoilage, overstock) and delivery delays (stockouts, supplier lead-time uncertainty). "Reduce Waste & Delays" names both pain points explicitly, differentiates from the logistics page, and uses an action verb ("Reduce") that signals outcome.
+
+---
+
+#### 7. `/insights/fca-ai-governance-playbook/`
+**File:** `src/pages/insights/fca-ai-governance-playbook.astro`
+
+| | Before | After |
+|---|---|---|
+| Description | `FCA AI deployment playbook for UK regulated firms. SM&CR mapping, Consumer Duty rubric, and AI Risk Register schema included. Download now.` (140) | `FCA AI deployment playbook for UK regulated firms. SM&CR mapping, Consumer Duty rubric, and AI Risk Register schema. Updated for 2026. Download now.` (148) |
+
+Desc was 140 chars with 15 chars unused. Added "Updated for 2026" — a recency signal that differentiates from static FCA compliance guides and signals the content reflects current regulatory posture (Consumer Duty live from Jul 2023, AI Act enforcement ramping 2025-2026). "included." changed to "." to allow the recency clause to fit cleanly.
+
+---
+
+#### 8. `/insights/langgraph-vs-bedrock-vs-copilot-studio/`
+**File:** `src/pages/insights/langgraph-vs-bedrock-vs-copilot-studio.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `LangGraph vs Bedrock vs Copilot Studio — Regulated Guide` (56) | `LangGraph vs Bedrock vs Copilot Studio: 2026 FCA Guide` (54) |
+
+No year anchor — the only comparative insight page without one. "Regulated Guide" describes the audience (regulated) but is less specific than "FCA Guide" (the regulator these buyers answer to). "2026 FCA Guide" adds the recency signal, narrows to the highest-intent audience keyword, and saves 2 chars. Colon replaces em-dash for better punctuation convention on technical comparison titles.
+
+---
+
+#### 9. `/insights/agent-studio-build-vs-buy/`
+**File:** `src/pages/insights/agent-studio-build-vs-buy.astro`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agent Studio: Build vs Buy — Regulated Enterprise Guide` (55) | `Agent Studio: Build vs Buy for Regulated Firms (2026)` (53) |
+
+No year anchor. "Regulated Enterprise Guide" describes the audience but "Enterprise Guide" is a content-format label, not a search term. "for Regulated Firms (2026)" is more search-aligned (buyers search "for regulated firms", not "Enterprise Guide") and adds the recency signal. Parenthetical year is consistent with all other insights pages carrying year anchors.
+
+---
+
+#### 10. `/learn/` hub
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Everything you need on AI consulting — from what consultants do, how to hire one, certifications, salary data, and career paths. Start reading.` (143) | `16 practical guides on AI consulting — what consultants do, how to hire one, certifications, salary data, and career paths. Start reading.` (138) |
+
+"Everything you need" is the most overused opener in content marketing — universally ignored. "16 practical guides" leads with the specific count (there are exactly 16 learn pages live), signals value with the power word "practical", and is immediately scannable in a SERP snippet. All subsequent content is preserved; only the opener changes. Net -5 chars, within ceiling.
+
+---
+
+### Data Summary
+No live GSC/Bing data. Pattern-based audit only.
+
+### Duplicate Title Check
+All 91 page titles verified unique after edits (including standalone Astro pages).
+
+### Hard Rule Violations
+- Pre-edit: 0
+- Post-edit: 0 (all titles 30–59 chars, all descs ≤155 chars)
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/locations/
+- https://agenticai.associates/locations/bedfordshire/
+- https://agenticai.associates/contact/
+- https://agenticai.associates/for/small-business/
+- https://agenticai.associates/industries/logistics/
+- https://agenticai.associates/industries/supply-chain/
+- https://agenticai.associates/insights/fca-ai-governance-playbook/
+- https://agenticai.associates/insights/langgraph-vs-bedrock-vs-copilot-studio/
+- https://agenticai.associates/insights/agent-studio-build-vs-buy/
+- https://agenticai.associates/learn/
+
+### Recommendations for Next Run
+- Connect GSC: add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing on each run.
+- Flip CF AI-Scrapers toggle OFF (critical — blocks GPTBot/ClaudeBot/CCBot; see CLAUDE.md warning).
+- Submit sitemap to GSC (only ~5/95 pages indexed — critical gap).
+- `/for/enterprise/` desc uses "Book a board-level call" — review whether this premium CTA or standard "Book a free call." converts better.
+- `/insights/agentic-sdlc-regulated-engineering/` and `/insights/agentic-ai-report-generation-regulated/` — both look solid; consider adding `dateModified` schema to signal freshness.
+- Year anchors: review all `(2026)` titles in Dec 2026 / Jan 2027 to update to `(2027)`.
+- Zero backlinks remain — run Tier-1 listicle outreach (pitches ready in central memory) and create Wikidata entry.
+
+---
+
 ## Run 19 — 2026-06-25
 
 ### Data Source
