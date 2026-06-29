@@ -2,6 +2,177 @@
 
 ---
 
+## Run 21 — 2026-06-29
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based optimisation only.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full audit of all 5 data JSON files + standalone Astro pages (about/results.astro).
+- Hard violations: 0 found pre-edit, 0 introduced. (Apparent insights violations were byte-count artefacts from the em dash `—` in UTF-8 — actual char counts are 155 and 154, within limit.)
+- Primary pattern issue this run: **non-standard CTAs** — 10 pages using "Book a call.", "Get started today.", "Book a free fit call.", "Book a board-level call.", or "Get our free checklist." instead of site-wide "Book a free call." / "Read now." standards.
+- Pages optimised: 10 (descriptions only — no title changes this run).
+- Duplicate titles post-edit: 0 (verified across all 78 data-file titles).
+
+### Pages Optimised
+
+#### 1. `/locations/scotland/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Working system in 90 days. Book a call.` (150) | `…Working system in 90 days. Book a free call.` (155) |
+
+"Book a call." lacked the "free" qualifier present on every other location page. Adding "free" is the single highest-impact one-word change on any SERP snippet — it reduces perceived friction. Scotland was the last holdout.
+
+---
+
+#### 2. `/locations/northern-ireland/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Fixed-fee diagnostic from £6,500. Book a call.` (148) | `…Fixed-fee diagnostic from £6,500. Book a free call.` (153) |
+
+Standardised.
+
+---
+
+#### 3. `/locations/salford/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Fixed-fee diagnostic from £6,500. Book a call.` (146) | `…Fixed-fee diagnostic from £6,500. Book a free call.` (151) |
+
+Standardised.
+
+---
+
+#### 4. `/locations/kensington/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Fixed-fee diagnostic from £6,500. Book a call.` (150) | `…Fixed-fee diagnostic from £6,500. Book a free call.` (155) |
+
+Standardised. Completes CTA unification across all 18 location descriptions — every location now ends with "Book a free call."
+
+---
+
+#### 5. `/industries/retail/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Retail AI consultants for UK businesses. Demand forecasting, personalisation and inventory AI. Fixed-fee diagnostic from £6,500. Get started today.` (147) | `Agentic AI for UK retailers — demand forecasting, personalisation, and inventory AI. Cut stockouts, reduce waste. Fixed-fee from £6,500. Book a free call.` (154) |
+
+Three issues fixed simultaneously. (1) "Get started today." → "Book a free call." (standard). (2) "Retail AI consultants for UK businesses" → "Agentic AI for UK retailers" — leads with the primary keyword, uses "retailers" (the searcher identity). (3) "Cut stockouts, reduce waste" added — the two primary AI value drivers for UK retail, drawn from the page's painPoints.
+
+---
+
+#### 6. `/what-we-do/ai-automation/`
+**File:** `src/data/what-we-do.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…end-to-end orchestration. Book a free fit call.` (147) | `…end-to-end orchestration. Book a free call.` (143) |
+
+"fit" removed — remnant of the old discovery/fit call naming convention removed from all other pages in Runs 17–19.
+
+---
+
+#### 7. `/about/results`
+**File:** `src/pages/about/results.astro`
+
+| | Before | After |
+|---|---|---|
+| Description | `…all fixed-fee from £6,500. Book a free fit call.` (144) | `…all fixed-fee from £6,500. Book a free call.` (141) |
+
+Same "fit call" legacy issue. Removed "fit".
+
+---
+
+#### 8. `/for/enterprise/`
+**File:** `src/data/business-sizes.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Enterprise agentic AI for large UK organisations. AI strategy, governance frameworks, and scalable implementation. Book a board-level call.` (139) | `Enterprise agentic AI for UK organisations. AI strategy, governance, and scalable implementation — pilot to production in 8 weeks. Book a free call.` (148) |
+
+"Book a board-level call." flagged for review in Run 20. Decision: standardise to "Book a free call." — the "board-level" qualifier creates a barrier. Also: removed "large" (redundant with "Enterprise"), tightened "governance frameworks" → "governance", and added "— pilot to production in 8 weeks" from the title to create title-to-meta message consistency.
+
+---
+
+#### 9. `/learn/how-to-choose-an-ai-consultant/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…interview questions, and proposal review. Get our free checklist.` (154) | `…interview questions, and proposal review. Read now.` (140) |
+
+"Get our free checklist." implies a gated asset that does not exist on this page. Replaced with the standard "Read now." CTA for informational learn articles.
+
+---
+
+#### 10. `/learn/ai-consultant-skills/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Discover the essential skills every AI consultant needs — technical, business, and soft skills — with practical steps to develop each one. Start today.` (151) | `The essential skills every AI consultant needs — technical, business, and soft skills — with practical steps to develop each one. Read now.` (139) |
+
+(1) "Discover" removed — weak, passive opening. Direct noun-led opening is more scannable in a SERP snippet. (2) "Start today." → "Read now." — standard CTA for learn articles.
+
+---
+
+### Data Summary
+No live GSC/Bing data. Pattern-based audit only.
+
+### Duplicate Title Check
+All 78 data-file titles verified unique after edits. No title changes made this run; check is confirmatory.
+
+### Hard Rule Violations
+- Pre-edit: 0
+- Post-edit: 0 (all titles 30–60 chars, all descs ≤155 chars)
+
+### CTA Unification Status After Run 21
+All non-standard CTAs now eliminated from data files and standalone Astro pages:
+- "Book a call." — cleared ✓ (was: Scotland, N. Ireland, Salford, Kensington)
+- "Book a free fit call." — cleared ✓ (was: ai-automation, about/results)
+- "Book a board-level call." — cleared ✓ (was: enterprise)
+- "Get started today." — cleared ✓ (was: retail)
+- "Get our free checklist." — cleared ✓ (was: how-to-choose-an-ai-consultant)
+- "Start today." — cleared ✓ (was: ai-consultant-skills)
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/locations/scotland/
+- https://agenticai.associates/locations/northern-ireland/
+- https://agenticai.associates/locations/salford/
+- https://agenticai.associates/locations/kensington/
+- https://agenticai.associates/industries/retail/
+- https://agenticai.associates/what-we-do/ai-automation/
+- https://agenticai.associates/about/results/
+- https://agenticai.associates/for/enterprise/
+- https://agenticai.associates/learn/how-to-choose-an-ai-consultant/
+- https://agenticai.associates/learn/ai-consultant-skills/
+
+### Recommendations for Next Run
+- Connect GSC: add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+- **CTA audit is now complete** — next run should focus on title quality: remaining industry titles at 49–51 chars have room to strengthen (e.g. finance, hr, insurance, fintech — all at 49–51 chars).
+- Remaining learn articles without CTAs (career content): `how-to-become-an-ai-consultant`, `ai-consultant-career-path`, `ai-consultant-job-description`, `freelance-ai-consultant` — review whether adding "Read now." is appropriate or these should be deprioritised.
+- `/insights/smcr-ai-accountability/` — desc exactly 155 chars. Consider `dateModified` schema to signal freshness.
+- Year anchors: all `(2026)` titles — review Dec 2026 / Jan 2027 to update to `(2027)`.
+- Submit sitemap to GSC (only ~5/95 pages indexed — critical gap).
+- Flip CF AI-Scrapers toggle OFF (critical — blocks GPTBot/ClaudeBot/CCBot).
+- Zero backlinks — run Tier-1 listicle outreach + create Wikidata entry.
+
+---
+
+
 ## Run 20 — 2026-06-27
 
 ### Data Source
