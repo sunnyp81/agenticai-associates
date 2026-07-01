@@ -2,6 +2,178 @@
 
 ---
 
+## Run 22 — 2026-07-01
+
+### Data Source
+No `.env` found. GSC and Bing Webmaster APIs skipped. Pattern-based optimisation only.
+
+### IndexNow
+`INDEXNOW_KEY` not available. Submission skipped.
+
+### Audit Summary
+- Full audit of all 5 data JSON files: industries (25 pages), locations (18 pages), what-we-do (10 pages), learn (16 pages), business-sizes (4 pages).
+- Hard violations: 0 found pre-edit, 0 introduced.
+- Primary pattern issues this run: (1) 4 learn pages with non-standard CTAs (`Start today.`, `Start earning more in 2026.`, `Download our free template.`); (2) 3 industry titles at 49 chars — 11 chars below ceiling; (3) 3 industry descriptions with unused SERP real estate (136–138 chars).
+- Pages optimised: 10 (4 desc-only in learn; 2 title+desc in industries; 3 desc-only in industries; 1 desc-only in locations).
+- Duplicate titles post-edit: 0 (verified across all 78 data-file titles).
+
+### Pages Optimised
+
+#### 1. `/learn/how-to-become-an-ai-consultant/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…landing your first role. Start today.` (144) | `…landing your first role. Read now.` (149) |
+
+"Start today." is a transactional CTA unsuited to a long-form informational guide. "Read now." is the site-wide standard for learn articles. Also added "in 2026" to the opening sentence to add a recency signal consistent with all other career-bait learn pages.
+
+---
+
+#### 2. `/learn/ai-consultant-career-path/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…how to accelerate your growth. Start today.` (147) | `…how to accelerate your growth. Read now.` (144) |
+
+Same "Start today." → "Read now." standardisation. This was the second remaining learn page with a non-standard CTA after Run 21 completed the CTA audit on the buyer-intent pages.
+
+---
+
+#### 3. `/learn/ai-consultant-job-description/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…qualifications, and salary. Download our free template.` (146) | `…qualifications, and salary benchmarks. Read now.` (139) |
+
+"Download our free template." implies a gated download asset that does not exist on this page — a false promise in the SERP snippet that inflates CTR but increases bounce rate. Replaced with "Read now." (standard CTA) and added "benchmarks" after "salary" to improve the value signal — salary benchmarks are the primary informational intent for this query.
+
+---
+
+#### 4. `/learn/freelance-ai-consultant/`
+**File:** `src/data/learn.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…and IR35. Start earning more in 2026.` (147) | `…and IR35 compliance. Read now.` (140) |
+
+"Start earning more in 2026." is a weak, bespoke CTA that reads like a LinkedIn hook rather than a SERP snippet. Also redundant with "2026" already in the title. "Read now." standardises the CTA; "compliance" added after "IR35" (IR35 compliance is the precise buyer concern — not IR35 in the abstract).
+
+---
+
+#### 5. `/industries/hr/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI HR Consultant UK — 30-50% Faster Hires` (49) | `Agentic AI HR Consultant UK — 30-50% Faster Hires, Fixed Fee` (60) |
+| Description | `HR AI consultant helping UK teams cut time-to-hire 30-50% and lift retention. Workday, SuccessFactors, BambooHR ready. Book a free call.` (136) | `HR AI consultant for UK teams. Cut time-to-hire 30-50% and lift first-year retention 10-20%. Workday, SuccessFactors, BambooHR ready. Book a free call.` (151) |
+
+Title was 49 chars — 11 chars below ceiling. ", Fixed Fee" added (10 chars): pricing certainty is the primary differentiator for HR SaaS buyers comparing consultancies. Description gains two improvements: (1) "helping UK teams" → "for UK teams" (tighter ICP signal); (2) "lift retention" → "lift first-year retention 10-20%" — both the specificity ("first-year") and the metric (10-20%) come directly from the page intro body, which states "lift first-year retention by 10-20% through better onboarding personalisation."
+
+---
+
+#### 6. `/industries/fintech/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Fintechs — Automate KYC in Days` (49) | `Agentic AI for UK Fintechs — KYC Live in Days, FCA-Ready` (56) |
+| Description | `Agentic AI for UK fintechs. KYC/KYB automation, fraud detection, regulatory reporting, and customer ops — all FCA-ready. Book a free call.` (138) | `Agentic AI for UK fintechs. Automate KYC/KYB, detect fraud in real time, and streamline regulatory reporting — all FCA-compliant. Book a free call.` (147) |
+
+Title: "Automate KYC in Days" → "KYC Live in Days, FCA-Ready". (1) "Live in Days" converts the verb to a result — the KYC process is already live, not in prospect. (2) "FCA-Ready" added (7 chars) — for UK fintechs, FCA compliance is the primary purchase filter; surfacing it in the title improves qualified-lead click rate. Description: replaced the static capability list with active verbs ("Automate", "detect", "streamline") and upgraded "FCA-ready" to "FCA-compliant" (the stronger assurance term preferred in FCA-supervised firms).
+
+---
+
+#### 7. `/industries/insurance/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Title | `Agentic AI for UK Insurers & MGAs — Faster Claims` (49) | `Agentic AI for UK Insurers & MGAs — Faster Claims, Fixed Fee` (60) |
+
+Title was 49 chars — 11 chars below ceiling. ", Fixed Fee" added: for FCA-regulated insurers and MGAs, fixed-fee pricing removes the open-ended engagement risk that makes buyers hesitate. Description unchanged (150 chars, strong as-is).
+
+---
+
+#### 8. `/industries/education/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…Reclaim 12 hours per week per teacher. DfE framework compliant. Book a free call.` (136) | `…Reclaim 12 hours per teacher per week. DfE-compliant. Fixed-fee from £6,500. Book a free call.` (149) |
+
+Three micro-improvements simultaneously: (1) "per week per teacher" → "per teacher per week" — puts the recipient before the cadence, which reads more naturally and is closer to how buyers search ("per teacher"); (2) "DfE framework compliant" → "DfE-compliant" (saves 8 chars, freeing space for the price anchor); (3) "Fixed-fee from £6,500." added — the education sector is budget-constrained; the price anchor qualifies leads and signals predictability to MAT finance directors.
+
+---
+
+#### 9. `/industries/media-publishing/`
+**File:** `src/data/industries.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `…ad ops, and IPSO-ready governance. Book a free call.` (137) | `…ad ops, IPSO-ready. Fixed-fee from £6,500. Book a free call.` (145) |
+
+Description was 137 chars (18 below ceiling). "and IPSO-ready governance." restructured to "IPSO-ready." (shorter, punchier), freeing space for "Fixed-fee from £6,500." — the pricing signal is absent from this industry's description, despite being present on the majority of other industry pages. Media and publishing buyers are particularly sensitive to scope creep in consulting engagements; fixed-fee is a high-signal differentiator.
+
+---
+
+#### 10. `/locations/glasgow/`
+**File:** `src/data/locations.json`
+
+| | Before | After |
+|---|---|---|
+| Description | `Glasgow agentic AI consultants. Fixed-fee diagnostic, AI roadmap in 3 weeks. Engineering, energy and digital sectors. Book a free call.` (135) | `Glasgow agentic AI consultants. Fixed-fee diagnostic from £6,500. AI roadmap in 3 weeks. Engineering, energy and digital sectors. Book a free call.` (147) |
+
+Description was 135 chars (20 below ceiling) — the widest gap of any location page post-Run 18. "Fixed-fee diagnostic, AI roadmap in 3 weeks" separated into two sentences and "from £6,500" inserted: adding the price anchor is consistent with every other location page description and is the primary qualifying signal for commercial buyers in Glasgow's engineering and energy sectors.
+
+---
+
+### Data Summary
+No live GSC/Bing data. Pattern-based audit only.
+
+### Duplicate Title Check
+All 78 data-file titles verified unique after edits. No duplicate titles introduced.
+
+### Hard Rule Violations
+- Pre-edit: 0
+- Post-edit: 0 (all titles 30–60 chars, all descs ≤155 chars)
+
+### CTA Audit Status After Run 22
+All non-standard learn CTAs now eliminated from data files:
+- "Start today." — cleared ✓ (was: how-to-become-an-ai-consultant, ai-consultant-career-path)
+- "Download our free template." — cleared ✓ (was: ai-consultant-job-description)
+- "Start earning more in 2026." — cleared ✓ (was: freelance-ai-consultant)
+
+Remaining learn CTA status: all 16 pages now end with either "Read now." or "Book a free call." — site-wide standard achieved.
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/learn/how-to-become-an-ai-consultant/
+- https://agenticai.associates/learn/ai-consultant-career-path/
+- https://agenticai.associates/learn/ai-consultant-job-description/
+- https://agenticai.associates/learn/freelance-ai-consultant/
+- https://agenticai.associates/industries/hr/
+- https://agenticai.associates/industries/fintech/
+- https://agenticai.associates/industries/insurance/
+- https://agenticai.associates/industries/education/
+- https://agenticai.associates/industries/media-publishing/
+- https://agenticai.associates/locations/glasgow/
+
+### Recommendations for Next Run
+- Connect GSC: add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+- **Learn CTA audit complete** — all 16 learn pages now end with standard CTAs. Next run should focus on learn *title* quality: `what-is-an-ai-consultant` (54 chars) and `in-house-ai-team-vs-consultancy` (58 chars) are fine; `agentic-ai-vs-rpa` (53 chars) and `agentic-ai-vs-chatbots` (53 chars) could gain a UK-specific qualifier.
+- Remaining short industry descriptions (≤140 chars): `supply-chain` (145), `logistics` (148) — both borderline; watch if further enrichment is worth it.
+- `hospitality` desc (139 chars) — could add a metric ("Cut no-show rates 30%") if verifiable from page body.
+- Insights freshness: consider adding `dateModified` schema to `/insights/smcr-ai-accountability/` and `/insights/agentic-sdlc-regulated-engineering/` to signal recency.
+- Year anchors: review all `(2026)` titles Dec 2026/Jan 2027 to update to `(2027)`.
+- Submit sitemap to GSC (critical — only ~5/95 pages indexed).
+- Flip CF AI-Scrapers toggle OFF (critical — blocks GPTBot/ClaudeBot/CCBot; see CLAUDE.md warning).
+- Zero backlinks — run Tier-1 listicle outreach (pitches in `agenticai-listicle-outreach-apr30.md`) + create Wikidata entry.
+
+---
+
 ## Run 21 — 2026-06-29
 
 ### Data Source
