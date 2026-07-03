@@ -2,6 +2,47 @@
 
 ---
 
+## Run 23 — 2026-07-03
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — see `seo-logs/gsc-data-20260703.json`
+**Bing data:** Skipped — see `seo-logs/bing-data-20260703.json`
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 10 (4 in `src/data/learn.json`, 6 in `src/data/industries.json`)
+
+### Changes applied
+
+| # | File | Slug | Field | Before (chars) | After (chars) | Rationale |
+|---|------|------|-------|---------------|---------------|-----------|
+| 1 | learn.json | ai-consultant-vs-vendor | title | "AI Consultant vs Vendor: 2026 UK Buyer's Guide" (46) | "AI Consultant vs Vendor: Independent UK Buyer's Guide 2026" (58) | Below 50-char floor; "Independent" adds strong differentiator vs vendor-sponsored guides |
+| 2 | learn.json | agentic-ai-vs-rpa | title | "Agentic AI vs RPA: 5 Key Differences Explained (2026)" (54) | "Agentic AI vs RPA — UK Enterprise Decision Guide (2026)" (55) | Replaces generic "5 Key Differences" with value-forward "Decision Guide"; adds UK qualifier |
+| 3 | learn.json | agentic-ai-vs-rpa | description | "Agentic AI acts on unstructured inputs. RPA scripts fixed steps. Learn 5 key differences and which to deploy for your UK business. Read now." (140) | "Agentic AI acts on unstructured inputs. RPA scripts fixed steps. 5 key differences, a decision framework, and the hybrid most UK enterprises use. Read now." (155) | Surfaces "decision framework" and "hybrid" — key intent signals; fills to 155-char ceiling |
+| 4 | learn.json | agentic-ai-vs-chatbots | title | "Agentic AI vs Chatbots: 5 Critical Differences (2026)" (54) | "Agentic AI vs Chatbots: Build Right for UK Enterprise (2026)" (60) | Replaces "5 Critical Differences" with action-oriented "Build Right"; adds UK Enterprise qualifier |
+| 5 | learn.json | ai-consultant-skills | description | "The essential skills every AI consultant needs — technical, business, and soft skills — with practical steps to develop each one. Read now." (139) | "The essential AI consultant skills for 2026 — technical, business, and soft skills — with practical steps to develop each one. UK guide. Read now." (146) | Moves "AI consultant skills" earlier for keyword prominence; adds "2026" year anchor and "UK guide" qualifier |
+| 6 | industries.json | supply-chain | description | "Supply chain AI consultant helping UK businesses cut costs, optimise logistics, and build resilient operations with agentic AI. Book a free call." (144) | "Supply chain AI for UK businesses. Improve forecast accuracy to 80-90% and cut emergency freight 30-50% — all fixed-fee from £6,500. Book a free call." (150) | Replaces generic copy with specific ROI metrics from page intro; adds fixed-fee anchor |
+| 7 | industries.json | manufacturing | description | "Agentic AI for UK factories. Predictive maintenance, quality AI, and production scheduling — fewer defects and less downtime. Book a free call." (142) | "Agentic AI for UK factories. Predictive maintenance, vision quality checks, and scheduling — lift OEE 4-8% and cut defects 30-60%. Book a free call." (148) | Adds OEE/defect metrics from page intro; "vision quality checks" is more specific than "quality AI" |
+| 8 | industries.json | energy-utilities | description | "Agentic AI for UK energy, DNOs and water utilities. Smart meter analytics, asset health, and Ofgem/Ofwat-ready governance. Book a free call." (139) | "Agentic AI for UK energy suppliers and DNOs. Predictive asset health, smart meter analytics, Ofgem/Ofwat-ready governance. Fixed-fee. Book a free call." (151) | Reorders from high-value to supporting detail; adds "Fixed-fee" anchor; grows from 139→151 chars |
+| 9 | industries.json | government | description | "Agentic AI for UK councils and public sector. Cut costs, improve citizen services, and deploy responsibly. GDPR & ICO compliant. Book a free call." (146) | "Agentic AI for UK councils and public sector. Cut citizen wait times 40-70%. Improve services, deploy responsibly. GDPR & ICO compliant. Book a free call." (154) | Adds concrete wait-time metric from page intro; more specific than "cut costs" |
+| 10 | industries.json | legal | description | "Legal AI consultants for UK law firms. Automate doc review, contracts, and compliance with agentic AI. More matters, less admin. Book a free call." (146) | "Legal AI consultants for UK law firms. Automate doc review, contracts, and compliance. Cut review time 60-80%. More matters, less admin. Book a free call." (154) | Adds 60-80% review time reduction metric from page intro; removes redundant "with agentic AI" |
+| 11 | industries.json | marketing | description | "Agentic AI marketing consultant for UK agencies and in-house teams. Automate campaigns, scale content output, and prove ROI. Book a free call." (141) | "Agentic AI marketing consultant for UK agencies and in-house teams. Automate campaigns, lift conversions 20-40%, and prove ROI. Book a free call." (145) | Replaces vague "scale content output" with specific conversion metric from page intro |
+
+### Skipped / no change needed
+
+- All other learn.json pages: already optimised in prior runs or within acceptable range
+- All other industries.json pages: descs already 145-155 chars from prior runs
+- No title duplicates introduced (all titles remain unique across site)
+- No slug/URL changes
+
+### Recommendations for Run 24
+
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed. Submit `https://agenticai.associates/sitemap-index.xml` to GSC manually — this cannot be done via automated run without creds.
+- **CF AI-Scrapers toggle**: Flip CF → agenticai.associates → Security → Bots → Super Bot Fight Mode → AI Scrapers and Crawlers: OFF. Verify: `curl -sS https://agenticai.associates/robots.txt | head -5` should show repo file, not CF injection.
+- **agentic-ai-vs-chatbots desc** (150 chars): Chatbots desc is good but "Free guide" phrasing could be updated to "Practical guide" if A/B data shows lower CTR.
+- **Location page descs** (essex, buckinghamshire, portsmouth, ealing): Getting impressions per CLAUDE.md — consider adding pages in a future batch.
+- **Backlink gap**: Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`); this is the highest-leverage outstanding action.
+
+---
+
 ## Run 22 — 2026-07-01
 
 ### Data Source
