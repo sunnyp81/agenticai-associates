@@ -2,6 +2,76 @@
 
 ---
 
+## Run 24 — 2026-07-05
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 10 (3 in `src/data/what-we-do.json`, 2 in `src/data/learn.json`, 2 in `src/data/business-sizes.json`, 1 in `src/data/industries.json`, 2 in `src/data/locations.json`)
+
+### Changes applied
+
+| # | File | Slug | Field | Before (chars) | After (chars) | Rationale |
+|---|------|------|-------|---------------|---------------|-----------|
+| 1 | what-we-do.json | conversational-ai | title | "Conversational AI UK — Deflect 50-70% of Contacts" (49) | "Conversational AI UK — Deflect 50-70% of Inbound Contacts" (57) | Title was 1 char below the 50-char minimum floor. "Inbound Contacts" is also more precise — it specifies the volume applies to inbound demand, which is the relevant metric for channel-deflection ROI |
+| 2 | what-we-do.json | ai-training | desc | "…Book a free call now." (146) | "…Book a free call." (142) | "now." is a non-standard CTA adverb — removed to match site-wide standard. All other service pages end with "Book a free call." without a trailing adverb |
+| 3 | what-we-do.json | ongoing-support | desc | "…Named consultants, no handoffs. Book a free call today." (141) | "…Named consultants, no handoffs. Book a free call." (151) | "today." is a non-standard CTA adverb — removed. Also added "agentic" before "AI" for keyword consistency with all other service page descriptions, and "reviews" after "strategy" for specificity. Net +10 chars to 151 |
+| 4 | learn.json | agentic-ai-vs-chatbots | desc | "…Discover 5 key differences…Free guide for UK enterprise buyers. Read now." (150) | "…5 key differences…practical guide for UK enterprise buyers. Read now." (147) | Two fixes: (1) "Free guide" removed — this is a web page, not a downloadable asset; implying a free download is inaccurate and creates friction when users see no download gate. (2) "Discover" removed — flagged in Run 23 as a weak, passive opener; replaced with direct noun-led sentence |
+| 5 | learn.json | ai-consultant-job-description | desc | "…qualifications, and salary benchmarks. Read now." (139) | "…qualifications, salary benchmarks, and day rates. Read now." (153) | Desc was 16 chars below ceiling. "and day rates" added: UK contract day rates are a primary search intent signal for this query — buyers and candidates researching AI consultant job descriptions specifically want to know what they can expect to earn or pay per day. Also consolidated "required skills, qualifications" → "skills, qualifications" (tighter, same meaning) |
+| 6 | business-sizes.json | smes | desc | "Agentic AI for UK SMEs. Identify 8–12 AI wins…" (131) | "Agentic AI for UK SMEs with 10–250 employees. Identify 8–12 AI wins…" (153) | Desc was 24 chars below ceiling — the widest gap in business-sizes. Added "with 10–250 employees" (from page intro: "businesses with 10 to 250 employees") which (a) qualifies the ICP, helping the right buyers self-select, and (b) differentiates from the small-business and enterprise pages |
+| 7 | business-sizes.json | startups | desc | "…all fixed fee. Book a free call." (139) | "…all fixed-fee from £6,500. Book a free call." (151) | Desc was 16 chars below ceiling. Added "from £6,500" to the fixed-fee anchor — every other business-size page and most industry pages already carry the price anchor in the description. The startups page was the only one that didn't. Also corrected "fixed fee" (two words, adjective) to "fixed-fee" (hyphenated compound modifier) for consistency with all other pages |
+| 8 | industries.json | hospitality | desc | "…ops automation, and demand forecasting. Book a free call." (139) | "…and demand forecasting — all fixed-fee from £6,500. Book a free call." (151) | Desc was 16 chars below ceiling. Added "fixed-fee from £6,500" — the pricing anchor is present on the majority of industry descriptions but was missing from hospitality. The em-dash construction "— all fixed-fee from £6,500" is consistent with the site's existing copy style for mid-sentence price signals |
+| 9 | locations.json | kent | desc | "…Fixed-fee diagnostic from £6,500. Book a free call." (138) | "…3-week AI roadmap, fixed-fee from £6,500. Book a free call." (146) | Desc was 17 chars below ceiling. Added "3-week AI roadmap" as an outcome hook before the fixed-fee signal — the 3-week roadmap is the primary deliverable for all location pages; surfacing it in the description creates title-to-meta message consistency (the title carries "Logistics AI, Fixed Fee" but no timeframe) |
+| 10 | locations.json | surrey | desc | "…Fixed-fee diagnostic from £6,500. Book a free call." (140) | "…AI roadmap in 3 weeks, fixed-fee from £6,500. Book a free call." (152) | Same pattern as Kent: desc was 15 chars below ceiling. Added "AI roadmap in 3 weeks" outcome hook. Surrey's pharma, gaming, and professional services sectors are price-sensitive and outcome-focused — the combination of timeframe and fixed fee is the strongest qualifying signal for Surrey-area enterprise buyers |
+
+### Skipped / no change needed
+
+- All other pages in the 5 data files: already optimised in prior runs or within acceptable range
+- Insights pages: all within 50–60 chars title, ≤155 desc from prior runs
+- About/contact/results standalone pages: optimised in prior runs
+- No slug/URL changes
+
+### Hard Rule Violations
+- Pre-edit: 1 (conversational-ai title at 49 chars — 1 below minimum)
+- Post-edit: 0 (all titles 30–60 chars, all descs ≤155 chars)
+
+### Duplicate Title Check
+All data-file titles verified unique after edits. No duplicate titles introduced.
+
+### CTA Audit Status After Run 24
+All non-standard CTA adverbs now eliminated from data files:
+- "Book a free call now." — cleared ✓ (was: ai-training)
+- "Book a free call today." — cleared ✓ (was: ongoing-support)
+
+Previously cleared (Runs 17–23): "discovery call", "fit call", "board-level call", "Start today.", "Download our free template.", "Start earning more in 2026.", "Get our free checklist.", "Get started today."
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/what-we-do/conversational-ai/
+- https://agenticai.associates/what-we-do/ai-training/
+- https://agenticai.associates/what-we-do/ongoing-support/
+- https://agenticai.associates/learn/agentic-ai-vs-chatbots/
+- https://agenticai.associates/learn/ai-consultant-job-description/
+- https://agenticai.associates/for/smes/
+- https://agenticai.associates/for/startups/
+- https://agenticai.associates/industries/hospitality/
+- https://agenticai.associates/locations/kent/
+- https://agenticai.associates/locations/surrey/
+
+### Recommendations for Run 25
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed. Submit `https://agenticai.associates/sitemap-index.xml` to GSC manually.
+- **CF AI-Scrapers toggle OFF** (critical): CF → agenticai.associates → Security → Bots → Super Bot Fight Mode → AI Scrapers and Crawlers: OFF. Until done, CF injects `Disallow` for GPTBot/ClaudeBot/CCBot.
+- **CTA non-standard adverbs now fully cleared**: All 5 data JSON files have uniform "Book a free call." and "Read now." CTAs. Next run should focus on title quality for remaining pages not yet touched in recent runs.
+- **what-we-do/ai-training desc (142 chars)**: Slightly below floor — consider adding a specificity signal (e.g. "self-serve portal included") if verifiable from page body.
+- **Remaining short learn descs**: `when-to-hire-an-ai-consultant` (140), `benefits-of-hiring-an-ai-consultant` (142), `freelance-ai-consultant` (140) — all borderline; candidates for enrichment next run.
+- **Location pages for essex, buckinghamshire, portsmouth, ealing**: Getting impressions per CLAUDE.md — consider adding pages in a future batch.
+- **Backlink gap**: Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created. Both remain the highest-leverage outstanding actions.
+- **Year anchors**: Review all `(2026)` titles Dec 2026 / Jan 2027 to update to `(2027)`.
+
+---
+
 ## Run 23 — 2026-07-03
 
 **Mode:** Pattern-based (no .env / no API credentials)
