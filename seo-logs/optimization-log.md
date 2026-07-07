@@ -2,6 +2,84 @@
 
 ---
 
+## Run 25 — 2026-07-07
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 10 (4 in `src/data/learn.json`, 3 in `src/data/what-we-do.json`, 3 in `src/data/locations.json`)
+
+### Changes applied
+
+| # | File | Slug | Field | Before (chars) | After (chars) | Rationale |
+|---|------|------|-------|---------------|---------------|-----------|
+| 1 | learn.json | freelance-ai-consultant | desc | "Complete guide to becoming a freelance AI consultant. Covers day rates, finding clients, building your brand, and IR35 compliance. Read now." (140) | "Complete UK guide to becoming a freelance AI consultant in 2026. Covers day rates, finding clients, building your brand, and IR35 compliance. Read now." (151) | Added "UK" qualifier and "in 2026" year anchor. Desc was 15 chars below ceiling with no geographic or recency signal — the two signals most correlated with high-intent freelance career queries. "Complete UK guide" also matches the established pattern used on other career-intent learn pages |
+| 2 | learn.json | how-to-choose-an-ai-consultant | desc | "Learn how to pick the right AI consultant for your business. Covers criteria, red flags, interview questions, and proposal review. Read now." (140) | "How to pick the right AI consultant for your UK business. Covers evaluation criteria, red flags, interview questions, and proposal review. Read now." (148) | Three micro-improvements: (1) "Learn how to pick" → "How to pick" — removes the weak imperative opener, leading directly with the action the searcher wants; (2) "your business" → "your UK business" — adds geographic qualifier for UK-specific query matching; (3) "criteria" → "evaluation criteria" — more specific, aligns with the actual buyer intent (evaluating suppliers) and adds 11 chars to use SERP real estate |
+| 3 | learn.json | when-to-hire-an-ai-consultant | desc | "Not sure if you need an AI consultant? Here are 7 clear signs it's time to bring in expert help — with guidance on timing. Book a free call." (140) | "Not sure if you need an AI consultant? Here are 7 clear signs it's time to bring in expert help — with UK guidance on timing and budget. Book a free call." (154) | Added "UK" before "guidance" (geographic qualifier, +3 chars) and "and budget" before the period (addresses the second-most common buyer concern — cost — alongside timing, +11 chars). Total +14 chars. Budget guidance is a top intent signal for "when to hire" queries: buyers who are timing a hire are simultaneously scoping the budget, so surfacing both in the snippet improves relevance matching |
+| 4 | learn.json | what-does-an-ai-consultant-do | desc | "Learn what an AI consultant does day-to-day — strategy, delivery oversight, and team training. Practical guide for UK buyers. Book a free call." (143) | "Learn what an AI consultant does day-to-day — strategy, delivery oversight, and team training. Practical guide for UK buyers. Fixed fee. Book a free call." (154) | Added "Fixed fee." before the CTA (+11 chars). This learn page targets buyer-intent queries ("what does an AI consultant do") — buyers researching roles are often simultaneously evaluating whether to hire. Adding the pricing certainty signal at the snippet level encourages qualified clicks from cost-conscious mid-market buyers who are comparing engagement models |
+| 5 | what-we-do.json | ai-training | desc | "Hands-on AI training for UK teams. Measurable productivity gains in 4 weeks. Executive, management and practitioner cohorts. Book a free call." (142) | "Hands-on agentic AI training for UK teams. Measurable productivity gains in 4 weeks. Executive, management and practitioner cohorts. Book a free call." (150) | Added "agentic" before "AI training" (+8 chars). "Agentic AI training" is the primary keyword for this page (per site-wide keyword strategy) and the site's positioning anchor. Its absence from the description was a consistency gap — every other service page description opens with "agentic AI" or "Agentic AI". Adding it ensures description-to-title keyword consistency and improves relevance scoring for "agentic AI training UK" queries |
+| 6 | what-we-do.json | generative-ai | desc | "RAG systems, LLM cost optimisation, and content pipelines for UK businesses. Cut LLM spend by 95%. Pilots live in 6–10 weeks. Book a free call." (143) | "RAG systems, LLM cost optimisation, and content pipelines for UK businesses. Cut LLM spend by 95%. Pilots live in 6–10 weeks. Fixed fee. Book a free call." (154) | Added "Fixed fee." before the CTA (+11 chars). The generative AI service page targets buyers comparing LLM consultancies — most of which charge open-ended day rates. Adding "Fixed fee." as a differentiating signal at the snippet level is the single highest-leverage change for qualified-lead CTR on this page. Consistent with how every other service page description now carries the fixed-fee signal |
+| 7 | what-we-do.json | ai-automation | desc | "Automate complex workflows with agentic AI. UK experts in document processing, RPA replacement, and end-to-end orchestration. Book a free call." (143) | "Automate complex workflows with agentic AI. UK experts in document processing, RPA replacement, and end-to-end orchestration. Fixed fee. Book a free call." (154) | Same rationale as generative-ai: added "Fixed fee." (+11 chars). The ai-automation page targets buyers comparing RPA and workflow automation vendors, many of whom charge per-process or per-hour. Fixed-fee certainty is the primary differentiator for this audience. This was the last service page description without the signal |
+| 8 | locations.json | bristol | desc | "Agentic AI consultants in Bristol. Aerospace, cleantech, and creative sector specialists. Fixed-fee diagnostic from £6,500. Book a free call." (141) | "Agentic AI consultants in Bristol. Aerospace, cleantech, and creative sector specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (153) | Added "AI roadmap in 3 weeks." outcome hook (+13 chars net, after removing "diagnostic" from "Fixed-fee diagnostic"). The Bristol title already carries "Deep Tech AI, Fixed Fee" — adding the timeframe to the description creates title-to-meta message consistency (title signals what, description signals when). "3 weeks" is the concrete time-to-value promise used on the highest-performing location titles; surfacing it in the description reinforces it for searchers who read the snippet before clicking |
+| 9 | locations.json | reading | desc | "Agentic AI consultants in the Thames Valley. Enterprise tech, pharma, and SaaS specialists. Fixed-fee diagnostic from £6,500. Book a free call." (143) | "Agentic AI consultants in the Thames Valley. Enterprise tech, pharma, and SaaS specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (155) | Same pattern as Bristol: added "AI roadmap in 3 weeks." and removed "diagnostic" (+12 chars net). The Reading title carries "3-Week Roadmap, Fixed Fee" — restating the timeframe in the description creates full title-to-meta consistency. Enterprise tech and pharma buyers in the Thames Valley corridor are outcome-focused; the roadmap timeframe is the primary qualifying hook |
+| 10 | locations.json | norfolk | desc | "Agentic AI consultants in Norfolk. Insurance, agriculture, and offshore energy specialists. Fixed-fee diagnostic from £6,500. Book a free call." (143) | "Agentic AI consultants in Norfolk. Insurance, agriculture, and offshore energy specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (155) | Same pattern as Bristol and Reading: added "AI roadmap in 3 weeks." and removed "diagnostic" (+12 chars net). Norfolk's insurance cluster (Aviva HQ in Norwich) and offshore energy buyers are risk-averse and outcome-focused — the concrete "3 weeks" timeframe reduces perceived delivery uncertainty, which is the primary objection for regulated-sector buyers |
+
+### Skipped / no change needed
+
+- All other pages in the 5 data files: either within acceptable range or already at ceiling from prior runs
+- Insights pages: all within 50–60 chars title, ≤155 chars desc from prior runs
+- About/contact/results standalone pages: optimised in prior runs
+- `benefits-of-hiring-an-ai-consultant` (142 chars): only +3-char improvement available (fix duplicate "faster" → "quicker"); deferred to next run if no higher-impact candidates emerge
+- No title changes this run: all titles already within 30–60 chars from prior runs
+- No slug/URL changes
+
+### Hard Rule Violations
+- Pre-edit: 0
+- Post-edit: 0 (all titles 30–60 chars, all descs ≤155 chars)
+
+### Duplicate Title Check
+All 78 data-file titles verified unique after edits. No duplicate titles introduced.
+
+### Fixed-Fee Signal Audit After Run 25
+The "Fixed fee." / "Fixed-fee from £6,500." signal is now present in all service page descriptions:
+- generative-ai — cleared ✓ (was missing)
+- ai-automation — cleared ✓ (was missing)
+- ai-training — received "agentic" keyword ✓
+- All other what-we-do pages: already carried the signal from prior runs
+
+Location page "Fixed-fee diagnostic" → "AI roadmap in 3 weeks. Fixed-fee" pattern now applied to:
+- bristol ✓, reading ✓, norfolk ✓ (this run)
+- kent ✓, surrey ✓ (Run 24)
+- Remaining with "diagnostic": leeds (144 chars), leicester (144 chars), manchester (146 chars) — all borderline; next run candidates
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/learn/freelance-ai-consultant/
+- https://agenticai.associates/learn/how-to-choose-an-ai-consultant/
+- https://agenticai.associates/learn/when-to-hire-an-ai-consultant/
+- https://agenticai.associates/learn/what-does-an-ai-consultant-do/
+- https://agenticai.associates/what-we-do/ai-training/
+- https://agenticai.associates/what-we-do/generative-ai/
+- https://agenticai.associates/what-we-do/ai-automation/
+- https://agenticai.associates/locations/bristol/
+- https://agenticai.associates/locations/reading/
+- https://agenticai.associates/locations/norfolk/
+
+### Recommendations for Run 26
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed. Submit `https://agenticai.associates/sitemap-index.xml` to GSC manually.
+- **CF AI-Scrapers toggle OFF** (critical): CF → agenticai.associates → Security → Bots → Super Bot Fight Mode → AI Scrapers and Crawlers: OFF.
+- **Remaining location pages with "diagnostic"**: leeds (144), leicester (144), manchester (146) — all candidates for the "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern swap next run.
+- **benefits-of-hiring-an-ai-consultant** (142 chars): Fix duplicate "faster" repetition ("faster ROI, lower risk, and faster time to value" → "faster ROI, lower risk, and quicker time to value") + change "business" to "enterprise" for ICP signal. Net +3 chars to 145. Small improvement but fixes a copywriting quality issue.
+- **ai-consultant-career-path** (144 chars): Just 1 char below 145 threshold — could add "UK" qualifier or "2026" to push to ≥150.
+- **what-does-an-ai-consultant-do desc** (now 154 chars): Already optimised this run — no action.
+- **Location pages for essex, buckinghamshire, portsmouth, ealing**: Still getting impressions per CLAUDE.md — consider adding pages in a future batch.
+- **Backlink gap**: Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created. Both remain the highest-leverage outstanding actions.
+- **Year anchors**: Review all `(2026)` titles Dec 2026 / Jan 2027 to update to `(2027)`.
+
+---
+
 ## Run 24 — 2026-07-05
 
 **Mode:** Pattern-based (no .env / no API credentials)
