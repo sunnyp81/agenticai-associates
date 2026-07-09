@@ -1,0 +1,6 @@
+{
+  "status": "skipped",
+  "reason": "No .env file found in repo root. GSC_CLIENT_EMAIL and GSC_PRIVATE_KEY not available.",
+  "date": "2026-07-09",
+  "run": 26
+}

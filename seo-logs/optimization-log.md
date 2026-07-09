@@ -2,6 +2,73 @@
 
 ---
 
+## Run 26 — 2026-07-09
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 10 (7 in `src/data/learn.json`, 3 in `src/data/locations.json`)
+
+### Changes applied
+
+| # | File | Slug | Field | Before (chars) | After (chars) | Rationale |
+|---|------|------|-------|---------------|---------------|-----------|
+| 1 | locations.json | leeds | desc | "Leeds agentic AI consultants. Fixed-fee diagnostic from £6,500, working system in 90 days. Finance, legal and digital sectors. Book a free call." (144) | "Agentic AI consultants in Leeds. Finance, legal, healthtech and digital sector specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (155) | Cleared the last "diagnostic" from the Leeds description and applied the "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern used on bristol/reading/norfolk/kent/surrey. Also reordered to "Agentic AI consultants in [City]." opener (ICP-first, keyword-first), added "healthtech" to the sector list (strengthens Leeds healthcare/medtech angle), and dropped the "90 days" timeframe (which the title already carries) in favour of the concrete 3-week roadmap hook. Net +11 chars. |
+| 2 | locations.json | leicester | desc | "Agentic AI consultants in Leicester. Manufacturing, food & drink, and logistics specialists. Fixed-fee diagnostic from £6,500. Book a free call." (144) | "Agentic AI consultants in Leicester. Manufacturing, food & drink, and logistics specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (155) | Straightforward pattern swap: removed "diagnostic" and inserted "AI roadmap in 3 weeks." (+11 chars). Sector list unchanged — manufacturing/food & drink/logistics is the correct ICP for Leicester. Aligns with the standard location-page format now applied across 8 of 19 city pages. |
+| 3 | locations.json | manchester | desc | "Manchester agentic AI consultants. Fixed-fee diagnostic, working AI system live in 90 days. Media, e-commerce and manufacturing. Book a free call." (146) | "Manchester agentic AI consultants. Media, e-commerce and manufacturing sector specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (153) | Removed "diagnostic, working AI system live in 90 days" and restructured around the "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern (+7 chars net). Added "sector specialists" to make the sector list a claim rather than a bare list, improving readability and ICP qualification signal in the SERP snippet. |
+| 4 | learn.json | benefits-of-hiring-an-ai-consultant | desc | "7 proven benefits of hiring an AI consultant — faster ROI, lower risk, and faster time to value. Backed by UK business case studies. Read now." (142) | "7 proven benefits of hiring an AI consultant — faster ROI, lower risk, and quicker time to value. Backed by UK enterprise case studies. Read now." (145) | Two micro-fixes: (1) "faster time to value" → "quicker time to value" — removes the duplicate "faster" that appeared twice in the same sentence; (2) "business" → "enterprise" — ICP signal upgrade. "UK enterprise case studies" better matches the mid-market B2B buyer persona (£100M–£500M) than "UK business case studies". Net +3 chars. |
+| 5 | learn.json | ai-consultant-career-path | desc | "Map your AI consulting career from entry-level to partner. Covers progression, timelines, salaries, and how to accelerate your growth. Read now." (144) | "Map your AI consulting career path from entry-level to partner. Covers UK progression, timelines, salaries, and how to accelerate your growth. Read now." (152) | Added "path" after "career" (+5 chars) to echo the primary keyword ("AI consultant career path") — currently absent from the description despite appearing in both title and slug, a missed relevance signal. Added "UK" before "progression" (+3 chars) for geographic qualifier, aligning with the UK-specific salary data in the article. Net +8 chars. |
+| 6 | learn.json | ai-consultant-skills | desc | "The essential AI consultant skills for 2026 — technical, business, and soft skills — with practical steps to develop each one. UK guide. Read now." (146) | "The essential AI consultant skills for 2026 — technical, business, and soft skills — with proven steps to develop each one. Actionable UK guide. Read now." (154) | Replaced "practical" with "proven" (+0 chars, stronger power word) and expanded "UK guide." to "Actionable UK guide." (+10 chars). "Actionable" is a higher-intent modifier than the generic "UK guide" that ends many learn pages; it signals to buyers that the article contains implementable steps, not just theory — improving self-selection for the high-intent query segment. |
+| 7 | learn.json | how-to-choose-an-ai-consultant | desc | "How to pick the right AI consultant for your UK business. Covers evaluation criteria, red flags, interview questions, and proposal review. Read now." (148) | "How to choose the right AI consultant for your UK business — red flags, evaluation criteria, interview questions, and contract review checklist. Read now." (154) | Three changes: (1) "pick" → "choose" — matches the primary keyword in slug/title ("how to choose"); (2) reordered to lead with "red flags" — the most emotionally resonant buying-decision signal, improving SERP click appeal; (3) "proposal review" → "contract review checklist" — more specific and higher-stakes, better matches the intent of buyers in final selection stages. Net +6 chars. |
+| 8 | learn.json | agentic-ai-vs-chatbots | desc | "Chatbots answer questions. AI agents take action. 5 key differences and which to deploy first — practical guide for UK enterprise buyers. Read now." (147) | "Chatbots answer questions. Agentic AI agents complete tasks end-to-end. 5 differences, which to deploy first — guide for UK enterprise buyers. Read now." (152) | Replaced "AI agents take action" with "Agentic AI agents complete tasks end-to-end" — introduces the primary keyword "Agentic AI" (previously absent from the description), adds the "end-to-end" qualifier that distinguishes agents from chatbots, and drops the weak "practical" modifier to make room. Net +5 chars. |
+| 9 | learn.json | in-house-ai-team-vs-consultancy | desc | "Should you build in-house AI or hire a consultancy? Compare cost (£600k+ vs day rates), speed, and risk in our free guide for UK leaders. Read now." (147) | "Build in-house AI or hire a consultancy? Compare full cost (£600k+ vs day rates), speed and risk — with a clear decision framework. Free UK guide. Read now." (155) | Three changes: (1) Dropped the question opener "Should you" — leads directly with the comparison action; (2) "cost" → "full cost" (+5 chars) — "full cost" is a stronger buying signal (implies TCO, not just day rates); (3) restructured to end with "Free UK guide." to parallel the pattern on agentic-ai-vs-generative-ai. Net +8 chars. |
+| 10 | learn.json | agentic-ai-vs-generative-ai | desc | "Generative AI creates content. Agentic AI does work. Learn the real distinction and decide what to build first — free guide for UK buyers. Read now." (148) | "Generative AI creates content. Agentic AI executes work. The key distinctions explained — and how to decide what to build first. Free UK guide. Read now." (153) | Replaced "does work" with "executes work" (+1 char, more precise verb) and restructured the middle clause from "Learn the real distinction and decide what to build first — free guide for UK buyers." to "The key distinctions explained — and how to decide what to build first. Free UK guide." — removes the weak imperative "Learn" opener and leads with a benefit statement ("The key distinctions explained"), which performs better as a snippet preview. Net +5 chars. |
+
+### Skipped / no change needed
+
+- All other pages in the 5 data files: either at ceiling (≥150 chars) or already optimised from prior runs
+- No title changes this run: all titles already within 30–60 chars from prior runs
+- No slug/URL changes
+- `build-vs-buy-ai-agents` (154 chars): already near ceiling; no material improvement available
+
+### Hard Rule Violations
+- Pre-edit: 0
+- Post-edit: 0 (all titles 30–60 chars, all descs ≤155 chars)
+
+### Duplicate Title Check
+All data-file titles verified unique after edits. No duplicate titles introduced.
+
+### Fixed-Fee / "AI Roadmap in 3 Weeks" Pattern Audit After Run 26
+Location pages now carrying "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern:
+- bristol ✓, reading ✓, norfolk ✓ (Run 25)
+- kent ✓, surrey ✓ (Run 24)
+- leeds ✓, leicester ✓, manchester ✓ (this run)
+- Remaining pages: bedfordshire, wokingham, kensington, salford, sheffield, edinburgh, birmingham, glasgow, cambridge, cardiff, wiltshire — check descriptions in Run 27
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/locations/leeds/
+- https://agenticai.associates/locations/leicester/
+- https://agenticai.associates/locations/manchester/
+- https://agenticai.associates/learn/benefits-of-hiring-an-ai-consultant/
+- https://agenticai.associates/learn/ai-consultant-career-path/
+- https://agenticai.associates/learn/ai-consultant-skills/
+- https://agenticai.associates/learn/how-to-choose-an-ai-consultant/
+- https://agenticai.associates/learn/agentic-ai-vs-chatbots/
+- https://agenticai.associates/learn/in-house-ai-team-vs-consultancy/
+- https://agenticai.associates/learn/agentic-ai-vs-generative-ai/
+
+### Recommendations for Run 27
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed. Submit `https://agenticai.associates/sitemap-index.xml` to GSC manually.
+- **CF AI-Scrapers toggle OFF** (critical): CF → agenticai.associates → Security → Bots → Super Bot Fight Mode → AI Scrapers and Crawlers: OFF.
+- **Remaining location pages**: Check bedfordshire, wokingham, kensington, salford, sheffield, edinburgh, birmingham, glasgow, cambridge, cardiff, wiltshire for "diagnostic" in descriptions — apply "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern where present.
+- **Backlink gap**: Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created. Both remain the highest-leverage outstanding actions.
+- **Year anchors**: Review all `(2026)` titles Dec 2026 / Jan 2027 to update to `(2027)`.
+
+---
+
 ## Run 25 — 2026-07-07
 
 **Mode:** Pattern-based (no .env / no API credentials)
