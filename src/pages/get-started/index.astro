@@ -91,7 +91,7 @@ const schemas = [assessmentSchema, offerCatalogRef, ...(faqSchema ? [faqSchema] 
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact/" class="btn-glow">
+          <a href="/contact/" id="diagnostic-cta-primary" class="btn-glow">
             Book a Fit Call
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -138,3 +138,17 @@ const schemas = [assessmentSchema, offerCatalogRef, ...(faqSchema ? [faqSchema] 
     buttonHref="/contact/"
   />
 </BaseLayout>
+
+<script>
+  // GA4 event: fires when the Phase 1 Diagnostic CTA is clicked (get-started page)
+  const diagnosticCta = document.getElementById('diagnostic-cta-primary');
+  diagnosticCta?.addEventListener('click', () => {
+    const gtag = (window as any).gtag;
+    if (typeof gtag === 'function') {
+      gtag('event', 'diagnostic_cta_click', {
+        event_category: 'engagement',
+        event_label: 'phase1_diagnostic_get_started_page',
+      });
+    }
+  });
+</script>
