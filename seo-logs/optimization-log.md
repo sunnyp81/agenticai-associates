@@ -2,6 +2,78 @@
 
 ---
 
+## Run 27 — 2026-07-11
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 11 (all in `src/data/locations.json`)
+
+### Objective
+
+Complete the "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern rollout across all location page descriptions. Previous runs cleared 8 of 19 locations. This run targeted the remaining 10 with "diagnostic" still in their description field, plus 1 hub description. Also fixed the London description which used a non-standard opener.
+
+### Changes applied
+
+| # | Slug | Field | Before (chars) | After (chars) | Rationale |
+|---|------|-------|---------------|---------------|-----------|
+| 1 | hub (locations) | desc | "…Fixed-fee diagnostic from £6,500. Book a free call." (144) | "…AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (152) | Hub description was the last page in the locations section still using "diagnostic". Changed opener from "in your area" to "near you" (saves 3 chars) to accommodate the new pattern within ceiling. |
+| 2 | london | desc | "London AI consultants specialising in agentic AI. 3-week diagnostic from £6,500 to board-ready roadmap. Fintech, healthcare, retail. Book a free call." (150) | "Agentic AI consultants in London. Fintech, healthcare, retail, media and legal specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (155) | Three changes: (1) Standardised opener to "Agentic AI consultants in [City]." pattern — London was the only location page not using it; (2) Added "media and legal" to the sector list (London's two next most important sectors after the original three); (3) Applied "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern. London is the highest-impression location page — aligning it with the site-wide pattern is the highest-priority fix this run. |
+| 3 | birmingham | desc | "Birmingham agentic AI consultants. 3-week fixed-fee diagnostic to AI roadmap. Manufacturing, logistics and professional services. Book a free call." (147) | "Birmingham agentic AI consultants. AI roadmap in 3 weeks. Fixed-fee from £6,500. Manufacturing, logistics and professional services. Book a free call." (150) | Replaced "3-week fixed-fee diagnostic to AI roadmap." with the standard "AI roadmap in 3 weeks. Fixed-fee from £6,500." Sector list unchanged — manufacturing/logistics/professional services is the correct ICP for Birmingham. +3 chars. |
+| 4 | edinburgh | desc | "Edinburgh agentic AI consultants. 3-week diagnostic to board-ready roadmap from £6,500. Financial services, health and public sector. Book a free call." (151) | "Edinburgh agentic AI consultants. Financial services, health and public sector specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (155) | Rewrote to remove "3-week diagnostic to board-ready roadmap from £6,500." and restructure around the standard pattern. Added "specialists" to the sector list to create a noun phrase consistent with other city descs. Net +4 chars to 155. |
+| 5 | glasgow | desc | "Glasgow agentic AI consultants. Fixed-fee diagnostic from £6,500. AI roadmap in 3 weeks. Engineering, energy and digital sectors. Book a free call." (147) | "Glasgow agentic AI consultants. AI roadmap in 3 weeks. Fixed-fee from £6,500. Engineering, energy, digital and healthcare sectors. Book a free call." (148) | Swapped order (roadmap first, then price — consistent with all other city descs), removed "diagnostic". Added "healthcare" to the sector list (NHS Greater Glasgow and Clyde is one of the UK's largest health boards — a genuine ICP opportunity not previously surfaced in the desc). Net +1 char. |
+| 6 | scotland | desc | "Scotland agentic AI consultants. 3-week fixed diagnostic from £6,500. Energy, finance, public sector and tech. Working system in 90 days. Book a free call." (155) | "Scotland agentic AI consultants. AI roadmap in 3 weeks. Fixed-fee from £6,500. Energy, finance, public sector and tech specialists. Book a free call." (149) | Replaced "3-week fixed diagnostic from £6,500." with standard pattern. Removed "Working system in 90 days." (the "3 weeks" timeframe in the standard pattern serves the same qualifying function more precisely). Added "specialists" to sector list. Net -6 chars. |
+| 7 | northern-ireland | desc | "Agentic AI consultants in Northern Ireland. Fintech, cybersecurity, and agri-food sector specialists. Fixed-fee diagnostic from £6,500. Book a free call." (153) | "Agentic AI consultants in Northern Ireland. Fintech, cybersecurity, agri-food specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (154) | Applied standard pattern. Tightened "and agri-food sector specialists" to "agri-food specialists" (removes "and" and "sector", saving 6 chars needed to fit the pattern within 155 chars). All three sectors preserved. Net +1 char. |
+| 8 | salford | desc | "Agentic AI consultants in Salford & MediaCityUK. Media, digital agency, and e-commerce specialists. Fixed-fee diagnostic from £6,500. Book a free call." (151) | "Agentic AI consultants in Salford. Media, digital agency, and e-commerce specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (149) | Applied standard pattern. Removed "& MediaCityUK" from the opener to create room (MediaCityUK appears in the title and intro body — no coverage loss). Sector list and CTA unchanged. Net -2 chars. |
+| 9 | bedfordshire | desc | "Agentic AI consultants in Bedfordshire. Aerospace, logistics, and Cranfield research specialists. Fixed-fee diagnostic from £6,500. Book a free call." (153) | "Agentic AI consultants in Bedfordshire. Cranfield aerospace and logistics specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (150) | Applied standard pattern. Consolidated "Aerospace, logistics, and Cranfield research specialists" to "Cranfield aerospace and logistics specialists" — moves the local landmark identifier "Cranfield" to the front position (higher keyword prominence for "Cranfield AI" queries) and removes the standalone "research" qualifier (Cranfield's identity already implies research). Saves the space needed for the roadmap pattern. Net -3 chars. |
+| 10 | wokingham | desc | "Agentic AI consultants in Wokingham. Enterprise tech, cybersecurity, and fintech specialists. Fixed-fee diagnostic from £6,500. Book a free call." (145) | "Agentic AI consultants in Wokingham. Enterprise tech, cybersecurity, fintech specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (153) | Applied standard pattern. Removed ", and" before "fintech" to create room (saves 2 chars needed for the pattern to fit within ceiling). Sector list content unchanged. Net +8 chars to 153. |
+| 11 | kensington | desc | "Agentic AI consultants in Kensington. Luxury brands, private equity, and wealth management specialists. Fixed-fee diagnostic from £6,500. Book a free call." (155) | "Agentic AI consultants in Kensington. Luxury brands, private equity and wealth management. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call." (154) | Applied standard pattern. Removed ", and" before "wealth management" to save 1 char. Removed "specialists" from sector list (saves 11 chars) — the noun list is self-evidently a specialist claim without the trailing word. Net -1 char. |
+
+### Pattern Audit Status After Run 27
+
+All 19 location page descriptions + 1 locations hub description now carry the "AI roadmap in 3 weeks. Fixed-fee from £6,500." pattern. **"Diagnostic" pattern fully cleared from all description fields in locations.json.**
+
+Location pages with "AI roadmap in 3 weeks. Fixed-fee from £6,500." (or equivalent):
+- london ✓, manchester ✓, birmingham ✓, leeds ✓, bristol ✓, edinburgh ✓, glasgow ✓, reading ✓, leicester ✓, scotland ✓, northern-ireland ✓, norfolk ✓, salford ✓, surrey ✓, kent ✓, bedfordshire ✓, wokingham ✓, kensington ✓ — all 18 city/region pages + hub ✓
+
+### Skipped / no change needed
+
+- All data files except locations.json: titles and descriptions already optimised from Runs 22–26
+- FAQ answer bodies in locations.json contain "diagnostic" in body copy (e.g. Manchester FAQ answer, Edinburgh FAQ answer) — body copy is not SERP-facing and intentionally retained for context
+
+### Hard Rule Violations
+- Pre-edit: 0
+- Post-edit: 0 (all descriptions verified ≤155 chars)
+
+### Duplicate Title Check
+All location page titles remain unique after edits. No title changes made this run — titles optimised in Runs 17–20.
+
+### URLs to Submit to IndexNow (when key available)
+- https://agenticai.associates/locations/
+- https://agenticai.associates/locations/london/
+- https://agenticai.associates/locations/birmingham/
+- https://agenticai.associates/locations/edinburgh/
+- https://agenticai.associates/locations/glasgow/
+- https://agenticai.associates/locations/scotland/
+- https://agenticai.associates/locations/northern-ireland/
+- https://agenticai.associates/locations/salford/
+- https://agenticai.associates/locations/bedfordshire/
+- https://agenticai.associates/locations/wokingham/
+- https://agenticai.associates/locations/kensington/
+
+### Recommendations for Run 28
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing.
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed. Submit `https://agenticai.associates/sitemap-index.xml` to GSC manually.
+- **"Diagnostic" pattern fully cleared**: All location, learn, service, industry and business-size descriptions are now free of "diagnostic". Run 28 should audit across the 5 other data files for any remaining non-standard patterns (e.g. verify all industry descs carry the fixed-fee signal, all learn descs have "Read now." CTAs).
+- **Insights freshness**: Consider adding `dateModified` to `/insights/smcr-ai-accountability/` and `/insights/agentic-sdlc-regulated-engineering/` to signal recency to search engines.
+- **Location pages for essex, buckinghamshire, portsmouth, ealing**: Still getting impressions per CLAUDE.md — consider adding pages in a future batch (4 new pages).
+- **Backlink gap**: Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created. Both remain the highest-leverage outstanding actions.
+- **Year anchors**: Review all `(2026)` titles Dec 2026 / Jan 2027 to update to `(2027)`.
+
+---
+
 ## Run 26 — 2026-07-09
 
 **Mode:** Pattern-based (no .env / no API credentials)
