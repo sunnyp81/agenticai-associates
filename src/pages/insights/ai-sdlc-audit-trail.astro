@@ -6,6 +6,7 @@ const slug = 'ai-sdlc-audit-trail';
 const title = 'AI SDLC Audit Trail: 12 Fields the FCA Will Ask About';
 const description = 'The 12 audit-trail fields FCA firms need when AI agents touch the software pipeline. Free reference schema for regulated UK engineering teams. Read now.';
 const datePublished = '2026-04-30';
+const dateModified = '2026-07-15';
 const url = `${siteConfig.url}/insights/${slug}/`;
 
 const fields = [
@@ -39,7 +40,7 @@ const articleSchema = {
   headline: title,
   description,
   datePublished,
-  dateModified: datePublished,
+  dateModified,
   author: { '@id': `${siteConfig.url}/#founder` },
   publisher: { '@id': `${siteConfig.url}/#organization` },
   mainEntityOfPage: url,

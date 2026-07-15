@@ -6,6 +6,7 @@ const slug = 'agent-studio-build-vs-buy';
 const title = 'Agent Studio: Build vs Buy for Regulated Firms (2026)';
 const description = 'Compare 7 agent platforms on 12 criteria — LangGraph, Bedrock, Copilot Studio, Vertex AI and more. The scoring matrix for FCA-regulated UK firms. Read now.';
 const datePublished = '2026-04-30';
+const dateModified = '2026-07-15';
 const url = `${siteConfig.url}/insights/${slug}/`;
 
 const platforms = [
@@ -75,7 +76,7 @@ const articleSchema = {
   headline: title,
   description,
   datePublished,
-  dateModified: datePublished,
+  dateModified,
   author: { '@id': `${siteConfig.url}/#founder` },
   publisher: { '@id': `${siteConfig.url}/#organization` },
   mainEntityOfPage: url,

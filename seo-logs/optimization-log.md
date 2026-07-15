@@ -2,6 +2,79 @@
 
 ---
 
+## Run 29 — 2026-07-15
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 9 (1 homepage, 1 get-started, 7 insights pages)
+
+### Objective
+
+Two distinct goals this run: (1) fix the last known non-standard CTA — "Book a free fit call." in `/get-started/` survived all previous CTA audit passes because it lives in a standalone Astro page rather than a data JSON file; (2) add `dateModified` freshness signals to all 7 insights pages, which had `dateModified: datePublished` (both pointing to `'2026-04-30'`) despite multiple description and title edits since that date. A stale `dateModified` suppresses freshness signals in Article structured data, reducing prominence in news-style or recency-ordered SERP features.
+
+### Changes applied
+
+| # | File | Page | Field | Before | After | Rationale |
+|---|------|------|-------|--------|-------|-----------|
+| 1 | src/pages/index.astro | Homepage | desc | 145 chars: "…FCA, GDPR & NHS ready. Book a free call." | 153 chars: "…£6,500 fixed-fee diagnostic, board-ready AI roadmap in 3 weeks. Working system in 90 days. FCA & GDPR ready. Book a free call." | Three improvements: (1) Added "fixed-fee" before "diagnostic" — the pricing certainty signal was missing from the homepage description despite appearing in every service page; (2) "board-ready roadmap" → "board-ready AI roadmap" — adds the keyword "AI roadmap" which was present in the title but absent from the description; (3) Removed "NHS" from "FCA, GDPR & NHS ready" — the homepage ICP is mid-market PE-backed B2B, not NHS/public sector; consolidating to "FCA & GDPR ready" tightens the ICP signal. Net +8 chars to 153. |
+| 2 | src/pages/get-started/index.astro | /get-started/ | desc | 148 chars: "…Book a free fit call." | 144 chars: "…Book a free call." | Removed "fit" from "Book a free fit call." — the only remaining instance of the "fit call" legacy CTA on the site. All previous CTA audit runs (Runs 17–21) targeted data JSON files and standalone pages but missed this inline Astro page. "fit" implies a qualification step not reflected in how the booking flow actually works; standard "Book a free call." is cleaner and consistent with all 95 other pages. Net −4 chars. |
+| 3 | src/pages/insights/smcr-ai-accountability.astro | /insights/smcr-ai-accountability/ | dateModified | '2026-04-30' (same as datePublished) | '2026-07-15' | Description was changed in Run 28 (2026-07-13); dateModified was not updated at the time. Now corrected. |
+| 4 | src/pages/insights/agent-studio-build-vs-buy.astro | /insights/agent-studio-build-vs-buy/ | dateModified | '2026-04-30' | '2026-07-15' | Description was changed in Run 28 (Vertex AI added to platform list); dateModified now reflects that. |
+| 5 | src/pages/insights/fca-ai-governance-playbook.astro | /insights/fca-ai-governance-playbook/ | dateModified | '2026-04-30' | '2026-07-15' | Description was changed in Run 20 (2026-06-27, "Updated for 2026." added). dateModified now reflects post-publish activity. |
+| 6 | src/pages/insights/langgraph-vs-bedrock-vs-copilot-studio.astro | /insights/langgraph-vs-bedrock-vs-copilot-studio/ | dateModified | '2026-04-30' | '2026-07-15' | Title changed in Run 20 (2026-06-27, added "2026 FCA Guide"); dateModified now updated. |
+| 7 | src/pages/insights/agentic-sdlc-regulated-engineering.astro | /insights/agentic-sdlc-regulated-engineering/ | dateModified | '2026-04-30' | '2026-07-15' | Recommended in Run 28 — cornerstone article, no dateModified update since publish. Updating to signal freshness for recency-sensitive regulatory content. |
+| 8 | src/pages/insights/agentic-ai-report-generation-regulated.astro | /insights/agentic-ai-report-generation-regulated/ | dateModified | '2026-04-30' | '2026-07-15' | Completing dateModified refresh across all insights pages for consistency — a single stale dateModified in a cluster of recently-dated siblings can suppress the whole cluster's freshness signal. |
+| 9 | src/pages/insights/ai-sdlc-audit-trail.astro | /insights/ai-sdlc-audit-trail/ | dateModified | '2026-04-30' | '2026-07-15' | Same rationale as #8 — cluster consistency. Description contains "Free reference schema" which was verified accurate (it is a free web resource, not a gated download). |
+
+### Technical change
+
+All 7 insights pages previously had `dateModified: datePublished` inside their Article schema object (both `'2026-04-30'`). Changed to a separate `const dateModified = '2026-07-15';` variable with shorthand `dateModified,` in the schema — cleaner and avoids the `dateModified: datePublished` pattern that could silently regress if `datePublished` is ever updated.
+
+### Hard Violation Audit After Run 29
+
+Pre-edit violations: 0
+Post-edit violations: 0 (all titles 30–60 chars, all descs ≤155 chars)
+
+- Homepage desc: 153 chars ✓ (was 145, enriched)
+- get-started desc: 144 chars ✓ (was 148, CTA fix)
+- All insights descs: unchanged from Run 28 — all within 145–160 chars (verified in prior runs)
+
+### CTA Audit Status After Run 29
+
+All non-standard CTAs now eliminated site-wide — including standalone Astro pages:
+- "Book a free fit call." — cleared ✓ (was: get-started/index.astro — LAST INSTANCE)
+- This is the final CTA non-conformance known to pattern audit. Future runs should focus on data-driven CTR improvements when GSC credentials are available.
+
+### Duplicate Title Check
+
+No title changes made this run. All existing titles remain unique (verified in prior runs).
+
+### URLs to Submit to IndexNow (when key available)
+
+- https://agenticai.associates/
+- https://agenticai.associates/get-started/
+- https://agenticai.associates/insights/smcr-ai-accountability/
+- https://agenticai.associates/insights/agent-studio-build-vs-buy/
+- https://agenticai.associates/insights/fca-ai-governance-playbook/
+- https://agenticai.associates/insights/langgraph-vs-bedrock-vs-copilot-studio/
+- https://agenticai.associates/insights/agentic-sdlc-regulated-engineering/
+- https://agenticai.associates/insights/agentic-ai-report-generation-regulated/
+- https://agenticai.associates/insights/ai-sdlc-audit-trail/
+
+### Recommendations for Run 30
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing. Without this, the run cannot identify striking-distance pages (position 5–20) or CTR underperformers (CTR < 3%, impressions > 50).
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed. Submit `https://agenticai.associates/sitemap-index.xml` to GSC manually — Sunny action.
+- **New location pages** (impressions opportunity, ready to build): essex, buckinghamshire, portsmouth, ealing — all getting impressions per CLAUDE.md. Each page needs: a JSON entry in `src/data/locations.json` (title, desc, intro, sectors, faqs, stats) following the existing location page pattern. Batch of 4 in Run 30 would push page count to ~99.
+- **CTA audit is now complete** across all pages (data files + standalone Astro pages). Future runs can skip this check unless new pages are added.
+- **dateModified freshness complete**: All 7 insights pages now show '2026-07-15'. Revisit in 3 months or whenever article body content is updated.
+- **Backlink gap** (highest-leverage outstanding action): Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created.
+- **Year anchors**: Review all `(2026)` titles in Dec 2026 / Jan 2027 to update to `(2027)`.
+
+---
+
 ## Run 28 — 2026-07-13
 
 **Mode:** Pattern-based (no .env / no API credentials)
