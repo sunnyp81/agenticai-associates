@@ -94,3 +94,5 @@ agenticai.associates — UK AI consultancy site (lead gen + authority). Position
 - Consider location pages for essex, buckinghamshire, portsmouth, ealing (all getting impressions).
 - Wireless Logic case study when permission cleared; obtain Figment client list for prospect screening.
 
+
+- **Jul 17** — New `/what-we-do/finance-automation/` money-page (entryPoint) for the TOA referral partnership: targets finance-dept AI automation (invoicing, credit control, reconciliation, AP/AR reporting). Audit-first CTA (existing £6,500 diagnostic scoped to finance ops), AAA-branded, no TOA mention, ops-AI lane (Figment-safe). JSON spoke in `what-we-do.json`; wired into nav/footer/homepage grid; cross-linked from `/industries/finance/` and `/what-we-do/ai-automation/`. Build clean (96 pages). Commit `895e15b`. NOT yet deployed (Wrangler CLI + Drive CF token owed).
