@@ -93,6 +93,94 @@
       ]
     },
     {
+      "slug": "finance-automation",
+      "name": "Finance Automation",
+      "title": "AI Finance Automation UK: Invoicing & Credit Control",
+      "description": "AI automation for UK finance departments. We automate invoicing, credit control, reconciliation, and AP/AR reporting. Fixed-fee finance audit first. Book a call.",
+      "primaryKeyword": "ai finance automation uk",
+      "icon": "implementation",
+      "entryPoint": true,
+      "intro": "<p>Finance teams spend most of their week on repetitive, rules-based work: keying invoices, chasing late payers, matching payments to statements, and rebuilding the same reports every month. AI automation for finance handles that work end to end, so your team can focus on cash flow, forecasting, and control.</p><p>We start every engagement with a fixed-fee finance automation audit. It identifies which finance workflows are safe to automate, quantifies the hours and cash tied up in each, and returns a ranked plan with clear ROI before any build begins.</p>",
+      "sections": [
+        {
+          "heading": "The Finance Workflows We Automate",
+          "body": "<p>AI finance automation is the use of agentic AI and intelligent automation to run finance operations with minimal manual touch. We focus on four high-return workflows. <strong>Invoicing and accounts payable:</strong> capture supplier invoices, extract and validate line items, match to purchase orders, and route exceptions for approval. <strong>Credit control and collections:</strong> automated payment chasing, dunning sequences, and cash allocation, so debtor days fall without adding headcount. <strong>Bank and ledger reconciliation:</strong> match transactions to the ledger, flag only the true exceptions, and cut month-end from days to hours. <strong>AP and AR reporting:</strong> generate aged debtor reports, cash-flow packs, and board reports on schedule, drawn straight from your systems.</p>"
+        },
+        {
+          "heading": "How the Finance Automation Audit Works",
+          "body": "<p>The audit runs over three weeks as a fixed-fee, fixed-scope engagement. Week one: we interview your finance team and map each workflow, from invoice receipt through to cash allocation and reporting. Week two: we measure the volume, handling time, and error rate of each process and score it for automation feasibility and risk. Week three: we deliver a ranked automation roadmap with ROI per workflow and a board-ready business case.</p><p>You receive a live walkthrough and a written report. If you want the highest-value workflows built, we scope that as a separate delivery engagement based on the audit findings. There is no obligation to continue.</p>"
+        },
+        {
+          "heading": "Who This Is For",
+          "body": "<p>This suits UK finance functions carrying a heavy manual load: month-end that overruns, debtor days that keep climbing, or a small team stretched across too much transactional work. It fits organisations in <a href='/industries/finance/'>financial services</a> and any business, typically 50 to 500 people, where the finance department is a bottleneck rather than a strategic function.</p><p>You do not need technical expertise. We handle the automation and integration; your finance team stays in control of approvals, exceptions, and policy.</p>"
+        },
+        {
+          "heading": "What You Walk Away With",
+          "body": "<p>A ranked map of your finance workflows, each scored for automation feasibility and risk. The hours and cash currently tied up in manual processing, quantified per workflow. A phased automation roadmap with ROI, timeline, and the systems each build touches. And a board-ready business case that ties every recommendation to a measurable outcome: lower debtor days, faster close, or reduced processing cost.</p><p>Every automation we design keeps a clear audit trail and human sign-off on exceptions, so control and compliance are strengthened, not weakened.</p>"
+        }
+      ],
+      "features": [
+        {
+          "title": "Invoice & AP Automation",
+          "description": "Capture, validate, and match supplier invoices to purchase orders, routing only true exceptions for approval."
+        },
+        {
+          "title": "Credit Control & Collections",
+          "description": "Automated chasing, dunning sequences, and cash allocation that bring debtor days down without extra headcount."
+        },
+        {
+          "title": "Reconciliation",
+          "description": "Match bank and ledger transactions automatically, surfacing only the exceptions that need a human."
+        },
+        {
+          "title": "AP/AR Reporting",
+          "description": "Aged debtor reports, cash-flow packs, and board reports generated on schedule from your live data."
+        },
+        {
+          "title": "Controls & Audit Trail",
+          "description": "Every automated action is logged with human sign-off on exceptions, so compliance is strengthened."
+        },
+        {
+          "title": "ROI Business Case",
+          "description": "Hours and cash quantified per workflow, with a board-ready case before any build starts."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is AI finance automation?",
+          "answer": "AI finance automation uses agentic AI and intelligent automation to run finance operations with minimal manual touch. It covers invoicing and accounts payable, credit control and collections, bank reconciliation, and AP/AR reporting, keeping a full audit trail and human sign-off on exceptions."
+        },
+        {
+          "question": "How much does it cost?",
+          "answer": "Every engagement starts with a fixed-fee finance automation audit, a three-week fixed-scope diagnostic that returns a ranked roadmap with ROI per workflow. Pricing is confirmed upfront with no hidden costs. Any build work is scoped separately based on the audit findings."
+        },
+        {
+          "question": "Which finance systems does it work with?",
+          "answer": "We build to work with your existing stack, including Sage, Xero, QuickBooks, NetSuite, and Microsoft Dynamics, plus your banking and document systems. No rip and replace."
+        },
+        {
+          "question": "Is our financial data secure and compliant?",
+          "answer": "Yes. We design automations with least-privilege access, clear audit trails, and human approval on exceptions. Controls are strengthened rather than bypassed, which matters for FCA-regulated and audited firms."
+        },
+        {
+          "question": "How quickly will we see results?",
+          "answer": "The audit is three weeks to a board-ready roadmap. Once a workflow is prioritised for build, most finance teams see measurable savings within the first weeks of it going live."
+        },
+        {
+          "question": "Will this replace our finance team?",
+          "answer": "No. The goal is to remove repetitive transactional work so your team can focus on cash flow, forecasting, and control. People stay in charge of approvals, exceptions, and policy."
+        }
+      ],
+      "relatedServices": [
+        "ai-automation",
+        "agentic-ai",
+        "ai-governance"
+      ],
+      "relatedIndustries": [
+        "finance"
+      ]
+    },
+    {
       "slug": "ai-strategy",
       "name": "AI Strategy & Roadmaps",
       "title": "Agentic AI Strategy Consulting UK — Roadmap in 3 Weeks",
@@ -357,7 +445,7 @@
       "sections": [
         {
           "heading": "What AI Automation Looks Like",
-          "body": "<p>Modern intelligent automation goes beyond simple macros. Machine learning handles tasks that previously required human judgement — invoice processing, customer onboarding, data entry, regulatory filing, lead qualification, report generation.</p><p>We work with tools like UiPath, Microsoft Power Automate, and custom Python pipelines — choosing whatever fits your existing stack.</p>"
+          "body": "<p>Modern intelligent automation goes beyond simple macros. Machine learning handles tasks that previously required human judgement — invoice processing, customer onboarding, data entry, regulatory filing, lead qualification, report generation. For finance teams we package this as <a href='/what-we-do/finance-automation/'>finance automation</a> covering invoicing, credit control, reconciliation, and AP/AR reporting.</p><p>We work with tools like UiPath, Microsoft Power Automate, and custom Python pipelines — choosing whatever fits your existing stack.</p>"
         },
         {
           "heading": "How We Deliver Automation Projects",

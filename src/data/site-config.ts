@@ -32,6 +32,7 @@ export const mainNav = [
 export const footerNav = {
   whatWeDo: [
     { label: 'AI Readiness Assessment', href: '/what-we-do/ai-readiness-assessment/' },
+    { label: 'Finance Automation', href: '/what-we-do/finance-automation/' },
     { label: 'AI Strategy & Roadmaps', href: '/what-we-do/ai-strategy/' },
     { label: 'Agentic AI Systems', href: '/what-we-do/agentic-ai/' },
     { label: 'Generative AI & LLMs', href: '/what-we-do/generative-ai/' },
