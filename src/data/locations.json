@@ -1,6 +1,6 @@
 {
   "hub": {
-    "title": "Agentic AI Consultants UK — 18 Cities, Fixed Fee",
+    "title": "Agentic AI Consultants UK — 22 Cities, Fixed Fee",
     "description": "Find agentic AI consultants near you. London, Manchester, Birmingham, Scotland and more. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call.",
     "primaryKeyword": "agentic ai consultancy uk"
   },
@@ -927,6 +927,210 @@
       "relatedServices": [
         "ai-strategy",
         "generative-ai",
+        "ai-governance"
+      ]
+    },
+    {
+      "slug": "ealing",
+      "name": "AI Consultancy Ealing",
+      "title": "Agentic AI Consultants Ealing — Studio AI, Fixed Fee",
+      "description": "Agentic AI consultants in Ealing. Media, professional services and retail specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call.",
+      "primaryKeyword": "agentic ai consultant ealing",
+      "intro": "Ealing is West London's creative and commercial hub — home to the world's oldest working film studio and a thriving business community. From Ealing Studios to the retail corridors of the town centre and the professional services cluster near Ealing Broadway, businesses here are ready to harness AI for genuine competitive advantage.",
+      "areaServed": "Ealing",
+      "region": "Greater London",
+      "sections": [
+        {
+          "heading": "Ealing's Business and Creative Economy",
+          "body": "<p>Ealing punches well above its weight as a business location. The London Borough of Ealing is home to over 20,000 businesses ranging from sole traders to significant enterprises, with a particularly strong professional services sector around Ealing Broadway and Uxbridge Road. The borough's excellent transport connections — Elizabeth line, District line, and multiple mainline stations — make it highly accessible across London and the wider South East.</p><p>Ealing Studios, the world's oldest working film studio, gives the borough a cultural significance far exceeding its size. The studio's output and the creative ecosystem that has grown around it — from production companies to post-production facilities and digital agencies — creates genuine AI demand in content automation, visual effects analysis, and audience analytics. Ealing's creative sector is small but sophisticated.</p><p>The borough's diverse economy, which spans retail, healthcare, education, and logistics, means AI applications here are varied. Businesses need consultants who can bridge creative and commercial AI equally — and that's exactly our strength.</p>"
+        },
+        {
+          "heading": "AI for Ealing's Key Industries",
+          "body": "<p><strong>Media and creative:</strong> Ealing's film and media heritage creates demand for AI in content production, post-production workflow automation, and audience analytics. We help creative businesses adopt AI that accelerates production timelines without compromising the artistic quality that defines their work.</p><p><strong>Professional services:</strong> Solicitors, accountants, and consultancies across Ealing Broadway use AI for document review, client intake automation, and reporting efficiency. We guide professional services firms through AI adoption with full sensitivity to confidentiality and FCA/SRA requirements.</p><p><strong>Retail and hospitality:</strong> Ealing's retail sector — from the town centre to specialist food and beverage businesses — uses AI for demand forecasting, inventory optimisation, and personalised customer engagement. AI-powered analytics help Ealing retailers compete with larger chains on insight and agility.</p>"
+        },
+        {
+          "heading": "West London AI Consultancy",
+          "body": "<p>Our Ealing practice covers the borough and the wider West London area — including Acton, Hanwell, Southall, and Greenford. We also serve businesses across neighbouring boroughs including Brent, Hounslow, and Hillingdon. Proximity to Heathrow makes Ealing a natural base for aviation and logistics businesses seeking AI consultancy.</p><p>Ealing's strong community of independent businesses benefits from AI consultancy that respects their scale and budget constraints. Our Phase 1 Diagnostic at £6,500 is designed as a practical entry point — a board-ready AI roadmap in three weeks that gives businesses clarity before committing to larger investments.</p><p>We're familiar with Ealing's business community and understand the borough's mix of long-established firms and newer enterprises. This local knowledge informs every engagement, ensuring our recommendations account for the real constraints and opportunities businesses here face.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with creative businesses in Ealing?",
+          "answer": "Yes. We work with media companies, production houses, digital agencies, and creative businesses across Ealing and the wider West London area. We understand how to apply AI in creative environments without disrupting the human creativity at the core of great work."
+        },
+        {
+          "question": "Can you help professional services firms in Ealing with AI?",
+          "answer": "Absolutely. Legal, accounting, and consulting firms across Ealing benefit from AI for document automation, client analytics, and operational efficiency. We ensure all implementations meet regulatory requirements."
+        },
+        {
+          "question": "What are AI consultancy rates in Ealing?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        },
+        {
+          "question": "Do you cover the rest of West London from Ealing?",
+          "answer": "Yes. Our practice covers Ealing and the broader West London area, including Acton, Hanwell, Southall, and neighbouring boroughs of Brent, Hounslow, and Hillingdon."
+        }
+      ],
+      "relatedLocations": [
+        "london",
+        "kensington"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "generative-ai"
+      ]
+    },
+    {
+      "slug": "essex",
+      "name": "AI Consultancy Essex",
+      "title": "Agentic AI Consultants Essex — Logistics AI, Fixed Fee",
+      "description": "Agentic AI consultants in Essex. Logistics, finance and manufacturing specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call.",
+      "primaryKeyword": "agentic ai consultant essex",
+      "intro": "Essex is one of England's most economically significant counties — a major logistics corridor, a growing financial services hub, and home to over 60,000 businesses. From the M25 distribution belt to Chelmsford's professional services cluster and Southend's digital economy, Essex businesses have substantial AI opportunity and, too often, insufficient specialist guidance to act on it.",
+      "areaServed": "Essex",
+      "region": "East of England",
+      "sections": [
+        {
+          "heading": "Essex's Economic Strengths",
+          "body": "<p>Essex is far more than a London commuter county. The county's economy spans advanced manufacturing in Harlow, logistics and distribution along the A12 and M25 corridors, a growing financial services cluster in Chelmsford, and a significant retail and hospitality sector across its coastal and market towns.</p><p>Chelmsford — Essex's only city — has emerged as a genuine commercial hub with a strong professional services community and a growing technology sector. The University of Essex (Colchester) and Anglia Ruskin University (Chelmsford) produce data science and computing graduates who increasingly stay in the county, building Essex's own AI talent pipeline.</p><p>The county's strategic position — bordered by London, Suffolk, and the Thames Estuary — makes it a logistics powerhouse. Stansted Airport, the port of Tilbury, and the M11/M25 interchanges give Essex businesses world-class connectivity. AI applications in supply chain, route optimisation, and warehousing deliver fast, measurable returns in this environment.</p>"
+        },
+        {
+          "heading": "AI for Essex's Key Sectors",
+          "body": "<p><strong>Logistics and distribution:</strong> Essex's position on the UK's major transport arteries makes logistics one of its most AI-ready sectors. Route optimisation, predictive maintenance for fleets, warehouse automation, and demand forecasting all deliver measurable ROI for distribution businesses operating in this market.</p><p><strong>Financial services:</strong> Chelmsford's financial services cluster — solicitors, accountants, insurance brokers, and IFAs — benefits from AI in document processing, client analytics, fraud detection, and compliance reporting. We ensure implementations meet FCA requirements and professional conduct standards.</p><p><strong>Manufacturing:</strong> Harlow's advanced manufacturing heritage and Essex's broader industrial base create demand for AI in quality control, predictive maintenance, and production scheduling. We help manufacturers implement AI that integrates with existing ERP and MES systems.</p>"
+        },
+        {
+          "heading": "AI Consultancy Across Essex",
+          "body": "<p>Our Essex practice covers Chelmsford, Colchester, Southend-on-Sea, Harlow, Basildon, Braintree, Brentwood, and the wider county. We understand Essex's varied business landscape and the different AI opportunities across its towns and sectors.</p><p>Essex businesses often operate in high-volume, margin-sensitive industries where even modest AI-driven efficiency gains translate to significant profit improvement. We size every engagement to the business — our Phase 1 Diagnostic at £6,500 gives Essex firms a clear, board-ready AI roadmap before committing to larger investment.</p><p>Our proximity to London means Essex clients can access the same depth of AI expertise as capital businesses, delivered at the pace and practicality the county's direct business culture demands.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you cover all of Essex?",
+          "answer": "Yes. We serve Chelmsford, Colchester, Southend-on-Sea, Harlow, Basildon, Braintree, Brentwood, and the wider county. On-site and remote consultancy options are available."
+        },
+        {
+          "question": "Can AI help logistics businesses in Essex?",
+          "answer": "Absolutely. Logistics AI — route optimisation, fleet management, warehouse automation, and demand forecasting — consistently delivers some of the fastest ROI we see. Essex's transport-heavy economy is well-suited to this."
+        },
+        {
+          "question": "What are AI consultancy rates in Essex?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        },
+        {
+          "question": "Do you cover Hertfordshire and Suffolk from Essex?",
+          "answer": "Yes. Our Essex base extends to neighbouring Hertfordshire, Suffolk, and the wider East of England. We also serve London-border areas including Epping Forest and Thurrock."
+        }
+      ],
+      "relatedLocations": [
+        "london",
+        "norfolk"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "ai-training"
+      ]
+    },
+    {
+      "slug": "buckinghamshire",
+      "name": "AI Consultancy Buckinghamshire",
+      "title": "Agentic AI Consultants Buckinghamshire — Aerospace AI",
+      "description": "Agentic AI consultants in Buckinghamshire. Aerospace, tech and professional services. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call.",
+      "primaryKeyword": "agentic ai consultant buckinghamshire",
+      "intro": "Buckinghamshire is one of England's most prosperous and innovative counties — home to a world-class aerospace cluster at Wycombe Air Park and Silverstone, a dense network of technology and professional services businesses, and outstanding transport links to London, Oxford, and the Midlands. AI adoption here is accelerating, driven by a business community that values precision and performance.",
+      "areaServed": "Buckinghamshire",
+      "region": "South East England",
+      "sections": [
+        {
+          "heading": "Buckinghamshire's Innovation and Business Landscape",
+          "body": "<p>Buckinghamshire's economy blends high-technology manufacturing with professional services and digital enterprise. The county is home to motorsport and aerospace companies clustered around Silverstone and High Wycombe — precision engineering businesses that are natural candidates for AI-driven quality control, simulation, and supply chain optimisation.</p><p>High Wycombe's business community — encompassing professional services, retail, and growing technology firms — is increasingly connected to the Thames Valley tech corridor running through Reading and Wokingham. Businesses here benefit from proximity to both London and Oxford, accessing the talent and commercial ecosystems of two world-class cities.</p><p>Buckinghamshire New University and the University of Buckingham add academic depth, while the county's excellent motorway access (M40, M25, M1) makes it a natural logistics and connectivity hub. The combination of engineering heritage, professional services density, and technology ambition creates strong AI adoption potential across multiple sectors.</p>"
+        },
+        {
+          "heading": "AI for Buckinghamshire's Industries",
+          "body": "<p><strong>Aerospace and motorsport:</strong> Buckinghamshire's engineering cluster — from Silverstone's motorsport technology ecosystem to Wycombe Air Park and the county's precision manufacturing businesses — uses AI for performance simulation, predictive maintenance, component quality analysis, and supply chain optimisation. We bring consultancy that matches the technical rigour these sectors demand.</p><p><strong>Professional services:</strong> High Wycombe and Aylesbury's professional services firms — solicitors, accountants, consultancies, and financial advisers — adopt AI for document processing, client analytics, and compliance automation. We implement AI with full sensitivity to the regulatory requirements of each profession.</p><p><strong>Technology and digital:</strong> Buckinghamshire's growing technology sector benefits from AI in product development, testing automation, and customer experience. Businesses targeting enterprise clients need AI implementations that demonstrate the robustness and traceability those buyers require.</p>"
+        },
+        {
+          "heading": "Connecting London, Oxford, and the Midlands",
+          "body": "<p>Our Buckinghamshire practice covers High Wycombe, Aylesbury, Amersham, Beaconsfield, Milton Keynes (served from our Bedfordshire coverage), and the wider county. We also serve businesses in neighbouring Oxfordshire, Hertfordshire, and Berkshire.</p><p>Buckinghamshire businesses benefit from consultants who understand both the Thames Valley's enterprise technology culture and the practical directness of Midlands and northern manufacturing. We bridge both worlds — delivering board-level strategy alongside hands-on implementation support.</p><p>Our Phase 1 Diagnostic at £6,500 provides a board-ready AI roadmap in three weeks — giving Buckinghamshire businesses clear, actionable intelligence before committing to larger investment. It's designed to de-risk AI adoption for businesses of any size.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with aerospace and motorsport companies in Buckinghamshire?",
+          "answer": "Yes. Aerospace and motorsport AI — simulation, predictive maintenance, quality inspection, and supply chain optimisation — is one of our specialisms. We understand the precision and traceability requirements of these sectors."
+        },
+        {
+          "question": "Do you cover all of Buckinghamshire?",
+          "answer": "Yes. We serve High Wycombe, Aylesbury, Amersham, Beaconsfield, Chesham, and the wider county, as well as neighbouring areas of Oxfordshire, Hertfordshire, and Berkshire."
+        },
+        {
+          "question": "What are AI consultancy rates in Buckinghamshire?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        },
+        {
+          "question": "Can you help technology companies in Buckinghamshire with AI product development?",
+          "answer": "Absolutely. We help technology firms evaluate AI capabilities, design scalable architectures, and develop AI-enhanced products that meet enterprise buyer expectations for robustness and explainability."
+        }
+      ],
+      "relatedLocations": [
+        "reading",
+        "bedfordshire"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
+        "agentic-ai"
+      ]
+    },
+    {
+      "slug": "portsmouth",
+      "name": "AI Consultancy Portsmouth",
+      "title": "Agentic AI Consultants Portsmouth — Defence AI, Fixed Fee",
+      "description": "Agentic AI consultants in Portsmouth. Defence, maritime, and engineering specialists. AI roadmap in 3 weeks. Fixed-fee from £6,500. Book a free call.",
+      "primaryKeyword": "agentic ai consultant portsmouth",
+      "intro": "Portsmouth is the UK's premier naval city — home to HMNB Portsmouth, the largest naval base in Western Europe, and a thriving maritime technology and defence sector. Beyond defence, the city's growing digital economy, engineering firms, and the University of Portsmouth's expanding technology programmes make it an increasingly significant AI market on the South Coast.",
+      "areaServed": "Portsmouth",
+      "region": "South East England",
+      "sections": [
+        {
+          "heading": "Portsmouth's Defence and Maritime Economy",
+          "body": "<p>Portsmouth's economy is anchored by defence and maritime — HMS Victory, HMNB Portsmouth, and the city's long naval heritage shape its industrial and commercial character. BAE Systems, QinetiQ, and dozens of defence supply chain businesses employ thousands of engineers and technologists across the city and surrounding Hampshire.</p><p>The maritime sector extends beyond defence. Portsmouth's commercial port is one of the UK's busiest for passenger and freight traffic. Marine engineering, ship repair, and maritime logistics all have significant AI adoption potential — from predictive maintenance for vessels and port equipment to customs processing automation and cargo optimisation.</p><p>The University of Portsmouth is a growing force in AI and data science, with strong links to local industry. The university's graduates increasingly stay in the city, helping to build a local tech talent pipeline that complements the engineering expertise the defence sector brings.</p>"
+        },
+        {
+          "heading": "AI for Portsmouth's Key Sectors",
+          "body": "<p><strong>Defence and security:</strong> Portsmouth's defence cluster needs AI that meets the rigorous standards of the MOD supply chain — full auditability, robust governance, and security-conscious architecture. We bring defence-aware AI consultancy that accounts for the classification, integrity, and reliability requirements of security-sensitive environments.</p><p><strong>Maritime and engineering:</strong> AI for maritime operations includes predictive maintenance for vessels and port equipment, route and cargo optimisation, safety monitoring, and environmental compliance reporting. We help maritime businesses implement AI that delivers operational efficiency without compromising the safety standards the sector demands.</p><p><strong>Digital and creative:</strong> Portsmouth's growing digital economy — including a cluster of software companies, digital agencies, and tech startups around Gunwharf Quays and the city centre — benefits from AI in product development, client service automation, and operational scaling. The University of Portsmouth's tech entrepreneurship programmes are feeding this ecosystem.</p>"
+        },
+        {
+          "heading": "South Coast AI Consultancy",
+          "body": "<p>Our Portsmouth practice covers the city and the wider South Coast — Southampton, Fareham, Gosport, Chichester, and the Isle of Wight. We also serve businesses across Hampshire and West Sussex, giving South Coast businesses access to specialist AI consultancy without needing to look to London.</p><p>Portsmouth businesses appreciate direct, no-nonsense advice — the naval city's culture values precision and accountability over management consulting jargon. We match that mindset exactly: clear recommendations, fixed pricing, and measurable outcomes.</p><p>Our Phase 1 Diagnostic at £6,500 delivers a board-ready AI roadmap in three weeks — giving Portsmouth businesses a clear, actionable view of their AI opportunity before committing to larger investment. For defence and maritime businesses, we include governance and security framework recommendations as standard.</p>"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do you work with defence companies in Portsmouth?",
+          "answer": "Yes. We work with defence primes and supply chain businesses on AI for operational efficiency, predictive maintenance, and data analytics. All engagements account for the governance and security requirements of the MOD supply chain."
+        },
+        {
+          "question": "Can AI help maritime and port operations?",
+          "answer": "Absolutely. Maritime AI — vessel predictive maintenance, port operations optimisation, cargo tracking, and environmental monitoring — delivers measurable returns and we have experience delivering in this sector."
+        },
+        {
+          "question": "Do you cover Southampton and the wider South Coast?",
+          "answer": "Yes. Our Portsmouth practice covers Southampton, Fareham, Gosport, Chichester, and the wider Hampshire and West Sussex area. We provide on-site and remote consultancy across the South Coast."
+        },
+        {
+          "question": "What are AI consultancy rates in Portsmouth?",
+          "answer": "Our engagement runs in three fixed phases: Phase 1 Diagnostic £6,500 (3 weeks, board-ready roadmap), Phase 2 Build £850/day (embedded delivery, 3–6 months), Phase 3 Retain £10,000/month (governance and scale-out, 1 day/week). Rates held twelve months from signature."
+        }
+      ],
+      "relatedLocations": [
+        "surrey",
+        "kent"
+      ],
+      "relatedServices": [
+        "ai-strategy",
+        "ai-automation",
         "ai-governance"
       ]
     }

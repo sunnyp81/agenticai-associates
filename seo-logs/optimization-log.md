@@ -2,6 +2,82 @@
 
 ---
 
+## Run 30 — 2026-07-17
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 10 (5 title fixes + 4 new location pages + 1 hub count update)
+
+### Objective
+
+Two goals this run: (1) fix 5 borderline title violations — pages at exactly 60 chars where the < 60 char target means ≤ 59 is required to guarantee no SERP truncation; (2) add 4 new location pages (ealing, essex, buckinghamshire, portsmouth) explicitly recommended in CLAUDE.md and Run 29, all cities confirmed to be receiving organic impressions without a dedicated page.
+
+### Changes applied — Title Fixes
+
+| # | File | Slug | Before (chars) | After (chars) | Rationale |
+|---|------|------|---------------|---------------|-----------|
+| 1 | industries.json | hr | "Agentic AI HR Consultant UK — 30-50% Faster Hires, Fixed Fee" (60) | "Agentic AI HR Consultant UK — 30-50% Faster Hires" (49) | Dropped ", Fixed Fee" suffix. The ROI stat (30-50% faster hires) is the stronger hook and is preserved; "Fixed Fee" appears in the page description and FAQ. Net −11 chars. |
+| 2 | industries.json | marketing | "Agentic AI Marketing Consultant UK — More Output, Proven ROI" (60) | "Agentic AI for UK Marketing — More Output, Proven ROI" (53) | Restructured "Marketing Consultant UK" → "for UK Marketing" — preserves UK geo-signal and "Proven ROI" power phrase, saves 7 chars. The description retains "consultant" keyword. Net −7 chars. |
+| 3 | industries.json | insurance | "Agentic AI for UK Insurers & MGAs — Faster Claims, Fixed Fee" (60) | "Agentic AI for UK Insurers — Faster Claims, Fixed Fee" (53) | Dropped " & MGAs" — "MGAs" appears in the description and is preserved for long-tail; the shorter title leads with the broader "Insurers" which has higher search volume. Net −7 chars. |
+| 4 | learn.json | when-to-hire-an-ai-consultant | "When to Hire an AI Consultant — 7 Signs You Need Expert Help" (60) | "When to Hire an AI Consultant — 7 Signs You Need Help" (53) | Dropped "Expert" — the number "7 Signs" is the CTR hook; "Expert" adds length without materially changing intent. Net −7 chars. |
+| 5 | learn.json | agentic-ai-vs-chatbots | "Agentic AI vs Chatbots: Build Right for UK Enterprise (2026)" (60) | "Agentic AI vs Chatbots — Build Right for UK Business (2026)" (59) | Two micro-changes: (1) colon → em dash (matches site title convention); (2) "Enterprise" → "Business" saves 2 chars and broadens audience match. "Enterprise" was attracting too narrow a signal for a page with broad comparison intent. Net −1 char to 59. |
+
+### Changes applied — New Location Pages
+
+| # | Slug | Title (chars) | Desc (chars) | Primary sectors |
+|---|------|---------------|--------------|-----------------|
+| 6 | locations/ealing | "Agentic AI Consultants Ealing — Studio AI, Fixed Fee" (52) | 150 | Media/creative, professional services, retail |
+| 7 | locations/essex | "Agentic AI Consultants Essex — Logistics AI, Fixed Fee" (54) | 146 | Logistics, finance, manufacturing |
+| 8 | locations/buckinghamshire | "Agentic AI Consultants Buckinghamshire — Aerospace AI" (53) | 149 | Aerospace/motorsport, professional services, technology |
+| 9 | locations/portsmouth | "Agentic AI Consultants Portsmouth — Defence AI, Fixed Fee" (57) | 149 | Defence/naval, maritime engineering, digital |
+| 10 | locations/hub | Updated count: "18 Cities" → "22 Cities" (48 chars) | — | Hub title now reflects correct page count |
+
+All 4 new location pages follow the established pattern: 3 content sections (~300w each), 4 FAQs, relatedLocations and relatedServices cross-links. Each page references the £6,500 Phase 1 Diagnostic in FAQ. JSON parsed cleanly — no build errors expected. Titles all 49–59 chars. Descriptions all 146–150 chars.
+
+### Hard Violation Audit After Run 30
+
+Pre-edit violations (at exactly 60 chars, target < 60): 5 pages
+Post-edit violations: 0
+
+All 78 pages across what-we-do, industries, learn, locations checked — zero titles ≥ 60 chars, zero descriptions > 155 chars.
+
+### Duplicate Title Check
+
+Zero duplicates across all 78 pages (verified by script).
+
+### Location Page Count
+
+- Before: 18 location pages
+- After: 22 location pages (added ealing, essex, buckinghamshire, portsmouth)
+- New slugs: `/locations/ealing/`, `/locations/essex/`, `/locations/buckinghamshire/`, `/locations/portsmouth/`
+
+### URLs to Submit to IndexNow (when key available)
+
+- https://agenticai.associates/industries/hr/
+- https://agenticai.associates/industries/marketing/
+- https://agenticai.associates/industries/insurance/
+- https://agenticai.associates/learn/when-to-hire-an-ai-consultant/
+- https://agenticai.associates/learn/agentic-ai-vs-chatbots/
+- https://agenticai.associates/locations/ealing/
+- https://agenticai.associates/locations/essex/
+- https://agenticai.associates/locations/buckinghamshire/
+- https://agenticai.associates/locations/portsmouth/
+- https://agenticai.associates/locations/
+
+### Recommendations for Run 31
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing. Without live data, the run cannot identify striking-distance pages (position 5–20) or CTR underperformers (CTR < 3%, impressions > 50).
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed per CLAUDE.md. Submit `https://agenticai.associates/sitemap-index.xml` to GSC — Sunny action. With 22 location pages now live, resubmission is overdue.
+- **CTA audit**: Confirmed complete in Run 29. No new pages added this run have non-standard CTAs — all use "Book a free call." consistently.
+- **Year anchors**: All new location pages use no year-specific language that would need updating. Existing `(2026)` titles reviewed Dec 2026 / Jan 2027.
+- **Backlink gap** (highest-leverage outstanding action): Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created. The 4 new location pages expand the linkable asset set — consider outreach to local business directories.
+- **Further location pages**: CLAUDE.md mentions no additional cities with confirmed impressions beyond the 4 added this run. Run 31 should revisit if new impression data becomes available.
+- **New content opportunities**: Consider Insights articles targeting defence/maritime AI (to support the portsmouth page) and logistics AI (to support essex/kent/bedfordshire pages).
+
+---
+
 ## Run 29 — 2026-07-15
 
 **Mode:** Pattern-based (no .env / no API credentials)
