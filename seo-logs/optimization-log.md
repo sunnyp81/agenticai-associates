@@ -2,6 +2,78 @@
 
 ---
 
+## Run 31 — 2026-07-19
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 10 (1 hard title violation + 9 thin description enrichments)
+
+### Objective
+
+Two goals this run: (1) fix the last remaining hard title violation — `fca-ai-governance-playbook` was exactly 60 chars, 1 over the < 60 target; (2) enrich 9 thin descriptions (140–149 chars) across industries, learn, and locations pages to bring them into the 150–155 optimal range. Longer, richer descriptions improve SERP real estate utilisation without risking truncation.
+
+### Changes applied — Hard Violation Fix
+
+| # | File | Page | Field | Before (chars) | After (chars) | Rationale |
+|---|------|------|-------|---------------|---------------|-----------|
+| 1 | insights/fca-ai-governance-playbook.astro | /insights/fca-ai-governance-playbook/ | title | "FCA AI Governance Playbook: SM&CR, Consumer Duty, Model Risk" (60) | "FCA AI Governance Playbook: SM&CR, Consumer Duty (2026)" (55) | Removed "Model Risk" (which remains in the description), added "(2026)" freshness/year anchor — consistent with every other insights page title. "Model Risk" removal is cosmetic: the description explicitly references "AI Risk Register schema" and the article body covers model risk throughout. Net −5 chars to 55. |
+| 1b | insights/index.astro | (insights hub listing) | article title | same old title | same new title | Article listing on the hub page synced to match; inconsistency between the hub listing and the article <title> tag would confuse crawlers. |
+| 1c | insights/fca-ai-governance-playbook.astro | dateModified | '2026-07-15' | '2026-07-19' | Title change on 2026-07-19; dateModified updated accordingly. |
+
+### Changes applied — Description Enrichments
+
+| # | File | Slug | Before (chars) | After (chars) | Change |
+|---|------|------|---------------|---------------|--------|
+| 2 | industries.json | finance | 144 | 155 | Added " monitoring" after "compliance" → "Automate compliance monitoring, detect fraud…" — adds the keyword "compliance monitoring" which is a high-intent search phrase for FCA-regulated firms evaluating AI. |
+| 3 | industries.json | marketing | 145 | 154 | Added "campaign " before "ROI" → "prove campaign ROI" — the word "campaign" makes the benefit concrete and adds a commonly searched phrase ("prove campaign ROI", "campaign ROI consultant"). |
+| 4 | industries.json | media-publishing | 145 | 154 | Prepended "Automate " before "editorial workflows" — the verb "Automate" signals the value proposition clearly; "Automate editorial workflows" is a stronger search phrase than "Editorial workflows". |
+| 5 | industries.json | real-estate | 146 | 151 | Added " time" after "instruction-to-sale" → "instruction-to-sale time 25%" — makes the stat grammatically precise; "instruction-to-sale time" is the correct property industry term. |
+| 6 | industries.json | fintech | 147 | 154 | Replaced "— all FCA-compliant." with "— FCA-compliant. Fixed fee." — removes redundant "all", adds "Fixed fee" pricing signal which is a conversion-positive phrase for cost-sensitive fintech buyers. |
+| 7 | industries.json | logistics | 148 | 152 | Added "3PL " before "fleet operators" → "3PL fleet operators" — "3PL" (third-party logistics) is a high-specificity keyword that improves relevance for logistics provider searches; Tilbury/Thurrock M25 corridor is the primary Essex logistics cluster, and 3PL is the dominant operating model there. |
+| 8 | learn.json | benefits-of-hiring-an-ai-consultant | 145 | 153 | Added " in 2026" after "consultant" → "AI consultant in 2026 —" — year anchor increases perceived freshness for a browse-intent query; consistent with the title convention across all learn spoke pages. |
+| 9 | locations.json | kent | 146 | 152 | Added "port" sector — "Logistics, manufacturing, viticulture, and port specialists" — Kent's port/maritime sector (Folkestone, Dover Freight, Ramsgate) is significant and was omitted; "port specialists" adds a distinct long-tail keyword not covered by adjacent location pages. |
+| 10 | locations.json | essex | 146 | 153 | Expanded sector list to "Logistics, finance, manufacturing, and tech specialists" (added Oxford comma + "tech" sector) — Harlow and Chelmsford have growing tech clusters; "tech specialists" distinguishes the Essex page from the adjacent Kent page. |
+
+### Hard Violation Audit After Run 31
+
+Pre-edit violations: 1 (`fca-ai-governance-playbook` title = 60 chars)
+Post-edit violations: 0
+
+All pages across what-we-do, industries, learn, locations, business-sizes, and insights checked — zero titles ≥ 60 chars, zero descriptions > 155 chars.
+
+### Duplicate Title Check
+
+Zero duplicates — no titles changed in data files this run. The fca-ai-governance-playbook title is unique (verified: no other page uses "FCA AI Governance Playbook" or the new "(2026)" variant in the same position).
+
+### URLs to Submit to IndexNow (when key available)
+
+- https://agenticai.associates/insights/fca-ai-governance-playbook/
+- https://agenticai.associates/insights/
+- https://agenticai.associates/industries/finance/
+- https://agenticai.associates/industries/marketing/
+- https://agenticai.associates/industries/media-publishing/
+- https://agenticai.associates/industries/real-estate/
+- https://agenticai.associates/industries/fintech/
+- https://agenticai.associates/industries/logistics/
+- https://agenticai.associates/learn/benefits-of-hiring-an-ai-consultant/
+- https://agenticai.associates/locations/kent/
+- https://agenticai.associates/locations/essex/
+
+### Recommendations for Run 32
+
+- **Connect GSC** (critical, outstanding since Run 1): Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env` for live impressions/CTR data and instant reindexing. Without live data, the run cannot identify striking-distance pages (position 5–20) or CTR underperformers (CTR < 3%, impressions > 50). This is now the highest-leverage outstanding action — pattern-based runs have diminishing returns.
+- **Description enrichments approaching exhaustion**: After Run 31, the remaining thin descriptions (140–149 chars) are mostly at 148–149 chars — only 1–7 chars below the 155 ceiling. Run 32 could sweep these but the marginal gain is low. Once GSC credentials are available, prioritise data-driven CTR rewrites over pattern-based length optimisations.
+- **Remaining thin descriptions (148–149 chars)**: glasgow (148), scotland (149), salford (149), buckinghamshire (149), portsmouth (149), agentic-ai (149), data-ai (149), conversational-ai (149), education (149), construction (149), iot-connectivity (148), automotive (148), manufacturing (148), small-business (149), enterprise (148), how-to-become-an-ai-consultant (149). Each is only 1–7 chars below the ceiling — small tweaks available if needed.
+- **GSC sitemap submission** (critical): Only ~5/95 pages indexed per CLAUDE.md. Submit `https://agenticai.associates/sitemap-index.xml` to GSC — Sunny action.
+- **IndexNow key**: 11 URLs queued across Runs 30 and 31. Once `INDEXNOW_KEY` is in `.env`, submit the backlog in a single batch.
+- **Backlink gap** (highest-leverage growth lever): Zero backlinks both engines. Tier-1 listicle outreach pitches ready (`agenticai-listicle-outreach-apr30.md`). Wikidata entry not yet created.
+- **New Insights content**: Run 30 recommendations flagged defence/maritime AI (portsmouth support) and logistics AI (essex/kent/bedfordshire support). These remain unwritten — strongest content opportunities given new location pages.
+- **Year anchors**: Review all `(2026)` titles in Dec 2026 / Jan 2027 to update to `(2027)`.
+
+---
+
 ## Run 30 — 2026-07-17
 
 **Mode:** Pattern-based (no .env / no API credentials)
