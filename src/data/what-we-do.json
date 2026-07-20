@@ -354,7 +354,7 @@
       "primaryKeyword": "generative ai consultancy uk",
       "icon": "sparkles",
       "entryPoint": false,
-      "intro": "<p>Generative AI is powerful but choosing the wrong model, architecture, or approach wastes money fast. We help UK businesses cut through the hype and build genAI systems that deliver real value — from RAG knowledge systems to content production pipelines to multi-modal applications. The market is at an inflection point: 73% of UK enterprises are experimenting with genAI, but only 19% have systems in production delivering measurable business value. The gap between pilots and production is where competitive advantage lives.</p>\n<p>The biggest risk in generative AI is not technology choice — it is solution-fit. Teams spend six figures fine-tuning a model when retrieval-augmented generation would have delivered better results in three weeks. Or they pick a frontier model for a task a smaller open-weights model handles for 95% less cost. A financial services firm we advised was spending £12,000/month on Claude API calls for a customer support use case that would have cost £400/month with a smaller model and a tighter prompt. Your cost per transaction matters. Your data residency constraints matter. Your regulatory environment matters. Our generative AI engagements always start with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> to identify the highest-value use cases and right-size the architecture before any build work begins.</p>\n<p>We work with the full spectrum — OpenAI, Anthropic Claude, Google Gemini, Llama, Mistral, and open-weights models hosted on your infrastructure where data residency or cost demand it. Pilots ship in 6-10 weeks against specific business outcomes. Every system includes evaluation harnesses, content safety filters, and observability so you know precisely how the model performs in production over time. Most clients recover their investment in the first 60 days of production operation.</p>",
+      "intro": "<p>Generative AI is powerful but choosing the wrong model, architecture, or approach wastes money fast. We help UK businesses cut through the hype and build genAI systems that deliver real value — from RAG knowledge systems to content production pipelines to multi-modal applications. The market is at an inflection point: many UK enterprises are experimenting with genAI, but far fewer have systems in production delivering measurable business value. The gap between pilots and production is where competitive advantage lives.</p>\n<p>The biggest risk in generative AI is not technology choice — it is solution-fit. Teams spend six figures fine-tuning a model when retrieval-augmented generation would have delivered better results in three weeks. Or they pick a frontier model for a task a smaller open-weights model handles for 95% less cost. We have seen a financial services team spending heavily each month on frontier-model API calls for a customer support use case that a smaller model and a tighter prompt could serve at a fraction of the cost. Your cost per transaction matters. Your data residency constraints matter. Your regulatory environment matters. Our generative AI engagements always start with an <a href=\"/what-we-do/ai-readiness-assessment/\">AI Readiness Assessment</a> to identify the highest-value use cases and right-size the architecture before any build work begins.</p>\n<p>We work with the full spectrum — OpenAI, Anthropic Claude, Google Gemini, Llama, Mistral, and open-weights models hosted on your infrastructure where data residency or cost demand it. Pilots ship in 6-10 weeks against specific business outcomes. Every system includes evaluation harnesses, content safety filters, and observability so you know precisely how the model performs in production over time. Most clients recover their investment in the first 60 days of production operation.</p>",
       "sections": [
         {
           "heading": "Cutting Through the Hype",
@@ -682,7 +682,7 @@
       "sections": [
         {
           "heading": "Why AI Governance Matters Now",
-          "body": "<p>The UK AI Bill and EU AI Act are creating new compliance obligations. Businesses deploying AI need documented governance frameworks, bias monitoring, and audit trails. This is not optional — it is regulatory reality.</p><p>Beyond compliance, governance protects your reputation. An AI system that makes biased decisions or handles personal data incorrectly can cause lasting damage.</p>"
+          "body": "<p>Evolving UK AI governance and the EU AI Act are creating new compliance obligations. Businesses deploying AI need documented governance frameworks, bias monitoring, and audit trails. This is not optional — it is regulatory reality.</p><p>Beyond compliance, governance protects your reputation. An AI system that makes biased decisions or handles personal data incorrectly can cause lasting damage.</p>"
         },
         {
           "heading": "Our Governance Framework",
@@ -708,7 +708,7 @@
         },
         {
           "title": "Regulatory Compliance",
-          "description": "GDPR, UK AI Bill, EU AI Act, and sector-specific regulation (FCA, CQC, SRA)."
+          "description": "GDPR, UK AI governance, EU AI Act, and sector-specific regulation (FCA, CQC, SRA)."
         },
         {
           "title": "Ethics Framework",
@@ -730,7 +730,7 @@
         },
         {
           "question": "What regulations apply to AI in the UK?",
-          "answer": "GDPR applies to all AI that processes personal data. The UK AI Bill introduces additional requirements. Sector-specific regulations (FCA, CQC, SRA) add further obligations depending on your industry."
+          "answer": "GDPR applies to all AI that processes personal data. Evolving UK AI governance introduces additional requirements. Sector-specific regulations (FCA, CQC, SRA) add further obligations depending on your industry."
         },
         {
           "question": "How much does AI governance consulting cost?",
