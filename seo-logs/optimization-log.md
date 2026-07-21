@@ -2,6 +2,116 @@
 
 ---
 
+## Run 32 — 2026-07-21
+
+**Mode:** Pattern-based (no .env / no API credentials)
+**GSC data:** Skipped — no credentials (`.env` absent)
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 19 (title/meta remediation, not CTR churn)
+**Build:** ✓ clean, 100 pages
+
+### Objective — content-integrity remediation (overrides routine CTR padding)
+
+Run 31 confirmed zero hard length violations remained, and flagged that further pattern-based description padding had "low marginal gain". So this run did not pad descriptions. Instead, a full audit of every page-level `title`/`description` surfaced a more serious problem: **earlier SEO-loop runs had planted unverifiable performance statistics directly into SERP titles and meta descriptions** — e.g. "Cut Admin Time 40%", "Cut KYC Time 80%", "3-5x ROI Within 12 Months", "Deflect 50-70% of Inbound Contacts", "Cut LLM Costs by 95%", "Reclaim 12 hours per teacher per week".
+
+These are exactly the fabricated-figure violations the **HARD CONTENT RULES (added 2026-07-20)** prohibit, and the same class of problem that forced the two emergency scrub commits the day before (`4a9c6ed`, `afc2454`). They sit in the exact fields this loop controls, so remediation is in scope and higher priority than length tweaks.
+
+**Line drawn:** removed invented quantified *client-outcome* claims (% improvements, ROI multiples, payback periods, hours reclaimed, deflection/accuracy rates) and one unsupportable evidence claim. **Kept** genuine offer facts: the real £6,500 fixed-fee price, the 3-week diagnostic duration, engagement/delivery timeframes (Phase 2 build windows), factual counts (25 sectors, 22 cities), year anchors, and listicle structure (5 differences, 7 signs). Replacements describe capability/audience, never a promised result. No H1s or body content changed.
+
+### Titles rewritten (fabricated stat → claim-free), all <60 chars, unique
+
+| File | Slug | Before | After |
+|------|------|--------|-------|
+| industries.json | healthcare | Cut Admin Time 40% | NHS & Clinics |
+| industries.json | finance | Cut KYC Time 80% | FCA-Regulated |
+| industries.json | hr | 30-50% Faster Hires | Smarter Hiring Ops |
+| industries.json | real-estate | 25% More Sales | Agents & BTR |
+| industries.json | education | 12hrs/Week Back per Teacher | Schools & Universities |
+| industries.json | marketing | More Output, Proven ROI | Automate Campaigns |
+| what-we-do.json | generative-ai | Cut LLM Costs by 95% | RAG & LLM Systems |
+| what-we-do.json | ai-automation | Save 30-50% on Costs | Workflow AI |
+| what-we-do.json | conversational-ai | Deflect 50-70% of Inbound Contacts | Chatbots, Voice & NLU |
+| business-sizes.json | small-business | Pay Back in 60 Days | Fixed-Fee AI |
+| business-sizes.json | smes | 3-5x ROI Within 12 Months | Fixed-Fee AI Roadmap |
+| locations.json | manchester | Live System in 90 Days | Media & Tech |
+| locations.json | scotland | AI Live in 90 Days | Finance & Energy |
+
+(Title suffix shown; full pattern e.g. "Agentic AI Healthcare Consultant UK — NHS & Clinics".)
+
+### Descriptions rewritten (fabricated stat removed)
+
+| File | Slug | Removed claim | Replaced with (claim-free) |
+|------|------|---------------|----------------------------|
+| industries.json | healthcare | "Cut admin time 40%" | "Ease clinical admin" |
+| industries.json | legal | "Cut review time 60-80%. More matters, less admin." | "Speed up matters and cut admin time." |
+| industries.json | supply-chain | "forecast accuracy to 80-90% and cut emergency freight 30-50%" | "Sharper demand forecasting and fewer emergency freight costs" |
+| industries.json | education | "Reclaim 12 hours per teacher per week. DfE-compliant." | "Cut marking and admin load for teachers." |
+| industries.json | hr | "Cut time-to-hire 30-50% and lift first-year retention 10-20%" | "Speed up hiring and strengthen retention" |
+| industries.json | real-estate | "Lift instruction-to-sale time 25%, cut admin 40%" | "Speed up instruction-to-sale and cut admin" |
+| industries.json | manufacturing | "lift OEE 4-8% and cut defects 30-60%" | "smarter scheduling, all fixed-fee from £6,500" |
+| industries.json | marketing | "lift conversions 20-40%, and prove campaign ROI" | "lift conversion rates, and track ROI" |
+| industries.json | government | "Cut citizen wait times 40-70%. ... GDPR & ICO compliant." | "Cut citizen wait times ... GDPR and ICO ready" |
+| what-we-do.json | generative-ai | "Cut LLM spend by 95%" | "Fixed fee from £6,500" (kept "Pilots live in 6-10 weeks") |
+| what-we-do.json | conversational-ai | "Deflect 50-70% of inbound contacts" | "Deflect routine inbound contacts" |
+| what-we-do.json | applied-ai | "Proven payback in 1 operating cycle" | "Fixed-fee from £6,500" |
+| business-sizes.json | small-business | "positive ROI in 60 days" (+ em dash) | removed (kept "quick wins in 2 weeks") |
+| business-sizes.json | smes | "Identify 8-12 AI wins ... 3-5x ROI in 12 months" | "Identify high-value AI wins" |
+| learn.json | benefits-of-hiring-an-ai-consultant | "Backed by UK enterprise case studies" (unsupportable — AAA has no citable case studies) | "A practical UK guide for buyers" |
+
+### Also fixed — pre-existing length violation
+
+| File | Slug | Field | Before | After |
+|------|------|-------|--------|-------|
+| what-we-do.json | finance-automation | description | 161 chars | 150 chars (trimmed "We"/"finance", no positioning change) |
+
+### Post-run audit
+
+- Page-level titles: all < 60 chars, **all unique** (no duplicates introduced).
+- Page-level descriptions: all ≤ 155 chars.
+- JSON: valid across all six data files.
+- Build: ✓ 100 pages, no errors.
+- Remaining digit-bearing titles/descriptions reviewed and confirmed legitimate: £6,500 price, 3-week diagnostic, 8-week/6-8-week build windows, "25 UK Sectors", "22 Cities", learn-hub year anchors and listicle counts.
+
+### Flagged, not auto-changed (judgment calls for Sunny)
+
+- **`/for/enterprise/` "Pilot to Production in 8 Weeks", `/for/startups/` "Investor-Ready AI in 2 Weeks", `/what-we-do/ai-training/` "Team Productive in 4 Weeks"** — delivery/training timeframes for AAA's own service. Kept as offer descriptors, but "Team Productive in 4 Weeks" leans toward a result claim; soften if you'd prefer.
+- **`/learn/in-house-ai-team-vs-consultancy/` "full cost (£600k+ vs day rates)"** — comparison-guide ballpark for an in-house AI team's cost; defensible but unsourced. Left as-is.
+- **Body content still carries unverified stats** (out of CTR-task scope, but worth a pass): industries page intros/painPoints/solutionSections contain figures like "reclaim 20-40% of clinical admin time", "cut DNA rates by 30-50%", "cut admin time per patient by 35% within three months" (healthcare), and similar across legal/finance/etc. These render in body copy, not meta, so a separate content pass (not this SEO loop) should neutralise them per the HARD CONTENT RULES.
+
+### IndexNow
+
+- Skipped — no INDEXNOW_KEY. URLs to submit when a key is available (19):
+  - https://agenticai.associates/industries/healthcare/
+  - https://agenticai.associates/industries/finance/
+  - https://agenticai.associates/industries/hr/
+  - https://agenticai.associates/industries/real-estate/
+  - https://agenticai.associates/industries/education/
+  - https://agenticai.associates/industries/marketing/
+  - https://agenticai.associates/industries/legal/
+  - https://agenticai.associates/industries/supply-chain/
+  - https://agenticai.associates/industries/manufacturing/
+  - https://agenticai.associates/industries/government/
+  - https://agenticai.associates/what-we-do/generative-ai/
+  - https://agenticai.associates/what-we-do/ai-automation/
+  - https://agenticai.associates/what-we-do/conversational-ai/
+  - https://agenticai.associates/what-we-do/applied-ai/
+  - https://agenticai.associates/what-we-do/finance-automation/
+  - https://agenticai.associates/for/small-business/
+  - https://agenticai.associates/for/smes/
+  - https://agenticai.associates/locations/manchester/
+  - https://agenticai.associates/locations/scotland/
+  - https://agenticai.associates/learn/benefits-of-hiring-an-ai-consultant/
+
+### Recommendations for Run 33
+
+- **Body-content stat sweep** (highest integrity priority): the meta fields are now clean, but page intros/painPoints/solutionSections still contain the same unverifiable percentages. Run a dedicated content pass (not the CTR loop) to write these claim-free.
+- **Connect GSC** (outstanding since Run 1): without live impressions/CTR/position data, pattern-based runs cannot find real striking-distance (pos 5-20) or CTR-underperformer opportunities. Add `GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `SITE_URL`, `INDEXNOW_KEY` to `.env`.
+- **IndexNow backlog**: 19 URLs above, plus 11 queued from Runs 30-31. Submit as one batch once the key is present.
+- **Deploy owed**: repo does not auto-deploy — changes ship via Wrangler CLI from Drive-stored CF token (Sunny). This run's fixes are committed but not live until deployed.
+
+---
+
 ## Run 31 — 2026-07-19
 
 **Mode:** Pattern-based (no .env / no API credentials)
