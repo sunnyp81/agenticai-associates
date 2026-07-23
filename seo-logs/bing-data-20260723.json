@@ -1,0 +1,6 @@
+{
+  "status": "skipped",
+  "reason": "No .env file found in repo root. BING_API_KEY not available.",
+  "date": "2026-07-23",
+  "run": 33
+}

@@ -2,6 +2,45 @@
 
 ---
 
+## Run 33 — 2026-07-23
+
+**Mode:** Pattern-based (no `.env` / no API credentials)
+**GSC data:** Skipped — no credentials (`.env` absent)
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 0 — clean run, nothing needed optimising
+**Build:** Not rebuilt (no source changes)
+
+### Result — no genuine issues found
+
+Full audit of every page-level `title`/`description` across all data files (`industries`, `what-we-do`, `locations`, `business-sizes`, `learn` — 79 spoke pages + 4 hubs) and the hardcoded static pages (`index`, `about`, `contact`, `get-started`, `insights`, `privacy`, `terms`, `thank-you`, `404`).
+
+**Hard checks — all pass:**
+- Title length 30–60 chars: **0 violations** (longest data title 59, shortest 48).
+- Description length ≤155 chars: **0 violations**.
+- Duplicate/near-duplicate titles: **0** — all unique.
+- `agentic AI` present in relevant titles: yes across hubs/spokes/statics.
+
+**Heuristic flags raised (11) — all verified as false positives, no action taken:**
+- **8 × "NO_CTA" on `/learn/*` pages** — every one already ends with a `Read now.` CTA. The audit wordlist simply didn't include "read"; the CTAs are present. No change needed.
+- **3 × "STAT_IN_TITLE/DESC"** (`industries/marketing`, `what-we-do/ai-readiness-assessment`, `what-we-do/data-ai`) — the trigger was the word **"ROI"** used as a *capability/deliverable* ("track ROI", "ROI projections", "measurable ROI"), **not** a fabricated figure. No invented percentage, multiple, payback period, or attributed source is present. These comply with the HARD CONTENT RULES (2026-07-20). No change needed.
+
+**Fabricated-stat regression check (the Run 32 concern):** scanned all controlled fields for invented percentages / `Nx` ROI multiples / payback-day claims / "hours reclaimed" / attributed research figures. **None found** — the Run 32 remediation (`c452384`) plus the two emergency scrubs (`4a9c6ed`, `afc2454`) are holding. The only numbers remaining in titles/metas are genuine offer facts (£6,500 fixed fee, 3-week diagnostic, 90-day build window, 25 sectors, 22 cities, 16 guides, year anchors, listicle counts) — exactly the set Run 32 deliberately kept.
+
+### Decision
+
+Consistent with Run 31 ("further pattern-based padding = low marginal gain") and Run 32's integrity focus: **no changes made.** Forcing edits where none are warranted is precisely what planted the fabricated stats that later required emergency scrubbing. The correct action on a fully-remediated site with no live GSC/Bing data is a clean no-op. Only the two skipped-data placeholders and this log entry were written.
+
+### IndexNow
+- Nothing submitted — no URLs changed, and no INDEXNOW_KEY available.
+
+### Recommendations for next run
+- **The real lever is now data, not patterns.** Titles/metas are optimised to length + integrity ceilings; further blind rewrites risk churn and CTR volatility with no signal to guide them. Provide `.env` (GSC + Bing creds) so runs can target *actual* low-CTR / striking-distance (pos 5–20) pages instead of pattern heuristics.
+- Standing gap from the project brain: submit the sitemap to GSC (only ~5/95 pages indexed) and run the Tier-1 backlink outreach — both dwarf any remaining on-page title tweak in impact, and neither is in this loop's scope.
+- If a future run is tempted to "do something", the honest answer for this site is: without search-analytics data, there is nothing safe left to change on-page.
+
+---
+
 ## Run 32 — 2026-07-21
 
 **Mode:** Pattern-based (no .env / no API credentials)
