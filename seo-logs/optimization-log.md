@@ -2,6 +2,48 @@
 
 ---
 
+## Run 34 — 2026-07-25
+
+**Mode:** Pattern-based (no `.env` / no API credentials)
+**GSC data:** Skipped — no credentials (`.env` absent)
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 0 — clean run, nothing needed optimising
+**Build:** Not rebuilt (no source changes)
+
+### Independent audit (not trusting prior logs)
+
+Re-derived the true page-level meta set directly from source rather than relying on Run 33's conclusion. Isolated the actual `<title>`/meta-description fields (`pages[].title` / `pages[].description` in the five data files + `hub.title`/`hub.description`, plus the hardcoded `title=`/`description=` props on every static/insights `.astro` page). Deliberately excluded `painPoints[].title/description` and `features[].title/description` — those render in body content, not meta, so they are out of this loop's scope (Step 4: do not change H1s or body content).
+
+**83 page-level meta rows audited. Hard checks — all pass:**
+- Title length 30–60 chars: **0 violations** (hubs 48–59; `get-started` static 60; longest data title 59).
+- Description length ≤155 chars: **0 violations** (0 over; 0 thin below 120).
+- Duplicate/near-duplicate page titles: **0** — all unique.
+- Static/insights/404/privacy/terms/thank-you meta: all within bounds (the two >60 strings my first grep pass caught on `industries/index` and `locations/index` were `heroSubtitle` body props, not the page `<title>`, which comes from `data.hub.title`).
+
+**Fabricated-stat regression scan (meta fields only):** none. The Run 32 remediation (`c452384`) plus the two emergency scrubs (`4a9c6ed`, `afc2454`) are still holding across every title/description. The only digits remaining in meta are genuine offer facts (£6,500 fixed fee, 3-week diagnostic, 25 UK sectors, 22 cities, year anchors, listicle counts).
+
+**"agentic AI" not in title — 19 pages, all correctly left as-is (not a defect):**
+- 14 × `learn/*` + the learn hub — informational/career articles targeting *"AI consultant"* intent ("What Is an AI Consultant", "AI Consultant Career Path", etc.). Injecting "agentic" would misrepresent the query intent and read as keyword stuffing.
+- `what-we-do/generative-ai`, `conversational-ai`, `data-ai` — these pages are specifically about generative / conversational / data AI; "agentic" would be inaccurate.
+- `what-we-do/ai-readiness-assessment`, `finance-automation` — each carries its own correct primary keyword.
+The task wording is "where relevant" — for these 19 it is not relevant. Consistent with every prior run.
+
+### Decision
+
+**No changes made.** This is a genuine no-op, independently verified — not an assumption carried over from Run 33. Meta fields sit at their length + integrity ceilings; without live GSC/Bing data there is no signal to target real low-CTR or striking-distance (pos 5–20) pages, and blind pattern edits are exactly what planted the fabricated stats that later required emergency scrubbing (Runs 31–32). Only the two skipped-data placeholders and this log entry were written.
+
+### IndexNow
+- Nothing submitted — no URLs changed, and no INDEXNOW_KEY available.
+
+### Recommendations for next run
+- **Data is the only remaining lever.** On-page meta is fully optimised; further blind rewrites risk CTR churn with nothing to steer them. Provide `.env` (`GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `BING_API_KEY`, `INDEXNOW_KEY`, `SITE_URL`) so runs can act on actual impressions/CTR/position.
+- **Body-content stat sweep still outstanding** (flagged since Run 32, out of this CTR loop's scope): several `painPoints[].description` fields still carry percentages — e.g. healthcare "up to 40% of their time on paperwork", ecommerce "~70% cart abandonment", government "funding cuts of nearly 30% since 2010", logistics "use 10% of telematics", construction/professional-services "repeat 70% of previous content". Some are general market context, some lean toward outcome claims. A dedicated content pass (not this loop) should verify or neutralise them per the HARD CONTENT RULES.
+- **Standing non-loop items** (project brain): submit sitemap to GSC (only ~5/95 indexed) and run Tier-1 backlink outreach — both dwarf any on-page meta tweak, neither is in this loop's scope.
+- Review `(2026)` year-anchor titles in Dec 2026 / Jan 2027 to roll to `(2027)`.
+
+---
+
 ## Run 33 — 2026-07-23
 
 **Mode:** Pattern-based (no `.env` / no API credentials)
