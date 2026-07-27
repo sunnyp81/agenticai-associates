@@ -2,6 +2,51 @@
 
 ---
 
+## Run 35 — 2026-07-27
+
+**Mode:** Pattern-based (no `.env` / no API credentials)
+**GSC data:** Skipped — no credentials (`.env` absent)
+**Bing data:** Skipped — no credentials
+**IndexNow:** Skipped — INDEXNOW_KEY not available
+**Pages changed:** 0 — clean run, nothing needed optimising
+**Build:** Not rebuilt (no source changes)
+
+### ⚠️ Pipeline recovery — Run 34 never reached the remote
+
+At container start this session, the repo was on a **detached HEAD** at `e0e6655` (Run 34's commit), while both `master` and `origin/master` were still at `3fef401` (Run 33). Run 34 committed its no-op artifacts (log entry + two skipped-data placeholders) but the commit was left orphaned on a detached HEAD and **was never pushed** — so Run 34's record was absent from GitHub. This run fast-forwarded `master` to `e0e6655` to recover it, then committed Run 35 on top. This push therefore ships **both** Run 34 and Run 35. If future runs keep firing from a detached HEAD, each run's commit will again fail to advance `master`/push — the scheduled job should check out `master` (not a detached HEAD) before committing.
+
+### Independent audit (source-derived, not trusting prior logs)
+
+Re-derived every page-level `title` / meta-`description` directly from source: `pages[].title/description` + `hub.title/description` across the five data files (`industries`, `what-we-do`, `locations`, `business-sizes`, `learn`), plus the literal `title=`/`const title =` / `description=` props on every static and `insights/*` `.astro` page. Excluded `heroSubtitle`, `painPoints[]`, `features[]`, `solutionSections[]` — those render in body copy, not meta, and are out of this loop's scope (Step 4: no H1/body changes).
+
+**104 meta rows audited (83 data-file + 21 static/insights). Hard checks — all pass:**
+- Title length 30–60 chars: **0 genuine violations** (data titles 44–59; static/insights within bounds; longest static `get-started` 60).
+- Description length ≤155 chars: **0 violations** (min 127, max 155 across data; all static ≤155).
+- Duplicate / near-duplicate titles: **0** — all unique across the whole site.
+- `agentic AI` present in relevant titles: yes across hubs/spokes/statics; the 19 `learn/*` + generative/conversational/data-AI pages correctly omit it (query-intent accuracy, not a defect) — unchanged from Run 34's reasoning.
+
+**5 heuristic flags raised — all verified false positives, no action:**
+- 4 × long strings on `industries/index`, `locations/index`, `what-we-do/index`, `learn/index` — these are `heroSubtitle` body props my grep caught, **not** the page `<title>` (which comes from `data.hub.title`, already clean). Out of scope.
+- 1 × `insights/smcr-ai-accountability` flagged at "18 chars" — a regex artefact: the title contains an escaped apostrophe (`Who\'s`) that truncated the match. Real title `SM&CR and AI: Who's Accountable When an Agent Goes Wrong?` = **57 chars**, in bounds.
+
+**Fabricated-stat regression scan (meta fields only):** none. No invented `%`, `Nx` ROI, payback-day, or "hours reclaimed" claims in any title/description. The Run 32 remediation (`c452384`) + emergency scrubs (`4a9c6ed`, `afc2454`) are still holding. Only legitimate offer facts remain (£6,500 fixed fee, 3-week diagnostic, 25 sectors, 22 cities, year anchors, listicle counts).
+
+### Decision
+
+**No content changes.** Independently verified no-op — meta sits at its length + integrity ceilings, and with no live GSC/Bing signal there is no way to target real low-CTR or striking-distance (pos 5–20) pages. Blind pattern edits are exactly what planted the fabricated stats that later required emergency scrubbing (Runs 31–32). The only writes this run: the pipeline recovery above, the two skipped-data placeholders, and this log entry.
+
+### IndexNow
+- Nothing submitted — no URLs changed, and no INDEXNOW_KEY available.
+
+### Recommendations for next run
+- **Fix the push step.** Confirm the scheduled job commits on `master`, not a detached HEAD — Run 34 was silently lost until this run recovered it. If runs keep starting detached, add `git checkout -B master origin/master` (or equivalent) before committing.
+- **Data is the only remaining on-page lever.** Provide `.env` (`GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY`, `BING_API_KEY`, `INDEXNOW_KEY`, `SITE_URL`) so runs can act on actual impressions/CTR/position instead of exhausted pattern heuristics.
+- **Body-content stat sweep still outstanding** (out of this CTR loop's scope, flagged since Run 32): several `painPoints[].description` fields still carry percentages (healthcare "up to 40%", ecommerce "~70% cart abandonment", government "nearly 30% since 2010", etc.). A dedicated content pass should verify or neutralise them per the HARD CONTENT RULES.
+- **Standing non-loop items** (project brain): submit sitemap to GSC (~5/95 indexed) and run Tier-1 backlink outreach — both dwarf any on-page meta tweak.
+- **Year anchors:** 22 titles carry `(2026)` / `2026`. Roll to `2027` in Dec 2026 / Jan 2027 — not yet due.
+
+---
+
 ## Run 34 — 2026-07-25
 
 **Mode:** Pattern-based (no `.env` / no API credentials)
