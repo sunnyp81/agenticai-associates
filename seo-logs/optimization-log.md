@@ -3760,3 +3760,43 @@ Priority pages remaining (64 more with issues):
 - GSC data pull for actual CTR/position data
 - Bing Webmaster indexed page counts
 - IndexNow submission after each run
+
+---
+
+## Run 36 — 2026-07-29
+
+### Data sources
+- **GSC:** skipped (no `.env` / service-account creds in repo). No live CTR or position data.
+- **Bing Webmaster:** skipped (no `BING_API_KEY`). No live index counts.
+- Optimisation this run is pattern-based only, per task rules.
+
+### Repo/deploy health finding (actioned)
+- **Prior two runs' commits were never published.** `origin/master` and local `master` were both stuck at `3fef401` (run 2026-07-23). The 2026-07-25 (`e0e6655`) and 2026-07-27 (`a2a89f0`) commits existed only in a detached-HEAD state and had never been pushed. Fast-forwarded `master` to `a2a89f0` so runs 34-35 get published alongside run 36. Root cause: the scheduled run ends in detached HEAD, so commits land off-branch and the push never reaches `origin/master`. **Recommend the schedule check out `master` explicitly at start of each run.**
+
+### Site title/meta audit (83 JSON-driven pages + static + insights)
+- All JSON-page titles are 44-59 chars (within 30-60), all descriptions ≤155 with a CTA, **zero duplicate titles**. 35 prior runs have exhausted the objective title/meta backlog on hub and spoke pages. No churn-worthy rewrites remained there.
+- Static pages (home, about, get-started, contact, insights hub) titles all 52-58 chars, healthy.
+
+### Pages optimised this run (2)
+Objective fix: meta descriptions over the 155-char SERP-truncation limit, both also containing an in-sentence em dash (banned by the 2026-07-20 hard content rules). Titles unchanged (both healthy).
+
+#### 1. `/insights/agent-studio-build-vs-buy/`
+- **Before desc (157):** `Compare 7 agent platforms on 12 criteria — LangGraph, Bedrock, Copilot Studio, Vertex AI and more. The scoring matrix for FCA-regulated UK firms. Read now.`
+- **After desc (152):** `Compare 7 agent platforms on 12 criteria: LangGraph, Bedrock, Copilot Studio, Vertex AI and more. A scoring matrix for FCA-regulated UK firms. Read now.`
+- **Fixes:** trimmed 5 chars under the 155 limit, em dash removed (replaced with colon), CTA retained.
+
+#### 2. `/insights/agentic-ai-report-generation-regulated/`
+- **Before desc (156):** `How regulated UK firms draft, review, and approve reports using agentic AI — with audit trail, provenance, and human-in-the-loop sign-off. Read the guide.`
+- **After desc (144):** `How UK regulated firms draft, review, and approve reports with agentic AI: audit trail, provenance, and human sign-off included. Read the guide.`
+- **Fixes:** trimmed 12 chars under the limit, em dash removed, CTA retained.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY` in environment.
+- URLs to submit on next credentialed run:
+  - https://agenticai.associates/insights/agent-studio-build-vs-buy/
+  - https://agenticai.associates/insights/agentic-ai-report-generation-regulated/
+
+### Recommendations for Run 37
+- **Fix the scheduler's detached-HEAD problem** so commits actually reach `origin/master` (see health finding). This is the single highest-value item — CTR work is worthless if it never deploys.
+- Provide `.env` with GSC + Bing + IndexNow creds to move off pattern-based guessing onto real CTR/position data. Without it, the objective backlog is essentially clear and further title churn risks harming stable pages.
+- Note: the sitewide ` — ` title *separator* is a deliberate brand convention on all 83 pages; it is intentionally NOT treated as a content-rule em-dash violation. Only in-prose em dashes are being removed.
