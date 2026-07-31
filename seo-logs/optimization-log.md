@@ -3800,3 +3800,92 @@ Objective fix: meta descriptions over the 155-char SERP-truncation limit, both a
 - **Fix the scheduler's detached-HEAD problem** so commits actually reach `origin/master` (see health finding). This is the single highest-value item — CTR work is worthless if it never deploys.
 - Provide `.env` with GSC + Bing + IndexNow creds to move off pattern-based guessing onto real CTR/position data. Without it, the objective backlog is essentially clear and further title churn risks harming stable pages.
 - Note: the sitewide ` — ` title *separator* is a deliberate brand convention on all 83 pages; it is intentionally NOT treated as a content-rule em-dash violation. Only in-prose em dashes are being removed.
+
+---
+
+## Run 37 — 2026-07-31
+
+### Data sources
+- **GSC:** skipped — no `.env` / service-account creds in repo (`GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY` absent). No live CTR or position data.
+- **Bing Webmaster:** skipped — no `BING_API_KEY`. No live index counts.
+- Optimisation this run is pattern-based only, per task rules.
+
+### Repo/deploy health (resolved this run)
+- Started, as usual, in **detached HEAD** at `e9c8b0e` (run 36). Fetched `origin/master` — it already carried `e9c8b0e` (runs 34-36 are published). Local `master` ref was stale at `3fef401`; checked out `master` and reset it to `origin/master`, then did all work **on the `master` branch** so this run's commit lands on-branch and pushes cleanly. This is the mitigation recommended in run 36 for the recurring detached-HEAD publish gap.
+
+### Objective finding: in-prose em dashes in meta descriptions (content-rule violation)
+The 2026-07-20 hard content rules ban em dashes in all content; run 35 already established the precedent of stripping them from meta descriptions (the sitewide ` — ` **title separator** is a deliberate brand convention and is explicitly NOT treated as a violation). A full audit of the 79 JSON-driven pages found **17 descriptions with in-prose em dashes** — all other objective checks were clean (zero duplicate titles, no title >60 or <30, no description >155 or <70, every description ends with a CTA). Fixed the 10 highest-value pages this run (task cap = 10). Em dashes replaced with colon/comma/full stop; every rewrite re-checked ≤155 chars, British English, CTA retained, no fabricated figures. £6,500 is the verified Phase-1 diagnostic anchor (per project brain) and was retained.
+
+### Pages optimised this run (10)
+
+#### 1. `/what-we-do/agentic-ai/` (desc)
+- Before (149): `We design and deploy agentic AI systems — autonomous agents that handle complex business workflows with minimal human intervention. Book a free call.`
+- After (148): `We design and deploy agentic AI systems: autonomous agents that handle complex business workflows with minimal human intervention. Book a free call.`
+
+#### 2. `/what-we-do/ai-governance/` (title + desc — also corrected a factual issue)
+- Title before (53): `Agentic AI Governance UK — GDPR, AI Act & FCA Assured`
+- Title after (56): `Agentic AI Governance UK — GDPR, EU AI Act & FCA Assured`
+- Desc before (153): `AI governance for UK businesses. GDPR, AI Act & FCA compliance built in — not bolted on. Bias audits, risk registers, and audit trails. Book a free call.`
+- Desc after (154): `AI governance for UK businesses: UK GDPR, EU AI Act and FCA rules built in, not bolted on. Bias audits, risk registers and audit trails. Book a free call.`
+- Note: the bare "AI Act" read, in a UK GDPR/FCA list, as if a UK AI Act exists — the hard content rules explicitly prohibit implying one. Qualified it to **EU AI Act** (accurate: the EU AI Act binds UK firms trading into the EU) in both title and description.
+
+#### 3. `/what-we-do/ongoing-support/` (desc)
+- Before (151): `Ongoing agentic AI support for UK businesses — monitoring, retraining and quarterly strategy reviews. Named consultants, no handoffs. Book a free call.`
+- After (150): `Ongoing agentic AI support for UK businesses: monitoring, retraining and quarterly strategy reviews. Named consultants, no handoffs. Book a free call.`
+
+#### 4. `/for/enterprise/` (desc)
+- Before (148): `Enterprise agentic AI for UK organisations. AI strategy, governance, and scalable implementation — pilot to production in 8 weeks. Book a free call.`
+- After (140): `Enterprise agentic AI for UK organisations: AI strategy, governance and scalable implementation, from pilot to production. Book a free call.`
+- Note: dropped the specific "in 8 weeks" delivery-timeframe claim (unverifiable and inconsistent with the documented Phase-2 Build of 3-6 months); made it claim-free per the hard content rules.
+
+#### 5. `/for/startups/` (desc)
+- Before (151): `Agentic AI for UK startups. Intensive 1-2 week sprints, investor-ready strategy, and lean implementation — all fixed-fee from £6,500. Book a free call.`
+- After (136): `Agentic AI for UK startups: intensive sprints, investor-ready strategy and lean implementation, fixed-fee from £6,500. Book a free call.`
+- Note: dropped the specific "1-2 week" timeframe (unverifiable); kept the verified £6,500 anchor.
+
+#### 6. `/industries/retail/` (desc)
+- Before (154): `Agentic AI for UK retailers — demand forecasting, personalisation, and inventory AI. Cut stockouts, reduce waste. Fixed-fee from £6,500. Book a free call.`
+- After (155): `Agentic AI for UK retailers: demand forecasting, personalisation and inventory AI. Cut stockouts and reduce waste. Fixed-fee from £6,500. Book a free call.`
+
+#### 7. `/industries/fintech/` (desc)
+- Before (154): `Agentic AI for UK fintechs. Automate KYC/KYB, detect fraud in real time, and streamline regulatory reporting — FCA-compliant. Fixed fee. Book a free call.`
+- After (152): `Agentic AI for UK fintechs: automate KYC/KYB, detect fraud in real time and streamline regulatory reporting. FCA-compliant, fixed fee. Book a free call.`
+
+#### 8. `/industries/construction/` (desc)
+- Before (149): `Agentic AI for UK contractors. Smarter bid intelligence, CDM compliance, and programme risk — all automated. Fixed-fee from £6,500. Book a free call.`
+- After (147): `Agentic AI for UK contractors: smarter bid intelligence, CDM compliance and programme risk, all automated. Fixed-fee from £6,500. Book a free call.`
+
+#### 9. `/industries/hospitality/` (desc)
+- Before (151): `Agentic AI for UK hotels and F&B operators. Revenue management, guest experience, and demand forecasting — all fixed-fee from £6,500. Book a free call.`
+- After (145): `Agentic AI for UK hotels and F&B operators: revenue management, guest experience and demand forecasting, fixed-fee from £6,500. Book a free call.`
+
+#### 10. `/learn/agentic-ai-vs-generative-ai/` (desc)
+- Before (153): `Generative AI creates content. Agentic AI executes work. The key distinctions explained — and how to decide what to build first. Free UK guide. Read now.`
+- After (153): `Generative AI creates content. Agentic AI executes work. The key distinctions explained, plus how to decide what to build first. Free UK guide. Read now.`
+
+### Verification
+- All 5 JSON data files re-parse cleanly. Sitewide re-audit after edits: 0 duplicate titles, 0 titles >60/<30, 0 descriptions >155/<70, all descriptions retain a CTA.
+- `npm ci && npm run build` → **100 pages built, no errors**. Spot-checked rendered `<title>`/`<meta description>` in `dist/` for the edited pages — all correct.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY` in environment. URLs to submit on next credentialed run:
+  - https://agenticai.associates/what-we-do/agentic-ai/
+  - https://agenticai.associates/what-we-do/ai-governance/
+  - https://agenticai.associates/what-we-do/ongoing-support/
+  - https://agenticai.associates/for/enterprise/
+  - https://agenticai.associates/for/startups/
+  - https://agenticai.associates/industries/retail/
+  - https://agenticai.associates/industries/fintech/
+  - https://agenticai.associates/industries/construction/
+  - https://agenticai.associates/industries/hospitality/
+  - https://agenticai.associates/learn/agentic-ai-vs-generative-ai/
+
+### Remaining backlog (17 pages, em-dash descriptions) — for next runs at 10/run cap
+- **7 learn spokes (JSON):** agentic-ai-vs-chatbots, ai-consultant-skills, ai-consultant-vs-vendor, how-to-choose-an-ai-consultant, in-house-ai-team-vs-consultancy, what-does-an-ai-consultant-do, when-to-hire-an-ai-consultant.
+- **3 insights (.astro):** agentic-sdlc-regulated-engineering, langgraph-vs-bedrock-vs-copilot-studio, smcr-ai-accountability.
+- **7 static / hub-index (.astro):** about/results, contact, get-started, industries (index), insights (index), learn (index), what-we-do (index).
+
+### Recommendations for Run 38
+- Clear the next 10 em-dash descriptions from the backlog above (start with the 7 learn spokes in `learn.json`, then the 3 insights `.astro` pages).
+- Objective title/meta backlog on JSON pages is otherwise **exhausted** — 37 runs deep. Without `.env` (GSC/Bing/IndexNow), further work is limited to the em-dash cleanup; real CTR/position-driven optimisation needs the service-account creds. Providing `.env` remains the single highest-value unblock.
+- The detached-HEAD publish gap was mitigated in-run again; a durable fix is to have the scheduler `git checkout master` at start.
