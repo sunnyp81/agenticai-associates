@@ -3889,3 +3889,88 @@ The 2026-07-20 hard content rules ban em dashes in all content; run 35 already e
 - Clear the next 10 em-dash descriptions from the backlog above (start with the 7 learn spokes in `learn.json`, then the 3 insights `.astro` pages).
 - Objective title/meta backlog on JSON pages is otherwise **exhausted** — 37 runs deep. Without `.env` (GSC/Bing/IndexNow), further work is limited to the em-dash cleanup; real CTR/position-driven optimisation needs the service-account creds. Providing `.env` remains the single highest-value unblock.
 - The detached-HEAD publish gap was mitigated in-run again; a durable fix is to have the scheduler `git checkout master` at start.
+
+---
+
+## Run 38 — 2026-08-01
+
+### Data sources
+- **GSC:** skipped — no `.env` / service-account creds (`GSC_SERVICE_ACCOUNT_EMAIL`, `GSC_PRIVATE_KEY` absent). No live CTR/position data.
+- **Bing Webmaster:** skipped — no `BING_API_KEY`. No live index counts.
+- Optimisation this run is pattern-based only, per task rules.
+
+### Repo/deploy health
+- Started in detached HEAD at `1885e13` (run 37). Fetched `origin/master` — it already carried `1885e13`, so runs 34-37 are all published. Checked out `master` (`git checkout -B master origin/master`) and did all work **on-branch** so this run's commit lands on `master` and pushes cleanly. Recurring detached-HEAD publish gap mitigated in-run again; durable fix remains: have the scheduler `git checkout master` at start of each run.
+
+### Objective finding: in-prose em dashes in meta descriptions (content-rule violation)
+Continued the em-dash cleanup from runs 35-37 (2026-07-20 hard content rules ban em dashes in content; the sitewide ` — ` **title separator** is a deliberate brand convention and is explicitly NOT a violation). Run 37 cleared 10 of a 17-page backlog; this run clears the next 10 (task cap = 10): the **7 learn spokes** in `learn.json` plus the **3 insights `.astro`** pages. Em dashes replaced with colon/comma/full stop; every rewrite re-checked ≤155 chars, British English, CTA retained, no fabricated figures introduced. Only the meta `description` field was touched on each page — titles, H1s and article body prose were left unchanged, per the task's "do not change body content" rule.
+
+### Pages optimised this run (10) — all description-only edits
+
+#### 1. `/learn/what-does-an-ai-consultant-do/` (153)
+- Before: `Learn what an AI consultant does day-to-day — strategy, delivery oversight, and team training. Practical guide for UK buyers. Fixed fee. Book a free call.`
+- After: `Learn what an AI consultant does day-to-day: strategy, delivery oversight, and team training. Practical guide for UK buyers. Fixed fee. Book a free call.`
+
+#### 2. `/learn/ai-consultant-skills/` (152)
+- Before: `The essential AI consultant skills for 2026 — technical, business, and soft skills — with proven steps to develop each one. Actionable UK guide. Read now.`
+- After: `The essential AI consultant skills for 2026: technical, business, and soft skills, with proven steps to develop each one. Actionable UK guide. Read now.`
+
+#### 3. `/learn/how-to-choose-an-ai-consultant/` (153)
+- Before: `How to choose the right AI consultant for your UK business — red flags, evaluation criteria, interview questions, and contract review checklist. Read now.`
+- After: `How to choose the right AI consultant for your UK business: red flags, evaluation criteria, interview questions, and contract review checklist. Read now.`
+
+#### 4. `/learn/when-to-hire-an-ai-consultant/` (153)
+- Before: `Not sure if you need an AI consultant? Here are 7 clear signs it's time to bring in expert help — with UK guidance on timing and budget. Book a free call.`
+- After: `Not sure if you need an AI consultant? Here are 7 clear signs it's time to bring in expert help, with UK guidance on timing and budget. Book a free call.`
+
+#### 5. `/learn/ai-consultant-vs-vendor/` (154)
+- Before: `Understand the difference between an AI consultant and a vendor. Learn when each makes sense and when to combine both — with our practical guide. Read now.`
+- After: `Understand the difference between an AI consultant and a vendor. Learn when each makes sense and when to combine both, with our practical guide. Read now.`
+
+#### 6. `/learn/agentic-ai-vs-chatbots/` (153)
+- Before: `Chatbots answer questions. Agentic AI agents complete tasks end-to-end. 5 differences, which to deploy first — guide for UK enterprise buyers. Read now.`
+- After: `Chatbots answer questions. Agentic AI agents complete tasks end-to-end. 5 differences, which to deploy first. A guide for UK enterprise buyers. Read now.`
+
+#### 7. `/learn/in-house-ai-team-vs-consultancy/` (150)
+- Before: `Build in-house AI or hire a consultancy? Compare full cost (£600k+ vs day rates), speed and risk — with a clear decision framework. UK guide. Read now.`
+- After: `Build in-house AI or hire a consultancy? Compare full cost (£600k+ vs day rates), speed and risk, with a clear decision framework. UK guide. Read now.`
+- Note: the pre-existing `£600k+` comparison figure was left as-is (not introduced this run); only the em dash was removed.
+
+#### 8. `/insights/agentic-sdlc-regulated-engineering/` (151)
+- Before: `How FCA-supervised firms ship software safely with AI agents — five-phase delivery framework, audit-trail design, SM&CR control mapping. Start building.`
+- After: `How FCA-supervised firms ship software safely with AI agents: five-phase delivery framework, audit-trail design, SM&CR control mapping. Start building.`
+
+#### 9. `/insights/langgraph-vs-bedrock-vs-copilot-studio/` (151)
+- Before: `Three agent platforms for FCA-regulated UK firms: LangGraph, Bedrock, and Copilot Studio — scored on audit fidelity, portability, and lock-in. Read now.`
+- After: `Three agent platforms for FCA-regulated UK firms: LangGraph, Bedrock, and Copilot Studio, scored on audit fidelity, portability, and lock-in. Read now.`
+
+#### 10. `/insights/smcr-ai-accountability/` (148)
+- Before: `Who's accountable when an AI agent fails? Practical SM&CR guidance for UK regulated firms — SMF responsibilities and attestation evidence. Read now.`
+- After: `Who's accountable when an AI agent fails? Practical SM&CR guidance for UK regulated firms: SMF responsibilities and attestation evidence. Read now.`
+
+### Verification
+- `learn.json` re-parses cleanly after 7 edits. All 3 insights `.astro` descriptions re-checked em-dash-free.
+- Sitewide re-audit: 0 duplicate page titles, 0 titles >60/<30, 0 edited descriptions >155/<70, all retain a CTA. (The 4 repeated *card/deliverable* labels — "Phased Roadmap", "Board-Ready Business Case", "Data Maturity Assessment", "Centre of Excellence Setup" — are internal component titles, not page `<title>` tags, and are unchanged.)
+- `npm ci && npm run build` → **100 pages built, no errors**. Spot-checked rendered `<meta name="description">` in `dist/` for edited pages — all correct and em-dash-free.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY` in environment. URLs to submit on next credentialed run:
+  - https://agenticai.associates/learn/what-does-an-ai-consultant-do/
+  - https://agenticai.associates/learn/ai-consultant-skills/
+  - https://agenticai.associates/learn/how-to-choose-an-ai-consultant/
+  - https://agenticai.associates/learn/when-to-hire-an-ai-consultant/
+  - https://agenticai.associates/learn/ai-consultant-vs-vendor/
+  - https://agenticai.associates/learn/agentic-ai-vs-chatbots/
+  - https://agenticai.associates/learn/in-house-ai-team-vs-consultancy/
+  - https://agenticai.associates/insights/agentic-sdlc-regulated-engineering/
+  - https://agenticai.associates/insights/langgraph-vs-bedrock-vs-copilot-studio/
+  - https://agenticai.associates/insights/smcr-ai-accountability/
+
+### Remaining backlog (7 pages, em-dash meta descriptions) — for next runs at 10/run cap
+- **4 hub/index (JSON):** learn index (`learn.json` line 4), what-we-do index (`what-we-do.json` line 4), industries index (`industries.json` line 4). (results/about-results, contact, get-started, insights index are `.astro` statics — re-audit their `description` consts next run.)
+- After this backlog is cleared, the objective title/meta backlog is fully exhausted (38 runs deep). Note: many insights `.astro` **article bodies** still contain in-prose em dashes, but those are body content and are explicitly out of scope for this CTR meta-optimisation loop (task rule: "Do NOT change H1s or body content").
+
+### Recommendations for Run 39
+- Clear the remaining ~7 hub/index + static meta descriptions (start with the 3 JSON hub indexes, then re-audit the static `.astro` pages' `description` consts).
+- **Provide `.env` (GSC + Bing + IndexNow creds)** — this remains the single highest-value unblock. Without live CTR/position data the objective backlog is nearly exhausted and further title churn on stable pages risks harm rather than gain. Real data would let this loop move from em-dash hygiene to genuine CTR-driven title/meta rewrites on striking-distance (pos 5-20) pages.
+- Durable fix for the detached-HEAD publish gap: scheduler should `git checkout master` at run start.
