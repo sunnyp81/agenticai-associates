@@ -3974,3 +3974,72 @@ Continued the em-dash cleanup from runs 35-37 (2026-07-20 hard content rules ban
 - Clear the remaining ~7 hub/index + static meta descriptions (start with the 3 JSON hub indexes, then re-audit the static `.astro` pages' `description` consts).
 - **Provide `.env` (GSC + Bing + IndexNow creds)** — this remains the single highest-value unblock. Without live CTR/position data the objective backlog is nearly exhausted and further title churn on stable pages risks harm rather than gain. Real data would let this loop move from em-dash hygiene to genuine CTR-driven title/meta rewrites on striking-distance (pos 5-20) pages.
 - Durable fix for the detached-HEAD publish gap: scheduler should `git checkout master` at run start.
+
+---
+
+## Run 39 — 2026-08-03
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-03 record the skip reason). This is the 8th consecutive credential-less run.
+
+**Work:** Cleared the final 7 pages of the em-dash meta-description backlog carried since Run 35 (the 2026-07-20 hard content rules ban em dashes in *content*; the sitewide ` — ` **title separator** is a deliberate brand convention and is explicitly NOT a violation, so page `<title>` tags were left untouched). Only the `<meta name="description">` value was changed on each page. Titles, H1s and body prose left unchanged per the task's "do not change H1s or body content" rule. Em dashes replaced with a colon or comma; every rewrite re-checked ≤155 chars, British English, CTA retained, no fabricated figures introduced. Under the 10-page cap (7 edited).
+
+### Pages optimized
+
+**JSON hub indexes (`src/data/`)**
+
+1. `/learn/` (`learn.json` L4) — 154 chars
+   - Before: `16 practical guides on AI consulting — what consultants do, how to hire one, salary data, certifications and career paths. Updated for 2026. Start reading.`
+   - After:  `16 practical guides on AI consulting: what consultants do, how to hire one, salary data, certifications and career paths. Updated for 2026. Start reading.`
+
+2. `/what-we-do/` (`what-we-do.json` L4) — 153 chars
+   - Before: `Agentic AI services for UK mid-market businesses. Strategy, build, and live support — all fixed-fee from £6,500. FCA, GDPR & NHS ready. Book a free call.`
+   - After:  `Agentic AI services for UK mid-market businesses. Strategy, build, and live support, all fixed-fee from £6,500. FCA, GDPR & NHS ready. Book a free call.`
+
+3. `/industries/` (`industries.json` L4) — 151 chars
+   - Before: `Agentic AI consultancy across 25 UK sectors — from healthcare and fintech to manufacturing and government. All fixed-fee from £6,500. Book a free call.`
+   - After:  `Agentic AI consultancy across 25 UK sectors, from healthcare and fintech to manufacturing and government. All fixed-fee from £6,500. Book a free call.`
+
+**Static `.astro` pages (`src/pages/`)**
+
+4. `/get-started/` (L45) — 145 chars
+   - Before: `Start your agentic AI journey. £6,500 fixed-fee diagnostic in 3 weeks delivers a board-ready roadmap — then build at £850/day. Book a free call.`
+   - After:  `Start your agentic AI journey. £6,500 fixed-fee diagnostic in 3 weeks delivers a board-ready roadmap, then build at £850/day. Book a free call.`
+
+5. `/contact/` (L13) — 154 chars
+   - Before: `Speak to Agentic AI Associates — UK ops-AI consultancy for FCA-regulated and PE-backed mid-market firms. Book a 30-minute free call or drop us a message.`
+   - After:  `Speak to Agentic AI Associates, a UK ops-AI consultancy for FCA-regulated and PE-backed mid-market firms. Book a 30-minute free call or drop us a message.`
+
+6. `/about/results/` (L13) — 140 chars
+   - Before: `Agentic AI outcomes from UK client engagements. Measurable ROI, time saved, and process gains — all fixed-fee from £6,500. Book a free call.`
+   - After:  `Agentic AI outcomes from UK client engagements. Measurable ROI, time saved, and process gains, all fixed-fee from £6,500. Book a free call.`
+
+7. `/insights/` (L76) — 151 chars
+   - Before: `Original thinking for UK firms deploying agentic AI — governance, frameworks, and reference architectures. FCA, SM&CR, and Consumer Duty. Start reading.`
+   - After:  `Original thinking for UK firms deploying agentic AI: governance, frameworks, and reference architectures. FCA, SM&CR, and Consumer Duty. Start reading.`
+
+### Verification
+- All 3 JSON files re-parse cleanly. 0 em dashes remain in any of the 7 edited meta descriptions.
+- Sitewide audit: top-level page meta descriptions across all industry/what-we-do/business-size/location spokes are now em-dash-free. Confirmed via page-factory that the remaining em-dash `description` strings (e.g. `industries.json` painPoints/intro arrays) are **body content** rendered inside the page, not `<meta name="description">` — out of scope per the task rule. No dedicated `metaDescription`/`seoDescription` fields carry em dashes.
+- The 4 repeated `"title"` strings ("Phased Roadmap", "Board-Ready Business Case", "Data Maturity Assessment", "Centre of Excellence Setup") are internal deliverable-card component labels, not page `<title>` tags — unchanged, not duplicates.
+- `npm ci && npm run build` → **100 pages built, no errors.** Spot-checked rendered `dist/` `<meta name="description">` for /get-started/, /contact/, /insights/ — all correct and em-dash-free.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR/position/impression data available this run.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY` in environment. URLs to submit on the next credentialed run:
+  - https://agenticai.associates/learn/
+  - https://agenticai.associates/what-we-do/
+  - https://agenticai.associates/industries/
+  - https://agenticai.associates/get-started/
+  - https://agenticai.associates/contact/
+  - https://agenticai.associates/about/results/
+  - https://agenticai.associates/insights/
+
+### Backlog status
+- **Objective title/meta em-dash backlog is now fully exhausted** (39 runs deep). Every page-level `<title>` and `<meta name="description">` on the site is compliant: titles ≤60/≥30, descriptions ≤155, unique, CTA-bearing, em-dash-free in the description body. There is no remaining pattern-based meta work that would improve rather than churn.
+
+### Recommendations for Run 40
+- **Provide `.env` (GSC + Bing + IndexNow creds) — now the ONLY way this loop adds value.** The objective backlog is empty; without live CTR/position data, further title/meta edits on stable, compliant pages would be churn that risks harm, not gain. Real GSC data would let the loop move to genuine CTR-driven rewrites on striking-distance (pos 5-20) pages and weak-CTR (<3%, >50 impressions) pages — the work Steps 3-4 are actually designed for.
+- Until creds are supplied, future runs should log "no objective work; awaiting `.env`" and exit cleanly rather than manufacture edits.
+- Body-prose em dashes in insight article bodies and JSON painPoints/intro arrays remain (by design out of this loop's scope). If desired, that is a separate one-off content-hygiene pass, not part of the CTR meta loop.
