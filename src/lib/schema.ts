@@ -58,7 +58,7 @@ export function buildPersonSchema() {
     url: siteConfig.founder.personalUrl,
     sameAs: [
       siteConfig.founder.personalUrl,
-      'https://www.linkedin.com/in/sunnypatel',
+      'https://www.linkedin.com/in/sunny-patel-co-uk/',
     ],
     worksFor: {
       '@type': 'Organization',
