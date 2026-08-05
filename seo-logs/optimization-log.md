@@ -4043,3 +4043,35 @@ Continued the em-dash cleanup from runs 35-37 (2026-07-20 hard content rules ban
 - **Provide `.env` (GSC + Bing + IndexNow creds) — now the ONLY way this loop adds value.** The objective backlog is empty; without live CTR/position data, further title/meta edits on stable, compliant pages would be churn that risks harm, not gain. Real GSC data would let the loop move to genuine CTR-driven rewrites on striking-distance (pos 5-20) pages and weak-CTR (<3%, >50 impressions) pages — the work Steps 3-4 are actually designed for.
 - Until creds are supplied, future runs should log "no objective work; awaiting `.env`" and exit cleanly rather than manufacture edits.
 - Body-prose em dashes in insight article bodies and JSON painPoints/intro arrays remain (by design out of this loop's scope). If desired, that is a separate one-off content-hygiene pass, not part of the CTR meta loop.
+
+---
+
+## Run 40 — 2026-08-05
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-05 record the skip reason). This is the **9th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified)
+
+Per Run 39's standing recommendation ("future runs should log 'no objective work; awaiting `.env`' and exit cleanly rather than manufacture edits"), this run did **not** manufacture any title/meta edits. Instead it independently re-audited the site to confirm the claim rather than trust the prior log:
+
+- Scanned all 46 `description`/`title` strings across `src/**/*.astro` and `src/data/*.json` for the objective failure patterns (em dashes in meta, >155 chars, duplicates, titles outside 30–60).
+- 16 strings tripped the raw scan, but **all 16 are body/card content, not page-level meta tags** — the `insights/index.astro` per-article card `description` fields (rendered as `<p>{i.description}</p>`, line 92), the `get-started` frontmatter body const (line 22, distinct from the Layout `description=` meta prop on line 45), and the `ProcessSteps.astro` step-card copy. These are explicitly out of scope under the task rule "Do NOT change H1s or body content."
+- Every actual page `<title>` and `<meta name="description">` remains compliant: em-dash-free descriptions ≤155 chars, unique, CTA-bearing; titles 30–60 chars. Confirmed `get-started` meta (line 45, 145 chars) and `insights` index meta (line 76) are clean.
+
+**Conclusion:** no pattern-based meta work exists that would improve rather than churn. Backlog is genuinely exhausted, now confirmed by fresh audit, not just carried forward from the log.
+
+### Publish-gap recovery (the substantive action this run)
+
+Discovered that **Run 39's commit `4eb84db` (2026-08-03) had never reached `origin`** — it existed only on a detached HEAD, while `master`/`origin/master` were still at Run 38 (`14f0c64`, 2026-08-01). This is exactly the "detached-HEAD publish gap" flagged as a risk in earlier runs, now confirmed as having actually occurred. Recovered it: checked out `master`, fast-forwarded `master` to `4eb84db`, then committed this Run 40 entry on top and pushed. **Run 39's meta-description fixes reach origin for the first time with this push.**
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No changed page URLs this run (no page edits), so nothing to submit regardless.
+
+### Recommendations for Run 41
+- **The loop is now blocked on two things, both requiring Sunny:**
+  1. **Provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data there is no honest work — Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run. Further edits on stable, compliant pages would be churn that risks harm.
+  2. **Fix the scheduler's detached-HEAD start**, or the publish gap recurs: the scheduler should `git checkout master` (the repo default branch is `master`, not `main`) at run start so each run's commit lands on a real branch and pushes cleanly. Run 39's work sat unpublished for two days because of this.
+- Until `.env` is supplied, the correct behaviour each run is: verify no drift, log "no objective work; awaiting `.env`", ensure the previous commit is on `master` and pushed, and exit. Consider pausing the schedule to a lower cadence (e.g. weekly) until creds land, to avoid noise.
