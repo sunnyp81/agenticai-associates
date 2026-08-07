@@ -4075,3 +4075,34 @@ Discovered that **Run 39's commit `4eb84db` (2026-08-03) had never reached `orig
   1. **Provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data there is no honest work — Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run. Further edits on stable, compliant pages would be churn that risks harm.
   2. **Fix the scheduler's detached-HEAD start**, or the publish gap recurs: the scheduler should `git checkout master` (the repo default branch is `master`, not `main`) at run start so each run's commit lands on a real branch and pushes cleanly. Run 39's work sat unpublished for two days because of this.
 - Until `.env` is supplied, the correct behaviour each run is: verify no drift, log "no objective work; awaiting `.env`", ensure the previous commit is on `master` and pushed, and exit. Consider pausing the schedule to a lower cadence (e.g. weekly) until creds land, to avoid noise.
+
+---
+
+## Run 41 — 2026-08-07
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-07 record the skip reason). This is the **10th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified)
+
+Per the standing recommendation from Runs 39–40, this run did **not** manufacture title/meta edits. It independently re-audited rather than trust the prior log, with particular attention to whether the `about:` / `schema.ts` commits pushed to `origin/master` since Run 40 (`382825a`) introduced any new meta drift:
+
+- Scanned all `.astro` `description=` meta props and JSON `description`/`metaDescription`/`seoDescription` fields for em dashes, over-length, and duplicate/near-duplicate titles.
+- **Zero em dashes** in any page-level `<meta name="description">` prop (`.astro`) or in any `metaDescription`/`seoDescription` field. The ~28 JSON `"description"` strings that trip a raw em-dash grep are all **body/card content** (industry painPoints, what-we-do feature cards, deliverable-card copy) rendered inside the page, not meta tags — out of scope per the task rule "Do NOT change H1s or body content." This matches the ruling held consistently since Run 35.
+- Files changed on `origin/master` since Run 40 (excluding `seo-logs/`): `CLAUDE.md`, `src/lib/schema.ts`, `src/pages/about/index.astro` — the partner-attribution / brain-update commits, none of which are SEO meta churn. Verified the one page-level meta they could have touched: `/about/` `<meta name="description">` = 155 chars, em-dash-free, contains "agentic" and a "Book a free call." CTA. Compliant.
+
+**Conclusion:** no pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted, confirmed by fresh audit including the newest commits.
+
+### Git hygiene
+- Session started on a **detached HEAD** at `6642a0b` (= `origin/master` tip). Recovered by checking out `master` and fast-forwarding it 8 commits to `origin/master`, so this run's commit lands on a real branch and pushes cleanly. No unpublished work was stranded this time — Run 39 (`4eb84db`) and Run 40 (`382825a`) are both confirmed present in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 42
+- **The loop remains blocked on two Sunny-only items** (unchanged from Run 40, now 10 runs deep):
+  1. **Provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and further edits on stable, compliant pages would be churn that risks harm.
+  2. **Fix the scheduler's detached-HEAD start** — have the scheduler `git checkout master` at run start (repo default branch is `master`, not `main`). Recovered manually again this run.
+- **Strongly consider dropping this schedule to weekly (or pausing it)** until `.env` lands. Ten consecutive no-op runs produce log noise for no SEO gain; a lower cadence would preserve the drift-check safety net without the daily churn.
