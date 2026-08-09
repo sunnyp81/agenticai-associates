@@ -4106,3 +4106,38 @@ Per the standing recommendation from Runs 39–40, this run did **not** manufact
   1. **Provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and further edits on stable, compliant pages would be churn that risks harm.
   2. **Fix the scheduler's detached-HEAD start** — have the scheduler `git checkout master` at run start (repo default branch is `master`, not `main`). Recovered manually again this run.
 - **Strongly consider dropping this schedule to weekly (or pausing it)** until `.env` lands. Ten consecutive no-op runs produce log noise for no SEO gain; a lower cadence would preserve the drift-check safety net without the daily churn.
+
+---
+
+## Run 42 — 2026-08-09
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-09 record the skip reason). This is the **11th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified, with a miscount averted)
+
+Per the standing recommendation from Runs 39–41, this run did **not** manufacture title/meta edits. It independently re-audited rather than trust the prior log:
+
+- **Meta descriptions:** zero em dashes in any page-level `<meta name="description">` prop (`.astro`) or in any `metaDescription`/`seoDescription` field. Confirmed via `grep` over `src/**/*.astro` and `src/data/*.json`.
+- **Titles:** 79 slug-level page titles across `src/data/*.json`, **all unique** (no duplicates/near-duplicates), and **all ≤60 characters** when counted correctly.
+- **Byte-vs-char miscount averted:** a raw `awk length()` scan flagged the ecommerce industry title as "61 chars" and a candidate for trimming. On inspection this was a **UTF-8 artifact** — `awk` counted the em-dash separator (`—`) as 3 bytes. The true character length is **59** (`python3 len()`), i.e. compliant. Every industry title is 48–59 chars. No title needs trimming; editing one off a miscount would have been exactly the churn this loop is told to avoid.
+
+### Em dashes in `<title>` separators — considered, deliberately left unchanged
+Noted explicitly so it is on record as a decision, not an oversight: ~40 page `<title>` tags use `" — "` as the title separator (e.g. `Agentic AI for UK Ecommerce — Boost Conversions & Cut Costs`). This is the site's consistent **house style** for titles, unchanged since well before this loop began — it is not new drift. The 2026-07-20 "no em dashes" hard rule has been scoped by every prior run to **body/description prose**, where em dashes read as filler; a title separator is structural, not prose. Swapping the separator across ~40 titles carries **no plausible CTR benefit** (Google rewrites/normalises title separators anyway) and, with no GSC data to signal underperformance, would be a large cosmetic sitewide change with churn risk and zero measured upside. **Deferred to a Sunny decision** (house-style call), not actioned autonomously.
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started on a **detached HEAD** at `5782a6c` (= Run 41 commit, already on `origin/master`). Recovered by `git checkout -B master origin/master`, so this run's commit lands on a real branch and pushes cleanly. No unpublished work was stranded — Runs 39–41 are all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 43
+- **The loop remains blocked on two Sunny-only items** (unchanged since Run 40, now 11 runs deep):
+  1. **Provide `.env` (GSC + Bing + IndexNow creds).** The only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and further edits on stable, compliant pages would be churn that risks harm.
+  2. **Fix the scheduler's detached-HEAD start** — have the scheduler `git checkout master` at run start (repo default branch is `master`). Recovered manually again this run.
+- **One optional content decision for Sunny:** whether to swap the `" — "` title separator house style for a hyphen/pipe to satisfy the no-em-dash rule literally. Low priority, cosmetic, no CTR evidence either way — bundle it with a broader content-hygiene pass if ever done, don't drip-feed it.
+- **Strongly reiterate: drop this schedule to weekly or pause it** until `.env` lands. Eleven consecutive no-op runs produce log noise for no SEO gain; weekly cadence preserves the drift-check safety net without daily churn.
