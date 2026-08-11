@@ -4141,3 +4141,33 @@ Noted explicitly so it is on record as a decision, not an oversight: ~40 page `<
   2. **Fix the scheduler's detached-HEAD start** — have the scheduler `git checkout master` at run start (repo default branch is `master`). Recovered manually again this run.
 - **One optional content decision for Sunny:** whether to swap the `" — "` title separator house style for a hyphen/pipe to satisfy the no-em-dash rule literally. Low priority, cosmetic, no CTR evidence either way — bundle it with a broader content-hygiene pass if ever done, don't drip-feed it.
 - **Strongly reiterate: drop this schedule to weekly or pause it** until `.env` lands. Eleven consecutive no-op runs produce log noise for no SEO gain; weekly cadence preserves the drift-check safety net without daily churn.
+
+---
+
+## Run 43 — 2026-08-11
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-11 record the skip reason). This is the **12th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified)
+
+Per the standing recommendation from Runs 39–42, this run did **not** manufacture title/meta edits. It independently re-audited rather than trust the prior log:
+
+- **Meta descriptions:** zero em dashes in any page-level `<meta name="description">` prop (`.astro`) or in any `metaDescription`/`seoDescription` field. Confirmed via `grep` over `src/**/*.astro` and `src/data/*.json`.
+- **Titles:** the raw duplicate-title scan flagged four strings — "Phased Roadmap", "Board-Ready Business Case", "Data Maturity Assessment", "Centre of Excellence Setup". On inspection these are `deliverables[].title` **feature-card copy** in `what-we-do.json` (e.g. lines 53/57 and 220/228), deliberately repeated across two spoke pages as card headings. They are **not** page-level `<title>` tags and are out of scope under "Do NOT change H1s or body content." No actual page `<title>` is duplicated.
+- No page-level meta drift from any objective failure pattern (em dash in meta, >155-char description, title outside 30–60, duplicate `<title>`).
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started **on `master`** (not detached this time), with `HEAD == origin/master == 2927d86` (the Run 42 commit). No new non-SEO commits landed on `origin/master` since Run 42, and no unpublished work was stranded. This run's commit lands cleanly on `master`.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 44
+- **The loop remains blocked on the same Sunny-only item, now 12 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and further edits on stable, compliant pages would be churn that risks harm.
+- **Strongly reiterate: drop this schedule to weekly or pause it** until `.env` lands. Twelve consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
+- The `" — "` title-separator house-style question (raised Run 42) remains a deferred, low-priority Sunny cosmetic decision — no CTR evidence either way; do not drip-feed it.
