@@ -4171,3 +4171,32 @@ Per the standing recommendation from Runs 39–42, this run did **not** manufact
 - **The loop remains blocked on the same Sunny-only item, now 12 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. The objective em-dash/length/dedup backlog is empty; without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and further edits on stable, compliant pages would be churn that risks harm.
 - **Strongly reiterate: drop this schedule to weekly or pause it** until `.env` lands. Twelve consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
 - The `" — "` title-separator house-style question (raised Run 42) remains a deferred, low-priority Sunny cosmetic decision — no CTR evidence either way; do not drip-feed it.
+
+---
+
+## Run 44 — 2026-08-13
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-13 record the skip reason). This is the **13th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified)
+
+The source tree is **byte-identical to Run 43's commit `b80073c`** (`git diff --stat b80073c -- src/` is empty), so nothing has drifted since the last audit. Re-verified from first principles regardless:
+
+- **Meta descriptions:** zero em dashes in any page-level `<meta name="description">` prop (`.astro`) or in any `metaDescription`/`seoDescription` field.
+- **Titles:** 79 slug-level page titles across `src/data/*.json`, **all unique** and **all ≤60 characters**. Zero >60, zero duplicates.
+- Em dashes that do appear are confined to (a) `deliverables[].description` / `problem` **body-copy** fields rendered as visible page content, and (b) the `" — "` **title separator** house style. Both are out of scope: body copy is protected by "Do NOT change H1s or body content," and the title separator is a pre-existing house-style call already deferred to Sunny (Runs 42–43).
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started on a **detached HEAD** at `b80073c` (= Run 43 commit, already on `origin/master`; `HEAD == origin/master`). Recovered by `git checkout -B master origin/master` so this run's commit lands on a real branch and pushes cleanly. No unpublished work stranded — Runs 39–43 all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 45
+- **The loop remains blocked on the same Sunny-only item, now 13 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. Without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
+- **Pause or drop this schedule to weekly until `.env` lands.** Thirteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn. The log recommendations have gone unactioned for 12 runs because they only live in an unread session log — this run additionally sends a push notification so the blocker actually reaches Sunny.
