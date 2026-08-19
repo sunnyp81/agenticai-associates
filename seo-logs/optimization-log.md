@@ -4260,3 +4260,33 @@ The source tree is **byte-identical to Run 45's commit `10cbc45`** (`git diff --
 - **The loop remains blocked on the same Sunny-only item, now 15 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. Without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
 - **Pause or drop this schedule to weekly until `.env` lands.** Fifteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of the identical, unchanged `.env` blocker; Run 45 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise, not signal. The next notification should fire only when the blocker changes (creds land → resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 47 — 2026-08-19
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-19 record the skip reason). This is the **16th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified)
+
+The source tree is **byte-identical to Run 46's commit `df76212`** (`git diff --stat df76212 -- src/` is empty), so nothing has drifted since the last audit. Re-verified from first principles regardless:
+
+- **Meta descriptions:** zero em dashes in any page-level `description=` prop across `src/**/*.astro`, and zero in any `metaDescription`/`seoDescription` field in `src/data/*.json`. Confirmed via `grep`.
+- **Titles:** 271 title-ish strings scanned across `src/data/*.json`; **zero >60 characters**. The four strings a raw duplicate scan flags — "Data Maturity Assessment", "Phased Roadmap", "Board-Ready Business Case", "Centre of Excellence Setup" — are `deliverables[].title` **feature-card copy** in `what-we-do.json`, deliberately repeated across two spoke pages as card headings. They are **not** page-level `<title>` tags and are out of scope under "Do NOT change H1s or body content." No actual page `<title>` is duplicated or over-length.
+- The `" — "` **title separator** house style remains a deferred Sunny cosmetic call (Runs 42–46).
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started **on `master`** (not detached this run) at `df76212` (= Run 46 commit), with `HEAD == origin/master` (fetched and confirmed this run). Clean state, commit lands and pushes cleanly. No unpublished work stranded — Runs 39–46 all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 48
+- **The loop remains blocked on the same Sunny-only item, now 16 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. Without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
+- **Pause or drop this schedule to weekly until `.env` lands.** Sixteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of the identical, unchanged `.env` blocker; Runs 45–46 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise, not signal. The next notification should fire only when the blocker changes (creds land → resume live optimisation) or a genuine new issue appears.
