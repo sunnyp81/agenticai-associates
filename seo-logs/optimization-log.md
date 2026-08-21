@@ -4290,3 +4290,33 @@ The source tree is **byte-identical to Run 46's commit `df76212`** (`git diff --
 - **The loop remains blocked on the same Sunny-only item, now 16 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** This is the only way the loop adds value. Without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
 - **Pause or drop this schedule to weekly until `.env` lands.** Sixteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of the identical, unchanged `.env` blocker; Runs 45–46 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise, not signal. The next notification should fire only when the blocker changes (creds land → resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 48 — 2026-08-21
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-21 record the skip reason). This is the **17th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified)
+
+Source tree is **byte-identical to Run 47's commit `2eac94d`** (`git diff --stat 2eac94d -- src/` empty), so nothing has drifted. Re-verified from first principles anyway:
+
+- **Meta descriptions:** zero em dashes in any `description=` prop across `src/**/*.astro`, and zero in any `metaDescription`/`seoDescription` field in `src/data/*.json` (grep-confirmed).
+- **Titles:** every `title`/`seoTitle`/`metaTitle`/`pageTitle` string across `src/data/*.json` scanned — **zero >60 characters**. The four strings a raw duplicate scan flags ("Data Maturity Assessment", "Phased Roadmap", "Board-Ready Business Case", "Centre of Excellence Setup") are `deliverables[].title` **feature-card copy**, deliberately repeated as card headings — **not** page-level `<title>` tags, and out of scope under "Do NOT change H1s or body content." No actual page `<title>` is duplicated or over-length.
+- The `" — "` **title separator** house style remains a deferred Sunny cosmetic call (Runs 42–47).
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started on a **detached HEAD** at `2eac94d` (= Run 47 commit, already on `origin/master`). Recovered by checking out `master` and hard-syncing to `origin/master` so this run's commit lands on a real branch and pushes cleanly. No unpublished work stranded — Runs 39–47 all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 49
+- **Loop remains blocked on the same Sunny-only item, now 17 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
+- **Pause or drop this schedule to weekly until `.env` lands.** Seventeen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45–47 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise. The next notification should fire only when the blocker changes (creds land → resume live optimisation) or a genuine new issue appears.
