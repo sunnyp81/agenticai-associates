@@ -4320,3 +4320,33 @@ Source tree is **byte-identical to Run 47's commit `2eac94d`** (`git diff --stat
 - **Loop remains blocked on the same Sunny-only item, now 17 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3–4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
 - **Pause or drop this schedule to weekly until `.env` lands.** Seventeen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45–47 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise. The next notification should fire only when the blocker changes (creds land → resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 49 — 2026-08-23
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-23 record the skip reason). This is the **18th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified from first principles)
+
+Source tree is **byte-identical to Run 48's commit `5239d0f`** (`git diff --stat 5239d0f -- src/` empty), so nothing has drifted. Re-verified anyway, not trusting the prior log:
+
+- **Meta descriptions:** zero em dashes in any `description=` prop across `src/**/*.astro` (grep count 0), and zero in any `metaDescription`/`seoDescription` field in `src/data/*.json`.
+- **Titles:** every `title`/`seoTitle`/`metaTitle`/`pageTitle` string across `src/data/*.json` scanned with a **unicode-aware** Python length check — **zero >60 characters**. (Note for future runs: a raw `awk`/byte count flags several titles as "61" because the `—` em dash is 3 UTF-8 bytes; their true character length is 59. Use character length, not byte length, when auditing title length.)
+- The 13 `"description"` fields that a broad grep surfaces with em dashes are all `deliverables[].description` and `problem` **body-copy** fields (industries.json problem statements, what-we-do.json deliverable blurbs) rendered as visible page content. These are out of scope under Step 4's "Do NOT change H1s or body content." The `" — "` **title separator** house style remains a deferred Sunny cosmetic call (Runs 42-48).
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started on a **detached HEAD** at `5239d0f` (= Run 48 commit, already on `origin/master`; `HEAD == origin/master`, fetched and confirmed this run). Recovered by checking out `master` and syncing to `origin/master` so this run's commit lands on a real branch and pushes cleanly. No unpublished work stranded — Runs 39-48 all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 50
+- **Loop remains blocked on the same Sunny-only item, now 18 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
+- **Pause or drop this schedule to weekly until `.env` lands.** Eighteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-48 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
