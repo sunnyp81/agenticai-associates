@@ -140,7 +140,7 @@ import { siteConfig } from '@/data/site-config';
       submitBtn.textContent = 'Sending...';
 
       try {
-        await fetch('https://api.staticforms.xyz/submit', {
+        await fetch('https://emailit-worker.sunnypat81.workers.dev/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
