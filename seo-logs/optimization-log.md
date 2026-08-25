@@ -4350,3 +4350,38 @@ Source tree is **byte-identical to Run 48's commit `5239d0f`** (`git diff --stat
 - **Loop remains blocked on the same Sunny-only item, now 18 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
 - **Pause or drop this schedule to weekly until `.env` lands.** Eighteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-48 correctly stayed silent for the same reason. Re-pinging an unchanged condition is notification noise. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 50 — 2026-08-25
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-25 record the skip reason). This is the **19th consecutive credential-less run**.
+
+### One new human commit since Run 49 — not SEO-relevant
+
+Unlike Runs 46-49 (byte-identical source trees), the tree changed since Run 49's commit `5239d0f`: a human commit `7a106cd` ("Replace StaticForms with emailit-worker") touched a **single file**, `src/components/ContactForm.astro` (`git diff --stat 5239d0f..HEAD -- src/` shows only that one line changed). This is a **contact-form backend swap** (StaticForms free tier is being cut to 250/mo on 31 Aug 2026), not a title/meta/content change. It creates no SEO backlog: no new pages, no title or meta-description edits, no over-length or duplicate strings introduced.
+
+### No objective work performed — backlog exhausted (independently re-verified from first principles)
+
+Re-verified this run, not trusting the prior log:
+
+- **Meta descriptions:** zero em dashes in any page-level `description=` prop across `src/**/*.astro` (grep count 0), and zero in any `metaDescription`/`seoDescription` field in `src/data/*.json`.
+- **Titles:** every `title`/`seoTitle`/`metaTitle`/`pageTitle` string across `src/data/*.json` scanned with a **unicode-aware** (character, not byte) length check — **zero >60 characters**. (Reminder for future runs: a raw byte count over-reports because `—` is 3 UTF-8 bytes; use character length.)
+- No new pages were added that would need titles/metas (only the ContactForm backend file changed).
+- The `" — "` **title separator** house style remains a deferred Sunny cosmetic call (Runs 42-49).
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started on a **detached HEAD** at `7a106cd` (= the new human commit, already on `origin/master`; `HEAD == origin/master`, fetched and confirmed this run). Recovered by checking out `master` and syncing to `origin/master` so this run's commit lands on a real branch and pushes cleanly. No unpublished work stranded — Runs 39-49 all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 51
+- **Loop remains blocked on the same Sunny-only item, now 19 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
+- **Pause or drop this schedule to weekly until `.env` lands.** Nineteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-49 correctly stayed silent for the same reason. The one change this run (the contact-form backend swap) is a routine, intentional human commit, not an SEO issue or something Sunny doesn't already know. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
