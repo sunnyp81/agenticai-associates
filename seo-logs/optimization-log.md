@@ -4385,3 +4385,34 @@ Re-verified this run, not trusting the prior log:
 - **Loop remains blocked on the same Sunny-only item, now 19 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
 - **Pause or drop this schedule to weekly until `.env` lands.** Nineteen consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-49 correctly stayed silent for the same reason. The one change this run (the contact-form backend swap) is a routine, intentional human commit, not an SEO issue or something Sunny doesn't already know. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 51 — 2026-08-27
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-08-27 record the skip reason). This is the **20th consecutive credential-less run**.
+
+### No objective work performed — backlog exhausted (independently re-verified from first principles)
+
+Source tree is **byte-identical to Run 50's base commit `7a106cd`** (`git diff --stat 7a106cd -- src/` empty; the only commit above it, `8531207`, is Run 50's log-only commit). Nothing has drifted. Re-verified this run with a fresh unicode-aware audit rather than trusting the prior log:
+
+- **Titles (page-level):** every `title`/`seoTitle`/`metaTitle`/`pageTitle` string across `src/data/*.json` scanned with a **character-length** (not byte-length) check — **0 over 60 chars**, **0 duplicate page titles**. The 4 strings a raw dedup flags ("Centre of Excellence Setup", "Data Maturity Assessment", "Phased Roadmap", "Board-Ready Business Case") are `deliverables[].title` feature-card copy deliberately repeated across two spoke pages — not page `<title>` tags. The 126 strings under 30 chars are all `deliverables[].title` / `problem[].title` feature-card and problem-statement body copy (e.g. "Administrative overload", "Quick Wins First"), out of scope under Step 4's "Do NOT change H1s or body content."
+- **Meta descriptions:** **0 em dashes** in any page-level `description=` prop across `src/**/*.astro`. The 22 em-dash `"description"` fields in `src/data/*.json` are rendered body copy (`deliverables[].description`, `problem` blurbs), out of scope.
+- **Em-dash title separators:** 74 page `title` fields use the `" — "` separator house style (e.g. "Agentic AI Healthcare Consultant UK — NHS & Clinics"). Swapping all 74 sitewide is an unrequested, hard-to-reverse cosmetic change to a live production site with no CTR data behind it, and would not serve Step 4's CTR goal (length/keyword/power-word) — it would be churn that risks harm. Remains a deferred **Sunny cosmetic call** (Runs 42-50).
+- No new pages added since Run 50 that would need titles/metas.
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Git hygiene
+- Session started **on `master`** at `8531207` (= Run 50 commit), with `HEAD == origin/master` (fetched and confirmed this run). Clean state; commit lands and pushes cleanly. No unpublished work stranded — Runs 39-50 all confirmed in `origin/master` history.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 52
+- **Loop remains blocked on the same Sunny-only item, now 20 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog is empty, so any further edits would be churn that risks harm.
+- **Pause or drop this schedule to weekly (or hold until `.env` lands).** Twenty consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn.
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-50 correctly stayed silent for the same reason. Nothing changed this run. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
