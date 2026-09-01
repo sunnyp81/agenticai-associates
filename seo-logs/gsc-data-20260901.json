@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-01",
+  "source": "sc-domain:agenticai.associates",
+  "status": "skipped",
+  "reason": "No .env in repo root; GSC_SERVICE_ACCOUNT_EMAIL / GSC_PRIVATE_KEY unavailable. Live search-analytics pull not performed. No data fabricated.",
+  "run": 54,
+  "rows": []
+}
