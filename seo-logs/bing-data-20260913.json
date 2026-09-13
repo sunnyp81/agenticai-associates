@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-13",
+  "site": "https://agenticai.associates",
+  "status": "skipped",
+  "reason": "No .env in repo root; BING_API_KEY unavailable. Indexed-count / crawl-stats pull not performed. No data fabricated.",
+  "run": 58,
+  "indexedPages": null,
+  "crawlStats": null,
+  "notIndexed": []
+}

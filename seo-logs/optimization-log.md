@@ -4610,3 +4610,33 @@ Re-audited with fresh scripts rather than trusting the prior log:
 - **Loop remains blocked on the same Sunny-only item, now 26 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective em-dash/length/dedup backlog on page titles/metas is empty, so any further edits would be churn that risks harm.
 - **Strongly consider pausing this schedule or dropping it to weekly until `.env` lands.** Twenty-six consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without daily churn. (Recommended since Run 53; not actioned — the schedule is Sunny's to change.)
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-56 correctly stayed silent for the same reason. Nothing has changed. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 58 — 2026-09-13
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-09-13 record the skip reason). This is the **27th consecutive credential-less run**.
+
+### Source state — no SEO drift
+- `HEAD == origin/master == 15a9370` (Run 57 log commit; fetched and confirmed this run). Session started on `master`, already in sync with `origin/master` — no detached-HEAD recovery needed this run.
+- Diff vs last human source baseline `7a106cd` across `src/` + `public/`: only `src/pages/about/index.astro` (1 line) — the previously-logged human partner-positioning edit (Run 56). Body/section content, **out of scope** under Step 4 ("Do NOT change H1s or body content"). No `title`/meta changes introduced. Nothing has drifted since Run 57.
+
+### No objective work performed — backlog exhausted (independently re-audited from first principles this run)
+Re-audited with fresh scripts rather than trusting the prior log:
+- **Titles:** unicode-aware character-length check restricted to the **79 page-level titles** (objects carrying a `slug`/`url` alongside `title`): **0 over 60 chars, 0 under 30 chars, 0 duplicates** — all 79 unique.
+- **Meta descriptions:** **0** `description="…"` props over 155 chars and **0** containing an em dash across `src/**/*.astro`; **0** page-level `metaDescription`/`seoDescription` fields in `src/data/*.json` (all meta descriptions are set via the layouts/page-factory from body fields, none over length, none with em dashes).
+- **Em-dash title separators:** the `" — "` page-title separator house style is unchanged and remains a deferred **Sunny cosmetic call** (Runs 42-57). Swapping it sitewide has no CTR data behind it and would be churn that risks harm on a live site, not a Step 4 length/keyword/power-word improvement.
+- No new indexable pages added that would need titles/metas.
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available. No data fabricated.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 59
+- **Loop remains blocked on the same Sunny-only item, now 27 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective title/meta backlog is empty, so any further edits would be churn that risks harm.
+- **Strongly consider pausing this schedule or dropping it to weekly until `.env` lands.** Twenty-seven consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without churn. (Recommended since Run 53; not actioned — the schedule is Sunny's to change.)
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-57 correctly stayed silent for the same reason. Nothing has changed. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
