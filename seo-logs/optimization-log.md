@@ -4700,3 +4700,33 @@ Re-audited with fresh scripts rather than trusting the prior log:
 - **Loop remains blocked on the same Sunny-only item, now 29 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective title/meta backlog is empty, so any further edits would be churn that risks harm.
 - **Strongly consider pausing this schedule or dropping it to weekly until `.env` lands.** Twenty-nine consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without churn. (Recommended since Run 53; not actioned — the schedule is Sunny's to change.)
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-59 correctly stayed silent for the same reason. Nothing has changed. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 61 — 2026-09-19
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-09-19 record the skip reason). This is the **30th consecutive credential-less run**.
+
+### Source state — no SEO drift
+- `HEAD == origin/master == 80ab40e` (Run 60 log commit; fetched and confirmed this run). Session started on a detached HEAD at `80ab40e`; local `master` branch was behind at `15a9370`. Recovered to `master` and fast-forwarded to `origin/master` before committing so this run's log commit lands on a real branch and pushes cleanly. No unpublished work stranded.
+- Diff vs last human source baseline `7a106cd` across `src/` + `public/`: only `src/pages/about/index.astro` (1 line) — the human partner-positioning edit (Run 56, Callum Dice / Total Ops enquiry-handling wording). Body/section content, **out of scope** under Step 4 ("Do NOT change H1s or body content"). No `title`/meta changes introduced. Nothing has drifted since Run 60.
+
+### No objective work performed — backlog exhausted (independently re-audited from first principles this run)
+Re-audited with fresh scripts rather than trusting the prior log:
+- **Titles:** page-level titles (objects carrying a `slug`/`url`/`path` alongside `title` in `src/data/*.json`): **79 total, 0 over 60 chars, 0 under 30 chars, 0 duplicates** — all unique.
+- **Meta descriptions:** traced the render path this run — the layouts (`HubLayout`/`IndustryLayout`/`LearnLayout`/`LocationLayout`/`WhatWeDoLayout`) pass each page object's `description` field into `BaseLayout`'s `description` prop, which sets `<meta name="description">` (`BaseLayout.astro:93`). Audited the **79 page-level `description` fields** (same slug/url-bearing objects): **0 over 155 chars, 0 containing an em dash**. A broad scan also flags 54 `description` keys over 155 chars, but every one is a **nested body-content field** (FAQ answers, feature/service copy), not a meta tag — **out of scope** under Step 4. `description="…"` props in `src/**/*.astro`: **0 over 155, 0 with em dash**.
+- **Em-dash title separators:** the `" — "` page-title separator house style (70 of 79 titles) is unchanged and remains a deferred **Sunny cosmetic call** (Runs 42-60). Swapping it sitewide has no CTR data behind it and would be churn that risks harm on a live site, not a Step 4 length/keyword/power-word improvement.
+- No new indexable pages added that would need titles/metas.
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available. No data fabricated.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 62
+- **Loop remains blocked on the same Sunny-only item, now 30 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective title/meta backlog is empty, so any further edits would be churn that risks harm.
+- **Strongly consider pausing this schedule or dropping it to weekly until `.env` lands.** Thirty consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without churn. (Recommended since Run 53; not actioned — the schedule is Sunny's to change.)
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-60 correctly stayed silent for the same reason. Nothing has changed. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
