@@ -1,0 +1,6 @@
+{
+  "date": "2026-09-25",
+  "skipped": true,
+  "reason": "No .env in repo root; GSC service-account credentials unavailable. No data fetched, none fabricated.",
+  "rows": []
+}

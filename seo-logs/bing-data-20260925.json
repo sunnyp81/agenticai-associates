@@ -1,0 +1,6 @@
+{
+  "date": "2026-09-25",
+  "skipped": true,
+  "reason": "No .env in repo root; Bing Webmaster API key unavailable. No data fetched, none fabricated.",
+  "rows": []
+}
