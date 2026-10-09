@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-09",
+  "status": "skipped",
+  "reason": "No .env in repo root; BING_API_KEY unavailable. Indexed-count / crawl-stats pull not performed. No data fabricated.",
+  "run": 71,
+  "rows": []
+}
