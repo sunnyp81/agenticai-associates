@@ -1,0 +1,7 @@
+{
+  "skipped": true,
+  "reason": "No .env in repo root; GSC_SERVICE_ACCOUNT_EMAIL / GSC_PRIVATE_KEY unavailable. Live Search Analytics pull skipped per task rule. No data fabricated.",
+  "site": "sc-domain:agenticai.associates",
+  "run_date": "2026-10-21",
+  "run_number": 76
+}
