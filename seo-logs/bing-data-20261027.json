@@ -1,0 +1,7 @@
+{
+  "skipped": true,
+  "reason": "No .env in repo root; BING_API_KEY unavailable. Bing Webmaster pull (indexed count, crawl stats) skipped per task rule. No data fabricated.",
+  "site": "https://agenticai.associates",
+  "run_date": "2026-10-27",
+  "run_number": 79
+}
