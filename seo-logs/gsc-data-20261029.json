@@ -1,0 +1,1 @@
+{"run_date":"2026-10-29","source":"GSC","status":"skipped","reason":"No .env in repo root; GSC_SERVICE_ACCOUNT_EMAIL / GSC_PRIVATE_KEY unavailable. No live data pulled. No data fabricated.","data":null}
