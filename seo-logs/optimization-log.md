@@ -5716,3 +5716,33 @@ Re-audited from first principles with a fresh unicode-aware (`Intl.Segmenter` gr
 - **Loop remains blocked on the same Sunny-only item, now 63 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective title/meta backlog is empty, so any further edits would be churn that risks harm.
 - **Strongly consider pausing this schedule or dropping it to weekly until `.env` lands.** Sixty-three consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without churn. (Recommended since Run 53; the schedule is Sunny's to change.)
 - **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-93 correctly stayed silent for the same reason. Nothing has changed. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
+
+---
+
+## Run 95 — 2026-11-27
+
+**Mode:** Pattern-based only. No `.env` in repo root, so GSC + Bing + IndexNow live pulls were skipped (data files for 2026-11-27 record the skip reason). This is the **64th consecutive credential-less run**.
+
+### Source state — no SEO drift
+- Session started on `master` at `902ef08` (the Run 94 log commit). Fetched `origin/master`: also `902ef08` — Run 94 pushed cleanly, **0 ahead / 0 behind** before writing. Working tree clean. No unpublished work stranded.
+- Diff vs last human source baseline `7a106cd` across `src/` + `public/`: only `src/pages/about/index.astro` (1 line) — the human partner-positioning edit (Callum Dice / Total Ops partner `<p>`), body content with no `title`/meta change. **Out of scope** under Step 4 ("Do NOT change H1s or body content"). Nothing has drifted since Run 94.
+
+### No objective work performed — backlog exhausted (independently re-audited this run)
+Re-audited from first principles with a fresh unicode-aware (`Intl.Segmenter` grapheme count) script rather than trusting the prior log:
+- **Titles** (objects carrying a `slug`/`url`/`path` alongside `title` in `src/data/*.json`): **79 total, 0 over 60 chars, 0 under 30 chars, 0 duplicates** — all unique.
+- **Meta descriptions** (same slug/url-bearing objects + inline `description="…"` props in `src/**/*.astro`): **89 total, 0 over 155 chars, 0 containing an em dash**.
+- **Em-dash title separators:** the `" — "` page-title separator house style is unchanged and remains a deferred **Sunny cosmetic call** (Runs 42-94). No CTR data behind a sitewide swap; it would be churn, not a Step 4 length/keyword/power-word improvement.
+- No new indexable pages added that would need titles/metas.
+
+**Conclusion:** no data-free pattern-based meta work exists that would improve rather than churn. Backlog remains genuinely exhausted.
+
+### Data summary
+- GSC: skipped (no creds). Bing: skipped (no creds). No live CTR / position / impression data available. No data fabricated.
+
+### IndexNow
+- Skipped — no `INDEXNOW_KEY`. No page edits this run, so nothing to submit regardless.
+
+### Recommendations for Run 96
+- **Loop remains blocked on the same Sunny-only item, now 64 runs deep: provide `.env` (GSC + Bing + IndexNow creds).** Without live CTR/position data, Steps 3-4 (weak-CTR and striking-distance rewrites) cannot run, and the objective title/meta backlog is empty, so any further edits would be churn that risks harm.
+- **Strongly consider pausing this schedule or dropping it to weekly until `.env` lands.** Sixty-four consecutive no-op runs produce log noise for no SEO gain; a weekly cadence preserves the drift-check safety net without churn. (Recommended since Run 53; the schedule is Sunny's to change.)
+- **No push notification sent this run.** Run 44 (2026-08-13) already notified Sunny of this identical, unchanged `.env` blocker; Runs 45-94 correctly stayed silent for the same reason. Nothing has changed. The next notification should fire only when the blocker changes (creds land -> resume live optimisation) or a genuine new issue appears.
